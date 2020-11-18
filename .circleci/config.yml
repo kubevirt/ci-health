@@ -3,12 +3,11 @@ version: 2
 jobs:
   test:
     docker:
-      - image: fgimenez/bazelisk:v1.7.4
+      - image: fgimenez/bazelisk:v1.7.4-1
     steps:
       - checkout
       - run:
           command: |
-            apt-get update && apt-get install -y git
             bazelisk test
 
 workflows:
