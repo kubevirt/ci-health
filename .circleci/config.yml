@@ -1,0 +1,20 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: fgimenez/bazelisk:v1.7.4-2
+    steps:
+      - checkout
+      - run:
+          command: |
+            bazelisk test ...
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /.*/
