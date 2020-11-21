@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           command: |
-            bazelisk test
+            bazelisk test ...
 
 workflows:
   version: 2
