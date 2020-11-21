@@ -1,15 +1,14 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_library(
-    name = "cmd_lib",
+    name = "start_lib",
     srcs = ["main.go"],
-    importpath = "github.com/fgimenez/cihealth/cmd",
+    importpath = "github.com/fgimenez/cihealth/cmd/start",
     visibility = ["//visibility:private"],
-    deps = ["@com_github_prometheus_client_golang//prometheus/promhttp"],
 )
 
 go_binary(
-    name = "cmd",
-    embed = [":cmd_lib"],
+    name = "start",
+    embed = [":start_lib"],
     visibility = ["//visibility:public"],
 )
