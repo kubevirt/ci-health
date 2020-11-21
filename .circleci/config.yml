@@ -3,7 +3,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: fgimenez/bazelisk:v1.7.4-1
+      - image: fgimenez/bazelisk:v1.7.4-2
     steps:
       - checkout
       - run:
