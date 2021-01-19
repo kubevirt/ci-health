@@ -3,10 +3,8 @@ module github.com/fgimenez/cihealth
 go 1.15
 
 require (
-	github.com/onsi/ginkgo v1.7.0
-	github.com/onsi/gomega v1.4.3
-	github.com/prometheus/client_golang v1.8.0
-	github.com/prometheus/common v0.15.0 // indirect
-	golang.org/x/sys v0.0.0-20201117222635-ba5294a509c7 // indirect
-	google.golang.org/protobuf v1.25.0 // indirect
+	github.com/kr/pretty v0.2.0 // indirect
+	github.com/spf13/cobra v1.1.1
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/yaml.v2 v2.4.0
 )
