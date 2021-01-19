@@ -19,6 +19,11 @@ var (
 	tokenPath string
 )
 
+const (
+	source   = "kubevirt/kubevirt"
+	dataDays = 7
+)
+
 var _ = BeforeSuite(func() {
 	tokenPath = os.Getenv("GITHUB_TOKEN_PATH")
 	if tokenPath == "" {
@@ -28,9 +33,8 @@ var _ = BeforeSuite(func() {
 
 var _ = Describe("cihealth stats", func() {
 	It("Retrieves data from github", func() {
-		client := ghclient.New()
-
-		_, err := client.Run(tokenPath)
+		_, err := ghclient.Run(tokenPath, source, dataDays)
 		Expect(err).ToNot(HaveOccurred())
+
 	})
 })

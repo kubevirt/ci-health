@@ -13,12 +13,16 @@ import (
 type options struct {
 	Path      string
 	TokenPath string
+	Source    string
+	DataDays  int
 }
 
 func main() {
 	opt := &options{
 		Path:      "/tmp/test",
 		TokenPath: "",
+		Source:    "kubevirt/kubevirt",
+		DataDays:  7,
 	}
 
 	cmd := &cobra.Command{
@@ -32,6 +36,8 @@ func main() {
 
 	flag.StringVar(&opt.Path, "path", opt.Path, "The directory to save results to.")
 	flag.StringVar(&opt.TokenPath, "gh-token", opt.TokenPath, "OAuth2 token to interact with GitHub API.")
+	flag.StringVar(&opt.Source, "source", opt.Source, "GitHub repo from where retrieve the data.")
+	flag.IntVar(&opt.DataDays, "data-days", opt.DataDays, "Number of days to retrieve data from.")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
@@ -43,9 +49,7 @@ func (o *options) Run() error {
 		return fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
 
-	client := ghclient.New()
-
-	results, err := client.Run(o.TokenPath)
+	results, err := ghclient.Run(o.TokenPath, o.Source, o.DataDays)
 	if err != nil {
 		return err
 	}
