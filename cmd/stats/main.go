@@ -10,10 +10,15 @@ import (
 	yaml "gopkg.in/yaml.v2"
 )
 
+type options struct {
+	Path      string
+	TokenPath string
+}
+
 func main() {
 	opt := &options{
-		Path:  "/tmp/test",
-		Token: "",
+		Path:      "/tmp/test",
+		TokenPath: "",
 	}
 
 	cmd := &cobra.Command{
@@ -26,26 +31,21 @@ func main() {
 	flag := cmd.Flags()
 
 	flag.StringVar(&opt.Path, "path", opt.Path, "The directory to save results to.")
-	flag.StringVar(&opt.Token, "gh-token", opt.Token, "OAuth2 token to interact with GitHub API.")
+	flag.StringVar(&opt.TokenPath, "gh-token", opt.TokenPath, "OAuth2 token to interact with GitHub API.")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
 	}
 }
 
-type options struct {
-	Path  string
-	Token string
-}
-
 func (o *options) Run() error {
-	if o.Token == "" {
+	if o.TokenPath == "" {
 		return fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
 
 	client := ghclient.New()
 
-	results, err := client.Run(o.Token)
+	results, err := client.Run(o.TokenPath)
 	if err != nil {
 		return err
 	}
