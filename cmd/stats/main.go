@@ -45,7 +45,7 @@ func (o *options) Run() error {
 
 	client := ghclient.New()
 
-	results, err := client.Run()
+	results, err := client.Run(o.Token)
 	if err != nil {
 		return err
 	}

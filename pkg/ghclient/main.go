@@ -8,7 +8,7 @@ func New() *GHClient {
 	return &GHClient{}
 }
 
-func (client *GHClient) Run() (*stats.Results, error) {
+func (client *GHClient) Run(token string) (*stats.Results, error) {
 	results := &stats.Results{}
 
 	return results, nil
