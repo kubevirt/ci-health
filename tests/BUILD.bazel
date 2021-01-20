@@ -4,7 +4,7 @@ go_test(
     name = "tests_test",
     srcs = ["tests_suite_test.go"],
     deps = [
-        "//pkg/ghclient",
+        "//pkg/stats",
         "@com_github_onsi_ginkgo//:ginkgo",
         "@com_github_onsi_gomega//:gomega",
     ],

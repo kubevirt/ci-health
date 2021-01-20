@@ -5,9 +5,10 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/fgimenez/cihealth/pkg/ghclient"
 	"github.com/spf13/cobra"
 	yaml "gopkg.in/yaml.v2"
+
+	"github.com/fgimenez/cihealth/pkg/stats"
 )
 
 type options struct {
@@ -49,7 +50,7 @@ func (o *options) Run() error {
 		return fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
 
-	results, err := ghclient.Run(o.TokenPath, o.Source, o.DataDays)
+	results, err := stats.Run(o.TokenPath, o.Source, o.DataDays)
 	if err != nil {
 		return err
 	}

@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/fgimenez/cihealth/pkg/ghclient"
+	"github.com/fgimenez/cihealth/pkg/stats"
 )
 
 func TestCIHealth(t *testing.T) {
@@ -33,8 +33,10 @@ var _ = BeforeSuite(func() {
 
 var _ = Describe("cihealth stats", func() {
 	It("Retrieves data from github", func() {
-		_, err := ghclient.Run(tokenPath, source, dataDays)
+		results, err := stats.Run(tokenPath, source, dataDays)
 		Expect(err).ToNot(HaveOccurred())
 
+		Expect(results.DataDays).To(Equal(dataDays))
+		Expect(results.Source).To(Equal(source))
 	})
 })
