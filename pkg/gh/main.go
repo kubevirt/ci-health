@@ -47,7 +47,7 @@ func (c *Client) Source() string {
 func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
 	ctx := context.Background()
 
-	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr status:CLOSED merged>%[1]s", c.source, date.Format("2006-01-02"))
+	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr merged>%[1]s", c.source, date.Format("2006-01-02"))
 	variables := map[string]interface{}{
 		"querystring": githubv4.String(mergedQueryString),
 	}
