@@ -1,25 +1,15 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
 	"log"
 
 	"github.com/spf13/cobra"
-	yaml "gopkg.in/yaml.v2"
 
-	"github.com/fgimenez/cihealth/pkg/stats"
+	"github.com/fgimenez/cihealth/pkg/runner"
 )
 
-type options struct {
-	Path      string
-	TokenPath string
-	Source    string
-	DataDays  int
-}
-
 func main() {
-	opt := &options{
+	opt := &runner.Options{
 		Path:      "/tmp/test",
 		TokenPath: "",
 		Source:    "kubevirt/kubevirt",
@@ -28,9 +18,11 @@ func main() {
 
 	cmd := &cobra.Command{
 		Run: func(cmd *cobra.Command, arguments []string) {
-			if err := opt.Run(); err != nil {
+			path, err := runner.Run(opt)
+			if err != nil {
 				log.Fatalf("error: %v", err)
 			}
+			log.Println("Output written to", path)
 		},
 	}
 	flag := cmd.Flags()
@@ -43,28 +35,4 @@ func main() {
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
 	}
-}
-
-func (o *options) Run() error {
-	if o.TokenPath == "" {
-		return fmt.Errorf("You need to specify the GitHub token path with --gh-token")
-	}
-
-	results, err := stats.Run(o.TokenPath, o.Source, o.DataDays)
-	if err != nil {
-		return err
-	}
-
-	d, err := yaml.Marshal(&results)
-	if err != nil {
-		return err
-	}
-
-	log.Printf("Writing output file %s", o.Path)
-	err = ioutil.WriteFile(o.Path, d, 0644)
-	if err != nil {
-		return err
-	}
-
-	return nil
 }

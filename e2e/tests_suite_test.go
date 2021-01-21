@@ -1,12 +1,15 @@
-package tests
+package e2e
 
 import (
+	"io/ioutil"
 	"os"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	yaml "gopkg.in/yaml.v2"
 
+	"github.com/fgimenez/cihealth/pkg/runner"
 	"github.com/fgimenez/cihealth/pkg/stats"
 )
 
@@ -33,8 +36,20 @@ var _ = BeforeSuite(func() {
 
 var _ = Describe("cihealth stats", func() {
 	It("Retrieves data from github", func() {
-		results, err := stats.Run(tokenPath, source, dataDays)
+		opt := &runner.Options{
+			TokenPath: tokenPath,
+			Source:    source,
+			DataDays:  dataDays,
+		}
+
+		path, err := runner.Run(opt)
 		Expect(err).ToNot(HaveOccurred())
+
+		contents, err := ioutil.ReadFile(path)
+		Expect(err).ToNot(HaveOccurred())
+
+		results := stats.Results{}
+		err = yaml.Unmarshal(contents, &results)
 
 		Expect(results.DataDays).To(Equal(dataDays))
 		Expect(results.Source).To(Equal(source))

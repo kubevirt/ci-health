@@ -175,6 +175,19 @@ def go_dependencies():
         version = "v0.7.1",
     )
     go_repository(
+        name = "com_github_shurcool_githubv4",
+        importpath = "github.com/shurcooL/githubv4",
+        sum = "h1:jozR3igKlnYCj9IVHOVump59bp07oIRoLQ/CcjMYIUA=",
+        version = "v0.0.0-20201206200315-234843c633fa",
+    )
+    go_repository(
+        name = "com_github_shurcool_graphql",
+        importpath = "github.com/shurcooL/graphql",
+        sum = "h1:KikTa6HtAK8cS1qjvUvvq4QO21QnwC+EfvB+OAuZ/ZU=",
+        version = "v0.0.0-20200928012149-18c5c3165e3a",
+    )
+
+    go_repository(
         name = "com_github_spaolacci_murmur3",
         importpath = "github.com/spaolacci/murmur3",
         sum = "h1:qLC7fQah7D6K1B0ujays3HV9gkFtllcxhzImRR7ArPQ=",

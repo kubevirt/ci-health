@@ -6,9 +6,8 @@ go_library(
     importpath = "github.com/fgimenez/cihealth/cmd/stats",
     visibility = ["//visibility:private"],
     deps = [
-        "//pkg/stats",
+        "//pkg/runner",
         "@com_github_spf13_cobra//:cobra",
-        "@in_gopkg_yaml_v2//:yaml_v2",
     ],
 )
 
