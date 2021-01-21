@@ -2,7 +2,9 @@ package gh
 
 import (
 	"context"
+	"fmt"
 	"io/ioutil"
+	"time"
 
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
@@ -42,37 +44,60 @@ func (c *Client) Source() string {
 	return c.source
 }
 
-func (c *Client) GetMergeQueueLength() int {
-	_ = `query {
-  search(query: "repo:kubevirt/kubevirt type:pr state:open label:lgtm label:approved -label:do-not-merge/hold ", type: ISSUE, last:100){
-    issueCount
-    pageInfo {
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    edges {
-      node {
-        ... on PullRequest {
-          number
-					baseRef {
-            target {
-              commitUrl
-            }
-          }
-          comments(first:100, orderBy:{field:UPDATED_AT, direction:DESC}) {
-            edges {
-             	node {
-                createdAt
-                bodyText
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
+	ctx := context.Background()
+
+	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr status:CLOSED merged>%[1]s", c.source, date.Format("2006-01-02"))
+	variables := map[string]interface{}{
+		"querystring": githubv4.String(mergedQueryString),
+	}
+
+	var mergedQuery struct {
+		Search struct {
+			IssueCount int
+			Nodes      []struct {
+				PullRequestFragment struct {
+					Number   int
+					Comments struct {
+						Nodes []Comment
+					} `graphql:"comments(first: 100, orderBy: {field: UPDATED_AT, direction: DESC})"`
+				} `graphql:"... on PullRequest"`
+			}
+		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
+	}
+
+	err := c.inner.Query(ctx, &mergedQuery, variables)
+	if err != nil {
+		return 0, err
+	}
+
+	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
+	variables = map[string]interface{}{
+		"querystring": githubv4.String(notMergedQueryString),
+	}
+	var notMergedQuery struct {
+		Search struct {
+			IssueCount int
+			Nodes      []struct {
+				PullRequestFragment struct {
+					Number   int
+					Comments struct {
+						Nodes []Comment
+					} `graphql:"comments(first: 100, orderBy: {field: UPDATED_AT, direction: DESC})"`
+				} `graphql:"... on PullRequest"`
+			}
+		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
+	}
+	err = c.inner.Query(ctx, &notMergedQuery, variables)
+	if err != nil {
+		return 0, err
+	}
+
+	return notMergedQuery.Search.IssueCount, nil
 }
-`
-	return 0
+
+func IsPRInMergeQueueAtDate(pr *PullRequestFragment, date time.Time) bool {
+	var hasLGTMLabel, hasApprobedLabel, doesNotHaveDoNotMergeLabel, doesNotHaveNeedsRebaseLabel bool
+
+	return hasLGTMLabel && hasApprobedLabel && doesNotHaveDoNotMergeLabel && doesNotHaveNeedsRebaseLabel
 }

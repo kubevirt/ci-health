@@ -15,5 +15,5 @@ type Results struct {
 	ExecutionDate string `yaml:"executionDate"`
 	DataDays      int    `yaml:"dataDays"`
 	Source        string
-	Data          []RunningAverageDataItem
+	Data          []*RunningAverageDataItem
 }

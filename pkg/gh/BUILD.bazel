@@ -2,7 +2,10 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "gh",
-    srcs = ["main.go"],
+    srcs = [
+        "main.go",
+        "types.go",
+    ],
     importpath = "github.com/fgimenez/cihealth/pkg/gh",
     visibility = ["//visibility:public"],
     deps = [

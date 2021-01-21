@@ -1,6 +1,8 @@
 package stats
 
 import (
+	"time"
+
 	"github.com/fgimenez/cihealth/pkg/gh"
 )
 
@@ -14,8 +16,9 @@ func init() {
 
 func Run(client *gh.Client) (*Results, error) {
 	results := &Results{
-		DataDays: client.DataDays(),
-		Source:   client.Source(),
+		ExecutionDate: time.Now().Format("2006-01-02T15:04:05Z"),
+		DataDays:      client.DataDays(),
+		Source:        client.Source(),
 	}
 	var err error
 
@@ -29,6 +32,17 @@ func Run(client *gh.Client) (*Results, error) {
 }
 
 func mergeQueueProcessor(results *Results, client *gh.Client) (*Results, error) {
+	queueLength, err := client.GetOpenApprovedPRsByDate(time.Now())
+	if err != nil {
+		return nil, err
+	}
+
+	dataItem := &RunningAverageDataItem{
+		Name:  "MergeQueueLength",
+		Value: float64(queueLength),
+	}
+
+	results.Data = append(results.Data, dataItem)
 
 	return results, nil
 }
