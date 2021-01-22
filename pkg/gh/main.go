@@ -62,9 +62,11 @@ func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
 		return 0, err
 	}
 
-	log.Debugf("Merge query result length: %d, non merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
+	log.Debugf("Merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
-	return len(mergedQueryResult) + len(notMergedQueryResult), nil
+	result := append(mergedQueryResult, notMergedQueryResult...)
+
+	return len(result), nil
 }
 
 func (c *Client) prQuery(query string) ([]struct {

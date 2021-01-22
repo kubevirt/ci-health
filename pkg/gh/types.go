@@ -16,16 +16,14 @@ type UnlabeledEventFragment struct {
 	} `graphql:"removedLabel:label"`
 }
 
-type TimeLineItem struct {
-	Nodes []struct {
-		LabeledEventFragment   `graphql:"... on LabeledEvent"`
-		UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
-	}
+type TimelineItem struct {
+	LabeledEventFragment   `graphql:"... on LabeledEvent"`
+	UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
 }
 
 type PullRequestFragment struct {
 	Number        int
-	TimeLineItems struct {
-		Nodes []TimeLineItem
-	} `graphql:"timeLineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
+	TimelineItems struct {
+		Nodes []TimelineItem
+	} `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
 }
