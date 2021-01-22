@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_test")
+
+go_test(
+    name = "e2e_test",
+    srcs = ["tests_suite_test.go"],
+    deps = [
+        "//pkg/runner",
+        "//pkg/stats",
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_gomega//:gomega",
+        "@in_gopkg_yaml_v2//:yaml_v2",
+    ],
+)

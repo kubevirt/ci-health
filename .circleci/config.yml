@@ -3,18 +3,21 @@ version: 2
 jobs:
   test:
     docker:
-      - image: fgimenez/bazelisk:v1.7.4-2
+      - image: kubevirtci/bootstrap:v20210112-b29dfd7
     steps:
       - checkout
       - run:
           command: |
-            bazelisk test ...
+            echo -n $GITHUB_TOKEN > $(pwd)/token
+
+            bazelisk test ... --test_output=all --test_arg=-test.v --action_env GITHUB_TOKEN_PATH=$(pwd)/token
 
 workflows:
   version: 2
   test_and_deploy:
     jobs:
       - test:
+          context: github-bot
           filters:
             tags:
               only: /.*/

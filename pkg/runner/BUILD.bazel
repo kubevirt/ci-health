@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "runner",
+    srcs = ["runner.go"],
+    importpath = "github.com/fgimenez/cihealth/pkg/runner",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/gh",
+        "//pkg/stats",
+        "@in_gopkg_yaml_v2//:yaml_v2",
+    ],
+)
