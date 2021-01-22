@@ -3,22 +3,16 @@ package runner
 import (
 	"fmt"
 	"io/ioutil"
-	"log"
 
+	log "github.com/sirupsen/logrus"
 	yaml "gopkg.in/yaml.v2"
 
 	"github.com/fgimenez/cihealth/pkg/gh"
 	"github.com/fgimenez/cihealth/pkg/stats"
+	"github.com/fgimenez/cihealth/pkg/types"
 )
 
-type Options struct {
-	Path      string
-	TokenPath string
-	Source    string
-	DataDays  int
-}
-
-func Run(o *Options) (string, error) {
+func Run(o *types.Options) (string, error) {
 	if o.TokenPath == "" {
 		return "", fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
