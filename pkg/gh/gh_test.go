@@ -19,6 +19,7 @@ func TestGH(t *testing.T) {
 
 var (
 	queryDate = time.Date(2021, time.Month(1), 22, 15, 11, 26, 0, time.UTC)
+	zeroDate  = time.Time{}
 )
 
 var _ = Describe("DatePREnteredMergeQueue", func() {
@@ -200,15 +201,229 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 			},
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
-
-		/*
-				table.Entry("PR not in merge queue: missing all labels"),
-				table.Entry("PR not in merge queue: missing lgtm label"),
-				table.Entry("PR not in merge queue: missing approved label"),
-				table.Entry("PR not in merge queue: with needs-rebase label"),
-			  table.Entry("PR not in merge queue: with hold label"),
-				table.Entry("PR not in merge queue: was previously and lost lgtm label"),
-				table.Entry("PR not in merge queue: was previously and lost approved label"),
-		*/
+		table.Entry("PR not in merge queue: missing all labels",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: missing lgtm label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: missing approved label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: approved label after query date",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: lgtm label after query date",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: with needs-rebase label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: with hold label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: gh.Label{
+									Name: constants.HoldLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: was previously in and lost lgtm label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								RemovedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: was previously in and lost approved label",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								RemovedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
 	)
 })

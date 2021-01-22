@@ -119,8 +119,10 @@ func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time 
 
 	if labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
 		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
+		labelsAdded[constants.LGTMLabel].Before(date) &&
 		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) {
+		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
+		labelsAdded[constants.ApprovedLabel].Before(date) {
 
 		if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
 			labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
