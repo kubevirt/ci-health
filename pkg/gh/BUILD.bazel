@@ -21,7 +21,9 @@ go_test(
     srcs = ["gh_test.go"],
     embed = [":gh"],
     deps = [
+        "//pkg/constants",
         "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
         "@com_github_onsi_gomega//:gomega",
     ],
 )

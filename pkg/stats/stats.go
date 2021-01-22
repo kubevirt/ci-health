@@ -33,7 +33,7 @@ func Run(client *gh.Client) (*Results, error) {
 }
 
 func mergeQueueProcessor(results *Results, client *gh.Client) (*Results, error) {
-	queueLength, err := client.GetOpenApprovedPRsByDate(time.Now())
+	queueLength, err := client.MergeQueueSizeByDate(time.Now())
 	if err != nil {
 		return nil, err
 	}

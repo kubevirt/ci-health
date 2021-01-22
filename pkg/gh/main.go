@@ -13,6 +13,10 @@ import (
 	"github.com/fgimenez/cihealth/pkg/constants"
 )
 
+var (
+	zeroDate = time.Time{}
+)
+
 type Client struct {
 	inner    *githubv4.Client
 	dataDays int
@@ -47,7 +51,8 @@ func (c *Client) Source() string {
 	return c.source
 }
 
-func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
+// MergeQueueSizeByDate returns the merge queue size for a given date.
+func (c *Client) MergeQueueSizeByDate(date time.Time) (int, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format(constants.DateFormat))
 	log.Debugf("merged query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
@@ -64,9 +69,14 @@ func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
 
 	log.Debugf("Merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
-	result := append(mergedQueryResult, notMergedQueryResult...)
+	result := 0
+	for _, pr := range append(mergedQueryResult, notMergedQueryResult...) {
+		if DatePREnteredMergeQueue(&pr.PullRequestFragment, date) != zeroDate {
+			result++
+		}
+	}
 
-	return len(result), nil
+	return result, nil
 }
 
 func (c *Client) prQuery(query string) ([]struct {
@@ -90,7 +100,29 @@ func (c *Client) prQuery(query string) ([]struct {
 	return mergedQuery.Search.Nodes, err
 }
 
-func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) *time.Time {
+// DatePREnteredMergeQueue returns when a PR entered the merge queue before a
+// given date, zero value date if it was not in the merge queue by that date.
+func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time {
+	labelsAdded := make(map[string]time.Time)
 
-	return nil
+	for i := len(pr.TimelineItems.Nodes) - 1; i >= 0; i-- {
+		timelineItem := pr.TimelineItems.Nodes[i]
+		if (timelineItem.LabeledEventFragment != LabeledEventFragment{}) {
+			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
+		} else if (timelineItem.UnlabeledEventFragment != UnlabeledEventFragment{}) {
+			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
+		}
+	}
+
+	if labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
+		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
+		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
+		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) {
+
+		if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
+			return labelsAdded[constants.ApprovedLabel]
+		}
+		return labelsAdded[constants.LGTMLabel]
+	}
+	return zeroDate
 }

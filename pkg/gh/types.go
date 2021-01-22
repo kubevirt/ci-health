@@ -2,18 +2,18 @@ package gh
 
 import "time"
 
+type Label struct {
+	Name string
+}
+
 type LabeledEventFragment struct {
 	CreatedAt  time.Time
-	AddedLabel struct {
-		Name string
-	} `graphql:"addedLabel:label"`
+	AddedLabel Label `graphql:"addedLabel:label"`
 }
 
 type UnlabeledEventFragment struct {
 	CreatedAt    time.Time
-	RemovedLabel struct {
-		Name string
-	} `graphql:"removedLabel:label"`
+	RemovedLabel Label `graphql:"removedLabel:label"`
 }
 
 type TimelineItem struct {
@@ -21,9 +21,11 @@ type TimelineItem struct {
 	UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
 }
 
+type TimelineItems struct {
+	Nodes []TimelineItem
+}
+
 type PullRequestFragment struct {
 	Number        int
-	TimelineItems struct {
-		Nodes []TimelineItem
-	} `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
 }
