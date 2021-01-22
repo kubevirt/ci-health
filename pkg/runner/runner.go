@@ -13,6 +13,12 @@ import (
 )
 
 func Run(o *types.Options) (string, error) {
+	if o.LogLevel == "debug" {
+		log.SetLevel(log.DebugLevel)
+	} else {
+		log.SetLevel(log.InfoLevel)
+	}
+
 	if o.TokenPath == "" {
 		return "", fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
@@ -47,4 +53,12 @@ func Run(o *types.Options) (string, error) {
 	}
 
 	return o.Path, nil
+}
+
+func setLogLevel(logLevel string) {
+	if logLevel == "debug" {
+		log.SetLevel(log.DebugLevel)
+	} else {
+		log.SetLevel(log.InfoLevel)
+	}
 }

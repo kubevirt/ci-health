@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/shurcooL/githubv4"
+	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 )
 
@@ -45,17 +46,21 @@ func (c *Client) Source() string {
 }
 
 func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
-	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr merged>%[1]s", c.source, date.Format("2006-01-02"))
+	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format("2006-01-02"))
+	log.Debugf("merged query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
 	if err != nil {
 		return 0, err
 	}
 
 	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
+	log.Debugf("not merged query: %q", notMergedQueryString)
 	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
 	if err != nil {
 		return 0, err
 	}
+
+	log.Debugf("Merge query result length: %d, non merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
 	return len(mergedQueryResult) + len(notMergedQueryResult), nil
 }

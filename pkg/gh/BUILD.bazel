@@ -10,6 +10,7 @@ go_library(
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_shurcool_githubv4//:githubv4",
+        "@com_github_sirupsen_logrus//:logrus",
         "@org_golang_x_oauth2//:oauth2",
     ],
 )

@@ -19,8 +19,6 @@ func main() {
 
 	cmd := &cobra.Command{
 		Run: func(cmd *cobra.Command, arguments []string) {
-			setLogLevel(opt.LogLevel)
-
 			path, err := runner.Run(opt)
 			if err != nil {
 				log.Fatalf("error: %v", err)
@@ -34,17 +32,9 @@ func main() {
 	flag.StringVar(&opt.TokenPath, "gh-token", opt.TokenPath, "OAuth2 token to interact with GitHub API.")
 	flag.StringVar(&opt.Source, "source", opt.Source, "GitHub repo from where retrieve the data.")
 	flag.IntVar(&opt.DataDays, "data-days", opt.DataDays, "Number of days to retrieve data from.")
-	flag.StringVar(&opt.LogLevel, "info", opt.LogLevel, "Log level, valid values are debug and info.")
+	flag.StringVar(&opt.LogLevel, "log-level", opt.LogLevel, "Log level, valid values are debug and info.")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
-	}
-}
-
-func setLogLevel(logLevel string) {
-	if logLevel == "debug" {
-		log.SetLevel(log.DebugLevel)
-	} else {
-		log.SetLevel(log.InfoLevel)
 	}
 }
