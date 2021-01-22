@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "gh",
@@ -11,5 +11,15 @@ go_library(
     deps = [
         "@com_github_shurcool_githubv4//:githubv4",
         "@org_golang_x_oauth2//:oauth2",
+    ],
+)
+
+go_test(
+    name = "gh_test",
+    srcs = ["gh_test.go"],
+    embed = [":gh"],
+    deps = [
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_gomega//:gomega",
     ],
 )

@@ -47,19 +47,12 @@ func (c *Client) Source() string {
 func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr merged>%[1]s", c.source, date.Format("2006-01-02"))
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
-
 	if err != nil {
 		return 0, err
 	}
 
 	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
-
 	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
-
-	if err != nil {
-		return 0, err
-	}
-
 	if err != nil {
 		return 0, err
 	}
@@ -78,8 +71,7 @@ func (c *Client) prQuery(query string) ([]struct {
 
 	var mergedQuery struct {
 		Search struct {
-			IssueCount int
-			Nodes      []struct {
+			Nodes []struct {
 				PullRequestFragment `graphql:"... on PullRequest"`
 			}
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
