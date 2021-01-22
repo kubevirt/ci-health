@@ -104,13 +104,16 @@ func (c *Client) prQuery(query string) ([]struct {
 // given date, zero value date if it was not in the merge queue by that date.
 func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time {
 	labelsAdded := make(map[string]time.Time)
+	labelsRemoved := make(map[string]time.Time)
 
 	for i := len(pr.TimelineItems.Nodes) - 1; i >= 0; i-- {
 		timelineItem := pr.TimelineItems.Nodes[i]
 		if (timelineItem.LabeledEventFragment != LabeledEventFragment{}) {
 			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
+			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
 		} else if (timelineItem.UnlabeledEventFragment != UnlabeledEventFragment{}) {
 			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
+			labelsRemoved[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
 		}
 	}
 
@@ -118,6 +121,15 @@ func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time 
 		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
 		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
 		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) {
+
+		if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
+			labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
+			return labelsRemoved[constants.HoldLabel]
+		}
+		if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
+			labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
+			return labelsRemoved[constants.NeedsRebaseLabel]
+		}
 
 		if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
 			return labelsAdded[constants.ApprovedLabel]

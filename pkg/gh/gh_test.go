@@ -118,51 +118,90 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 			},
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
-		/*
-			table.Entry("PR in merge queue: hold and unhold",
-				&gh.PullRequestFragment{
-					TimelineItems: gh.TimelineItems{
-						Nodes: []gh.TimelineItem{
-							{
-								UnlabeledEventFragment: gh.UnlabeledEventFragment{
-									CreatedAt: queryDate.AddDate(0, 0, -4),
-									RemovedLabel: gh.Label{
-										Name: constants.HoldLabel,
-									},
+		table.Entry("PR in merge queue: hold and unhold",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: gh.Label{
+									Name: constants.HoldLabel,
 								},
 							},
-							{
-								LabeledEventFragment: gh.LabeledEventFragment{
-									CreatedAt: queryDate.AddDate(0, 0, -5),
-									AddedLabel: gh.Label{
-										Name: constants.LGTMLabel,
-									},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
 								},
 							},
-							{
-								LabeledEventFragment: gh.LabeledEventFragment{
-									CreatedAt: queryDate.AddDate(0, 0, -6),
-									AddedLabel: gh.Label{
-										Name: constants.HoldLabel,
-									},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
+								AddedLabel: gh.Label{
+									Name: constants.HoldLabel,
 								},
 							},
-							{
-								LabeledEventFragment: gh.LabeledEventFragment{
-									CreatedAt: queryDate.AddDate(0, 0, -7),
-									AddedLabel: gh.Label{
-										Name: constants.ApprovedLabel,
-									},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
 					},
 				},
-				queryDate,
-				queryDate.AddDate(0, 0, -4)),
-		*/
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -4)),
+		table.Entry("PR in merge queue: needs-rebase and rebase",
+			&gh.PullRequestFragment{
+				TimelineItems: gh.TimelineItems{
+					Nodes: []gh.TimelineItem{
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: gh.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								AddedLabel: gh.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
+								AddedLabel: gh.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -4)),
+
 		/*
-				table.Entry("PR in merge queue: reentered after leaving"),
 				table.Entry("PR not in merge queue: missing all labels"),
 				table.Entry("PR not in merge queue: missing lgtm label"),
 				table.Entry("PR not in merge queue: missing approved label"),
