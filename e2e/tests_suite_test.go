@@ -11,6 +11,7 @@ import (
 
 	"github.com/fgimenez/cihealth/pkg/runner"
 	"github.com/fgimenez/cihealth/pkg/stats"
+	"github.com/fgimenez/cihealth/pkg/types"
 )
 
 func TestCIHealth(t *testing.T) {
@@ -36,10 +37,11 @@ var _ = BeforeSuite(func() {
 
 var _ = Describe("cihealth stats", func() {
 	It("Retrieves data from github", func() {
-		opt := &runner.Options{
+		opt := &types.Options{
 			TokenPath: tokenPath,
 			Source:    source,
 			DataDays:  dataDays,
+			LogLevel:  "debug",
 		}
 
 		path, err := runner.Run(opt)

@@ -2,6 +2,19 @@ load("@bazel_gazelle//:deps.bzl", "go_repository")
 
 def go_dependencies():
     go_repository(
+        name = "cc_mvdan_gofumpt",
+        importpath = "mvdan.cc/gofumpt",
+        sum = "h1:hsVv+Y9UsZ/mFZTxJZuHVI6shSQCtzZ11h1JEFPAZLw=",
+        version = "v0.1.0",
+    )
+    go_repository(
+        name = "cc_mvdan_xurls_v2",
+        importpath = "mvdan.cc/xurls/v2",
+        sum = "h1:NSZPykBXJFCetGZykLAxaL6SIpvbVy/UFEniIfHAa8A=",
+        version = "v2.2.0",
+    )
+
+    go_repository(
         name = "com_github_bketelsen_crypt",
         importpath = "github.com/bketelsen/crypt",
         sum = "h1:+0HFd5KSZ/mm3JmhmrDukiId5iR6w4+BdFtfSy4yWIc=",
@@ -113,6 +126,13 @@ def go_dependencies():
         version = "v0.0.0-20200708004538-1a94d8640e99",
     )
     go_repository(
+        name = "com_github_google_safehtml",
+        importpath = "github.com/google/safehtml",
+        sum = "h1:ZOt2VXg4x24bW0m2jtzAOkhoXV0iM8vNKc0paByCZqM=",
+        version = "v0.0.2",
+    )
+
+    go_repository(
         name = "com_github_googleapis_gax_go_v2",
         importpath = "github.com/googleapis/gax-go/v2",
         sum = "h1:sjZBwGj9Jlw33ImPtvFviGYvseOtDM7hkSKB7+Tv3SM=",
@@ -129,6 +149,12 @@ def go_dependencies():
         importpath = "github.com/ianlancetaylor/demangle",
         sum = "h1:UDMh68UUwekSh5iP2OMhRRZJiiBccgV7axzUG8vi56c=",
         version = "v0.0.0-20181102032728-5e5cf60278f6",
+    )
+    go_repository(
+        name = "com_github_jba_templatecheck",
+        importpath = "github.com/jba/templatecheck",
+        sum = "h1:sZwNjXG3xNApuwKmgUWEo2JuxmG0sgNaELl0zwRQ9x8=",
+        version = "v0.5.0",
     )
 
     go_repository(
@@ -174,6 +200,19 @@ def go_dependencies():
         sum = "h1:YZcsG11NqnK4czYLrWd9mpEuAJIHVQLwdrleYfszMAA=",
         version = "v0.7.1",
     )
+    go_repository(
+        name = "com_github_sanity_io_litter",
+        importpath = "github.com/sanity-io/litter",
+        sum = "h1:5ZO+weUsqdSWMUng5JnpkW/Oz8iTXiIdeumhQr1sSjs=",
+        version = "v1.3.0",
+    )
+    go_repository(
+        name = "com_github_sergi_go_diff",
+        importpath = "github.com/sergi/go-diff",
+        sum = "h1:we8PVUC3FE2uYfodKH/nBHMSetSfHDR6scGdBi+erh0=",
+        version = "v1.1.0",
+    )
+
     go_repository(
         name = "com_github_shurcool_githubv4",
         importpath = "github.com/shurcooL/githubv4",
@@ -314,4 +353,10 @@ def go_dependencies():
         importpath = "golang.org/x/mobile",
         sum = "h1:4+4C/Iv2U4fMZBiMCc98MG1In4gJY5YRhtpDNeDeHWs=",
         version = "v0.0.0-20190719004257-d2bd2a29d028",
+    )
+    go_repository(
+        name = "org_golang_x_tools_gopls",
+        importpath = "golang.org/x/tools/gopls",
+        sum = "h1:PO8rURGmi+QEKZ3pk+ZXJh51EFTVTSXqxzoRzrGSTJM=",
+        version = "v0.6.4",
     )
