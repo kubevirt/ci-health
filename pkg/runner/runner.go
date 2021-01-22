@@ -7,9 +7,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/fgimenez/cihealth/pkg/gh"
-	"github.com/fgimenez/cihealth/pkg/stats"
-	"github.com/fgimenez/cihealth/pkg/types"
+	"github.com/fgimenez/ci-health/pkg/gh"
+	"github.com/fgimenez/ci-health/pkg/stats"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 func Run(o *types.Options) (string, error) {
@@ -39,7 +39,7 @@ func Run(o *types.Options) (string, error) {
 	}
 
 	if o.Path == "" {
-		file, err := ioutil.TempFile("", "cihealth")
+		file, err := ioutil.TempFile("", "ci-health")
 		if err != nil {
 			log.Fatal(err)
 		}

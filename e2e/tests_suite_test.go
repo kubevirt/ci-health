@@ -9,14 +9,14 @@ import (
 	. "github.com/onsi/gomega"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/fgimenez/cihealth/pkg/runner"
-	"github.com/fgimenez/cihealth/pkg/stats"
-	"github.com/fgimenez/cihealth/pkg/types"
+	"github.com/fgimenez/ci-health/pkg/runner"
+	"github.com/fgimenez/ci-health/pkg/stats"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func TestCIHealth(t *testing.T) {
+func TestCi-Health(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "cihealth Suite")
+	RunSpecs(t, "ci-health Suite")
 }
 
 var (
@@ -35,7 +35,7 @@ var _ = BeforeSuite(func() {
 	}
 })
 
-var _ = Describe("cihealth stats", func() {
+var _ = Describe("ci-health stats", func() {
 	It("Retrieves data from github", func() {
 		opt := &types.Options{
 			TokenPath: tokenPath,

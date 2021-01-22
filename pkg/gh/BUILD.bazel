@@ -6,7 +6,7 @@ go_library(
         "main.go",
         "types.go",
     ],
-    importpath = "github.com/fgimenez/cihealth/pkg/gh",
+    importpath = "github.com/fgimenez/ci-health/pkg/gh",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/constants",
