@@ -3,6 +3,7 @@ package stats
 import (
 	"time"
 
+	"github.com/fgimenez/cihealth/pkg/constants"
 	"github.com/fgimenez/cihealth/pkg/gh"
 )
 
@@ -16,7 +17,7 @@ func init() {
 
 func Run(client *gh.Client) (*Results, error) {
 	results := &Results{
-		ExecutionDate: time.Now().Format("2006-01-02T15:04:05Z"),
+		ExecutionDate: time.Now().Format(constants.DateFormat),
 		DataDays:      client.DataDays(),
 		Source:        client.Source(),
 	}

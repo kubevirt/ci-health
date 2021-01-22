@@ -9,6 +9,8 @@ import (
 	"github.com/shurcooL/githubv4"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
+
+	"github.com/fgimenez/cihealth/pkg/constants"
 )
 
 type Client struct {
@@ -46,14 +48,14 @@ func (c *Client) Source() string {
 }
 
 func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
-	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format("2006-01-02"))
+	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format(constants.DateFormat))
 	log.Debugf("merged query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
 	if err != nil {
 		return 0, err
 	}
 
-	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
+	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format(constants.DateFormat))
 	log.Debugf("not merged query: %q", notMergedQueryString)
 	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
 	if err != nil {
