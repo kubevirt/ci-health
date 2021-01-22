@@ -10,7 +10,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 
-	"github.com/fgimenez/cihealth/pkg/constants"
+	"github.com/fgimenez/ci-health/pkg/constants"
 )
 
 var (

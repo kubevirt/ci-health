@@ -3,8 +3,8 @@ package stats
 import (
 	"time"
 
-	"github.com/fgimenez/cihealth/pkg/constants"
-	"github.com/fgimenez/cihealth/pkg/gh"
+	"github.com/fgimenez/ci-health/pkg/constants"
+	"github.com/fgimenez/ci-health/pkg/gh"
 )
 
 type statsProcessor func(*Results, *gh.Client) (*Results, error)

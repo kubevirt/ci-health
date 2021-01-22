@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 go_library(
     name = "stats_lib",
     srcs = ["main.go"],
-    importpath = "github.com/fgimenez/cihealth/cmd/stats",
+    importpath = "github.com/fgimenez/ci-health/cmd/stats",
     visibility = ["//visibility:private"],
     deps = [
         "//pkg/runner",

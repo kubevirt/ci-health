@@ -4,8 +4,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/fgimenez/cihealth/pkg/runner"
-	"github.com/fgimenez/cihealth/pkg/types"
+	"github.com/fgimenez/ci-health/pkg/runner"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 func main() {

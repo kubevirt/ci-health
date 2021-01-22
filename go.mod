@@ -1,4 +1,4 @@
-module github.com/fgimenez/cihealth
+module github.com/fgimenez/ci-health
 
 go 1.15
 
