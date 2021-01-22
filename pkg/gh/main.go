@@ -106,8 +106,7 @@ func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time 
 	labelsAdded := make(map[string]time.Time)
 	labelsRemoved := make(map[string]time.Time)
 
-	for i := len(pr.TimelineItems.Nodes) - 1; i >= 0; i-- {
-		timelineItem := pr.TimelineItems.Nodes[i]
+	for _, timelineItem := range pr.TimelineItems.Nodes {
 		if (timelineItem.LabeledEventFragment != LabeledEventFragment{}) {
 			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
 			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
