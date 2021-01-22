@@ -3,7 +3,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: fgimenez/bazelisk:v1.7.4-2
+      - image: kubevirtci/bootstrap:v20210112-b29dfd7
     steps:
       - checkout
       - run:
