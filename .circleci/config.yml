@@ -10,7 +10,7 @@ jobs:
           command: |
             echo -n $GITHUB_TOKEN > $(pwd)/token
 
-            bazelisk test ... --test_output=all --test_arg=-test.v --action_env GITHUB_TOKEN_PATH=$(pwd)/token
+            bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token
 
 workflows:
   version: 2
