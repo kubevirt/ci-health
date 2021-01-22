@@ -34,17 +34,17 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
+								CreatedAt: queryDate.AddDate(0, 0, -2),
 								AddedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -2),
+								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.LGTMLabel,
 								},
 							},
 						},
@@ -84,7 +84,15 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -4),
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
 								AddedLabel: gh.Label{
 									Name: constants.LGTMLabel,
 								},
@@ -100,17 +108,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -6),
+								CreatedAt: queryDate.AddDate(0, 0, -4),
 								AddedLabel: gh.Label{
 									Name: constants.LGTMLabel,
-								},
-							},
-						},
-						{
-							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -7),
-								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -124,18 +124,10 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 				TimelineItems: gh.TimelineItems{
 					Nodes: []gh.TimelineItem{
 						{
-							UnlabeledEventFragment: gh.UnlabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -4),
-								RemovedLabel: gh.Label{
-									Name: constants.HoldLabel,
-								},
-							},
-						},
-						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -5),
+								CreatedAt: queryDate.AddDate(0, 0, -7),
 								AddedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -149,9 +141,17 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -7),
+								CreatedAt: queryDate.AddDate(0, 0, -5),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: gh.Label{
+									Name: constants.HoldLabel,
 								},
 							},
 						},
@@ -165,18 +165,10 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 				TimelineItems: gh.TimelineItems{
 					Nodes: []gh.TimelineItem{
 						{
-							UnlabeledEventFragment: gh.UnlabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -4),
-								RemovedLabel: gh.Label{
-									Name: constants.NeedsRebaseLabel,
-								},
-							},
-						},
-						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -5),
+								CreatedAt: queryDate.AddDate(0, 0, -7),
 								AddedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -190,9 +182,17 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -7),
+								CreatedAt: queryDate.AddDate(0, 0, -5),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: gh.Label{
+									Name: constants.NeedsRebaseLabel,
 								},
 							},
 						},
@@ -249,17 +249,17 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, 1),
+								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.LGTMLabel,
 								},
 							},
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
+								CreatedAt: queryDate.AddDate(0, 0, 1),
 								AddedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -274,17 +274,17 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, 1),
+								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
+								CreatedAt: queryDate.AddDate(0, 0, 1),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.LGTMLabel,
 								},
 							},
 						},
@@ -299,9 +299,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
+								CreatedAt: queryDate.AddDate(0, 0, -3),
 								AddedLabel: gh.Label{
-									Name: constants.NeedsRebaseLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -315,9 +315,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -3),
+								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.NeedsRebaseLabel,
 								},
 							},
 						},
@@ -332,9 +332,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 					Nodes: []gh.TimelineItem{
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
+								CreatedAt: queryDate.AddDate(0, 0, -3),
 								AddedLabel: gh.Label{
-									Name: constants.HoldLabel,
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -348,9 +348,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 						},
 						{
 							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -3),
+								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+									Name: constants.HoldLabel,
 								},
 							},
 						},
@@ -364,10 +364,10 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 				TimelineItems: gh.TimelineItems{
 					Nodes: []gh.TimelineItem{
 						{
-							UnlabeledEventFragment: gh.UnlabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
-								RemovedLabel: gh.Label{
-									Name: constants.LGTMLabel,
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
+									Name: constants.ApprovedLabel,
 								},
 							},
 						},
@@ -380,10 +380,10 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 							},
 						},
 						{
-							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -3),
-								AddedLabel: gh.Label{
-									Name: constants.ApprovedLabel,
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								RemovedLabel: gh.Label{
+									Name: constants.LGTMLabel,
 								},
 							},
 						},
@@ -397,9 +397,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 				TimelineItems: gh.TimelineItems{
 					Nodes: []gh.TimelineItem{
 						{
-							UnlabeledEventFragment: gh.UnlabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
-								RemovedLabel: gh.Label{
+							LabeledEventFragment: gh.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: gh.Label{
 									Name: constants.ApprovedLabel,
 								},
 							},
@@ -413,9 +413,9 @@ var _ = Describe("DatePREnteredMergeQueue", func() {
 							},
 						},
 						{
-							LabeledEventFragment: gh.LabeledEventFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -3),
-								AddedLabel: gh.Label{
+							UnlabeledEventFragment: gh.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								RemovedLabel: gh.Label{
 									Name: constants.ApprovedLabel,
 								},
 							},
