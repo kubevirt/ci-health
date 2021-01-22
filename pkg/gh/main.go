@@ -45,59 +45,51 @@ func (c *Client) Source() string {
 }
 
 func (c *Client) GetOpenApprovedPRsByDate(date time.Time) (int, error) {
+	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr merged>%[1]s", c.source, date.Format("2006-01-02"))
+	mergedQueryResult, err := c.prQuery(mergedQueryString)
+
+	if err != nil {
+		return 0, err
+	}
+
+	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
+
+	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
+
+	if err != nil {
+		return 0, err
+	}
+
+	if err != nil {
+		return 0, err
+	}
+
+	return len(mergedQueryResult) + len(notMergedQueryResult), nil
+}
+
+func (c *Client) prQuery(query string) ([]struct {
+	PullRequestFragment `graphql:"... on PullRequest"`
+}, error) {
 	ctx := context.Background()
 
-	mergedQueryString := fmt.Sprintf("repo:%s created:<=%[1]s type:pr merged>%[1]s", c.source, date.Format("2006-01-02"))
 	variables := map[string]interface{}{
-		"querystring": githubv4.String(mergedQueryString),
+		"querystring": githubv4.String(query),
 	}
 
 	var mergedQuery struct {
 		Search struct {
 			IssueCount int
 			Nodes      []struct {
-				PullRequestFragment struct {
-					Number   int
-					Comments struct {
-						Nodes []Comment
-					} `graphql:"comments(first: 100, orderBy: {field: UPDATED_AT, direction: DESC})"`
-				} `graphql:"... on PullRequest"`
+				PullRequestFragment `graphql:"... on PullRequest"`
 			}
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 
 	err := c.inner.Query(ctx, &mergedQuery, variables)
-	if err != nil {
-		return 0, err
-	}
-
-	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format("2006-01-02"))
-	variables = map[string]interface{}{
-		"querystring": githubv4.String(notMergedQueryString),
-	}
-	var notMergedQuery struct {
-		Search struct {
-			IssueCount int
-			Nodes      []struct {
-				PullRequestFragment struct {
-					Number   int
-					Comments struct {
-						Nodes []Comment
-					} `graphql:"comments(first: 100, orderBy: {field: UPDATED_AT, direction: DESC})"`
-				} `graphql:"... on PullRequest"`
-			}
-		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
-	}
-	err = c.inner.Query(ctx, &notMergedQuery, variables)
-	if err != nil {
-		return 0, err
-	}
-
-	return notMergedQuery.Search.IssueCount, nil
+	return mergedQuery.Search.Nodes, err
 }
 
-func IsPRInMergeQueueAtDate(pr *PullRequestFragment, date time.Time) bool {
-	var hasLGTMLabel, hasApprobedLabel, doesNotHaveDoNotMergeLabel, doesNotHaveNeedsRebaseLabel bool
+func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) *time.Time {
 
-	return hasLGTMLabel && hasApprobedLabel && doesNotHaveDoNotMergeLabel && doesNotHaveNeedsRebaseLabel
+	return nil
 }
