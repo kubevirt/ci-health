@@ -14,7 +14,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func TestCi-Health(t *testing.T) {
+func TestCiHealth(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "ci-health Suite")
 }
