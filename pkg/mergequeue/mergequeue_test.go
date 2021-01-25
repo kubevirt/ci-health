@@ -542,5 +542,38 @@ var _ = Describe("DatePREnteredTypes", func() {
 			},
 			queryDate,
 			zeroDate),
+		table.Entry("PR not in merge queue: lgtm, approve and hold at the same time",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
 	)
 })
