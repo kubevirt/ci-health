@@ -1,11 +1,16 @@
 package stats
 
+type DataPoint struct {
+	Value float64
+}
+
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the maximum and minimum values in the data
 // set.
 type RunningAverageDataItem struct {
-	Name            string
-	Value, Max, Min float64
+	Name       string
+	Value      float64
+	DataPoints []DataPoint
 }
 
 // Results represents the data obtained from GitHub. It includes the source repo from which

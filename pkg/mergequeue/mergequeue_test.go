@@ -23,8 +23,8 @@ var (
 	zeroDate  = time.Time{}
 )
 
-var _ = Describe("DatePREnteredTypes", func() {
-	table.DescribeTable("should return the ritypest values for different timeline events",
+var _ = Describe("DatePREntered", func() {
+	table.DescribeTable("should return the date a PR entered the merge queue",
 		func(pr *types.PullRequestFragment, date time.Time, expected time.Time) {
 			actual := mergequeue.DatePREntered(pr, date)
 			Expect(actual).To(Equal(expected))

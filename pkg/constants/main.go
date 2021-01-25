@@ -7,4 +7,6 @@ const (
 	ApprovedLabel    = "approved"
 	HoldLabel        = "do-not-merge/hold"
 	NeedsRebaseLabel = "needs-rebase"
+
+	MergeQueueLengthName = "MergeQueueLength"
 )
