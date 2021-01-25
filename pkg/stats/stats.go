@@ -1,6 +1,7 @@
 package stats
 
 import (
+	"math"
 	"time"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
@@ -41,15 +42,24 @@ func (h *Handler) Run() (*Results, error) {
 }
 
 func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
-	queueLength, err := h.mq.LengthAt(time.Now())
-	if err != nil {
-		return nil, err
-	}
+	currentTime := time.Now()
 
 	dataItem := &RunningAverageDataItem{
-		Name:  "MergeQueueLength",
-		Value: float64(queueLength),
+		Name:       constants.MergeQueueLengthName,
+		DataPoints: []DataPoint{},
 	}
+
+	values := []float64{}
+	for i := 0; i < results.DataDays; i++ {
+		queueLength, err := h.mq.LengthAt(currentTime.AddDate(0, 0, -1*i))
+		if err != nil {
+			return nil, err
+		}
+		values = append(values, float64(queueLength))
+		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: float64(queueLength)})
+	}
+
+	dataItem.Value = Average(values)
 
 	results.Data = append(results.Data, dataItem)
 
@@ -58,4 +68,16 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 
 func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	return results, nil
+}
+
+func Average(xs []float64) float64 {
+	if len(xs) == 0 {
+		return 0
+	}
+	total := 0.0
+	for _, v := range xs {
+		total += v
+	}
+	result := total / float64(len(xs))
+	return math.Round(result*100) / 100
 }

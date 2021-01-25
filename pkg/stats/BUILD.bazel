@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "stats",
@@ -11,5 +11,16 @@ go_library(
     deps = [
         "//pkg/constants",
         "//pkg/mergequeue",
+    ],
+)
+
+go_test(
+    name = "stats_test",
+    srcs = ["stats_test.go"],
+    embed = [":stats"],
+    deps = [
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
     ],
 )

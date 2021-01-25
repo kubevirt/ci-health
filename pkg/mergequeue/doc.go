@@ -6,3 +6,4 @@
 // They have been already reviewed, approved, don't need to be rebased and are
 // not marked to be hold. The package provides several functions to query data
 // about the merge queue.
+package mergequeue
