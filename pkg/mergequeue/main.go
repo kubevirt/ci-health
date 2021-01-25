@@ -1,6 +1,7 @@
 package mergequeue
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
@@ -34,6 +35,26 @@ func (mq *Handler) LengthAt(date time.Time) (int, error) {
 		if DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
 			result++
 		}
+	}
+
+	return result, nil
+}
+
+// TimesToMerge returns the duration each merged PR took to land in the time
+// frame between the given start and end dates.
+func (mq *Handler) TimesToMerge(startDate, endDate time.Time) ([]time.Duration, error) {
+	prs, err := mq.client.MergedPRsBetween(startDate, endDate)
+	if err != nil {
+		return nil, err
+	}
+
+	result := []time.Duration{}
+	for _, pr := range prs {
+		mqStart := DatePREntered(&pr.PullRequestFragment, pr.MergedAt)
+		if mqStart.Equal(zeroDate) {
+			return nil, fmt.Errorf("Merge queue enter date not found for PR %d", pr.Number)
+		}
+		result = append(result, pr.MergedAt.Sub(mqStart))
 	}
 
 	return result, nil
