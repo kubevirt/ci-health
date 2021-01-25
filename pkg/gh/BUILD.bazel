@@ -1,29 +1,15 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "gh",
-    srcs = [
-        "main.go",
-        "types.go",
-    ],
+    srcs = ["main.go"],
     importpath = "github.com/fgimenez/ci-health/pkg/gh",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/constants",
+        "//pkg/types",
         "@com_github_shurcool_githubv4//:githubv4",
         "@com_github_sirupsen_logrus//:logrus",
         "@org_golang_x_oauth2//:oauth2",
-    ],
-)
-
-go_test(
-    name = "gh_test",
-    srcs = ["gh_test.go"],
-    embed = [":gh"],
-    deps = [
-        "//pkg/constants",
-        "@com_github_onsi_ginkgo//:ginkgo",
-        "@com_github_onsi_ginkgo//extensions/table",
-        "@com_github_onsi_gomega//:gomega",
     ],
 )

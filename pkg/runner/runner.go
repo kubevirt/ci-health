@@ -8,6 +8,7 @@ import (
 	yaml "gopkg.in/yaml.v2"
 
 	"github.com/fgimenez/ci-health/pkg/gh"
+	"github.com/fgimenez/ci-health/pkg/mergequeue"
 	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
@@ -23,12 +24,16 @@ func Run(o *types.Options) (string, error) {
 		return "", fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
 
-	ghClient, err := gh.NewClient(o.TokenPath, o.Source, o.DataDays)
+	ghClient, err := gh.NewClient(o.TokenPath, o.Source)
 	if err != nil {
 		return "", err
 	}
 
-	results, err := stats.Run(ghClient)
+	mqHandler := mergequeue.NewHandler(ghClient)
+
+	statsHandler := stats.NewHandler(mqHandler, o.Source, o.DataDays)
+
+	results, err := statsHandler.Run()
 	if err != nil {
 		return "", err
 	}

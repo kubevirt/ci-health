@@ -1,0 +1,26 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "mergequeue",
+    srcs = ["main.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/mergequeue",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/constants",
+        "//pkg/gh",
+        "//pkg/types",
+    ],
+)
+
+go_test(
+    name = "mergequeue_test",
+    srcs = ["mergequeue_test.go"],
+    embed = [":mergequeue"],
+    deps = [
+        "//pkg/constants",
+        "//pkg/types",
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
+    ],
+)
