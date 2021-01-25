@@ -4,12 +4,40 @@ import (
 	"time"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
+	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 var (
 	zeroDate = time.Time{}
 )
+
+type Handler struct {
+	client *gh.Client
+}
+
+func NewHandler(client *gh.Client) *Handler {
+	return &Handler{
+		client,
+	}
+}
+
+// LengthAt returns the merge queue size for a given date.
+func (mq *Handler) LengthAt(date time.Time) (int, error) {
+	prs, err := mq.client.OpenPRsAt(date)
+	if err != nil {
+		return 0, err
+	}
+
+	result := 0
+	for _, pr := range prs {
+		if DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
+			result++
+		}
+	}
+
+	return result, nil
+}
 
 // DatePREntered returns when a PR entered the merge queue before a
 // given date, zero value date if it was not in the merge queue by that date.

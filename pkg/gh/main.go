@@ -11,7 +11,6 @@ import (
 	"golang.org/x/oauth2"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/mergequeue"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -20,12 +19,11 @@ var (
 )
 
 type Client struct {
-	inner    *githubv4.Client
-	dataDays int
-	source   string
+	inner  *githubv4.Client
+	source string
 }
 
-func NewClient(tokenPath, source string, dataDays int) (*Client, error) {
+func NewClient(tokenPath string, source string) (*Client, error) {
 	token, err := ioutil.ReadFile(tokenPath)
 	if err != nil {
 		return nil, err
@@ -39,46 +37,32 @@ func NewClient(tokenPath, source string, dataDays int) (*Client, error) {
 
 	client := &Client{
 		inner,
-		dataDays,
 		source,
 	}
 	return client, nil
 }
 
-func (c *Client) DataDays() int {
-	return c.dataDays
-}
-
-func (c *Client) Source() string {
-	return c.source
-}
-
-// MergeQueueSizeByDate returns the merge queue size for a given date.
-func (c *Client) MergeQueueSizeByDate(date time.Time) (int, error) {
+// OpenPRsAt returns the list of open PRs at a given date.
+func (c *Client) OpenPRsAt(date time.Time) ([]struct {
+	types.PullRequestFragment `graphql:"... on PullRequest"`
+}, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format(constants.DateFormat))
 	log.Debugf("merged query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
 	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format(constants.DateFormat))
 	log.Debugf("not merged query: %q", notMergedQueryString)
 	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
 	log.Debugf("Merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
-	result := 0
-	for _, pr := range append(mergedQueryResult, notMergedQueryResult...) {
-		if mergequeue.DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
-			result++
-		}
-	}
-
-	return result, nil
+	return append(mergedQueryResult, notMergedQueryResult...), nil
 }
 
 func (c *Client) prQuery(query string) ([]struct {

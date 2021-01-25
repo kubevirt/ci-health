@@ -4,27 +4,35 @@ import (
 	"time"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/gh"
+	"github.com/fgimenez/ci-health/pkg/mergequeue"
 )
 
-type statsProcessor func(*Results, *gh.Client) (*Results, error)
+type statsProcessor func(*Results) (*Results, error)
 
-var processors []statsProcessor
-
-func init() {
-	processors = []statsProcessor{mergeQueueProcessor, timeToMergeProcessor}
+type Handler struct {
+	mq       *mergequeue.Handler
+	source   string
+	dataDays int
 }
 
-func Run(client *gh.Client) (*Results, error) {
+func NewHandler(mq *mergequeue.Handler, source string, dataDays int) *Handler {
+	return &Handler{
+		mq,
+		source,
+		dataDays,
+	}
+}
+
+func (h *Handler) Run() (*Results, error) {
 	results := &Results{
 		ExecutionDate: time.Now().Format(constants.DateFormat),
-		DataDays:      client.DataDays(),
-		Source:        client.Source(),
+		DataDays:      h.dataDays,
+		Source:        h.source,
 	}
 	var err error
 
-	for _, processor := range processors {
-		results, err = processor(results, client)
+	for _, processor := range []statsProcessor{h.mergeQueueProcessor, h.timeToMergeProcessor} {
+		results, err = processor(results)
 		if err != nil {
 			return nil, err
 		}
@@ -32,8 +40,8 @@ func Run(client *gh.Client) (*Results, error) {
 	return results, nil
 }
 
-func mergeQueueProcessor(results *Results, client *gh.Client) (*Results, error) {
-	queueLength, err := client.MergeQueueSizeByDate(time.Now())
+func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
+	queueLength, err := h.mq.LengthAt(time.Now())
 	if err != nil {
 		return nil, err
 	}
@@ -48,6 +56,6 @@ func mergeQueueProcessor(results *Results, client *gh.Client) (*Results, error) 
 	return results, nil
 }
 
-func timeToMergeProcessor(results *Results, client *gh.Client) (*Results, error) {
+func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	return results, nil
 }

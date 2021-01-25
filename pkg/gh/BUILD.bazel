@@ -7,7 +7,6 @@ go_library(
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/constants",
-        "//pkg/mergequeue",
         "//pkg/types",
         "@com_github_shurcool_githubv4//:githubv4",
         "@com_github_sirupsen_logrus//:logrus",

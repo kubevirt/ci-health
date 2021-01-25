@@ -7,6 +7,7 @@ go_library(
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/gh",
+        "//pkg/mergequeue",
         "//pkg/stats",
         "//pkg/types",
         "@com_github_sirupsen_logrus//:logrus",
