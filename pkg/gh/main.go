@@ -11,6 +11,8 @@ import (
 	"golang.org/x/oauth2"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
+	"github.com/fgimenez/ci-health/pkg/mergequeue"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 var (
@@ -71,7 +73,7 @@ func (c *Client) MergeQueueSizeByDate(date time.Time) (int, error) {
 
 	result := 0
 	for _, pr := range append(mergedQueryResult, notMergedQueryResult...) {
-		if DatePREnteredMergeQueue(&pr.PullRequestFragment, date) != zeroDate {
+		if mergequeue.DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
 			result++
 		}
 	}
@@ -80,7 +82,7 @@ func (c *Client) MergeQueueSizeByDate(date time.Time) (int, error) {
 }
 
 func (c *Client) prQuery(query string) ([]struct {
-	PullRequestFragment `graphql:"... on PullRequest"`
+	types.PullRequestFragment `graphql:"... on PullRequest"`
 }, error) {
 	ctx := context.Background()
 
@@ -91,51 +93,11 @@ func (c *Client) prQuery(query string) ([]struct {
 	var mergedQuery struct {
 		Search struct {
 			Nodes []struct {
-				PullRequestFragment `graphql:"... on PullRequest"`
+				types.PullRequestFragment `graphql:"... on PullRequest"`
 			}
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 
 	err := c.inner.Query(ctx, &mergedQuery, variables)
 	return mergedQuery.Search.Nodes, err
-}
-
-// DatePREnteredMergeQueue returns when a PR entered the merge queue before a
-// given date, zero value date if it was not in the merge queue by that date.
-func DatePREnteredMergeQueue(pr *PullRequestFragment, date time.Time) time.Time {
-	labelsAdded := make(map[string]time.Time)
-	labelsRemoved := make(map[string]time.Time)
-
-	for _, timelineItem := range pr.TimelineItems.Nodes {
-		if (timelineItem.LabeledEventFragment != LabeledEventFragment{}) {
-			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
-			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
-		} else if (timelineItem.UnlabeledEventFragment != UnlabeledEventFragment{}) {
-			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
-			labelsRemoved[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
-		}
-	}
-
-	if labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.LGTMLabel].Before(date) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.ApprovedLabel].Before(date) {
-
-		if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
-			labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
-			return labelsRemoved[constants.HoldLabel]
-		}
-		if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
-			labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
-			return labelsRemoved[constants.NeedsRebaseLabel]
-		}
-
-		if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
-			return labelsAdded[constants.ApprovedLabel]
-		}
-		return labelsAdded[constants.LGTMLabel]
-	}
-	return zeroDate
 }
