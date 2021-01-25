@@ -46,12 +46,18 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 	labelsRemoved := make(map[string]time.Time)
 
 	for _, timelineItem := range pr.TimelineItems.Nodes {
-		if (timelineItem.LabeledEventFragment != types.LabeledEventFragment{}) {
+		if (timelineItem.LabeledEventFragment != types.LabeledEventFragment{} &&
+			date.After(timelineItem.LabeledEventFragment.CreatedAt)) {
+
 			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
 			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
-		} else if (timelineItem.UnlabeledEventFragment != types.UnlabeledEventFragment{}) {
+
+		} else if (timelineItem.UnlabeledEventFragment != types.UnlabeledEventFragment{} &&
+			date.After(timelineItem.UnlabeledEventFragment.CreatedAt)) {
+
 			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
 			labelsRemoved[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
+
 		}
 	}
 

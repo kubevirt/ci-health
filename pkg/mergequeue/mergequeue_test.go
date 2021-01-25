@@ -202,6 +202,72 @@ var _ = Describe("DatePREnteredTypes", func() {
 			},
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
+		table.Entry("PR in merge queue: hold after queryDate",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: types.Label{
+									Name: constants.HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -1)),
+		table.Entry("PR in merge queue: needs-rebase after queryDate",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: types.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR not in merge queue: missing all labels",
 			&types.PullRequestFragment{
 				TimelineItems: types.TimelineItems{
@@ -417,6 +483,56 @@ var _ = Describe("DatePREnteredTypes", func() {
 							UnlabeledEventFragment: types.UnlabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								RemovedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: lgtm after queryDate",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: approve after queryDate",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: types.Label{
 									Name: constants.ApprovedLabel,
 								},
 							},
