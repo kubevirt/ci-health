@@ -8,5 +8,6 @@ const (
 	HoldLabel        = "do-not-merge/hold"
 	NeedsRebaseLabel = "needs-rebase"
 
-	MergeQueueLengthName = "MergeQueueLength"
+	MergeQueueLengthName = "AverageMergeQueueLength"
+	TimeToMergeName      = "AverageTimeToMerge"
 )
