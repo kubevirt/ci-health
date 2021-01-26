@@ -8,6 +8,7 @@ go_library(
     deps = [
         "//pkg/gh",
         "//pkg/mergequeue",
+        "//pkg/output",
         "//pkg/stats",
         "//pkg/types",
         "@com_github_sirupsen_logrus//:logrus",

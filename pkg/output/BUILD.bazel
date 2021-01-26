@@ -1,0 +1,11 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "output",
+    srcs = [
+        "file.go",
+        "types.go",
+    ],
+    importpath = "github.com/fgimenez/ci-health/pkg/output",
+    visibility = ["//visibility:public"],
+)
