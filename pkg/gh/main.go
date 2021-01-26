@@ -47,22 +47,44 @@ func (c *Client) OpenPRsAt(date time.Time) ([]struct {
 	types.PullRequestFragment `graphql:"... on PullRequest"`
 }, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format(constants.DateFormat))
-	log.Debugf("merged query: %q", mergedQueryString)
+	log.Debugf("merged open query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
 	if err != nil {
 		return nil, err
 	}
 
 	notMergedQueryString := fmt.Sprintf("repo:%s created:<=%s type:pr is:open", c.source, date.Format(constants.DateFormat))
-	log.Debugf("not merged query: %q", notMergedQueryString)
+	log.Debugf("not merged open query: %q", notMergedQueryString)
 	notMergedQueryResult, err := c.prQuery(notMergedQueryString)
 	if err != nil {
 		return nil, err
 	}
 
-	log.Debugf("Merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
+	log.Debugf("merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
 	return append(mergedQueryResult, notMergedQueryResult...), nil
+}
+
+// MergedPRsBetween returns a slice of PRs that were merged in the time frame
+// defined by the start and end dates given as parameters.
+func (c *Client) MergedPRsBetween(startDate, endDate time.Time) ([]struct {
+	types.PullRequestFragment `graphql:"... on PullRequest"`
+}, error) {
+	mergedQueryString := fmt.Sprintf("repo:%s type:pr merged:%s..%s",
+		c.source,
+		startDate.Format(constants.DateFormat),
+		endDate.Format(constants.DateFormat),
+	)
+	log.Debugf("merged between query: %q", mergedQueryString)
+
+	mergedQueryResult, err := c.prQuery(mergedQueryString)
+	if err != nil {
+		return nil, err
+	}
+
+	log.Debugf("merged between query result length: %d", len(mergedQueryResult))
+
+	return mergedQueryResult, nil
 }
 
 func (c *Client) prQuery(query string) ([]struct {

@@ -12,6 +12,7 @@ go_library(
         "//pkg/constants",
         "//pkg/gh",
         "//pkg/types",
+        "@com_github_sirupsen_logrus//:logrus",
     ],
 )
 

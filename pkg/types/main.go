@@ -35,5 +35,7 @@ type TimelineItems struct {
 
 type PullRequestFragment struct {
 	Number        int
+	CreatedAt     time.Time
+	MergedAt      time.Time
 	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
 }

@@ -9,6 +9,7 @@ import (
 	. "github.com/onsi/gomega"
 	yaml "gopkg.in/yaml.v2"
 
+	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/runner"
 	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
@@ -55,5 +56,18 @@ var _ = Describe("ci-health stats", func() {
 
 		Expect(results.DataDays).To(Equal(dataDays))
 		Expect(results.Source).To(Equal(source))
+
+		Expect(results.Data).To(HaveLen(2))
+
+		names := []string{constants.MergeQueueLengthName, constants.TimeToMergeName}
+
+		for i, name := range names {
+			metricResults := results.Data[i]
+			Expect(metricResults.Name).To(Equal(name))
+			Expect(metricResults.Value).To(BeNumerically(">", 0))
+			for _, dataPoint := range metricResults.DataPoints {
+				Expect(dataPoint.Value).To(BeNumerically(">=", 0))
+			}
+		}
 	})
 })

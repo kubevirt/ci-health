@@ -4,6 +4,7 @@ go_test(
     name = "e2e_test",
     srcs = ["tests_suite_test.go"],
     deps = [
+        "//pkg/constants",
         "//pkg/runner",
         "//pkg/stats",
         "//pkg/types",

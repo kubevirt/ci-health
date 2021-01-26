@@ -51,7 +51,7 @@ func Run(o *types.Options) (string, error) {
 		o.Path = file.Name()
 	}
 
-	log.Printf("Writing output file %s", o.Path)
+	log.Infof("Writing output file %s", o.Path)
 	err = ioutil.WriteFile(o.Path, d, 0644)
 	if err != nil {
 		return "", err

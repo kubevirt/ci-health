@@ -67,6 +67,31 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
+	currentTime := time.Now()
+
+	dataItem := &RunningAverageDataItem{
+		Name:       constants.TimeToMergeName,
+		DataPoints: []DataPoint{},
+	}
+
+	timesToMerge, err := h.mq.TimesToMerge(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
+	if err != nil {
+		return nil, err
+	}
+
+	values := []float64{}
+	for _, timeToMerge := range timesToMerge {
+		days := timeToMerge.Hours() / 24
+		value := round(days)
+
+		values = append(values, value)
+		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: value})
+	}
+
+	dataItem.Value = Average(values)
+
+	results.Data = append(results.Data, dataItem)
+
 	return results, nil
 }
 
@@ -79,5 +104,9 @@ func Average(xs []float64) float64 {
 		total += v
 	}
 	result := total / float64(len(xs))
-	return math.Round(result*100) / 100
+	return round(result)
+}
+
+func round(value float64) float64 {
+	return math.Round(value*100) / 100
 }
