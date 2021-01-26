@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"time"
 
+	log "github.com/sirupsen/logrus"
+
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/types"
@@ -32,6 +34,7 @@ func (mq *Handler) LengthAt(date time.Time) (int, error) {
 
 	result := 0
 	for _, pr := range prs {
+		log.Debugf("LengthAt: calculating mq date entered for PR num %d from %s", pr.Number, date)
 		if DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
 			result++
 		}
@@ -50,6 +53,7 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) ([]time.Duration, 
 
 	result := []time.Duration{}
 	for _, pr := range prs {
+		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", pr.Number, pr.MergedAt)
 		mqStart := DatePREntered(&pr.PullRequestFragment, pr.MergedAt)
 		if mqStart.Equal(zeroDate) {
 			return nil, fmt.Errorf("Merge queue enter date not found for PR %d", pr.Number)

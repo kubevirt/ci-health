@@ -60,7 +60,7 @@ func (c *Client) OpenPRsAt(date time.Time) ([]struct {
 		return nil, err
 	}
 
-	log.Debugf("Merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
+	log.Debugf("merge query result length: %d, not merged query result length: %d", len(mergedQueryResult), len(notMergedQueryResult))
 
 	return append(mergedQueryResult, notMergedQueryResult...), nil
 }
@@ -77,7 +77,14 @@ func (c *Client) MergedPRsBetween(startDate, endDate time.Time) ([]struct {
 	)
 	log.Debugf("merged between query: %q", mergedQueryString)
 
-	return c.prQuery(mergedQueryString)
+	mergedQueryResult, err := c.prQuery(mergedQueryString)
+	if err != nil {
+		return nil, err
+	}
+
+	log.Debugf("merged between query result length: %d", len(mergedQueryResult))
+
+	return mergedQueryResult, nil
 }
 
 func (c *Client) prQuery(query string) ([]struct {
