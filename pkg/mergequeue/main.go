@@ -65,16 +65,13 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) ([]time.Duration, 
 func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 	labelsAdded := make(map[string]time.Time)
 	labelsRemoved := make(map[string]time.Time)
-
 	for _, timelineItem := range pr.TimelineItems.Nodes {
-		if (timelineItem.LabeledEventFragment != types.LabeledEventFragment{} &&
-			date.After(timelineItem.LabeledEventFragment.CreatedAt)) {
+		if isLabeledEvent(timelineItem, date) {
 
 			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
 			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
 
-		} else if (timelineItem.UnlabeledEventFragment != types.UnlabeledEventFragment{} &&
-			date.After(timelineItem.UnlabeledEventFragment.CreatedAt)) {
+		} else if isUnlabeledEvent(timelineItem, date) {
 
 			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
 			labelsRemoved[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
@@ -82,26 +79,45 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 		}
 	}
 
-	if labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.LGTMLabel].Before(date) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.ApprovedLabel].Before(date) {
+	if isPRInMergeQueue(labelsAdded, date) {
 
 		if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
 			labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
+
 			return labelsRemoved[constants.HoldLabel]
 		}
 		if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
 			labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
+
 			return labelsRemoved[constants.NeedsRebaseLabel]
 		}
 
 		if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
+
 			return labelsAdded[constants.ApprovedLabel]
 		}
 		return labelsAdded[constants.LGTMLabel]
 	}
 	return zeroDate
+}
+
+func isLabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
+	return timelineItem.LabeledEventFragment != types.LabeledEventFragment{} &&
+		timelineItem.LabeledEventFragment.AddedLabel.Name != "" &&
+		date.After(timelineItem.LabeledEventFragment.CreatedAt)
+}
+
+func isUnlabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
+	return timelineItem.UnlabeledEventFragment != types.UnlabeledEventFragment{} &&
+		timelineItem.UnlabeledEventFragment.RemovedLabel.Name != "" &&
+		date.After(timelineItem.UnlabeledEventFragment.CreatedAt)
+}
+
+func isPRInMergeQueue(labelsAdded map[string]time.Time, date time.Time) bool {
+	return labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
+		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
+		labelsAdded[constants.LGTMLabel].Before(date) &&
+		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
+		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
+		labelsAdded[constants.ApprovedLabel].Before(date)
 }

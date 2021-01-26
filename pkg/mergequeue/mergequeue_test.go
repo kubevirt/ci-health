@@ -268,6 +268,53 @@ var _ = Describe("DatePREntered", func() {
 			},
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
+		table.Entry("PR in merge queue: handle empty events",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: types.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: "",
+								},
+							},
+							UnlabeledEventFragment: types.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								RemovedLabel: types.Label{
+									Name: constants.NeedsRebaseLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR not in merge queue: missing all labels",
 			&types.PullRequestFragment{
 				TimelineItems: types.TimelineItems{
@@ -567,6 +614,45 @@ var _ = Describe("DatePREntered", func() {
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
 									Name: constants.HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: handle empty events",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: "",
+								},
+							},
+							UnlabeledEventFragment: types.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								RemovedLabel: types.Label{
+									Name: constants.LGTMLabel,
 								},
 							},
 						},
