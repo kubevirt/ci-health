@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 
 	log "github.com/sirupsen/logrus"
 
@@ -50,6 +51,11 @@ func Run(o *types.Options) (*stats.Results, error) {
 			return nil, err
 		}
 		o.Path = dir
+	} else {
+		err := os.Mkdir(o.Path, 0755)
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	badgeOptions := &output.BadgeOptions{

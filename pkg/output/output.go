@@ -5,9 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/narqo/go-badge"
+	log "github.com/sirupsen/logrus"
+
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/stats"
-	"github.com/narqo/go-badge"
 )
 
 type Levels struct {
@@ -61,6 +63,7 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 	}
 	defer f.Close()
 
+	log.Debugf("Writing color %s", color)
 	return badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
 }
 

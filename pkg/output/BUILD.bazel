@@ -9,6 +9,7 @@ go_library(
         "//pkg/constants",
         "//pkg/stats",
         "@com_github_narqo_go_badge//:go-badge",
+        "@com_github_sirupsen_logrus//:logrus",
     ],
 )
 
