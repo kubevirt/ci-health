@@ -29,6 +29,7 @@ func (h *Handler) Run() (*Results, error) {
 		ExecutionDate: time.Now().Format(constants.DateFormat),
 		DataDays:      h.dataDays,
 		Source:        h.source,
+		Data:          map[string]RunningAverageDataItem{},
 	}
 	var err error
 
@@ -44,8 +45,7 @@ func (h *Handler) Run() (*Results, error) {
 func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 	currentTime := time.Now()
 
-	dataItem := &RunningAverageDataItem{
-		Name:       constants.MergeQueueLengthName,
+	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
 	}
 
@@ -61,7 +61,7 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 
 	dataItem.Value = Average(values)
 
-	results.Data = append(results.Data, dataItem)
+	results.Data[constants.MergeQueueLengthName] = dataItem
 
 	return results, nil
 }
@@ -69,8 +69,7 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	currentTime := time.Now()
 
-	dataItem := &RunningAverageDataItem{
-		Name:       constants.TimeToMergeName,
+	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
 	}
 
@@ -90,7 +89,7 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 
 	dataItem.Value = Average(values)
 
-	results.Data = append(results.Data, dataItem)
+	results.Data[constants.TimeToMergeName] = dataItem
 
 	return results, nil
 }

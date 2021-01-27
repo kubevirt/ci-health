@@ -6,6 +6,7 @@ go_library(
     importpath = "github.com/fgimenez/ci-health/cmd/stats",
     visibility = ["//visibility:private"],
     deps = [
+        "//pkg/constants",
         "//pkg/runner",
         "//pkg/types",
         "@com_github_sirupsen_logrus//:logrus",

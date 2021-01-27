@@ -3,15 +3,14 @@ package e2e
 import (
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	yaml "gopkg.in/yaml.v2"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/runner"
-	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -26,7 +25,7 @@ var (
 
 const (
 	source   = "kubevirt/kubevirt"
-	dataDays = 7
+	dataDays = 1
 )
 
 var _ = BeforeSuite(func() {
@@ -37,23 +36,22 @@ var _ = BeforeSuite(func() {
 })
 
 var _ = Describe("ci-health stats", func() {
-	It("Retrieves data from github", func() {
+	It("Retrieves data from github and writes badges", func() {
+		badgeDir, err := ioutil.TempDir("", "e2e-ci-health")
+		Expect(err).ToNot(HaveOccurred())
+
 		opt := &types.Options{
+			Path:      badgeDir,
 			TokenPath: tokenPath,
 			Source:    source,
 			DataDays:  dataDays,
 			LogLevel:  "debug",
 		}
 
-		path, err := runner.Run(opt)
+		results, err := runner.Run(opt)
 		Expect(err).ToNot(HaveOccurred())
 
-		contents, err := ioutil.ReadFile(path)
-		Expect(err).ToNot(HaveOccurred())
-
-		results := stats.Results{}
-		err = yaml.Unmarshal(contents, &results)
-
+		By("Checking returned data")
 		Expect(results.DataDays).To(Equal(dataDays))
 		Expect(results.Source).To(Equal(source))
 
@@ -61,13 +59,22 @@ var _ = Describe("ci-health stats", func() {
 
 		names := []string{constants.MergeQueueLengthName, constants.TimeToMergeName}
 
-		for i, name := range names {
-			metricResults := results.Data[i]
-			Expect(metricResults.Name).To(Equal(name))
+		for _, name := range names {
+			metricResults := results.Data[name]
 			Expect(metricResults.Value).To(BeNumerically(">", 0))
 			for _, dataPoint := range metricResults.DataPoints {
 				Expect(dataPoint.Value).To(BeNumerically(">=", 0))
 			}
+		}
+
+		By("Checking badge files")
+		badgeFileNames := []string{
+			filepath.Join(badgeDir, constants.MergeQueueLengthBadgeFileName),
+			filepath.Join(badgeDir, constants.TimeToMergeBadgeFileName),
+		}
+		for _, badgeFileName := range badgeFileNames {
+			_, err := os.Stat(badgeFileName)
+			Expect(err).ToNot(HaveOccurred())
 		}
 	})
 })

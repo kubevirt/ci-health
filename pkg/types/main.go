@@ -3,11 +3,17 @@ package types
 import "time"
 
 type Options struct {
-	Path      string
-	TokenPath string
-	Source    string
-	DataDays  int
-	LogLevel  string
+	Path                        string
+	TokenPath                   string
+	Source                      string
+	DataDays                    int
+	LogLevel                    string
+	TimeToMergeRedLevel         float64
+	TimeToMergeYellowLevel      float64
+	TimeToMergeGreenLevel       float64
+	MergeQueueLengthRedLevel    float64
+	MergeQueueLengthYellowLevel float64
+	MergeQueueLengthGreenLevel  float64
 }
 
 type Label struct {

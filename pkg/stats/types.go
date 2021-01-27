@@ -5,10 +5,8 @@ type DataPoint struct {
 }
 
 // RunningAverageDataItem contains data information in the form of a running average.
-// It contains the actual average value and the maximum and minimum values in the data
-// set.
+// It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Name       string
 	Value      float64
 	DataPoints []DataPoint
 }
@@ -17,8 +15,8 @@ type RunningAverageDataItem struct {
 // the data was obtained and the number of days back from the execution time included in the
 // data.
 type Results struct {
-	ExecutionDate string `yaml:"executionDate"`
-	DataDays      int    `yaml:"dataDays"`
+	ExecutionDate string
+	DataDays      int
 	Source        string
-	Data          []*RunningAverageDataItem
+	Data          map[string]RunningAverageDataItem
 }

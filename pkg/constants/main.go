@@ -10,4 +10,21 @@ const (
 
 	MergeQueueLengthName = "AverageMergeQueueLength"
 	TimeToMergeName      = "AverageTimeToMerge"
+
+	DefaultPath                        = "/tmp/test"
+	DefaultTokenPath                   = ""
+	DefaultSource                      = "kubevirt/kubevirt"
+	DefaultDataDays                    = 7
+	DefaultLogLevel                    = "info"
+	DefaultTimeToMergeRedLevel         = 3.0
+	DefaultTimeToMergeYellowLevel      = 2.0
+	DefaultTimeToMergeGreenLevel       = 1.0
+	DefaultMergeQueueLengthRedLevel    = 15.0
+	DefaultMergeQueueLengthYellowLevel = 10.0
+	DefaultMergeQueueLengthGreenLevel  = 6.0
+
+	TimeToMergeBadgeFileName      = "time-to-merge.svg"
+	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
+	TimeToMergeBadgeName          = "avg time to merge"
+	MergeQueueLengthBadgeName     = "avg merge queue length"
 )

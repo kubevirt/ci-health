@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "output",
+    srcs = ["badge.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/output",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/constants",
+        "//pkg/stats",
+        "@com_github_narqo_go_badge//:go-badge",
+    ],
+)

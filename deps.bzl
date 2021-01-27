@@ -95,6 +95,13 @@ def go_dependencies():
         version = "v0.2.0",
     )
     go_repository(
+        name = "com_github_golang_freetype",
+        importpath = "github.com/golang/freetype",
+        sum = "h1:DACJavvAHhabrF08vX0COfcOBJRhZ8lUbR+ZWIs0Y5g=",
+        version = "v0.0.0-20170609003504-e2365dfdc4a0",
+    )
+
+    go_repository(
         name = "com_github_google_go_github_v33",
         importpath = "github.com/google/go-github/v33",
         sum = "h1:qAf9yP0qc54ufQxzwv+u9H0tiVOnPJxo0lI/JXqw3ZM=",
@@ -169,6 +176,13 @@ def go_dependencies():
         sum = "h1:ZC2Vc7/ZFkGmsVC9KvOjumD+G5lXy2RtTKyzRKO2BQ4=",
         version = "v1.8.1",
     )
+    go_repository(
+        name = "com_github_narqo_go_badge",
+        importpath = "github.com/narqo/go-badge",
+        sum = "h1:lSUO7QQDM/xQhU8S8dztFkwbuMeArUK6Ymxh3qja5HM=",
+        version = "v0.0.0-20190124110329-d9415e4e1e9f",
+    )
+
     go_repository(
         name = "com_github_nxadm_tail",
         importpath = "github.com/nxadm/tail",
