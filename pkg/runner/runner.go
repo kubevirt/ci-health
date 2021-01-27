@@ -55,12 +55,10 @@ func Run(o *types.Options) (*stats.Results, error) {
 	badgeOptions := &output.BadgeOptions{
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
-			Red:    o.TimeToMergeRedLevel,
 			Yellow: o.TimeToMergeYellowLevel,
 			Green:  o.TimeToMergeGreenLevel,
 		},
 		MergeQueueLengthLevels: &output.Levels{
-			Red:    o.MergeQueueLengthRedLevel,
 			Yellow: o.MergeQueueLengthYellowLevel,
 			Green:  o.MergeQueueLengthGreenLevel,
 		},

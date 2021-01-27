@@ -16,12 +16,10 @@ const (
 	DefaultSource                      = "kubevirt/kubevirt"
 	DefaultDataDays                    = 7
 	DefaultLogLevel                    = "info"
-	DefaultTimeToMergeRedLevel         = 3.0
-	DefaultTimeToMergeYellowLevel      = 2.0
-	DefaultTimeToMergeGreenLevel       = 1.0
-	DefaultMergeQueueLengthRedLevel    = 15.0
-	DefaultMergeQueueLengthYellowLevel = 10.0
-	DefaultMergeQueueLengthGreenLevel  = 6.0
+	DefaultTimeToMergeYellowLevel      = 3.0
+	DefaultTimeToMergeGreenLevel       = 2.0
+	DefaultMergeQueueLengthYellowLevel = 15.0
+	DefaultMergeQueueLengthGreenLevel  = 10.0
 
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
