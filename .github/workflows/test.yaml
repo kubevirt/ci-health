@@ -5,7 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     container: kubevirtci/bootstrap:v20210112-b29dfd7
     steps:
-    - run: |
+    - uses: actions/checkout@v2
+    - name: run tests
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+      run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
 
         bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token
