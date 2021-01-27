@@ -2,10 +2,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "mergequeue",
-    srcs = [
-        "doc.go",
-        "main.go",
-    ],
+    srcs = ["main.go"],
     importpath = "github.com/fgimenez/ci-health/pkg/mergequeue",
     visibility = ["//visibility:public"],
     deps = [
