@@ -6,6 +6,7 @@ go_library(
     importpath = "github.com/fgimenez/ci-health/pkg/output",
     visibility = ["//visibility:public"],
     deps = [
+        "//pkg/constants",
         "//pkg/stats",
         "@com_github_narqo_go_badge//:go-badge",
     ],
