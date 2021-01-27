@@ -21,8 +21,8 @@ jobs:
 
         bazelisk run //cmd/stats -- \
           --gh-token $(pwd)/token \
-          --log-level debug
-          --source ${SOURCE}
+          --log-level debug \
+          --source ${SOURCE} \
           --path $(pwd)/badges/${SOURCE}
 
     - name: Commit changes
