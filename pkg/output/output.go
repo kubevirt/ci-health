@@ -5,15 +5,16 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/narqo/go-badge"
+	log "github.com/sirupsen/logrus"
+
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/stats"
-	"github.com/narqo/go-badge"
 )
 
 type Levels struct {
-	Red    float64
 	Yellow float64
-	Green  float64
+	Red    float64
 }
 
 type BadgeOptions struct {
@@ -54,15 +55,7 @@ func (b *BadgeHandler) Write(results *stats.Results) error {
 }
 
 func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels *Levels) error {
-	var color badge.Color
-
-	if value <= levels.Green {
-		color = badge.ColorGreen
-	} else if value > levels.Green && value <= levels.Yellow {
-		color = badge.ColorYellow
-	} else {
-		color = badge.ColorRed
-	}
+	color := BadgeColor(value, levels)
 
 	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
 	if err != nil {
@@ -70,5 +63,20 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 	}
 	defer f.Close()
 
-	return badge.Render(name, fmt.Sprintf("%f", value), color, f)
+	log.Debugf("Writing color %s", color)
+	return badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
+}
+
+func BadgeColor(value float64, levels *Levels) badge.Color {
+	var color badge.Color
+
+	if value < levels.Yellow {
+		color = badge.ColorGreen
+	} else if value >= levels.Yellow && value < levels.Red {
+		color = badge.ColorYellow
+	} else {
+		color = badge.ColorRed
+	}
+
+	return color
 }

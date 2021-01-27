@@ -1,13 +1,26 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "output",
-    srcs = ["badge.go"],
+    srcs = ["output.go"],
     importpath = "github.com/fgimenez/ci-health/pkg/output",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/constants",
         "//pkg/stats",
         "@com_github_narqo_go_badge//:go-badge",
+        "@com_github_sirupsen_logrus//:logrus",
+    ],
+)
+
+go_test(
+    name = "output_test",
+    srcs = ["output_test.go"],
+    embed = [":output"],
+    deps = [
+        "@com_github_narqo_go_badge//:go-badge",
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
     ],
 )

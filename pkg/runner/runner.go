@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 
 	log "github.com/sirupsen/logrus"
 
@@ -51,18 +52,22 @@ func Run(o *types.Options) (*stats.Results, error) {
 		}
 		o.Path = dir
 	}
+	if _, err := os.Stat(o.Path); os.IsNotExist(err) {
+		err := os.Mkdir(o.Path, 0755)
+		if err != nil {
+			return nil, err
+		}
+	}
 
 	badgeOptions := &output.BadgeOptions{
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
-			Red:    o.TimeToMergeRedLevel,
 			Yellow: o.TimeToMergeYellowLevel,
-			Green:  o.TimeToMergeGreenLevel,
+			Red:    o.TimeToMergeGreenLevel,
 		},
 		MergeQueueLengthLevels: &output.Levels{
-			Red:    o.MergeQueueLengthRedLevel,
 			Yellow: o.MergeQueueLengthYellowLevel,
-			Green:  o.MergeQueueLengthGreenLevel,
+			Red:    o.MergeQueueLengthRedLevel,
 		},
 	}
 	badgeHandler := output.NewBadgeHandler(badgeOptions)

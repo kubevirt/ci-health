@@ -16,12 +16,10 @@ func main() {
 		Source:                      constants.DefaultSource,
 		DataDays:                    constants.DefaultDataDays,
 		LogLevel:                    constants.DefaultLogLevel,
-		TimeToMergeRedLevel:         constants.DefaultTimeToMergeRedLevel,
 		TimeToMergeYellowLevel:      constants.DefaultTimeToMergeYellowLevel,
-		TimeToMergeGreenLevel:       constants.DefaultTimeToMergeGreenLevel,
-		MergeQueueLengthRedLevel:    constants.DefaultMergeQueueLengthRedLevel,
+		TimeToMergeRedLevel:         constants.DefaultTimeToMergeRedLevel,
 		MergeQueueLengthYellowLevel: constants.DefaultMergeQueueLengthYellowLevel,
-		MergeQueueLengthGreenLevel:  constants.DefaultMergeQueueLengthGreenLevel,
+		MergeQueueLengthRedLevel:    constants.DefaultMergeQueueLengthRedLevel,
 	}
 
 	cmd := &cobra.Command{
@@ -40,12 +38,10 @@ func main() {
 	flag.StringVar(&opt.Source, "source", opt.Source, "GitHub repo from where retrieve the data.")
 	flag.IntVar(&opt.DataDays, "data-days", opt.DataDays, "Number of days to retrieve data from.")
 	flag.StringVar(&opt.LogLevel, "log-level", opt.LogLevel, "Log level, valid values are debug and info.")
-	flag.Float64Var(&opt.TimeToMergeRedLevel, "time-to-merge-red", opt.TimeToMergeRedLevel, "Lower limit of the TimeToMerge metric above which the label will be red")
 	flag.Float64Var(&opt.TimeToMergeYellowLevel, "time-to-merge-yellow", opt.TimeToMergeYellowLevel, "Lower limit of the TimeToMerge metric above which the label will be yellow")
-	flag.Float64Var(&opt.TimeToMergeGreenLevel, "time-to-merge-green", opt.TimeToMergeGreenLevel, "Upper limit of the TimeToMerge metric below which the label will be green")
-	flag.Float64Var(&opt.MergeQueueLengthRedLevel, "merge-queue-length-red", opt.MergeQueueLengthRedLevel, "Lower limit of the MergeQueueLength metric above which the label will be red")
+	flag.Float64Var(&opt.TimeToMergeRedLevel, "time-to-merge-red", opt.TimeToMergeRedLevel, "Lower limit of the TimeToMerge metric above which the label will be red")
 	flag.Float64Var(&opt.MergeQueueLengthYellowLevel, "merge-queue-length-yellow", opt.MergeQueueLengthYellowLevel, "Lower limit of the MergeQueueLength metric above which the label will be yellow")
-	flag.Float64Var(&opt.MergeQueueLengthGreenLevel, "merge-queue-length-green", opt.MergeQueueLengthGreenLevel, "Upper limit of the MergeQueueLength metric below which the label will be green")
+	flag.Float64Var(&opt.MergeQueueLengthRedLevel, "merge-queue-length-red", opt.MergeQueueLengthRedLevel, "Lower limit of the MergeQueueLength metric above which the label will be red")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
