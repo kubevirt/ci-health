@@ -1,0 +1,30 @@
+name: badge-update
+on:
+  schedule:
+    - cron:  '*/15 * * * *'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: kubevirtci/bootstrap:v20210112-b29dfd7
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.BOT_TOKEN }}
+    - name: badge update for kubevirt/kubevirt
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        SOURCE: kubevirt/kubevirt
+      run: |
+        bazelisk run //cmd/stats -- \
+          --gh-token $GITHUB_TOKEN \
+          --log-level debug
+          --source kubevirt/kubevirt
+          --path $(pwd)/badges/${SOURCE}
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        author_name: Federico Gimenez
+        author_email: fgimenez@redhat.com
+        message: 'Badges updated'
+        add: 'badges/*'
