@@ -14,7 +14,7 @@ import (
 
 type Levels struct {
 	Yellow float64
-	Green  float64
+	Red    float64
 }
 
 type BadgeOptions struct {
@@ -70,9 +70,9 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 func BadgeColor(value float64, levels *Levels) badge.Color {
 	var color badge.Color
 
-	if value <= levels.Green {
+	if value < levels.Yellow {
 		color = badge.ColorGreen
-	} else if value > levels.Green && value <= levels.Yellow {
+	} else if value >= levels.Yellow && value < levels.Red {
 		color = badge.ColorYellow
 	} else {
 		color = badge.ColorRed

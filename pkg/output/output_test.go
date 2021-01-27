@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	YellowLimit = 2.0
-	GreenLimit  = 1.0
+	YellowLimit = 1.0
+	RedLimit    = 2.0
 )
 
 func TestOutput(t *testing.T) {
@@ -26,7 +26,7 @@ var badgeLevels output.Levels
 var _ = BeforeSuite(func() {
 	badgeLevels = output.Levels{
 		Yellow: YellowLimit,
-		Green:  GreenLimit,
+		Red:    RedLimit,
 	}
 })
 
@@ -38,10 +38,10 @@ var _ = Describe("Badge", func() {
 			Expect(actual).To(Equal(expected))
 		},
 		table.Entry("zero value, expected green", 0.0, badge.ColorGreen),
-		table.Entry("less than green limit, expected green", GreenLimit-0.1, badge.ColorGreen),
-		table.Entry("green limit, expected green", GreenLimit, badge.ColorGreen),
-		table.Entry("more than green and less than yellow limit, expected yellow", GreenLimit+0.1, badge.ColorYellow),
+		table.Entry("less than yellow limit, expected green", YellowLimit-0.1, badge.ColorGreen),
 		table.Entry("yellow limit, expected yellow", YellowLimit, badge.ColorYellow),
-		table.Entry("greater than yellow limit, expected red", YellowLimit+0.1, badge.ColorRed),
+		table.Entry("more than yellow and less than red limit, expected yellow", YellowLimit+0.1, badge.ColorYellow),
+		table.Entry("red limit, expected red", RedLimit, badge.ColorRed),
+		table.Entry("greater than red limit, expected red", RedLimit+0.1, badge.ColorRed),
 	)
 })

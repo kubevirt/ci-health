@@ -51,7 +51,8 @@ func Run(o *types.Options) (*stats.Results, error) {
 			return nil, err
 		}
 		o.Path = dir
-	} else {
+	}
+	if _, err := os.Stat(o.Path); os.IsNotExist(err) {
 		err := os.Mkdir(o.Path, 0755)
 		if err != nil {
 			return nil, err
@@ -62,11 +63,11 @@ func Run(o *types.Options) (*stats.Results, error) {
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
 			Yellow: o.TimeToMergeYellowLevel,
-			Green:  o.TimeToMergeGreenLevel,
+			Red:    o.TimeToMergeGreenLevel,
 		},
 		MergeQueueLengthLevels: &output.Levels{
 			Yellow: o.MergeQueueLengthYellowLevel,
-			Green:  o.MergeQueueLengthGreenLevel,
+			Red:    o.MergeQueueLengthRedLevel,
 		},
 	}
 	badgeHandler := output.NewBadgeHandler(badgeOptions)
