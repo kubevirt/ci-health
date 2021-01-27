@@ -25,5 +25,5 @@ data from the previous 7 days since the execution time.
 
 ### kubevirt-kubevirt
 
-[avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/merge-queue-length.svg)
-[avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
+![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/merge-queue-length.svg)
+![avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
