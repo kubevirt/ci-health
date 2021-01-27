@@ -1,17 +1,14 @@
 package e2e
 
 import (
-	"io/ioutil"
 	"os"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	yaml "gopkg.in/yaml.v2"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/runner"
-	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -26,7 +23,7 @@ var (
 
 const (
 	source   = "kubevirt/kubevirt"
-	dataDays = 7
+	dataDays = 1
 )
 
 var _ = BeforeSuite(func() {
@@ -45,14 +42,8 @@ var _ = Describe("ci-health stats", func() {
 			LogLevel:  "debug",
 		}
 
-		path, err := runner.Run(opt)
+		results, err := runner.Run(opt)
 		Expect(err).ToNot(HaveOccurred())
-
-		contents, err := ioutil.ReadFile(path)
-		Expect(err).ToNot(HaveOccurred())
-
-		results := stats.Results{}
-		err = yaml.Unmarshal(contents, &results)
 
 		Expect(results.DataDays).To(Equal(dataDays))
 		Expect(results.Source).To(Equal(source))

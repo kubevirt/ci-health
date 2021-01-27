@@ -17,8 +17,8 @@ type RunningAverageDataItem struct {
 // the data was obtained and the number of days back from the execution time included in the
 // data.
 type Results struct {
-	ExecutionDate string `yaml:"executionDate"`
-	DataDays      int    `yaml:"dataDays"`
+	ExecutionDate string
+	DataDays      int
 	Source        string
 	Data          []*RunningAverageDataItem
 }

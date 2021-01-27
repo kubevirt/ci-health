@@ -1,11 +1,11 @@
 package runner
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 
 	log "github.com/sirupsen/logrus"
-	yaml "gopkg.in/yaml.v2"
 
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
@@ -14,7 +14,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func Run(o *types.Options) (string, error) {
+func Run(o *types.Options) (*stats.Results, error) {
 	if o.LogLevel == "debug" {
 		log.SetLevel(log.DebugLevel)
 	} else {
@@ -22,12 +22,12 @@ func Run(o *types.Options) (string, error) {
 	}
 
 	if o.TokenPath == "" {
-		return "", fmt.Errorf("You need to specify the GitHub token path with --gh-token")
+		return nil, fmt.Errorf("You need to specify the GitHub token path with --gh-token")
 	}
 
 	ghClient, err := gh.NewClient(o.TokenPath, o.Source)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
 	mqHandler := mergequeue.NewHandler(ghClient)
@@ -36,32 +36,36 @@ func Run(o *types.Options) (string, error) {
 
 	results, err := statsHandler.Run()
 	if err != nil {
-		return "", err
+		return nil, err
 	}
-
-	d, err := yaml.Marshal(&results)
+	resultsJSON, err := json.Marshal(results)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
+	log.Infof("Results: %s", string(resultsJSON))
 
 	if o.Path == "" {
 		file, err := ioutil.TempFile("", "ci-health")
 		if err != nil {
-			log.Fatal(err)
+			return nil, err
 		}
 		o.Path = file.Name()
 	}
 
-	log.Infof("Writing output file %s", o.Path)
+	badgeOptions := &output.BadgeOptions{
+		Path: o.Path,
+		TimeToMergeLevels: &output.Levels{
+			Red: o.TimeToMergeRedLevel,
+		},
+	}
+	badgeHandler := output.NewBadgeHandler(badgeOptions)
 
-	fileHandler := output.NewFileHandler(o.Path)
-
-	_, err = fileHandler.Write(d)
+	err = badgeHandler.Write(results)
 	if err != nil {
-		return "", err
+		return nil, err
 	}
 
-	return o.Path, nil
+	return results, nil
 }
 
 func setLogLevel(logLevel string) {
