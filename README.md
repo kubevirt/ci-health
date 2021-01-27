@@ -1,3 +1,3 @@
 # ci-health
 
-![test](https://github.com/fgimenez/ci-health/workflows/test/badge.svg)
+![ci-health-tests](https://github.com/fgimenez/ci-health/workflows/ci-health-tests/badge.svg)
