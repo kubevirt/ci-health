@@ -23,7 +23,7 @@ queue for the last time until it got finally merged.
 This status is updated every 3 hours. The average values are calculated with
 data from the previous 7 days since the execution time.
 
-### kubevirt-kubevirt
+### kubevirt/kubevirt
 
 ![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
