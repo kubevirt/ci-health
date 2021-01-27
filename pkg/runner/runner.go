@@ -63,7 +63,7 @@ func Run(o *types.Options) (*stats.Results, error) {
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
 			Yellow: o.TimeToMergeYellowLevel,
-			Red:    o.TimeToMergeGreenLevel,
+			Red:    o.TimeToMergeRedLevel,
 		},
 		MergeQueueLengthLevels: &output.Levels{
 			Yellow: o.MergeQueueLengthYellowLevel,
