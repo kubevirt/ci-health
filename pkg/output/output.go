@@ -11,7 +11,6 @@ import (
 )
 
 type Levels struct {
-	Red    float64
 	Yellow float64
 	Green  float64
 }
@@ -54,6 +53,18 @@ func (b *BadgeHandler) Write(results *stats.Results) error {
 }
 
 func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels *Levels) error {
+	color := BadgeColor(value, levels)
+
+	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	return badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
+}
+
+func BadgeColor(value float64, levels *Levels) badge.Color {
 	var color badge.Color
 
 	if value <= levels.Green {
@@ -64,11 +75,5 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 		color = badge.ColorRed
 	}
 
-	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return badge.Render(name, fmt.Sprintf("%f", value), color, f)
+	return color
 }
