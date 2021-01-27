@@ -45,17 +45,24 @@ func Run(o *types.Options) (*stats.Results, error) {
 	log.Infof("Results: %s", string(resultsJSON))
 
 	if o.Path == "" {
-		file, err := ioutil.TempFile("", "ci-health")
+		dir, err := ioutil.TempDir("", "ci-health")
 		if err != nil {
 			return nil, err
 		}
-		o.Path = file.Name()
+		o.Path = dir
 	}
 
 	badgeOptions := &output.BadgeOptions{
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
-			Red: o.TimeToMergeRedLevel,
+			Red:    o.TimeToMergeRedLevel,
+			Yellow: o.TimeToMergeYellowLevel,
+			Green:  o.TimeToMergeGreenLevel,
+		},
+		MergeQueueLengthLevels: &output.Levels{
+			Red:    o.MergeQueueLengthRedLevel,
+			Yellow: o.MergeQueueLengthYellowLevel,
+			Green:  o.MergeQueueLengthGreenLevel,
 		},
 	}
 	badgeHandler := output.NewBadgeHandler(badgeOptions)
