@@ -1,10 +1,11 @@
 name: ci-health-tests
-on: [push, pull_request]
+on: [push]
 jobs:
   test:
-    runs-on: kubevirtci/bootstrap:v20210112-b29dfd7
+    runs-on: ubuntu-latest
+    container: kubevirtci/bootstrap:v20210112-b29dfd7
     steps:
-      - run: |
-          echo -n $GITHUB_TOKEN > $(pwd)/token
+    - run: |
+        echo -n $GITHUB_TOKEN > $(pwd)/token
 
-          bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token
+        bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token
