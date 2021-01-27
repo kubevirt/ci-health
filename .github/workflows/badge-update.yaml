@@ -1,11 +1,11 @@
 name: badge-update
 on:
   schedule:
-    - cron:  '*/15 * * * *'
+    - cron:  '* */3 * * *'
   workflow_dispatch:
 
 jobs:
-  test:
+  badge-update:
     runs-on: ubuntu-latest
     container: kubevirtci/bootstrap:v20210112-b29dfd7
     steps:
@@ -17,10 +17,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
         SOURCE: kubevirt/kubevirt
       run: |
+        echo -n $GITHUB_TOKEN > $(pwd)/token
+
         bazelisk run //cmd/stats -- \
-          --gh-token $GITHUB_TOKEN \
+          --gh-token $(pwd)/token \
           --log-level debug
-          --source kubevirt/kubevirt
+          --source ${SOURCE}
           --path $(pwd)/badges/${SOURCE}
 
     - name: Commit changes
