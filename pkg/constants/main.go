@@ -24,5 +24,7 @@ const (
 	DefaultMergeQueueLengthGreenLevel  = 6.0
 
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
-	MergeQueueLenghtBadgeFileName = "merge-queue-length.svg"
+	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
+	TimeToMergeBadgeName          = "avg time to merge"
+	MergeQueueLengthBadgeName     = "avg merge queue length"
 )
