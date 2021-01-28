@@ -29,3 +29,17 @@ var _ = Describe("Average", func() {
 		table.Entry("rounding to the nearest, 2 decimal places, negative entries", []float64{-5, 9, 9, 15, 10, 7}, 7.5),
 	)
 })
+var _ = Describe("Std", func() {
+	table.DescribeTable("should return the std of the given floats",
+		func(input []float64, expected float64) {
+			actual := stats.Std(input)
+			Expect(actual).To(Equal(expected))
+		},
+		table.Entry("no entries", []float64{}, 0.0),
+		table.Entry("single entry", []float64{1}, 0.0),
+		table.Entry("multiple entries", []float64{2, 4, 6}, 1.63),
+		table.Entry("multiple entries, 0 average", []float64{2, 4, 6, -2, -4, -6}, 4.32),
+		table.Entry("multiple entries, outliers", []float64{0, 9, 9, 15, 10, 100}, 34.35),
+		table.Entry("multiple entries, negative", []float64{0, -9, 9, 15, 10, -100}, 39.89),
+	)
+})
