@@ -91,26 +91,26 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 		}
 	}
 
-	if isPRInMergeQueue(labelsAdded, date) {
-
-		if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
-			labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
-
-			return labelsRemoved[constants.HoldLabel]
-		}
-		if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
-			labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
-
-			return labelsRemoved[constants.NeedsRebaseLabel]
-		}
-
-		if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
-
-			return labelsAdded[constants.ApprovedLabel]
-		}
-		return labelsAdded[constants.LGTMLabel]
+	if !isPRInMergeQueue(labelsAdded, date) {
+		return zeroDate
 	}
-	return zeroDate
+
+	if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
+		labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
+
+		return labelsRemoved[constants.HoldLabel]
+	}
+	if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
+		labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
+
+		return labelsRemoved[constants.NeedsRebaseLabel]
+	}
+
+	if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
+
+		return labelsAdded[constants.ApprovedLabel]
+	}
+	return labelsAdded[constants.LGTMLabel]
 }
 
 func isLabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {

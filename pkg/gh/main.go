@@ -90,7 +90,6 @@ func (c *Client) MergedPRsBetween(startDate, endDate time.Time) ([]struct {
 func (c *Client) prQuery(query string) ([]struct {
 	types.PullRequestFragment `graphql:"... on PullRequest"`
 }, error) {
-	ctx := context.Background()
 
 	variables := map[string]interface{}{
 		"querystring": githubv4.String(query),
@@ -104,6 +103,6 @@ func (c *Client) prQuery(query string) ([]struct {
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 
-	err := c.inner.Query(ctx, &mergedQuery, variables)
+	err := c.inner.Query(context.Background(), &mergedQuery, variables)
 	return mergedQuery.Search.Nodes, err
 }
