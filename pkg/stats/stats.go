@@ -60,7 +60,7 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%d", queueLength)})
 	}
 
-	dataItem.Value = fmt.Sprintf("%.2f", Average(values))
+	dataItem.Value = formatDataValue(values)
 
 	results.Data[constants.MergeQueueLengthName] = dataItem
 
@@ -88,7 +88,7 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%.2f", value)})
 	}
 
-	dataItem.Value = fmt.Sprintf("%.2f ± std %.2f", Average(values), Std(values))
+	dataItem.Value = formatDataValue(values)
 
 	results.Data[constants.TimeToMergeName] = dataItem
 
@@ -123,4 +123,8 @@ func Std(xs []float64) float64 {
 
 func round(value float64) float64 {
 	return math.Round(value*100) / 100
+}
+
+func formatDataValue(values []float64) string {
+	return fmt.Sprintf("%.2f ± std %.2f", Average(values), Std(values))
 }
