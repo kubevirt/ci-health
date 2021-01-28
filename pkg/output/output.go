@@ -64,7 +64,9 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 	defer f.Close()
 
 	log.Debugf("Writing color %s", color)
-	return badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
+	err = badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
+
+	return err
 }
 
 func BadgeColor(value float64, levels *Levels) badge.Color {
