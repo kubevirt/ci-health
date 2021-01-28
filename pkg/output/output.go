@@ -1,9 +1,10 @@
 package output
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
+	"strings"
 
 	"github.com/narqo/go-badge"
 	log "github.com/sirupsen/logrus"
@@ -54,8 +55,12 @@ func (b *BadgeHandler) Write(results *stats.Results) error {
 	return err
 }
 
-func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels *Levels) error {
-	color := BadgeColor(value, levels)
+func (b *BadgeHandler) writeMetric(name, filePath string, value string, levels *Levels) error {
+	floatValue, err := strconv.ParseFloat(strings.Fields(value)[0], 64)
+	if err != nil {
+		return err
+	}
+	color := BadgeColor(floatValue, levels)
 
 	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
 	if err != nil {
@@ -64,7 +69,7 @@ func (b *BadgeHandler) writeMetric(name, filePath string, value float64, levels 
 	defer f.Close()
 
 	log.Debugf("Writing color %s", color)
-	err = badge.Render(name, fmt.Sprintf("%.2f", value), color, f)
+	err = badge.Render(name, value, color, f)
 
 	return err
 }
