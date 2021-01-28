@@ -1,13 +1,13 @@
 package stats
 
 type DataPoint struct {
-	Value float64
+	Value string
 }
 
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Value      float64
+	Value      string
 	DataPoints []DataPoint
 }
 

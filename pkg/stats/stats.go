@@ -1,6 +1,7 @@
 package stats
 
 import (
+	"fmt"
 	"math"
 	"time"
 
@@ -56,10 +57,10 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 			return nil, err
 		}
 		values = append(values, float64(queueLength))
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: float64(queueLength)})
+		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%d", queueLength)})
 	}
 
-	dataItem.Value = Average(values)
+	dataItem.Value = fmt.Sprintf("%.2f", Average(values))
 
 	results.Data[constants.MergeQueueLengthName] = dataItem
 
@@ -84,10 +85,10 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 		value := round(days)
 
 		values = append(values, value)
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: value})
+		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%.2f", value)})
 	}
 
-	dataItem.Value = Average(values)
+	dataItem.Value = fmt.Sprintf("%.2f ± std %.2f", Average(values), Std(values))
 
 	results.Data[constants.TimeToMergeName] = dataItem
 
@@ -103,6 +104,20 @@ func Average(xs []float64) float64 {
 		total += v
 	}
 	result := total / float64(len(xs))
+	return round(result)
+}
+
+func Std(xs []float64) float64 {
+	if len(xs) == 0 {
+		return 0
+	}
+	avg := Average(xs)
+	total := 0.0
+	for _, v := range xs {
+		total += math.Pow((v - avg), 2)
+	}
+	variance := total / float64(len(xs))
+	result := math.Sqrt(variance)
 	return round(result)
 }
 
