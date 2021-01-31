@@ -33,40 +33,43 @@ func NewHandler(client *gh.Client) *Handler {
 	}
 }
 
-// LengthAt returns the merge queue size for a given date.
-func (mq *Handler) LengthAt(date time.Time) (int, error) {
-	prs, err := mq.client.OpenPRsAt(date)
+// LengthAt returns the merge queue size for a given date and the PR numbers
+// that were part of the queue at that date.
+func (mq *Handler) LengthAt(date time.Time) (int, []int, error) {
+	prList, err := mq.client.OpenPRsAt(date)
 	if err != nil {
-		return 0, err
+		return 0, nil, err
 	}
 
 	result := 0
-	for _, pr := range prs {
+	prs := []int{}
+	for _, pr := range prList {
 		log.Debugf("LengthAt: calculating mq date entered for PR num %d from %s", pr.Number, date)
 		if DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
 			result++
+			prs = append(prs, pr.Number)
 		}
 	}
 
-	return result, nil
+	return result, prs, nil
 }
 
-// TimesToMerge returns the duration each merged PR took to land in the time
-// frame between the given start and end dates.
-func (mq *Handler) TimesToMerge(startDate, endDate time.Time) ([]time.Duration, error) {
+// TimesToMerge returns a map with the duration each merged PR number took to
+// land in the time frame between the given start and end dates.
+func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Duration, error) {
 	prs, err := mq.client.MergedPRsBetween(startDate, endDate)
 	if err != nil {
 		return nil, err
 	}
 
-	result := []time.Duration{}
+	result := map[int]time.Duration{}
 	for _, pr := range prs {
 		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", pr.Number, pr.MergedAt)
 		mqStart := DatePREntered(&pr.PullRequestFragment, pr.MergedAt)
 		if mqStart.Equal(zeroDate) {
 			return nil, fmt.Errorf("Merge queue enter date not found for PR %d", pr.Number)
 		}
-		result = append(result, pr.MergedAt.Sub(mqStart))
+		result[pr.Number] = pr.MergedAt.Sub(mqStart)
 	}
 
 	return result, nil

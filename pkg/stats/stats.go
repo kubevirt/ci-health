@@ -52,12 +52,18 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 
 	values := []float64{}
 	for i := 0; i < results.DataDays; i++ {
-		queueLength, err := h.mq.LengthAt(currentTime.AddDate(0, 0, -1*i))
+		queryDate := currentTime.AddDate(0, 0, -1*i)
+		queueLength, prs, err := h.mq.LengthAt(queryDate)
 		if err != nil {
 			return nil, err
 		}
 		values = append(values, float64(queueLength))
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%d", queueLength)})
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			DataPoint{
+				Value: fmt.Sprintf("%d", queueLength),
+				PRs:   prs,
+				Date:  &queryDate,
+			})
 	}
 
 	dataItem.Value = formatDataValue(values)
@@ -80,12 +86,18 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	}
 
 	values := []float64{}
-	for _, timeToMerge := range timesToMerge {
+
+	for prNumber, timeToMerge := range timesToMerge {
 		days := timeToMerge.Hours() / 24
 		value := round(days)
 
 		values = append(values, value)
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%.2f", value)})
+
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			DataPoint{
+				Value: fmt.Sprintf("%.2f", value),
+				PRs:   []int{prNumber},
+			})
 	}
 
 	dataItem.Value = formatDataValue(values)

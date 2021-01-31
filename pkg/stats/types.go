@@ -4,8 +4,8 @@ import "time"
 
 type DataPoint struct {
 	Value string
-	Date  time.Time `json:",omitempty"`
-	PRs   []int     `json:",omitempty"`
+	Date  *time.Time `json:",omitempty"`
+	PRs   []int      `json:",omitempty"`
 }
 
 // RunningAverageDataItem contains data information in the form of a running average.
