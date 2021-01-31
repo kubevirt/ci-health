@@ -1,6 +1,8 @@
 package output
 
 import (
+	"encoding/json"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -18,25 +20,34 @@ type Levels struct {
 	Red    float64
 }
 
-type BadgeOptions struct {
+type Options struct {
 	Path                   string
 	TimeToMergeLevels      *Levels
 	MergeQueueLengthLevels *Levels
 }
 
-type BadgeHandler struct {
-	options *BadgeOptions
+type Handler struct {
+	options *Options
 }
 
-func NewBadgeHandler(options *BadgeOptions) *BadgeHandler {
-	return &BadgeHandler{
+func NewHandler(options *Options) *Handler {
+	return &Handler{
 		options,
 	}
 }
 
-func (b *BadgeHandler) Write(results *stats.Results) error {
+func (b *Handler) Write(results *stats.Results) error {
+	resultsJSON, err := json.MarshalIndent(results, "", " ")
+	if err != nil {
+		return err
+	}
+	log.Infof("Results: %s", string(resultsJSON))
+	err = ioutil.WriteFile(filepath.Join(b.options.Path, constants.JSONResultsFileName), resultsJSON, 0644)
+	if err != nil {
+		return err
+	}
 
-	err := b.writeMetric(
+	err = b.writeMetric(
 		constants.TimeToMergeBadgeName,
 		filepath.Join(b.options.Path, constants.TimeToMergeBadgeFileName),
 		results.Data[constants.TimeToMergeName].Value,
@@ -55,7 +66,7 @@ func (b *BadgeHandler) Write(results *stats.Results) error {
 	return err
 }
 
-func (b *BadgeHandler) writeMetric(name, filePath string, value string, levels *Levels) error {
+func (b *Handler) writeMetric(name, filePath string, value string, levels *Levels) error {
 	floatValue, err := strconv.ParseFloat(strings.Fields(value)[0], 64)
 	if err != nil {
 		return err

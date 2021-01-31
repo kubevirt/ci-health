@@ -1,7 +1,6 @@
 package runner
 
 import (
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -39,11 +38,6 @@ func Run(o *types.Options) (*stats.Results, error) {
 	if err != nil {
 		return nil, err
 	}
-	resultsJSON, err := json.Marshal(results)
-	if err != nil {
-		return nil, err
-	}
-	log.Infof("Results: %s", string(resultsJSON))
 
 	if o.Path == "" {
 		dir, err := ioutil.TempDir("", "ci-health")
@@ -59,7 +53,7 @@ func Run(o *types.Options) (*stats.Results, error) {
 		}
 	}
 
-	badgeOptions := &output.BadgeOptions{
+	outputOptions := &output.Options{
 		Path: o.Path,
 		TimeToMergeLevels: &output.Levels{
 			Yellow: o.TimeToMergeYellowLevel,
@@ -70,9 +64,9 @@ func Run(o *types.Options) (*stats.Results, error) {
 			Red:    o.MergeQueueLengthRedLevel,
 		},
 	}
-	badgeHandler := output.NewBadgeHandler(badgeOptions)
+	outputHandler := output.NewHandler(outputOptions)
 
-	err = badgeHandler.Write(results)
+	err = outputHandler.Write(results)
 	if err != nil {
 		return nil, err
 	}
