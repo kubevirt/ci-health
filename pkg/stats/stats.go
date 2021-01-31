@@ -126,5 +126,5 @@ func round(value float64) float64 {
 }
 
 func formatDataValue(values []float64) string {
-	return fmt.Sprintf("%.2f ± std %.2f", Average(values), Std(values))
+	return fmt.Sprintf(constants.BadgeDataFormat, Average(values), Std(values))
 }

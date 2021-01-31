@@ -25,4 +25,5 @@ const (
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
 	TimeToMergeBadgeName          = "avg time to merge"
 	MergeQueueLengthBadgeName     = "avg merge queue length"
+	BadgeDataFormat               = "%.2f ± std %.2f"
 )
