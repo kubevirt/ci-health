@@ -46,7 +46,7 @@ func NewClient(tokenPath string, source string) (*Client, error) {
 func (c *Client) OpenPRsAt(date time.Time) ([]struct {
 	types.PullRequestFragment `graphql:"... on PullRequest"`
 }, error) {
-	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged>=%[2]s", c.source, date.Format(constants.DateFormat))
+	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged:>=%[2]s", c.source, date.Format(constants.DateFormat))
 	log.Debugf("merged open query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
 	if err != nil {
