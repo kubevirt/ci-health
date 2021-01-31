@@ -95,6 +95,7 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	return results, nil
 }
 
+// Average returns the average of the given floats.
 func Average(xs []float64) float64 {
 	if len(xs) == 0 {
 		return 0
@@ -107,6 +108,7 @@ func Average(xs []float64) float64 {
 	return round(result)
 }
 
+// Std returns the standard deviation of the given floats.
 func Std(xs []float64) float64 {
 	if len(xs) == 0 {
 		return 0
