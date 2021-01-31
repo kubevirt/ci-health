@@ -52,12 +52,18 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 
 	values := []float64{}
 	for i := 0; i < results.DataDays; i++ {
-		queueLength, err := h.mq.LengthAt(currentTime.AddDate(0, 0, -1*i))
+		queryDate := currentTime.AddDate(0, 0, -1*i)
+		queueLength, prs, err := h.mq.LengthAt(queryDate)
 		if err != nil {
 			return nil, err
 		}
 		values = append(values, float64(queueLength))
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%d", queueLength)})
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			DataPoint{
+				Value: fmt.Sprintf("%d", queueLength),
+				PRs:   prs,
+				Date:  &queryDate,
+			})
 	}
 
 	dataItem.Value = formatDataValue(values)
@@ -80,12 +86,18 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	}
 
 	values := []float64{}
-	for _, timeToMerge := range timesToMerge {
+
+	for prNumber, timeToMerge := range timesToMerge {
 		days := timeToMerge.Hours() / 24
 		value := round(days)
 
 		values = append(values, value)
-		dataItem.DataPoints = append(dataItem.DataPoints, DataPoint{Value: fmt.Sprintf("%.2f", value)})
+
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			DataPoint{
+				Value: fmt.Sprintf("%.2f", value),
+				PRs:   []int{prNumber},
+			})
 	}
 
 	dataItem.Value = formatDataValue(values)
@@ -95,6 +107,7 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	return results, nil
 }
 
+// Average returns the average of the given floats.
 func Average(xs []float64) float64 {
 	if len(xs) == 0 {
 		return 0
@@ -107,6 +120,7 @@ func Average(xs []float64) float64 {
 	return round(result)
 }
 
+// Std returns the standard deviation of the given floats.
 func Std(xs []float64) float64 {
 	if len(xs) == 0 {
 		return 0
@@ -126,5 +140,5 @@ func round(value float64) float64 {
 }
 
 func formatDataValue(values []float64) string {
-	return fmt.Sprintf("%.2f ± std %.2f", Average(values), Std(values))
+	return fmt.Sprintf(constants.BadgeDataFormat, Average(values), Std(values))
 }
