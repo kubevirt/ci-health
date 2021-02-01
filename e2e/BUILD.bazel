@@ -6,6 +6,7 @@ go_test(
     deps = [
         "//pkg/constants",
         "//pkg/runner",
+        "//pkg/stats",
         "//pkg/types",
         "@com_github_onsi_ginkgo//:ginkgo",
         "@com_github_onsi_gomega//:gomega",
