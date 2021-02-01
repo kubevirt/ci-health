@@ -15,7 +15,7 @@ date. For being ready to be merged they must:
   * Not have the `do-not-merge/hold` label.
   * Not have the `needs-rebase` label.
 
-* Merge queue length: number of PRs in the merge queue.
+* Merge queue length: number of PRs in the merge queue at a given time.
 * Time to merge: for each merged PR, the time it took since it entered the merge
 queue for the last time until it got finally merged.
 
@@ -27,4 +27,5 @@ data from the previous 7 days since the execution time.
 
 ![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
+
 [Latest execution data](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/results.json)
