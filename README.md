@@ -29,3 +29,32 @@ data from the previous 7 days since the execution time.
 ![avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
 
 [Latest execution data](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/results.json)
+
+## Local execution
+You can execute the tool locally to grab the stats of an specific repo that uses
+Prow, these are the requirements:
+
+* [Bazelisk](https://github.com/bazelbuild/bazelisk)
+* A GitHub token with `public_repo` permission, it is required because the tool
+queries GitHub's API
+
+A generic command execution from the repo's root looks like:
+```
+$ bazelisk run //cmd/stats -- --gh-token /path/to/token --source <org/repo> --path /path/to/output/dir --data-days <days-to-query>
+```
+where:
+* `--gh-token`: should contain the path of the file where you saved your GitHub
+token.
+* `--source`: is the organization and repo to query information from.
+* `--path`: is the path to store output data.
+* `--data-days`: is the number of days to query.
+You can check all the available options with:
+```
+$ bazelisk run //cmd/stats -- --help
+```
+So, for instance, if you have stored the path of your GitHub token file in a
+`GITHUB_TOKEN` environment variable, a query for the last four days of
+kubevirt/kubevirt can look like:
+```
+$ bazelisk run //cmd/stats -- --gh-token ${GITHUB_TOKEN} --source kubevirt/kubevirt --path /tmp/ci-health --data-days 7
+```
