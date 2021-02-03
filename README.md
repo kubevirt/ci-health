@@ -48,6 +48,7 @@ token.
 * `--source`: is the organization and repo to query information from.
 * `--path`: is the path to store output data.
 * `--data-days`: is the number of days to query.
+
 You can check all the available options with:
 ```
 $ bazelisk run //cmd/stats -- --help
