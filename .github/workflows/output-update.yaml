@@ -1,4 +1,4 @@
-name: badge-update
+name: output-update
 on:
   schedule:
     - cron:  '* */3 * * *'
@@ -23,12 +23,12 @@ jobs:
           --gh-token $(pwd)/token \
           --log-level debug \
           --source ${SOURCE} \
-          --path $(pwd)/badges/${SOURCE}
+          --path $(pwd)/output/${SOURCE}
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:
         author_name: Federico Gimenez
         author_email: fgimenez@redhat.com
-        message: 'Badges updated'
-        add: 'badges/*'
+        message: 'Output updated'
+        add: 'output/*'

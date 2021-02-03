@@ -25,10 +25,10 @@ data from the previous 7 days since the execution time.
 
 ### kubevirt/kubevirt
 
-![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/merge-queue-length.svg)
-![avg-time-to-merge](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/time-to-merge.svg)
+![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
+![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
 
-[Latest execution data](https://fgimenez.github.io/ci-health/badges/kubevirt/kubevirt/results.json)
+[Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
 
 ## Local execution
 You can execute the tool locally to grab the stats of an specific repo that uses
