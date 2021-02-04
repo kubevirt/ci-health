@@ -78,8 +78,29 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Dura
 // DatePREntered returns when a PR entered the merge queue before a
 // given date, zero value date if it was not in the merge queue by that date.
 func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
-	labelsAdded := make(map[string]time.Time)
-	labelsRemoved := make(map[string]time.Time)
+	labelsAdded, labelsRemoved := createMapsFromEvents(pr, date)
+
+	if !hasAllRequiredForMergeLabels(labelsAdded, labelsRemoved) {
+		return zeroDate
+	}
+
+	if hasAnyDoNotMergeLabel(labelsAdded, labelsRemoved) {
+		return zeroDate
+	}
+
+	doNotMergeLabelRemoval := latestDoNotMergeLabelRemoval(labelsRemoved)
+	requiredForMergeLabelAddition := latestRequiredForMergeLabelAddition(labelsAdded)
+
+	if doNotMergeLabelRemoval.After(requiredForMergeLabelAddition) {
+		return doNotMergeLabelRemoval
+	}
+	return requiredForMergeLabelAddition
+}
+
+func createMapsFromEvents(pr *types.PullRequestFragment, date time.Time) (labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) {
+	labelsAdded = make(map[string]time.Time)
+	labelsRemoved = make(map[string]time.Time)
+
 	for _, timelineItem := range pr.TimelineItems.Nodes {
 		if isLabeledEvent(timelineItem, date) {
 
@@ -93,27 +114,7 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 
 		}
 	}
-
-	if !isPRInMergeQueue(labelsAdded, date) {
-		return zeroDate
-	}
-
-	if labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.LGTMLabel]) &&
-		labelsRemoved[constants.HoldLabel].After(labelsAdded[constants.ApprovedLabel]) {
-
-		return labelsRemoved[constants.HoldLabel]
-	}
-	if labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.LGTMLabel]) &&
-		labelsRemoved[constants.NeedsRebaseLabel].After(labelsAdded[constants.ApprovedLabel]) {
-
-		return labelsRemoved[constants.NeedsRebaseLabel]
-	}
-
-	if labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.LGTMLabel]) {
-
-		return labelsAdded[constants.ApprovedLabel]
-	}
-	return labelsAdded[constants.LGTMLabel]
+	return
 }
 
 func isLabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
@@ -128,11 +129,40 @@ func isUnlabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
 		date.After(timelineItem.UnlabeledEventFragment.CreatedAt)
 }
 
-func isPRInMergeQueue(labelsAdded map[string]time.Time, date time.Time) bool {
-	return labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.LGTMLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.LGTMLabel].Before(date) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.HoldLabel]) &&
-		labelsAdded[constants.ApprovedLabel].After(labelsAdded[constants.NeedsRebaseLabel]) &&
-		labelsAdded[constants.ApprovedLabel].Before(date)
+func hasAnyDoNotMergeLabel(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
+	for _, doNotMergeLabel := range constants.DoNotMergeLabels() {
+		if labelsAdded[doNotMergeLabel] != zeroDate && !labelsRemoved[doNotMergeLabel].After(labelsAdded[doNotMergeLabel]) {
+			return true
+		}
+	}
+	return false
+}
+
+func latestDoNotMergeLabelRemoval(labelsRemoved map[string]time.Time) time.Time {
+	result := zeroDate
+	for _, doNotMergeLabel := range constants.DoNotMergeLabels() {
+		if labelsRemoved[doNotMergeLabel] != zeroDate && labelsRemoved[doNotMergeLabel].After(result) {
+			result = labelsRemoved[doNotMergeLabel]
+		}
+	}
+	return result
+}
+
+func hasAllRequiredForMergeLabels(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
+	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
+		if labelsAdded[doNotMergeLabel] == zeroDate || labelsRemoved[doNotMergeLabel] != zeroDate {
+			return false
+		}
+	}
+	return true
+}
+
+func latestRequiredForMergeLabelAddition(labelsAdded map[string]time.Time) time.Time {
+	result := zeroDate
+	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
+		if labelsAdded[doNotMergeLabel] != zeroDate && labelsAdded[doNotMergeLabel].After(result) {
+			result = labelsAdded[doNotMergeLabel]
+		}
+	}
+	return result
 }
