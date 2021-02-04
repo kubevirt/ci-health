@@ -5,8 +5,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"strconv"
-	"strings"
 
 	"github.com/narqo/go-badge"
 	log "github.com/sirupsen/logrus"
@@ -47,31 +45,28 @@ func (b *Handler) Write(results *stats.Results) error {
 		return err
 	}
 
-	err = b.writeMetric(
+	err = b.writeBadge(
 		constants.TimeToMergeBadgeName,
 		filepath.Join(b.options.Path, constants.TimeToMergeBadgeFileName),
-		results.Data[constants.TimeToMergeName].Value,
+		results.Data[constants.TimeToMergeName],
 		b.options.TimeToMergeLevels,
 	)
 	if err != nil {
 		return err
 	}
-	err = b.writeMetric(
+
+	err = b.writeBadge(
 		constants.MergeQueueLengthBadgeName,
 		filepath.Join(b.options.Path, constants.MergeQueueLengthBadgeFileName),
-		results.Data[constants.MergeQueueLengthName].Value,
+		results.Data[constants.MergeQueueLengthName],
 		b.options.MergeQueueLengthLevels,
 	)
 
 	return err
 }
 
-func (b *Handler) writeMetric(name, filePath string, value string, levels *Levels) error {
-	floatValue, err := strconv.ParseFloat(strings.Fields(value)[0], 64)
-	if err != nil {
-		return err
-	}
-	color := BadgeColor(floatValue, levels)
+func (b *Handler) writeBadge(name, filePath string, data stats.RunningAverageDataItem, levels *Levels) error {
+	color := BadgeColor(data.Avg, levels)
 
 	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
 	if err != nil {
@@ -80,7 +75,7 @@ func (b *Handler) writeMetric(name, filePath string, value string, levels *Level
 	defer f.Close()
 
 	log.Debugf("Writing color %s", color)
-	err = badge.Render(name, value, color, f)
+	err = badge.Render(name, data.String(), color, f)
 
 	return err
 }

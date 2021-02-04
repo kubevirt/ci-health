@@ -5,8 +5,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"strconv"
-	"strings"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -60,19 +58,14 @@ var _ = Describe("ci-health stats", func() {
 
 			names := []string{constants.MergeQueueLengthName, constants.TimeToMergeName}
 
-			parseFloat := func(value string) float64 {
-				floatValue, err := strconv.ParseFloat(strings.Fields(value)[0], 64)
-				Expect(err).ToNot(HaveOccurred())
-				return floatValue
-			}
-
 			for _, name := range names {
 				metricResults := results.Data[name]
-				value := parseFloat(metricResults.Value)
-				Expect(value).To(BeNumerically(">", 0))
+				avg := metricResults.Avg
+				Expect(avg).To(BeNumerically(">=", 0))
+				std := metricResults.Std
+				Expect(std).To(BeNumerically(">=", 0))
 				for _, dataPoint := range metricResults.DataPoints {
-					dataPointValue := parseFloat(dataPoint.Value)
-					Expect(dataPointValue).To(BeNumerically(">=", 0))
+					Expect(dataPoint.Value).To(BeNumerically(">=", 0))
 				}
 			}
 		}
