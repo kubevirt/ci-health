@@ -3,12 +3,13 @@ package constants
 const (
 	DateFormat = "2006-01-02T15:04:05Z"
 
-	LGTMLabel           = "lgtm"
-	ApprovedLabel       = "approved"
-	HoldLabel           = "do-not-merge/hold"
-	WorkInProgressLabel = "do-not-merge/work-in-progress"
+	LGTMLabel              = "lgtm"
+	ApprovedLabel          = "approved"
+	HoldLabel              = "do-not-merge/hold"
+	WorkInProgressLabel    = "do-not-merge/work-in-progress"
+	DoNotMergeLabelPattern = "do-not-merge/*"
 
-	NeedsRebaseLabel    = "needs-rebase"
+	NeedsRebaseLabel = "needs-rebase"
 
 	MergeQueueLengthName = "AverageMergeQueueLength"
 	TimeToMergeName      = "AverageTimeToMerge"
@@ -36,7 +37,7 @@ func DoNotMergeLabels() []string {
 		NeedsRebaseLabel,
 		HoldLabel,
 		WorkInProgressLabel,
-		WorkInProgressLabel,
+		DoNotMergeLabelPattern,
 	}
 }
 

@@ -202,6 +202,47 @@ var _ = Describe("DatePREntered", func() {
 			},
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
+		table.Entry("PR in merge queue: any do-not-merge prefixed label and removed any do-not-merge prefixed label",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
+								AddedLabel: types.Label{
+									Name: "do-not-merge/for-whatever-reason",
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							UnlabeledEventFragment: types.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: types.Label{
+									Name: "do-not-merge/for-whatever-reason",
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: needs-rebase and rebase",
 			&types.PullRequestFragment{
 				TimelineItems: types.TimelineItems{
@@ -580,7 +621,7 @@ var _ = Describe("DatePREntered", func() {
 			},
 			queryDate,
 			zeroDate),
-		table.PEntry("PR not in merge queue: with any do-not-merge prefixed label",
+		table.Entry("PR not in merge queue: with any do-not-merge prefixed label",
 			&types.PullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{

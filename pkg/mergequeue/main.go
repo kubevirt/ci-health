@@ -10,6 +10,8 @@ package mergequeue
 
 import (
 	"fmt"
+	"regexp"
+	"strings"
 	"time"
 
 	log "github.com/sirupsen/logrus"
@@ -131,8 +133,23 @@ func isUnlabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
 
 func hasAnyDoNotMergeLabel(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
 	for _, doNotMergeLabel := range constants.DoNotMergeLabels() {
-		if labelsAdded[doNotMergeLabel] != zeroDate && !labelsRemoved[doNotMergeLabel].After(labelsAdded[doNotMergeLabel]) {
-			return true
+		if !strings.Contains(doNotMergeLabel, "*") {
+			if labelsAdded[doNotMergeLabel] != zeroDate && !labelsRemoved[doNotMergeLabel].After(labelsAdded[doNotMergeLabel]) {
+				return true
+			}
+		} else {
+			regex, err := regexp.Compile(strings.ReplaceAll(doNotMergeLabel, "*", ".*"))
+			if err != nil {
+				panic(err)
+			}
+			for key, value := range labelsAdded {
+				if !regex.MatchString(key) {
+					continue
+				}
+				if value != zeroDate && !labelsRemoved[key].After(value) {
+					return true
+				}
+			}
 		}
 	}
 	return false
@@ -141,8 +158,23 @@ func hasAnyDoNotMergeLabel(labelsAdded map[string]time.Time, labelsRemoved map[s
 func latestDoNotMergeLabelRemoval(labelsRemoved map[string]time.Time) time.Time {
 	result := zeroDate
 	for _, doNotMergeLabel := range constants.DoNotMergeLabels() {
-		if labelsRemoved[doNotMergeLabel] != zeroDate && labelsRemoved[doNotMergeLabel].After(result) {
-			result = labelsRemoved[doNotMergeLabel]
+		if !strings.Contains(doNotMergeLabel, "*") {
+			if labelsRemoved[doNotMergeLabel] != zeroDate && labelsRemoved[doNotMergeLabel].After(result) {
+				result = labelsRemoved[doNotMergeLabel]
+			}
+		} else {
+			regex, err := regexp.Compile(strings.ReplaceAll(doNotMergeLabel, "*", ".*"))
+			if err != nil {
+				panic(err)
+			}
+			for key, value := range labelsRemoved {
+				if !regex.MatchString(key) {
+					continue
+				}
+				if value != zeroDate && labelsRemoved[key].After(result) {
+					result = value
+				}
+			}
 		}
 	}
 	return result
