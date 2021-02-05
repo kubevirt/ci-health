@@ -2,6 +2,7 @@ package e2e
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -88,13 +89,29 @@ var _ = Describe("ci-health stats", func() {
 
 		By("Checking JSON file")
 		jsonFileName := filepath.Join(artifactsDir, constants.JSONResultsFileName)
-		data, err := ioutil.ReadFile(jsonFileName)
+		jsonData, err := ioutil.ReadFile(jsonFileName)
 		Expect(err).ToNot(HaveOccurred())
 
 		var jsonResults stats.Results
-		err = json.Unmarshal(data, &jsonResults)
+		err = json.Unmarshal(jsonData, &jsonResults)
 		Expect(err).ToNot(HaveOccurred())
 
 		checkResults(&jsonResults)
+
+		By("Checking metrics file")
+		metricsFileName := filepath.Join(artifactsDir, constants.MetricsFileName)
+		metricsDataBytes, err := ioutil.ReadFile(metricsFileName)
+		Expect(err).ToNot(HaveOccurred())
+		metricsData := string(metricsDataBytes)
+
+		expectedMetricsStrings := []string{
+			fmt.Sprintf("# HELP %s", constants.AvgMergeQueueLengthMetricName),
+			fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgMergeQueueLengthMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgTimeToMergeMetricName),
+		}
+		for _, expected := range expectedMetricsStrings {
+			Expect(metricsData).To(ContainSubstring(expected))
+		}
 	})
 })

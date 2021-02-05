@@ -8,6 +8,7 @@ go_library(
     deps = [
         "//pkg/gh",
         "//pkg/mergequeue",
+        "//pkg/metrics",
         "//pkg/output",
         "//pkg/stats",
         "//pkg/types",

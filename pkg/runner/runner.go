@@ -9,6 +9,7 @@ import (
 
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
+	"github.com/fgimenez/ci-health/pkg/metrics"
 	"github.com/fgimenez/ci-health/pkg/output"
 	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
@@ -64,7 +65,8 @@ func Run(o *types.Options) (*stats.Results, error) {
 			Red:    o.MergeQueueLengthRedLevel,
 		},
 	}
-	outputHandler := output.NewHandler(outputOptions)
+	metricsHandler := metrics.NewHandler()
+	outputHandler := output.NewHandler(outputOptions, metricsHandler)
 
 	err = outputHandler.Write(results)
 	if err != nil {

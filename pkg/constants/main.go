@@ -24,10 +24,12 @@ const (
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
 	JSONResultsFileName           = "results.json"
-	TimeToMergeBadgeName          = "avg time to merge"
-	MergeQueueLengthBadgeName     = "avg merge queue length"
-	BadgeDataFormat               = "%.2f ± std %.2f"
+	MetricsFileName               = "metrics"
 
-	MergeQueueLengthMetricName = "cihealth_merge_queue_lenght_total"
-	TimeToMergeMetricName      = "cihealth_time_to_merge_seconds"
+	TimeToMergeBadgeName      = "avg time to merge"
+	MergeQueueLengthBadgeName = "avg merge queue length"
+	BadgeDataFormat           = "%.2f ± std %.2f"
+
+	AvgMergeQueueLengthMetricName = "cihealth_avg_merge_queue_lenght_total"
+	AvgTimeToMergeMetricName      = "cihealth_avg_time_to_merge_days"
 )
