@@ -13,6 +13,11 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
+const (
+	HoldLabel              = "do-not-merge/hold"
+	WorkInProgressLabel    = "do-not-merge/work-in-progress"
+)
+
 func TestMergeQueue(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "mergequeue Suite")
@@ -136,7 +141,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -6),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -152,7 +157,7 @@ var _ = Describe("DatePREntered", func() {
 							UnlabeledEventFragment: types.UnlabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -4),
 								RemovedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -177,7 +182,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -6),
 								AddedLabel: types.Label{
-									Name: constants.WorkInProgressLabel,
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
@@ -193,7 +198,7 @@ var _ = Describe("DatePREntered", func() {
 							UnlabeledEventFragment: types.UnlabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -4),
 								RemovedLabel: types.Label{
-									Name: constants.WorkInProgressLabel,
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
@@ -308,7 +313,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, 1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -341,7 +346,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, 1),
 								AddedLabel: types.Label{
-									Name: constants.WorkInProgressLabel,
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
@@ -579,7 +584,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -612,7 +617,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.WorkInProgressLabel,
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
@@ -794,7 +799,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -827,7 +832,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.WorkInProgressLabel,
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
