@@ -9,7 +9,8 @@ require (
 	github.com/narqo/go-badge v0.0.0-20190124110329-d9415e4e1e9f
 	github.com/onsi/ginkgo v1.14.2
 	github.com/onsi/gomega v1.10.4
-	github.com/prometheus/client_golang v1.9.0 // indirect
+	github.com/prometheus/client_golang v1.9.0
+	github.com/prometheus/common v0.15.0
 	github.com/shurcooL/githubv4 v0.0.0-20201206200315-234843c633fa
 	github.com/shurcooL/graphql v0.0.0-20200928012149-18c5c3165e3a // indirect
 	github.com/sirupsen/logrus v1.7.0

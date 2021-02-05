@@ -1,8 +1,13 @@
 package metrics
 
 import (
+	"bufio"
+	"bytes"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
+	"github.com/prometheus/common/expfmt"
+	log "github.com/sirupsen/logrus"
 
 	"github.com/fgimenez/ci-health/pkg/constants"
 )
@@ -42,6 +47,25 @@ func (h *Handler) SetTimeToMerge(source string, value float64) {
 }
 
 func (h *Handler) String() string {
+	reg := prometheus.DefaultGatherer
+	mfs, err := reg.Gather()
+	if err != nil {
+		log.Errorf("Could not gather metrics: %s", err)
+		return ""
+	}
 
-	return ""
+	var buffer bytes.Buffer
+	w := bufio.NewWriter(&buffer)
+
+	contentType := expfmt.FmtText
+	enc := expfmt.NewEncoder(w, contentType)
+
+	for _, mf := range mfs {
+		err = enc.Encode(mf)
+		if err != nil {
+			log.Errorf("Could not encode metric %s: %v", mf, err)
+		}
+	}
+
+	return buffer.String()
 }
