@@ -27,4 +27,7 @@ const (
 	TimeToMergeBadgeName          = "avg time to merge"
 	MergeQueueLengthBadgeName     = "avg merge queue length"
 	BadgeDataFormat               = "%.2f ± std %.2f"
+
+	MergeQueueLengthMetricName = "cihealth_merge_queue_lenght_total"
+	TimeToMergeMetricName      = "cihealth_time_to_merge_seconds"
 )
