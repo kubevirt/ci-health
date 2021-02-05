@@ -77,10 +77,12 @@ var _ = Describe("ci-health stats", func() {
 		By("Checking returned data")
 		checkResults(results)
 
+		sourceArtifactsDir := filepath.Join(artifactsDir, source)
+
 		By("Checking badge files")
 		badgeFileNames := []string{
-			filepath.Join(artifactsDir, constants.MergeQueueLengthBadgeFileName),
-			filepath.Join(artifactsDir, constants.TimeToMergeBadgeFileName),
+			filepath.Join(sourceArtifactsDir, constants.MergeQueueLengthBadgeFileName),
+			filepath.Join(sourceArtifactsDir, constants.TimeToMergeBadgeFileName),
 		}
 		for _, badgeFileName := range badgeFileNames {
 			_, err := os.Stat(badgeFileName)
@@ -88,7 +90,7 @@ var _ = Describe("ci-health stats", func() {
 		}
 
 		By("Checking JSON file")
-		jsonFileName := filepath.Join(artifactsDir, constants.JSONResultsFileName)
+		jsonFileName := filepath.Join(sourceArtifactsDir, constants.JSONResultsFileName)
 		jsonData, err := ioutil.ReadFile(jsonFileName)
 		Expect(err).ToNot(HaveOccurred())
 
