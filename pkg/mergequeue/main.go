@@ -181,8 +181,8 @@ func firstMapEntryWithKeyMatchingPatternAndNonZeroDate(labelsToTimes map[string]
 }
 
 func hasAllLabelsRequiredForMerge(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
-	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
-		if labelsAdded[doNotMergeLabel] == zeroDate || labelsRemoved[doNotMergeLabel] != zeroDate {
+	for _, requiredForMergeLabel := range constants.RequiredForMergeLabels() {
+		if labelsAdded[requiredForMergeLabel] == zeroDate || labelsRemoved[requiredForMergeLabel] != zeroDate {
 			return false
 		}
 	}
