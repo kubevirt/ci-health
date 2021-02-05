@@ -7,6 +7,7 @@ go_library(
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/constants",
+        "//pkg/metrics",
         "//pkg/stats",
         "@com_github_narqo_go_badge//:go-badge",
         "@com_github_sirupsen_logrus//:logrus",

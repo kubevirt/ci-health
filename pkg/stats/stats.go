@@ -1,7 +1,6 @@
 package stats
 
 import (
-	"fmt"
 	"math"
 	"time"
 
@@ -60,13 +59,14 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 		values = append(values, float64(queueLength))
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			DataPoint{
-				Value: fmt.Sprintf("%d", queueLength),
+				Value: float64(queueLength),
 				PRs:   prs,
 				Date:  &queryDate,
 			})
 	}
 
-	dataItem.Value = formatDataValue(values)
+	dataItem.Avg = Average(values)
+	dataItem.Std = Std(values)
 
 	results.Data[constants.MergeQueueLengthName] = dataItem
 
@@ -95,12 +95,13 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			DataPoint{
-				Value: fmt.Sprintf("%.2f", value),
+				Value: value,
 				PRs:   []int{prNumber},
 			})
 	}
 
-	dataItem.Value = formatDataValue(values)
+	dataItem.Avg = Average(values)
+	dataItem.Std = Std(values)
 
 	results.Data[constants.TimeToMergeName] = dataItem
 
@@ -137,8 +138,4 @@ func Std(xs []float64) float64 {
 
 func round(value float64) float64 {
 	return math.Round(value*100) / 100
-}
-
-func formatDataValue(values []float64) string {
-	return fmt.Sprintf(constants.BadgeDataFormat, Average(values), Std(values))
 }

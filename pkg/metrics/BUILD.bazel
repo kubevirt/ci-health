@@ -1,0 +1,27 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "metrics",
+    srcs = ["metrics.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/metrics",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/constants",
+        "@com_github_prometheus_client_golang//prometheus",
+        "@com_github_prometheus_client_golang//prometheus/promauto",
+        "@com_github_prometheus_common//expfmt",
+        "@com_github_sirupsen_logrus//:logrus",
+    ],
+)
+
+go_test(
+    name = "metrics_test",
+    srcs = ["metrics_test.go"],
+    embed = [":metrics"],
+    deps = [
+        "//pkg/constants",
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
+    ],
+)

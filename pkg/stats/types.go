@@ -1,9 +1,14 @@
 package stats
 
-import "time"
+import (
+	"fmt"
+	"time"
+
+	"github.com/fgimenez/ci-health/pkg/constants"
+)
 
 type DataPoint struct {
-	Value string
+	Value float64
 	Date  *time.Time `json:",omitempty"`
 	PRs   []int      `json:",omitempty"`
 }
@@ -11,8 +16,13 @@ type DataPoint struct {
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Value      string
+	Avg        float64
+	Std        float64
 	DataPoints []DataPoint
+}
+
+func (d *RunningAverageDataItem) String() string {
+	return fmt.Sprintf(constants.BadgeDataFormat, d.Avg, d.Std)
 }
 
 // Results represents the data obtained from GitHub. It includes the source repo from which
