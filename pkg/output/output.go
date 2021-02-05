@@ -21,6 +21,7 @@ type Levels struct {
 
 type Options struct {
 	Path                   string
+	Source                 string
 	TimeToMergeLevels      *Levels
 	MergeQueueLengthLevels *Levels
 }
@@ -54,12 +55,17 @@ func (b *Handler) Write(results *stats.Results) error {
 }
 
 func (b *Handler) writeJSON(results *stats.Results) error {
+	basePath, err := b.initializeSourcePath()
+	if err != nil {
+		return err
+	}
+
 	resultsJSON, err := json.MarshalIndent(results, "", " ")
 	if err != nil {
 		return err
 	}
 	log.Infof("Results: %s", string(resultsJSON))
-	resultsPath := filepath.Join(b.options.Path, constants.JSONResultsFileName)
+	resultsPath := filepath.Join(basePath, constants.JSONResultsFileName)
 	err = ioutil.WriteFile(resultsPath, resultsJSON, 0644)
 
 	return err
@@ -79,9 +85,14 @@ func (b *Handler) writeMetrics(results *stats.Results) error {
 }
 
 func (b *Handler) writeBadges(results *stats.Results) error {
-	err := b.writeBadge(
+	basePath, err := b.initializeSourcePath()
+	if err != nil {
+		return err
+	}
+
+	err = b.writeBadge(
 		constants.TimeToMergeBadgeName,
-		filepath.Join(b.options.Path, constants.TimeToMergeBadgeFileName),
+		filepath.Join(basePath, constants.TimeToMergeBadgeFileName),
 		results.Data[constants.TimeToMergeName],
 		b.options.TimeToMergeLevels,
 	)
@@ -91,7 +102,7 @@ func (b *Handler) writeBadges(results *stats.Results) error {
 
 	err = b.writeBadge(
 		constants.MergeQueueLengthBadgeName,
-		filepath.Join(b.options.Path, constants.MergeQueueLengthBadgeFileName),
+		filepath.Join(basePath, constants.MergeQueueLengthBadgeFileName),
 		results.Data[constants.MergeQueueLengthName],
 		b.options.MergeQueueLengthLevels,
 	)
@@ -114,6 +125,11 @@ func (b *Handler) writeBadge(name, filePath string, data stats.RunningAverageDat
 	return err
 }
 
+func (b *Handler) initializeSourcePath() (string, error) {
+	basePath := filepath.Join(b.options.Path, b.options.Source)
+	err := os.MkdirAll(basePath, 0755)
+	return basePath, err
+}
 func BadgeColor(value float64, levels *Levels) badge.Color {
 	var color badge.Color
 
