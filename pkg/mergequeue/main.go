@@ -82,7 +82,7 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Dura
 func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 	labelsAdded, labelsRemoved := createMapsFromEvents(pr, date)
 
-	if !hasAllRequiredForMergeLabels(labelsAdded, labelsRemoved) {
+	if !hasAllLabelsRequiredForMerge(labelsAdded, labelsRemoved) {
 		return zeroDate
 	}
 
@@ -90,8 +90,8 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 		return zeroDate
 	}
 
-	doNotMergeLabelRemoval := latestDoNotMergeLabelRemoval(labelsRemoved)
-	requiredForMergeLabelAddition := latestRequiredForMergeLabelAddition(labelsAdded)
+	doNotMergeLabelRemoval := latestMomentWhenAnyDoNotMergeLabelWasRemoved(labelsRemoved)
+	requiredForMergeLabelAddition := latestMomentWhenAnyLabelRequiredForMergeWasAdded(labelsAdded)
 
 	if doNotMergeLabelRemoval.After(requiredForMergeLabelAddition) {
 		return doNotMergeLabelRemoval
@@ -138,24 +138,16 @@ func hasAnyDoNotMergeLabel(labelsAdded map[string]time.Time, labelsRemoved map[s
 				return true
 			}
 		} else {
-			regex, err := regexp.Compile(strings.ReplaceAll(doNotMergeLabel, "*", ".*"))
-			if err != nil {
-				panic(err)
-			}
-			for key, value := range labelsAdded {
-				if !regex.MatchString(key) {
-					continue
-				}
-				if value != zeroDate && !labelsRemoved[key].After(value) {
-					return true
-				}
+			foundLabel, foundTime := firstMapEntryWithKeyMatchingPatternAndNonZeroDate(labelsAdded, doNotMergeLabel)
+			if foundTime != zeroDate && !labelsRemoved[foundLabel].After(foundTime) {
+				return true
 			}
 		}
 	}
 	return false
 }
 
-func latestDoNotMergeLabelRemoval(labelsRemoved map[string]time.Time) time.Time {
+func latestMomentWhenAnyDoNotMergeLabelWasRemoved(labelsRemoved map[string]time.Time) time.Time {
 	result := zeroDate
 	for _, doNotMergeLabel := range constants.DoNotMergeLabels() {
 		if !strings.Contains(doNotMergeLabel, "*") {
@@ -163,24 +155,32 @@ func latestDoNotMergeLabelRemoval(labelsRemoved map[string]time.Time) time.Time 
 				result = labelsRemoved[doNotMergeLabel]
 			}
 		} else {
-			regex, err := regexp.Compile(strings.ReplaceAll(doNotMergeLabel, "*", ".*"))
-			if err != nil {
-				panic(err)
-			}
-			for key, value := range labelsRemoved {
-				if !regex.MatchString(key) {
-					continue
-				}
-				if value != zeroDate && labelsRemoved[key].After(result) {
-					result = value
-				}
+			foundLabel, foundTime := firstMapEntryWithKeyMatchingPatternAndNonZeroDate(labelsRemoved, doNotMergeLabel)
+			if foundTime != zeroDate && labelsRemoved[foundLabel].After(result) {
+				result = foundTime
 			}
 		}
 	}
 	return result
 }
 
-func hasAllRequiredForMergeLabels(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
+func firstMapEntryWithKeyMatchingPatternAndNonZeroDate(labelsToTimes map[string]time.Time, pattern string) (foundLabel string, foundTime time.Time) {
+	regex, err := regexp.Compile(strings.ReplaceAll(pattern, "*", ".*"))
+	if err != nil {
+		panic(err)
+	}
+	for key, value := range labelsToTimes {
+		if !regex.MatchString(key) {
+			continue
+		}
+		if value != zeroDate {
+			return key, value
+		}
+	}
+	return "", zeroDate
+}
+
+func hasAllLabelsRequiredForMerge(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
 	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
 		if labelsAdded[doNotMergeLabel] == zeroDate || labelsRemoved[doNotMergeLabel] != zeroDate {
 			return false
@@ -189,7 +189,7 @@ func hasAllRequiredForMergeLabels(labelsAdded map[string]time.Time, labelsRemove
 	return true
 }
 
-func latestRequiredForMergeLabelAddition(labelsAdded map[string]time.Time) time.Time {
+func latestMomentWhenAnyLabelRequiredForMergeWasAdded(labelsAdded map[string]time.Time) time.Time {
 	result := zeroDate
 	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
 		if labelsAdded[doNotMergeLabel] != zeroDate && labelsAdded[doNotMergeLabel].After(result) {
