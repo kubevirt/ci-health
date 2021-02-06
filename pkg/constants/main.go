@@ -3,10 +3,11 @@ package constants
 const (
 	DateFormat = "2006-01-02T15:04:05Z"
 
-	LGTMLabel        = "lgtm"
-	ApprovedLabel    = "approved"
-	HoldLabel        = "do-not-merge/hold"
-	NeedsRebaseLabel = "needs-rebase"
+	LGTMLabel     = "lgtm"
+	ApprovedLabel = "approved"
+
+	DoNotMergeLabelPattern = "do-not-merge/*"
+	NeedsRebaseLabel       = "needs-rebase"
 
 	MergeQueueLengthName = "AverageMergeQueueLength"
 	TimeToMergeName      = "AverageTimeToMerge"
@@ -33,3 +34,17 @@ const (
 	AvgMergeQueueLengthMetricName = "cihealth_avg_merge_queue_lenght_total"
 	AvgTimeToMergeMetricName      = "cihealth_avg_time_to_merge_days"
 )
+
+func DoNotMergeLabels() []string {
+	return []string{
+		NeedsRebaseLabel,
+		DoNotMergeLabelPattern,
+	}
+}
+
+func RequiredForMergeLabels() []string {
+	return []string{
+		LGTMLabel,
+		ApprovedLabel,
+	}
+}

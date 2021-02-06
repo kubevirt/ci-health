@@ -12,7 +12,7 @@ date. For being ready to be merged they must:
 
   * Have the `lgtm` label.
   * Have the `approved` label.
-  * Not have the `do-not-merge/hold` label.
+  * Not have any label matching `do-not-merge/*`, i.e. `do-not-merge/hold`,  `do-not-merge/work-in-progress` etc. .
   * Not have the `needs-rebase` label.
 
 * Merge queue length: number of PRs in the merge queue at a given time.

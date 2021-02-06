@@ -13,6 +13,11 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
+const (
+	HoldLabel              = "do-not-merge/hold"
+	WorkInProgressLabel    = "do-not-merge/work-in-progress"
+)
+
 func TestMergeQueue(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "mergequeue Suite")
@@ -136,7 +141,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -6),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
 								},
 							},
 						},
@@ -152,7 +157,89 @@ var _ = Describe("DatePREntered", func() {
 							UnlabeledEventFragment: types.UnlabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -4),
 								RemovedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -4)),
+		table.Entry("PR in merge queue: work-in-progress and removed work-in-progress",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
+								AddedLabel: types.Label{
+									Name: WorkInProgressLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							UnlabeledEventFragment: types.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: types.Label{
+									Name: WorkInProgressLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -4)),
+		table.Entry("PR in merge queue: any do-not-merge prefixed label and removed any do-not-merge prefixed label",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -7),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -6),
+								AddedLabel: types.Label{
+									Name: "do-not-merge/for-whatever-reason",
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							UnlabeledEventFragment: types.UnlabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								RemovedLabel: types.Label{
+									Name: "do-not-merge/for-whatever-reason",
 								},
 							},
 						},
@@ -226,7 +313,40 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, 1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			queryDate.AddDate(0, 0, -1)),
+		table.Entry("PR in merge queue: work-in-progress after queryDate",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, 1),
+								AddedLabel: types.Label{
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
@@ -464,7 +584,73 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: with work-in-progress label",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: WorkInProgressLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: with any do-not-merge prefixed label",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: "do-not-merge/for-whatever-reason",
 								},
 							},
 						},
@@ -613,7 +799,40 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: constants.HoldLabel,
+									Name: HoldLabel,
+								},
+							},
+						},
+					},
+				},
+			},
+			queryDate,
+			zeroDate),
+		table.Entry("PR not in merge queue: lgtm, approve and work-in-progress at the same time",
+			&types.PullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.LGTMLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: constants.ApprovedLabel,
+								},
+							},
+						},
+						{
+							LabeledEventFragment: types.LabeledEventFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								AddedLabel: types.Label{
+									Name: WorkInProgressLabel,
 								},
 							},
 						},
