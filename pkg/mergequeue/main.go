@@ -191,9 +191,9 @@ func hasAllLabelsRequiredForMerge(labelsAdded map[string]time.Time, labelsRemove
 
 func latestMomentWhenAnyLabelRequiredForMergeWasAdded(labelsAdded map[string]time.Time) time.Time {
 	result := zeroDate
-	for _, doNotMergeLabel := range constants.RequiredForMergeLabels() {
-		if labelsAdded[doNotMergeLabel] != zeroDate && labelsAdded[doNotMergeLabel].After(result) {
-			result = labelsAdded[doNotMergeLabel]
+	for _, requiredForMergeLabel := range constants.RequiredForMergeLabels() {
+		if labelsAdded[requiredForMergeLabel] != zeroDate && labelsAdded[requiredForMergeLabel].After(result) {
+			result = labelsAdded[requiredForMergeLabel]
 		}
 	}
 	return result
