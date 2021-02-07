@@ -10,6 +10,18 @@ on:
     - 'BUILD.bazel'
     - 'WORKSPACE'
     - '.bazel*'
+    - '.github/*'
+  pull_request:
+    paths:
+    - 'cmd/**'
+    - 'e2e/**'
+    - 'pkg/**'
+    - 'go.*'
+    - 'deps.bzl'
+    - 'BUILD.bazel'
+    - 'WORKSPACE'
+    - '.bazel*'
+    - '.github/*'
 jobs:
   test:
     runs-on: ubuntu-latest
