@@ -47,24 +47,27 @@ func (h *Handler) SetAvgTimeToMerge(source string, value float64) {
 }
 
 func (h *Handler) String() string {
-	reg := prometheus.DefaultGatherer
-	mfs, err := reg.Gather()
-	if err != nil {
-		log.Errorf("Could not gather metrics: %s", err)
-		return ""
-	}
-
 	var buffer bytes.Buffer
 	w := bufio.NewWriter(&buffer)
 
 	contentType := expfmt.FmtText
 	enc := expfmt.NewEncoder(w, contentType)
 
+	reg := prometheus.DefaultGatherer
+	mfs, err := reg.Gather()
+	if err != nil {
+		log.Errorf("Could not gather metrics: %s", err)
+		return ""
+	}
 	for _, mf := range mfs {
 		err = enc.Encode(mf)
 		if err != nil {
 			log.Errorf("Could not encode metric %s: %v", mf, err)
 		}
+	}
+	err = w.Flush()
+	if err != nil {
+		log.Errorf("Could not flush writer %v", err)
 	}
 
 	return buffer.String()

@@ -75,10 +75,10 @@ func (b *Handler) writeMetrics(results *stats.Results) error {
 	b.metricsHandler.SetAvgMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Avg)
 	b.metricsHandler.SetAvgTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Avg)
 
-	metricsPath := filepath.Join(b.options.Path, constants.MetricsFileName)
-
 	m := b.metricsHandler.String()
 	log.Debugf("Metrics: %s", m)
+
+	metricsPath := filepath.Join(b.options.Path, constants.MetricsFileName)
 	err := ioutil.WriteFile(metricsPath, []byte(m), 0644)
 
 	return err
