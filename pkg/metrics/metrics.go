@@ -48,7 +48,7 @@ func (h *Handler) SetAvgTimeToMerge(source string, value float64) {
 
 func (h *Handler) String() string {
 	var buffer bytes.Buffer
-	w := bufio.NewWriterSize(&buffer, 4096)
+	w := bufio.NewWriterSize(&buffer, 8192)
 
 	contentType := expfmt.FmtText
 	enc := expfmt.NewEncoder(w, contentType)
