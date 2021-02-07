@@ -6,64 +6,64 @@ cihealth_avg_merge_queue_lenght_total{source="kubevirt/kubevirt"} 6.57
 cihealth_avg_time_to_merge_days{source="kubevirt/kubevirt"} 1.79
 # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
 # TYPE go_gc_duration_seconds summary
-go_gc_duration_seconds{quantile="0"} 3.9801e-05
-go_gc_duration_seconds{quantile="0.25"} 5.49e-05
-go_gc_duration_seconds{quantile="0.5"} 6.3001e-05
-go_gc_duration_seconds{quantile="0.75"} 7.9302e-05
-go_gc_duration_seconds{quantile="1"} 0.0001027
-go_gc_duration_seconds_sum 0.001142512
+go_gc_duration_seconds{quantile="0"} 4.21e-05
+go_gc_duration_seconds{quantile="0.25"} 5.0101e-05
+go_gc_duration_seconds{quantile="0.5"} 6.53e-05
+go_gc_duration_seconds{quantile="0.75"} 7.73e-05
+go_gc_duration_seconds{quantile="1"} 0.0001384
+go_gc_duration_seconds_sum 0.001161902
 go_gc_duration_seconds_count 17
 # HELP go_goroutines Number of goroutines that currently exist.
 # TYPE go_goroutines gauge
-go_goroutines 6
+go_goroutines 8
 # HELP go_info Information about the Go environment.
 # TYPE go_info gauge
 go_info{version="go1.15.5"} 1
 # HELP go_memstats_alloc_bytes Number of bytes allocated and still in use.
 # TYPE go_memstats_alloc_bytes gauge
-go_memstats_alloc_bytes 2.733392e+06
+go_memstats_alloc_bytes 2.365016e+06
 # HELP go_memstats_alloc_bytes_total Total number of bytes allocated, even if freed.
 # TYPE go_memstats_alloc_bytes_total counter
-go_memstats_alloc_bytes_total 4.319512e+07
+go_memstats_alloc_bytes_total 4.3177376e+07
 # HELP go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table.
 # TYPE go_memstats_buck_hash_sys_bytes gauge
-go_memstats_buck_hash_sys_bytes 1.460388e+06
+go_memstats_buck_hash_sys_bytes 1.45686e+06
 # HELP go_memstats_frees_total Total number of frees.
 # TYPE go_memstats_frees_total counter
-go_memstats_frees_total 973506
+go_memstats_frees_total 976426
 # HELP go_memstats_gc_cpu_fraction The fraction of this program's available CPU time used by the GC since the program started.
 # TYPE go_memstats_gc_cpu_fraction gauge
-go_memstats_gc_cpu_fraction 0.00012760837458554688
+go_memstats_gc_cpu_fraction 0.00017534464739454498
 # HELP go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata.
 # TYPE go_memstats_gc_sys_bytes gauge
-go_memstats_gc_sys_bytes 5.188848e+06
+go_memstats_gc_sys_bytes 5.176488e+06
 # HELP go_memstats_heap_alloc_bytes Number of heap bytes allocated and still in use.
 # TYPE go_memstats_heap_alloc_bytes gauge
-go_memstats_heap_alloc_bytes 2.733392e+06
+go_memstats_heap_alloc_bytes 2.365016e+06
 # HELP go_memstats_heap_idle_bytes Number of heap bytes waiting to be used.
 # TYPE go_memstats_heap_idle_bytes gauge
-go_memstats_heap_idle_bytes 6.2251008e+07
+go_memstats_heap_idle_bytes 6.2726144e+07
 # HELP go_memstats_heap_inuse_bytes Number of heap bytes that are in use.
 # TYPE go_memstats_heap_inuse_bytes gauge
-go_memstats_heap_inuse_bytes 4.431872e+06
+go_memstats_heap_inuse_bytes 3.956736e+06
 # HELP go_memstats_heap_objects Number of allocated objects.
 # TYPE go_memstats_heap_objects gauge
-go_memstats_heap_objects 27001
+go_memstats_heap_objects 23856
 # HELP go_memstats_heap_released_bytes Number of heap bytes released to OS.
 # TYPE go_memstats_heap_released_bytes gauge
-go_memstats_heap_released_bytes 6.2021632e+07
+go_memstats_heap_released_bytes 6.139904e+07
 # HELP go_memstats_heap_sys_bytes Number of heap bytes obtained from system.
 # TYPE go_memstats_heap_sys_bytes gauge
 go_memstats_heap_sys_bytes 6.668288e+07
 # HELP go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.
 # TYPE go_memstats_last_gc_time_seconds gauge
-go_memstats_last_gc_time_seconds 1.6127020079897525e+09
+go_memstats_last_gc_time_seconds 1.6127033960286157e+09
 # HELP go_memstats_lookups_total Total number of pointer lookups.
 # TYPE go_memstats_lookups_total counter
 go_memstats_lookups_total 0
 # HELP go_memstats_mallocs_total Total number of mallocs.
 # TYPE go_memstats_mallocs_total counter
-go_memstats_mallocs_total 1.000507e+06
+go_memstats_mallocs_total 1.000282e+06
 # HELP go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures.
 # TYPE go_memstats_mcache_inuse_bytes gauge
 go_memstats_mcache_inuse_bytes 3472
@@ -72,6 +72,6 @@ go_memstats_mcache_inuse_bytes 3472
 go_memstats_mcache_sys_bytes 16384
 # HELP go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures.
 # TYPE go_memstats_mspan_inuse_bytes gauge
-go_memstats_mspan_inuse_bytes 79152
+go_memstats_mspan_inuse_bytes 70856
 # HELP go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system.
-# TYPE g
+# TYPE go_mem
