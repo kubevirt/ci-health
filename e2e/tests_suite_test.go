@@ -115,5 +115,12 @@ var _ = Describe("ci-health stats", func() {
 		for _, expected := range expectedMetricsStrings {
 			Expect(metricsData).To(ContainSubstring(expected))
 		}
+		notExpectedMetricsStrings := []string{
+			"# HELP process_virtual_memory_max_bytes",
+			"# HELP go_gc_duration_seconds",
+		}
+		for _, notExpected := range notExpectedMetricsStrings {
+			Expect(metricsData).ToNot(ContainSubstring(notExpected))
+		}
 	})
 })
