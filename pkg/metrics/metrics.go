@@ -3,6 +3,7 @@ package metrics
 import (
 	"bufio"
 	"bytes"
+	"strings"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
@@ -60,6 +61,9 @@ func (h *Handler) String() string {
 		return ""
 	}
 	for _, mf := range mfs {
+		if !strings.HasPrefix(*mf.Name, "cihealth") {
+			continue
+		}
 		err = enc.Encode(mf)
 		if err != nil {
 			log.Errorf("Could not encode metric %s: %v", mf, err)
