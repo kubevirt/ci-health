@@ -30,6 +30,8 @@ data from the previous 7 days since the execution time.
 
 [Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
 
+[Historical data](https://grafana.ci.kubevirt.io/d/WZU1-LPGz/merge-queue)
+
 ## Local execution
 You can execute the tool locally to grab the stats of an specific repo that uses
 Prow, these are the requirements:
