@@ -111,6 +111,10 @@ var _ = Describe("ci-health stats", func() {
 			fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgMergeQueueLengthMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgTimeToMergeMetricName),
+			fmt.Sprintf("# HELP %s", constants.StdMergeQueueLengthMetricName),
+			fmt.Sprintf("# HELP %s", constants.StdTimeToMergeMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdMergeQueueLengthMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdTimeToMergeMetricName),
 		}
 		for _, expected := range expectedMetricsStrings {
 			Expect(metricsData).To(ContainSubstring(expected))

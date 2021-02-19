@@ -33,6 +33,8 @@ const (
 
 	AvgMergeQueueLengthMetricName = "cihealth_avg_merge_queue_lenght_total"
 	AvgTimeToMergeMetricName      = "cihealth_avg_time_to_merge_days"
+	StdMergeQueueLengthMetricName = "cihealth_std_merge_queue_lenght_total"
+	StdTimeToMergeMetricName      = "cihealth_std_time_to_merge_days"
 )
 
 func DoNotMergeLabels() []string {

@@ -74,6 +74,8 @@ func (b *Handler) writeJSON(results *stats.Results) error {
 func (b *Handler) writeMetrics(results *stats.Results) error {
 	b.metricsHandler.SetAvgMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Avg)
 	b.metricsHandler.SetAvgTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Avg)
+	b.metricsHandler.SetStdMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Std)
+	b.metricsHandler.SetStdTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Std)
 
 	m := b.metricsHandler.String()
 	log.Debugf("Metrics: %s", m)
