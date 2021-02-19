@@ -31,22 +31,31 @@ var _ = Describe("Handler", func() {
 	})
 
 	table.DescribeTable("String: should return a string with the current metric values",
-		func(mql, ttm float64, expectedItems []string) {
-			subject.SetAvgMergeQueueLength(defaultSource, mql)
-			subject.SetAvgTimeToMerge(defaultSource, ttm)
+		func(avgmql, avgttm, stdmql, stdttm float64, expectedItems []string) {
+			subject.SetAvgMergeQueueLength(defaultSource, avgmql)
+			subject.SetAvgTimeToMerge(defaultSource, avgttm)
+			subject.SetStdMergeQueueLength(defaultSource, stdmql)
+			subject.SetStdTimeToMerge(defaultSource, stdttm)
 
 			actual := subject.String()
 			for _, expected := range expectedItems {
 				Expect(actual).To(ContainSubstring(expected))
 			}
 		},
-		table.Entry("help string for mql is present", 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.AvgMergeQueueLengthMetricName)}),
-		table.Entry("help string for ttm is present", 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName)}),
-		table.Entry("mql can be set", 10.0, 0.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgMergeQueueLengthMetricName, defaultSource)}),
-		table.Entry("ttm can be set", 0.0, 10.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgTimeToMergeMetricName, defaultSource)}),
-		table.Entry("mql and ttm can be set", 10.0, 10.0, []string{
+		table.Entry("help string for avg mql is present", 0.0, 0.0, 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.AvgMergeQueueLengthMetricName)}),
+		table.Entry("help string for avg ttm is present", 0.0, 0.0, 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName)}),
+		table.Entry("help string for std mql is present", 0.0, 0.0, 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.StdMergeQueueLengthMetricName)}),
+		table.Entry("help string for std ttm is present", 0.0, 0.0, 0.0, 0.0, []string{fmt.Sprintf("# HELP %s", constants.StdTimeToMergeMetricName)}),
+		table.Entry("avg mql can be set", 10.0, 0.0, 0.0, 0.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgMergeQueueLengthMetricName, defaultSource)}),
+		table.Entry("avg ttm can be set", 0.0, 10.0, 0.0, 0.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgTimeToMergeMetricName, defaultSource)}),
+		table.Entry("std mql can be set", 0.0, 0.0, 10.0, 0.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.StdMergeQueueLengthMetricName, defaultSource)}),
+		table.Entry("std ttm can be set", 0.0, 0.0, 0.0, 10.0, []string{fmt.Sprintf(`%s{source="%s"} 10`, constants.StdTimeToMergeMetricName, defaultSource)}),
+		table.Entry("mql and ttm can be set", 10.0, 10.0, 10.0, 10.0, []string{
 			fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgMergeQueueLengthMetricName, defaultSource),
-			fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgTimeToMergeMetricName, defaultSource)}),
+			fmt.Sprintf(`%s{source="%s"} 10`, constants.AvgTimeToMergeMetricName, defaultSource),
+			fmt.Sprintf(`%s{source="%s"} 10`, constants.StdMergeQueueLengthMetricName, defaultSource),
+			fmt.Sprintf(`%s{source="%s"} 10`, constants.StdTimeToMergeMetricName, defaultSource),
+		}),
 	)
 
 	table.DescribeTable("String: should not return generic metric values",
