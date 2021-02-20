@@ -16,7 +16,7 @@ date. For being ready to be merged they must:
   * Not have the `needs-rebase` label.
 
 * Merge queue length: number of PRs in the merge queue at a given time.
-* Time to merge: for each merged PR, the time it took since it entered the merge
+* Time to merge: for each merged PR, the time in days it took since it entered the merge
 queue for the last time until it got finally merged.
 
 ## Status
