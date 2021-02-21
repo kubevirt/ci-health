@@ -27,7 +27,7 @@ const (
 	JSONResultsFileName           = "results.json"
 	MetricsFileName               = "metrics"
 
-	TimeToMergeBadgeName      = "avg time to merge"
+	TimeToMergeBadgeName      = "days to merge"
 	MergeQueueLengthBadgeName = "avg merge queue length"
 	BadgeDataFormat           = "%.2f ± std %.2f"
 
