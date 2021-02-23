@@ -658,7 +658,7 @@ var _ = Describe("DatePREntered", func() {
 							LabeledEventFragment: types.LabeledEventFragment{
 								CreatedAt: queryDate.AddDate(0, 0, -1),
 								AddedLabel: types.Label{
-									Name: "need-whatever",
+									Name: "needs-whatever",
 								},
 							},
 						},
