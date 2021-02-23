@@ -13,7 +13,7 @@ date. For being ready to be merged they must:
   * Have the `lgtm` label.
   * Have the `approved` label.
   * Not have any label matching `do-not-merge/*`, i.e. `do-not-merge/hold`,  `do-not-merge/work-in-progress` etc. .
-  * Not have the `needs-rebase` label.
+  * Not have any label matching `needs-*`, i.e. `needs-rebase`, `needs-ok-to-test` etc. .
 
 * Merge queue length: number of PRs in the merge queue at a given time.
 * Time to merge: for each merged PR, the time in days it took since it entered the merge
