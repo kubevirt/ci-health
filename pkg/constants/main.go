@@ -7,7 +7,7 @@ const (
 	ApprovedLabel = "approved"
 
 	DoNotMergeLabelPattern = "do-not-merge/*"
-	NeedsRebaseLabel       = "needs-rebase"
+	NeedsLabelPattern      = "needs-*"
 
 	MergeQueueLengthName = "AverageMergeQueueLength"
 	TimeToMergeName      = "AverageTimeToMerge"
@@ -39,7 +39,7 @@ const (
 
 func DoNotMergeLabels() []string {
 	return []string{
-		NeedsRebaseLabel,
+		NeedsLabelPattern,
 		DoNotMergeLabelPattern,
 	}
 }
