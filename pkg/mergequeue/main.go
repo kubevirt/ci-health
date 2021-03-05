@@ -9,7 +9,6 @@
 package mergequeue
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 	"time"
@@ -69,9 +68,10 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Dura
 		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", pr.Number, pr.MergedAt)
 		mqStart := DatePREntered(&pr.PullRequestFragment, pr.MergedAt)
 		if mqStart.Equal(zeroDate) {
-			return nil, fmt.Errorf("Merge queue enter date not found for PR %d", pr.Number)
+			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", pr.Number)
+		} else {
+			result[pr.Number] = pr.MergedAt.Sub(mqStart)
 		}
-		result[pr.Number] = pr.MergedAt.Sub(mqStart)
 	}
 
 	return result, nil
