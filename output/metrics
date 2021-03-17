@@ -1,12 +1,12 @@
 # HELP cihealth_avg_merge_queue_lenght_total The average number of PRs in the merge queue
 # TYPE cihealth_avg_merge_queue_lenght_total gauge
-cihealth_avg_merge_queue_lenght_total{source="kubevirt/kubevirt"} 13.14
+cihealth_avg_merge_queue_lenght_total{source="kubevirt/kubevirt"} 13
 # HELP cihealth_avg_time_to_merge_days The average days it took to merge PRs
 # TYPE cihealth_avg_time_to_merge_days gauge
-cihealth_avg_time_to_merge_days{source="kubevirt/kubevirt"} 3.42
+cihealth_avg_time_to_merge_days{source="kubevirt/kubevirt"} 3.8
 # HELP cihealth_std_merge_queue_lenght_total The standard deviation of the number of PRs in the merge queue
 # TYPE cihealth_std_merge_queue_lenght_total gauge
-cihealth_std_merge_queue_lenght_total{source="kubevirt/kubevirt"} 6.49
+cihealth_std_merge_queue_lenght_total{source="kubevirt/kubevirt"} 6.3
 # HELP cihealth_std_time_to_merge_days The standard deviation of the days it took to merge PRs
 # TYPE cihealth_std_time_to_merge_days gauge
-cihealth_std_time_to_merge_days{source="kubevirt/kubevirt"} 4.37
+cihealth_std_time_to_merge_days{source="kubevirt/kubevirt"} 4.63
