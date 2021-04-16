@@ -33,7 +33,11 @@ func (h *Handler) Run() (*Results, error) {
 	}
 	var err error
 
-	for _, processor := range []statsProcessor{h.mergeQueueProcessor, h.timeToMergeProcessor} {
+	for _, processor := range []statsProcessor{
+		h.mergeQueueProcessor,
+		h.timeToMergeProcessor,
+		h.retestsToMergeProcessor,
+	} {
 		results, err = processor(results)
 		if err != nil {
 			return nil, err
@@ -104,6 +108,11 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	dataItem.Std = Std(values)
 
 	results.Data[constants.TimeToMergeName] = dataItem
+
+	return results, nil
+}
+
+func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
 
 	return results, nil
 }

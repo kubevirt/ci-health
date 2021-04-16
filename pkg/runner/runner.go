@@ -64,6 +64,10 @@ func Run(o *types.Options) (*stats.Results, error) {
 			Yellow: o.MergeQueueLengthYellowLevel,
 			Red:    o.MergeQueueLengthRedLevel,
 		},
+		RetestsToMergeLevels: &output.Levels{
+			Yellow: o.RetestsToMergeYellowLevel,
+			Red:    o.RetestsToMergeRedLevel,
+		},
 		Source: o.Source,
 	}
 	metricsHandler := metrics.NewHandler()

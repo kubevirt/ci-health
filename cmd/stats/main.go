@@ -20,6 +20,8 @@ func main() {
 		TimeToMergeRedLevel:         constants.DefaultTimeToMergeRedLevel,
 		MergeQueueLengthYellowLevel: constants.DefaultMergeQueueLengthYellowLevel,
 		MergeQueueLengthRedLevel:    constants.DefaultMergeQueueLengthRedLevel,
+		RetestsToMergeYellowLevel:   constants.DefaultRetestsToMergeYellowLevel,
+		RetestsToMergeRedLevel:      constants.DefaultRetestsToMergeRedLevel,
 	}
 
 	cmd := &cobra.Command{
@@ -42,6 +44,8 @@ func main() {
 	flag.Float64Var(&opt.TimeToMergeRedLevel, "time-to-merge-red", opt.TimeToMergeRedLevel, "Lower limit of the TimeToMerge metric above which the label will be red")
 	flag.Float64Var(&opt.MergeQueueLengthYellowLevel, "merge-queue-length-yellow", opt.MergeQueueLengthYellowLevel, "Lower limit of the MergeQueueLength metric above which the label will be yellow")
 	flag.Float64Var(&opt.MergeQueueLengthRedLevel, "merge-queue-length-red", opt.MergeQueueLengthRedLevel, "Lower limit of the MergeQueueLength metric above which the label will be red")
+	flag.Float64Var(&opt.RetestsToMergeYellowLevel, "retests-to-merge-yellow", opt.RetestsToMergeYellowLevel, "Lower limit of the RetestsToMerge metric above which the label will be yellow")
+	flag.Float64Var(&opt.RetestsToMergeRedLevel, "retests-to-merge-red", opt.RetestsToMergeRedLevel, "Lower limit of the RetestsToMerge metric above which the label will be red")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)

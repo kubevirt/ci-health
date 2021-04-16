@@ -12,6 +12,8 @@ type Options struct {
 	TimeToMergeYellowLevel      float64
 	MergeQueueLengthRedLevel    float64
 	MergeQueueLengthYellowLevel float64
+	RetestsToMergeYellowLevel   float64
+	RetestsToMergeRedLevel      float64
 }
 
 type Label struct {
