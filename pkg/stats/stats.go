@@ -4,6 +4,7 @@ import (
 	"math"
 	"time"
 
+	"github.com/fgimenez/ci-health/pkg/chatops"
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
 )
@@ -12,13 +13,15 @@ type statsProcessor func(*Results) (*Results, error)
 
 type Handler struct {
 	mq       *mergequeue.Handler
+	co       *chatops.Handler
 	source   string
 	dataDays int
 }
 
-func NewHandler(mq *mergequeue.Handler, source string, dataDays int) *Handler {
+func NewHandler(mq *mergequeue.Handler, co *chatops.Handler, source string, dataDays int) *Handler {
 	return &Handler{
 		mq,
+		co,
 		source,
 		dataDays,
 	}
@@ -113,6 +116,33 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
+	currentTime := time.Now()
+
+	dataItem := RunningAverageDataItem{
+		DataPoints: []DataPoint{},
+	}
+
+	retestsToMerge, err := h.co.RetestsToMerge(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
+	if err != nil {
+		return nil, err
+	}
+
+	values := []float64{}
+
+	for prNumber, retestsToMerge := range retestsToMerge {
+		values = append(values, float64(retestsToMerge))
+
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			DataPoint{
+				Value: value,
+				PRs:   []int{prNumber},
+			})
+	}
+
+	dataItem.Avg = Average(values)
+	dataItem.Std = Std(values)
+
+	results.Data[constants.RetestsToMergeName] = dataItem
 
 	return results, nil
 }

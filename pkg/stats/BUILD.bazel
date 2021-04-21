@@ -9,6 +9,7 @@ go_library(
     importpath = "github.com/fgimenez/ci-health/pkg/stats",
     visibility = ["//visibility:public"],
     deps = [
+        "//pkg/chatops",
         "//pkg/constants",
         "//pkg/mergequeue",
     ],
