@@ -1,0 +1,25 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "chatops",
+    srcs = ["main.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/chatops",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/gh",
+        "//pkg/types",
+        "@com_github_sirupsen_logrus//:logrus",
+    ],
+)
+
+go_test(
+    name = "chatops_test",
+    srcs = ["chatops_test.go"],
+    embed = [":chatops"],
+    deps = [
+        "//pkg/types",
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
+    ],
+)
