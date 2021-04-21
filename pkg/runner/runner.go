@@ -7,6 +7,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
+	"github.com/fgimenez/ci-health/pkg/chatops"
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
 	"github.com/fgimenez/ci-health/pkg/metrics"
@@ -32,8 +33,9 @@ func Run(o *types.Options) (*stats.Results, error) {
 	}
 
 	mqHandler := mergequeue.NewHandler(ghClient)
+	coHandler := chatops.NewHandler(ghClient)
 
-	statsHandler := stats.NewHandler(mqHandler, o.Source, o.DataDays)
+	statsHandler := stats.NewHandler(mqHandler, coHandler, o.Source, o.DataDays)
 
 	results, err := statsHandler.Run()
 	if err != nil {
