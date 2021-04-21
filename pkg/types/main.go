@@ -30,9 +30,20 @@ type UnlabeledEventFragment struct {
 	RemovedLabel Label `graphql:"removedLabel:label"`
 }
 
+type IssueCommentFragment struct {
+	CreatedAt time.Time
+	BodyText  string `graphql:"bodyText:string"`
+}
+
+type CommitFragment struct {
+	PushedDate time.Time
+}
+
 type TimelineItem struct {
 	LabeledEventFragment   `graphql:"... on LabeledEvent"`
 	UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
+	IssueCommentFragment   `graphql:"... on IssueComment"`
+	CommitFragment         `graphql:"... on Commit"`
 }
 
 type TimelineItems struct {
@@ -43,5 +54,5 @@ type PullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
-	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT, COMMIT, ISSUE_COMMENT])"`
 }
