@@ -130,7 +130,9 @@ func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
 	values := []float64{}
 
 	for prNumber, retestsToMerge := range retestsToMerge {
-		values = append(values, float64(retestsToMerge))
+		value := float64(retestsToMerge)
+
+		values = append(values, value)
 
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			DataPoint{
