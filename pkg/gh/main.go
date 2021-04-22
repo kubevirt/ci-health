@@ -43,9 +43,7 @@ func NewClient(tokenPath string, source string) (*Client, error) {
 }
 
 // OpenPRsAt returns the list of open PRs at a given date.
-func (c *Client) OpenPRsAt(date time.Time) ([]struct {
-	types.PullRequestFragment `graphql:"... on PullRequest"`
-}, error) {
+func (c *Client) OpenPRsAt(date time.Time) (types.PRList, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s created:<%[2]s type:pr merged:>=%[2]s", c.source, date.Format(constants.DateFormat))
 	log.Debugf("merged open query: %q", mergedQueryString)
 	mergedQueryResult, err := c.prQuery(mergedQueryString)
@@ -67,9 +65,7 @@ func (c *Client) OpenPRsAt(date time.Time) ([]struct {
 
 // MergedPRsBetween returns a slice of PRs that were merged in the time frame
 // defined by the start and end dates given as parameters.
-func (c *Client) MergedPRsBetween(startDate, endDate time.Time) ([]struct {
-	types.PullRequestFragment `graphql:"... on PullRequest"`
-}, error) {
+func (c *Client) MergedPRsBetween(startDate, endDate time.Time) (types.PRList, error) {
 	mergedQueryString := fmt.Sprintf("repo:%s type:pr merged:%s..%s",
 		c.source,
 		startDate.Format(constants.DateFormat),
@@ -87,9 +83,7 @@ func (c *Client) MergedPRsBetween(startDate, endDate time.Time) ([]struct {
 	return mergedQueryResult, nil
 }
 
-func (c *Client) prQuery(query string) ([]struct {
-	types.PullRequestFragment `graphql:"... on PullRequest"`
-}, error) {
+func (c *Client) prQuery(query string) (types.PRList, error) {
 
 	variables := map[string]interface{}{
 		"querystring": githubv4.String(query),
@@ -97,9 +91,7 @@ func (c *Client) prQuery(query string) ([]struct {
 
 	var mergedQuery struct {
 		Search struct {
-			Nodes []struct {
-				types.PullRequestFragment `graphql:"... on PullRequest"`
-			}
+			Nodes types.PRList
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 

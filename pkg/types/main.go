@@ -62,3 +62,7 @@ type PullRequestFragment struct {
 	MergedAt      time.Time
 	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT, PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
 }
+
+type PRList []struct {
+	PullRequestFragment `graphql:"... on PullRequest"`
+}
