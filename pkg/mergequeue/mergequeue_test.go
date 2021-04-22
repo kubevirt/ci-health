@@ -30,12 +30,12 @@ var (
 
 var _ = Describe("DatePREntered", func() {
 	table.DescribeTable("should return the date a PR entered the merge queue",
-		func(pr *types.PullRequestFragment, date time.Time, expected time.Time) {
+		func(pr *types.MergeQueuePullRequestFragment, date time.Time, expected time.Time) {
 			actual := mergequeue.DatePREntered(pr, date)
 			Expect(actual).To(Equal(expected))
 		},
 		table.Entry("PR in merge queue: approved first",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -60,7 +60,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: lgtm first",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -85,7 +85,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: reentered after leaving",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -126,7 +126,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: hold and unhold",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -167,7 +167,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: work-in-progress and removed work-in-progress",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -208,7 +208,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: any do-not-merge prefixed label and removed any do-not-merge prefixed label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -249,7 +249,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: needs-rebase and rebase",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -290,7 +290,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: needs-whatever and removed needs-whatever",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -331,7 +331,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -4)),
 		table.Entry("PR in merge queue: hold after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -364,7 +364,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: work-in-progress after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -397,7 +397,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: needs-rebase after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -430,7 +430,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: needs-whatever after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -463,7 +463,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR in merge queue: handle empty events",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -510,7 +510,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			queryDate.AddDate(0, 0, -1)),
 		table.Entry("PR not in merge queue: missing all labels",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{},
 				},
@@ -518,7 +518,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: missing lgtm label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -535,7 +535,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: missing approved label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -552,7 +552,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: approved label after query date",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -577,7 +577,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: lgtm label after query date",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -602,7 +602,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: with needs-rebase label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -635,7 +635,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: with needs-whatever label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -668,7 +668,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: with hold label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -701,7 +701,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: with work-in-progress label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -734,7 +734,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: with any do-not-merge prefixed label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -767,7 +767,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: was previously in and lost lgtm label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -800,7 +800,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: was previously in and lost approved label",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -833,7 +833,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: lgtm after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -858,7 +858,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: approve after queryDate",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -883,7 +883,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: lgtm, approve and hold at the same time",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -916,7 +916,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: lgtm, approve and work-in-progress at the same time",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -949,7 +949,7 @@ var _ = Describe("DatePREntered", func() {
 			queryDate,
 			zeroDate),
 		table.Entry("PR not in merge queue: handle empty events",
-			&types.PullRequestFragment{
+			&types.MergeQueuePullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{

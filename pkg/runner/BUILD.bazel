@@ -6,6 +6,7 @@ go_library(
     importpath = "github.com/fgimenez/ci-health/pkg/runner",
     visibility = ["//visibility:public"],
     deps = [
+        "//pkg/chatops",
         "//pkg/gh",
         "//pkg/mergequeue",
         "//pkg/metrics",

@@ -18,6 +18,8 @@ date. For being ready to be merged they must:
 * Merge queue length: number of PRs in the merge queue at a given time.
 * Time to merge: for each merged PR, the time in days it took since it entered the merge
 queue for the last time until it got finally merged.
+* Retests to merge: for each merged PR, how many `/test` and `/retest` comments
+were issued after the last code push.
 
 ## Status
 This status is updated every 3 hours. The average values are calculated with
@@ -27,6 +29,7 @@ data from the previous 7 days since the execution time.
 
 ![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
+![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
 
 [Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
 

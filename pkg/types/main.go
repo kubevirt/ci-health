@@ -1,6 +1,8 @@
 package types
 
-import "time"
+import (
+	"time"
+)
 
 type Options struct {
 	Path                        string
@@ -12,6 +14,8 @@ type Options struct {
 	TimeToMergeYellowLevel      float64
 	MergeQueueLengthRedLevel    float64
 	MergeQueueLengthYellowLevel float64
+	RetestsToMergeYellowLevel   float64
+	RetestsToMergeRedLevel      float64
 }
 
 type Label struct {
@@ -28,18 +32,58 @@ type UnlabeledEventFragment struct {
 	RemovedLabel Label `graphql:"removedLabel:label"`
 }
 
+type IssueCommentFragment struct {
+	CreatedAt time.Time
+	BodyText  string
+}
+
+type Commit struct {
+	PushedDate time.Time
+}
+
+type PullRequestCommitFragment struct {
+	Commit Commit
+}
+
 type TimelineItem struct {
-	LabeledEventFragment   `graphql:"... on LabeledEvent"`
-	UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
+	LabeledEventFragment      `graphql:"... on LabeledEvent"`
+	UnlabeledEventFragment    `graphql:"... on UnlabeledEvent"`
+	IssueCommentFragment      `graphql:"... on IssueComment"`
+	PullRequestCommitFragment `graphql:"... on PullRequestCommit"`
 }
 
 type TimelineItems struct {
 	Nodes []TimelineItem
 }
 
-type PullRequestFragment struct {
+type ChatopsPullRequestFragment struct {
+	Number        int
+	CreatedAt     time.Time
+	MergedAt      time.Time
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
+}
+
+type MergeQueuePullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
 	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
+}
+
+type BarePullRequestFragment struct {
+	Number    int
+	CreatedAt time.Time
+	MergedAt  time.Time
+}
+
+type BarePRList []struct {
+	BarePullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type MergeQueuePRList []struct {
+	MergeQueuePullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type ChatopsPRList []struct {
+	ChatopsPullRequestFragment `graphql:"... on PullRequest"`
 }

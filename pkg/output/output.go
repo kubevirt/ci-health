@@ -24,6 +24,7 @@ type Options struct {
 	Source                 string
 	TimeToMergeLevels      *Levels
 	MergeQueueLengthLevels *Levels
+	RetestsToMergeLevels   *Levels
 }
 
 type Handler struct {
@@ -74,8 +75,10 @@ func (b *Handler) writeJSON(results *stats.Results) error {
 func (b *Handler) writeMetrics(results *stats.Results) error {
 	b.metricsHandler.SetAvgMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Avg)
 	b.metricsHandler.SetAvgTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Avg)
+	b.metricsHandler.SetAvgRetestsToMerge(results.Source, results.Data[constants.RetestsToMergeName].Avg)
 	b.metricsHandler.SetStdMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Std)
 	b.metricsHandler.SetStdTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Std)
+	b.metricsHandler.SetStdRetestsToMerge(results.Source, results.Data[constants.RetestsToMergeName].Std)
 
 	m := b.metricsHandler.String()
 	log.Debugf("Metrics: %s", m)
@@ -107,6 +110,13 @@ func (b *Handler) writeBadges(results *stats.Results) error {
 		filepath.Join(basePath, constants.MergeQueueLengthBadgeFileName),
 		results.Data[constants.MergeQueueLengthName],
 		b.options.MergeQueueLengthLevels,
+	)
+
+	err = b.writeBadge(
+		constants.RetestsToMergeBadgeName,
+		filepath.Join(basePath, constants.RetestsToMergeBadgeFileName),
+		results.Data[constants.RetestsToMergeName],
+		b.options.RetestsToMergeLevels,
 	)
 
 	return err

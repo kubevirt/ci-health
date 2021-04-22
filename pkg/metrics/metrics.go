@@ -18,6 +18,8 @@ type Handler struct {
 	stdMergeQueueLength *prometheus.GaugeVec
 	avgTimeToMerge      *prometheus.GaugeVec
 	stdTimeToMerge      *prometheus.GaugeVec
+	avgRetestsToMerge   *prometheus.GaugeVec
+	stdRetestsToMerge   *prometheus.GaugeVec
 }
 
 func NewHandler() *Handler {
@@ -47,11 +49,26 @@ func NewHandler() *Handler {
 		[]string{"source"},
 	)
 
+	avgRetestsToMerge := promauto.NewGaugeVec(prometheus.GaugeOpts{
+		Name: constants.AvgRetestsToMergeMetricName,
+		Help: "The average retests it took to merge PRs",
+	},
+		[]string{"source"},
+	)
+	stdRetestsToMerge := promauto.NewGaugeVec(prometheus.GaugeOpts{
+		Name: constants.StdRetestsToMergeMetricName,
+		Help: "The standard deviation of the retests it took to merge PRs",
+	},
+		[]string{"source"},
+	)
+
 	return &Handler{
 		avgMergeQueueLenght,
 		stdMergeQueueLenght,
 		avgTimeToMerge,
 		stdTimeToMerge,
+		avgRetestsToMerge,
+		stdRetestsToMerge,
 	}
 }
 
@@ -63,12 +80,20 @@ func (h *Handler) SetAvgTimeToMerge(source string, value float64) {
 	h.avgTimeToMerge.With(prometheus.Labels{"source": source}).Set(value)
 }
 
+func (h *Handler) SetAvgRetestsToMerge(source string, value float64) {
+	h.avgRetestsToMerge.With(prometheus.Labels{"source": source}).Set(value)
+}
+
 func (h *Handler) SetStdMergeQueueLength(source string, value float64) {
 	h.stdMergeQueueLength.With(prometheus.Labels{"source": source}).Set(value)
 }
 
 func (h *Handler) SetStdTimeToMerge(source string, value float64) {
 	h.stdTimeToMerge.With(prometheus.Labels{"source": source}).Set(value)
+}
+
+func (h *Handler) SetStdRetestsToMerge(source string, value float64) {
+	h.stdRetestsToMerge.With(prometheus.Labels{"source": source}).Set(value)
 }
 
 func (h *Handler) String() string {

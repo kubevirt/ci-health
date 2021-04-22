@@ -55,9 +55,13 @@ var _ = Describe("ci-health stats", func() {
 			Expect(results.DataDays).To(Equal(dataDays))
 			Expect(results.Source).To(Equal(source))
 
-			Expect(results.Data).To(HaveLen(2))
+			Expect(results.Data).To(HaveLen(3))
 
-			names := []string{constants.MergeQueueLengthName, constants.TimeToMergeName}
+			names := []string{
+				constants.MergeQueueLengthName,
+				constants.TimeToMergeName,
+				constants.RetestsToMergeName,
+			}
 
 			for _, name := range names {
 				metricResults := results.Data[name]
@@ -83,6 +87,7 @@ var _ = Describe("ci-health stats", func() {
 		badgeFileNames := []string{
 			filepath.Join(sourceArtifactsDir, constants.MergeQueueLengthBadgeFileName),
 			filepath.Join(sourceArtifactsDir, constants.TimeToMergeBadgeFileName),
+			filepath.Join(sourceArtifactsDir, constants.RetestsToMergeBadgeFileName),
 		}
 		for _, badgeFileName := range badgeFileNames {
 			_, err := os.Stat(badgeFileName)
@@ -109,12 +114,16 @@ var _ = Describe("ci-health stats", func() {
 		expectedMetricsStrings := []string{
 			fmt.Sprintf("# HELP %s", constants.AvgMergeQueueLengthMetricName),
 			fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName),
+			fmt.Sprintf("# HELP %s", constants.AvgRetestsToMergeMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgMergeQueueLengthMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgTimeToMergeMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgRetestsToMergeMetricName),
 			fmt.Sprintf("# HELP %s", constants.StdMergeQueueLengthMetricName),
 			fmt.Sprintf("# HELP %s", constants.StdTimeToMergeMetricName),
+			fmt.Sprintf("# HELP %s", constants.StdRetestsToMergeMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdMergeQueueLengthMetricName),
 			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdTimeToMergeMetricName),
+			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdRetestsToMergeMetricName),
 		}
 		for _, expected := range expectedMetricsStrings {
 			Expect(metricsData).To(ContainSubstring(expected))
