@@ -31,7 +31,7 @@ func NewHandler(client *gh.Client) *Handler {
 // each merged PR in the time frame between the given start and end dates.
 func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[int]int, error) {
 
-	items, err := co.client.MergedPRsBetween(startDate, endDate)
+	items, err := co.client.ChatopsMergedPRsBetween(startDate, endDate)
 	if err != nil {
 		return nil, err
 	}
@@ -39,14 +39,14 @@ func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[int]int, er
 	result := map[int]int{}
 	for _, pr := range items {
 		log.Debugf("RetestsToMerge: calculating date of last push for PR num %d merged at %s", pr.Number, pr.MergedAt)
-		result[pr.Number] = RetestComments(&pr.PullRequestFragment)
+		result[pr.Number] = RetestComments(&pr.ChatopsPullRequestFragment)
 	}
 	return result, nil
 }
 
 // RetestComments returns the number of /retest or /test comments a PR received
-// after the given date.
-func RetestComments(pr *types.PullRequestFragment) int {
+// after the last push.
+func RetestComments(pr *types.ChatopsPullRequestFragment) int {
 	var total int
 	lastPush := determineLastPush(pr)
 
@@ -58,7 +58,7 @@ func RetestComments(pr *types.PullRequestFragment) int {
 	return total
 }
 
-func determineLastPush(pr *types.PullRequestFragment) time.Time {
+func determineLastPush(pr *types.ChatopsPullRequestFragment) time.Time {
 	lastPush := zeroDate
 
 	for _, timelineItem := range pr.TimelineItems.Nodes {

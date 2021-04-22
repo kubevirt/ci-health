@@ -29,12 +29,12 @@ var (
 
 var _ = Describe("RetestComments", func() {
 	table.DescribeTable("should return the number of retest comments for a PR",
-		func(pr *types.PullRequestFragment, expected int) {
+		func(pr *types.ChatopsPullRequestFragment, expected int) {
 			actual := chatops.RetestComments(pr)
 			Expect(actual).To(Equal(expected))
 		},
 		table.Entry("One retest call after last commit",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -55,7 +55,7 @@ var _ = Describe("RetestComments", func() {
 			},
 			1),
 		table.Entry("Multiple retest calls after last commit",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -88,7 +88,7 @@ var _ = Describe("RetestComments", func() {
 			},
 			3),
 		table.Entry("Retest calls before last commit are ignored",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -121,7 +121,7 @@ var _ = Describe("RetestComments", func() {
 			},
 			2),
 		table.Entry("Without last commit all retests are counted",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -147,7 +147,7 @@ var _ = Describe("RetestComments", func() {
 			},
 			3),
 		table.Entry("Retest in the body of the comment are ignored",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -174,7 +174,7 @@ var _ = Describe("RetestComments", func() {
 			},
 			1),
 		table.Entry("Additional lines in retest comment body are allowed",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
@@ -199,7 +199,7 @@ even more lines
 			},
 			1),
 		table.Entry("Handles both retest commands formats",
-			&types.PullRequestFragment{
+			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{

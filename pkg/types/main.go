@@ -56,13 +56,34 @@ type TimelineItems struct {
 	Nodes []TimelineItem
 }
 
-type PullRequestFragment struct {
+type ChatopsPullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
-	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT, PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
 }
 
-type PRList []struct {
-	PullRequestFragment `graphql:"... on PullRequest"`
+type MergeQueuePullRequestFragment struct {
+	Number        int
+	CreatedAt     time.Time
+	MergedAt      time.Time
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT])"`
+}
+
+type BarePullRequestFragment struct {
+	Number    int
+	CreatedAt time.Time
+	MergedAt  time.Time
+}
+
+type BarePRList []struct {
+	BarePullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type MergeQueuePRList []struct {
+	MergeQueuePullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type ChatopsPRList []struct {
+	ChatopsPullRequestFragment `graphql:"... on PullRequest"`
 }

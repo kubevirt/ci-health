@@ -46,7 +46,7 @@ func (mq *Handler) LengthAt(date time.Time) (int, []int, error) {
 	prs := []int{}
 	for _, pr := range prList {
 		log.Debugf("LengthAt: calculating mq date entered for PR num %d from %s", pr.Number, date)
-		if DatePREntered(&pr.PullRequestFragment, date) != zeroDate {
+		if DatePREntered(&pr.MergeQueuePullRequestFragment, date) != zeroDate {
 			result++
 			prs = append(prs, pr.Number)
 		}
@@ -66,7 +66,7 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Dura
 	result := map[int]time.Duration{}
 	for _, pr := range prs {
 		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", pr.Number, pr.MergedAt)
-		mqStart := DatePREntered(&pr.PullRequestFragment, pr.MergedAt)
+		mqStart := DatePREntered(&pr.MergeQueuePullRequestFragment, pr.MergedAt)
 		if mqStart.Equal(zeroDate) {
 			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", pr.Number)
 		} else {
@@ -79,7 +79,7 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Dura
 
 // DatePREntered returns when a PR entered the merge queue before a
 // given date, zero value date if it was not in the merge queue by that date.
-func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
+func DatePREntered(pr *types.MergeQueuePullRequestFragment, date time.Time) time.Time {
 	labelsAdded, labelsRemoved := createMapsFromEvents(pr, date)
 
 	if !hasAllLabelsRequiredForMerge(labelsAdded, labelsRemoved) {
@@ -99,7 +99,7 @@ func DatePREntered(pr *types.PullRequestFragment, date time.Time) time.Time {
 	return requiredForMergeLabelAddition
 }
 
-func createMapsFromEvents(pr *types.PullRequestFragment, date time.Time) (labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) {
+func createMapsFromEvents(pr *types.MergeQueuePullRequestFragment, date time.Time) (labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) {
 	labelsAdded = make(map[string]time.Time)
 	labelsRemoved = make(map[string]time.Time)
 
