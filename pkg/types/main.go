@@ -1,6 +1,8 @@
 package types
 
-import "time"
+import (
+	"time"
+)
 
 type Options struct {
 	Path                        string
@@ -32,18 +34,22 @@ type UnlabeledEventFragment struct {
 
 type IssueCommentFragment struct {
 	CreatedAt time.Time
-	BodyText  string `graphql:"bodyText:string"`
+	BodyText  string
 }
 
-type CommitFragment struct {
+type Commit struct {
 	PushedDate time.Time
 }
 
+type PullRequestCommitFragment struct {
+	Commit Commit
+}
+
 type TimelineItem struct {
-	LabeledEventFragment   `graphql:"... on LabeledEvent"`
-	UnlabeledEventFragment `graphql:"... on UnlabeledEvent"`
-	IssueCommentFragment   `graphql:"... on IssueComment"`
-	CommitFragment         `graphql:"... on Commit"`
+	LabeledEventFragment      `graphql:"... on LabeledEvent"`
+	UnlabeledEventFragment    `graphql:"... on UnlabeledEvent"`
+	IssueCommentFragment      `graphql:"... on IssueComment"`
+	PullRequestCommitFragment `graphql:"... on PullRequestCommit"`
 }
 
 type TimelineItems struct {
@@ -54,5 +60,5 @@ type PullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
-	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT, COMMIT, ISSUE_COMMENT])"`
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[LABELED_EVENT, UNLABELED_EVENT, PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
 }
