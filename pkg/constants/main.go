@@ -22,8 +22,8 @@ const (
 	DefaultTimeToMergeRedLevel         = 3.0
 	DefaultMergeQueueLengthYellowLevel = 8.0
 	DefaultMergeQueueLengthRedLevel    = 15.0
-	DefaultRetestsToMergeYellowLevel   = 2.0
-	DefaultRetestsToMergeRedLevel      = 4.0
+	DefaultRetestsToMergeYellowLevel   = 3.0
+	DefaultRetestsToMergeRedLevel      = 6.0
 
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
