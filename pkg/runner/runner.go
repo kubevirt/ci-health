@@ -16,7 +16,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func RunStats(o *types.StatsOptions) (*stats.Results, error) {
+func Run(o *types.Options) (*stats.Results, error) {
 	if o.LogLevel == "debug" {
 		log.SetLevel(log.DebugLevel)
 	} else {

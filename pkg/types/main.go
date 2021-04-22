@@ -1,25 +1,58 @@
 package types
 
 import (
+	"errors"
 	"time"
 )
 
-type BaseOptions struct {
-	Path      string
-	TokenPath string
-	Source    string
-	DataDays  int
-	LogLevel  string
+const (
+	StatsAction Action = "stats"
+	BatchAction        = "batch"
+
+	MergeQueueLengthMetricType MetricType = "merge-queue-length"
+	TimeToMergeMetricType                 = "time-to-merge"
+	RetestsToMergeMetricType              = "retests-to-merge"
+)
+
+type MetricType string
+
+func (mt MetricType) IsValid() error {
+	switch mt {
+	case MergeQueueLengthMetricType, TimeToMergeMetricType, RetestsToMergeMetricType:
+		return nil
+	}
+	return errors.New("Invalid MetricType value")
 }
 
-type StatsOptions struct {
-	BaseOptions
+type Action string
+
+func (a Action) IsValid() error {
+	switch a {
+	case StatsAction, BatchAction:
+		return nil
+	}
+	return errors.New("Invalid Action value")
+}
+
+type Options struct {
+	Path            string
+	TokenPath       string
+	Source          string
+	DataDays        int
+	LogLevel        string
+	RequestedAction Action
+
+	// stats options
 	TimeToMergeRedLevel         float64
 	TimeToMergeYellowLevel      float64
 	MergeQueueLengthRedLevel    float64
 	MergeQueueLengthYellowLevel float64
 	RetestsToMergeYellowLevel   float64
 	RetestsToMergeRedLevel      float64
+
+	// batch options
+	TargetMetric MetricType
+	StartDate    time.Time
 }
 
 type Label struct {
