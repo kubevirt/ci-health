@@ -38,8 +38,10 @@ var _ = Describe("RetestComments", func() {
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -2),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -2),
+								},
 							},
 						},
 						{
@@ -57,8 +59,10 @@ var _ = Describe("RetestComments", func() {
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -5),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -5),
+								},
 							},
 						},
 						{
@@ -94,8 +98,10 @@ var _ = Describe("RetestComments", func() {
 							},
 						},
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -3),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -3),
+								},
 							},
 						},
 						{
@@ -145,8 +151,10 @@ var _ = Describe("RetestComments", func() {
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -3),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -3),
+								},
 							},
 						},
 						{
@@ -170,8 +178,10 @@ var _ = Describe("RetestComments", func() {
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -3),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -3),
+								},
 							},
 						},
 						{
@@ -193,8 +203,10 @@ even more lines
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
 						{
-							CommitFragment: types.CommitFragment{
-								PushedDate: queryDate.AddDate(0, 0, -3),
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									PushedDate: queryDate.AddDate(0, 0, -3),
+								},
 							},
 						},
 						{

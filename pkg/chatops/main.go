@@ -63,8 +63,8 @@ func determineLastPush(pr *types.PullRequestFragment) time.Time {
 
 	for _, timelineItem := range pr.TimelineItems.Nodes {
 		if isCommit(timelineItem) {
-			if timelineItem.CommitFragment.PushedDate.After(lastPush) {
-				lastPush = timelineItem.CommitFragment.PushedDate
+			if timelineItem.PullRequestCommitFragment.Commit.PushedDate.After(lastPush) {
+				lastPush = timelineItem.PullRequestCommitFragment.Commit.PushedDate
 			}
 		}
 	}
@@ -72,7 +72,7 @@ func determineLastPush(pr *types.PullRequestFragment) time.Time {
 }
 
 func isCommit(timelineItem types.TimelineItem) bool {
-	return timelineItem.CommitFragment != types.CommitFragment{}
+	return timelineItem.PullRequestCommitFragment != types.PullRequestCommitFragment{}
 }
 
 func isRetestCommentAfterLastPush(timelineItem types.TimelineItem, lastPush time.Time) bool {
