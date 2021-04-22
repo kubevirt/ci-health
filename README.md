@@ -29,7 +29,7 @@ data from the previous 7 days since the execution time.
 
 ![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
-![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
+![avg-retests-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
 
 [Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
 
