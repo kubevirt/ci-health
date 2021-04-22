@@ -4,12 +4,16 @@ import (
 	"time"
 )
 
-type Options struct {
-	Path                        string
-	TokenPath                   string
-	Source                      string
-	DataDays                    int
-	LogLevel                    string
+type BaseOptions struct {
+	Path      string
+	TokenPath string
+	Source    string
+	DataDays  int
+	LogLevel  string
+}
+
+type StatsOptions struct {
+	BaseOptions
 	TimeToMergeRedLevel         float64
 	TimeToMergeYellowLevel      float64
 	MergeQueueLengthRedLevel    float64

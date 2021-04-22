@@ -10,12 +10,14 @@ import (
 )
 
 func main() {
-	opt := &types.Options{
-		Path:                        constants.DefaultPath,
-		TokenPath:                   constants.DefaultTokenPath,
-		Source:                      constants.DefaultSource,
-		DataDays:                    constants.DefaultDataDays,
-		LogLevel:                    constants.DefaultLogLevel,
+	opt := &types.StatsOptions{
+		BaseOptions: types.BaseOptions{
+			Path:      constants.DefaultPath,
+			TokenPath: constants.DefaultTokenPath,
+			Source:    constants.DefaultSource,
+			DataDays:  constants.DefaultDataDays,
+			LogLevel:  constants.DefaultLogLevel,
+		},
 		TimeToMergeYellowLevel:      constants.DefaultTimeToMergeYellowLevel,
 		TimeToMergeRedLevel:         constants.DefaultTimeToMergeRedLevel,
 		MergeQueueLengthYellowLevel: constants.DefaultMergeQueueLengthYellowLevel,
@@ -26,7 +28,7 @@ func main() {
 
 	cmd := &cobra.Command{
 		Run: func(cmd *cobra.Command, arguments []string) {
-			_, err := runner.Run(opt)
+			_, err := runner.RunStats(opt)
 			if err != nil {
 				log.Fatalf("error: %v", err)
 			}
