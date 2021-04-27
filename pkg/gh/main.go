@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"strings"
 	"time"
 
 	"github.com/shurcooL/githubv4"
@@ -29,7 +30,7 @@ func NewClient(tokenPath string, source string) (*Client, error) {
 		return nil, err
 	}
 	src := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: string(token)},
+		&oauth2.Token{AccessToken: strings.TrimSpace(string(token))},
 	)
 	httpClient := oauth2.NewClient(context.Background(), src)
 
