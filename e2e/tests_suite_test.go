@@ -44,6 +44,8 @@ var _ = Describe("ci-health stats", func() {
 		Expect(err).ToNot(HaveOccurred())
 
 		opt := &types.Options{
+			Action: types.StatsAction,
+
 			Path:      artifactsDir,
 			TokenPath: tokenPath,
 			Source:    source,
