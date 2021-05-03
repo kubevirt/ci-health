@@ -35,6 +35,8 @@ func (a Action) IsValid() error {
 }
 
 type Options struct {
+	Action
+
 	Path            string
 	TokenPath       string
 	Source          string
@@ -52,7 +54,7 @@ type Options struct {
 
 	// batch options
 	TargetMetric MetricType
-	StartDate    time.Time
+	StartDate    string
 }
 
 type Label struct {
