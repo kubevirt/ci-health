@@ -32,6 +32,17 @@ func Run(o *types.Options) (*stats.Results, error) {
 		return nil, err
 	}
 
+	switch o.Action {
+	case types.StatsAction:
+		return statsRun(o, ghClient)
+	case types.BatchAction:
+		return batchRun(o, ghClient)
+	default:
+		return nil, fmt.Errorf("Unknown action: %q", o.Action)
+	}
+}
+
+func statsRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 	mqHandler := mergequeue.NewHandler(ghClient)
 	coHandler := chatops.NewHandler(ghClient)
 
@@ -81,6 +92,10 @@ func Run(o *types.Options) (*stats.Results, error) {
 	}
 
 	return results, nil
+}
+
+func batchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+	return nil, nil
 }
 
 func setLogLevel(logLevel string) {
