@@ -11,6 +11,8 @@ import (
 
 func main() {
 	opt := &types.Options{
+		Action: types.StatsAction,
+
 		Path:                        constants.DefaultPath,
 		TokenPath:                   constants.DefaultTokenPath,
 		Source:                      constants.DefaultSource,
