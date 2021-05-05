@@ -19,6 +19,7 @@ func main() {
 		DataDays:  constants.DefaultDataDays,
 		LogLevel:  constants.DefaultLogLevel,
 
+		Mode:         types.FetchMode,
 		TargetMetric: types.RetestsToMergeMetricType,
 		StartDate:    constants.DefaultBatchStartDate,
 	}
@@ -35,6 +36,7 @@ func main() {
 	flag := cmd.Flags()
 
 	tm := string(opt.TargetMetric)
+	mode := string(opt.Mode)
 
 	flag.StringVar(&opt.Path, "path", opt.Path, "The directory to save results to.")
 	flag.StringVar(&opt.TokenPath, "gh-token", opt.TokenPath, "OAuth2 token to interact with GitHub API.")
@@ -44,6 +46,7 @@ func main() {
 
 	flag.StringVar(&tm, "target-metric", tm, "Which metric to generate.")
 	flag.StringVar(&opt.StartDate, "start-date", opt.StartDate, "From which do we start querying data in YYYY-MM-DD format, default .")
+	flag.StringVar(&mode, "mode", mode, "Batch mode, valida values are fetch (to download data) and plot (to generate graphs).")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)

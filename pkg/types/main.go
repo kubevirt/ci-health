@@ -9,6 +9,9 @@ const (
 	StatsAction Action = "stats"
 	BatchAction        = "batch"
 
+	FetchMode = "fetch"
+	PlotMode  = "plot"
+
 	MergeQueueLengthMetricType MetricType = "merge-queue-length"
 	TimeToMergeMetricType                 = "time-to-merge"
 	RetestsToMergeMetricType              = "retests-to-merge"
@@ -34,6 +37,16 @@ func (a Action) IsValid() error {
 	return errors.New("Invalid Action value")
 }
 
+type Mode string
+
+func (m Mode) IsValid() error {
+	switch m {
+	case FetchMode, PlotMode:
+		return nil
+	}
+	return errors.New("Invalid BatchMode value")
+}
+
 type Options struct {
 	Action
 
@@ -53,6 +66,7 @@ type Options struct {
 	RetestsToMergeRedLevel      float64
 
 	// batch options
+	Mode
 	TargetMetric MetricType
 	StartDate    string
 }
