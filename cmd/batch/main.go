@@ -45,8 +45,8 @@ func main() {
 	flag.StringVar(&opt.LogLevel, "log-level", opt.LogLevel, "Log level, valid values are debug and info.")
 
 	flag.StringVar(&tm, "target-metric", tm, "Which metric to generate.")
-	flag.StringVar(&opt.StartDate, "start-date", opt.StartDate, "From which do we start querying data in YYYY-MM-DD format, default .")
-	flag.StringVar(&mode, "mode", mode, "Batch mode, valida values are fetch (to download data) and plot (to generate graphs).")
+	flag.StringVar(&opt.StartDate, "start-date", opt.StartDate, "From which do we start querying data in YYYY-MM-DD format, default "+opt.StartDate)
+	flag.StringVar(&mode, "mode", mode, "Batch mode, valid values are fetch (to download data) and plot (to generate graphs).")
 
 	if err := cmd.Execute(); err != nil {
 		log.Fatalf("error: %v", err)
