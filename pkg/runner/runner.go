@@ -95,6 +95,21 @@ func statsRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 }
 
 func batchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+	switch o.Mode {
+	case types.FetchMode:
+		return batchFetchRun(o, ghClient)
+	case types.PlotMode:
+		return batchPlotRun(o, ghClient)
+	default:
+		return nil, fmt.Errorf("Unknown batch mode: %q", o.Mode)
+	}
+}
+
+func batchFetchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+	return nil, nil
+}
+
+func batchPlotRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 	return nil, nil
 }
 
