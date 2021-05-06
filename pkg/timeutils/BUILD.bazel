@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "timeutils",
+    srcs = ["main.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/timeutils",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "timeutils_test",
+    srcs = ["timeutils_test.go"],
+    embed = [":timeutils"],
+    deps = [
+        "@com_github_onsi_ginkgo//:ginkgo",
+        "@com_github_onsi_ginkgo//extensions/table",
+        "@com_github_onsi_gomega//:gomega",
+    ],
+)
