@@ -12,6 +12,7 @@ go_library(
         "//pkg/metrics",
         "//pkg/output",
         "//pkg/stats",
+        "//pkg/timeutils",
         "//pkg/types",
         "@com_github_sirupsen_logrus//:logrus",
     ],

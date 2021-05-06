@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 
@@ -13,6 +14,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/metrics"
 	"github.com/fgimenez/ci-health/pkg/output"
 	"github.com/fgimenez/ci-health/pkg/stats"
+	"github.com/fgimenez/ci-health/pkg/timeutils"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -106,10 +108,32 @@ func batchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 }
 
 func batchFetchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+	// find closest monday to o.StartDate
+	currentStartingDate, err := timeutils.ClosestMonday(o.StartDate)
+	if err != nil {
+		return nil, err
+	}
+
+	// for each monday since closest monday to o.StartDate to current date
+	now := time.Now()
+	for {
+		if now.Before(currentStartingDate) {
+			break
+		}
+		// calculate results for the week
+
+		// write results file
+
+		currentStartingDate = currentStartingDate.AddDate(0, 0, o.DataDays)
+	}
 	return nil, nil
 }
 
 func batchPlotRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+	// read batch fetch results since o.StartDate
+
+	// generate gnuplot files using results
+
 	return nil, nil
 }
 
