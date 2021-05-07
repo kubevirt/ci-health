@@ -48,7 +48,21 @@ func statsRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 	mqHandler := mergequeue.NewHandler(ghClient)
 	coHandler := chatops.NewHandler(ghClient)
 
-	statsHandler := stats.NewHandler(mqHandler, coHandler, o.Source, o.DataDays)
+	options := &stats.HandlerOptions{
+		Mq:       mqHandler,
+		Co:       coHandler,
+		Source:   o.Source,
+		DataDays: o.DataDays,
+		EndDate:  time.Now(),
+
+		TargetMetrics: []types.Metric{
+			types.MergeQueueLengthMetric,
+			types.TimeToMergeMetric,
+			types.RetestsToMergeMetric,
+		},
+	}
+
+	statsHandler := stats.NewHandler(options)
 
 	results, err := statsHandler.Run()
 	if err != nil {
