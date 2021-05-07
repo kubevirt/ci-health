@@ -7,21 +7,21 @@ import (
 
 const (
 	StatsAction Action = "stats"
-	BatchAction        = "batch"
+	BatchAction Action = "batch"
 
 	FetchMode = "fetch"
 	PlotMode  = "plot"
 
-	MergeQueueLengthMetricType MetricType = "merge-queue-length"
-	TimeToMergeMetricType                 = "time-to-merge"
-	RetestsToMergeMetricType              = "retests-to-merge"
+	MergeQueueLengthMetric Metric = "merge-queue-length"
+	TimeToMergeMetric      Metric = "time-to-merge"
+	RetestsToMergeMetric   Metric = "retests-to-merge"
 )
 
-type MetricType string
+type Metric string
 
-func (mt MetricType) IsValid() error {
-	switch mt {
-	case MergeQueueLengthMetricType, TimeToMergeMetricType, RetestsToMergeMetricType:
+func (m Metric) IsValid() error {
+	switch m {
+	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric:
 		return nil
 	}
 	return errors.New("Invalid MetricType value")
@@ -67,7 +67,7 @@ type Options struct {
 
 	// batch options
 	Mode
-	TargetMetric MetricType
+	TargetMetric Metric
 	StartDate    string
 }
 
