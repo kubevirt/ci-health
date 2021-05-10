@@ -150,21 +150,23 @@ func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *c
 		if now.Before(currentEndDate) {
 			break
 		}
-		// calculate results for the week
-		statsOptions.EndDate = currentEndDate
-		statsHandler := stats.NewHandler(statsOptions)
-
-		results, err := statsHandler.Run()
-		if err != nil {
-			return nil, err
-		}
 
 		// write results file
-		outputOptions.Path = batchDataPath(o.Path, currentEndDate)
-		outputHandler := output.NewHandler(outputOptions, nil)
-		err = outputHandler.WriteJSON(results)
-		if err != nil {
-			return nil, err
+		outputOptions.Path = batchDataPath(o.Path, o.Source, string(o.TargetMetric), currentEndDate)
+		if _, e := os.Stat(outputOptions.Path); os.IsNotExist(e) {
+			// calculate results for the week
+			statsOptions.EndDate = currentEndDate
+			statsHandler := stats.NewHandler(statsOptions)
+
+			results, err := statsHandler.Run()
+			if err != nil {
+				return nil, err
+			}
+			outputHandler := output.NewHandler(outputOptions, nil)
+			err = outputHandler.WriteJSON(results)
+			if err != nil {
+				return nil, err
+			}
 		}
 
 		// bump date to next monday
@@ -189,11 +191,13 @@ func setLogLevel(logLevel string) {
 	}
 }
 
-func batchDataPath(base string, date time.Time) string {
+func batchDataPath(base, source, metric string, date time.Time) string {
 	return path.Join(
 		base,
+		source,
 		constants.DefaultBatchBaseOutputPath,
 		constants.DefaultBatchDataOutputPath,
+		metric,
 		date.Format(constants.BatchDataDateFormat),
 	)
 }
