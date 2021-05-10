@@ -16,7 +16,6 @@ func main() {
 		Path:      constants.DefaultPath,
 		TokenPath: constants.DefaultTokenPath,
 		Source:    constants.DefaultSource,
-		DataDays:  constants.DefaultDataDays,
 		LogLevel:  constants.DefaultLogLevel,
 
 		Mode:         types.FetchMode,
@@ -41,7 +40,6 @@ func main() {
 	flag.StringVar(&opt.Path, "path", opt.Path, "The directory to save results to.")
 	flag.StringVar(&opt.TokenPath, "gh-token", opt.TokenPath, "OAuth2 token to interact with GitHub API.")
 	flag.StringVar(&opt.Source, "source", opt.Source, "GitHub repo from where retrieve the data.")
-	flag.IntVar(&opt.DataDays, "data-days", opt.DataDays, "Number of days to retrieve data from.")
 	flag.StringVar(&opt.LogLevel, "log-level", opt.LogLevel, "Log level, valid values are debug and info.")
 
 	flag.StringVar(&tm, "target-metric", tm, "Which metric to generate.")
