@@ -20,7 +20,7 @@ func main() {
 		LogLevel:  constants.DefaultLogLevel,
 
 		Mode:         types.FetchMode,
-		TargetMetric: types.RetestsToMergeMetricType,
+		TargetMetric: types.RetestsToMergeMetric,
 		StartDate:    constants.DefaultBatchStartDate,
 	}
 
