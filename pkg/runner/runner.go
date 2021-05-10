@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"path"
 	"time"
 
 	log "github.com/sirupsen/logrus"
 
 	"github.com/fgimenez/ci-health/pkg/chatops"
+	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
 	"github.com/fgimenez/ci-health/pkg/metrics"
@@ -34,20 +36,20 @@ func Run(o *types.Options) (*stats.Results, error) {
 		return nil, err
 	}
 
+	mqHandler := mergequeue.NewHandler(ghClient)
+	coHandler := chatops.NewHandler(ghClient)
+
 	switch o.Action {
 	case types.StatsAction:
-		return statsRun(o, ghClient)
+		return statsRun(o, mqHandler, coHandler)
 	case types.BatchAction:
-		return batchRun(o, ghClient)
+		return batchRun(o, mqHandler, coHandler)
 	default:
 		return nil, fmt.Errorf("Unknown action: %q", o.Action)
 	}
 }
 
-func statsRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
-	mqHandler := mergequeue.NewHandler(ghClient)
-	coHandler := chatops.NewHandler(ghClient)
-
+func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
 	options := &stats.HandlerOptions{
 		Mq:       mqHandler,
 		Co:       coHandler,
@@ -110,40 +112,68 @@ func statsRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
 	return results, nil
 }
 
-func batchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
 	switch o.Mode {
 	case types.FetchMode:
-		return batchFetchRun(o, ghClient)
+		return batchFetchRun(o, mqHandler, coHandler)
 	case types.PlotMode:
-		return batchPlotRun(o, ghClient)
+		return batchPlotRun(o, mqHandler, coHandler)
 	default:
 		return nil, fmt.Errorf("Unknown batch mode: %q", o.Mode)
 	}
 }
 
-func batchFetchRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
 	// find closest monday to o.StartDate
-	currentStartingDate, err := timeutils.ClosestMonday(o.StartDate)
+	currentEndDate, err := timeutils.ClosestMonday(o.StartDate)
 	if err != nil {
 		return nil, err
 	}
 
 	// for each monday since closest monday to o.StartDate to current date
 	now := time.Now()
+
+	statsOptions := &stats.HandlerOptions{
+		Mq:       mqHandler,
+		Co:       coHandler,
+		Source:   o.Source,
+		DataDays: constants.DefaultDataDays,
+
+		TargetMetrics: []types.Metric{
+			o.TargetMetric,
+		},
+	}
+
+	outputOptions := &output.Options{}
+
 	for {
-		if now.Before(currentStartingDate) {
+		if now.Before(currentEndDate) {
 			break
 		}
 		// calculate results for the week
+		statsOptions.EndDate = currentEndDate
+		statsHandler := stats.NewHandler(statsOptions)
+
+		results, err := statsHandler.Run()
+		if err != nil {
+			return nil, err
+		}
 
 		// write results file
+		outputOptions.Path = batchDataPath(o.Path, currentEndDate)
+		outputHandler := output.NewHandler(outputOptions, nil)
+		err = outputHandler.WriteJSON(results)
+		if err != nil {
+			return nil, err
+		}
 
-		currentStartingDate = currentStartingDate.AddDate(0, 0, o.DataDays)
+		// bump date to next monday
+		currentEndDate = currentEndDate.AddDate(0, 0, 7)
 	}
 	return nil, nil
 }
 
-func batchPlotRun(o *types.Options, ghClient *gh.Client) (*stats.Results, error) {
+func batchPlotRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
 	// read batch fetch results since o.StartDate
 
 	// generate gnuplot files using results
@@ -157,4 +187,13 @@ func setLogLevel(logLevel string) {
 	} else {
 		log.SetLevel(log.InfoLevel)
 	}
+}
+
+func batchDataPath(base string, date time.Time) string {
+	return path.Join(
+		base,
+		constants.DefaultBatchBaseOutputPath,
+		constants.DefaultBatchDataOutputPath,
+		date.Format(constants.BatchDataDateFormat),
+	)
 }
