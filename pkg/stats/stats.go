@@ -75,7 +75,10 @@ func (h *Handler) Run() (*Results, error) {
 }
 
 func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
@@ -106,7 +109,10 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
@@ -141,7 +147,10 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
