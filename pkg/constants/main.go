@@ -1,7 +1,8 @@
 package constants
 
 const (
-	DateFormat = "2006-01-02T15:04:05Z"
+	DateFormat          = "2006-01-02T15:04:05Z"
+	BatchDataDateFormat = "2006-01-02"
 
 	LGTMLabel     = "lgtm"
 	ApprovedLabel = "approved"
@@ -43,6 +44,9 @@ const (
 	StdMergeQueueLengthMetricName = "cihealth_std_merge_queue_lenght_total"
 	StdTimeToMergeMetricName      = "cihealth_std_time_to_merge_days"
 	StdRetestsToMergeMetricName   = "cihealth_std_retests_to_merge_total"
+
+	DefaultBatchBaseOutputPath = "batch"
+	DefaultBatchDataOutputPath = "data"
 )
 
 func DoNotMergeLabels() []string {
