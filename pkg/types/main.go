@@ -2,7 +2,10 @@ package types
 
 import (
 	"errors"
+	"image/color"
 	"time"
+
+	"github.com/fgimenez/ci-health/pkg/constants"
 )
 
 const (
@@ -25,6 +28,19 @@ func (m Metric) IsValid() error {
 		return nil
 	}
 	return errors.New("Invalid MetricType value")
+}
+
+func (m Metric) ResultsName() string {
+	switch m {
+	case MergeQueueLengthMetric:
+		return constants.MergeQueueLengthName
+	case TimeToMergeMetric:
+		return constants.TimeToMergeName
+	case RetestsToMergeMetric:
+		return constants.RetestsToMergeName
+	default:
+		return ""
+	}
 }
 
 type Action string
@@ -66,8 +82,8 @@ type Options struct {
 	RetestsToMergeRedLevel      float64
 
 	// batch options
-	Mode
-	TargetMetric Metric
+	Mode         string
+	TargetMetric string
 	StartDate    string
 }
 
@@ -139,4 +155,18 @@ type MergeQueuePRList []struct {
 
 type ChatopsPRList []struct {
 	ChatopsPullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type Curve struct {
+	X     []string
+	Y     []float64
+	Color color.RGBA
+	Title string
+}
+
+type PlotData struct {
+	Title      string
+	XAxisLabel string
+	YAxisLabel string
+	Curves     []Curve
 }
