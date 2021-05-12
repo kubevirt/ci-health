@@ -1,46 +1,71 @@
 package stats
 
 import (
+	"fmt"
 	"math"
 	"time"
 
 	"github.com/fgimenez/ci-health/pkg/chatops"
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 type statsProcessor func(*Results) (*Results, error)
 
-type Handler struct {
-	mq       *mergequeue.Handler
-	co       *chatops.Handler
-	source   string
-	dataDays int
+type HandlerOptions struct {
+	Mq       *mergequeue.Handler
+	Co       *chatops.Handler
+	Source   string
+	EndDate  time.Time
+	DataDays int
+
+	TargetMetrics []types.Metric
 }
 
-func NewHandler(mq *mergequeue.Handler, co *chatops.Handler, source string, dataDays int) *Handler {
+type Handler struct {
+	mq            *mergequeue.Handler
+	co            *chatops.Handler
+	source        string
+	endDate       time.Time
+	dataDays      int
+	targetMetrics []types.Metric
+}
+
+func NewHandler(ho *HandlerOptions) *Handler {
 	return &Handler{
-		mq,
-		co,
-		source,
-		dataDays,
+		mq:            ho.Mq,
+		co:            ho.Co,
+		source:        ho.Source,
+		endDate:       ho.EndDate,
+		dataDays:      ho.DataDays,
+		targetMetrics: ho.TargetMetrics,
 	}
 }
 
 func (h *Handler) Run() (*Results, error) {
 	results := &Results{
-		ExecutionDate: time.Now().Format(constants.DateFormat),
-		DataDays:      h.dataDays,
-		Source:        h.source,
-		Data:          map[string]RunningAverageDataItem{},
+		EndDate:  h.endDate.Format(constants.DateFormat),
+		DataDays: h.dataDays,
+		Source:   h.source,
+		Data:     map[string]RunningAverageDataItem{},
 	}
 	var err error
 
-	for _, processor := range []statsProcessor{
-		h.mergeQueueProcessor,
-		h.timeToMergeProcessor,
-		h.retestsToMergeProcessor,
-	} {
+	for _, targetMetric := range h.targetMetrics {
+		var processor statsProcessor
+
+		switch targetMetric {
+		case types.MergeQueueLengthMetric:
+			processor = h.mergeQueueProcessor
+		case types.TimeToMergeMetric:
+			processor = h.timeToMergeProcessor
+		case types.RetestsToMergeMetric:
+			processor = h.retestsToMergeProcessor
+		default:
+			return nil, fmt.Errorf("Unknown metric: %q", targetMetric)
+		}
+
 		results, err = processor(results)
 		if err != nil {
 			return nil, err
@@ -50,7 +75,10 @@ func (h *Handler) Run() (*Results, error) {
 }
 
 func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
@@ -81,7 +109,10 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},
@@ -116,7 +147,10 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 }
 
 func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
-	currentTime := time.Now()
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := RunningAverageDataItem{
 		DataPoints: []DataPoint{},

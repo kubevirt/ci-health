@@ -1,21 +1,90 @@
 package types
 
 import (
+	"errors"
+	"image/color"
 	"time"
+
+	"github.com/fgimenez/ci-health/pkg/constants"
 )
 
+const (
+	StatsAction Action = "stats"
+	BatchAction Action = "batch"
+
+	FetchMode = "fetch"
+	PlotMode  = "plot"
+
+	MergeQueueLengthMetric Metric = "merge-queue-length"
+	TimeToMergeMetric      Metric = "time-to-merge"
+	RetestsToMergeMetric   Metric = "retests-to-merge"
+)
+
+type Metric string
+
+func (m Metric) IsValid() error {
+	switch m {
+	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric:
+		return nil
+	}
+	return errors.New("Invalid MetricType value")
+}
+
+func (m Metric) ResultsName() string {
+	switch m {
+	case MergeQueueLengthMetric:
+		return constants.MergeQueueLengthName
+	case TimeToMergeMetric:
+		return constants.TimeToMergeName
+	case RetestsToMergeMetric:
+		return constants.RetestsToMergeName
+	default:
+		return ""
+	}
+}
+
+type Action string
+
+func (a Action) IsValid() error {
+	switch a {
+	case StatsAction, BatchAction:
+		return nil
+	}
+	return errors.New("Invalid Action value")
+}
+
+type Mode string
+
+func (m Mode) IsValid() error {
+	switch m {
+	case FetchMode, PlotMode:
+		return nil
+	}
+	return errors.New("Invalid BatchMode value")
+}
+
 type Options struct {
-	Path                        string
-	TokenPath                   string
-	Source                      string
-	DataDays                    int
-	LogLevel                    string
+	Action
+
+	Path            string
+	TokenPath       string
+	Source          string
+	DataDays        int
+	LogLevel        string
+	RequestedAction Action
+
+	// stats options
 	TimeToMergeRedLevel         float64
 	TimeToMergeYellowLevel      float64
 	MergeQueueLengthRedLevel    float64
 	MergeQueueLengthYellowLevel float64
 	RetestsToMergeYellowLevel   float64
 	RetestsToMergeRedLevel      float64
+
+	// batch options
+	Mode         string
+	TargetMetric string
+	StartDate    string
 }
 
 type Label struct {
@@ -86,4 +155,18 @@ type MergeQueuePRList []struct {
 
 type ChatopsPRList []struct {
 	ChatopsPullRequestFragment `graphql:"... on PullRequest"`
+}
+
+type Curve struct {
+	X     []string
+	Y     []float64
+	Color color.RGBA
+	Title string
+}
+
+type PlotData struct {
+	Title      string
+	XAxisLabel string
+	YAxisLabel string
+	Curves     []Curve
 }

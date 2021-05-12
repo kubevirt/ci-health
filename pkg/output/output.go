@@ -40,7 +40,7 @@ func NewHandler(options *Options, metricsHandler *metrics.Handler) *Handler {
 }
 
 func (b *Handler) Write(results *stats.Results) error {
-	err := b.writeJSON(results)
+	err := b.WriteJSON(results)
 	if err != nil {
 		return err
 	}
@@ -55,7 +55,7 @@ func (b *Handler) Write(results *stats.Results) error {
 	return err
 }
 
-func (b *Handler) writeJSON(results *stats.Results) error {
+func (b *Handler) WriteJSON(results *stats.Results) error {
 	basePath, err := b.initializeSourcePath()
 	if err != nil {
 		return err

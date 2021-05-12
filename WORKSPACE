@@ -1425,15 +1425,15 @@ go_repository(
 go_repository(
     name = "org_golang_x_sys",
     importpath = "golang.org/x/sys",
-    sum = "h1:myAQVi0cGEoqQVR5POX+8RR2mrocKqNN1hmeMqhX27k=",
-    version = "v0.0.0-20210119212857-b64e53b001e4",
+    sum = "h1:7+SpRyhoo46QjKkYInQXpcfxx3TYFEYkn131lwGE9/0=",
+    version = "v0.0.0-20210304124612-50617c2ba197",
 )
 
 go_repository(
     name = "org_golang_x_text",
     importpath = "golang.org/x/text",
-    sum = "h1:cokOdA+Jmi5PJGXLlLllQSgYigAEfHXJAERHVMaCc2k=",
-    version = "v0.3.3",
+    sum = "h1:i6eZZ+zk0SOf0xgBpEpPD18qWcJda6q1sxt3S0kzyUQ=",
+    version = "v0.3.5",
 )
 
 go_repository(
@@ -1496,6 +1496,125 @@ git_repository(
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 load("//:deps.bzl", "go_dependencies")
+
+go_repository(
+    name = "com_github_ajstarks_svgo",
+    importpath = "github.com/ajstarks/svgo",
+    sum = "h1:wVe6/Ea46ZMeNkQjjBW6xcqyQA/j5e0D6GytH95g0gQ=",
+    version = "v0.0.0-20180226025133-644b8db467af",
+)
+
+go_repository(
+    name = "com_github_boombuler_barcode",
+    importpath = "github.com/boombuler/barcode",
+    sum = "h1:s1TvRnXwL2xJRaccrdcBQMZxq6X7DvsMogtmJeHDdrc=",
+    version = "v1.0.0",
+)
+
+go_repository(
+    name = "com_github_fogleman_gg",
+    importpath = "github.com/fogleman/gg",
+    sum = "h1:/7zJX8F6AaYQc57WQCyN9cAIz+4bCJGO9B+dyW29am8=",
+    version = "v1.3.0",
+)
+
+go_repository(
+    name = "com_github_go_fonts_dejavu",
+    importpath = "github.com/go-fonts/dejavu",
+    sum = "h1:JSajPXURYqpr+Cu8U9bt8K+XcACIHWqWrvWCKyeFmVQ=",
+    version = "v0.1.0",
+)
+
+go_repository(
+    name = "com_github_go_fonts_latin_modern",
+    importpath = "github.com/go-fonts/latin-modern",
+    sum = "h1:5/Tv1Ek/QCr20C6ZOz15vw3g7GELYL98KWr8Hgo+3vk=",
+    version = "v0.2.0",
+)
+
+go_repository(
+    name = "com_github_go_fonts_liberation",
+    importpath = "github.com/go-fonts/liberation",
+    sum = "h1:wBrPaMkrXFBW3qXpXAjiKljdVUMxn9bX2ia3XjPHoik=",
+    version = "v0.1.1",
+)
+
+go_repository(
+    name = "com_github_go_fonts_stix",
+    importpath = "github.com/go-fonts/stix",
+    sum = "h1:UlZlgrvvmT/58o573ot7NFw0vZasZ5I6bcIft/oMdgg=",
+    version = "v0.1.0",
+)
+
+go_repository(
+    name = "com_github_go_latex_latex",
+    importpath = "github.com/go-latex/latex",
+    sum = "h1:OTlfMvwR1rLyf9goVmXfuS5AJn80+Vmj4rTf4n46SOs=",
+    version = "v0.0.0-20210118124228-b3d85cf34e07",
+)
+
+go_repository(
+    name = "com_github_jung_kurt_gofpdf",
+    importpath = "github.com/jung-kurt/gofpdf",
+    sum = "h1:PJr+ZMXIecYc1Ey2zucXdR73SMBtgjPgwa31099IMv0=",
+    version = "v1.0.3-0.20190309125859-24315acbbda5",
+)
+
+go_repository(
+    name = "com_github_phpdave11_gofpdf",
+    importpath = "github.com/phpdave11/gofpdf",
+    sum = "h1:KPKiIbfwbvC/wOncwhrpRdXVj2CZTCFlw4wnoyjtHfQ=",
+    version = "v1.4.2",
+)
+
+go_repository(
+    name = "com_github_phpdave11_gofpdi",
+    importpath = "github.com/phpdave11/gofpdi",
+    sum = "h1:RZb9NG62cw/RW0rHAduVRo+98R8o/G1krcg2ns7DakQ=",
+    version = "v1.0.12",
+)
+
+go_repository(
+    name = "com_github_ruudk_golang_pdf417",
+    importpath = "github.com/ruudk/golang-pdf417",
+    sum = "h1:nlG4Wa5+minh3S9LVFtNoY+GVRiudA2e3EVfcCi3RCA=",
+    version = "v0.0.0-20181029194003-1af4ab5afa58",
+)
+
+go_repository(
+    name = "io_rsc_pdf",
+    importpath = "rsc.io/pdf",
+    sum = "h1:k1MczvYDUvJBe93bYd7wrZLLUEcLZAuF824/I4e5Xr4=",
+    version = "v0.1.1",
+)
+
+go_repository(
+    name = "org_gioui",
+    importpath = "gioui.org",
+    sum = "h1:K72hopUosKG3ntOPNG4OzzbuhxGuVf06fa2la1/H/Ho=",
+    version = "v0.0.0-20210308172011-57750fc8a0a6",
+)
+
+go_repository(
+    name = "org_gonum_v1_gonum",
+    importpath = "gonum.org/v1/gonum",
+    sum = "h1:CCXrcPKiGGotvnN6jfUsKk4rRqm7q09/YbKb5xCEvtM=",
+    version = "v0.8.2",
+)
+
+go_repository(
+    name = "org_gonum_v1_netlib",
+    importpath = "gonum.org/v1/netlib",
+    sum = "h1:OE9mWmgKkjJyEmDAAtGMPjXu+YNeGvK9VTSHY6+Qihc=",
+    version = "v0.0.0-20190313105609-8cb42192e0e0",
+)
+
+go_repository(
+    name = "org_gonum_v1_plot",
+    importpath = "gonum.org/v1/plot",
+    sum = "h1:3sEo36Uopv1/SA/dMFFaxXoL5XyikJ9Sf2Vll/k6+2E=",
+    version = "v0.9.0",
+)
 
 # gazelle:repository_macro deps.bzl%go_dependencies
 go_dependencies()

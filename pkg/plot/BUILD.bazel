@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "plot",
+    srcs = ["main.go"],
+    importpath = "github.com/fgimenez/ci-health/pkg/plot",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/constants",
+        "//pkg/types",
+        "@com_github_sirupsen_logrus//:logrus",
+        "@org_gonum_v1_plot//:plot",
+        "@org_gonum_v1_plot//plotter",
+        "@org_gonum_v1_plot//vg",
+        "@org_gonum_v1_plot//vg/draw",
+    ],
+)

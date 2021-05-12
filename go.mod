@@ -3,7 +3,6 @@ module github.com/fgimenez/ci-health
 go 1.15
 
 require (
-	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/google/go-cmp v0.5.4 // indirect
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/narqo/go-badge v0.0.0-20190124110329-d9415e4e1e9f
@@ -15,7 +14,9 @@ require (
 	github.com/shurcooL/graphql v0.0.0-20200928012149-18c5c3165e3a // indirect
 	github.com/sirupsen/logrus v1.7.0
 	github.com/spf13/cobra v1.1.1
+	github.com/stretchr/testify v1.6.1 // indirect
 	golang.org/x/oauth2 v0.0.0-20210113205817-d3ed898aa8a3
-	golang.org/x/sys v0.0.0-20210119212857-b64e53b001e4 // indirect
+	gonum.org/v1/plot v0.9.0
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20200605160147-a5ece683394c // indirect
 )

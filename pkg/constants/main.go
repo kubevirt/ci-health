@@ -1,7 +1,8 @@
 package constants
 
 const (
-	DateFormat = "2006-01-02T15:04:05Z"
+	DateFormat          = "2006-01-02T15:04:05Z"
+	BatchDataDateFormat = "2006-01-02"
 
 	LGTMLabel     = "lgtm"
 	ApprovedLabel = "approved"
@@ -24,11 +25,13 @@ const (
 	DefaultMergeQueueLengthRedLevel    = 15.0
 	DefaultRetestsToMergeYellowLevel   = 3.0
 	DefaultRetestsToMergeRedLevel      = 6.0
+	DefaultBatchStartDate              = "2019-05-06"
 
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
 	RetestsToMergeBadgeFileName   = "retests-to-merge.svg"
 	JSONResultsFileName           = "results.json"
+	PlotFileName                  = "plot.png"
 	MetricsFileName               = "metrics"
 
 	TimeToMergeBadgeName      = "days to merge"
@@ -42,6 +45,10 @@ const (
 	StdMergeQueueLengthMetricName = "cihealth_std_merge_queue_lenght_total"
 	StdTimeToMergeMetricName      = "cihealth_std_time_to_merge_days"
 	StdRetestsToMergeMetricName   = "cihealth_std_retests_to_merge_total"
+
+	DefaultBatchBaseOutputPath = "batch"
+	DefaultBatchDataOutputPath = "data"
+	DefaultBatchPlotOutputPath = "plot"
 )
 
 func DoNotMergeLabels() []string {

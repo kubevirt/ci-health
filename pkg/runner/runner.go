@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 
@@ -35,7 +36,32 @@ func Run(o *types.Options) (*stats.Results, error) {
 	mqHandler := mergequeue.NewHandler(ghClient)
 	coHandler := chatops.NewHandler(ghClient)
 
-	statsHandler := stats.NewHandler(mqHandler, coHandler, o.Source, o.DataDays)
+	switch o.Action {
+	case types.StatsAction:
+		return statsRun(o, mqHandler, coHandler)
+	case types.BatchAction:
+		return batchRun(o, mqHandler, coHandler)
+	default:
+		return nil, fmt.Errorf("Unknown action: %q", o.Action)
+	}
+}
+
+func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+	options := &stats.HandlerOptions{
+		Mq:       mqHandler,
+		Co:       coHandler,
+		Source:   o.Source,
+		DataDays: o.DataDays,
+		EndDate:  time.Now(),
+
+		TargetMetrics: []types.Metric{
+			types.MergeQueueLengthMetric,
+			types.TimeToMergeMetric,
+			types.RetestsToMergeMetric,
+		},
+	}
+
+	statsHandler := stats.NewHandler(options)
 
 	results, err := statsHandler.Run()
 	if err != nil {
@@ -81,6 +107,17 @@ func Run(o *types.Options) (*stats.Results, error) {
 	}
 
 	return results, nil
+}
+
+func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+	switch o.Mode {
+	case types.FetchMode:
+		return batchFetchRun(o, mqHandler, coHandler)
+	case types.PlotMode:
+		return batchPlotRun(o)
+	default:
+		return nil, fmt.Errorf("Unknown batch mode: %q", o.Mode)
+	}
 }
 
 func setLogLevel(logLevel string) {

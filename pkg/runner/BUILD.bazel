@@ -2,16 +2,22 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "runner",
-    srcs = ["runner.go"],
+    srcs = [
+        "batch.go",
+        "runner.go",
+    ],
     importpath = "github.com/fgimenez/ci-health/pkg/runner",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/chatops",
+        "//pkg/constants",
         "//pkg/gh",
         "//pkg/mergequeue",
         "//pkg/metrics",
         "//pkg/output",
+        "//pkg/plot",
         "//pkg/stats",
+        "//pkg/timeutils",
         "//pkg/types",
         "@com_github_sirupsen_logrus//:logrus",
     ],
