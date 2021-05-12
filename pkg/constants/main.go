@@ -25,12 +25,13 @@ const (
 	DefaultMergeQueueLengthRedLevel    = 15.0
 	DefaultRetestsToMergeYellowLevel   = 3.0
 	DefaultRetestsToMergeRedLevel      = 6.0
-	DefaultBatchStartDate              = "2016-08-11"
+	DefaultBatchStartDate              = "2019-05-06"
 
 	TimeToMergeBadgeFileName      = "time-to-merge.svg"
 	MergeQueueLengthBadgeFileName = "merge-queue-length.svg"
 	RetestsToMergeBadgeFileName   = "retests-to-merge.svg"
 	JSONResultsFileName           = "results.json"
+	PlotFileName                  = "plot.png"
 	MetricsFileName               = "metrics"
 
 	TimeToMergeBadgeName      = "days to merge"
@@ -47,6 +48,7 @@ const (
 
 	DefaultBatchBaseOutputPath = "batch"
 	DefaultBatchDataOutputPath = "data"
+	DefaultBatchPlotOutputPath = "plot"
 )
 
 func DoNotMergeLabels() []string {
