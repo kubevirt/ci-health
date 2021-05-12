@@ -2,10 +2,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "stats",
-    srcs = [
-        "stats.go",
-        "types.go",
-    ],
+    srcs = ["stats.go"],
     importpath = "github.com/fgimenez/ci-health/pkg/stats",
     visibility = ["//visibility:public"],
     deps = [
