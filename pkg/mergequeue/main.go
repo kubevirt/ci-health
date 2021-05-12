@@ -36,19 +36,23 @@ func NewHandler(client *gh.Client) *Handler {
 
 // LengthAt returns the merge queue size for a given date and the PR numbers
 // that were part of the queue at that date.
-func (mq *Handler) LengthAt(date time.Time) (int, []int, error) {
+func (mq *Handler) LengthAt(date time.Time) (int, []types.PR, error) {
 	prList, err := mq.client.OpenPRsAt(date)
 	if err != nil {
 		return 0, nil, err
 	}
 
 	result := 0
-	prs := []int{}
-	for _, pr := range prList {
-		log.Debugf("LengthAt: calculating mq date entered for PR num %d from %s", pr.Number, date)
-		if DatePREntered(&pr.MergeQueuePullRequestFragment, date) != zeroDate {
+	prs := []types.PR{}
+	for _, prItem := range prList {
+		log.Debugf("LengthAt: calculating mq date entered for PR num %d from %s", prItem.Number, date)
+		if DatePREntered(&prItem.MergeQueuePullRequestFragment, date) != zeroDate {
 			result++
-			prs = append(prs, pr.Number)
+			pr := types.PR{
+				Number:   prItem.Number,
+				MergedAt: prItem.MergedAt.Format(constants.DateFormat),
+			}
+			prs = append(prs, pr)
 		}
 	}
 
@@ -57,20 +61,24 @@ func (mq *Handler) LengthAt(date time.Time) (int, []int, error) {
 
 // TimesToMerge returns a map with the duration each merged PR number took to
 // land in the time frame between the given start and end dates.
-func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[int]time.Duration, error) {
+func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[types.PR]time.Duration, error) {
 	prs, err := mq.client.MergedPRsBetween(startDate, endDate)
 	if err != nil {
 		return nil, err
 	}
 
-	result := map[int]time.Duration{}
-	for _, pr := range prs {
-		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", pr.Number, pr.MergedAt)
-		mqStart := DatePREntered(&pr.MergeQueuePullRequestFragment, pr.MergedAt)
+	result := map[types.PR]time.Duration{}
+	for _, prItem := range prs {
+		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", prItem.Number, prItem.MergedAt)
+		mqStart := DatePREntered(&prItem.MergeQueuePullRequestFragment, prItem.MergedAt)
 		if mqStart.Equal(zeroDate) {
-			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", pr.Number)
+			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", prItem.Number)
 		} else {
-			result[pr.Number] = pr.MergedAt.Sub(mqStart)
+			pr := types.PR{
+				Number:   prItem.Number,
+				MergedAt: prItem.MergedAt.Format(constants.DateFormat),
+			}
+			result[pr] = prItem.MergedAt.Sub(mqStart)
 		}
 	}
 

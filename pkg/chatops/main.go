@@ -9,6 +9,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
+	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
@@ -29,17 +30,21 @@ func NewHandler(client *gh.Client) *Handler {
 
 // RetestsToMerge returns a map with the number of retest calls it took to land
 // each merged PR in the time frame between the given start and end dates.
-func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[int]int, error) {
+func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[types.PR]int, error) {
 
 	items, err := co.client.ChatopsMergedPRsBetween(startDate, endDate)
 	if err != nil {
 		return nil, err
 	}
 
-	result := map[int]int{}
-	for _, pr := range items {
-		log.Debugf("RetestsToMerge: calculating date of last push for PR num %d merged at %s", pr.Number, pr.MergedAt)
-		result[pr.Number] = RetestComments(&pr.ChatopsPullRequestFragment)
+	result := map[types.PR]int{}
+	for _, prItem := range items {
+		log.Debugf("RetestsToMerge: calculating date of last push for PR num %d merged at %s", prItem.Number, prItem.MergedAt)
+		pr := types.PR{
+			Number:   prItem.Number,
+			MergedAt: prItem.MergedAt.Format(constants.DateFormat),
+		}
+		result[pr] = RetestComments(&prItem.ChatopsPullRequestFragment)
 	}
 	return result, nil
 }
