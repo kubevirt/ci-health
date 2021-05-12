@@ -17,7 +17,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func Run(o *types.Options) (*stats.Results, error) {
+func Run(o *types.Options) (*types.Results, error) {
 	if o.LogLevel == "debug" {
 		log.SetLevel(log.DebugLevel)
 	} else {
@@ -46,7 +46,7 @@ func Run(o *types.Options) (*stats.Results, error) {
 	}
 }
 
-func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {
 	options := &stats.HandlerOptions{
 		Mq:       mqHandler,
 		Co:       coHandler,
@@ -109,7 +109,7 @@ func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 	return results, nil
 }
 
-func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {
 	switch o.Mode {
 	case types.FetchMode:
 		return batchFetchRun(o, mqHandler, coHandler)

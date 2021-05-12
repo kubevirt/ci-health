@@ -22,7 +22,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {
 	// find closest monday to o.StartDate
 	currentEndDate, err := timeutils.ClosestMonday(o.StartDate)
 	if err != nil {
@@ -75,7 +75,7 @@ func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *c
 	return nil, nil
 }
 
-func batchPlotRun(o *types.Options) (*stats.Results, error) {
+func batchPlotRun(o *types.Options) (*types.Results, error) {
 	// read batch fetch results in batch data dir
 	dataBase := batchDataPath(o.Path, o.Source, string(o.TargetMetric))
 
@@ -151,7 +151,7 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 			return err
 		}
 
-		var results stats.Results
+		var results types.Results
 		err = json.Unmarshal(byteValue, &results)
 		if err != nil {
 			return err

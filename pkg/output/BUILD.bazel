@@ -8,7 +8,7 @@ go_library(
     deps = [
         "//pkg/constants",
         "//pkg/metrics",
-        "//pkg/stats",
+        "//pkg/types",
         "@com_github_narqo_go_badge//:go-badge",
         "@com_github_sirupsen_logrus//:logrus",
     ],
