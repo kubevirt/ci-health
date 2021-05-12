@@ -13,7 +13,6 @@ import (
 
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/runner"
-	"github.com/fgimenez/ci-health/pkg/stats"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -53,7 +52,7 @@ var _ = Describe("ci-health stats", func() {
 			LogLevel:  "debug",
 		}
 
-		checkResults := func(results *stats.Results) {
+		checkResults := func(results *types.Results) {
 			Expect(results.DataDays).To(Equal(dataDays))
 			Expect(results.Source).To(Equal(source))
 
@@ -101,7 +100,7 @@ var _ = Describe("ci-health stats", func() {
 		jsonData, err := ioutil.ReadFile(jsonFileName)
 		Expect(err).ToNot(HaveOccurred())
 
-		var jsonResults stats.Results
+		var jsonResults types.Results
 		err = json.Unmarshal(jsonData, &jsonResults)
 		Expect(err).ToNot(HaveOccurred())
 
