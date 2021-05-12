@@ -4,19 +4,16 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"path"
 	"time"
 
 	log "github.com/sirupsen/logrus"
 
 	"github.com/fgimenez/ci-health/pkg/chatops"
-	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/gh"
 	"github.com/fgimenez/ci-health/pkg/mergequeue"
 	"github.com/fgimenez/ci-health/pkg/metrics"
 	"github.com/fgimenez/ci-health/pkg/output"
 	"github.com/fgimenez/ci-health/pkg/stats"
-	"github.com/fgimenez/ci-health/pkg/timeutils"
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
@@ -117,70 +114,10 @@ func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 	case types.FetchMode:
 		return batchFetchRun(o, mqHandler, coHandler)
 	case types.PlotMode:
-		return batchPlotRun(o, mqHandler, coHandler)
+		return batchPlotRun(o)
 	default:
 		return nil, fmt.Errorf("Unknown batch mode: %q", o.Mode)
 	}
-}
-
-func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
-	// find closest monday to o.StartDate
-	currentEndDate, err := timeutils.ClosestMonday(o.StartDate)
-	if err != nil {
-		return nil, err
-	}
-
-	// for each monday since closest monday to o.StartDate to current date
-	now := time.Now()
-
-	statsOptions := &stats.HandlerOptions{
-		Mq:       mqHandler,
-		Co:       coHandler,
-		Source:   o.Source,
-		DataDays: constants.DefaultDataDays,
-
-		TargetMetrics: []types.Metric{
-			o.TargetMetric,
-		},
-	}
-
-	outputOptions := &output.Options{}
-
-	for {
-		if now.Before(currentEndDate) {
-			break
-		}
-
-		// write results file
-		outputOptions.Path = batchDataPath(o.Path, o.Source, string(o.TargetMetric), currentEndDate)
-		if _, e := os.Stat(outputOptions.Path); os.IsNotExist(e) {
-			// calculate results for the week
-			statsOptions.EndDate = currentEndDate
-			statsHandler := stats.NewHandler(statsOptions)
-
-			results, err := statsHandler.Run()
-			if err != nil {
-				return nil, err
-			}
-			outputHandler := output.NewHandler(outputOptions, nil)
-			err = outputHandler.WriteJSON(results)
-			if err != nil {
-				return nil, err
-			}
-		}
-
-		// bump date to next monday
-		currentEndDate = currentEndDate.AddDate(0, 0, 7)
-	}
-	return nil, nil
-}
-
-func batchPlotRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
-	// read batch fetch results since o.StartDate
-
-	// generate gnuplot files using results
-
-	return nil, nil
 }
 
 func setLogLevel(logLevel string) {
@@ -189,15 +126,4 @@ func setLogLevel(logLevel string) {
 	} else {
 		log.SetLevel(log.InfoLevel)
 	}
-}
-
-func batchDataPath(base, source, metric string, date time.Time) string {
-	return path.Join(
-		base,
-		source,
-		constants.DefaultBatchBaseOutputPath,
-		constants.DefaultBatchDataOutputPath,
-		metric,
-		date.Format(constants.BatchDataDateFormat),
-	)
 }
