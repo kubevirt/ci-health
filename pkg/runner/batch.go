@@ -22,7 +22,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*stats.Results, error) {
+func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {
 	// find closest monday to o.StartDate
 	currentEndDate, err := timeutils.ClosestMonday(o.StartDate)
 	if err != nil {
@@ -52,7 +52,7 @@ func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *c
 
 		// write results file
 		baseDataPath := batchDataPath(o.Path, o.Source, string(o.TargetMetric))
-		outputOptions.Path = path.Join(baseDataPath, currentEndDate.Format(constants.BatchDataDateFormat))
+		outputOptions.Path = path.Join(baseDataPath, currentEndDate.Format(constants.DateFormat))
 		if _, e := os.Stat(outputOptions.Path); os.IsNotExist(e) {
 			// calculate results for the week
 			statsOptions.EndDate = currentEndDate
@@ -75,7 +75,7 @@ func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *c
 	return nil, nil
 }
 
-func batchPlotRun(o *types.Options) (*stats.Results, error) {
+func batchPlotRun(o *types.Options) (*types.Results, error) {
 	// read batch fetch results in batch data dir
 	dataBase := batchDataPath(o.Path, o.Source, string(o.TargetMetric))
 
@@ -120,12 +120,16 @@ func batchPlotPath(base, source, metric string) string {
 }
 
 func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error) {
-	totalCurves := 1
+	totalCurves := 2
 	curves := make([]types.Curve, totalCurves)
 	for i := 0; i < totalCurves; i++ {
 		curves[i].X = []string{}
 		curves[i].Y = []float64{}
-		curves[i].Color = color.RGBA{0, 255, 0, 255}
+		if i == 0 {
+			curves[i].Color = color.RGBA{0, 255, 0, 255}
+		} else {
+			curves[i].Color = color.RGBA{0, 0, 255, 255}
+		}
 	}
 
 	err := filepath.Walk(basePath, func(entryPath string, info os.FileInfo, err error) error {
@@ -151,20 +155,23 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 			return err
 		}
 
-		var results stats.Results
+		var results types.Results
 		err = json.Unmarshal(byteValue, &results)
 		if err != nil {
 			return err
 		}
 
 		metricName := metric.ResultsName()
-		curves[0].X = append(curves[0].X, info.Name())
-		curves[0].Y = append(curves[0].Y, results.Data[metricName].Avg)
+		for _, dataPoint := range results.Data[metricName].DataPoints {
+			for _, pr := range dataPoint.PRs {
+				curves[0].X = append(curves[0].X, pr.MergedAt)
+				curves[0].Y = append(curves[0].Y, dataPoint.Value)
+			}
+		}
+		curves[1].X = append(curves[1].X, info.Name())
+		curves[1].Y = append(curves[1].Y, results.Data[metricName].Avg)
 
 		/*
-			curves[1].X = append(curves[1].X, info.Name())
-			curves[1].Y = append(curves[1].Y, results.Data[metricName].Avg+results.Data[metricName].Std)
-
 			curves[2].X = append(curves[2].X, info.Name())
 			if results.Data[metricName].Avg-results.Data[metricName].Std < 0 {
 				curves[2].Y = append(curves[2].Y, 0)

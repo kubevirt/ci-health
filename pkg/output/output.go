@@ -11,7 +11,7 @@ import (
 
 	"github.com/fgimenez/ci-health/pkg/constants"
 	"github.com/fgimenez/ci-health/pkg/metrics"
-	"github.com/fgimenez/ci-health/pkg/stats"
+	"github.com/fgimenez/ci-health/pkg/types"
 )
 
 type Levels struct {
@@ -39,7 +39,7 @@ func NewHandler(options *Options, metricsHandler *metrics.Handler) *Handler {
 	}
 }
 
-func (b *Handler) Write(results *stats.Results) error {
+func (b *Handler) Write(results *types.Results) error {
 	err := b.WriteJSON(results)
 	if err != nil {
 		return err
@@ -55,7 +55,7 @@ func (b *Handler) Write(results *stats.Results) error {
 	return err
 }
 
-func (b *Handler) WriteJSON(results *stats.Results) error {
+func (b *Handler) WriteJSON(results *types.Results) error {
 	basePath, err := b.initializeSourcePath()
 	if err != nil {
 		return err
@@ -72,7 +72,7 @@ func (b *Handler) WriteJSON(results *stats.Results) error {
 	return err
 }
 
-func (b *Handler) writeMetrics(results *stats.Results) error {
+func (b *Handler) writeMetrics(results *types.Results) error {
 	b.metricsHandler.SetAvgMergeQueueLength(results.Source, results.Data[constants.MergeQueueLengthName].Avg)
 	b.metricsHandler.SetAvgTimeToMerge(results.Source, results.Data[constants.TimeToMergeName].Avg)
 	b.metricsHandler.SetAvgRetestsToMerge(results.Source, results.Data[constants.RetestsToMergeName].Avg)
@@ -89,7 +89,7 @@ func (b *Handler) writeMetrics(results *stats.Results) error {
 	return err
 }
 
-func (b *Handler) writeBadges(results *stats.Results) error {
+func (b *Handler) writeBadges(results *types.Results) error {
 	basePath, err := b.initializeSourcePath()
 	if err != nil {
 		return err
@@ -122,7 +122,7 @@ func (b *Handler) writeBadges(results *stats.Results) error {
 	return err
 }
 
-func (b *Handler) writeBadge(name, filePath string, data stats.RunningAverageDataItem, levels *Levels) error {
+func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
 	color := BadgeColor(data.Avg, levels)
 
 	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)

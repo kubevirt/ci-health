@@ -11,7 +11,7 @@ import (
 	"github.com/fgimenez/ci-health/pkg/types"
 )
 
-type statsProcessor func(*Results) (*Results, error)
+type statsProcessor func(*types.Results) (*types.Results, error)
 
 type HandlerOptions struct {
 	Mq       *mergequeue.Handler
@@ -43,12 +43,12 @@ func NewHandler(ho *HandlerOptions) *Handler {
 	}
 }
 
-func (h *Handler) Run() (*Results, error) {
-	results := &Results{
+func (h *Handler) Run() (*types.Results, error) {
+	results := &types.Results{
 		EndDate:  h.endDate.Format(constants.DateFormat),
 		DataDays: h.dataDays,
 		Source:   h.source,
-		Data:     map[string]RunningAverageDataItem{},
+		Data:     map[string]types.RunningAverageDataItem{},
 	}
 	var err error
 
@@ -74,14 +74,14 @@ func (h *Handler) Run() (*Results, error) {
 	return results, nil
 }
 
-func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
+func (h *Handler) mergeQueueProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
 	if err != nil {
 		return results, err
 	}
 
-	dataItem := RunningAverageDataItem{
-		DataPoints: []DataPoint{},
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
 	}
 
 	values := []float64{}
@@ -93,7 +93,7 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 		}
 		values = append(values, float64(queueLength))
 		dataItem.DataPoints = append(dataItem.DataPoints,
-			DataPoint{
+			types.DataPoint{
 				Value: float64(queueLength),
 				PRs:   prs,
 				Date:  &queryDate,
@@ -108,14 +108,14 @@ func (h *Handler) mergeQueueProcessor(results *Results) (*Results, error) {
 	return results, nil
 }
 
-func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
+func (h *Handler) timeToMergeProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
 	if err != nil {
 		return results, err
 	}
 
-	dataItem := RunningAverageDataItem{
-		DataPoints: []DataPoint{},
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
 	}
 
 	timesToMerge, err := h.mq.TimesToMerge(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
@@ -125,16 +125,16 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 
 	values := []float64{}
 
-	for prNumber, timeToMerge := range timesToMerge {
+	for pr, timeToMerge := range timesToMerge {
 		days := timeToMerge.Hours() / 24
 		value := round(days)
 
 		values = append(values, value)
 
 		dataItem.DataPoints = append(dataItem.DataPoints,
-			DataPoint{
+			types.DataPoint{
 				Value: value,
-				PRs:   []int{prNumber},
+				PRs:   []types.PR{pr},
 			})
 	}
 
@@ -146,14 +146,14 @@ func (h *Handler) timeToMergeProcessor(results *Results) (*Results, error) {
 	return results, nil
 }
 
-func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
+func (h *Handler) retestsToMergeProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
 	if err != nil {
 		return results, err
 	}
 
-	dataItem := RunningAverageDataItem{
-		DataPoints: []DataPoint{},
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
 	}
 
 	retestsToMerge, err := h.co.RetestsToMerge(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
@@ -163,15 +163,15 @@ func (h *Handler) retestsToMergeProcessor(results *Results) (*Results, error) {
 
 	values := []float64{}
 
-	for prNumber, retestsToMerge := range retestsToMerge {
+	for pr, retestsToMerge := range retestsToMerge {
 		value := float64(retestsToMerge)
 
 		values = append(values, value)
 
 		dataItem.DataPoints = append(dataItem.DataPoints,
-			DataPoint{
+			types.DataPoint{
 				Value: value,
-				PRs:   []int{prNumber},
+				PRs:   []types.PR{pr},
 			})
 	}
 

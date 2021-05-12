@@ -16,7 +16,7 @@ import (
 )
 
 func Draw(filePath string, data *types.PlotData) error {
-	xticks := gonumplot.TimeTicks{Format: constants.BatchDataDateFormat}
+	xticks := gonumplot.TimeTicks{Format: constants.DateFormat}
 
 	p := gonumplot.New()
 	p.Title.Text = data.Title
@@ -55,7 +55,7 @@ func transform(x []string, y []float64) (plotter.XYs, error) {
 	pts := make(plotter.XYs, len(x))
 
 	for cont := 0; cont < len(x); cont++ {
-		parsed, err := time.Parse(constants.BatchDataDateFormat, x[cont])
+		parsed, err := time.Parse(constants.DateFormat, x[cont])
 		log.Debugf("parsed date: %v", parsed)
 		if err != nil {
 			return nil, err
