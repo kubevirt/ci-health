@@ -25,21 +25,35 @@ func Draw(filePath string, data *types.PlotData) error {
 	p.Y.Label.Text = data.YAxisLabel
 	p.Add(plotter.NewGrid())
 
+	// first curve represent raw data, second curve aggregates
+	cont := 0
 	for _, curve := range data.Curves {
 		data, err := transform(curve.X, curve.Y)
 		if err != nil {
 			return err
 		}
 
-		line, points, err := plotter.NewLinePoints(data)
-		if err != nil {
-			return err
+		var line *plotter.Line
+		var points *plotter.Scatter
+		if cont == 0 {
+			points, err = plotter.NewScatter(data)
+			if err != nil {
+				return err
+			}
+		} else {
+			line, points, err = plotter.NewLinePoints(data)
+			if err != nil {
+				return err
+			}
+			line.Color = curve.Color
+			p.Add(line)
 		}
-		line.Color = curve.Color
+
 		points.Shape = draw.CircleGlyph{}
 		points.Color = curve.Color
 
-		p.Add(line, points)
+		p.Add(points)
+		cont++
 	}
 	log.Debugf("before saving image to %s", filePath)
 	dir := path.Dir(filePath)
