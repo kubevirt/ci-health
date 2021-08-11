@@ -23,7 +23,40 @@ jobs:
         bazelisk run //cmd/batch -- \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
+          --mode fetch \
+          --target-metric retests-to-merge \
+          --log-level debug
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
           --mode plot \
+          --target-metric retests-to-merge \
+          --log-level debug
+
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode fetch \
+          --target-metric time-to-merge \
+          --log-level debug
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode plot \
+          --target-metric time-to-merge \
+          --log-level debug
+
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode fetch \
+          --target-metric merge-queue-lenght \
+          --log-level debug
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode plot \
+          --target-metric merge-queue-lenght \
           --log-level debug
     - name: Commit changes
       uses: EndBug/add-and-commit@v7

@@ -37,6 +37,16 @@ data from the previous 7 days since the execution time.
 
 ## Historical data evolution
 
+* kubevirt/kubevirt merge queue length:
+  ![kubevirt-kubevirt-merge-queue-length](./output/kubevirt/kubevirt/batch/merge-queue-length/plot/plot.png)
+
+  Data avaialable [here](./output/kubevirt/kubevirt/batch/merge-queue-length/data).
+
+* kubevirt/kubevirt time to merge:
+  ![kubevirt-kubevirt-time-to-merge](./output/kubevirt/kubevirt/batch/time-to-merge/plot/plot.png)
+
+  Data avaialable [here](./output/kubevirt/kubevirt/batch/time-to-merge/data).
+
 * kubevirt/kubevirt retests to merge:
   ![kubevirt-kubevirt-retests-to-merge](./output/kubevirt/kubevirt/batch/retests-to-merge/plot/plot.png)
 

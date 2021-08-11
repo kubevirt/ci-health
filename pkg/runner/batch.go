@@ -132,6 +132,8 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 		}
 	}
 
+	metricName := metric.ResultsName()
+
 	err := filepath.Walk(basePath, func(entryPath string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -161,24 +163,16 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 			return err
 		}
 
-		metricName := metric.ResultsName()
-		for _, dataPoint := range results.Data[metricName].DataPoints {
-			for _, pr := range dataPoint.PRs {
-				curves[0].X = append(curves[0].X, pr.MergedAt)
-				curves[0].Y = append(curves[0].Y, dataPoint.Value)
-			}
+		switch metricName {
+		case constants.MergeQueueLengthName:
+			addPRRangeResults(results, curves, metricName)
+		case constants.RetestsToMergeName, constants.TimeToMergeName:
+			addPRUnitResults(results, curves, metricName)
 		}
+
 		curves[1].X = append(curves[1].X, info.Name())
 		curves[1].Y = append(curves[1].Y, results.Data[metricName].Avg)
 
-		/*
-			curves[2].X = append(curves[2].X, info.Name())
-			if results.Data[metricName].Avg-results.Data[metricName].Std < 0 {
-				curves[2].Y = append(curves[2].Y, 0)
-			} else {
-				curves[2].Y = append(curves[2].Y, results.Data[metricName].Avg-results.Data[metricName].Std)
-			}
-		*/
 		return nil
 	})
 	if err != nil {
@@ -186,4 +180,22 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 	}
 
 	return curves, nil
+}
+
+func addPRRangeResults(results types.Results, curves []types.Curve, metricName string) {
+	for _, dataPoint := range results.Data[metricName].DataPoints {
+		if dataPoint.Date != nil {
+			curves[0].X = append(curves[0].X, dataPoint.Date.Format(constants.DateFormat))
+			curves[0].Y = append(curves[0].Y, dataPoint.Value)
+		}
+	}
+}
+
+func addPRUnitResults(results types.Results, curves []types.Curve, metricName string) {
+	for _, dataPoint := range results.Data[metricName].DataPoints {
+		for _, pr := range dataPoint.PRs {
+			curves[0].X = append(curves[0].X, pr.MergedAt)
+			curves[0].Y = append(curves[0].Y, dataPoint.Value)
+		}
+	}
 }
