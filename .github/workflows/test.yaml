@@ -1,16 +1,5 @@
 name: ci-health-tests
 on:
-  push:
-    paths:
-    - 'cmd/**'
-    - 'e2e/**'
-    - 'pkg/**'
-    - 'go.*'
-    - 'deps.bzl'
-    - 'BUILD.bazel'
-    - 'WORKSPACE'
-    - '.bazel*'
-    - '.github/**'
   pull_request:
     paths:
     - 'cmd/**'
