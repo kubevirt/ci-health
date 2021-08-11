@@ -10,7 +10,7 @@ on:
     - 'BUILD.bazel'
     - 'WORKSPACE'
     - '.bazel*'
-    - '.github/*'
+    - '.github/**'
   pull_request:
     paths:
     - 'cmd/**'
@@ -21,7 +21,7 @@ on:
     - 'BUILD.bazel'
     - 'WORKSPACE'
     - '.bazel*'
-    - '.github/*'
+    - '.github/**'
 jobs:
   test:
     runs-on: ubuntu-latest
