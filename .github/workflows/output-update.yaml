@@ -1,3 +1,4 @@
+---
 name: output-update
 on:
   schedule:
@@ -7,7 +8,7 @@ on:
 jobs:
   badge-update:
     runs-on: ubuntu-latest
-    container: kubevirtci/bootstrap:v20210112-b29dfd7
+    container: kubevirtci/bootstrap:v20210715-d0c2b78
     steps:
     - uses: actions/checkout@v2
       with:
