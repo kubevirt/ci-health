@@ -33,7 +33,14 @@ data from the previous 7 days since the execution time.
 
 [Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
 
-[Historical data](https://grafana.ci.kubevirt.io/d/WZU1-LPGz/merge-queue)
+[Latest weeks data](https://grafana.ci.kubevirt.io/d/WZU1-LPGz/merge-queue)
+
+## Historical data evolution
+
+* kubevirt/kubevirt retests to merge:
+  ![kubevirt-kubevirt-retests-to-merge](./output/kubevirt/kubevirt/batch/retest-to-merge/plot/plot.png)
+
+  Data avaialable [here](./output/kubevirt/kubevirt/batch/retest-to-merge/data).
 
 ## Local execution
 You can execute the tool locally to grab the stats of an specific repo that uses
