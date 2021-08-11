@@ -1,5 +1,5 @@
 ---
-name: output-update
+name: badges-update
 on:
   schedule:
     - cron:  '* */3 * * *'
@@ -31,5 +31,5 @@ jobs:
       with:
         author_name: Federico Gimenez
         author_email: fgimenez@redhat.com
-        message: 'Output updated'
+        message: 'Badges updated'
         add: 'output/*'
