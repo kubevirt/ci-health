@@ -1,0 +1,34 @@
+---
+name: historical-update
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  badge-update:
+    runs-on: ubuntu-latest
+    container: kubevirtci/bootstrap:v20210715-d0c2b78
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.BOT_TOKEN }}
+    - name: batch update for kubevirt/kubevirt
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        SOURCE: kubevirt/kubevirt
+      run: |
+        echo -n $GITHUB_TOKEN > $(pwd)/token
+
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode plot \
+          --log-level debug
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v7
+      with:
+        author_name: Federico Gimenez
+        author_email: fgimenez@redhat.com
+        message: 'Historical data updated'
+        add: 'output/*'
