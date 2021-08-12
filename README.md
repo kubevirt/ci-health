@@ -37,7 +37,7 @@ data from the previous 7 days since the execution time.
 
 ## Historical data evolution
 
-This plots will be updated every week.
+These plots will be updated every week.
 
 * kubevirt/kubevirt merge queue length:
   ![kubevirt-kubevirt-merge-queue-length](./output/kubevirt/kubevirt/batch/merge-queue-length/plot/plot.png)
