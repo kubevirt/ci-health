@@ -58,6 +58,20 @@ jobs:
           --mode plot \
           --target-metric merge-queue-length \
           --log-level debug
+
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode fetch \
+          --target-metric merged-prs \
+          --log-level debug
+        bazelisk run //cmd/batch -- \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode plot \
+          --target-metric merged-prs \
+          --log-level debug
+
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:

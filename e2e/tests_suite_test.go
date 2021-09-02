@@ -23,6 +23,29 @@ func TestCiHealth(t *testing.T) {
 
 var (
 	tokenPath string
+	names     = []string{
+		constants.MergeQueueLengthName,
+		constants.TimeToMergeName,
+		constants.RetestsToMergeName,
+		constants.MergedPRsName,
+	}
+	badgeFileNames = []string{
+		constants.MergeQueueLengthBadgeFileName,
+		constants.TimeToMergeBadgeFileName,
+		constants.RetestsToMergeBadgeFileName,
+		constants.MergedPRsBadgeFileName,
+	}
+	avgNames = []string{
+		constants.AvgMergeQueueLengthMetricName,
+		constants.AvgTimeToMergeMetricName,
+		constants.AvgRetestsToMergeMetricName,
+	}
+	stdNames = []string{
+		constants.StdMergeQueueLengthMetricName,
+		constants.StdTimeToMergeMetricName,
+		constants.StdRetestsToMergeMetricName,
+	}
+	statNames = append(avgNames, stdNames...)
 )
 
 const (
@@ -56,13 +79,7 @@ var _ = Describe("ci-health stats", func() {
 			Expect(results.DataDays).To(Equal(dataDays))
 			Expect(results.Source).To(Equal(source))
 
-			Expect(results.Data).To(HaveLen(3))
-
-			names := []string{
-				constants.MergeQueueLengthName,
-				constants.TimeToMergeName,
-				constants.RetestsToMergeName,
-			}
+			Expect(results.Data).To(HaveLen(len(names)))
 
 			for _, name := range names {
 				metricResults := results.Data[name]
@@ -85,13 +102,12 @@ var _ = Describe("ci-health stats", func() {
 		sourceArtifactsDir := filepath.Join(artifactsDir, source)
 
 		By("Checking badge files")
-		badgeFileNames := []string{
-			filepath.Join(sourceArtifactsDir, constants.MergeQueueLengthBadgeFileName),
-			filepath.Join(sourceArtifactsDir, constants.TimeToMergeBadgeFileName),
-			filepath.Join(sourceArtifactsDir, constants.RetestsToMergeBadgeFileName),
-		}
 		for _, badgeFileName := range badgeFileNames {
-			_, err := os.Stat(badgeFileName)
+			if badgeFileName == constants.MergedPRsBadgeFileName {
+				continue
+			}
+			fullBadgeFileName := filepath.Join(sourceArtifactsDir, badgeFileName)
+			_, err := os.Stat(fullBadgeFileName)
 			Expect(err).ToNot(HaveOccurred())
 		}
 
@@ -112,19 +128,11 @@ var _ = Describe("ci-health stats", func() {
 		Expect(err).ToNot(HaveOccurred())
 		metricsData := string(metricsDataBytes)
 
-		expectedMetricsStrings := []string{
-			fmt.Sprintf("# HELP %s", constants.AvgMergeQueueLengthMetricName),
-			fmt.Sprintf("# HELP %s", constants.AvgTimeToMergeMetricName),
-			fmt.Sprintf("# HELP %s", constants.AvgRetestsToMergeMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgMergeQueueLengthMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgTimeToMergeMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.AvgRetestsToMergeMetricName),
-			fmt.Sprintf("# HELP %s", constants.StdMergeQueueLengthMetricName),
-			fmt.Sprintf("# HELP %s", constants.StdTimeToMergeMetricName),
-			fmt.Sprintf("# HELP %s", constants.StdRetestsToMergeMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdMergeQueueLengthMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdTimeToMergeMetricName),
-			fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, constants.StdRetestsToMergeMetricName),
+		expectedMetricsStrings := []string{}
+
+		for _, statName := range statNames {
+			expectedMetricsStrings = append(expectedMetricsStrings, fmt.Sprintf("# HELP %s", statName))
+			expectedMetricsStrings = append(expectedMetricsStrings, fmt.Sprintf(`%s{source="kubevirt/kubevirt"}`, statName))
 		}
 		for _, expected := range expectedMetricsStrings {
 			Expect(metricsData).To(ContainSubstring(expected))

@@ -85,6 +85,25 @@ func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[types.PR]time
 	return result, nil
 }
 
+// MergedPRsBetween returns an slice of type.PR merged between the given dates.
+func (mq *Handler) MergedPRsBetween(startDate, endDate time.Time) ([]types.PR, error) {
+	mergedPRs, err := mq.client.MergedPRsBetween(startDate, endDate)
+	if err != nil {
+		return nil, err
+	}
+
+	prs := []types.PR{}
+
+	for _, mergedPR := range mergedPRs {
+		pr := types.PR{
+			Number:   mergedPR.Number,
+			MergedAt: mergedPR.MergedAt.Format(constants.DateFormat),
+		}
+		prs = append(prs, pr)
+	}
+	return prs, nil
+}
+
 // DatePREntered returns when a PR entered the merge queue before a
 // given date, zero value date if it was not in the merge queue by that date.
 func DatePREntered(pr *types.MergeQueuePullRequestFragment, date time.Time) time.Time {
