@@ -25,6 +25,7 @@ type Options struct {
 	TimeToMergeLevels      *Levels
 	MergeQueueLengthLevels *Levels
 	RetestsToMergeLevels   *Levels
+	MergedPRsLevels        *Levels
 }
 
 type Handler struct {

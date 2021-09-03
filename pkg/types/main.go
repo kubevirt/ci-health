@@ -19,13 +19,14 @@ const (
 	MergeQueueLengthMetric Metric = "merge-queue-length"
 	TimeToMergeMetric      Metric = "time-to-merge"
 	RetestsToMergeMetric   Metric = "retests-to-merge"
+	MergedPRsMetric        Metric = "merged-prs"
 )
 
 type Metric string
 
 func (m Metric) IsValid() error {
 	switch m {
-	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric:
+	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric, MergedPRsMetric:
 		return nil
 	}
 	return errors.New("Invalid MetricType value")
@@ -39,6 +40,8 @@ func (m Metric) ResultsName() string {
 		return constants.TimeToMergeName
 	case RetestsToMergeMetric:
 		return constants.RetestsToMergeName
+	case MergedPRsMetric:
+		return constants.MergedPRsName
 	default:
 		return ""
 	}
@@ -81,6 +84,8 @@ type Options struct {
 	MergeQueueLengthYellowLevel float64
 	RetestsToMergeYellowLevel   float64
 	RetestsToMergeRedLevel      float64
+	MergedPRsYellowLevel        float64
+	MergedPRsRedLevel           float64
 
 	// batch options
 	Mode         string
