@@ -1,0 +1,30 @@
+{
+  search(query: "repo:kubevirt/kubevirt type:pr merged:2020-07-06T00:00:00Z..2020-07-13T00:00:00Z", type: ISSUE, first: 100) {
+    nodes {
+      ... on PullRequest {
+        number
+        createdAt
+        mergedAt
+        timelineItems(first: 100, itemTypes: [PULL_REQUEST_COMMIT, BASE_REF_FORCE_PUSHED_EVENT, HEAD_REF_FORCE_PUSHED_EVENT, ISSUE_COMMENT]) {
+            nodes {
+              ... on PullRequestCommit {
+              	commit {
+                  committedDate
+                }
+              }
+              ... on HeadRefForcePushedEvent {
+                createdAt
+                actor {
+                  login
+                }
+              }
+              ... on IssueComment {
+                createdAt
+                bodyText
+              }
+            }
+          }
+      }
+    }
+  }
+}
