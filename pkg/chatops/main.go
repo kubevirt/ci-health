@@ -39,7 +39,7 @@ func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[types.PR]in
 
 	result := map[types.PR]int{}
 	for _, prItem := range items {
-		log.Debugf("RetestsToMerge: calculating date of last push for PR num %d merged at %s", prItem.Number, prItem.MergedAt)
+		log.Debugf("RetestsToMerge: calculating date of last commit or force push for PR num %d merged at %s", prItem.Number, prItem.MergedAt)
 		pr := types.PR{
 			Number:   prItem.Number,
 			MergedAt: prItem.MergedAt.Format(constants.DateFormat),
@@ -50,7 +50,7 @@ func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[types.PR]in
 }
 
 // RetestComments returns the number of /retest or /test comments a PR received
-// after the last push.
+// after the last commit or force push.
 func RetestComments(pr *types.ChatopsPullRequestFragment) int {
 	var total int
 	lastPush := determineLastPush(pr)
@@ -66,11 +66,17 @@ func RetestComments(pr *types.ChatopsPullRequestFragment) int {
 func determineLastPush(pr *types.ChatopsPullRequestFragment) time.Time {
 	lastPush := zeroDate
 
+	var itemDate time.Time
 	for _, timelineItem := range pr.TimelineItems.Nodes {
 		if isCommit(timelineItem) {
-			if timelineItem.PullRequestCommitFragment.Commit.PushedDate.After(lastPush) {
-				lastPush = timelineItem.PullRequestCommitFragment.Commit.PushedDate
-			}
+			itemDate = timelineItem.PullRequestCommitFragment.Commit.CommittedDate
+		} else if isHeadRefForcePush(timelineItem) {
+			itemDate = timelineItem.HeadRefForcePushFragment.CreatedAt
+		} else if isBaseRefForcePush(timelineItem) {
+			itemDate = timelineItem.BaseRefForcePushFragment.CreatedAt
+		}
+		if itemDate.After(lastPush) {
+			lastPush = itemDate
 		}
 	}
 	return lastPush
@@ -78,6 +84,15 @@ func determineLastPush(pr *types.ChatopsPullRequestFragment) time.Time {
 
 func isCommit(timelineItem types.TimelineItem) bool {
 	return timelineItem.PullRequestCommitFragment != types.PullRequestCommitFragment{}
+}
+
+func isHeadRefForcePush(timelineItem types.TimelineItem) bool {
+	return timelineItem.HeadRefForcePushFragment.Actor.Login != ""
+}
+
+func isBaseRefForcePush(timelineItem types.TimelineItem) bool {
+	return timelineItem.BaseRefForcePushFragment.Actor.Login != ""
+
 }
 
 func isRetestCommentAfterLastPush(timelineItem types.TimelineItem, lastPush time.Time) bool {
