@@ -113,11 +113,25 @@ type IssueCommentFragment struct {
 }
 
 type Commit struct {
-	PushedDate time.Time
+	CommittedDate time.Time
 }
 
 type PullRequestCommitFragment struct {
 	Commit Commit
+}
+
+type Actor struct {
+	Login string
+}
+
+type BaseRefForcePushFragment struct {
+	Actor     Actor
+	CreatedAt time.Time
+}
+
+type HeadRefForcePushFragment struct {
+	Actor     Actor
+	CreatedAt time.Time
 }
 
 type TimelineItem struct {
@@ -125,6 +139,8 @@ type TimelineItem struct {
 	UnlabeledEventFragment    `graphql:"... on UnlabeledEvent"`
 	IssueCommentFragment      `graphql:"... on IssueComment"`
 	PullRequestCommitFragment `graphql:"... on PullRequestCommit"`
+	BaseRefForcePushFragment  `graphql:"... on BaseRefForcePushedEvent"`
+	HeadRefForcePushFragment  `graphql:"... on HeadRefForcePushedEvent"`
 }
 
 type TimelineItems struct {
@@ -135,7 +151,7 @@ type ChatopsPullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
-	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[PULL_REQUEST_COMMIT, ISSUE_COMMENT])"`
+	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[PULL_REQUEST_COMMIT, BASE_REF_FORCE_PUSHED_EVENT, HEAD_REF_FORCE_PUSHED_EVENT, ISSUE_COMMENT])"`
 }
 
 type MergeQueuePullRequestFragment struct {

@@ -33,6 +33,53 @@ var _ = Describe("RetestComments", func() {
 			actual := chatops.RetestComments(pr)
 			Expect(actual).To(Equal(expected))
 		},
+		table.Entry("No retests after single commit",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									CommittedDate: queryDate.AddDate(0, 0, -2),
+								},
+							},
+						},
+					},
+				},
+			},
+			0),
+		table.Entry("No retests after single HeadRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+					},
+				},
+			},
+			0),
+		table.Entry("No retests after single BaseRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+					},
+				},
+			},
+			0),
 		table.Entry("One retest call after last commit",
 			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
@@ -40,7 +87,7 @@ var _ = Describe("RetestComments", func() {
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -2),
+									CommittedDate: queryDate.AddDate(0, 0, -2),
 								},
 							},
 						},
@@ -54,6 +101,100 @@ var _ = Describe("RetestComments", func() {
 				},
 			},
 			1),
+		table.Entry("One retest call after last HeadRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			1),
+		table.Entry("One retest call after last BaseRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			1),
+		table.Entry("HeadRef force push without actor.login is ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			2),
+		table.Entry("BaseRef force push without actor.login is ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			2),
 		table.Entry("Multiple retest calls after last commit",
 			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
@@ -61,7 +202,75 @@ var _ = Describe("RetestComments", func() {
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -5),
+									CommittedDate: queryDate.AddDate(0, 0, -5),
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			3),
+		table.Entry("Multiple retest calls after last HeadRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			3),
+		table.Entry("Multiple retest calls after last BaseRef force push",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								Actor: types.Actor{
+									Login: "user1",
 								},
 							},
 						},
@@ -100,7 +309,7 @@ var _ = Describe("RetestComments", func() {
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -3),
+									CommittedDate: queryDate.AddDate(0, 0, -3),
 								},
 							},
 						},
@@ -120,7 +329,75 @@ var _ = Describe("RetestComments", func() {
 				},
 			},
 			2),
-		table.Entry("Without last commit all retests are counted",
+		table.Entry("Retest calls before last HeadRef force push are ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			2),
+		table.Entry("Retest calls before last BaseRef force push are ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			2),
+		table.Entry("Without last commit or force push all retests are counted",
 			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
 					Nodes: []types.TimelineItem{
@@ -153,7 +430,7 @@ var _ = Describe("RetestComments", func() {
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -3),
+									CommittedDate: queryDate.AddDate(0, 0, -3),
 								},
 							},
 						},
@@ -180,7 +457,7 @@ var _ = Describe("RetestComments", func() {
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -3),
+									CommittedDate: queryDate.AddDate(0, 0, -3),
 								},
 							},
 						},
@@ -205,7 +482,7 @@ even more lines
 						{
 							PullRequestCommitFragment: types.PullRequestCommitFragment{
 								Commit: types.Commit{
-									PushedDate: queryDate.AddDate(0, 0, -3),
+									CommittedDate: queryDate.AddDate(0, 0, -3),
 								},
 							},
 						},
@@ -225,5 +502,103 @@ even more lines
 				},
 			},
 			2),
+		table.Entry("One retest call after last HeadRef force push, previous after commit/BaseRef force push are ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									CommittedDate: queryDate.AddDate(0, 0, -6),
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			1),
+		table.Entry("One retest call after last BaseRef force push, previous after commit/HeadRef force push are ignored",
+			&types.ChatopsPullRequestFragment{
+				TimelineItems: types.TimelineItems{
+					Nodes: []types.TimelineItem{
+						{
+							PullRequestCommitFragment: types.PullRequestCommitFragment{
+								Commit: types.Commit{
+									CommittedDate: queryDate.AddDate(0, 0, -6),
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -5),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							HeadRefForcePushFragment: types.HeadRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -4),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -3),
+								BodyText:  "/retest",
+							},
+						},
+						{
+							BaseRefForcePushFragment: types.BaseRefForcePushFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -2),
+								Actor: types.Actor{
+									Login: "user1",
+								},
+							},
+						},
+						{
+							IssueCommentFragment: types.IssueCommentFragment{
+								CreatedAt: queryDate.AddDate(0, 0, -1),
+								BodyText:  "/retest",
+							},
+						},
+					},
+				},
+			},
+			1),
 	)
 })
