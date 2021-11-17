@@ -1,6 +1,6 @@
 # ci-health
 
-![ci-health-tests](https://github.com/fgimenez/ci-health/workflows/ci-health-tests/badge.svg)
+![ci-health-tests](https://github.com/kubevirt/ci-health/workflows/ci-health-tests/badge.svg)
 
 This repo contains code to calculate metrics about the performance of CI systems
 based on Prow.
@@ -27,11 +27,11 @@ data from the previous 7 days since the execution time.
 
 ### kubevirt/kubevirt
 
-![avg-merge-queue-lenght](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
-![avg-time-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
-![avg-retests-to-merge](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
+![avg-merge-queue-lenght](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
+![avg-time-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
+![avg-retests-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
 
-[Latest execution data](https://fgimenez.github.io/ci-health/output/kubevirt/kubevirt/results.json)
+[Latest execution data](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/results.json)
 
 [Latest weeks data](https://grafana.ci.kubevirt.io/d/WZU1-LPGz/merge-queue)
 
