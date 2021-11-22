@@ -12,10 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        token: ${{ secrets.BOT_TOKEN }}
+        token: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
     - name: badge update for kubevirt/kubevirt
       env:
-        GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
         SOURCE: kubevirt/kubevirt
       run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
@@ -29,7 +29,7 @@ jobs:
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:
-        author_name: Federico Gimenez
-        author_email: fgimenez@redhat.com
+        author_name: KubeVirt Bot
+        author_email: kubevirtbot@redhat.com
         message: 'Badges updated'
         add: 'output/*'
