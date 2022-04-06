@@ -9,7 +9,7 @@ import (
 	"github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 
-	"github.com/fgimenez/ci-health/pkg/timeutils"
+	"github.com/kubevirt/ci-health/pkg/timeutils"
 )
 
 func TestTimeutils(t *testing.T) {

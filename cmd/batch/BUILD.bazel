@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 go_library(
     name = "batch_lib",
     srcs = ["main.go"],
-    importpath = "github.com/fgimenez/ci-health/cmd/batch",
+    importpath = "github.com/kubevirt/ci-health/cmd/batch",
     visibility = ["//visibility:private"],
     deps = [
         "//pkg/constants",

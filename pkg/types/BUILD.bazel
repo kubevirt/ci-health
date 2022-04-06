@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "types",
     srcs = ["main.go"],
-    importpath = "github.com/fgimenez/ci-health/pkg/types",
+    importpath = "github.com/kubevirt/ci-health/pkg/types",
     visibility = ["//visibility:public"],
     deps = ["//pkg/constants"],
 )

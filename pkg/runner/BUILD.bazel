@@ -6,7 +6,7 @@ go_library(
         "batch.go",
         "runner.go",
     ],
-    importpath = "github.com/fgimenez/ci-health/pkg/runner",
+    importpath = "github.com/kubevirt/ci-health/pkg/runner",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/chatops",

@@ -5,10 +5,10 @@ import (
 	"math"
 	"time"
 
-	"github.com/fgimenez/ci-health/pkg/chatops"
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/mergequeue"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/chatops"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/mergequeue"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 type statsProcessor func(*types.Results) (*types.Results, error)

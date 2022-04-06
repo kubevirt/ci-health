@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "stats",
     srcs = ["stats.go"],
-    importpath = "github.com/fgimenez/ci-health/pkg/stats",
+    importpath = "github.com/kubevirt/ci-health/pkg/stats",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/chatops",
