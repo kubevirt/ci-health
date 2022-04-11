@@ -9,9 +9,9 @@ import (
 	"github.com/narqo/go-badge"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/metrics"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/metrics"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 type Levels struct {

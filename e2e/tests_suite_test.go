@@ -11,9 +11,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/runner"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/runner"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 func TestCiHealth(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"image/color"
 	"time"
 
-	"github.com/fgimenez/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/constants"
 )
 
 const (

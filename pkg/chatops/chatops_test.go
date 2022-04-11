@@ -8,8 +8,8 @@ import (
 	"github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 
-	"github.com/fgimenez/ci-health/pkg/chatops"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/chatops"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 const (

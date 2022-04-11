@@ -8,13 +8,13 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/fgimenez/ci-health/pkg/chatops"
-	"github.com/fgimenez/ci-health/pkg/gh"
-	"github.com/fgimenez/ci-health/pkg/mergequeue"
-	"github.com/fgimenez/ci-health/pkg/metrics"
-	"github.com/fgimenez/ci-health/pkg/output"
-	"github.com/fgimenez/ci-health/pkg/stats"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/chatops"
+	"github.com/kubevirt/ci-health/pkg/gh"
+	"github.com/kubevirt/ci-health/pkg/mergequeue"
+	"github.com/kubevirt/ci-health/pkg/metrics"
+	"github.com/kubevirt/ci-health/pkg/output"
+	"github.com/kubevirt/ci-health/pkg/stats"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 func Run(o *types.Options) (*types.Results, error) {

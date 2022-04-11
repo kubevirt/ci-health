@@ -11,8 +11,8 @@ import (
 	"gonum.org/v1/plot/vg"
 	"gonum.org/v1/plot/vg/draw"
 
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 func Draw(filePath string, data *types.PlotData) error {

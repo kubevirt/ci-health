@@ -9,9 +9,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/gh"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/gh"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 var (

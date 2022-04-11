@@ -12,14 +12,14 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/fgimenez/ci-health/pkg/chatops"
-	"github.com/fgimenez/ci-health/pkg/constants"
-	"github.com/fgimenez/ci-health/pkg/mergequeue"
-	"github.com/fgimenez/ci-health/pkg/output"
-	"github.com/fgimenez/ci-health/pkg/plot"
-	"github.com/fgimenez/ci-health/pkg/stats"
-	"github.com/fgimenez/ci-health/pkg/timeutils"
-	"github.com/fgimenez/ci-health/pkg/types"
+	"github.com/kubevirt/ci-health/pkg/chatops"
+	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/mergequeue"
+	"github.com/kubevirt/ci-health/pkg/output"
+	"github.com/kubevirt/ci-health/pkg/plot"
+	"github.com/kubevirt/ci-health/pkg/stats"
+	"github.com/kubevirt/ci-health/pkg/timeutils"
+	"github.com/kubevirt/ci-health/pkg/types"
 )
 
 func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {

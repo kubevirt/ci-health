@@ -8,7 +8,7 @@ import (
 	"github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 
-	"github.com/fgimenez/ci-health/pkg/output"
+	"github.com/kubevirt/ci-health/pkg/output"
 )
 
 const (
