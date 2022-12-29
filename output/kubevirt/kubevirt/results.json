@@ -1,5 +1,5 @@
 {
- "EndDate": "2022-12-29T03:57:36Z",
+ "EndDate": "2022-12-29T04:16:19Z",
  "DataDays": 7,
  "Source": "kubevirt/kubevirt",
  "Data": {
@@ -9,31 +9,31 @@
    "DataPoints": [
     {
      "Value": 0,
-     "Date": "2022-12-29T03:57:36Z"
+     "Date": "2022-12-29T04:16:19Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-28T03:57:36Z"
+     "Date": "2022-12-28T04:16:19Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-27T03:57:36Z"
+     "Date": "2022-12-27T04:16:19Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-26T03:57:36Z"
+     "Date": "2022-12-26T04:16:19Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-25T03:57:36Z"
+     "Date": "2022-12-25T04:16:19Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-24T03:57:36Z"
+     "Date": "2022-12-24T04:16:19Z"
     },
     {
      "Value": 1,
-     "Date": "2022-12-23T03:57:36Z",
+     "Date": "2022-12-23T04:16:19Z",
      "PRs": [
       {
        "Number": 8649,
@@ -144,6 +144,24 @@
    "Std": 0.98,
    "DataPoints": [
     {
+     "Value": 4,
+     "PRs": [
+      {
+       "Number": 8889,
+       "MergedAt": "2022-12-22T13:38:11Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 8995,
+       "MergedAt": "2022-12-24T13:28:41Z"
+      }
+     ]
+    },
+    {
      "Value": 2,
      "PRs": [
       {
@@ -156,17 +174,17 @@
      "Value": 1,
      "PRs": [
       {
-       "Number": 8987,
-       "MergedAt": "2022-12-22T13:38:18Z"
+       "Number": 8980,
+       "MergedAt": "2022-12-23T00:28:33Z"
       }
      ]
     },
     {
-     "Value": 1,
+     "Value": 2,
      "PRs": [
       {
-       "Number": 8980,
-       "MergedAt": "2022-12-23T00:28:33Z"
+       "Number": 8902,
+       "MergedAt": "2022-12-22T04:33:17Z"
       }
      ]
     },
@@ -192,8 +210,8 @@
      "Value": 1,
      "PRs": [
       {
-       "Number": 8995,
-       "MergedAt": "2022-12-24T13:28:41Z"
+       "Number": 8992,
+       "MergedAt": "2022-12-23T00:28:39Z"
       }
      ]
     },
@@ -201,8 +219,8 @@
      "Value": 1,
      "PRs": [
       {
-       "Number": 8992,
-       "MergedAt": "2022-12-23T00:28:39Z"
+       "Number": 8987,
+       "MergedAt": "2022-12-22T13:38:18Z"
       }
      ]
     },
@@ -214,9 +232,15 @@
        "MergedAt": "2022-12-28T22:58:52Z"
       }
      ]
-    },
+    }
+   ]
+  },
+  "AverageTimeToMerge": {
+   "Avg": 0.41,
+   "Std": 0.19,
+   "DataPoints": [
     {
-     "Value": 2,
+     "Value": 0.7,
      "PRs": [
       {
        "Number": 8902,
@@ -225,26 +249,38 @@
      ]
     },
     {
-     "Value": 4,
+     "Value": 0.25,
      "PRs": [
       {
        "Number": 8889,
        "MergedAt": "2022-12-22T13:38:11Z"
       }
      ]
-    }
-   ]
-  },
-  "AverageTimeToMerge": {
-   "Avg": 0.4,
-   "Std": 0.19,
-   "DataPoints": [
+    },
+    {
+     "Value": 0.57,
+     "PRs": [
+      {
+       "Number": 8649,
+       "MergedAt": "2022-12-23T04:54:33Z"
+      }
+     ]
+    },
     {
      "Value": 0.16,
      "PRs": [
       {
        "Number": 8995,
        "MergedAt": "2022-12-24T13:28:41Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.45,
+     "PRs": [
+      {
+       "Number": 8991,
+       "MergedAt": "2022-12-22T18:45:51Z"
       }
      ]
     },
@@ -267,24 +303,6 @@
      ]
     },
     {
-     "Value": 0.7,
-     "PRs": [
-      {
-       "Number": 8902,
-       "MergedAt": "2022-12-22T04:33:17Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.57,
-     "PRs": [
-      {
-       "Number": 8649,
-       "MergedAt": "2022-12-23T04:54:33Z"
-      }
-     ]
-    },
-    {
      "Value": 0.19,
      "PRs": [
       {
@@ -303,29 +321,11 @@
      ]
     },
     {
-     "Value": 0.45,
-     "PRs": [
-      {
-       "Number": 8991,
-       "MergedAt": "2022-12-22T18:45:51Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.21,
+     "Value": 0.22,
      "PRs": [
       {
        "Number": 8987,
        "MergedAt": "2022-12-22T13:38:18Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.25,
-     "PRs": [
-      {
-       "Number": 8889,
-       "MergedAt": "2022-12-22T13:38:11Z"
       }
      ]
     }
