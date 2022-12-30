@@ -1,5 +1,5 @@
 {
- "EndDate": "2022-12-30T04:15:42Z",
+ "EndDate": "2022-12-30T06:17:44Z",
  "DataDays": 7,
  "Source": "kubevirt/kubevirt",
  "Data": {
@@ -9,36 +9,36 @@
    "DataPoints": [
     {
      "Value": 0,
-     "Date": "2022-12-30T04:15:42Z"
+     "Date": "2022-12-30T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-29T04:15:42Z"
+     "Date": "2022-12-29T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-28T04:15:42Z"
+     "Date": "2022-12-28T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-27T04:15:42Z"
+     "Date": "2022-12-27T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-26T04:15:42Z"
+     "Date": "2022-12-26T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-25T04:15:42Z"
+     "Date": "2022-12-25T06:17:44Z"
     },
     {
      "Value": 0,
-     "Date": "2022-12-24T04:15:42Z"
+     "Date": "2022-12-24T06:17:44Z"
     }
    ]
   },
   "AverageMergedPRs": {
-   "Avg": 0.5714285714285714,
+   "Avg": 0.42857142857142855,
    "Std": 0,
    "DataPoints": [
     {
@@ -67,40 +67,13 @@
        "MergedAt": "2022-12-28T22:58:52Z"
       }
      ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 8649,
-       "MergedAt": "2022-12-23T04:54:33Z"
-      }
-     ]
     }
    ]
   },
   "AverageRetestsToMerge": {
-   "Avg": 1.75,
-   "Std": 0.83,
+   "Avg": 2,
+   "Std": 0.82,
    "DataPoints": [
-    {
-     "Value": 3,
-     "PRs": [
-      {
-       "Number": 8948,
-       "MergedAt": "2022-12-28T22:58:52Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 8649,
-       "MergedAt": "2022-12-23T04:54:33Z"
-      }
-     ]
-    },
     {
      "Value": 2,
      "PRs": [
@@ -118,31 +91,22 @@
        "MergedAt": "2022-12-24T13:28:41Z"
       }
      ]
-    }
-   ]
-  },
-  "AverageTimeToMerge": {
-   "Avg": 0.39,
-   "Std": 0.21,
-   "DataPoints": [
+    },
     {
-     "Value": 0.63,
+     "Value": 3,
      "PRs": [
       {
        "Number": 8948,
        "MergedAt": "2022-12-28T22:58:52Z"
       }
      ]
-    },
-    {
-     "Value": 0.57,
-     "PRs": [
-      {
-       "Number": 8649,
-       "MergedAt": "2022-12-23T04:54:33Z"
-      }
-     ]
-    },
+    }
+   ]
+  },
+  "AverageTimeToMerge": {
+   "Avg": 0.33,
+   "Std": 0.21,
+   "DataPoints": [
     {
      "Value": 0.19,
      "PRs": [
@@ -158,6 +122,15 @@
       {
        "Number": 8995,
        "MergedAt": "2022-12-24T13:28:41Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.63,
+     "PRs": [
+      {
+       "Number": 8948,
+       "MergedAt": "2022-12-28T22:58:52Z"
       }
      ]
     }
