@@ -28,12 +28,14 @@ var (
 		constants.TimeToMergeName,
 		constants.RetestsToMergeName,
 		constants.MergedPRsName,
+		constants.MergedPRsNoRetest,
 	}
 	badgeFileNames = []string{
 		constants.MergeQueueLengthBadgeFileName,
 		constants.TimeToMergeBadgeFileName,
 		constants.RetestsToMergeBadgeFileName,
 		constants.MergedPRsBadgeFileName,
+		constants.MergeQueueLengthBadgeFileName,
 	}
 	avgNames = []string{
 		constants.AvgMergeQueueLengthMetricName,

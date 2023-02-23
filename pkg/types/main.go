@@ -16,10 +16,11 @@ const (
 	FetchMode = "fetch"
 	PlotMode  = "plot"
 
-	MergeQueueLengthMetric Metric = "merge-queue-length"
-	TimeToMergeMetric      Metric = "time-to-merge"
-	RetestsToMergeMetric   Metric = "retests-to-merge"
-	MergedPRsMetric        Metric = "merged-prs"
+	MergeQueueLengthMetric  Metric = "merge-queue-length"
+	TimeToMergeMetric       Metric = "time-to-merge"
+	RetestsToMergeMetric    Metric = "retests-to-merge"
+	MergedPRsMetric         Metric = "merged-prs"
+	MergedPRsNoRetestMetric Metric = "merged-prs-no-retest"
 )
 
 type Metric string
@@ -78,14 +79,16 @@ type Options struct {
 	RequestedAction Action
 
 	// stats options
-	TimeToMergeRedLevel         float64
-	TimeToMergeYellowLevel      float64
-	MergeQueueLengthRedLevel    float64
-	MergeQueueLengthYellowLevel float64
-	RetestsToMergeYellowLevel   float64
-	RetestsToMergeRedLevel      float64
-	MergedPRsYellowLevel        float64
-	MergedPRsRedLevel           float64
+	TimeToMergeRedLevel          float64
+	TimeToMergeYellowLevel       float64
+	MergeQueueLengthRedLevel     float64
+	MergeQueueLengthYellowLevel  float64
+	RetestsToMergeYellowLevel    float64
+	RetestsToMergeRedLevel       float64
+	MergedPRsYellowLevel         float64
+	MergedPRsRedLevel            float64
+	MergedPRsNoRetestYellowLevel float64
+	MergedPRsNoRetestRedLevel    float64
 
 	// batch options
 	Mode         string
@@ -209,11 +212,16 @@ type DataPoint struct {
 type RunningAverageDataItem struct {
 	Avg        float64
 	Std        float64
+	NoRetest   float64
 	DataPoints []DataPoint
 }
 
 func (d *RunningAverageDataItem) String() string {
 	return fmt.Sprintf(constants.BadgeDataFormat, d.Avg, d.Std)
+}
+
+func (d *RunningAverageDataItem) SimpleBadgeString() string {
+	return fmt.Sprintf(constants.NoRetestBadgeDataFormat, d.NoRetest)
 }
 
 // Results represents the data obtained from GitHub. It includes the source repo from which

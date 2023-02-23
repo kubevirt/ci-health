@@ -20,12 +20,13 @@ type Levels struct {
 }
 
 type Options struct {
-	Path                   string
-	Source                 string
-	TimeToMergeLevels      *Levels
-	MergeQueueLengthLevels *Levels
-	RetestsToMergeLevels   *Levels
-	MergedPRsLevels        *Levels
+	Path                     string
+	Source                   string
+	TimeToMergeLevels        *Levels
+	MergeQueueLengthLevels   *Levels
+	RetestsToMergeLevels     *Levels
+	MergedPRsLevels          *Levels
+	MergedPRsNoRetestsLevels *Levels
 }
 
 type Handler struct {
@@ -120,11 +121,20 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		b.options.RetestsToMergeLevels,
 	)
 
+	err = b.writeBadge(
+		constants.MergedPRsNoRetestBadgeName,
+		filepath.Join(basePath, constants.MergedPRsNoRetestBadgeFileName),
+		results.Data[constants.MergedPRsNoRetest],
+		b.options.MergedPRsNoRetestsLevels,
+	)
 	return err
 }
 
 func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
 	color := BadgeColor(data.Avg, levels)
+	if name == constants.MergedPRsNoRetestBadgeName {
+		color = NoRetestBadgeColor(data.NoRetest, levels)
+	}
 
 	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
 	if err != nil {
@@ -133,7 +143,11 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 	defer f.Close()
 
 	log.Debugf("Writing color %s", color)
-	err = badge.Render(name, data.String(), color, f)
+	badgeString := data.String()
+	if name == constants.MergedPRsNoRetestBadgeName {
+		badgeString = data.SimpleBadgeString()
+	}
+	err = badge.Render(name, badgeString, color, f)
 
 	return err
 }
@@ -149,6 +163,18 @@ func BadgeColor(value float64, levels *Levels) badge.Color {
 	if value < levels.Yellow {
 		color = badge.ColorGreen
 	} else if value >= levels.Yellow && value < levels.Red {
+		color = badge.ColorYellow
+	} else {
+		color = badge.ColorRed
+	}
+
+	return color
+}
+func NoRetestBadgeColor(value float64, levels *Levels) badge.Color {
+	var color badge.Color
+	if value > levels.Yellow {
+		color = badge.ColorGreen
+	} else if value <= levels.Yellow && value > levels.Red {
 		color = badge.ColorYellow
 	} else {
 		color = badge.ColorRed
