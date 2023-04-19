@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: quay.io/kubevirtci/bootstrap:v20210715-d0c2b78
+    container: quay.io/kubevirtci/bootstrap:v20230105-1dbefc0
     steps:
     - uses: actions/checkout@v2
     - name: run tests

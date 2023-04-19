@@ -64,6 +64,8 @@ func (h *Handler) Run() (*types.Results, error) {
 			processor = h.retestsToMergeProcessor
 		case types.MergedPRsMetric:
 			processor = h.mergedPRsProcessor
+		case types.MergedPRsNoRetestMetric:
+			processor = h.mergedPRsNoRetestProcessor
 		default:
 			return nil, fmt.Errorf("Unknown metric: %q", targetMetric)
 		}
@@ -185,6 +187,35 @@ func (h *Handler) retestsToMergeProcessor(results *types.Results) (*types.Result
 	return results, nil
 }
 
+func (h *Handler) mergedPRsNoRetestProcessor(results *types.Results) (*types.Results, error) {
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
+
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
+	}
+
+	retestsToMerge, err := h.co.RetestsToMerge(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
+	if err != nil {
+		return nil, err
+	}
+	for pr, retestsToMerge := range retestsToMerge {
+		if retestsToMerge == 0 {
+			dataItem.DataPoints = append(dataItem.DataPoints,
+				types.DataPoint{
+					Value: float64(retestsToMerge),
+					PRs:   []types.PR{pr},
+				})
+		}
+
+	}
+	dataItem.NoRetest = float64(len(dataItem.DataPoints))
+	results.Data[constants.MergedPRsNoRetest] = dataItem
+
+	return results, nil
+}
 func (h *Handler) mergedPRsProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
 	if err != nil {
