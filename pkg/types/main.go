@@ -212,6 +212,7 @@ type DataPoint struct {
 type RunningAverageDataItem struct {
 	Avg        float64
 	Std        float64
+	Number     float64
 	NoRetest   float64
 	DataPoints []DataPoint
 }
@@ -221,7 +222,7 @@ func (d *RunningAverageDataItem) String() string {
 }
 
 func (d *RunningAverageDataItem) SimpleBadgeString() string {
-	return fmt.Sprintf(constants.NoRetestBadgeDataFormat, d.NoRetest)
+	return fmt.Sprintf(constants.NoRetestBadgeDataFormat, d.NoRetest, d.Number)
 }
 
 // Results represents the data obtained from GitHub. It includes the source repo from which

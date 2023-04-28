@@ -212,6 +212,7 @@ func (h *Handler) mergedPRsNoRetestProcessor(results *types.Results) (*types.Res
 
 	}
 	dataItem.NoRetest = float64(len(dataItem.DataPoints))
+	dataItem.Number = float64(len(retestsToMerge))
 	results.Data[constants.MergedPRsNoRetest] = dataItem
 
 	return results, nil
