@@ -136,7 +136,7 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 		color = NoRetestBadgeColor(data.NoRetest, levels)
 	}
 
-	f, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, 0755)
+	f, err := os.Create(filePath)
 	if err != nil {
 		return err
 	}
