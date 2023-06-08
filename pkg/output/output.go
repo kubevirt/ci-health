@@ -133,7 +133,7 @@ func (b *Handler) writeBadges(results *types.Results) error {
 func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
 	color := BadgeColor(data.Avg, levels)
 	if name == constants.MergedPRsNoRetestBadgeName {
-		color = NoRetestBadgeColor(data.NoRetest, levels)
+		color = NoRetestBadgeColor(data.NoRetest, data.Number, levels)
 	}
 
 	f, err := os.Create(filePath)
@@ -170,11 +170,19 @@ func BadgeColor(value float64, levels *Levels) badge.Color {
 
 	return color
 }
-func NoRetestBadgeColor(value float64, levels *Levels) badge.Color {
+func NoRetestBadgeColor(value float64, mergedPRs float64, levels *Levels) badge.Color {
 	var color badge.Color
-	if value > levels.Yellow {
+	var percentVal float64
+	if value == 0 {
+		percentVal = 0
+	} else if mergedPRs == 0 {
+		percentVal = 0
+	} else {
+		percentVal = value / mergedPRs
+	}
+	if percentVal > levels.Yellow {
 		color = badge.ColorGreen
-	} else if value <= levels.Yellow && value > levels.Red {
+	} else if percentVal <= levels.Yellow && percentVal > levels.Red {
 		color = badge.ColorYellow
 	} else {
 		color = badge.ColorRed
