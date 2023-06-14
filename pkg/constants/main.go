@@ -29,8 +29,8 @@ const (
 	DefaultRetestsToMergeRedLevel       = 6.0
 	DefaultMergedPRsYellowLevel         = 10.0
 	DefaultMergedPRsRedLevel            = 7.0
-	DefaultMergedPRsNoRetestYellowLevel = 5.0
-	DefaultMergedPRsNoRetestRedLevel    = 0.0
+	DefaultMergedPRsNoRetestYellowLevel = 0.5
+	DefaultMergedPRsNoRetestRedLevel    = 0.25
 	DefaultBatchStartDate               = "2019-05-06"
 
 	TimeToMergeBadgeFileName       = "time-to-merge.svg"
