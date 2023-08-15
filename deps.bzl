@@ -326,6 +326,13 @@ def go_dependencies():
         version = "v1.51.0",
     )
     go_repository(
+        name = "in_gopkg_yaml_v3",
+        importpath = "gopkg.in/yaml.v3",
+        sum = "h1:grhR+C34yXImVGp7EzNk+DTIk+323eIUWOmEevy6bDo=",
+        version = "v3.0.0-20200605160147-a5ece683394c",
+    )
+
+    go_repository(
         name = "io_k8s_klog",
         importpath = "k8s.io/klog",
         sum = "h1:Pt+yjF5aB1xDSVbau4VsWe+dQNzA0qv1LlXdC2dF6Q8=",
