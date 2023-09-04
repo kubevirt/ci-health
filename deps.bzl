@@ -95,6 +95,13 @@ def go_dependencies():
         version = "v0.2.0",
     )
     go_repository(
+        name = "com_github_go_task_slim_sprig",
+        importpath = "github.com/go-task/slim-sprig",
+        sum = "h1:p104kn46Q8WdvHunIJ9dAyjPVtrBPhSr3KT2yUst43I=",
+        version = "v0.0.0-20210107165309-348f09dbbbc0",
+    )
+
+    go_repository(
         name = "com_github_golang_freetype",
         importpath = "github.com/golang/freetype",
         sum = "h1:DACJavvAHhabrF08vX0COfcOBJRhZ8lUbR+ZWIs0Y5g=",
@@ -179,15 +186,15 @@ def go_dependencies():
     go_repository(
         name = "com_github_narqo_go_badge",
         importpath = "github.com/narqo/go-badge",
-        sum = "h1:lSUO7QQDM/xQhU8S8dztFkwbuMeArUK6Ymxh3qja5HM=",
-        version = "v0.0.0-20190124110329-d9415e4e1e9f",
+        sum = "h1:G6Kjw+HNpJUZY1bfBkd8XOZ7nuDWmXLaJukeiM2Xv7o=",
+        version = "v0.0.0-20221212191103-ba83bed45a1a",
     )
 
     go_repository(
         name = "com_github_nxadm_tail",
         importpath = "github.com/nxadm/tail",
-        sum = "h1:DQuhQpB1tVlglWS2hLQ5OV6B5r8aGxSrPc5Qo6uTN78=",
-        version = "v1.4.4",
+        sum = "h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=",
+        version = "v1.4.8",
     )
 
     go_repository(
@@ -279,8 +286,8 @@ def go_dependencies():
     go_repository(
         name = "com_github_yuin_goldmark",
         importpath = "github.com/yuin/goldmark",
-        sum = "h1:5tjfNdR2ki3yYQ842+eX2sQHeiwpKJ0RnHO4IYOc4V8=",
-        version = "v1.1.32",
+        sum = "h1:ruQGxdhGHe7FWOJPT0mKs5+pD2Xs1Bm/kdGlHO04FmM=",
+        version = "v1.2.1",
     )
 
     go_repository(
@@ -326,6 +333,13 @@ def go_dependencies():
         version = "v1.51.0",
     )
     go_repository(
+        name = "in_gopkg_yaml_v3",
+        importpath = "gopkg.in/yaml.v3",
+        sum = "h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=",
+        version = "v3.0.1",
+    )
+
+    go_repository(
         name = "io_k8s_klog",
         importpath = "k8s.io/klog",
         sum = "h1:Pt+yjF5aB1xDSVbau4VsWe+dQNzA0qv1LlXdC2dF6Q8=",
@@ -359,8 +373,8 @@ def go_dependencies():
     go_repository(
         name = "org_golang_x_image",
         importpath = "golang.org/x/image",
-        sum = "h1:lP9pYkih3DUSC641giIXa2XqfTIbbbRr0w2EOTA7wHA=",
-        version = "v0.0.0-20210216034530-4410531fe030",
+        sum = "h1:hTftEOvwiOq2+O8k2D5/Q7COC7k5Qcrgc2TFURJYnvQ=",
+        version = "v0.0.0-20211028202545-6944b10bf410",
     )
     go_repository(
         name = "org_golang_x_mobile",

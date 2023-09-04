@@ -185,29 +185,29 @@ go_repository(
 go_repository(
     name = "com_github_coreos_go_semver",
     importpath = "github.com/coreos/go-semver",
-    sum = "h1:wkHLiw0WNATZnSG7epLsujiMCgPAc9xhjJ4tgnAxmfM=",
-    version = "v0.3.0",
+    sum = "h1:3Jm3tLmsgAYcjC+4Up7hJrFBPr+n7rAqYeSw/SZazuY=",
+    version = "v0.2.0",
 )
 
 go_repository(
     name = "com_github_coreos_go_systemd",
     importpath = "github.com/coreos/go-systemd",
-    sum = "h1:Wf6HqHfScWJN9/ZjdUKyjop4mf3Qdd+1TvvltAvM3m8=",
-    version = "v0.0.0-20190321100706-95778dfbb74e",
+    sum = "h1:u9SHYsPQNyt5tgDm3YN7+9dYrpK96E5wFilTFWIDZOM=",
+    version = "v0.0.0-20180511133405-39ca1b05acc7",
 )
 
 go_repository(
     name = "com_github_coreos_pkg",
     importpath = "github.com/coreos/pkg",
-    sum = "h1:lBNOc5arjvs8E5mO2tbpBpLoyyu8B6e44T7hJy6potg=",
-    version = "v0.0.0-20180928190104-399ea9e2e55f",
+    sum = "h1:CAKfRE2YtTUIjjh1bkBtyYFaUT/WmOqsJjgtihT0vMI=",
+    version = "v0.0.0-20160727233714-3ac0863d7acf",
 )
 
 go_repository(
     name = "com_github_cpuguy83_go_md2man_v2",
     importpath = "github.com/cpuguy83/go-md2man/v2",
-    sum = "h1:EoUDS0afbrsXAZ9YQ9jdu/mZ2sXgT1/2yyNng4PGlyM=",
-    version = "v2.0.0",
+    sum = "h1:p1EgwI/C7NhT0JmVkwCD2ZBK8j4aeHQX2pMHHBfMQ6w=",
+    version = "v2.0.2",
 )
 
 go_repository(
@@ -451,8 +451,8 @@ go_repository(
 go_repository(
     name = "com_github_gorilla_websocket",
     importpath = "github.com/gorilla/websocket",
-    sum = "h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=",
-    version = "v1.4.2",
+    sum = "h1:Lh2aW+HnU2Nbe1gqD9SOJLJxW1jBMmQOktN2acDyJk8=",
+    version = "v0.0.0-20170926233335-4201258b820c",
 )
 
 go_repository(
@@ -619,8 +619,8 @@ go_repository(
 go_repository(
     name = "com_github_inconshreveable_mousetrap",
     importpath = "github.com/inconshreveable/mousetrap",
-    sum = "h1:Z8tu5sraLXCXIcARxBp/8cbvlwVa7Z1NHg9XEKhtSvM=",
-    version = "v1.0.0",
+    sum = "h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=",
+    version = "v1.1.0",
 )
 
 go_repository(
@@ -794,8 +794,8 @@ go_repository(
 go_repository(
     name = "com_github_mitchellh_go_homedir",
     importpath = "github.com/mitchellh/go-homedir",
-    sum = "h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=",
-    version = "v1.1.0",
+    sum = "h1:vKb8ShqSby24Yrqr/yDYkuFz8d0WUjys40rvnGC8aR0=",
+    version = "v1.0.0",
 )
 
 go_repository(
@@ -906,8 +906,8 @@ go_repository(
 go_repository(
     name = "com_github_onsi_ginkgo",
     importpath = "github.com/onsi/ginkgo",
-    sum = "h1:8mVmC9kjFFmA8H4pKMUhcblgifdkOIXPvbhN1T36q1M=",
-    version = "v1.14.2",
+    sum = "h1:8xi0RTUf59SOSfEtZMvwTvXYMzG4gV23XVHOZiXNtnE=",
+    version = "v1.16.5",
 )
 
 go_repository(
@@ -1074,8 +1074,8 @@ go_repository(
 go_repository(
     name = "com_github_russross_blackfriday_v2",
     importpath = "github.com/russross/blackfriday/v2",
-    sum = "h1:lPqVAte+HuHNfhJ/0LC98ESWRz8afy9tM/0RK8m9o+Q=",
-    version = "v2.0.1",
+    sum = "h1:JIOH55/0cWyOuilr9/qlrm0BSXldqnqwMsf35Ld67mk=",
+    version = "v2.1.0",
 )
 
 go_repository(
@@ -1123,8 +1123,8 @@ go_repository(
 go_repository(
     name = "com_github_sirupsen_logrus",
     importpath = "github.com/sirupsen/logrus",
-    sum = "h1:ShrD1U9pZB12TX0cVy0DtePoCH97K8EtX+mg7ZARUtM=",
-    version = "v1.7.0",
+    sum = "h1:dueUQJ1C2q9oE3F7wvmSGAaVtTmUizReu6fjN8uqzbQ=",
+    version = "v1.9.3",
 )
 
 go_repository(
@@ -1158,8 +1158,8 @@ go_repository(
 go_repository(
     name = "com_github_spf13_cobra",
     importpath = "github.com/spf13/cobra",
-    sum = "h1:KfztREH0tPxJJ+geloSLaAkaPkr4ki2Er5quFV1TDo4=",
-    version = "v1.1.1",
+    sum = "h1:hyqWnYt1ZQShIddO5kBpj3vu05/++x6tJ6dg8EC572I=",
+    version = "v1.7.0",
 )
 
 go_repository(
@@ -1193,15 +1193,15 @@ go_repository(
 go_repository(
     name = "com_github_stretchr_testify",
     importpath = "github.com/stretchr/testify",
-    sum = "h1:2E4SXV/wtOkTonXsotYi4li6zVWxYlZuYNCXe9XRJyk=",
-    version = "v1.4.0",
+    sum = "h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=",
+    version = "v1.7.0",
 )
 
 go_repository(
     name = "com_github_tmc_grpc_websocket_proxy",
     importpath = "github.com/tmc/grpc-websocket-proxy",
-    sum = "h1:LnC5Kc/wtumK+WB441p7ynQJzVuNRJiqddSIE3IlSEQ=",
-    version = "v0.0.0-20190109142713-0ad062ec5ee5",
+    sum = "h1:ndzgwNDnKIqyCvHTXaCqh9KlOWKvBry6nuXMJmonVsE=",
+    version = "v0.0.0-20170815181823-89b8d40f7ca8",
 )
 
 go_repository(
@@ -1418,22 +1418,22 @@ go_repository(
 go_repository(
     name = "org_golang_x_sync",
     importpath = "golang.org/x/sync",
-    sum = "h1:qwRHBd0NqMbJxfbotnDhm2ByMI1Shq4Y6oRJo21SGJA=",
-    version = "v0.0.0-20200625203802-6e8e738ad208",
+    sum = "h1:SQFwaSi55rU7vdNs9Yr0Z324VNlrF+0wMqRXT4St8ck=",
+    version = "v0.0.0-20201020160332-67f06af15bc9",
 )
 
 go_repository(
     name = "org_golang_x_sys",
     importpath = "golang.org/x/sys",
-    sum = "h1:7+SpRyhoo46QjKkYInQXpcfxx3TYFEYkn131lwGE9/0=",
-    version = "v0.0.0-20210304124612-50617c2ba197",
+    sum = "h1:0A+M6Uqn+Eje4kHMK80dtF3JCXC4ykBgQG4Fe06QRhQ=",
+    version = "v0.0.0-20220715151400-c0bba94af5f8",
 )
 
 go_repository(
     name = "org_golang_x_text",
     importpath = "golang.org/x/text",
-    sum = "h1:i6eZZ+zk0SOf0xgBpEpPD18qWcJda6q1sxt3S0kzyUQ=",
-    version = "v0.3.5",
+    sum = "h1:aRYxNxv6iGQlyVaZmk6ZgYEDa+Jg18DxebPSrd6bg1M=",
+    version = "v0.3.6",
 )
 
 go_repository(
@@ -1446,8 +1446,8 @@ go_repository(
 go_repository(
     name = "org_golang_x_tools",
     importpath = "golang.org/x/tools",
-    sum = "h1:W07d4xkoAUSNOkOzdzXCdFGxT7o2rW4q8M34tB2i//k=",
-    version = "v0.0.0-20200825202427-b303f430e36d",
+    sum = "h1:4nW4NLDYnU28ojHaHO8OVxFHk/aQ33U01a9cjED+pzE=",
+    version = "v0.0.0-20201224043029-2b0845dc783e",
 )
 
 go_repository(
@@ -1490,8 +1490,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 git_repository(
     name = "com_google_protobuf",
     commit = "bc799d78f81115940eec953e2937245c70e3e6e4",
-    shallow_since = "1648147893 -0700",
     remote = "https://github.com/protocolbuffers/protobuf",
+    shallow_since = "1648147893 -0700",
 )
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
