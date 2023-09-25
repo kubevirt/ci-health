@@ -1,43 +1,47 @@
 {
- "EndDate": "2023-09-25T12:23:46Z",
+ "EndDate": "2023-09-25T12:49:43Z",
  "DataDays": 7,
  "Source": "kubevirt/kubevirt",
  "Data": {
   "AverageMergeQueueLength": {
-   "Avg": 0.71,
-   "Std": 1.03,
+   "Avg": 0.86,
+   "Std": 1.12,
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
     {
-     "Value": 1,
-     "Date": "2023-09-25T12:23:46Z",
+     "Value": 2,
+     "Date": "2023-09-25T12:49:43Z",
      "PRs": [
       {
        "Number": 10472,
+       "MergedAt": "0001-01-01T00:00:00Z"
+      },
+      {
+       "Number": 10231,
        "MergedAt": "0001-01-01T00:00:00Z"
       }
      ]
     },
     {
      "Value": 0,
-     "Date": "2023-09-24T12:23:46Z"
+     "Date": "2023-09-24T12:49:43Z"
     },
     {
      "Value": 0,
-     "Date": "2023-09-23T12:23:46Z"
+     "Date": "2023-09-23T12:49:43Z"
     },
     {
      "Value": 0,
-     "Date": "2023-09-22T12:23:46Z"
+     "Date": "2023-09-22T12:49:43Z"
     },
     {
      "Value": 0,
-     "Date": "2023-09-21T12:23:46Z"
+     "Date": "2023-09-21T12:49:43Z"
     },
     {
      "Value": 3,
-     "Date": "2023-09-20T12:23:46Z",
+     "Date": "2023-09-20T12:49:43Z",
      "PRs": [
       {
        "Number": 10453,
@@ -55,7 +59,7 @@
     },
     {
      "Value": 1,
-     "Date": "2023-09-19T12:23:46Z",
+     "Date": "2023-09-19T12:49:43Z",
      "PRs": [
       {
        "Number": 10419,
@@ -152,15 +156,6 @@
    "NoRetest": 0,
    "DataPoints": [
     {
-     "Value": 3,
-     "PRs": [
-      {
-       "Number": 10007,
-       "MergedAt": "2023-09-20T15:00:24Z"
-      }
-     ]
-    },
-    {
      "Value": 1,
      "PRs": [
       {
@@ -222,6 +217,15 @@
        "MergedAt": "2023-09-21T03:38:23Z"
       }
      ]
+    },
+    {
+     "Value": 3,
+     "PRs": [
+      {
+       "Number": 10007,
+       "MergedAt": "2023-09-20T15:00:24Z"
+      }
+     ]
     }
    ]
   },
@@ -231,24 +235,6 @@
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
-    {
-     "Value": 0.18,
-     "PRs": [
-      {
-       "Number": 10424,
-       "MergedAt": "2023-09-20T14:08:24Z"
-      }
-     ]
-    },
-    {
-     "Value": 1.28,
-     "PRs": [
-      {
-       "Number": 10419,
-       "MergedAt": "2023-09-19T13:02:23Z"
-      }
-     ]
-    },
     {
      "Value": 0.29,
      "PRs": [
@@ -300,6 +286,24 @@
       {
        "Number": 10433,
        "MergedAt": "2023-09-19T14:40:23Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.18,
+     "PRs": [
+      {
+       "Number": 10424,
+       "MergedAt": "2023-09-20T14:08:24Z"
+      }
+     ]
+    },
+    {
+     "Value": 1.28,
+     "PRs": [
+      {
+       "Number": 10419,
+       "MergedAt": "2023-09-19T13:02:23Z"
       }
      ]
     }
