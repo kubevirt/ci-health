@@ -8,6 +8,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"time"
 
 	log "github.com/sirupsen/logrus"
@@ -79,7 +80,7 @@ func batchPlotRun(o *types.Options) (*types.Results, error) {
 	// read batch fetch results in batch data dir
 	dataBase := batchDataPath(o.Path, o.Source, string(o.TargetMetric))
 
-	curves, err := gatherPlotData(dataBase, types.Metric(o.TargetMetric))
+	curves, err := gatherPlotData(dataBase, types.Metric(o.TargetMetric), o.StartDate)
 	if err != nil {
 		return nil, err
 	}
@@ -119,7 +120,7 @@ func batchPlotPath(base, source, metric string) string {
 	)
 }
 
-func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error) {
+func gatherPlotData(basePath string, metric types.Metric, startDate string) ([]types.Curve, error) {
 	totalCurves := 2
 	curves := make([]types.Curve, totalCurves)
 	for i := 0; i < totalCurves; i++ {
@@ -134,7 +135,29 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 
 	metricName := metric.ResultsName()
 
-	err := filepath.Walk(basePath, func(entryPath string, info os.FileInfo, err error) error {
+	dateExtractRegex := regexp.MustCompile(`([0-9]{4}-[0-9]{2}-[0-9]{2})`)
+	startDateToCheck, err := time.Parse("2006-01-02", startDate)
+	if err != nil {
+		return nil, err
+	}
+	shouldFilterByStartDate := func(entryPath string) (bool, error) {
+		if startDate == "" {
+			return false, nil
+		}
+		if !dateExtractRegex.MatchString(entryPath) {
+			return false, nil
+		}
+		parsedDate, err := time.Parse("2006-01-02", dateExtractRegex.FindString(entryPath))
+		if err != nil {
+			return false, err
+		}
+		if !parsedDate.Before(startDateToCheck) {
+			return false, nil
+		}
+		return true, nil
+	}
+
+	err = filepath.Walk(basePath, func(entryPath string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
 		}
@@ -142,6 +165,13 @@ func gatherPlotData(basePath string, metric types.Metric) ([]types.Curve, error)
 			return nil
 		}
 		if entryPath == basePath {
+			return nil
+		}
+		filter, err := shouldFilterByStartDate(entryPath)
+		if err != nil {
+			return err
+		}
+		if filter {
 			return nil
 		}
 
