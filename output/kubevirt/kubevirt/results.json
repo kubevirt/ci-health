@@ -1,22 +1,18 @@
 {
- "EndDate": "2024-01-16T13:03:58Z",
+ "EndDate": "2024-01-16T15:14:00Z",
  "DataDays": 7,
  "Source": "kubevirt/kubevirt",
  "Data": {
   "AverageMergeQueueLength": {
-   "Avg": 1.86,
-   "Std": 1.96,
+   "Avg": 2,
+   "Std": 2.62,
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
     {
-     "Value": 2,
-     "Date": "2024-01-16T13:03:58Z",
+     "Value": 1,
+     "Date": "2024-01-16T15:14:00Z",
      "PRs": [
-      {
-       "Number": 11023,
-       "MergedAt": "0001-01-01T00:00:00Z"
-      },
       {
        "Number": 10993,
        "MergedAt": "0001-01-01T00:00:00Z"
@@ -25,7 +21,7 @@
     },
     {
      "Value": 1,
-     "Date": "2024-01-15T13:03:58Z",
+     "Date": "2024-01-15T15:14:00Z",
      "PRs": [
       {
        "Number": 11016,
@@ -35,15 +31,15 @@
     },
     {
      "Value": 0,
-     "Date": "2024-01-14T13:03:58Z"
+     "Date": "2024-01-14T15:14:00Z"
     },
     {
      "Value": 0,
-     "Date": "2024-01-13T13:03:58Z"
+     "Date": "2024-01-13T15:14:00Z"
     },
     {
      "Value": 1,
-     "Date": "2024-01-12T13:03:58Z",
+     "Date": "2024-01-12T15:14:00Z",
      "PRs": [
       {
        "Number": 11008,
@@ -53,7 +49,7 @@
     },
     {
      "Value": 3,
-     "Date": "2024-01-11T13:03:58Z",
+     "Date": "2024-01-11T15:14:00Z",
      "PRs": [
       {
        "Number": 10999,
@@ -70,8 +66,8 @@
      ]
     },
     {
-     "Value": 6,
-     "Date": "2024-01-10T13:03:58Z",
+     "Value": 8,
+     "Date": "2024-01-10T15:14:00Z",
      "PRs": [
       {
        "Number": 10996,
@@ -80,6 +76,10 @@
       {
        "Number": 10990,
        "MergedAt": "2024-01-10T21:46:55Z"
+      },
+      {
+       "Number": 10989,
+       "MergedAt": "2024-01-10T21:46:49Z"
       },
       {
        "Number": 10984,
@@ -96,17 +96,30 @@
       {
        "Number": 10953,
        "MergedAt": "2024-01-12T01:04:47Z"
+      },
+      {
+       "Number": 10434,
+       "MergedAt": "2024-01-11T04:18:39Z"
       }
      ]
     }
    ]
   },
   "AverageMergedPRs": {
-   "Avg": 2.857142857142857,
+   "Avg": 3,
    "Std": 0,
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 11023,
+       "MergedAt": "2024-01-16T15:07:59Z"
+      }
+     ]
+    },
     {
      "Value": 1,
      "PRs": [
@@ -290,17 +303,98 @@
    ]
   },
   "AverageRetestsToMerge": {
-   "Avg": 2.2,
-   "Std": 1.5,
+   "Avg": 2.29,
+   "Std": 1.52,
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
     {
-     "Value": 5,
+     "Value": 1,
      "PRs": [
       {
-       "Number": 10990,
-       "MergedAt": "2024-01-10T21:46:55Z"
+       "Number": 10847,
+       "MergedAt": "2024-01-11T16:58:41Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 11016,
+       "MergedAt": "2024-01-16T06:42:00Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 10984,
+       "MergedAt": "2024-01-10T21:22:53Z"
+      }
+     ]
+    },
+    {
+     "Value": 4,
+     "PRs": [
+      {
+       "Number": 10874,
+       "MergedAt": "2024-01-10T12:16:38Z"
+      }
+     ]
+    },
+    {
+     "Value": 3,
+     "PRs": [
+      {
+       "Number": 10988,
+       "MergedAt": "2024-01-10T00:46:37Z"
+      }
+     ]
+    },
+    {
+     "Value": 3,
+     "PRs": [
+      {
+       "Number": 10963,
+       "MergedAt": "2024-01-10T21:22:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 10962,
+       "MergedAt": "2024-01-10T03:10:37Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 10434,
+       "MergedAt": "2024-01-11T04:18:39Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 11008,
+       "MergedAt": "2024-01-12T20:23:56Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 10999,
+       "MergedAt": "2024-01-11T20:24:40Z"
       }
      ]
     },
@@ -310,6 +404,15 @@
       {
        "Number": 10989,
        "MergedAt": "2024-01-10T21:46:49Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 10953,
+       "MergedAt": "2024-01-12T01:04:47Z"
       }
      ]
     },
@@ -326,35 +429,8 @@
      "Value": 2,
      "PRs": [
       {
-       "Number": 11016,
-       "MergedAt": "2024-01-16T06:42:00Z"
-      }
-     ]
-    },
-    {
-     "Value": 6,
-     "PRs": [
-      {
-       "Number": 10972,
-       "MergedAt": "2024-01-11T04:18:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 3,
-     "PRs": [
-      {
-       "Number": 10963,
-       "MergedAt": "2024-01-10T21:22:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 10953,
-       "MergedAt": "2024-01-12T01:04:47Z"
+       "Number": 10890,
+       "MergedAt": "2024-01-11T11:38:40Z"
       }
      ]
     },
@@ -362,17 +438,8 @@
      "Value": 4,
      "PRs": [
       {
-       "Number": 10874,
-       "MergedAt": "2024-01-10T12:16:38Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 10434,
-       "MergedAt": "2024-01-11T04:18:39Z"
+       "Number": 11023,
+       "MergedAt": "2024-01-16T15:07:59Z"
       }
      ]
     },
@@ -386,20 +453,11 @@
      ]
     },
     {
-     "Value": 1,
+     "Value": 2,
      "PRs": [
       {
-       "Number": 10999,
-       "MergedAt": "2024-01-11T20:24:40Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 10984,
-       "MergedAt": "2024-01-10T21:22:53Z"
+       "Number": 10987,
+       "MergedAt": "2024-01-10T12:16:45Z"
       }
      ]
     },
@@ -407,26 +465,8 @@
      "Value": 2,
      "PRs": [
       {
-       "Number": 10962,
-       "MergedAt": "2024-01-10T03:10:37Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 10847,
-       "MergedAt": "2024-01-11T16:58:41Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 11008,
-       "MergedAt": "2024-01-12T20:23:56Z"
+       "Number": 10804,
+       "MergedAt": "2024-01-12T01:04:40Z"
       }
      ]
     },
@@ -440,55 +480,46 @@
      ]
     },
     {
-     "Value": 3,
+     "Value": 5,
      "PRs": [
       {
-       "Number": 10988,
-       "MergedAt": "2024-01-10T00:46:37Z"
+       "Number": 10990,
+       "MergedAt": "2024-01-10T21:46:55Z"
       }
      ]
     },
     {
-     "Value": 2,
+     "Value": 6,
      "PRs": [
       {
-       "Number": 10987,
-       "MergedAt": "2024-01-10T12:16:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 10890,
-       "MergedAt": "2024-01-11T11:38:40Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 10804,
-       "MergedAt": "2024-01-12T01:04:40Z"
+       "Number": 10972,
+       "MergedAt": "2024-01-11T04:18:46Z"
       }
      ]
     }
    ]
   },
   "AverageTimeToMerge": {
-   "Avg": 0.84,
+   "Avg": 0.81,
    "Std": 0.6,
    "Number": 0,
    "NoRetest": 0,
    "DataPoints": [
     {
-     "Value": 1.18,
+     "Value": 0.28,
      "PRs": [
       {
-       "Number": 10987,
-       "MergedAt": "2024-01-10T12:16:45Z"
+       "Number": 10989,
+       "MergedAt": "2024-01-10T21:46:49Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.45,
+     "PRs": [
+      {
+       "Number": 10984,
+       "MergedAt": "2024-01-10T21:22:53Z"
       }
      ]
     },
@@ -502,42 +533,6 @@
      ]
     },
     {
-     "Value": 1.58,
-     "PRs": [
-      {
-       "Number": 10962,
-       "MergedAt": "2024-01-10T03:10:37Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.6,
-     "PRs": [
-      {
-       "Number": 10434,
-       "MergedAt": "2024-01-11T04:18:39Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.45,
-     "PRs": [
-      {
-       "Number": 11008,
-       "MergedAt": "2024-01-12T20:23:56Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.94,
-     "PRs": [
-      {
-       "Number": 10996,
-       "MergedAt": "2024-01-11T10:56:46Z"
-      }
-     ]
-    },
-    {
      "Value": 0.59,
      "PRs": [
       {
@@ -547,11 +542,11 @@
      ]
     },
     {
-     "Value": 0.6,
+     "Value": 1.1,
      "PRs": [
       {
-       "Number": 11016,
-       "MergedAt": "2024-01-16T06:42:00Z"
+       "Number": 10874,
+       "MergedAt": "2024-01-10T12:16:38Z"
       }
      ]
     },
@@ -574,38 +569,11 @@
      ]
     },
     {
-     "Value": 1.36,
+     "Value": 0.94,
      "PRs": [
       {
-       "Number": 10990,
-       "MergedAt": "2024-01-10T21:46:55Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.28,
-     "PRs": [
-      {
-       "Number": 10989,
-       "MergedAt": "2024-01-10T21:46:49Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.54,
-     "PRs": [
-      {
-       "Number": 10988,
-       "MergedAt": "2024-01-10T00:46:37Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.45,
-     "PRs": [
-      {
-       "Number": 10984,
-       "MergedAt": "2024-01-10T21:22:53Z"
+       "Number": 10996,
+       "MergedAt": "2024-01-11T10:56:46Z"
       }
      ]
     },
@@ -628,11 +596,20 @@
      ]
     },
     {
-     "Value": 1.1,
+     "Value": 0.6,
      "PRs": [
       {
-       "Number": 10874,
-       "MergedAt": "2024-01-10T12:16:38Z"
+       "Number": 10434,
+       "MergedAt": "2024-01-11T04:18:39Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.2,
+     "PRs": [
+      {
+       "Number": 11023,
+       "MergedAt": "2024-01-16T15:07:59Z"
       }
      ]
     },
@@ -644,17 +621,45 @@
        "MergedAt": "2024-01-11T20:24:40Z"
       }
      ]
-    }
-   ]
-  },
-  "PRsMergedWithNoRetest": {
-   "Avg": 0,
-   "Std": 0,
-   "Number": 20,
-   "NoRetest": 2,
-   "DataPoints": [
+    },
     {
-     "Value": 0,
+     "Value": 0.6,
+     "PRs": [
+      {
+       "Number": 11016,
+       "MergedAt": "2024-01-16T06:42:00Z"
+      }
+     ]
+    },
+    {
+     "Value": 1.18,
+     "PRs": [
+      {
+       "Number": 10987,
+       "MergedAt": "2024-01-10T12:16:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.54,
+     "PRs": [
+      {
+       "Number": 10988,
+       "MergedAt": "2024-01-10T00:46:37Z"
+      }
+     ]
+    },
+    {
+     "Value": 1.58,
+     "PRs": [
+      {
+       "Number": 10962,
+       "MergedAt": "2024-01-10T03:10:37Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.45,
      "PRs": [
       {
        "Number": 11008,
@@ -663,11 +668,37 @@
      ]
     },
     {
+     "Value": 1.36,
+     "PRs": [
+      {
+       "Number": 10990,
+       "MergedAt": "2024-01-10T21:46:55Z"
+      }
+     ]
+    }
+   ]
+  },
+  "PRsMergedWithNoRetest": {
+   "Avg": 0,
+   "Std": 0,
+   "Number": 21,
+   "NoRetest": 2,
+   "DataPoints": [
+    {
      "Value": 0,
      "PRs": [
       {
        "Number": 10953,
        "MergedAt": "2024-01-12T01:04:47Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 11008,
+       "MergedAt": "2024-01-12T20:23:56Z"
       }
      ]
     }
