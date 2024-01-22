@@ -53,9 +53,14 @@ func (co *Handler) RetestsToMerge(startDate, endDate time.Time) (map[types.PR]in
 // after the last commit or force push.
 func RetestComments(pr *types.ChatopsPullRequestFragment) int {
 	var total int
+	const phase2Intro = "Required labels detected, running phase 2 presubmits:"
+
 	lastPush := determineLastPush(pr)
 
 	for _, timelineItem := range pr.TimelineItems.Nodes {
+		if strings.Contains(timelineItem.BodyText, phase2Intro) {
+			continue
+		}
 		if isRetestCommentAfterLastPush(timelineItem, lastPush) {
 			total += 1
 		}
