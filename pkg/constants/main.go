@@ -23,10 +23,10 @@ const (
 	DefaultLogLevel                     = "info"
 	DefaultTimeToMergeYellowLevel       = 1.0
 	DefaultTimeToMergeRedLevel          = 3.0
-	DefaultMergeQueueLengthYellowLevel  = 8.0
-	DefaultMergeQueueLengthRedLevel     = 15.0
-	DefaultRetestsToMergeYellowLevel    = 3.0
-	DefaultRetestsToMergeRedLevel       = 6.0
+	DefaultMergeQueueLengthYellowLevel  = 4.0
+	DefaultMergeQueueLengthRedLevel     = 8.0
+	DefaultRetestsToMergeYellowLevel    = 1.5
+	DefaultRetestsToMergeRedLevel       = 3.0
 	DefaultMergedPRsYellowLevel         = 10.0
 	DefaultMergedPRsRedLevel            = 7.0
 	DefaultMergedPRsNoRetestYellowLevel = 0.75
