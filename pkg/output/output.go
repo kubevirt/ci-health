@@ -2,6 +2,7 @@ package output
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -27,6 +28,7 @@ type Options struct {
 	RetestsToMergeLevels     *Levels
 	MergedPRsLevels          *Levels
 	MergedPRsNoRetestsLevels *Levels
+	SIGRetestsLevels         *Levels
 }
 
 type Handler struct {
@@ -127,6 +129,35 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.MergedPRsNoRetest],
 		b.options.MergedPRsNoRetestsLevels,
 	)
+
+	err = b.writeSIGRetestBadge(
+		constants.SIGComputeRetestBadgeName,
+		filepath.Join(basePath, constants.SIGComputeRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeSIGRetestBadge(
+		constants.SIGStorageRetestBadgeName,
+		filepath.Join(basePath, constants.SIGStorageRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeSIGRetestBadge(
+		constants.SIGNetworkRetestBadgeName,
+		filepath.Join(basePath, constants.SIGNetworkRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeSIGRetestBadge(
+		constants.SIGOperatorRetestBadgeName,
+		filepath.Join(basePath, constants.SIGOperatorRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
 	return err
 }
 
@@ -147,6 +178,34 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 	if name == constants.MergedPRsNoRetestBadgeName {
 		badgeString = data.SimpleBadgeString()
 	}
+	err = badge.Render(name, badgeString, color, f)
+
+	return err
+}
+
+func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
+	var value float64
+
+	switch {
+	case name == constants.SIGComputeRetestBadgeName:
+		value = data.SIGComputeRetest
+	case name == constants.SIGNetworkRetestBadgeFileName:
+		value = data.SIGNetworkRetest
+	case name == constants.SIGStorageRetestBadgeName:
+		value = data.SIGStorageRetest
+	case name == constants.SIGOperatorRetestBadgeName:
+		value = data.SIGOperatorRetest
+	}
+
+	color := BadgeColor(value, levels)
+
+	f, err := os.Create(filePath)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	badgeString := fmt.Sprintf("%.0f", value)
 	err = badge.Render(name, badgeString, color, f)
 
 	return err
