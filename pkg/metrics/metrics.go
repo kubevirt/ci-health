@@ -100,7 +100,7 @@ func (h *Handler) String() string {
 	var buffer bytes.Buffer
 	w := bufio.NewWriter(&buffer)
 
-	contentType := expfmt.FmtText
+	contentType := expfmt.NewFormat(expfmt.TypeTextPlain)
 	enc := expfmt.NewEncoder(w, contentType)
 
 	reg := prometheus.DefaultGatherer
