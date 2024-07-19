@@ -21,6 +21,7 @@ const (
 	RetestsToMergeMetric    Metric = "retests-to-merge"
 	MergedPRsMetric         Metric = "merged-prs"
 	MergedPRsNoRetestMetric Metric = "merged-prs-no-retest"
+	SIGRetestMetric         Metric = "sig-retests"
 )
 
 type Metric string
@@ -89,6 +90,8 @@ type Options struct {
 	MergedPRsRedLevel            float64
 	MergedPRsNoRetestYellowLevel float64
 	MergedPRsNoRetestRedLevel    float64
+	SIGRetestYellowLevel         float64
+	SIGRetestRedLevel            float64
 
 	// batch options
 	Mode         string
@@ -210,11 +213,15 @@ type DataPoint struct {
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Avg        float64
-	Std        float64
-	Number     float64
-	NoRetest   float64
-	DataPoints []DataPoint
+	Avg               float64
+	Std               float64
+	Number            float64
+	NoRetest          float64
+	SIGComputeRetest  float64
+	SIGStorageRetest  float64
+	SIGNetworkRetest  float64
+	SIGOperatorRetest float64
+	DataPoints        []DataPoint
 }
 
 func (d *RunningAverageDataItem) String() string {

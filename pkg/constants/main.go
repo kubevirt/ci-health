@@ -15,6 +15,7 @@ const (
 	RetestsToMergeName   = "AverageRetestsToMerge"
 	MergedPRsName        = "AverageMergedPRs"
 	MergedPRsNoRetest    = "PRsMergedWithNoRetest"
+	SIGRetests           = "SIGRetests"
 
 	DefaultPath                         = "/tmp/test"
 	DefaultTokenPath                    = ""
@@ -31,6 +32,8 @@ const (
 	DefaultMergedPRsRedLevel            = 7.0
 	DefaultMergedPRsNoRetestYellowLevel = 0.75
 	DefaultMergedPRsNoRetestRedLevel    = 0.5
+	DefaultSIGRetestYellowLevel         = 10
+	DefaultSIGRetestRedLevel            = 20
 	DefaultBatchStartDate               = "2019-05-06"
 
 	TimeToMergeBadgeFileName       = "time-to-merge.svg"
@@ -38,6 +41,10 @@ const (
 	RetestsToMergeBadgeFileName    = "retests-to-merge.svg"
 	MergedPRsBadgeFileName         = "merged-prs.svg"
 	MergedPRsNoRetestBadgeFileName = "merged-prs-no-retest.svg"
+	SIGComputeRetestBadgeFileName  = "sig-compute-retests.svg"
+	SIGNetworkRetestBadgeFileName  = "sig-network-retests.svg"
+	SIGStorageRetestBadgeFileName  = "sig-storage-retests.svg"
+	SIGOperatorRetestBadgeFileName = "sig-operator-retests.svg"
 	JSONResultsFileName            = "results.json"
 	PlotFileName                   = "plot.png"
 	MetricsFileName                = "metrics"
@@ -47,6 +54,10 @@ const (
 	RetestsToMergeBadgeName    = "retests to merge"
 	MergedPRsBadgeName         = "merged PRs"
 	MergedPRsNoRetestBadgeName = "Merged PRs with 0 retest vs. Merged PRs"
+	SIGComputeRetestBadgeName  = "SIG Compute"
+	SIGNetworkRetestBadgeName  = "SIG Network"
+	SIGOperatorRetestBadgeName = "SIG Operator"
+	SIGStorageRetestBadgeName  = "SIG Storage"
 	BadgeDataFormat            = "%.2f ± std %.2f"
 	NoRetestBadgeDataFormat    = "%.0f / %.0f"
 
