@@ -186,14 +186,14 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
 	var value float64
 
-	switch {
-	case name == constants.SIGComputeRetestBadgeName:
+	switch name {
+	case constants.SIGComputeRetestBadgeName:
 		value = data.SIGComputeRetest
-	case name == constants.SIGNetworkRetestBadgeFileName:
+	case constants.SIGNetworkRetestBadgeFileName:
 		value = data.SIGNetworkRetest
-	case name == constants.SIGStorageRetestBadgeName:
+	case constants.SIGStorageRetestBadgeName:
 		value = data.SIGStorageRetest
-	case name == constants.SIGOperatorRetestBadgeName:
+	case constants.SIGOperatorRetestBadgeName:
 		value = data.SIGOperatorRetest
 	}
 
@@ -206,9 +206,8 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	defer f.Close()
 
 	badgeString := fmt.Sprintf("%.0f", value)
-	err = badge.Render(name, badgeString, color, f)
 
-	return err
+	return badge.Render(name, badgeString, color, f)
 }
 
 func (b *Handler) initializeSourcePath() (string, error) {

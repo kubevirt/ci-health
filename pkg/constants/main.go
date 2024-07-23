@@ -32,7 +32,7 @@ const (
 	DefaultMergedPRsRedLevel            = 7.0
 	DefaultMergedPRsNoRetestYellowLevel = 0.75
 	DefaultMergedPRsNoRetestRedLevel    = 0.5
-	DefaultSIGRetestYellowLevel         = 10
+	DefaultSIGRetestYellowLevel         = 1
 	DefaultSIGRetestRedLevel            = 20
 	DefaultBatchStartDate               = "2019-05-06"
 
