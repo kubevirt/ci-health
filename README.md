@@ -38,6 +38,10 @@ data from the previous 7 days since the execution time.
 
 ### Failures per SIG against last code push for merged PRs
 
+These badges display the number of failures per SIG against merged PRs from the last 7 days.
+
+Each of these failures contribute to the number of retests that occur in CI and delay the time to merge for PRs.
+
 ![sig-compute-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-compute-retests.svg)
 ![sig-storage-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-storage-retests.svg)
 ![sig-network-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-network-retests.svg)
