@@ -36,6 +36,13 @@ data from the previous 7 days since the execution time.
 
 [Latest weeks data](https://grafana.ci.kubevirt.io/d/WZU1-LPGz/merge-queue)
 
+### Failures per SIG against last code push for merged PRs
+
+![sig-compute-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-compute-retests.svg)
+![sig-storage-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-storage-retests.svg)
+![sig-network-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-network-retests.svg)
+![sig-operator-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-operator-retests.svg)
+
 ## Historical data evolution
 
 These plots will be updated every week.

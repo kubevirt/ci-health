@@ -28,6 +28,8 @@ func main() {
 		MergedPRsRedLevel:            constants.DefaultMergedPRsRedLevel,
 		MergedPRsNoRetestYellowLevel: constants.DefaultMergedPRsNoRetestYellowLevel,
 		MergedPRsNoRetestRedLevel:    constants.DefaultMergedPRsNoRetestRedLevel,
+		SIGRetestYellowLevel:         constants.DefaultSIGRetestYellowLevel,
+		SIGRetestRedLevel:            constants.DefaultSIGRetestRedLevel,
 	}
 
 	cmd := &cobra.Command{

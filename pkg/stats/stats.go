@@ -3,11 +3,13 @@ package stats
 import (
 	"fmt"
 	"math"
+	"strconv"
 	"time"
 
 	"github.com/kubevirt/ci-health/pkg/chatops"
 	"github.com/kubevirt/ci-health/pkg/constants"
 	"github.com/kubevirt/ci-health/pkg/mergequeue"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 	"github.com/kubevirt/ci-health/pkg/types"
 )
 
@@ -66,6 +68,8 @@ func (h *Handler) Run() (*types.Results, error) {
 			processor = h.mergedPRsProcessor
 		case types.MergedPRsNoRetestMetric:
 			processor = h.mergedPRsNoRetestProcessor
+		case types.SIGRetestMetric:
+			processor = h.sigRetestsProcessor
 		default:
 			return nil, fmt.Errorf("Unknown metric: %q", targetMetric)
 		}
@@ -244,6 +248,42 @@ func (h *Handler) mergedPRsProcessor(results *types.Results) (*types.Results, er
 	dataItem.Std = 0
 
 	results.Data[constants.MergedPRsName] = dataItem
+
+	return results, nil
+}
+
+func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, error) {
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
+
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
+	}
+
+	mergedPRs, err := h.mq.MergedPRsBetween(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
+	if err != nil {
+		return results, err
+	}
+
+	for _, mergedPR := range mergedPRs {
+		failuresPerSIG, err := sigretests.GetFailuresPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
+		if err != nil {
+			return results, err
+		}
+		dataItem.SIGComputeRetest = dataItem.SIGComputeRetest + float64(failuresPerSIG.SigCompute)
+		dataItem.SIGNetworkRetest = dataItem.SIGNetworkRetest + float64(failuresPerSIG.SigNetwork)
+		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(failuresPerSIG.SigStorage)
+		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(failuresPerSIG.SigOperator)
+		dataItem.DataPoints = append(dataItem.DataPoints,
+			types.DataPoint{
+				Value: float64(failuresPerSIG.SigCompute + failuresPerSIG.SigOperator + failuresPerSIG.SigStorage + failuresPerSIG.SigNetwork),
+				PRs:   []types.PR{mergedPR},
+			})
+	}
+
+	results.Data[constants.SIGRetests] = dataItem
 
 	return results, nil
 }

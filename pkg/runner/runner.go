@@ -60,6 +60,7 @@ func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 			types.RetestsToMergeMetric,
 			types.MergedPRsMetric,
 			types.MergedPRsNoRetestMetric,
+			types.SIGRetestMetric,
 		},
 	}
 
@@ -105,6 +106,10 @@ func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 		MergedPRsNoRetestsLevels: &output.Levels{
 			Yellow: o.MergedPRsNoRetestYellowLevel,
 			Red:    o.MergedPRsNoRetestRedLevel,
+		},
+		SIGRetestsLevels: &output.Levels{
+			Yellow: o.SIGRetestYellowLevel,
+			Red:    o.SIGRetestRedLevel,
 		},
 		Source: o.Source,
 	}
