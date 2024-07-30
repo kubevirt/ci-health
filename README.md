@@ -47,6 +47,18 @@ Each of these failures contribute to the number of retests that occur in CI and 
 ![sig-network-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-network-retests.svg)
 ![sig-operator-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-operator-retests.svg)
 
+Top 5 failed lanes:
+
+![failedjob1](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob1.svg)
+
+![failedjob2](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob2.svg)
+
+![failedjob3](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob3.svg)
+
+![failedjob4](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob4.svg)
+
+![failedjob5](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob5.svg)
+
 ## Historical data evolution
 
 These plots will be updated every week.
