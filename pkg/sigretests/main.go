@@ -19,10 +19,11 @@ type failedJob struct {
 }
 
 type SigRetests struct {
-	SigCompute  int
-	SigNetwork  int
-	SigStorage  int
-	SigOperator int
+	SigCompute     int
+	SigNetwork     int
+	SigStorage     int
+	SigOperator    int
+	FailedJobNames []string
 }
 
 var redJobs []failedJob
@@ -134,15 +135,19 @@ func FilterJobsPerSigs(jobs []failedJob) (prSigRetests SigRetests) {
 		switch {
 		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
 			prSigRetests.SigCompute += 1
+			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
 
 		case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
 			prSigRetests.SigNetwork += 1
+			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
 
 		case strings.Contains(job.jobName, "sig-storage"):
 			prSigRetests.SigStorage += 1
+			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
 
 		case strings.Contains(job.jobName, "sig-operator"):
 			prSigRetests.SigOperator += 1
+			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
 		}
 	}
 	return prSigRetests
