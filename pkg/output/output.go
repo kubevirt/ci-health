@@ -189,7 +189,7 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	switch name {
 	case constants.SIGComputeRetestBadgeName:
 		value = data.SIGComputeRetest
-	case constants.SIGNetworkRetestBadgeFileName:
+	case constants.SIGNetworkRetestBadgeName:
 		value = data.SIGNetworkRetest
 	case constants.SIGStorageRetestBadgeName:
 		value = data.SIGStorageRetest
