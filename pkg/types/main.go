@@ -214,6 +214,7 @@ type DataPoint struct {
 type FailedJob struct {
 	JobName      string
 	FailureCount int
+	SuccesCount  int
 }
 
 type FailedJobs []FailedJob
@@ -226,7 +227,7 @@ func SortByMostFailed(countFailedJobs map[string]int) FailedJobs {
 	fl := make(FailedJobs, len(countFailedJobs))
 	i := 0
 	for j, f := range countFailedJobs {
-		fl[i] = FailedJob{j, f}
+		fl[i] = FailedJob{j, f, 0}
 		i++
 	}
 	sort.Sort(sort.Reverse(fl))

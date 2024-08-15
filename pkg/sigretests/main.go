@@ -13,20 +13,23 @@ import (
 const org = "kubevirt"
 const repo = "kubevirt"
 
-type failedJob struct {
+type job struct {
 	jobName     string
 	buildNumber string
+	buildURL    string
+	failure     bool
 }
 
 type SigRetests struct {
-	SigCompute     int
-	SigNetwork     int
-	SigStorage     int
-	SigOperator    int
-	FailedJobNames []string
+	SigCompute      int
+	SigNetwork      int
+	SigStorage      int
+	SigOperator     int
+	FailedJobNames  []string
+	SuccessJobNames []string
 }
 
-var redJobs []failedJob
+var prowjobs []job
 
 func prHistoryURL(org string, repo string, prNumber string) string {
 	return fmt.Sprintf("https://prow.ci.kubevirt.io/pr-history/?org=%s&repo=%s&pr=%s", org, repo, prNumber)
@@ -40,26 +43,42 @@ func finishedJSONURL(org string, repo string, prNumber string, jobName string, b
 	return fmt.Sprintf("%s/%s/%s/finished.json", prStorageURL(org, repo, prNumber), jobName, buildNumber)
 }
 
-func filterFailedJobs(node *html.Node) (failedJobs []failedJob) {
-	var redJob failedJob
+func filterJobs(node *html.Node) (jobs []job) {
+	var e2eJob job
 	if node.Type == html.ElementNode && node.Data == "td" {
 		for _, td := range node.Attr {
 			if strings.Contains(td.Val, "run-failure") {
 				for _, href := range node.FirstChild.Attr {
 					if strings.Contains(href.Val, "e2e") {
+						e2eJob.failure = true
+						e2eJob.buildURL = href.Val
 						buildLogUrl := strings.Split(href.Val, "/")
-						redJob.jobName = buildLogUrl[len(buildLogUrl)-2]
-						redJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
-						redJobs = append(redJobs, redJob)
+						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
+						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
+						prowjobs = append(prowjobs, e2eJob)
+						continue
+					}
+				}
+			}
+			if strings.Contains(td.Val, "run-success") {
+				for _, href := range node.FirstChild.Attr {
+					if strings.Contains(href.Val, "e2e") {
+						e2eJob.failure = false
+						e2eJob.buildURL = href.Val
+						buildLogUrl := strings.Split(href.Val, "/")
+						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
+						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
+						prowjobs = append(prowjobs, e2eJob)
+						continue
 					}
 				}
 			}
 		}
 	}
 	for child := node.FirstChild; child != nil; child = child.NextSibling {
-		filterFailedJobs(child)
+		filterJobs(child)
 	}
-	return redJobs
+	return prowjobs
 }
 
 func getLatestCommit(node *html.Node) (latestCommit string) {
@@ -81,7 +100,34 @@ func getLatestCommit(node *html.Node) (latestCommit string) {
 	return ""
 }
 
-func getFailedJobsForLatestCommit(org string, repo string, prNumber string) (failedJobs []failedJob, err error) {
+func filterForLastCommit(org string, repo string, prNumber string, latestCommit string, jobList []job) (filteredJobList []job, err error) {
+	for _, job := range jobList {
+		finishedJSON, err := http.Get(finishedJSONURL(org, repo, prNumber, job.jobName, job.buildNumber))
+		if finishedJSON.StatusCode != http.StatusOK {
+			continue
+		}
+		if err != nil {
+			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
+		}
+		defer finishedJSON.Body.Close()
+
+		finishedJSONData, err := io.ReadAll(finishedJSON.Body)
+		if err != nil {
+			return nil, fmt.Errorf("Failed to read finished JSON for %s -- %s", job.jobName, err)
+		}
+		var data map[string]interface{}
+		err = json.Unmarshal(finishedJSONData, &data)
+		if err != nil {
+			return nil, fmt.Errorf("Failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
+		}
+		if latestCommit == data["revision"] {
+			filteredJobList = append(filteredJobList, job)
+		}
+	}
+	return filteredJobList, nil
+}
+
+func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
 	resp, err := http.Get(prHistory)
 	if err != nil {
@@ -97,66 +143,52 @@ func getFailedJobsForLatestCommit(org string, repo string, prNumber string) (fai
 	if latestCommit == "" {
 		return nil, fmt.Errorf("Failed to get latest commit from %s", prHistory)
 	}
-	failedJobsAllCommits := filterFailedJobs(prHistoryPage)
-	redJobs = nil
+	jobsAllCommits := filterJobs(prHistoryPage)
+	prowjobs = nil
 
-	for _, job := range failedJobsAllCommits {
-		finishedJSON, err := http.Get(finishedJSONURL(org, repo, prNumber, job.jobName, job.buildNumber))
-		if finishedJSON.StatusCode != http.StatusOK {
-			continue
-		}
-
-		if err != nil {
-			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
-		}
-
-		defer finishedJSON.Body.Close()
-
-		finishedJSONData, err := io.ReadAll(finishedJSON.Body)
-		if err != nil {
-			return nil, fmt.Errorf("Failed to read finished JSON for %s -- %s", job.jobName, err)
-		}
-		var data map[string]interface{}
-		err = json.Unmarshal(finishedJSONData, &data)
-		if err != nil {
-			return nil, fmt.Errorf("Failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
-		}
-		if latestCommit == data["revision"] {
-			failedJobs = append(failedJobs, job)
-		}
-
+	jobsLatestCommit, err := filterForLastCommit(org, repo, prNumber, latestCommit, jobsAllCommits)
+	if err != nil {
+		return nil, err
 	}
-	return failedJobs, nil
+	return jobsLatestCommit, nil
 }
 
-func FilterJobsPerSigs(jobs []failedJob) (prSigRetests SigRetests) {
+func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests) {
+	if job.failure == true {
+		sigRetests.FailedJobNames = append(sigRetests.FailedJobNames, job.jobName)
+	} else {
+		sigRetests.SuccessJobNames = append(sigRetests.SuccessJobNames, job.jobName)
+	}
+	return sigRetests
+}
+
+func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
 	prSigRetests = SigRetests{}
 	for _, job := range jobs {
-		switch {
-		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
-			prSigRetests.SigCompute += 1
-			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
+		if job.failure {
+			switch {
+			case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
+				prSigRetests.SigCompute += 1
 
-		case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
-			prSigRetests.SigNetwork += 1
-			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
+			case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
+				prSigRetests.SigNetwork += 1
 
-		case strings.Contains(job.jobName, "sig-storage"):
-			prSigRetests.SigStorage += 1
-			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
+			case strings.Contains(job.jobName, "sig-storage"):
+				prSigRetests.SigStorage += 1
 
-		case strings.Contains(job.jobName, "sig-operator"):
-			prSigRetests.SigOperator += 1
-			prSigRetests.FailedJobNames = append(prSigRetests.FailedJobNames, job.jobName)
+			case strings.Contains(job.jobName, "sig-operator"):
+				prSigRetests.SigOperator += 1
+			}
 		}
+		prSigRetests = sortJobNamesOnResult(job, prSigRetests)
 	}
 	return prSigRetests
 }
 
-func GetFailuresPerSIG(prNumber string, org string, repo string) (prSigRetests SigRetests, err error) {
-	failedJobs, err := getFailedJobsForLatestCommit(org, repo, prNumber)
+func GetJobsPerSIG(prNumber string, org string, repo string) (prSigRetests SigRetests, err error) {
+	prowJobs, err := getJobsForLatestCommit(org, repo, prNumber)
 	if err != nil {
 		return SigRetests{}, fmt.Errorf("Error filtering failed jobs from the latest commit - %s", err)
 	}
-	return FilterJobsPerSigs(failedJobs), nil
+	return FilterJobsPerSigs(prowJobs), nil
 }

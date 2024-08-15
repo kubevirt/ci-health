@@ -233,7 +233,7 @@ func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, level
 		if i < len(failedJobLeaders) {
 			job := failedJobLeaders[i-1]
 			color := BadgeColor(float64(job.FailureCount), levels)
-			badgeString := fmt.Sprintf("%.0f", float64(job.FailureCount))
+			badgeString := fmt.Sprintf("%.0f / %.0f", float64(job.FailureCount), float64(job.FailureCount+job.SuccesCount))
 
 			err = badge.Render(job.JobName, badgeString, color, f)
 		} else {
