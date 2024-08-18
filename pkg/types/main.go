@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"image/color"
+	"sort"
 	"time"
 
 	"github.com/kubevirt/ci-health/pkg/constants"
@@ -210,18 +211,42 @@ type DataPoint struct {
 	PRs   []PR       `json:",omitempty"`
 }
 
+type FailedJob struct {
+	JobName      string
+	FailureCount int
+	SuccesCount  int
+}
+
+type FailedJobs []FailedJob
+
+func (f FailedJobs) Len() int           { return len(f) }
+func (f FailedJobs) Less(i, j int) bool { return f[i].FailureCount < f[j].FailureCount }
+func (f FailedJobs) Swap(i, j int)      { f[i], f[j] = f[j], f[i] }
+
+func SortByMostFailed(countFailedJobs map[string]int) FailedJobs {
+	fl := make(FailedJobs, len(countFailedJobs))
+	i := 0
+	for j, f := range countFailedJobs {
+		fl[i] = FailedJob{j, f, 0}
+		i++
+	}
+	sort.Sort(sort.Reverse(fl))
+	return fl
+}
+
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Avg               float64
-	Std               float64
-	Number            float64
-	NoRetest          float64
-	SIGComputeRetest  float64
-	SIGStorageRetest  float64
-	SIGNetworkRetest  float64
-	SIGOperatorRetest float64
-	DataPoints        []DataPoint
+	Avg                  float64
+	Std                  float64
+	Number               float64
+	NoRetest             float64
+	SIGComputeRetest     float64
+	SIGStorageRetest     float64
+	SIGNetworkRetest     float64
+	SIGOperatorRetest    float64
+	FailedJobLeaderBoard FailedJobs
+	DataPoints           []DataPoint
 }
 
 func (d *RunningAverageDataItem) String() string {

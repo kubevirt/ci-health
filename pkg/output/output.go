@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strconv"
 
 	"github.com/narqo/go-badge"
 	log "github.com/sirupsen/logrus"
@@ -158,6 +159,11 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		b.options.SIGRetestsLevels,
 	)
 
+	err = b.writeJobFailureBadges(
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
 	return err
 }
 
@@ -208,6 +214,34 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	badgeString := fmt.Sprintf("%.0f", value)
 
 	return badge.Render(name, badgeString, color, f)
+}
+
+func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, levels *Levels) error {
+	failedJobLeaders := data.FailedJobLeaderBoard
+	basePath, err := b.initializeSourcePath()
+	if err != nil {
+		return err
+	}
+	for i := 1; i <= 10; i++ {
+		filePath := filepath.Join(basePath, fmt.Sprintf("failedjob%s.svg", strconv.Itoa(i)))
+		f, err := os.Create(filePath)
+		if err != nil {
+			return err
+		}
+		defer f.Close()
+
+		if i < len(failedJobLeaders) {
+			job := failedJobLeaders[i-1]
+			color := BadgeColor(float64(job.FailureCount), levels)
+			badgeString := fmt.Sprintf("%.0f / %.0f", float64(job.FailureCount), float64(job.FailureCount+job.SuccesCount))
+
+			err = badge.Render(job.JobName, badgeString, color, f)
+		} else {
+			color := badge.ColorGreen
+			err = badge.Render("-", "-", color, f)
+		}
+	}
+	return err
 }
 
 func (b *Handler) initializeSourcePath() (string, error) {

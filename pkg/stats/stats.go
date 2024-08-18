@@ -3,6 +3,7 @@ package stats
 import (
 	"fmt"
 	"math"
+	"slices"
 	"strconv"
 	"time"
 
@@ -254,6 +255,8 @@ func (h *Handler) mergedPRsProcessor(results *types.Results) (*types.Results, er
 
 func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	var failedJobNames []string
+	var successJobNames []string
 	if err != nil {
 		return results, err
 	}
@@ -268,7 +271,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 	}
 
 	for _, mergedPR := range mergedPRs {
-		failuresPerSIG, err := sigretests.GetFailuresPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
+		failuresPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
 		if err != nil {
 			return results, err
 		}
@@ -278,11 +281,21 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(failuresPerSIG.SigOperator)
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			types.DataPoint{
-				Value: float64(failuresPerSIG.SigCompute + failuresPerSIG.SigOperator + failuresPerSIG.SigStorage + failuresPerSIG.SigNetwork),
+				Value: float64(len(failuresPerSIG.FailedJobNames)),
 				PRs:   []types.PR{mergedPR},
 			})
+		failedJobNames = slices.Concat(failedJobNames, failuresPerSIG.FailedJobNames)
+		successJobNames = slices.Concat(successJobNames, failuresPerSIG.SuccessJobNames)
 	}
-
+	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
+	for i, job := range sortedFailedJobs {
+		for _, success := range successJobNames {
+			if job.JobName == success {
+				sortedFailedJobs[i].SuccesCount++
+			}
+		}
+	}
+	dataItem.FailedJobLeaderBoard = sortedFailedJobs
 	results.Data[constants.SIGRetests] = dataItem
 
 	return results, nil
@@ -314,6 +327,14 @@ func Std(xs []float64) float64 {
 	variance := total / float64(len(xs))
 	result := math.Sqrt(variance)
 	return round(result)
+}
+
+func countFailedJobs(jobNames []string) map[string]int {
+	countFailedJobs := make(map[string]int)
+	for _, name := range jobNames {
+		countFailedJobs[name]++
+	}
+	return countFailedJobs
 }
 
 func round(value float64) float64 {
