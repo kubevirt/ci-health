@@ -191,19 +191,24 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 
 func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
 	var value float64
+	var total float64
 
 	switch name {
 	case constants.SIGComputeRetestBadgeName:
 		value = data.SIGComputeRetest
+		total = data.SIGComputeTotal
 	case constants.SIGNetworkRetestBadgeName:
 		value = data.SIGNetworkRetest
+		total = data.SIGNetworkTotal
 	case constants.SIGStorageRetestBadgeName:
 		value = data.SIGStorageRetest
+		total = data.SIGStorageTotal
 	case constants.SIGOperatorRetestBadgeName:
 		value = data.SIGOperatorRetest
+		total = data.SIGOperatorTotal
 	}
 
-	color := BadgeColor(value, levels)
+	color := BadgeColor(((value / total) * 100), levels)
 
 	f, err := os.Create(filePath)
 	if err != nil {
@@ -211,7 +216,7 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	}
 	defer f.Close()
 
-	badgeString := fmt.Sprintf("%.0f", value)
+	badgeString := fmt.Sprintf("%.0f / %.0f", value, total)
 
 	return badge.Render(name, badgeString, color, f)
 }

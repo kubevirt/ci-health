@@ -271,21 +271,25 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 	}
 
 	for _, mergedPR := range mergedPRs {
-		failuresPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
+		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
 		if err != nil {
 			return results, err
 		}
-		dataItem.SIGComputeRetest = dataItem.SIGComputeRetest + float64(failuresPerSIG.SigCompute)
-		dataItem.SIGNetworkRetest = dataItem.SIGNetworkRetest + float64(failuresPerSIG.SigNetwork)
-		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(failuresPerSIG.SigStorage)
-		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(failuresPerSIG.SigOperator)
+		dataItem.SIGComputeRetest = dataItem.SIGComputeRetest + float64(jobsPerSIG.SigComputeFailure)
+		dataItem.SIGNetworkRetest = dataItem.SIGNetworkRetest + float64(jobsPerSIG.SigNetworkFailure)
+		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(jobsPerSIG.SigStorageFailure)
+		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(jobsPerSIG.SigOperatorFailure)
+		dataItem.SIGComputeTotal = dataItem.SIGComputeTotal + float64(jobsPerSIG.SigComputeFailure) + float64(jobsPerSIG.SigComputeSuccess)
+		dataItem.SIGNetworkTotal = dataItem.SIGNetworkTotal + float64(jobsPerSIG.SigNetworkFailure) + float64(jobsPerSIG.SigNetworkSuccess)
+		dataItem.SIGStorageTotal = dataItem.SIGStorageTotal + float64(jobsPerSIG.SigStorageFailure) + float64(jobsPerSIG.SigStorageSuccess)
+		dataItem.SIGOperatorTotal = dataItem.SIGOperatorTotal + float64(jobsPerSIG.SigOperatorFailure) + float64(jobsPerSIG.SigOperatorSuccess)
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			types.DataPoint{
-				Value: float64(len(failuresPerSIG.FailedJobNames)),
+				Value: float64(len(jobsPerSIG.FailedJobNames)),
 				PRs:   []types.PR{mergedPR},
 			})
-		failedJobNames = slices.Concat(failedJobNames, failuresPerSIG.FailedJobNames)
-		successJobNames = slices.Concat(successJobNames, failuresPerSIG.SuccessJobNames)
+		failedJobNames = slices.Concat(failedJobNames, jobsPerSIG.FailedJobNames)
+		successJobNames = slices.Concat(successJobNames, jobsPerSIG.SuccessJobNames)
 	}
 	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
 	for i, job := range sortedFailedJobs {
