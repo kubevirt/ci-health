@@ -21,12 +21,16 @@ type job struct {
 }
 
 type SigRetests struct {
-	SigCompute      int
-	SigNetwork      int
-	SigStorage      int
-	SigOperator     int
-	FailedJobNames  []string
-	SuccessJobNames []string
+	SigComputeFailure  int
+	SigNetworkFailure  int
+	SigStorageFailure  int
+	SigOperatorFailure int
+	SigComputeSuccess  int
+	SigNetworkSuccess  int
+	SigStorageSuccess  int
+	SigOperatorSuccess int
+	FailedJobNames     []string
+	SuccessJobNames    []string
 }
 
 var prowjobs []job
@@ -165,19 +169,30 @@ func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests)
 func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
 	prSigRetests = SigRetests{}
 	for _, job := range jobs {
-		if job.failure {
-			switch {
-			case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
-				prSigRetests.SigCompute += 1
-
-			case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
-				prSigRetests.SigNetwork += 1
-
-			case strings.Contains(job.jobName, "sig-storage"):
-				prSigRetests.SigStorage += 1
-
-			case strings.Contains(job.jobName, "sig-operator"):
-				prSigRetests.SigOperator += 1
+		switch {
+		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
+			if job.failure {
+				prSigRetests.SigComputeFailure += 1
+			} else {
+				prSigRetests.SigComputeSuccess += 1
+			}
+		case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
+			if job.failure {
+				prSigRetests.SigNetworkFailure += 1
+			} else {
+				prSigRetests.SigNetworkSuccess += 1
+			}
+		case strings.Contains(job.jobName, "sig-storage"):
+			if job.failure {
+				prSigRetests.SigStorageFailure += 1
+			} else {
+				prSigRetests.SigStorageSuccess += 1
+			}
+		case strings.Contains(job.jobName, "sig-operator"):
+			if job.failure {
+				prSigRetests.SigOperatorFailure += 1
+			} else {
+				prSigRetests.SigOperatorSuccess += 1
 			}
 		}
 		prSigRetests = sortJobNamesOnResult(job, prSigRetests)
