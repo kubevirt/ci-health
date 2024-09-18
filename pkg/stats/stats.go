@@ -5,6 +5,7 @@ import (
 	"math"
 	"slices"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/kubevirt/ci-health/pkg/chatops"
@@ -256,6 +257,7 @@ func (h *Handler) mergedPRsProcessor(results *types.Results) (*types.Results, er
 func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, error) {
 	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
 	var failedJobNames []string
+	var failedJobURLs []string
 	var successJobNames []string
 	if err != nil {
 		return results, err
@@ -290,12 +292,19 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 			})
 		failedJobNames = slices.Concat(failedJobNames, jobsPerSIG.FailedJobNames)
 		successJobNames = slices.Concat(successJobNames, jobsPerSIG.SuccessJobNames)
+		failedJobURLs = slices.Concat(failedJobURLs, jobsPerSIG.FailedJobURLs)
 	}
 	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
 	for i, job := range sortedFailedJobs {
 		for _, success := range successJobNames {
 			if job.JobName == success {
 				sortedFailedJobs[i].SuccesCount++
+			}
+		}
+		for _, failedJobURL := range failedJobURLs {
+			jobNameInURL := strings.Split(failedJobURL, "/")[len(strings.Split(failedJobURL, "/"))-2]
+			if job.JobName == jobNameInURL {
+				sortedFailedJobs[i].FailureURLs = append(sortedFailedJobs[i].FailureURLs, failedJobURL)
 			}
 		}
 	}

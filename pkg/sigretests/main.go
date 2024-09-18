@@ -30,6 +30,7 @@ type SigRetests struct {
 	SigStorageSuccess  int
 	SigOperatorSuccess int
 	FailedJobNames     []string
+	FailedJobURLs      []string
 	SuccessJobNames    []string
 }
 
@@ -55,7 +56,7 @@ func filterJobs(node *html.Node) (jobs []job) {
 				for _, href := range node.FirstChild.Attr {
 					if strings.Contains(href.Val, "e2e") {
 						e2eJob.failure = true
-						e2eJob.buildURL = href.Val
+						e2eJob.buildURL = fmt.Sprintf("https://prow.ci.kubevirt.io/%s", href.Val)
 						buildLogUrl := strings.Split(href.Val, "/")
 						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
 						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
@@ -160,6 +161,7 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastC
 func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests) {
 	if job.failure == true {
 		sigRetests.FailedJobNames = append(sigRetests.FailedJobNames, job.jobName)
+		sigRetests.FailedJobURLs = append(sigRetests.FailedJobURLs, job.buildURL)
 	} else {
 		sigRetests.SuccessJobNames = append(sigRetests.SuccessJobNames, job.jobName)
 	}
