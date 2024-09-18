@@ -23,4 +23,4 @@ jobs:
       run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
 
-        bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token
+        bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token --test_timeout=600
