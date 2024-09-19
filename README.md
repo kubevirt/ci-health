@@ -69,6 +69,9 @@ Top failed lanes:
 
 ![failedjob10](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob10.svg)
 
+The links to each of these failed jobs can be found in the [latest execution data](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/results.json)
+under the SIGRetests section
+
 ## Historical data evolution
 
 These plots will be updated every week.
