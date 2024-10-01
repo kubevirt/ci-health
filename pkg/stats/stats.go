@@ -298,7 +298,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 	for i, job := range sortedFailedJobs {
 		for _, success := range successJobNames {
 			if job.JobName == success {
-				sortedFailedJobs[i].SuccesCount++
+				sortedFailedJobs[i].SuccessCount++
 			}
 		}
 		for _, failedJobURL := range failedJobURLs {

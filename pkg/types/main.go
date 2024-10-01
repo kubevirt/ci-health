@@ -214,7 +214,7 @@ type DataPoint struct {
 type FailedJob struct {
 	JobName      string
 	FailureCount int
-	SuccesCount  int
+	SuccessCount int
 	FailureURLs  []string
 }
 
