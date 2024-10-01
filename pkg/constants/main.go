@@ -49,7 +49,7 @@ const (
 	PlotFileName                   = "plot.png"
 	MetricsFileName                = "metrics"
 
-	TimeToMergeBadgeName       = "days to merge"
+	TimeToMergeBadgeName       = "hours to merge"
 	MergeQueueLengthBadgeName  = "avg merge queue length"
 	RetestsToMergeBadgeName    = "retests to merge"
 	MergedPRsBadgeName         = "merged PRs"

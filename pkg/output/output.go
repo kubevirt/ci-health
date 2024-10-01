@@ -184,6 +184,9 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 	if name == constants.MergedPRsNoRetestBadgeName {
 		badgeString = data.SimpleBadgeString()
 	}
+	if name == constants.TimeToMergeBadgeName {
+		badgeString = fmt.Sprintf("%.2f ± std %.2f", (data.Avg * 24), (data.Std * 24))
+	}
 	err = badge.Render(name, badgeString, color, f)
 
 	return err
