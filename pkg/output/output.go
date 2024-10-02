@@ -219,7 +219,7 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	}
 	defer f.Close()
 
-	badgeString := fmt.Sprintf("%.0f / %.0f", value, total)
+	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.0f%s", value, total, (value/total)*100, "%")
 
 	return badge.Render(name, badgeString, color, f)
 }
@@ -241,7 +241,10 @@ func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, level
 		if i < len(failedJobLeaders) {
 			job := failedJobLeaders[i-1]
 			color := BadgeColor(float64(job.FailureCount), levels)
-			badgeString := fmt.Sprintf("%.0f / %.0f", float64(job.FailureCount), float64(job.FailureCount+job.SuccesCount))
+			badgeString := fmt.Sprintf("%.0f / %.0f    |    %.0f%s",
+				float64(job.FailureCount),
+				float64(job.FailureCount+job.SuccessCount),
+				(float64(job.FailureCount)/float64(job.FailureCount+job.SuccessCount))*100, "%")
 
 			err = badge.Render(job.JobName, badgeString, color, f)
 		} else {
