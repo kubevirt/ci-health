@@ -1,11 +1,11 @@
 {
- "EndDate": "2024-10-22T07:08:18Z",
+ "EndDate": "2024-10-22T09:05:18Z",
  "DataDays": 7,
  "Source": "kubevirt/kubevirt",
  "Data": {
   "AverageMergeQueueLength": {
-   "Avg": 1.57,
-   "Std": 2.32,
+   "Avg": 2.29,
+   "Std": 2.91,
    "Number": 0,
    "NoRetest": 0,
    "SIGComputeRetest": 0,
@@ -19,12 +19,22 @@
    "FailedJobLeaderBoard": null,
    "DataPoints": [
     {
-     "Value": 0,
-     "Date": "2024-10-22T07:08:18Z"
+     "Value": 2,
+     "Date": "2024-10-22T09:05:18Z",
+     "PRs": [
+      {
+       "Number": 13090,
+       "MergedAt": "0001-01-01T00:00:00Z"
+      },
+      {
+       "Number": 13086,
+       "MergedAt": "0001-01-01T00:00:00Z"
+      }
+     ]
     },
     {
      "Value": 1,
-     "Date": "2024-10-21T07:08:18Z",
+     "Date": "2024-10-21T09:05:18Z",
      "PRs": [
       {
        "Number": 12967,
@@ -34,11 +44,11 @@
     },
     {
      "Value": 0,
-     "Date": "2024-10-20T07:08:18Z"
+     "Date": "2024-10-20T09:05:18Z"
     },
     {
      "Value": 1,
-     "Date": "2024-10-19T07:08:18Z",
+     "Date": "2024-10-19T09:05:18Z",
      "PRs": [
       {
        "Number": 13071,
@@ -48,25 +58,29 @@
     },
     {
      "Value": 0,
-     "Date": "2024-10-18T07:08:18Z"
+     "Date": "2024-10-18T09:05:18Z"
     },
     {
-     "Value": 2,
-     "Date": "2024-10-17T07:08:18Z",
+     "Value": 3,
+     "Date": "2024-10-17T09:05:18Z",
      "PRs": [
       {
-       "Number": 13077,
-       "MergedAt": "2024-10-17T08:12:51Z"
+       "Number": 13082,
+       "MergedAt": "2024-10-17T13:34:46Z"
       },
       {
-       "Number": 12601,
-       "MergedAt": "2024-10-17T08:12:45Z"
+       "Number": 13027,
+       "MergedAt": "2024-10-17T18:02:52Z"
+      },
+      {
+       "Number": 13001,
+       "MergedAt": "2024-10-17T18:02:45Z"
       }
      ]
     },
     {
-     "Value": 7,
-     "Date": "2024-10-16T07:08:18Z",
+     "Value": 9,
+     "Date": "2024-10-16T09:05:18Z",
      "PRs": [
       {
        "Number": 13073,
@@ -79,6 +93,10 @@
       {
        "Number": 13060,
        "MergedAt": "2024-10-16T09:42:59Z"
+      },
+      {
+       "Number": 13059,
+       "MergedAt": "2024-10-16T12:54:59Z"
       },
       {
        "Number": 13045,
@@ -95,13 +113,17 @@
       {
        "Number": 13019,
        "MergedAt": "2024-10-16T18:52:45Z"
+      },
+      {
+       "Number": 13000,
+       "MergedAt": "2024-10-16T12:54:44Z"
       }
      ]
     }
    ]
   },
   "AverageMergedPRs": {
-   "Avg": 5.142857142857143,
+   "Avg": 4.857142857142857,
    "Std": 0,
    "Number": 0,
    "NoRetest": 0,
@@ -238,15 +260,6 @@
       {
        "Number": 13059,
        "MergedAt": "2024-10-16T12:54:59Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13057,
-       "MergedAt": "2024-10-15T07:23:01Z"
       }
      ]
     },
@@ -391,15 +404,6 @@
       {
        "Number": 12915,
        "MergedAt": "2024-10-15T11:36:57Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 12855,
-       "MergedAt": "2024-10-15T07:22:54Z"
       }
      ]
     },
@@ -442,8 +446,8 @@
    ]
   },
   "AverageRetestsToMerge": {
-   "Avg": 1.11,
-   "Std": 1.39,
+   "Avg": 1.12,
+   "Std": 1.43,
    "Number": 0,
    "NoRetest": 0,
    "SIGComputeRetest": 0,
@@ -457,11 +461,38 @@
    "FailedJobLeaderBoard": null,
    "DataPoints": [
     {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13070,
+       "MergedAt": "2024-10-16T09:43:06Z"
+      }
+     ]
+    },
+    {
      "Value": 1,
      "PRs": [
       {
-       "Number": 12855,
-       "MergedAt": "2024-10-15T07:22:54Z"
+       "Number": 13027,
+       "MergedAt": "2024-10-17T18:02:52Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 13064,
+       "MergedAt": "2024-10-22T00:05:02Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12967,
+       "MergedAt": "2024-10-21T09:34:50Z"
       }
      ]
     },
@@ -475,11 +506,101 @@
      ]
     },
     {
-     "Value": 3,
+     "Value": 0,
      "PRs": [
       {
-       "Number": 12601,
-       "MergedAt": "2024-10-17T08:12:45Z"
+       "Number": 13053,
+       "MergedAt": "2024-10-15T16:10:58Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 13045,
+       "MergedAt": "2024-10-16T09:42:52Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 13001,
+       "MergedAt": "2024-10-17T18:02:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 12995,
+       "MergedAt": "2024-10-22T05:54:48Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 13088,
+       "MergedAt": "2024-10-21T20:48:55Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13078,
+       "MergedAt": "2024-10-19T01:14:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 13072,
+       "MergedAt": "2024-10-18T15:58:57Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12948,
+       "MergedAt": "2024-10-15T11:37:04Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13082,
+       "MergedAt": "2024-10-17T13:34:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 13063,
+       "MergedAt": "2024-10-22T00:04:49Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13030,
+       "MergedAt": "2024-10-16T09:42:45Z"
       }
      ]
     },
@@ -489,6 +610,42 @@
       {
        "Number": 13062,
        "MergedAt": "2024-10-18T20:30:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 5,
+     "PRs": [
+      {
+       "Number": 13059,
+       "MergedAt": "2024-10-16T12:54:59Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 12988,
+       "MergedAt": "2024-10-21T20:48:48Z"
+      }
+     ]
+    },
+    {
+     "Value": 6,
+     "PRs": [
+      {
+       "Number": 13000,
+       "MergedAt": "2024-10-16T12:54:44Z"
+      }
+     ]
+    },
+    {
+     "Value": 3,
+     "PRs": [
+      {
+       "Number": 12601,
+       "MergedAt": "2024-10-17T08:12:45Z"
       }
      ]
     },
@@ -520,29 +677,11 @@
      ]
     },
     {
-     "Value": 6,
+     "Value": 2,
      "PRs": [
       {
-       "Number": 13000,
-       "MergedAt": "2024-10-16T12:54:44Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 12948,
-       "MergedAt": "2024-10-15T11:37:04Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 12072,
-       "MergedAt": "2024-10-15T22:50:58Z"
+       "Number": 13018,
+       "MergedAt": "2024-10-16T22:22:44Z"
       }
      ]
     },
@@ -552,6 +691,51 @@
       {
        "Number": 13087,
        "MergedAt": "2024-10-17T20:34:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13050,
+       "MergedAt": "2024-10-18T15:58:50Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13024,
+       "MergedAt": "2024-10-16T12:54:51Z"
+      }
+     ]
+    },
+    {
+     "Value": 2,
+     "PRs": [
+      {
+       "Number": 12915,
+       "MergedAt": "2024-10-15T11:36:57Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12802,
+       "MergedAt": "2024-10-17T20:44:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12072,
+       "MergedAt": "2024-10-15T22:50:58Z"
       }
      ]
     },
@@ -574,114 +758,6 @@
      ]
     },
     {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13064,
-       "MergedAt": "2024-10-22T00:05:02Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13030,
-       "MergedAt": "2024-10-16T09:42:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 13001,
-       "MergedAt": "2024-10-17T18:02:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 12995,
-       "MergedAt": "2024-10-22T05:54:48Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 12967,
-       "MergedAt": "2024-10-21T09:34:50Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13078,
-       "MergedAt": "2024-10-19T01:14:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13063,
-       "MergedAt": "2024-10-22T00:04:49Z"
-      }
-     ]
-    },
-    {
-     "Value": 5,
-     "PRs": [
-      {
-       "Number": 13059,
-       "MergedAt": "2024-10-16T12:54:59Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13072,
-       "MergedAt": "2024-10-18T15:58:57Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13045,
-       "MergedAt": "2024-10-16T09:42:52Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13027,
-       "MergedAt": "2024-10-17T18:02:52Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 12802,
-       "MergedAt": "2024-10-17T20:44:45Z"
-      }
-     ]
-    },
-    {
      "Value": 0,
      "PRs": [
       {
@@ -689,102 +765,12 @@
        "MergedAt": "2024-10-16T09:42:59Z"
       }
      ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13070,
-       "MergedAt": "2024-10-16T09:43:06Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13050,
-       "MergedAt": "2024-10-18T15:58:50Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 12988,
-       "MergedAt": "2024-10-21T20:48:48Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 12915,
-       "MergedAt": "2024-10-15T11:36:57Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13082,
-       "MergedAt": "2024-10-17T13:34:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13053,
-       "MergedAt": "2024-10-15T16:10:58Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 13018,
-       "MergedAt": "2024-10-16T22:22:44Z"
-      }
-     ]
-    },
-    {
-     "Value": 2,
-     "PRs": [
-      {
-       "Number": 13088,
-       "MergedAt": "2024-10-21T20:48:55Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13024,
-       "MergedAt": "2024-10-16T12:54:51Z"
-      }
-     ]
-    },
-    {
-     "Value": 1,
-     "PRs": [
-      {
-       "Number": 13057,
-       "MergedAt": "2024-10-15T07:23:01Z"
-      }
-     ]
     }
    ]
   },
   "AverageTimeToMerge": {
-   "Avg": 0.44,
-   "Std": 0.28,
+   "Avg": 0.41,
+   "Std": 0.27,
    "Number": 0,
    "NoRetest": 0,
    "SIGComputeRetest": 0,
@@ -798,20 +784,11 @@
    "FailedJobLeaderBoard": null,
    "DataPoints": [
     {
-     "Value": 0.44,
+     "Value": 0.32,
      "PRs": [
       {
-       "Number": 13088,
-       "MergedAt": "2024-10-21T20:48:55Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.39,
-     "PRs": [
-      {
-       "Number": 13078,
-       "MergedAt": "2024-10-19T01:14:46Z"
+       "Number": 13030,
+       "MergedAt": "2024-10-16T09:42:45Z"
       }
      ]
     },
@@ -819,8 +796,17 @@
      "Value": 0.28,
      "PRs": [
       {
-       "Number": 13072,
-       "MergedAt": "2024-10-18T15:58:57Z"
+       "Number": 12802,
+       "MergedAt": "2024-10-17T20:44:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.86,
+     "PRs": [
+      {
+       "Number": 13073,
+       "MergedAt": "2024-10-16T09:43:13Z"
       }
      ]
     },
@@ -834,20 +820,38 @@
      ]
     },
     {
-     "Value": 1,
+     "Value": 0.21,
      "PRs": [
       {
-       "Number": 13045,
-       "MergedAt": "2024-10-16T09:42:52Z"
+       "Number": 13059,
+       "MergedAt": "2024-10-16T12:54:59Z"
       }
      ]
     },
     {
-     "Value": 0.26,
+     "Value": 0.3,
      "PRs": [
       {
-       "Number": 13024,
-       "MergedAt": "2024-10-16T12:54:51Z"
+       "Number": 13053,
+       "MergedAt": "2024-10-15T16:10:58Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.24,
+     "PRs": [
+      {
+       "Number": 13050,
+       "MergedAt": "2024-10-18T15:58:50Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.44,
+     "PRs": [
+      {
+       "Number": 13088,
+       "MergedAt": "2024-10-21T20:48:55Z"
       }
      ]
     },
@@ -861,20 +865,65 @@
      ]
     },
     {
-     "Value": 0.51,
+     "Value": 0.39,
      "PRs": [
       {
-       "Number": 13063,
-       "MergedAt": "2024-10-22T00:04:49Z"
+       "Number": 13078,
+       "MergedAt": "2024-10-19T01:14:46Z"
       }
      ]
     },
     {
-     "Value": 0.32,
+     "Value": 0.39,
      "PRs": [
       {
-       "Number": 13030,
-       "MergedAt": "2024-10-16T09:42:45Z"
+       "Number": 13027,
+       "MergedAt": "2024-10-17T18:02:52Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.26,
+     "PRs": [
+      {
+       "Number": 13024,
+       "MergedAt": "2024-10-16T12:54:51Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.74,
+     "PRs": [
+      {
+       "Number": 12601,
+       "MergedAt": "2024-10-17T08:12:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.29,
+     "PRs": [
+      {
+       "Number": 13062,
+       "MergedAt": "2024-10-18T20:30:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.38,
+     "PRs": [
+      {
+       "Number": 13041,
+       "MergedAt": "2024-10-16T18:52:51Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.91,
+     "PRs": [
+      {
+       "Number": 13070,
+       "MergedAt": "2024-10-16T09:43:06Z"
       }
      ]
     },
@@ -884,6 +933,105 @@
       {
        "Number": 13019,
        "MergedAt": "2024-10-16T18:52:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.41,
+     "PRs": [
+      {
+       "Number": 13001,
+       "MergedAt": "2024-10-17T18:02:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.09,
+     "PRs": [
+      {
+       "Number": 13000,
+       "MergedAt": "2024-10-16T12:54:44Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.67,
+     "PRs": [
+      {
+       "Number": 13077,
+       "MergedAt": "2024-10-17T08:12:51Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13065,
+       "MergedAt": "2024-10-15T16:02:58Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.51,
+     "PRs": [
+      {
+       "Number": 13063,
+       "MergedAt": "2024-10-22T00:04:49Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.88,
+     "PRs": [
+      {
+       "Number": 13060,
+       "MergedAt": "2024-10-16T09:42:59Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.42,
+     "PRs": [
+      {
+       "Number": 13018,
+       "MergedAt": "2024-10-16T22:22:44Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.2,
+     "PRs": [
+      {
+       "Number": 13082,
+       "MergedAt": "2024-10-17T13:34:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.28,
+     "PRs": [
+      {
+       "Number": 13072,
+       "MergedAt": "2024-10-18T15:58:57Z"
+      }
+     ]
+    },
+    {
+     "Value": 0.05,
+     "PRs": [
+      {
+       "Number": 13087,
+       "MergedAt": "2024-10-17T20:34:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 1,
+     "PRs": [
+      {
+       "Number": 13045,
+       "MergedAt": "2024-10-16T09:42:52Z"
       }
      ]
     },
@@ -906,186 +1054,6 @@
      ]
     },
     {
-     "Value": 0.67,
-     "PRs": [
-      {
-       "Number": 13077,
-       "MergedAt": "2024-10-17T08:12:51Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.86,
-     "PRs": [
-      {
-       "Number": 13073,
-       "MergedAt": "2024-10-16T09:43:13Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.38,
-     "PRs": [
-      {
-       "Number": 13041,
-       "MergedAt": "2024-10-16T18:52:51Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.42,
-     "PRs": [
-      {
-       "Number": 13018,
-       "MergedAt": "2024-10-16T22:22:44Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.41,
-     "PRs": [
-      {
-       "Number": 13001,
-       "MergedAt": "2024-10-17T18:02:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.91,
-     "PRs": [
-      {
-       "Number": 13070,
-       "MergedAt": "2024-10-16T09:43:06Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.28,
-     "PRs": [
-      {
-       "Number": 12802,
-       "MergedAt": "2024-10-17T20:44:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.88,
-     "PRs": [
-      {
-       "Number": 13060,
-       "MergedAt": "2024-10-16T09:42:59Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.3,
-     "PRs": [
-      {
-       "Number": 13053,
-       "MergedAt": "2024-10-15T16:10:58Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.05,
-     "PRs": [
-      {
-       "Number": 13087,
-       "MergedAt": "2024-10-17T20:34:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13065,
-       "MergedAt": "2024-10-15T16:02:58Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.24,
-     "PRs": [
-      {
-       "Number": 13050,
-       "MergedAt": "2024-10-18T15:58:50Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.58,
-     "PRs": [
-      {
-       "Number": 12855,
-       "MergedAt": "2024-10-15T07:22:54Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.29,
-     "PRs": [
-      {
-       "Number": 13062,
-       "MergedAt": "2024-10-18T20:30:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.21,
-     "PRs": [
-      {
-       "Number": 13059,
-       "MergedAt": "2024-10-16T12:54:59Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.09,
-     "PRs": [
-      {
-       "Number": 13000,
-       "MergedAt": "2024-10-16T12:54:44Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.74,
-     "PRs": [
-      {
-       "Number": 12601,
-       "MergedAt": "2024-10-17T08:12:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.2,
-     "PRs": [
-      {
-       "Number": 13082,
-       "MergedAt": "2024-10-17T13:34:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.97,
-     "PRs": [
-      {
-       "Number": 13057,
-       "MergedAt": "2024-10-15T07:23:01Z"
-      }
-     ]
-    },
-    {
-     "Value": 0.39,
-     "PRs": [
-      {
-       "Number": 13027,
-       "MergedAt": "2024-10-17T18:02:52Z"
-      }
-     ]
-    },
-    {
      "Value": 0.11,
      "PRs": [
       {
@@ -1099,7 +1067,7 @@
   "PRsMergedWithNoRetest": {
    "Avg": 0,
    "Std": 0,
-   "Number": 36,
+   "Number": 34,
    "NoRetest": 15,
    "SIGComputeRetest": 0,
    "SIGStorageRetest": 0,
@@ -1115,26 +1083,8 @@
      "Value": 0,
      "PRs": [
       {
-       "Number": 12802,
-       "MergedAt": "2024-10-17T20:44:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13082,
-       "MergedAt": "2024-10-17T13:34:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13030,
-       "MergedAt": "2024-10-16T09:42:45Z"
+       "Number": 13041,
+       "MergedAt": "2024-10-16T18:52:51Z"
       }
      ]
     },
@@ -1151,62 +1101,8 @@
      "Value": 0,
      "PRs": [
       {
-       "Number": 12948,
-       "MergedAt": "2024-10-15T11:37:04Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13041,
-       "MergedAt": "2024-10-16T18:52:51Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 12072,
-       "MergedAt": "2024-10-15T22:50:58Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
        "Number": 13087,
        "MergedAt": "2024-10-17T20:34:45Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13078,
-       "MergedAt": "2024-10-19T01:14:46Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13050,
-       "MergedAt": "2024-10-18T15:58:50Z"
-      }
-     ]
-    },
-    {
-     "Value": 0,
-     "PRs": [
-      {
-       "Number": 13070,
-       "MergedAt": "2024-10-16T09:43:06Z"
       }
      ]
     },
@@ -1223,8 +1119,26 @@
      "Value": 0,
      "PRs": [
       {
-       "Number": 12967,
-       "MergedAt": "2024-10-21T09:34:50Z"
+       "Number": 13030,
+       "MergedAt": "2024-10-16T09:42:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13078,
+       "MergedAt": "2024-10-19T01:14:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12072,
+       "MergedAt": "2024-10-15T22:50:58Z"
       }
      ]
     },
@@ -1241,8 +1155,62 @@
      "Value": 0,
      "PRs": [
       {
+       "Number": 12948,
+       "MergedAt": "2024-10-15T11:37:04Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13070,
+       "MergedAt": "2024-10-16T09:43:06Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12967,
+       "MergedAt": "2024-10-21T09:34:50Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 12802,
+       "MergedAt": "2024-10-17T20:44:45Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13082,
+       "MergedAt": "2024-10-17T13:34:46Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
        "Number": 13060,
        "MergedAt": "2024-10-16T09:42:59Z"
+      }
+     ]
+    },
+    {
+     "Value": 0,
+     "PRs": [
+      {
+       "Number": 13050,
+       "MergedAt": "2024-10-18T15:58:50Z"
       }
      ]
     }
@@ -1253,35 +1221,19 @@
    "Std": 0,
    "Number": 0,
    "NoRetest": 0,
-   "SIGComputeRetest": 39,
+   "SIGComputeRetest": 34,
    "SIGStorageRetest": 14,
-   "SIGNetworkRetest": 29,
-   "SIGOperatorRetest": 8,
-   "SIGComputeTotal": 400,
-   "SIGStorageTotal": 190,
-   "SIGNetworkTotal": 319,
-   "SIGOperatorTotal": 188,
+   "SIGNetworkRetest": 27,
+   "SIGOperatorRetest": 7,
+   "SIGComputeTotal": 359,
+   "SIGStorageTotal": 172,
+   "SIGNetworkTotal": 286,
+   "SIGOperatorTotal": 170,
    "FailedJobLeaderBoard": [
-    {
-     "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations",
-     "FailureCount": 9,
-     "SuccessCount": 60,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1847298553366450176",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846629375886233600",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845814117047209984",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13059/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845491153042935808",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845918815670505472",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13045/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845840445192540160",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12995/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1848398565580214272",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846640745885208576",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846626358571044864"
-     ]
-    },
     {
      "JobName": "pull-kubevirt-e2e-k8s-1.30-ipv6-sig-network",
      "FailureCount": 9,
-     "SuccessCount": 53,
+     "SuccessCount": 47,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.30-ipv6-sig-network/1848297093320413184",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13050/pull-kubevirt-e2e-k8s-1.30-ipv6-sig-network/1847200395852517376",
@@ -1295,13 +1247,27 @@
      ]
     },
     {
+     "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations",
+     "FailureCount": 8,
+     "SuccessCount": 54,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1847298553366450176",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846629375886233600",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845814117047209984",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13059/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845491153042935808",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13045/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1845840445192540160",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12995/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1848398565580214272",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846640745885208576",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-migrations/1846626358571044864"
+     ]
+    },
+    {
      "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-compute",
-     "FailureCount": 9,
-     "SuccessCount": 56,
+     "FailureCount": 8,
+     "SuccessCount": 50,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-k8s-1.31-sig-compute/1848152688789819392",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.31-sig-compute/1846629386833367040",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-k8s-1.31-sig-compute/1846040633421074432",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13041/pull-kubevirt-e2e-k8s-1.31-sig-compute/1846341282461388800",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.31-sig-compute/1846919316482560000",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13001/pull-kubevirt-e2e-k8s-1.31-sig-compute/1844470785444417536",
@@ -1311,24 +1277,9 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-arm64",
-     "FailureCount": 8,
-     "SuccessCount": 32,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-arm64/1848339538577985536",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-arm64/1848293039508819968",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-arm64/1845753859553628160",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13000/pull-kubevirt-e2e-arm64/1846142529351716864",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13000/pull-kubevirt-e2e-arm64/1844356259319386112",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-arm64/1838543236394651648",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12855/pull-kubevirt-e2e-arm64/1845840428100751360",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12781/pull-kubevirt-e2e-arm64/1833428994725253120"
-     ]
-    },
-    {
      "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-network",
      "FailureCount": 8,
-     "SuccessCount": 54,
+     "SuccessCount": 48,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-k8s-1.31-sig-network/1848404095686152192",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.31-sig-network/1847375302846582784",
@@ -1341,23 +1292,23 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-compute",
+     "JobName": "pull-kubevirt-e2e-arm64",
      "FailureCount": 7,
-     "SuccessCount": 54,
+     "SuccessCount": 31,
      "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-k8s-1.30-sig-compute/1848301665627672576",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846040630413758464",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846919313085173760",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12855/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846063279256899584",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846647004361396224",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846640677471916032",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846626366263398400"
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-arm64/1848339538577985536",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-arm64/1848293039508819968",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-arm64/1845753859553628160",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13000/pull-kubevirt-e2e-arm64/1846142529351716864",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13000/pull-kubevirt-e2e-arm64/1844356259319386112",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-arm64/1838543236394651648",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12781/pull-kubevirt-e2e-arm64/1833428994725253120"
      ]
     },
     {
      "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-compute-serial",
      "FailureCount": 6,
-     "SuccessCount": 58,
+     "SuccessCount": 52,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13018/pull-kubevirt-e2e-k8s-1.31-sig-compute-serial/1846206214917066752",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-k8s-1.31-sig-compute-serial/1845986073138696192",
@@ -1365,18 +1316,6 @@
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-k8s-1.31-sig-compute-serial/1838543239649431552",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-serial/1846640773949296640",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-compute-serial/1846626362794708992"
-     ]
-    },
-    {
-     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-operator",
-     "FailureCount": 5,
-     "SuccessCount": 54,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.30-sig-operator/1846629385289863168",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-k8s-1.30-sig-operator/1848332820326387712",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-k8s-1.30-sig-operator/1845813582235701248",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13024/pull-kubevirt-e2e-k8s-1.30-sig-operator/1846268451971141632",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12988/pull-kubevirt-e2e-k8s-1.30-sig-operator/1848292769773129728"
      ]
     },
     {
@@ -1392,9 +1331,21 @@
      ]
     },
     {
+     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-compute",
+     "FailureCount": 5,
+     "SuccessCount": 49,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-k8s-1.30-sig-compute/1848301665627672576",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846919313085173760",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846647004361396224",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846640677471916032",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.30-sig-compute/1846626366263398400"
+     ]
+    },
+    {
      "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-storage",
      "FailureCount": 5,
-     "SuccessCount": 57,
+     "SuccessCount": 51,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.31-sig-storage/1847298559225892864",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.31-sig-storage/1846766786142277632",
@@ -1404,20 +1355,42 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-kind-1.30-vgpu",
+     "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-storage",
      "FailureCount": 4,
-     "SuccessCount": 54,
+     "SuccessCount": 46,
      "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13073/pull-kubevirt-e2e-kind-1.30-vgpu/1846208460950081536",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13041/pull-kubevirt-e2e-kind-1.30-vgpu/1846508590001557504",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-kind-1.30-vgpu/1845847750839635968",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12855/pull-kubevirt-e2e-kind-1.30-vgpu/1845983277194678272"
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.29-sig-storage/1846766778210848768",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-storage/1848307019367321600",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-storage/1848297093567877120",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12781/pull-kubevirt-e2e-k8s-1.29-sig-storage/1846921275771981824"
+     ]
+    },
+    {
+     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-operator",
+     "FailureCount": 4,
+     "SuccessCount": 49,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.30-sig-operator/1846629385289863168",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-k8s-1.30-sig-operator/1848332820326387712",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13024/pull-kubevirt-e2e-k8s-1.30-sig-operator/1846268451971141632",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12988/pull-kubevirt-e2e-k8s-1.30-sig-operator/1848292769773129728"
+     ]
+    },
+    {
+     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-network",
+     "FailureCount": 4,
+     "SuccessCount": 47,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.30-sig-network/1847303242346663936",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-k8s-1.30-sig-network/1848332819583995904",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.30-sig-network/1846832700875345920",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13001/pull-kubevirt-e2e-k8s-1.30-sig-network/1846908726888370176"
      ]
     },
     {
      "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-compute",
      "FailureCount": 4,
-     "SuccessCount": 56,
+     "SuccessCount": 49,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.29-sig-compute/1846766779066486784",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-compute/1848297093676929024",
@@ -1428,7 +1401,7 @@
     {
      "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-network",
      "FailureCount": 4,
-     "SuccessCount": 54,
+     "SuccessCount": 48,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13088/pull-kubevirt-e2e-k8s-1.29-sig-network/1848301664340021248",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-network/1848297093437853696",
@@ -1437,31 +1410,9 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-network",
-     "FailureCount": 4,
-     "SuccessCount": 53,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13078/pull-kubevirt-e2e-k8s-1.30-sig-network/1847303242346663936",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13063/pull-kubevirt-e2e-k8s-1.30-sig-network/1848332819583995904",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.30-sig-network/1846832700875345920",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13001/pull-kubevirt-e2e-k8s-1.30-sig-network/1846908726888370176"
-     ]
-    },
-    {
-     "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-storage",
-     "FailureCount": 4,
-     "SuccessCount": 52,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13077/pull-kubevirt-e2e-k8s-1.29-sig-storage/1846766778210848768",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-storage/1848307019367321600",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-storage/1848297093567877120",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12781/pull-kubevirt-e2e-k8s-1.29-sig-storage/1846921275771981824"
-     ]
-    },
-    {
      "JobName": "pull-kubevirt-e2e-k8s-1.30-sig-storage",
      "FailureCount": 3,
-     "SuccessCount": 55,
+     "SuccessCount": 49,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13019/pull-kubevirt-e2e-k8s-1.30-sig-storage/1846444871020187648",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12995/pull-kubevirt-e2e-k8s-1.30-sig-storage/1848398572173660160",
@@ -1469,30 +1420,46 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-kind-sriov",
+     "JobName": "pull-kubevirt-e2e-kind-1.30-vgpu",
      "FailureCount": 3,
-     "SuccessCount": 56,
+     "SuccessCount": 48,
      "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-kind-sriov/1845813566481895424",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13057/pull-kubevirt-e2e-kind-sriov/1845739205783719936",
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13018/pull-kubevirt-e2e-kind-sriov/1846628364152999936"
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13073/pull-kubevirt-e2e-kind-1.30-vgpu/1846208460950081536",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13041/pull-kubevirt-e2e-kind-1.30-vgpu/1846508590001557504",
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12915/pull-kubevirt-e2e-kind-1.30-vgpu/1845847750839635968"
      ]
     },
     {
      "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-operator",
      "FailureCount": 2,
-     "SuccessCount": 55,
+     "SuccessCount": 49,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13064/pull-kubevirt-e2e-k8s-1.29-sig-operator/1848297093806952448",
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-k8s-1.29-sig-operator/1846919310568591360"
      ]
     },
     {
+     "JobName": "pull-kubevirt-e2e-arm64-1.3",
+     "FailureCount": 1,
+     "SuccessCount": 2,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13062/pull-kubevirt-e2e-arm64-1.3/1845745863888998400"
+     ]
+    },
+    {
      "JobName": "pull-kubevirt-e2e-k8s-1.31-sig-operator",
      "FailureCount": 1,
-     "SuccessCount": 59,
+     "SuccessCount": 53,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/12601/pull-kubevirt-e2e-k8s-1.31-sig-operator/1846626370315096064"
+     ]
+    },
+    {
+     "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-performance-1.3",
+     "FailureCount": 1,
+     "SuccessCount": 4,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13062/pull-kubevirt-e2e-k8s-1.29-sig-performance-1.3/1847270599534055424"
      ]
     },
     {
@@ -1506,7 +1473,7 @@
     {
      "JobName": "pull-kubevirt-e2e-windows2016",
      "FailureCount": 1,
-     "SuccessCount": 56,
+     "SuccessCount": 49,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13027/pull-kubevirt-e2e-windows2016/1846833413089136640"
      ]
@@ -1520,27 +1487,19 @@
      ]
     },
     {
-     "JobName": "pull-kubevirt-e2e-k8s-1.29-sig-performance-1.3",
-     "FailureCount": 1,
-     "SuccessCount": 4,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13062/pull-kubevirt-e2e-k8s-1.29-sig-performance-1.3/1847270599534055424"
-     ]
-    },
-    {
-     "JobName": "pull-kubevirt-e2e-arm64-1.3",
-     "FailureCount": 1,
-     "SuccessCount": 2,
-     "FailureURLs": [
-      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13062/pull-kubevirt-e2e-arm64-1.3/1845745863888998400"
-     ]
-    },
-    {
      "JobName": "pull-kubevirt-e2e-kind-sriov-1.3",
      "FailureCount": 1,
      "SuccessCount": 4,
      "FailureURLs": [
       "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13065/pull-kubevirt-e2e-kind-sriov-1.3/1845919189760479232"
+     ]
+    },
+    {
+     "JobName": "pull-kubevirt-e2e-kind-sriov",
+     "FailureCount": 1,
+     "SuccessCount": 49,
+     "FailureURLs": [
+      "https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/13018/pull-kubevirt-e2e-kind-sriov/1846628364152999936"
      ]
     }
    ],
@@ -1672,15 +1631,6 @@
      ]
     },
     {
-     "Value": 6,
-     "PRs": [
-      {
-       "Number": 13057,
-       "MergedAt": "2024-10-15T07:23:01Z"
-      }
-     ]
-    },
-    {
      "Value": 0,
      "PRs": [
       {
@@ -1821,15 +1771,6 @@
       {
        "Number": 12915,
        "MergedAt": "2024-10-15T11:36:57Z"
-      }
-     ]
-    },
-    {
-     "Value": 3,
-     "PRs": [
-      {
-       "Number": 12855,
-       "MergedAt": "2024-10-15T07:22:54Z"
       }
      ]
     },
