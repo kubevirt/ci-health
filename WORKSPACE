@@ -1685,7 +1685,7 @@ protobuf_deps()
 go_rules_dependencies()
 
 go_register_toolchains(
-    go_version = "1.22.2",
+    go_version = "1.22.10",
 )
 
 gazelle_dependencies()

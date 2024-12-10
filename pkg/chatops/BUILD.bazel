@@ -16,8 +16,8 @@ go_library(
 go_test(
     name = "chatops_test",
     srcs = ["chatops_test.go"],
-    embed = [":chatops"],
     deps = [
+        ":chatops",
         "//pkg/types",
         "@com_github_onsi_ginkgo//:ginkgo",
         "@com_github_onsi_ginkgo//extensions/table",
