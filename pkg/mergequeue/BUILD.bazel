@@ -16,8 +16,8 @@ go_library(
 go_test(
     name = "mergequeue_test",
     srcs = ["mergequeue_test.go"],
-    embed = [":mergequeue"],
     deps = [
+        ":mergequeue",
         "//pkg/constants",
         "//pkg/types",
         "@com_github_onsi_ginkgo//:ginkgo",

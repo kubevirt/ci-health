@@ -17,8 +17,8 @@ go_library(
 go_test(
     name = "output_test",
     srcs = ["output_test.go"],
-    embed = [":output"],
     deps = [
+        ":output",
         "@com_github_narqo_go_badge//:go-badge",
         "@com_github_onsi_ginkgo//:ginkgo",
         "@com_github_onsi_ginkgo//extensions/table",

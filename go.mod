@@ -1,6 +1,6 @@
 module github.com/kubevirt/ci-health
 
-go 1.22.2
+go 1.22
 
 require (
 	github.com/narqo/go-badge v0.0.0-20221212191103-ba83bed45a1a
