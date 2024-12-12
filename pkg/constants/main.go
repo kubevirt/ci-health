@@ -59,7 +59,7 @@ const (
 	SIGOperatorRetestBadgeName = "SIG Operator"
 	SIGStorageRetestBadgeName  = "SIG Storage"
 	BadgeDataFormat            = "%.2f ± std %.2f"
-	NoRetestBadgeDataFormat    = "%.0f / %.0f"
+	NoRetestBadgeDataFormat    = "%.0f / %.0f | %.0f%s"
 
 	AvgMergeQueueLengthMetricName = "cihealth_avg_merge_queue_lenght_total"
 	AvgTimeToMergeMetricName      = "cihealth_avg_time_to_merge_days"
