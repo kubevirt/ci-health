@@ -259,7 +259,7 @@ func (d *RunningAverageDataItem) String() string {
 }
 
 func (d *RunningAverageDataItem) SimpleBadgeString() string {
-	return fmt.Sprintf(constants.NoRetestBadgeDataFormat, d.NoRetest, d.Number)
+	return fmt.Sprintf(constants.NoRetestBadgeDataFormat, d.NoRetest, d.Number, (d.NoRetest/d.Number)*100, "%")
 }
 
 // Results represents the data obtained from GitHub. It includes the source repo from which
