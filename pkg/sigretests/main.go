@@ -14,13 +14,15 @@ const org = "kubevirt"
 const repo = "kubevirt"
 
 type job struct {
-	jobName     string
-	buildNumber string
-	buildURL    string
-	failure     bool
+	jobName      string
+	buildNumber  string
+	buildURL     string
+	failure      bool
+	artifactsURL string
 }
 
 type SigRetests struct {
+	SigCIFailure       int
 	SigComputeFailure  int
 	SigNetworkFailure  int
 	SigStorageFailure  int
@@ -48,6 +50,20 @@ func finishedJSONURL(org string, repo string, prNumber string, jobName string, b
 	return fmt.Sprintf("%s/%s/%s/finished.json", prStorageURL(org, repo, prNumber), jobName, buildNumber)
 }
 
+func checkSIGCIFailure(job job) bool {
+	if job.failure {
+		junitURL := fmt.Sprintf("%s/junit.functest.xml", job.artifactsURL)
+		resp, err := http.Get(junitURL)
+		if err != nil {
+			return true
+		}
+		if resp.StatusCode != http.StatusOK {
+			return true
+		}
+	}
+	return false
+}
+
 func filterJobs(node *html.Node) (jobs []job) {
 	var e2eJob job
 	if node.Type == html.ElementNode && node.Data == "td" {
@@ -60,6 +76,9 @@ func filterJobs(node *html.Node) (jobs []job) {
 						buildLogUrl := strings.Split(href.Val, "/")
 						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
 						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
+						prNumber := buildLogUrl[len(buildLogUrl)-3]
+						e2eJob.artifactsURL = fmt.Sprintf("https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/%s/%s/%s/artifacts",
+							prNumber, e2eJob.jobName, e2eJob.buildNumber)
 						prowjobs = append(prowjobs, e2eJob)
 						continue
 					}
@@ -172,6 +191,8 @@ func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
 	prSigRetests = SigRetests{}
 	for _, job := range jobs {
 		switch {
+		case checkSIGCIFailure(job):
+			prSigRetests.SigCIFailure += 1
 		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
 			if job.failure {
 				prSigRetests.SigComputeFailure += 1

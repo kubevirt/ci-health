@@ -45,6 +45,7 @@ const (
 	SIGNetworkRetestBadgeFileName  = "sig-network-retests.svg"
 	SIGStorageRetestBadgeFileName  = "sig-storage-retests.svg"
 	SIGOperatorRetestBadgeFileName = "sig-operator-retests.svg"
+	SIGCIRetestBadgeFileName       = "sig-ci-retests.svg"
 	JSONResultsFileName            = "results.json"
 	PlotFileName                   = "plot.png"
 	MetricsFileName                = "metrics"
@@ -58,6 +59,7 @@ const (
 	SIGNetworkRetestBadgeName  = "SIG Network"
 	SIGOperatorRetestBadgeName = "SIG Operator"
 	SIGStorageRetestBadgeName  = "SIG Storage"
+	SIGCIRetestBadgeName       = "SIG CI"
 	BadgeDataFormat            = "%.2f ± std %.2f"
 	NoRetestBadgeDataFormat    = "%.0f / %.0f | %.0f%s"
 
