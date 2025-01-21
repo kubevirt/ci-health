@@ -281,6 +281,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		dataItem.SIGNetworkRetest = dataItem.SIGNetworkRetest + float64(jobsPerSIG.SigNetworkFailure)
 		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(jobsPerSIG.SigStorageFailure)
 		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(jobsPerSIG.SigOperatorFailure)
+		dataItem.SIGCIRetest = dataItem.SIGCIRetest + float64(jobsPerSIG.SigCIFailure)
 		dataItem.SIGComputeTotal = dataItem.SIGComputeTotal + float64(jobsPerSIG.SigComputeFailure) + float64(jobsPerSIG.SigComputeSuccess)
 		dataItem.SIGNetworkTotal = dataItem.SIGNetworkTotal + float64(jobsPerSIG.SigNetworkFailure) + float64(jobsPerSIG.SigNetworkSuccess)
 		dataItem.SIGStorageTotal = dataItem.SIGStorageTotal + float64(jobsPerSIG.SigStorageFailure) + float64(jobsPerSIG.SigStorageSuccess)
@@ -294,6 +295,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		successJobNames = slices.Concat(successJobNames, jobsPerSIG.SuccessJobNames)
 		failedJobURLs = slices.Concat(failedJobURLs, jobsPerSIG.FailedJobURLs)
 	}
+	dataItem.SIGCITotal = dataItem.SIGComputeTotal + dataItem.SIGStorageTotal + dataItem.SIGNetworkTotal + dataItem.SIGOperatorTotal + dataItem.SIGCIRetest
 	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
 	for i, job := range sortedFailedJobs {
 		for _, success := range successJobNames {

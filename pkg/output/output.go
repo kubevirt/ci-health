@@ -159,6 +159,13 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		b.options.SIGRetestsLevels,
 	)
 
+	err = b.writeSIGRetestBadge(
+		constants.SIGCIRetestBadgeName,
+		filepath.Join(basePath, constants.SIGCIRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
 	err = b.writeJobFailureBadges(
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
@@ -209,6 +216,9 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	case constants.SIGOperatorRetestBadgeName:
 		value = data.SIGOperatorRetest
 		total = data.SIGOperatorTotal
+	case constants.SIGCIRetestBadgeName:
+		value = data.SIGCIRetest
+		total = data.SIGCITotal
 	}
 
 	color := BadgeColor(((value / total) * 100), levels)
