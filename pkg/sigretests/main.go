@@ -25,18 +25,20 @@ type job struct {
 }
 
 type SigRetests struct {
-	SigCIFailure       int
-	SigComputeFailure  int
-	SigNetworkFailure  int
-	SigStorageFailure  int
-	SigOperatorFailure int
-	SigComputeSuccess  int
-	SigNetworkSuccess  int
-	SigStorageSuccess  int
-	SigOperatorSuccess int
-	FailedJobNames     []string
-	FailedJobURLs      []string
-	SuccessJobNames    []string
+	SigCIFailure         int
+	SigComputeFailure    int
+	SigNetworkFailure    int
+	SigStorageFailure    int
+	SigOperatorFailure   int
+	SigMonitoringFailure int
+	SigComputeSuccess    int
+	SigNetworkSuccess    int
+	SigStorageSuccess    int
+	SigOperatorSuccess   int
+	SigMonitoringSuccess int
+	FailedJobNames       []string
+	FailedJobURLs        []string
+	SuccessJobNames      []string
 }
 
 var prowjobs []job
@@ -243,6 +245,12 @@ func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
 				prSigRetests.SigOperatorFailure += 1
 			} else {
 				prSigRetests.SigOperatorSuccess += 1
+			}
+		case strings.Contains(job.jobName, "sig-monitoring"):
+			if job.failure {
+				prSigRetests.SigMonitoringFailure += 1
+			} else {
+				prSigRetests.SigMonitoringSuccess += 1
 			}
 		}
 		prSigRetests = sortJobNamesOnResult(job, prSigRetests)

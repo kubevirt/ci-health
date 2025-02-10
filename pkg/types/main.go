@@ -247,11 +247,13 @@ type RunningAverageDataItem struct {
 	SIGNetworkRetest     float64
 	SIGOperatorRetest    float64
 	SIGCIRetest          float64
+	SIGMonitoringRetest  float64
 	SIGComputeTotal      float64
 	SIGStorageTotal      float64
 	SIGNetworkTotal      float64
 	SIGOperatorTotal     float64
 	SIGCITotal           float64
+	SIGMonitoringTotal   float64
 	FailedJobLeaderBoard FailedJobs
 	DataPoints           []DataPoint
 }
