@@ -47,6 +47,7 @@ Each of these failures contribute to the number of retests that occur in CI and 
 ![sig-network-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-network-retests.svg)
 ![sig-operator-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-operator-retests.svg)
 ![sig-ci-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-ci-retests.svg)
+![sig-monitoring-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-monitoring-retests.svg)
 
 Top failed lanes:
 
