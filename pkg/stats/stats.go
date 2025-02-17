@@ -282,10 +282,12 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(jobsPerSIG.SigStorageFailure)
 		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(jobsPerSIG.SigOperatorFailure)
 		dataItem.SIGCIRetest = dataItem.SIGCIRetest + float64(jobsPerSIG.SigCIFailure)
+		dataItem.SIGMonitoringRetest = dataItem.SIGMonitoringRetest + float64(jobsPerSIG.SigMonitoringFailure)
 		dataItem.SIGComputeTotal = dataItem.SIGComputeTotal + float64(jobsPerSIG.SigComputeFailure) + float64(jobsPerSIG.SigComputeSuccess)
 		dataItem.SIGNetworkTotal = dataItem.SIGNetworkTotal + float64(jobsPerSIG.SigNetworkFailure) + float64(jobsPerSIG.SigNetworkSuccess)
 		dataItem.SIGStorageTotal = dataItem.SIGStorageTotal + float64(jobsPerSIG.SigStorageFailure) + float64(jobsPerSIG.SigStorageSuccess)
 		dataItem.SIGOperatorTotal = dataItem.SIGOperatorTotal + float64(jobsPerSIG.SigOperatorFailure) + float64(jobsPerSIG.SigOperatorSuccess)
+		dataItem.SIGMonitoringTotal = dataItem.SIGMonitoringTotal + float64(jobsPerSIG.SigMonitoringFailure) + float64(jobsPerSIG.SigMonitoringSuccess)
 		dataItem.DataPoints = append(dataItem.DataPoints,
 			types.DataPoint{
 				Value: float64(len(jobsPerSIG.FailedJobNames)),
@@ -295,7 +297,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		successJobNames = slices.Concat(successJobNames, jobsPerSIG.SuccessJobNames)
 		failedJobURLs = slices.Concat(failedJobURLs, jobsPerSIG.FailedJobURLs)
 	}
-	dataItem.SIGCITotal = dataItem.SIGComputeTotal + dataItem.SIGStorageTotal + dataItem.SIGNetworkTotal + dataItem.SIGOperatorTotal + dataItem.SIGCIRetest
+	dataItem.SIGCITotal = dataItem.SIGComputeTotal + dataItem.SIGStorageTotal + dataItem.SIGNetworkTotal + dataItem.SIGOperatorTotal + dataItem.SIGCIRetest + dataItem.SIGMonitoringTotal
 	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
 	for i, job := range sortedFailedJobs {
 		for _, success := range successJobNames {
