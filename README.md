@@ -106,7 +106,7 @@ The tool has two different commands:
 * `batch`: gathers data for a range of dates and generates plots from them.
 
 ## Local execution
-You can execute the tool locally to grab the stats of an specific repo that uses
+You can execute the tool locally to grab the stats of a specific repo that uses
 Prow, these are the requirements:
 
 * [Bazelisk](https://github.com/bazelbuild/bazelisk)
@@ -131,7 +131,7 @@ You can check all the available options with:
 $ bazelisk run //cmd/stats -- --help
 ```
 So, for instance, if you have stored the path of your GitHub token file in a
-`GITHUB_TOKEN` environment variable, a query for the last four days of
+`GITHUB_TOKEN` environment variable, a query for the last 7 days of
 kubevirt/kubevirt can look like:
 ```
 $ bazelisk run //cmd/stats -- --gh-token ${GITHUB_TOKEN} --source kubevirt/kubevirt --path /tmp/ci-health --data-days 7
@@ -153,7 +153,7 @@ token.
 * `--source`: is the organization and repo to query information from.
 * `--path`: is the path to store output data.
 * `--target-metric`: is the metric to query.
-* `--start-date`: is oldest date from which the data will be queried, until today.
+* `--start-date`: is the oldest date from which the data will be queried, until today.
 
 You can check all the available options with:
 ```
