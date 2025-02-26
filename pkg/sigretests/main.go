@@ -6,7 +6,6 @@ import (
 	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
-	"strconv"
 	"strings"
 
 	"golang.org/x/net/html"
@@ -155,31 +154,11 @@ func filterForLastCommit(org string, repo string, prNumber string, latestCommit 
 	return filteredJobList, nil
 }
 
-func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastCommit []job, err error) {
+func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLatestCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
-	retryLog := log.WithField("prHistoryURL", prHistory)
-	var resp *http.Response
-	var err2 error
-	var statusCode int
-	retry.Do(
-		func() error {
-			resp, err2 = http.Get(prHistory)
-			return err2
-		},
-		retry.RetryIf(func(err error) bool {
-			retryLog.Warnf("failed to get PR history (will retry): %v", err)
-			statusCode = httpStatusOrDie(err, retryLog)
-			if statusCode == http.StatusNotFound {
-				return false
-			}
-			if statusCode == http.StatusGatewayTimeout {
-				return true
-			}
-			return false
-		}),
-	)
-	if err2 != nil {
-		return nil, fmt.Errorf("Failed to get PR history from %s", prHistory)
+	resp, err := httpGetWithRetry(prHistory)
+	if err != nil {
+		return nil, err
 	}
 	defer resp.Body.Close()
 
@@ -194,21 +173,35 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastC
 	jobsAllCommits := filterJobs(prHistoryPage)
 	prowjobs = nil
 
-	jobsLatestCommit, err := filterForLastCommit(org, repo, prNumber, latestCommit, jobsAllCommits)
+	jobsLatestCommit, err = filterForLastCommit(org, repo, prNumber, latestCommit, jobsAllCommits)
 	if err != nil {
 		return nil, err
 	}
 	return jobsLatestCommit, nil
 }
 
-// httpStatusOrDie fetches [stringly typed](https://wiki.c2.com/?StringlyTyped) error code produced by jenkins client
-// or logs a fatal error if conversion to int is not possible
-func httpStatusOrDie(err error, fLog *log.Entry) int {
-	statusCode, conversionError := strconv.Atoi(err.Error())
-	if conversionError != nil {
-		fLog.Fatalf("Failed to get status code from error %v: %v", err, conversionError)
-	}
-	return statusCode
+func httpGetWithRetry(url string) (resp *http.Response, err error) {
+	httpRetryLog := log.WithField("url", url)
+	retry.Do(
+		func() error {
+			resp, err = http.Get(url)
+			switch {
+			case resp.StatusCode == http.StatusOK:
+				httpRetryLog.Debugf("http get succeeded")
+				return nil
+			case resp.StatusCode == http.StatusGatewayTimeout:
+				httpRetryLog.Debugf("failed to http get, will retry")
+				return fmt.Errorf("failed to http get %s (status %d): %v", resp.StatusCode, url, err)
+			case err != nil:
+				httpRetryLog.Debugf("failed to http get, aborting")
+				return retry.Unrecoverable(err)
+			default:
+				httpRetryLog.Debugf("failed to http get, aborting")
+				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", resp.StatusCode, url, err))
+			}
+		},
+	)
+	return
 }
 
 func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests) {
