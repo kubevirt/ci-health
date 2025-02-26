@@ -3,6 +3,7 @@ module github.com/kubevirt/ci-health
 go 1.22
 
 require (
+	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/narqo/go-badge v0.0.0-20221212191103-ba83bed45a1a
 	github.com/onsi/ginkgo v1.16.5
 	github.com/onsi/gomega v1.27.10

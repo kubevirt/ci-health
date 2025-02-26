@@ -3,11 +3,15 @@ package sigretests
 import (
 	"encoding/json"
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
+	"strconv"
 	"strings"
 
 	"golang.org/x/net/html"
+
+	"github.com/avast/retry-go"
 )
 
 const org = "kubevirt"
@@ -153,8 +157,28 @@ func filterForLastCommit(org string, repo string, prNumber string, latestCommit 
 
 func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
-	resp, err := http.Get(prHistory)
-	if err != nil {
+	retryLog := log.WithField("prHistoryURL", prHistory)
+	var resp *http.Response
+	var err2 error
+	var statusCode int
+	retry.Do(
+		func() error {
+			resp, err2 = http.Get(prHistory)
+			return err2
+		},
+		retry.RetryIf(func(err error) bool {
+			retryLog.Warnf("failed to get PR history (will retry): %v", err)
+			statusCode = httpStatusOrDie(err, retryLog)
+			if statusCode == http.StatusNotFound {
+				return false
+			}
+			if statusCode == http.StatusGatewayTimeout {
+				return true
+			}
+			return false
+		}),
+	)
+	if err2 != nil {
 		return nil, fmt.Errorf("Failed to get PR history from %s", prHistory)
 	}
 	defer resp.Body.Close()
@@ -175,6 +199,16 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLastC
 		return nil, err
 	}
 	return jobsLatestCommit, nil
+}
+
+// httpStatusOrDie fetches [stringly typed](https://wiki.c2.com/?StringlyTyped) error code produced by jenkins client
+// or logs a fatal error if conversion to int is not possible
+func httpStatusOrDie(err error, fLog *log.Entry) int {
+	statusCode, conversionError := strconv.Atoi(err.Error())
+	if conversionError != nil {
+		fLog.Fatalf("Failed to get status code from error %v: %v", err, conversionError)
+	}
+	return statusCode
 }
 
 func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests) {
