@@ -27,7 +27,7 @@ data from the previous 7 days since the execution time.
 
 ### kubevirt/kubevirt
 
-![avg-merge-queue-lenght](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
+![avg-merge-queue-length](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
 ![avg-retests-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
 ![merged-prs-with-no-retest](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merged-prs-no-retest.svg)

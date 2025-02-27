@@ -5,5 +5,9 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/kubevirt/ci-health/pkg/sigretests",
     visibility = ["//visibility:public"],
-    deps = ["@org_golang_x_net//html"],
+    deps = [
+        "@com_github_avast_retry_go//:retry-go",
+        "@com_github_sirupsen_logrus//:logrus",
+        "@org_golang_x_net//html",
+    ],
 )
