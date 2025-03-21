@@ -8,7 +8,7 @@ on:
 jobs:
   badge-update:
     runs-on: ubuntu-latest
-    container: docker.io/golang:1.22-alpine
+    container: docker.io/golang:1.22
     steps:
     - uses: actions/checkout@v2
       with:
