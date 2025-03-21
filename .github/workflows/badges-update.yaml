@@ -20,6 +20,7 @@ jobs:
       run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
         export GITHUB_TOKEN_PATH=$(pwd)/token
+        git config --global --add safe.directory '*'
 
         go run ./cmd/stats \
           --gh-token $(pwd)/token \
