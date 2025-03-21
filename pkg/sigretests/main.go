@@ -3,10 +3,11 @@ package sigretests
 import (
 	"encoding/json"
 	"fmt"
-	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
 	"strings"
+
+	log "github.com/sirupsen/logrus"
 
 	"golang.org/x/net/html"
 
@@ -193,13 +194,13 @@ func httpGetWithRetry(url string) (resp *http.Response, err error) {
 				return nil
 			case resp.StatusCode == http.StatusGatewayTimeout:
 				httpRetryLog.Debugf("failed to http get, will retry")
-				return fmt.Errorf("failed to http get %s (status %d): %v", resp.StatusCode, url, err)
+				return fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err)
 			case err != nil:
 				httpRetryLog.Debugf("failed to http get, aborting")
 				return retry.Unrecoverable(err)
 			default:
 				httpRetryLog.Debugf("failed to http get, aborting")
-				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", resp.StatusCode, url, err))
+				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err))
 			}
 		},
 	)

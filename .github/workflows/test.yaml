@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: quay.io/kubevirtci/bootstrap:v20230105-1dbefc0
+    container: docker.io/golang:1.22-alpine
     steps:
     - uses: actions/checkout@v2
     - name: run tests
@@ -22,5 +22,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
       run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
+        export GITHUB_TOKEN_PATH=$(pwd)/token
 
-        bazelisk test ... --action_env GITHUB_TOKEN_PATH=$(pwd)/token --test_timeout=600
+        go test ./...

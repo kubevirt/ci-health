@@ -8,7 +8,7 @@ on:
 jobs:
   badge-update:
     runs-on: ubuntu-latest
-    container: quay.io/kubevirtci/bootstrap:v20210715-d0c2b78
+    container: docker.io/golang:1.22-alpine
     steps:
     - uses: actions/checkout@v2
       with:
@@ -19,53 +19,54 @@ jobs:
         SOURCE: kubevirt/kubevirt
       run: |
         echo -n $GITHUB_TOKEN > $(pwd)/token
+        export GITHUB_TOKEN_PATH=$(pwd)/token
 
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode fetch \
           --target-metric retests-to-merge \
           --log-level debug
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode plot \
           --target-metric retests-to-merge \
           --log-level debug
 
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode fetch \
           --target-metric time-to-merge \
           --log-level debug
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode plot \
           --target-metric time-to-merge \
           --log-level debug
 
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode fetch \
           --target-metric merge-queue-length \
           --log-level debug
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode plot \
           --target-metric merge-queue-length \
           --log-level debug
 
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode fetch \
           --target-metric merged-prs \
           --log-level debug
-        bazelisk run //cmd/batch -- \
+        go run ./cmd/batch \
           --gh-token $(pwd)/token \
           --path $(pwd)/output \
           --mode plot \
