@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: docker.io/golang:1.22-alpine
+    container: docker.io/golang:1.23-alpine
     steps:
     - uses: actions/checkout@v2
     - name: run tests
