@@ -147,11 +147,13 @@ func (p *Plot) Draw(c draw.Canvas) {
 		c.SetColor(p.BackgroundColor)
 		c.Fill(c.Rectangle.Path())
 	}
+
 	if p.Title.Text != "" {
 		descent := p.Title.TextStyle.FontExtents().Descent
 		c.FillText(p.Title.TextStyle, vg.Point{X: c.Center().X, Y: c.Max.Y + descent}, p.Title.Text)
-		_, h, d := p.Title.TextStyle.Handler.Box(p.Title.Text, p.Title.TextStyle.Font)
-		c.Max.Y -= h + d
+
+		rect := p.Title.TextStyle.Rectangle(p.Title.Text)
+		c.Max.Y -= rect.Size().Y
 		c.Max.Y -= p.Title.Padding
 	}
 
@@ -179,7 +181,8 @@ func (p *Plot) Draw(c draw.Canvas) {
 // the plot data will be drawn.
 func (p *Plot) DataCanvas(da draw.Canvas) draw.Canvas {
 	if p.Title.Text != "" {
-		da.Max.Y -= p.Title.TextStyle.Height(p.Title.Text) + p.Title.TextStyle.FontExtents().Descent
+		rect := p.Title.TextStyle.Rectangle(p.Title.Text)
+		da.Max.Y -= rect.Size().Y
 		da.Max.Y -= p.Title.Padding
 	}
 	p.X.sanitizeRange()
@@ -191,12 +194,61 @@ func (p *Plot) DataCanvas(da draw.Canvas) draw.Canvas {
 
 // DrawGlyphBoxes draws red outlines around the plot's
 // GlyphBoxes.  This is intended for debugging.
-func (p *Plot) DrawGlyphBoxes(c *draw.Canvas) {
-	c.SetColor(color.RGBA{R: 255, A: 255})
+func (p *Plot) DrawGlyphBoxes(c draw.Canvas) {
+	dac := p.DataCanvas(c)
+	sty := draw.LineStyle{
+		Color: color.RGBA{R: 255, A: 255},
+		Width: vg.Points(0.5),
+	}
+
+	drawBox := func(c draw.Canvas, b GlyphBox) {
+		x := c.X(b.X) + b.Rectangle.Min.X
+		y := c.Y(b.Y) + b.Rectangle.Min.Y
+		c.StrokeLines(sty, []vg.Point{
+			{X: x, Y: y},
+			{X: x + b.Rectangle.Size().X, Y: y},
+			{X: x + b.Rectangle.Size().X, Y: y + b.Rectangle.Size().Y},
+			{X: x, Y: y + b.Rectangle.Size().Y},
+			{X: x, Y: y},
+		})
+	}
+
+	var title vg.Length
+	if p.Title.Text != "" {
+		rect := p.Title.TextStyle.Rectangle(p.Title.Text)
+		title += rect.Size().Y
+		title += p.Title.Padding
+		box := GlyphBox{
+			Rectangle: rect.Add(vg.Point{
+				X: c.Center().X,
+				Y: c.Max.Y,
+			}),
+		}
+		drawBox(c, box)
+	}
+
 	for _, b := range p.GlyphBoxes(p) {
-		b.Rectangle.Min.X += c.X(b.X)
-		b.Rectangle.Min.Y += c.Y(b.Y)
-		c.Stroke(b.Rectangle.Path())
+		drawBox(dac, b)
+	}
+
+	p.X.sanitizeRange()
+	p.Y.sanitizeRange()
+
+	x := horizontalAxis{p.X}
+	y := verticalAxis{p.Y}
+
+	ywidth := y.size()
+	xheight := x.size()
+
+	cx := padX(p, draw.Crop(c, ywidth, 0, 0, 0))
+	for _, b := range x.GlyphBoxes(p) {
+		drawBox(cx, b)
+	}
+
+	cy := padY(p, draw.Crop(c, 0, 0, xheight, 0))
+	cy.Max.Y -= title
+	for _, b := range y.GlyphBoxes(p) {
+		drawBox(cy, b)
 	}
 }
 
@@ -442,7 +494,13 @@ func (p *Plot) NominalY(names ...string) {
 //
 // Supported formats are:
 //
-//  eps, jpg|jpeg, pdf, png, svg, tex and tif|tiff.
+//   - .eps
+//   - .jpg|.jpeg
+//   - .pdf
+//   - .png
+//   - .svg
+//   - .tex
+//   - .tif|.tiff
 func (p *Plot) WriterTo(w, h vg.Length, format string) (io.WriterTo, error) {
 	c, err := draw.NewFormattedCanvas(w, h, format)
 	if err != nil {
@@ -457,7 +515,13 @@ func (p *Plot) WriterTo(w, h vg.Length, format string) (io.WriterTo, error) {
 //
 // Supported extensions are:
 //
-//  .eps, .jpg, .jpeg, .pdf, .png, .svg, .tex, .tif and .tiff.
+//   - .eps
+//   - .jpg|.jpeg
+//   - .pdf
+//   - .png
+//   - .svg
+//   - .tex
+//   - .tif|.tiff
 func (p *Plot) Save(w, h vg.Length, file string) (err error) {
 	f, err := os.Create(file)
 	if err != nil {

@@ -7,6 +7,7 @@ package font
 import (
 	"errors"
 	"fmt"
+	"sync"
 
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/opentype"
@@ -21,6 +22,9 @@ var DefaultCache *Cache = NewCache(nil)
 type Font struct {
 	// Typeface identifies the Font.
 	Typeface Typeface
+
+	// TODO(sbinet): Gio@v0.2.0 has dropped font.Font.Variant
+	// we should probably follow suit.
 
 	// Variant is the variant of a font, such as "Mono" or "Smallcaps".
 	Variant Variant
@@ -180,6 +184,7 @@ type Collection []Face
 
 // Cache collects font faces.
 type Cache struct {
+	mu    sync.RWMutex
 	def   Typeface
 	faces map[Font]*opentype.Font
 }
@@ -217,6 +222,9 @@ func NewCache(coll Collection) *Cache {
 // If the cache is empty, the first font Face in the collection is set
 // to be the default one.
 func (c *Cache) Add(coll Collection) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+
 	if c.faces == nil {
 		c.faces = make(map[Font]*opentype.Font, len(coll))
 	}
@@ -236,6 +244,9 @@ func (c *Cache) Add(coll Collection) {
 // If no matching font Face could be found, the one corresponding to
 // the default typeface is selected and returned.
 func (c *Cache) Lookup(fnt Font, size Length) Face {
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+
 	if len(c.faces) == 0 {
 		return Face{}
 	}
@@ -256,6 +267,9 @@ func (c *Cache) Lookup(fnt Font, size Length) Face {
 
 // Has returns whether the cache contains the exact font descriptor.
 func (c *Cache) Has(fnt Font) bool {
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+
 	face := c.lookup(fnt)
 	return face != nil
 }
@@ -283,6 +297,7 @@ func (c *Cache) lookup(key Font) *opentype.Font {
 
 	return tf
 }
+
 func weightName(w font.Weight) string {
 	switch w {
 	case font.WeightThin:
