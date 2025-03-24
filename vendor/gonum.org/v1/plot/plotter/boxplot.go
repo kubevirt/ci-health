@@ -87,7 +87,7 @@ type BoxPlot struct {
 // NewBoxPlot returns a new BoxPlot that represents
 // the distribution of the given values.  The style of
 // the box plot is that used for Tukey's schematic
-// plots is ``Exploratory Data Analysis.''
+// plots in “Exploratory Data Analysis.”
 //
 // An error is returned if the boxplot is created with
 // no values.
@@ -301,8 +301,8 @@ func (b *BoxPlot) OutsideLabels(labels Labeller) (*Labels, error) {
 	if err != nil {
 		return nil, err
 	}
-	ls.XOffset += b.GlyphStyle.Radius / 2
-	ls.YOffset += b.GlyphStyle.Radius / 2
+	off := 0.5 * b.GlyphStyle.Radius
+	ls.Offset = ls.Offset.Add(vg.Point{X: off, Y: off})
 	return ls, nil
 }
 
@@ -421,8 +421,8 @@ func (b *horizBoxPlot) OutsideLabels(labels Labeller) (*Labels, error) {
 	if err != nil {
 		return nil, err
 	}
-	ls.XOffset += b.GlyphStyle.Radius / 2
-	ls.YOffset += b.GlyphStyle.Radius / 2
+	off := 0.5 * b.GlyphStyle.Radius
+	ls.Offset = ls.Offset.Add(vg.Point{X: off, Y: off})
 	return ls, nil
 }
 

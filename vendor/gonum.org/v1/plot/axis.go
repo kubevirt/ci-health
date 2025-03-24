@@ -88,6 +88,10 @@ type Axis struct {
 	// to the normalized coordinate system of the axis—its distance
 	// along the axis as a fraction of the axis range.
 	Scale Normalizer
+
+	// AutoRescale enables an axis to automatically adapt its minimum
+	// and maximum boundaries, according to its underlying Ticker.
+	AutoRescale bool
 }
 
 // makeAxis returns a default Axis.
@@ -161,6 +165,14 @@ func (a *Axis) sanitizeRange() {
 		a.Min--
 		a.Max++
 	}
+
+	if a.AutoRescale {
+		marks := a.Tick.Marker.Ticks(a.Min, a.Max)
+		for _, t := range marks {
+			a.Min = math.Min(a.Min, t.Value)
+			a.Max = math.Max(a.Max, t.Value)
+		}
+	}
 }
 
 // LinearScale an be used as the value of an Axis.Scale function to
@@ -223,7 +235,6 @@ type horizontalAxis struct {
 // size returns the height of the axis.
 func (a horizontalAxis) size() (h vg.Length) {
 	if a.Label.Text != "" { // We assume that the label isn't rotated.
-		h += a.Label.TextStyle.FontExtents().Descent
 		h += a.Label.TextStyle.Height(a.Label.Text)
 		h += a.Label.Padding
 	}
@@ -295,15 +306,41 @@ func (a horizontalAxis) draw(c draw.Canvas) {
 }
 
 // GlyphBoxes returns the GlyphBoxes for the tick labels.
-func (a horizontalAxis) GlyphBoxes(*Plot) []GlyphBox {
-	var boxes []GlyphBox
-	for _, t := range a.Tick.Marker.Ticks(a.Min, a.Max) {
+func (a horizontalAxis) GlyphBoxes(p *Plot) []GlyphBox {
+	var (
+		boxes []GlyphBox
+		yoff  font.Length
+	)
+
+	if a.Label.Text != "" {
+		x := a.Norm(p.X.Max)
+		switch a.Label.Position {
+		case draw.PosCenter:
+			x = a.Norm(0.5 * (p.X.Max + p.X.Min))
+		case draw.PosRight:
+			x -= a.Norm(0.5 * a.Label.TextStyle.Width(a.Label.Text).Points()) // FIXME(sbinet): want data coordinates
+		}
+		descent := a.Label.TextStyle.FontExtents().Descent
+		boxes = append(boxes, GlyphBox{
+			X:         x,
+			Rectangle: a.Label.TextStyle.Rectangle(a.Label.Text).Add(vg.Point{Y: yoff + descent}),
+		})
+		yoff += a.Label.TextStyle.Height(a.Label.Text)
+		yoff += a.Label.Padding
+	}
+
+	var (
+		marks   = a.Tick.Marker.Ticks(a.Min, a.Max)
+		height  = tickLabelHeight(a.Tick.Label, marks)
+		descent = a.Tick.Label.FontExtents().Descent
+	)
+	for _, t := range marks {
 		if t.IsMinor() {
 			continue
 		}
 		box := GlyphBox{
 			X:         a.Norm(t.Value),
-			Rectangle: a.Tick.Label.Rectangle(t.Label),
+			Rectangle: a.Tick.Label.Rectangle(t.Label).Add(vg.Point{Y: yoff + height + descent}),
 		}
 		boxes = append(boxes, box)
 	}
@@ -396,15 +433,50 @@ func (a verticalAxis) draw(c draw.Canvas) {
 }
 
 // GlyphBoxes returns the GlyphBoxes for the tick labels
-func (a verticalAxis) GlyphBoxes(*Plot) []GlyphBox {
-	var boxes []GlyphBox
-	for _, t := range a.Tick.Marker.Ticks(a.Min, a.Max) {
+func (a verticalAxis) GlyphBoxes(p *Plot) []GlyphBox {
+	var (
+		boxes []GlyphBox
+		xoff  font.Length
+	)
+
+	if a.Label.Text != "" {
+		yoff := a.Norm(p.Y.Max)
+		switch a.Label.Position {
+		case draw.PosCenter:
+			yoff = a.Norm(0.5 * (p.Y.Max + p.Y.Min))
+		case draw.PosTop:
+			yoff -= a.Norm(0.5 * a.Label.TextStyle.Width(a.Label.Text).Points()) // FIXME(sbinet): want data coordinates
+		}
+
+		sty := a.Label.TextStyle
+		sty.Rotation += math.Pi / 2
+
+		xoff += a.Label.TextStyle.Height(a.Label.Text)
+		descent := a.Label.TextStyle.FontExtents().Descent
+		boxes = append(boxes, GlyphBox{
+			Y:         yoff,
+			Rectangle: sty.Rectangle(a.Label.Text).Add(vg.Point{X: xoff - descent}),
+		})
+		xoff += descent
+		xoff += a.Label.Padding
+	}
+
+	marks := a.Tick.Marker.Ticks(a.Min, a.Max)
+	if w := tickLabelWidth(a.Tick.Label, marks); len(marks) != 0 && w > 0 {
+		xoff += w
+	}
+
+	var (
+		ext  = a.Tick.Label.FontExtents()
+		desc = ext.Height - ext.Ascent // descent + linegap
+	)
+	for _, t := range marks {
 		if t.IsMinor() {
 			continue
 		}
 		box := GlyphBox{
 			Y:         a.Norm(t.Value),
-			Rectangle: a.Tick.Label.Rectangle(t.Label),
+			Rectangle: a.Tick.Label.Rectangle(t.Label).Add(vg.Point{X: xoff, Y: desc}),
 		}
 		boxes = append(boxes, box)
 	}
@@ -509,12 +581,16 @@ func maxInt(a, b int) int {
 
 // LogTicks is suitable for the Tick.Marker field of an Axis,
 // it returns tick marks suitable for a log-scale axis.
-type LogTicks struct{}
+type LogTicks struct {
+	// Prec specifies the precision of tick rendering
+	// according to the documentation for strconv.FormatFloat.
+	Prec int
+}
 
 var _ Ticker = LogTicks{}
 
 // Ticks returns Ticks in a specified range
-func (LogTicks) Ticks(min, max float64) []Tick {
+func (t LogTicks) Ticks(min, max float64) []Tick {
 	if min <= 0 || max <= 0 {
 		panic("Values must be greater than 0 for a log scale.")
 	}
@@ -525,13 +601,13 @@ func (LogTicks) Ticks(min, max float64) []Tick {
 	for val < max {
 		for i := 1; i < 10; i++ {
 			if i == 1 {
-				ticks = append(ticks, Tick{Value: val, Label: formatFloatTick(val, -1)})
+				ticks = append(ticks, Tick{Value: val, Label: formatFloatTick(val, t.Prec)})
 			}
 			ticks = append(ticks, Tick{Value: val * float64(i)})
 		}
 		val *= 10
 	}
-	ticks = append(ticks, Tick{Value: val, Label: formatFloatTick(val, -1)})
+	ticks = append(ticks, Tick{Value: val, Label: formatFloatTick(val, t.Prec)})
 
 	return ticks
 }

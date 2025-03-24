@@ -108,7 +108,7 @@ func (l *Legend) Draw(c draw.Canvas) {
 
 	descent := sty.FontExtents().Descent
 	enth := l.entryHeight()
-	y := c.Max.Y - enth
+	y := c.Max.Y - enth - descent
 	if !l.Top {
 		y = c.Min.Y + (enth+l.Padding)*(vg.Length(len(l.entries))-1)
 	}

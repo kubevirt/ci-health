@@ -20,6 +20,9 @@ import (
 // is resolved, native Go types can completely replace these.
 
 type (
+	// Base64String is a (potentially binary) string encoded using base64.
+	Base64String string
+
 	// Boolean represents true or false values.
 	Boolean graphql.Boolean
 
@@ -36,6 +39,9 @@ type (
 	// GitObjectID is a Git object ID. For example,
 	// "912ec1990bd09f8fc128c3fa6b59105085aabc03".
 	GitObjectID string
+
+	// GitRefname is a fully qualified reference name (e.g., refs/heads/main).
+	GitRefname string
 
 	// GitTimestamp is an ISO-8601 encoded date.
 	// Unlike the DateTime type, GitTimestamp is not converted in UTC.
@@ -102,6 +108,9 @@ func (x *X509Certificate) UnmarshalJSON(data []byte) error {
 	return fmt.Errorf("X509Certificate.UnmarshalJSON: not implemented")
 }
 
+// NewBase64String is a helper to make a new *Base64String.
+func NewBase64String(v Base64String) *Base64String { return &v }
+
 // NewBoolean is a helper to make a new *Boolean.
 func NewBoolean(v Boolean) *Boolean { return &v }
 
@@ -116,6 +125,9 @@ func NewFloat(v Float) *Float { return &v }
 
 // NewGitObjectID is a helper to make a new *GitObjectID.
 func NewGitObjectID(v GitObjectID) *GitObjectID { return &v }
+
+// NewGitRefname is a helper to make a new *GitRefname.
+func NewGitRefname(v GitRefname) *GitRefname { return &v }
 
 // NewGitTimestamp is a helper to make a new *GitTimestamp.
 func NewGitTimestamp(v GitTimestamp) *GitTimestamp { return &v }
