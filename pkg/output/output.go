@@ -239,7 +239,7 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	}
 	defer f.Close()
 
-	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.0f%s", value, total, (value/total)*100, "%")
+	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.2f%s", value, total, (value/total)*100, "%")
 
 	return badge.Render(name, badgeString, color, f)
 }
