@@ -103,6 +103,5 @@ func isBaseRefForcePush(timelineItem types.TimelineItem) bool {
 func isRetestCommentAfterLastPush(timelineItem types.TimelineItem, lastPush time.Time) bool {
 	return timelineItem.IssueCommentFragment != types.IssueCommentFragment{} &&
 		timelineItem.IssueCommentFragment.CreatedAt.After(lastPush) &&
-		(strings.HasPrefix(timelineItem.IssueCommentFragment.BodyText, "/retest") ||
-			strings.HasPrefix(timelineItem.IssueCommentFragment.BodyText, "/test"))
+		(strings.HasPrefix(timelineItem.IssueCommentFragment.BodyText, "/retest"))
 }

@@ -13,7 +13,6 @@ import (
 )
 
 const (
-	testComment   = "/test"
 	retestComment = "/retest"
 )
 
@@ -475,33 +474,6 @@ even more lines
 				},
 			},
 			1),
-		table.Entry("Handles both retest commands formats",
-			&types.ChatopsPullRequestFragment{
-				TimelineItems: types.TimelineItems{
-					Nodes: []types.TimelineItem{
-						{
-							PullRequestCommitFragment: types.PullRequestCommitFragment{
-								Commit: types.Commit{
-									CommittedDate: queryDate.AddDate(0, 0, -3),
-								},
-							},
-						},
-						{
-							IssueCommentFragment: types.IssueCommentFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -2),
-								BodyText:  "/test my-test",
-							},
-						},
-						{
-							IssueCommentFragment: types.IssueCommentFragment{
-								CreatedAt: queryDate.AddDate(0, 0, -1),
-								BodyText:  "/retest",
-							},
-						},
-					},
-				},
-			},
-			2),
 		table.Entry("One retest call after last HeadRef force push, previous after commit/BaseRef force push are ignored",
 			&types.ChatopsPullRequestFragment{
 				TimelineItems: types.TimelineItems{
