@@ -39,7 +39,12 @@ if [ "$#" -gt 0 ]; then
     fi
 fi
 
-for url in $(jq -r '.Data.SIGRetests.FailedJobLeaderBoard[].FailureURLs | flatten[]' ./output/kubevirt/kubevirt/results.json); do
+# sorting urls by sig, and fallback to id, since sig is not always present
+for url in $(
+    jq -r \
+        '[ .Data.SIGRetests.FailedJobLeaderBoard[].FailureURLs | flatten[] | capture("(?<url>.*pull-kubevirt-.*-[0-9]+.[0-9]+-(?<id>(?<prefix>(ipv6-)?)(?<sig>sig-[a-z]+)?[^/]*).*)") ] | sort_by(.sig,.id)[] | .url' \
+        ./output/kubevirt/kubevirt/results.json
+); do
     if ! curl -s --head --fail "$(echo "$url" | sed -re 's#^https://prow.ci.kubevirt.io//view/gs/(.*)#https://storage.googleapis.com/\1/artifacts/junit.functest.xml#g')" -o /dev/null; then
         echo "$url"
     fi
