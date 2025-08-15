@@ -202,7 +202,7 @@ func (b *Handler) writeBadges(results *types.Results) error {
 	)
 
 	err = b.writeQuarantineBadge(
-		constants.SIGStorageBadgeName,
+		constants.QuarantineBadgeName,
 		filepath.Join(basePath, constants.QuarantineBadgeFileName),
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
