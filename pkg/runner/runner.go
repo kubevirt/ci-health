@@ -61,6 +61,7 @@ func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 			types.MergedPRsMetric,
 			types.MergedPRsNoRetestMetric,
 			types.SIGRetestMetric,
+			types.QuarantineMetric,
 		},
 	}
 
