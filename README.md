@@ -49,6 +49,18 @@ Each of these failures contribute to the number of retests that occur in CI and 
 ![sig-ci-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-ci-retests.svg)
 ![sig-monitoring-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-monitoring-retests.svg)
 
+### Quarantined Tests Per SIG
+
+These badges display the number of tests that are currently quarantined per SIG.
+
+More details on these tests can be found [here](https://storage.googleapis.com/kubevirt-prow/reports/quarantined-tests/kubevirt/kubevirt/index.html)
+
+![quarantine-compute](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/quarantine-compute.svg)
+![quarantine-storage](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/quarantine-storage.svg)
+![quarantine-network](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/quarantine-network.svg)
+![quarantine-monitoring](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/quarantine-monitoring.svg)
+![quarantine-total](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/quarantine-total.svg)
+
 Top failed lanes:
 
 ![failedjob1](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/failedjob1.svg)

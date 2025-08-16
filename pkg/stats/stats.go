@@ -11,6 +11,7 @@ import (
 	"github.com/kubevirt/ci-health/pkg/chatops"
 	"github.com/kubevirt/ci-health/pkg/constants"
 	"github.com/kubevirt/ci-health/pkg/mergequeue"
+	"github.com/kubevirt/ci-health/pkg/quarantine"
 	"github.com/kubevirt/ci-health/pkg/sigretests"
 	"github.com/kubevirt/ci-health/pkg/types"
 )
@@ -72,6 +73,8 @@ func (h *Handler) Run() (*types.Results, error) {
 			processor = h.mergedPRsNoRetestProcessor
 		case types.SIGRetestMetric:
 			processor = h.sigRetestsProcessor
+		case types.QuarantineMetric:
+			processor = h.quarantineProcessor
 		default:
 			return nil, fmt.Errorf("Unknown metric: %q", targetMetric)
 		}
@@ -314,6 +317,27 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 	}
 	dataItem.FailedJobLeaderBoard = sortedFailedJobs
 	results.Data[constants.SIGRetests] = dataItem
+
+	return results, nil
+}
+
+func (h *Handler) quarantineProcessor(results *types.Results) (*types.Results, error) {
+
+	dataItem := types.RunningAverageDataItem{
+		DataPoints: []types.DataPoint{},
+	}
+	qStats, err := quarantine.GetQuarantineStats()
+	if err != nil {
+		return results, err
+	}
+
+	dataItem.QuarantineTotal = qStats.TotalQuarantineCount
+	dataItem.QuarantineSigCompute = qStats.SigComputeQuarantine
+	dataItem.QuarantineSigStorage = qStats.SigStorageQuarantine
+	dataItem.QuarantineSigNetwork = qStats.SigNetworkQuarantine
+	dataItem.QuarantineSigMonitoring = qStats.SigMonitoringQuarantine
+
+	results.Data[constants.QuarantineStats] = dataItem
 
 	return results, nil
 }
