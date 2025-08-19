@@ -98,6 +98,10 @@ type Options struct {
 	Mode         string
 	TargetMetric string
 	StartDate    string
+
+	// html-report options
+	Sig         string
+	ResultsPath string
 }
 
 type Label struct {
