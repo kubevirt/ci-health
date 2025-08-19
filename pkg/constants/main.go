@@ -18,6 +18,7 @@ const (
 	SIGRetests           = "SIGRetests"
 
 	DefaultPath                         = "/tmp/test"
+	DefaultResultsPath                  = ""
 	DefaultTokenPath                    = ""
 	DefaultSource                       = "kubevirt/kubevirt"
 	DefaultDataDays                     = 7
