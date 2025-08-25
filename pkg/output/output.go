@@ -132,44 +132,79 @@ func (b *Handler) writeBadges(results *types.Results) error {
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGComputeRetestBadgeName,
+		constants.SIGComputeBadgeName,
 		filepath.Join(basePath, constants.SIGComputeRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGStorageRetestBadgeName,
+		constants.SIGStorageBadgeName,
 		filepath.Join(basePath, constants.SIGStorageRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGNetworkRetestBadgeName,
+		constants.SIGNetworkBadgeName,
 		filepath.Join(basePath, constants.SIGNetworkRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGOperatorRetestBadgeName,
+		constants.SIGOperatorBadgeName,
 		filepath.Join(basePath, constants.SIGOperatorRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGCIRetestBadgeName,
+		constants.SIGCIBadgeName,
 		filepath.Join(basePath, constants.SIGCIRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGMonitoringRetestBadgeName,
+		constants.SIGMonitoringBadgeName,
 		filepath.Join(basePath, constants.SIGMonitoringRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeQuarantineBadge(
+		constants.SIGMonitoringBadgeName,
+		filepath.Join(basePath, constants.QuarantineMonitoringBadgeFileName),
+		results.Data[constants.QuarantineStats],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeQuarantineBadge(
+		constants.SIGComputeBadgeName,
+		filepath.Join(basePath, constants.QuarantineComputeBadgeFileName),
+		results.Data[constants.QuarantineStats],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeQuarantineBadge(
+		constants.SIGNetworkBadgeName,
+		filepath.Join(basePath, constants.QuarantineNetworkBadgeFileName),
+		results.Data[constants.QuarantineStats],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeQuarantineBadge(
+		constants.SIGStorageBadgeName,
+		filepath.Join(basePath, constants.QuarantineStorageBadgeFileName),
+		results.Data[constants.QuarantineStats],
+		b.options.SIGRetestsLevels,
+	)
+
+	err = b.writeQuarantineBadge(
+		constants.QuarantineBadgeName,
+		filepath.Join(basePath, constants.QuarantineBadgeFileName),
+		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
 
@@ -211,22 +246,22 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	var total float64
 
 	switch name {
-	case constants.SIGComputeRetestBadgeName:
+	case constants.SIGComputeBadgeName:
 		value = data.SIGComputeRetest
 		total = data.SIGComputeTotal
-	case constants.SIGNetworkRetestBadgeName:
+	case constants.SIGNetworkBadgeName:
 		value = data.SIGNetworkRetest
 		total = data.SIGNetworkTotal
-	case constants.SIGStorageRetestBadgeName:
+	case constants.SIGStorageBadgeName:
 		value = data.SIGStorageRetest
 		total = data.SIGStorageTotal
-	case constants.SIGOperatorRetestBadgeName:
+	case constants.SIGOperatorBadgeName:
 		value = data.SIGOperatorRetest
 		total = data.SIGOperatorTotal
-	case constants.SIGCIRetestBadgeName:
+	case constants.SIGCIBadgeName:
 		value = data.SIGCIRetest
 		total = data.SIGCITotal
-	case constants.SIGMonitoringRetestBadgeName:
+	case constants.SIGMonitoringBadgeName:
 		value = data.SIGMonitoringRetest
 		total = data.SIGMonitoringTotal
 	}
@@ -273,6 +308,35 @@ func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, level
 		}
 	}
 	return err
+}
+
+func (b *Handler) writeQuarantineBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
+	var value float64
+
+	switch name {
+	case constants.SIGComputeBadgeName:
+		value = data.QuarantineSigCompute
+	case constants.SIGNetworkBadgeName:
+		value = data.QuarantineSigNetwork
+	case constants.SIGStorageBadgeName:
+		value = data.QuarantineSigStorage
+	case constants.SIGMonitoringBadgeName:
+		value = data.QuarantineSigMonitoring
+	case constants.QuarantineBadgeName:
+		value = data.QuarantineTotal
+	}
+
+	color := BadgeColor(value, levels)
+
+	f, err := os.Create(filePath)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	badgeString := fmt.Sprintf("%.0f", value)
+
+	return badge.Render(name, badgeString, color, f)
 }
 
 func (b *Handler) initializeSourcePath() (string, error) {
