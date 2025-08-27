@@ -30,6 +30,7 @@ var (
 		constants.MergedPRsName,
 		constants.MergedPRsNoRetest,
 		constants.SIGRetests,
+		constants.QuarantineStats,
 	}
 	badgeFileNames = []string{
 		constants.MergeQueueLengthBadgeFileName,

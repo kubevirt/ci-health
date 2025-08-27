@@ -23,6 +23,7 @@ const (
 	MergedPRsMetric         Metric = "merged-prs"
 	MergedPRsNoRetestMetric Metric = "merged-prs-no-retest"
 	SIGRetestMetric         Metric = "sig-retests"
+	QuarantineMetric        Metric = "quarantined-tests"
 )
 
 type Metric string
@@ -238,24 +239,29 @@ func SortByMostFailed(countFailedJobs map[string]int) FailedJobs {
 // RunningAverageDataItem contains data information in the form of a running average.
 // It contains the actual average value and the data points used to obtain it.
 type RunningAverageDataItem struct {
-	Avg                  float64
-	Std                  float64
-	Number               float64
-	NoRetest             float64
-	SIGComputeRetest     float64
-	SIGStorageRetest     float64
-	SIGNetworkRetest     float64
-	SIGOperatorRetest    float64
-	SIGCIRetest          float64
-	SIGMonitoringRetest  float64
-	SIGComputeTotal      float64
-	SIGStorageTotal      float64
-	SIGNetworkTotal      float64
-	SIGOperatorTotal     float64
-	SIGCITotal           float64
-	SIGMonitoringTotal   float64
-	FailedJobLeaderBoard FailedJobs
-	DataPoints           []DataPoint
+	Avg                     float64
+	Std                     float64
+	Number                  float64
+	NoRetest                float64
+	SIGComputeRetest        float64
+	SIGStorageRetest        float64
+	SIGNetworkRetest        float64
+	SIGOperatorRetest       float64
+	SIGCIRetest             float64
+	SIGMonitoringRetest     float64
+	SIGComputeTotal         float64
+	SIGStorageTotal         float64
+	SIGNetworkTotal         float64
+	SIGOperatorTotal        float64
+	SIGCITotal              float64
+	SIGMonitoringTotal      float64
+	QuarantineTotal         float64
+	QuarantineSigCompute    float64
+	QuarantineSigNetwork    float64
+	QuarantineSigStorage    float64
+	QuarantineSigMonitoring float64
+	FailedJobLeaderBoard    FailedJobs
+	DataPoints              []DataPoint
 }
 
 func (d *RunningAverageDataItem) String() string {
