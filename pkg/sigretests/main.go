@@ -159,7 +159,7 @@ func filterForLastCommit(org string, repo string, prNumber string, latestCommit 
 
 func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLatestCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
-	resp, err := httpGetWithRetry(prHistory)
+	resp, err := HttpGetWithRetry(prHistory)
 	if err != nil {
 		return nil, err
 	}
@@ -183,7 +183,7 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLates
 	return jobsLatestCommit, nil
 }
 
-func httpGetWithRetry(url string) (resp *http.Response, err error) {
+func HttpGetWithRetry(url string) (resp *http.Response, err error) {
 	httpRetryLog := log.WithField("url", url)
 	retry.Do(
 		func() error {

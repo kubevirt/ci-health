@@ -19,6 +19,7 @@ const (
 	QuarantineStats      = "QuarantineStats"
 
 	DefaultPath                         = "/tmp/test"
+	DefaultResultsPath                  = ""
 	DefaultTokenPath                    = ""
 	DefaultSource                       = "kubevirt/kubevirt"
 	DefaultDataDays                     = 7

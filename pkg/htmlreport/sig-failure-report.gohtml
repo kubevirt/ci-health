@@ -1,0 +1,143 @@
+{{- /*
+
+    This file is part of the KubeVirt project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    Copyright The KubeVirt Authors.
+
+*/ -}}
+
+{{- /* sig-failure-report.gohtml */ -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIG Failure Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fa;
+            margin: 2em;
+        }
+        h1 {
+            color: #333;
+        }
+        .failure-card {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            margin-bottom: 2em;
+            padding: 1.5em 2em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            max-width: 800px;
+        }
+        .failure-header {
+            margin-bottom: 1em;
+        }
+        .sig-label {
+            background: #e3fcef;
+            color: #22863a;
+            padding: 0.3em 0.7em;
+            border-radius: 16px;
+            font-weight: bold;
+            margin-right: 14px;
+            font-size: 1.1em;
+        }
+        .job-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0366d6;
+        }
+        .failure-url {
+            display: block;
+            margin-bottom: 1em;
+            color: #586069;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        table.testcases {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+        table.testcases th, table.testcases td {
+            border: 1px solid #e1e4e8;
+            padding: 0.5em;
+            text-align: left;
+        }
+        table.testcases th {
+            background: #f6f8fa;
+            font-weight: bold;
+        }
+        .result-failed {
+            color: #d73a49;
+            font-weight: bold;
+        }
+        .result-passed {
+            color: #22863a;
+            font-weight: bold;
+        }
+        .failure-message {
+            color: #d73a49;
+            font-size: 0.98em;
+        }
+        .test-url {
+            font-size: 0.95em;
+            color: #005cc5;
+        }
+    </style>
+</head>
+<body>
+    <h1>SIG Failure Report</h1>
+    {{- if . }}
+        {{- range . }}
+        <div class="failure-card">
+            <div class="failure-header">
+                <span class="sig-label">{{ .Sig }}</span>
+                <span class="job-name">{{ .JobName }}</span>
+            </div>
+            <a class="failure-url" href="{{ .FailureURL }}" target="_blank">{{ .FailureURL }}</a>
+            {{ if .Testcase }}
+            <table class="testcases">
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Failure Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{- range .Testcase }}
+                    <tr>
+                        <td>{{ .Name }}</td>
+                        <td>
+                            {{- if .Error }}
+                                <span class="failure-message">{{ .Error }}</span>
+                            {{- else }}
+                                <span class="result-passed">Passed</span>
+                            {{- end }}
+                        </td>
+                    </tr>
+                    {{- end }}
+                </tbody>
+            </table>
+            {{ else }}
+                <p>No failed test cases found for this job.</p>
+            {{ end }}
+        </div>
+        {{- end }}
+    {{- else }}
+        <p>No SIG failures to display.</p>
+    {{- end }}
+</body>
+</html>
