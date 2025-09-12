@@ -49,6 +49,12 @@ Each of these failures contribute to the number of retests that occur in CI and 
 ![sig-ci-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-ci-retests.svg)
 ![sig-monitoring-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-monitoring-retests.svg)
 
+### Breakdown of SIG Failures
+
+[SIG Compute](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
+[SIG Network](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
+[SIG Storage](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
+
 ### Quarantined Tests Per SIG
 
 These badges display the number of tests that are currently quarantined per SIG.
