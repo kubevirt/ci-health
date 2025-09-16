@@ -30,7 +30,7 @@ type Metric string
 
 func (m Metric) IsValid() error {
 	switch m {
-	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric, MergedPRsMetric:
+	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric, MergedPRsMetric, QuarantineMetric:
 		return nil
 	}
 	return errors.New("Invalid MetricType value")
@@ -46,6 +46,8 @@ func (m Metric) ResultsName() string {
 		return constants.RetestsToMergeName
 	case MergedPRsMetric:
 		return constants.MergedPRsName
+	case QuarantineMetric:
+		return constants.QuarantineStats
 	default:
 		return ""
 	}

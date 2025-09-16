@@ -74,6 +74,21 @@ jobs:
           --target-metric merged-prs \
           --log-level debug
 
+        go run ./cmd/batch \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode fetch \
+          --target-metric quarantined-tests \
+          --start-date 2025-08-15 \
+          --log-level debug
+        go run ./cmd/batch \
+          --gh-token $(pwd)/token \
+          --path $(pwd)/output \
+          --mode plot \
+          --target-metric quarantined-tests \
+          --start-date 2025-08-15 \
+          --log-level debug
+
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:

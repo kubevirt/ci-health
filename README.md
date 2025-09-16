@@ -116,6 +116,13 @@ These plots will be updated every week.
 
   Data available [here](./output/kubevirt/kubevirt/batch/merged-prs/data).
 
+* kubevirt/kubevirt quarantined tests over time (by SIG):
+  ![kubevirt-kubevirt-quarantined-tests](./output/kubevirt/kubevirt/batch/quarantined-tests/plot/plot.png)
+
+  Legend: Red(Total) | Blue(Compute) | Green(Storage) | Orange(Network) | Purple(Monitoring)
+
+  Data available [here](./output/kubevirt/kubevirt/batch/quarantined-tests/data).
+
 ## Commands
 
 The tool has two different commands:

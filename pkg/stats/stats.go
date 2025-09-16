@@ -322,6 +322,10 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 }
 
 func (h *Handler) quarantineProcessor(results *types.Results) (*types.Results, error) {
+	currentTime, err := time.Parse(constants.DateFormat, results.EndDate)
+	if err != nil {
+		return results, err
+	}
 
 	dataItem := types.RunningAverageDataItem{
 		DataPoints: []types.DataPoint{},
@@ -336,6 +340,14 @@ func (h *Handler) quarantineProcessor(results *types.Results) (*types.Results, e
 	dataItem.QuarantineSigStorage = qStats.SigStorageQuarantine
 	dataItem.QuarantineSigNetwork = qStats.SigNetworkQuarantine
 	dataItem.QuarantineSigMonitoring = qStats.SigMonitoringQuarantine
+
+	dataItem.DataPoints = append(dataItem.DataPoints,
+		types.DataPoint{
+			Value: qStats.TotalQuarantineCount,
+			Date:  &currentTime,
+		})
+
+	dataItem.Avg = qStats.TotalQuarantineCount
 
 	results.Data[constants.QuarantineStats] = dataItem
 
