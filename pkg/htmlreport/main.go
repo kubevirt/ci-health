@@ -46,9 +46,9 @@ type SigFailure struct {
 }
 
 var jobRegexAliases = map[string]string{
-	"compute": "sig-compute$|sig-compute-serial$|sig-compute-migrations$|sig-operator$|vgpu$|sev$",
-	"network": "sig-network$|sriov$",
-	"storage": "sig-storage$",
+	"compute": "sig-compute|sig-compute-serial|sig-compute-migrations|sig-operator|vgpu|sev",
+	"network": "sig-network|sriov",
+	"storage": "sig-storage",
 }
 
 func fetchResults(resultsPath string) (*HTMLReportResults, error) {
