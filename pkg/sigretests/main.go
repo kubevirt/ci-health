@@ -157,6 +157,43 @@ func filterForLastCommit(org string, repo string, prNumber string, latestCommit 
 	return filteredJobList, nil
 }
 
+const (
+	prowJobJSONURL       = "https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/%s_%s/%s/%s/%s/prowjob.json"
+	prowJobOptionalLabel = "prow.k8s.io/is-optional"
+)
+
+func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job, error) {
+	var filteredJobs []job
+	for _, j := range unfilteredJobs {
+		prowJobJSON, err := http.Get(fmt.Sprintf(prowJobJSONURL, org, repo, prNumber, j.jobName, j.buildNumber))
+		if err != nil {
+			return nil, err
+		}
+
+		defer prowJobJSON.Body.Close()
+		prowJobData, err := io.ReadAll(prowJobJSON.Body)
+		if err != nil {
+			return nil, err
+		}
+
+		type prowjob struct {
+			ObjectMeta struct {
+				Labels map[string]string `json:"labels,omitempty"`
+			} `json:"metadata,omitempty"`
+		}
+
+		var job prowjob
+		if err = json.Unmarshal(prowJobData, &job); err != nil {
+			return nil, err
+		}
+
+		if v, ok := job.ObjectMeta.Labels[prowJobOptionalLabel]; ok && v == "false" {
+			filteredJobs = append(filteredJobs, j)
+		}
+	}
+	return filteredJobs, nil
+}
+
 func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLatestCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
 	resp, err := HttpGetWithRetry(prHistory)
@@ -180,7 +217,13 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLates
 	if err != nil {
 		return nil, err
 	}
-	return jobsLatestCommit, nil
+
+	requiredJobs, err := filterOptionalJobs(org, repo, prNumber, jobsLatestCommit)
+	if err != nil {
+		return nil, err
+	}
+
+	return requiredJobs, nil
 }
 
 func HttpGetWithRetry(url string) (resp *http.Response, err error) {
