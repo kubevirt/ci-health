@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"sort"
 	"strings"
 	"time"
 
@@ -135,4 +136,42 @@ func (c *Client) chatopsPRQuery(query string) (types.ChatopsPRList, error) {
 
 	err := c.inner.Query(context.Background(), &mergedQuery, variables)
 	return mergedQuery.Search.Nodes, err
+}
+
+func (c *Client) GetSupportedBranches(ctx context.Context) ([]string, error) {
+	var query struct {
+		Repository struct {
+			Refs struct {
+				Nodes []struct {
+					Name string
+				}
+			} `graphql:"refs(refPrefix: \"refs/heads/\", first: 100)"`
+		} `graphql:"repository(owner: \"kubevirt\", name: \"kubevirt\")"`
+	}
+
+	err := c.inner.Query(ctx, &query, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	var releaseBranches []string
+	for _, node := range query.Repository.Refs.Nodes {
+		if strings.HasPrefix(node.Name, "release-") {
+			releaseBranches = append(releaseBranches, node.Name)
+		}
+	}
+
+	sort.Slice(releaseBranches, func(i, j int) bool {
+		// Simple semver sort, assumes "release-X.Y" format
+		vI := strings.TrimPrefix(releaseBranches[i], "release-")
+		vJ := strings.TrimPrefix(releaseBranches[j], "release-")
+		return vI > vJ
+	})
+
+	supportedBranches := []string{"main"}
+	for i := 0; i < 3 && i < len(releaseBranches); i++ {
+		supportedBranches = append(supportedBranches, releaseBranches[i])
+	}
+
+	return supportedBranches, nil
 }
