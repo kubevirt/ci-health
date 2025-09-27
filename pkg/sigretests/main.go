@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strconv"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
@@ -260,9 +261,38 @@ func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests)
 	return sigRetests
 }
 
-func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
+func GetJobsPerSIG(prNumber string, org string, repo string, supportedBranches []string) (prSigRetests SigRetests, err error) {
+	prowJobs, err := getJobsForLatestCommit(org, repo, prNumber)
+	if err != nil {
+		return SigRetests{}, fmt.Errorf("Error filtering failed jobs from the latest commit - %s", err)
+	}
+	return FilterJobsPerSigs(prowJobs, supportedBranches), nil
+}
+
+func getJobTargetBranch(jobName string) string {
+	parts := strings.Split(jobName, "-")
+	lastPart := parts[len(parts)-1]
+	if _, err := strconv.ParseFloat(lastPart, 32); err == nil {
+		return fmt.Sprintf("release-%s", lastPart)
+	}
+	return "main"
+}
+
+func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests SigRetests) {
 	prSigRetests = SigRetests{}
 	for _, job := range jobs {
+		targetBranch := getJobTargetBranch(job.jobName)
+		isSupported := false
+		for _, supportedBranch := range supportedBranches {
+			if targetBranch == supportedBranch {
+				isSupported = true
+				break
+			}
+		}
+		if !isSupported {
+			continue
+		}
+
 		switch {
 		case checkSIGCIFailure(job):
 			prSigRetests.SigCIFailure += 1
@@ -300,12 +330,4 @@ func FilterJobsPerSigs(jobs []job) (prSigRetests SigRetests) {
 		prSigRetests = sortJobNamesOnResult(job, prSigRetests)
 	}
 	return prSigRetests
-}
-
-func GetJobsPerSIG(prNumber string, org string, repo string) (prSigRetests SigRetests, err error) {
-	prowJobs, err := getJobsForLatestCommit(org, repo, prNumber)
-	if err != nil {
-		return SigRetests{}, fmt.Errorf("Error filtering failed jobs from the latest commit - %s", err)
-	}
-	return FilterJobsPerSigs(prowJobs), nil
 }
