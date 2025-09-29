@@ -122,14 +122,37 @@ func batchPlotPath(base, source, metric string) string {
 
 func gatherPlotData(basePath string, metric types.Metric, startDate string) ([]types.Curve, error) {
 	totalCurves := 2
+	if metric == types.QuarantineMetric {
+		totalCurves = 5 // Total + 4 SIGs
+	}
 	curves := make([]types.Curve, totalCurves)
 	for i := 0; i < totalCurves; i++ {
 		curves[i].X = []string{}
 		curves[i].Y = []float64{}
-		if i == 0 {
-			curves[i].Color = color.RGBA{0, 255, 0, 255}
+		if metric == types.QuarantineMetric {
+			switch i {
+			case 0:
+				curves[i].Color = color.RGBA{255, 0, 0, 255}
+				curves[i].Title = "Total Quarantined"
+			case 1:
+				curves[i].Color = color.RGBA{0, 0, 255, 255}
+				curves[i].Title = "SIG Compute"
+			case 2:
+				curves[i].Color = color.RGBA{0, 255, 0, 255}
+				curves[i].Title = "SIG Storage"
+			case 3:
+				curves[i].Color = color.RGBA{255, 165, 0, 255}
+				curves[i].Title = "SIG Network"
+			case 4:
+				curves[i].Color = color.RGBA{128, 0, 128, 255}
+				curves[i].Title = "SIG Monitoring"
+			}
 		} else {
-			curves[i].Color = color.RGBA{0, 0, 255, 255}
+			if i == 0 {
+				curves[i].Color = color.RGBA{0, 255, 0, 255}
+			} else {
+				curves[i].Color = color.RGBA{0, 0, 255, 255}
+			}
 		}
 	}
 
@@ -198,10 +221,15 @@ func gatherPlotData(basePath string, metric types.Metric, startDate string) ([]t
 			addPRRangeResults(results, curves, metricName)
 		case constants.RetestsToMergeName, constants.TimeToMergeName:
 			addPRUnitResults(results, curves, metricName)
+		case constants.QuarantineStats:
+			addQuarantineResults(results, curves, metricName)
 		}
 
-		curves[1].X = append(curves[1].X, info.Name())
-		curves[1].Y = append(curves[1].Y, results.Data[metricName].Avg)
+		if metricName != constants.QuarantineStats {
+			// Only add average line for non-quarantine metrics
+			curves[1].X = append(curves[1].X, info.Name())
+			curves[1].Y = append(curves[1].Y, results.Data[metricName].Avg)
+		}
 
 		return nil
 	})
@@ -226,6 +254,30 @@ func addPRUnitResults(results types.Results, curves []types.Curve, metricName st
 		for _, pr := range dataPoint.PRs {
 			curves[0].X = append(curves[0].X, pr.MergedAt)
 			curves[0].Y = append(curves[0].Y, dataPoint.Value)
+		}
+	}
+}
+
+func addQuarantineResults(results types.Results, curves []types.Curve, metricName string) {
+	data := results.Data[metricName]
+	for _, dataPoint := range data.DataPoints {
+		if dataPoint.Date != nil {
+			dateStr := dataPoint.Date.Format(constants.DateFormat)
+
+			curves[0].X = append(curves[0].X, dateStr)
+			curves[0].Y = append(curves[0].Y, data.QuarantineTotal)
+
+			curves[1].X = append(curves[1].X, dateStr)
+			curves[1].Y = append(curves[1].Y, data.QuarantineSigCompute)
+
+			curves[2].X = append(curves[2].X, dateStr)
+			curves[2].Y = append(curves[2].Y, data.QuarantineSigStorage)
+
+			curves[3].X = append(curves[3].X, dateStr)
+			curves[3].Y = append(curves[3].Y, data.QuarantineSigNetwork)
+
+			curves[4].X = append(curves[4].X, dateStr)
+			curves[4].Y = append(curves[4].Y, data.QuarantineSigMonitoring)
 		}
 	}
 }
