@@ -45,9 +45,9 @@ Each of these failures contribute to the number of retests that occur in CI and 
 [![sig-compute-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-compute-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
 [![sig-storage-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-storage-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
 [![sig-network-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-network-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
-[![sig-operator-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-operator-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
+[![sig-operator-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-operator-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-operator-failure-report.html)
 ![sig-ci-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-ci-retests.svg)
-![sig-monitoring-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-monitoring-retests.svg)
+[![sig-monitoring-retests](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/sig-monitoring-retests.svg)](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-monitoring-failure-report.html)
 
 
 ### Quarantined Tests Per SIG
