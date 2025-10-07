@@ -1,6 +1,7 @@
 package runner
 
 import (
+	"context"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -38,7 +39,7 @@ func Run(o *types.Options) (*types.Results, error) {
 
 	switch o.Action {
 	case types.StatsAction:
-		return statsRun(o, mqHandler, coHandler)
+		return statsRun(o, mqHandler, coHandler, ghClient)
 	case types.BatchAction:
 		return batchRun(o, mqHandler, coHandler)
 	default:
@@ -46,13 +47,19 @@ func Run(o *types.Options) (*types.Results, error) {
 	}
 }
 
-func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler) (*types.Results, error) {
+func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatops.Handler, ghClient *gh.Client) (*types.Results, error) {
+	supportedBranches, err := ghClient.GetSupportedBranches(context.Background())
+	if err != nil {
+		return nil, err
+	}
+
 	options := &stats.HandlerOptions{
-		Mq:       mqHandler,
-		Co:       coHandler,
-		Source:   o.Source,
-		DataDays: o.DataDays,
-		EndDate:  time.Now(),
+		Mq:                mqHandler,
+		Co:                coHandler,
+		Source:            o.Source,
+		DataDays:          o.DataDays,
+		EndDate:           time.Now(),
+		SupportedBranches: supportedBranches,
 
 		TargetMetrics: []types.Metric{
 			types.MergeQueueLengthMetric,

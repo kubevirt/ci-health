@@ -19,32 +19,35 @@ import (
 type statsProcessor func(*types.Results) (*types.Results, error)
 
 type HandlerOptions struct {
-	Mq       *mergequeue.Handler
-	Co       *chatops.Handler
-	Source   string
-	EndDate  time.Time
-	DataDays int
+	Mq                *mergequeue.Handler
+	Co                *chatops.Handler
+	Source            string
+	EndDate           time.Time
+	DataDays          int
+	SupportedBranches []string
 
 	TargetMetrics []types.Metric
 }
 
 type Handler struct {
-	mq            *mergequeue.Handler
-	co            *chatops.Handler
-	source        string
-	endDate       time.Time
-	dataDays      int
-	targetMetrics []types.Metric
+	mq                *mergequeue.Handler
+	co                *chatops.Handler
+	source            string
+	endDate           time.Time
+	dataDays          int
+	supportedBranches []string
+	targetMetrics     []types.Metric
 }
 
 func NewHandler(ho *HandlerOptions) *Handler {
 	return &Handler{
-		mq:            ho.Mq,
-		co:            ho.Co,
-		source:        ho.Source,
-		endDate:       ho.EndDate,
-		dataDays:      ho.DataDays,
-		targetMetrics: ho.TargetMetrics,
+		mq:                ho.Mq,
+		co:                ho.Co,
+		source:            ho.Source,
+		endDate:           ho.EndDate,
+		dataDays:          ho.DataDays,
+		supportedBranches: ho.SupportedBranches,
+		targetMetrics:     ho.TargetMetrics,
 	}
 }
 
@@ -276,7 +279,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 	}
 
 	for _, mergedPR := range mergedPRs {
-		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt")
+		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt", h.supportedBranches)
 		if err != nil {
 			return results, err
 		}
