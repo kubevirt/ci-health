@@ -26,6 +26,9 @@ usage: $0
 
     fetches URLs for the CI failure runs from the data of the latest run -
     covering last 7 days.
+
+    Resulting URLs are sorted by sig and then by id section, where both of these
+    are captured via regular expression matching on the job url.
 EOF
 }
 
