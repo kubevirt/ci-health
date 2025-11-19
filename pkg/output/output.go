@@ -266,7 +266,14 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 		total = data.SIGMonitoringTotal
 	}
 
-	color := BadgeColor(((value / total) * 100), levels)
+	var percentage float64
+	if total == 0 {
+		percentage = 0.00
+	} else {
+		percentage = (value / total) * 100
+	}
+
+	color := BadgeColor(percentage, levels)
 
 	f, err := os.Create(filePath)
 	if err != nil {
@@ -274,7 +281,7 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	}
 	defer f.Close()
 
-	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.2f%s", value, total, (value/total)*100, "%")
+	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.2f%s", value, total, percentage, "%")
 
 	return badge.Render(name, badgeString, color, f)
 }
