@@ -34,4 +34,3 @@ The section must include the link to the source report at the bottom.
 
 ### Updating output file
 The new version of the output file must then be committed to the local repository - updates must not be pushed to the remote repository.
-
