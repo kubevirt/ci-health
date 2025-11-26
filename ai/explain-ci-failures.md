@@ -88,7 +88,8 @@ To fetch the required data for analysis you proceed as follows:
 
 The result must yield a summary file called `summary.md` that gives
 an overview over the current situation. If that file is present, it must be updated with the recent failures.
-The new version must then be committed to the repository.
+
+The new version must then be committed to the local repository - updates must not be pushed to the remote repository.
 
 The summary must be organized quantifying all errors while prioritizing high-volume fixable errors.
 
