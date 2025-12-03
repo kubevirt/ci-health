@@ -1,51 +1,52 @@
-# SIG Failure Reports Summary
+# KubeVirt SIG Failure Report Summary
 
-This document provides a summary of the SIG failure reports for KubeVirt.
+This report summarizes the recent failures for each KubeVirt Special Interest Group (SIG).
 
 ## SIG Compute
 
-*   **Prometheus, Endpoint, Running:** Prometheus endpoint tests are failing because the VMI does not enter the "Running" phase.
-*   **Cluster, Profiler, Deadline:** A cluster profiler test failed with an "Internal error encountered: Get ... context deadline exceeded".
-*   **CPU, Pinning, Timeout:** CPU pinning tests are timing out.
-*   **VMI, Delayed, Timeout:** A test for delayed VMI running states due to Kubernetes client rate limiter changes also timed out.
-*   **Live, Migration, Failed:** Live migration tests are failing because the migration state is not finalized as failed or the target pod fails during preparation.
-*   **CloudInit, UserData, Timeout:** CloudInit UserData tests are timing out waiting for the VMI to enter the "Running" phase.
-*   **MultiQueue, Behavior, Timeout:** MultiQueue behavior tests are timing out.
-*   **VMI, Kernel, Boot:** A VMI with external kernel boot test received an unexpected warning event about mounting kernel artifacts.
-*   **Live, Migration, Datavolume:** Live migration across namespaces with datavolume disk failed.
-*   **Evacuation, Migration, Missing:** Evacuation-triggered migration tests are failing due to missing annotations or migrations not being created.
-*   **VMI, Lifecycle, Softreboot:** A VMI lifecycle softreboot test timed out waiting for a reboot record.
-*   **CPU, Hotplug, Incorrect:** CPU hotplug tests are failing due to incorrect CPU count after plugging vCPUs.
-*   **VM, State, TPM:** A VM state with persistent TPM test failed because a command to a spawned process timed out.
-*   **VMI, Lifecycle, Delete:** A VMI lifecycle delete test timed out waiting for the pod to be terminated.
+*   **VMI, Lifecycle, Timeout:** Several tests related to the VirtualMachineInstance lifecycle, such as creation and pausing, timed out waiting for the VMI to enter the "Running" phase.
+*   **VMI, virt-handler, Restart:** A test for creating a VMI when virt-handler is responsive failed after a kubelet restart with bridge networking, expecting the PodPhase to be "Succeeded" but it was "Pending".
+*   **CloudInit, UserData, Timeout:** A CloudInit UserData test for injecting an ssh-key timed out.
+*   **VMI, Deletion, Timeout:** A test for deleting a VMI with a grace period greater than 0 timed out, as the VMI object still existed.
+*   **VMI, Softreboot, Timeout:** Two tests for soft rebooting a VMI with the ACPI feature enabled timed out waiting for a reboot record.
+*   **Migration, Target, Failure:** A VMI live migration test failed because the target pod failed during target preparation.
+*   **Migration, Evacuation, Backoff:** A VMI live migration triggered by evacuation failed, with the migration stuck in the "Pending" phase.
+*   **Migration, Datavolume, Failure:** A live migration across namespaces with a datavolume disk failed unexpectedly.
+*   **Migration, Paused, Timeout:** A VMI live migration with a paused VMI timed out, with the migration stuck in the "Running" phase.
+*   **Configuration, GuestAgent, Condition:** A test for VMI configuration with guestAgent failed because it found an unexpected 'AgentVersionNotSupported' condition.
+*   **Guest, Access, Credentials:** A test for guest access credentials with the qemu guest agent timed out, as the 'AgentConnected' condition was not found.
+*   **SEV, Lifecycle, Failure:** An AMD SEV test for starting a SEV or SEV-ES VM timed out and the VMI unexpectedly stopped with a "Failed" state.
 
-[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
+[SIG Compute Failure Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
 
 ## SIG Storage
 
-*   **Live, Migration, Timeout:** Multiple failures related to live migration across namespaces, where migrations are timing out or not being cancelled as expected.
-*   **Online, Snapshot, Hotplug:** One test for online VM snapshots with hotplug disks failed because the "AgentConnected" condition was not found.
-*   **fstrim, Fedora, Timeout:** A storage test related to `fstrim` on Fedora VMIs timed out.
+*   **Hotplug, Filesystem, Timeout:** A test for hotplugging both a filesystem and a block volume to an online VM timed out, expecting the VirtualMachine Status.Ready to be true.
+*   **Migration, Policy, Cancellation:** Two tests for cancelling a live migration across namespaces by deleting the migration resource timed out.
+*   **Hotplug, DataVolume, Timeout:** A test for adding/removing a volume with DataVolume immediate attach (virtio) to an online VM timed out.
+*   **Hotplug, Migration, Timeout:** A VMI migration test with attached hotplug persistent disk volumes timed out.
 
-[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
+[SIG Storage Failure Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
 
 ## SIG Network
 
-*   **Interface, State, Migration:** A test for interface state up/down status during migration failed because the "AgentConnected" condition was not found.
-*   **Masquerade, Binding, Ping:** A networking test for masquerade binding mechanism failed to ping `google.com` from the VMI.
-*   **IPv6, Port, Timeout:** A similar test for IPv6 with a specific port number also timed out.
+*   **Masquerade, Migration, Connectivity:** A test for a VMI with masquerade binding mechanism failed to preserve connectivity after migration because it "failed to run dhcp client".
+*   **SRIOV, Hotplug, Timeout:** Multiple tests for SRIOV VMI connected to a single SRIOV network with memory hotplug timed out.
+*   **Subdomain, Headless, FQDN:** A test for a VMI with a subdomain and a headless service timed out.
+*   **Bridge, Hotplug, Migration:** A test for hotplugging multiple network interfaces to a running VM with migration timed out.
+*   **Bridge, Hotunplug, Migration:** Two tests for hot-unplugging a network interface from a running VM with migration failed due to an "admission webhook 'migration-create-validator.kubevirt.io' denied the request: in-flight migration detected".
 
-[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
+[SIG Network Failure Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
 
 ## SIG Operator
 
-*   **Update, KubeVirt, Timeout:** Several tests related to updating KubeVirt from a previous release to a target tested release are timing out because one of the KubeVirt control-plane components is not ready.
-*   **Deployment, Revert, Timeout:** A test failed because a deployment did not revert to its original state after 120 seconds.
+*   **Operator, Reconcile, Daemonsets:** A test for the operator reconciling components and reverting changes for daemonsets timed out.
+*   **Operator, Update, KubeVirt:** A test for the operator updating KubeVirt from a previous release to the target tested release by patching the KubeVirt CR timed out.
 
-[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-operator-failure-report.html)
+[SIG Operator Failure Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-operator-failure-report.html)
 
 ## SIG Monitoring
 
-There are no SIG failures to display.
+*   **No, SIG, Failures:** The SIG Monitoring failure report shows no SIG failures to display.
 
-[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-monitoring-failure-report.html)
+[SIG Monitoring Failure Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-monitoring-failure-report.html)
