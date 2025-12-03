@@ -108,8 +108,6 @@ It is mandatory that updates MUST NOT be pushed to the remote repository.
 The result must yield a summary file called `summary.md` that gives
 an overview over the current situation. If that file is present, it must be updated with the recent failures.
 
-The new version must then be committed to the local repository - updates must not be pushed to the remote repository.
-
 The summary must be organized quantifying all errors while prioritizing high-volume fixable errors.
 
 It must group failures by following criteria in order:
@@ -132,3 +130,5 @@ Each group item always must have
   style `details` section
 
 Non-recoverable errors should be mentioned but only with minimal details required for understanding.
+
+The new version must then be committed to the local repository - updates must not be pushed to the remote repository.

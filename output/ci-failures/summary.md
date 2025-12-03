@@ -1,154 +1,212 @@
 # CI Failure Analysis Summary
 
-This report summarizes the analysis of Prow job failures that did not reach the testing stage.
+This report summarizes the analysis of CI job failures that did not reach the testing stage.
 
 ## Fixable Errors
 
-### High Volume
+### Invalid Go Version in `go.mod`
 
-**Missing `gofuzz` Dependency**
+*   **Quantity Total:** 2
+*   **Branch Name(s):** main
+*   **SIG(s):** compute, network
+*   **Kubernetes Version(s):** 1.32, 1.33
+*   **Description:** The `go.mod` file specifies a Go version (e.g., `1.24.0`) that is incompatible with the version of `gazelle` used in the build environment, which expects a format like `1.23`. This causes the `gazelle` command to fail, which in turn causes the Bazel build to fail.
 
-*   **Description:** A recurring Bazel build failure indicates that the `github.com/google/gofuzz` dependency is missing from the `vendor` directory or is not correctly referenced in the Bazel build files. This is a fixable issue that requires updating the project's dependencies.
-*   **SIG(s):** compute, operator, network, storage
-*   **Branch(es):** main, release-1.7
-*   **Kubernetes Version(s):** 1.32, 1.33, 1.34
-*   <details>
-    <summary>Example Log Snippet</summary>
+<details>
+<summary>Example Log Snippet</summary>
 
-    ```
-    ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/k8s.io/kube-openapi/pkg/spec3/BUILD.bazel:3:11: no such package 'vendor/github.com/google/gofuzz': BUILD file not found in any of the following directories. Add a BUILD file to a directory to mark it as a package.
-     - /root/go/src/kubevirt.io/kubevirt/vendor/github.com/google/gofuzz and referenced by '//vendor/k8s.io/kube-openapi/pkg/spec3:go_default_library'
-    ```
-    </details>
-*   <details>
-    <summary>Failed Job URLs</summary>
+```
+18:23:34: gazelle: reading module paths from /root/go/src/kubevirt.io/kubevirt/go.mod: /root/go/src/kubevirt.io/kubevirt/go.mod:3: invalid go version '1.24.0': must match format 1.23
+18:23:34: /root/go/src/kubevirt.io/kubevirt/go.mod:204: unknown block type: tool
+```
 
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-kind-1.34-sev-1.7/1985841454768984064
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/1985841454672515072
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/1985841454529908736
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/1985841471093215232
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/1985841467754549248
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/1985841474436075520
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm6arm64-1.7/1985841464365551616
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/1985841463665102848
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial-1.7/1985841476172517376
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/1985841462717190144
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/1985841472758353920
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/1985841469423882240
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/1985841466043273216
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/1985841475325267968
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.7/1985841468694073344
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/1985841471932076032
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/1985841473861455872
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/1985841466890522624
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/1985841470321463296
-    </details>
-*   <details>
-    <summary>Pull Request History URLs</summary>
+</details>
 
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16034
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15999
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15945
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15409
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15166
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16027
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16042
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16005
-    </details>
+<details>
+<summary>Failed Build Job URLs</summary>
 
-### Low Volume
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15863/pull-kubevirt-e2e-k8s-1.32-sig-compute/1995192045848760320
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16226/pull-kubevirt-e2e-k8s-1.33-sig-network/1993583966430433280
 
-**Taint Not Found**
+</details>
 
-*   **Description:** The cluster setup script attempts to remove a taint that does not exist. This is a fixable issue in the CI scripts.
+<details>
+<summary>Pull Request History URLs</summary>
+
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15863
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16226
+
+</details>
+
+### Taint Not Found
+
+*   **Quantity Total:** 1
+*   **Branch Name(s):** main
 *   **SIG(s):** compute
-*   **Branch(es):** release-1.7
-*   **Kubernetes Version(s):** 1.34
-*   <details>
-    <summary>Example Log Snippet</summary>
+*   **Kubernetes Version(s):** 1.33
+*   **Description:** The cluster setup script attempts to remove a taint from a node that does not exist. This is a bug in the CI scripts.
 
-    ```
-    error: taint "node-role.kubernetes.io/master:NoSchedule" not found
-    ```
-    </details>
-*   <details>
-    <summary>Failed Job URLs</summary>
+<details>
+<summary>Example Log Snippet</summary>
 
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15999/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/1984259723330850816
-    </details>
-*   <details>
-    <summary>Pull Request History URLs</summary>
+```
+06:59:17: error: taint "node-role.kubernetes.io/master:NoSchedule" not found
+06:59:17: error: taint "node-role.kubernetes.io/control-plane:NoSchedule" not found
+```
 
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15999
-    </details>
+</details>
+
+<details>
+<summary>Failed Build Job URLs</summary>
+
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
+
+</details>
+
+<details>
+<summary>Pull Request History URLs</summary>
+
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
+
+</details>
 
 ## Non-Fixable Errors
 
-### Low Volume
+### Body Not Decodable
 
-**Failed to Delete Cluster Nodes**
+*   **Quantity Total:** 3
+*   **Branch Name(s):** main
+*   **SIG(s):** compute, network
+*   **Kubernetes Version(s):** 1.33, 1.34
+*   **Description:** The `kube-apiserver` is unable to decode a request body. This is likely a transient network issue or a bug in the client sending the request.
 
-*   **Description:** The `podman rm` command fails to remove the cluster nodes during teardown. The error message `given PID did not die within timeout` suggests that the container processes are not terminating gracefully. This is likely a non-fixable infrastructure issue.
+<details>
+<summary>Example Log Snippet</summary>
+
+```
+18:11:31: I1130 13:11:31.124825    1593 request.go:1664] "Body was not decodable (unable to check for Status)" err="couldn't get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \"json:\\\"apiVersion,omitempty\\\""; Kind string \"json:\\\"kind,omitempty\\\" }"
+```
+
+</details>
+
+<details>
+<summary>Failed Build Job URLs</summary>
+
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15868/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/1995532685656723456
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15863/pull-kubevirt-e2e-k8s-1.33-sig-network/1995192046280773632
+
+</details>
+
+<details>
+<summary>Pull Request History URLs</summary>
+
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15868
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15863
+
+</details>
+
+### Unexpected Build Process Termination
+
+*   **Quantity Total:** 2
+*   **Branch Name(s):** main
+*   **SIG(s):** compute, network
+*   **Kubernetes Version(s):** 1.34
+*   **Description:** The build process was terminated unexpectedly, resulting in a generic `make Error 125`. This is likely a Prow infrastructure issue.
+
+<details>
+<summary>Example Log Snippet</summary>
+
+```
+make: *** [Makefile:174: cluster-sync] Error 125
++ ret=2
++ check_for_panics
++ set +x
++ make cluster-down
+./kubevirtci/cluster-up/down.sh
+16:56:01: selecting podman as container runtime
+16:56:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations is being used by the following container(s): 50b8a0948caa46015eeae689b925b42fae8b1d6e4e81145be63d08115590be4e, 7902b42406fd3a8b5791833ebd0dd71b3edd44e26a7a684: volume is being used
+make: *** [Makefile:162: cluster-down] Error 1
+```
+
+</details>
+
+<details>
+<summary>Failed Build Job URLs</summary>
+
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15868/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/1995532679772114944
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-k8s-1.34-sig-network/1993268139609034752
+
+</details>
+
+<details>
+<summary>Pull Request History URLs</summary>
+
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15868
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
+
+</details>
+
+### Content Length Mismatch
+
+*   **Quantity Total:** 1
+*   **Branch Name(s):** main
 *   **SIG(s):** compute
-*   **Branch(es):** release-1.7
-*   **Kubernetes Version(s):** 1.34
-*   <details>
-    <summary>Example Log Snippet</summary>
+*   **Kubernetes Version(s):** 1.33
+*   **Description:** Error downloading a container image from `quay.io` due to a content length mismatch. This is likely a transient network or registry issue.
 
-    ```
-    ERROR: failed to delete cluster "kind-1.34": failed to delete nodes: command "podman rm -f -v kind-1.34-control-plane" failed with error: exit status 125
-    ```
-    </details>
-*   <details>
-    <summary>Failed Job URLs</summary>
+<details>
+<summary>Example Log Snippet</summary>
 
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15999/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/1984259723330850816
-    </details>
-*   <details>
-    <summary>Pull Request History URLs</summary>
+```
+06:52:39: WARNING: Download from https://quay.io/v2/kubevirtci/fedora-with-test-tooling/blobs/sha256:6b529a079d4da130025f4e7b899f7203685411e5cb722a9ea0debbb953208d0f failed: class com.google.devtools.build.lib.bazel.repository.downloader.ContentLengthMismatchException Bytes read 908066816 but wanted 972172954
+```
 
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15999
-    </details>
+</details>
 
-## Undetermined Errors
+<details>
+<summary>Failed Build Job URLs</summary>
 
-### Low Volume
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
 
-**Body Not Decodable**
+</details>
 
-*   **Description:** The `kube-apiserver` is unable to decode a request body. This could be a transient network issue, or it could be a bug in the client sending the request. Further investigation is needed to determine the root cause.
-*   **SIG(s):** compute, network, storage
-*   **Branch(es):** main, release-1.7
-*   **Kubernetes Version(s):** 1.34
-*   <details>
-    <summary>Example Log Snippet</summary>
+<details>
+<summary>Pull Request History URLs</summary>
 
-    ```
-    I1105 07:28:06.751387    1590 request.go:1500] "Body was not decodable (unable to check for Status)" err="couldn't get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \"json:\\\"apiVersion,omitempty\\\""; Kind string \"json:\\\"kind,omitempty\\\" }"
-    ```
-    </details>
-*   <details>
-    <summary>Failed Job URLs</summary>
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
 
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16034/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/1986044017342681088
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16005/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/1984910182047551488
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15988/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network/1986086031421607936
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15166/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network/1986087349003489280
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16027/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/1985643090706173952
-    *   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16027/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/1985643086948077568
-    </details>
-*   <details>
-    <summary>Pull Request History URLs</summary>
+</details>
 
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16034
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16005
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15988
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15166
-    *   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16027
-    </details>
+### Host Audio Device Issue
 
-## Jobs with No "ERROR" Keyword in Logs
+*   **Quantity Total:** 1
+*   **Branch Name(s):** release-1.5
+*   **SIG(s):** network
+*   **Kubernetes Version(s):** 1.31
+*   **Description:** The job fails due to errors related to the host's audio devices (SDL/ALSA). This is an infrastructure issue.
 
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15945/pull-kubevirt-e2e-k8s-1.34-sig-compute/1985287286975107072
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16042/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/1986185236496519168
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15409/pull-kubevirt-e2e-k8s-1.34-sig-operator/1985957067449438208
+<details>
+<summary>Example Log Snippet</summary>
+
+```
+sdl: Reason: ALSA: Couldn't open audio device: Host is down
+audio: Could not create a backend for voice `ac97.pi'
+```
+
+</details>
+
+<details>
+<summary>Failed Build Job URLs</summary>
+
+*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16237/pull-kubevirt-e2e-k8s-1.31-sig-network-1.5/1993747414808268800
+
+</details>
+
+<details>
+<summary>Pull Request History URLs</summary>
+
+*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16237
+
+</details>
