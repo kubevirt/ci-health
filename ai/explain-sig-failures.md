@@ -50,5 +50,3 @@ It is mandatory that updates MUST NOT be pushed to the remote repository.
 
 ### Updating output file
 The new version of the output file must then be committed to the local repository - updates must not be pushed to the remote repository.
-
-The new version of the output file must be committed to the local repository.
