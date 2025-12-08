@@ -4,48 +4,38 @@ This document provides a summary of the SIG failure reports.
 
 ## SIG Compute
 
-*   **VMI, Lifecycle, Timeout** - `VMIlifecycle [rfe_id:1287][crit:high][vendor:cnv-qe@redhat.com][level:component]Creating a VirtualMachineInstance definition creation should be accepted [test_id:1608]with a restartPolicy of Always` failed due to a timeout waiting for the VMI to be in the `Running` phase.
-*   **VMI, Lifecycle, Timeout** - `VMIlifecycle [rfe_id:1287][crit:high][vendor:cnv-qe@redhat.com][level:component]Creating a VirtualMachineInstance definition creation should be accepted [test_id:1609]with a restartPolicy of Never` failed due to a timeout waiting for the VMI to be in the `Running` phase.
-*   **VMI, Lifecycle, Timeout** - `VMIlifecycle [rfe_id:1287][crit:high][vendor:cnv-qe@redhat.com][level:component]Creating a VirtualMachineInstance and deleting it should be resilient to virt-handler restart [test_id:1612]by executing a graceful shutdown of the VirtualMachineInstance` failed due to a timeout.
-*   **VMI, virt-handler, Pod** - `[sig-network] [crit:high][vendor:cnv-qe@redhat.com][level:component] [crit:high][vendor:cnv-qe@redhat.com][level:component]Creating a VirtualMachineInstance when virt-handler is responsive VMIs shouldn't fail after the kubelet restarts [sig-network]with bridge networking` failed because a pod remained in `Pending` phase.
-*   **CloudInit, UserData, Timeout** - `[rfe_id:151][crit:high][vendor:cnv-qe@redhat.com][level:component][sig-compute]CloudInit UserData [rfe_id:151][crit:medium][vendor:cnv-qe@redhat.com][level:component]A new VirtualMachineInstance with cloudInitNoCloud with injected ssh-key [test_id:1616]should have ssh-key under authorized keys` failed due to a timeout.
-*   **Migration, Policy, Timeout** - `VM Live Migration Starting a VirtualMachineInstance migration monitor [test_id:6980]Migration should fail if target pod fails during target preparation` failed due to a timeout.
-*   **Migration, Namespace, DataVolume** - `Live Migration across namespaces datavolume disk should live migrate regular disk several times` failed due to an unexpected migration phase.
-*   **Configuration, GuestAgent, Condition** - `[sig-compute]Configurations VirtualMachineInstance definition [rfe_id:140][crit:medium][vendor:cnv-qe@redhat.com][level:component]with guestAgent with cluster config changes [test_id:6958]VMI condition should not signal unsupported agent presence for optional commands` failed due to an unexpected `AgentVersionNotSupported` condition.
-*   **GuestAccess, Credentials, Condition** - `[sig-compute] Guest Access Credentials with qemu guest agent should update to unsupported agent [test_id:6222]for public ssh keys` failed because the `AgentConnected` condition was not found.
-*   **SEV, Lifecycle, Timeout** - `[sig-compute]AMD Secure Encrypted Virtualization (SEV) lifecycle should start a SEV or SEV-ES VM It should launch with base SEV features enabled` failed due to a timeout and the VMI unexpectedly stopping.
+*   **VMI, Migration, Timeout:** The test "Migration should fail if target pod fails during target preparation" timed out, indicating issues with VMI migration state finalization.
+*   **VMI, Configuration, Timeout:** Tests related to CPU pinning and node-labeller timed out or failed due to control-plane components not being ready.
+*   **K8S, API, Connection-Refused:** A significant number of tests failed with "connect: connection refused" errors when attempting to interact with Kubernetes API endpoints. This affected tests in Infrastructure, VSOCK, ContainerDisk, InstancetypeReferencePolicy, ValidatingAdmissionPolicy, and VirtualMachine categories.
+*   **VMI, Security, Timeout:** Tests for virt-launcher securityContext and SELinux types failed with timeouts or TLS handshake timeouts.
+*   **VMI, ReplicaSet, Print:** A test for server-side printing of VirtualMachineInstanceReplicaSet returned an incorrect replica count.
+*   **VMI, Lifecycle, Timeout:** A softreboot test timed out.
 
-[Link to full report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
+[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-compute-failure-report.html)
 
 ## SIG Storage
 
-*   **Hotplug, Filesystem, BlockVolume** - `[sig-storage] Hotplug [storage-req] Online VM should allow hotplugging both a filesystem and block volume` timed out waiting for the VirtualMachine to be ready.
-*   **Migration, Namespace, Policy** - `[rfe_id:393][crit:high][vendor:cnv-qe@redhat.com][level:system][sig-compute] Live Migration across namespaces with migration policy should be able to cancel a migration by deleting the migration resource delete target migration` timed out.
-*   **Migration, Namespace, Policy** - `[rfe_id:393][crit:high][vendor:cnv-qe@redhat.com][level:system][sig-compute] Live Migration across namespaces with migration policy should be able to cancel a migration by deleting the migration resource delete source migration` timed out.
-*   **Hotplug, DataVolume, Timeout** - `[sig-storage] Hotplug [storage-req] Online VM should add/remove volume with DataVolume immediate attach (virtio)` timed out.
-*   **Hotplug, Migration, PersistentVolume** - `[sig-storage] Hotplug [storage-req] VMI migration should allow live migration with attached hotplug volumes persistent disk VMI` timed out.
+*   **VMI, Migration, Timeout:** The test "[sig-storage] Hotplug [storage-req] VMI migration should allow live migration with attached hotplug volumes containerDisk VMI" timed out while waiting for volume statuses to be in the Ready phase.
+*   **VMI, Migration, Canceled:** Tests for canceling live migration across namespaces by deleting the migration resource failed because the migration did not complete as expected.
 
-[Link to full report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
+[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-storage-failure-report.html)
 
 ## SIG Network
 
-*   **Masquerade, Migration, IPv4** - `[sig-network] [rfe_id:694][crit:medium][vendor:cnv-qe@redhat.com][level:component]Networking VirtualMachineInstance with masquerade binding mechanism when performing migration preserves connectivity - IPv4 with explicit ports used by live migration` failed because the dhcp client failed to run.
-*   **SRIOV, Hotplug, Memory** - `SRIOV VMI connected to single SRIOV network memory hotplug Should successfully reattach host-device` failed due to timeouts and unexpected network interface configurations.
-*   **Subdomain, FQDN, Masquerade** - `[sig-network] Subdomain with a headless service given VMI should have the expected FQDN with Masquerade binding without subdomain` timed out.
-*   **Bridge, Hotplug, Migration** - `[sig-network] bridge nic-hotplug a running VM is able to hotplug multiple network interfaces Migration based` failed due to missing network interfaces after a timeout.
-*   **Bridge, Hotunplug, Migration** - `[sig-network] bridge nic-hotunplug a running VM hot-unplug network interface succeed Migration based` failed due to an "admission webhook denied the request: in-flight migration detected" error.
+*   **VMI, SRIOV, Timeout:** The test "SRIOV VMI connected to single SRIOV network memory hotplug Should successfully reattach host-device" timed out and failed to match expected network interface configurations.
+*   **VMI, SRIOV, Timeout:** The test "[sig-network] SRIOV nic-hotplug a running VM can hotplug a network interface" timed out due to missing or extra network interface elements.
+*   **VMI, Subdomain, Timeout:** The test "[sig-network] Subdomain with a headless service given VMI should have the expected FQDN with Masquerade binding without subdomain" failed with a timeout error.
 
-[Link to full report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
+[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-network-failure-report.html)
 
 ## SIG Operator
 
-*   **Operator, Reconcile, DaemonSet** - `[sig-operator]Operator should reconcile components checking updating resource is reverted to original state for [test_id:6308] daemonsets` failed due to a timeout.
-*   **Operator, Update, KubeVirtCR** - `[sig-operator]Operator [rfe_id:2291][crit:high][vendor:cnv-qe@redhat.com][level:component]should update kubevirt [release-blocker][test_id:3145]from previous release to target tested release by patching KubeVirt CR` timed out.
+*   No SIG failures to display.
 
-[Link to full report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-operator-failure-report.html)
+[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-operator-failure-report.html)
 
 ## SIG Monitoring
 
-No failures to report.
+*   No SIG failures to display.
 
-[Link to full report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-monitoring-failure-report.html)
+[Source Report](https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-monitoring-failure-report.html)
