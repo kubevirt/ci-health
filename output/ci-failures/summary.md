@@ -1,212 +1,159 @@
 # CI Failure Analysis Summary
 
-This report summarizes the analysis of CI job failures that did not reach the testing stage.
+## Non-Fixable: Failed to download bazel dependency
 
-## Fixable Errors
+**Quantity:** 48
 
-### Invalid Go Version in `go.mod`
+**Branches:** release-1.5
 
-*   **Quantity Total:** 2
-*   **Branch Name(s):** main
-*   **SIG(s):** compute, network
-*   **Kubernetes Version(s):** 1.32, 1.33
-*   **Description:** The `go.mod` file specifies a Go version (e.g., `1.24.0`) that is incompatible with the version of `gazelle` used in the build environment, which expects a format like `1.23`. This causes the `gazelle` command to fail, which in turn causes the Bazel build to fail.
+**SIGs:** sig-compute, sig-network, sig-operator, sig-storage, vgpu
+
+**Kubernetes Versions:** 1.30, 1.31, 1.32, unknown
 
 <details>
 <summary>Example Log Snippet</summary>
 
 ```
-18:23:34: gazelle: reading module paths from /root/go/src/kubevirt.io/kubevirt/go.mod: /root/go/src/kubevirt.io/kubevirt/go.mod:3: invalid go version '1.24.0': must match format 1.23
-18:23:34: /root/go/src/kubevirt.io/kubevirt/go.mod:204: unknown block type: tool
+16:26:45: Repository rule http_file defined at:
+16:26:45:   /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl:441:28: in <toplevel>
+16:26:45: WARNING: Download from https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64 failed: class java.io.IOException GET returned 403 Forbidden
+16:26:45: ERROR: An error occurred during the fetch of repository 'go_puller_darwin':
+16:26:45:    Traceback (most recent call last):
+16:26:45: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+16:26:45: 		download_info = ctx.download(
+16:26:45: Error in download: java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden
+16:26:45: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/WORKSPACE:300:23: fetching http_file rule //external:go_puller_darwin: Traceback (most recent call last):
+16:26:45: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+--
+16:26:45:   /home/prow/go/src/github.com/kubevirt/kubevirt/WORKSPACE:146:10: in <toplevel>
+16:26:45: Repository rule http_file defined at:
+16:26:45:   /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl:441:28: in <toplevel>
+16:26:45: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/containerimages/BUILD.bazel:115:16: no such package '@alpine-ext-kernel-boot-demo-container-base//image': no such package '@go_puller_darwin//file': java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden and referenced by '//containerimages:alpine-ext-kernel-boot-demo-container'
+16:26:45: ERROR: Analysis of target '//:build-other-images_x86_64' failed; build aborted: 
+16:26:45: INFO: Elapsed time: 14.576s
+--
+16:26:59: Repository rule http_file defined at:
+16:26:59:   /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl:441:28: in <toplevel>
+16:26:59: WARNING: Download from https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64 failed: class java.io.IOException GET returned 403 Forbidden
+16:26:59: ERROR: An error occurred during the fetch of repository 'go_puller_darwin':
+16:26:59:    Traceback (most recent call last):
+16:26:59: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+16:26:59: 		download_info = ctx.download(
+16:26:59: Error in download: java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden
+16:26:59: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/WORKSPACE:300:23: fetching http_file rule //external:go_puller_darwin: Traceback (most recent call last):
+16:26:59: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+16:26:59: 		download_info = ctx.download(
+16:26:59: Error in download: java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden
+16:26:59: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/BUILD.bazel:173:16: no such package '@go_image_base//image': no such package '@go_puller_darwin//file': java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden and referenced by '//:passwd-image'
+16:26:59: ERROR: Analysis of target '//cmd/virt-controller:virt-controller-image' failed; build aborted: 
+16:26:59: INFO: Elapsed time: 13.634s
+--
+16:27:13: Repository rule http_file defined at:
+16:27:13:   /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl:441:28: in <toplevel>
+16:27:13: WARNING: Download from https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64 failed: class java.io.IOException GET returned 403 Forbidden
+16:27:13: ERROR: An error occurred during the fetch of repository 'go_puller_darwin':
+16:27:13:    Traceback (most recent call last):
+16:27:13: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+16:27:13: 		download_info = ctx.download(
+16:27:13: Error in download: java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden
+16:27:13: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/WORKSPACE:300:23: fetching http_file rule //external:go_puller_darwin: Traceback (most recent call last):
+16:27:13: 	File "/tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_tools/tools/build_defs/repo/http.bzl", line 168, column 33, in _http_file_impl
+16:27:13: 		download_info = ctx.download(
+16:27:13: Error in download: java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden
+16:27:13: ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/BUILD.bazel:173:16: no such package '@go_image_base//image': no such package '@go_puller_darwin//file': java.io.IOException: Error downloading [https://storage.googleapis.com/rules_docker/aad94363e63d31d574cf701df484b3e8b868a96a/puller-darwin-amd64] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/go_puller_darwin/file/downloaded: GET returned 403 Forbidden and referenced by '//:passwd-image'
+16:27:13: ERROR: Analysis of target '//cmd/virt-operator:virt-operator-image' failed; build aborted: 
+16:27:13: INFO: Elapsed time: 13.594s
+-----------------------------------------
 ```
-
 </details>
 
 <details>
-<summary>Failed Build Job URLs</summary>
+<summary>Failed Job URLs</summary>
 
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15863/pull-kubevirt-e2e-k8s-1.32-sig-compute/1995192045848760320
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16226/pull-kubevirt-e2e-k8s-1.33-sig-network/1993583966430433280
-
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-kind-1.30-vgpu-1.5/1999515795889065984
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-kind-1.30-vgpu-1.5/1999505649045606400
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-kind-1.30-vgpu-1.5/1999503544763289600
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-compute-1.5/1999515805900869632
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-compute-1.5/1999505651839012864
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-compute-1.5/1999503557987930112
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.5/1999515811789672448
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.5/1999505658533122048
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.5/1999503564707205120
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-compute-1.5/1999515808757190656
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-compute-1.5/1999505655148318720
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-compute-1.5/1999503561334984704
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.5/1999515797956857856
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.5/1999505649972547584
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.5/1999503553797820416
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-serial-1.5/1999515812154576896
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-serial-1.5/1999505660189872128
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-compute-serial-1.5/1999503566443646976
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-operator-1.5/1999515806081224704
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-operator-1.5/1999505652694650880
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-operator-1.5/1999503558830985216
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.5/1999515809705103360
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.5/1999505655982985216
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.5/1999503562178039808
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.5/1999515811944861696
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.5/1999505659380371456
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.5/1999503565537677312
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-ipv6-sig-network-1.5/1999515797474512896
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-ipv6-sig-network-1.5/1999505649859301376
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-ipv6-sig-network-1.5/1999503553013485568
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-network-1.5/1999515810380386304
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-network-1.5/1999505656826040320
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-network-1.5/1999503563016900608
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-network-1.5/1999515807108829184
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-network-1.5/1999505653449625600
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-network-1.5/1999503559703400448
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-network-1.5/1999515800792207360
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-network-1.5/1999505650249371648
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-network-1.5/1999503556301819904
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.5/1999515810653016064
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.5/1999505657664901120
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.5/1999503563855761408
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.5/1999515807553425408
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.5/1999505654343012352
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.5/1999503560496123904
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-storage-1.5/1999515803644334080
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-storage-1.5/1999505651033706496
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15856/pull-kubevirt-e2e-k8s-1.30-sig-storage-1.5/1999503557153263616
 </details>
 
 <details>
 <summary>Pull Request History URLs</summary>
 
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15863
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16226
-
+- https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15856
 </details>
 
-### Taint Not Found
+## Non-Fixable: Unexpected Build Process Termination
 
-*   **Quantity Total:** 1
-*   **Branch Name(s):** main
-*   **SIG(s):** compute
-*   **Kubernetes Version(s):** 1.33
-*   **Description:** The cluster setup script attempts to remove a taint from a node that does not exist. This is a bug in the CI scripts.
+**Quantity:** 1
+
+**Branches:** main
+
+**SIGs:** sig-storage
+
+**Kubernetes Versions:** 1.32
 
 <details>
 <summary>Example Log Snippet</summary>
 
 ```
-06:59:17: error: taint "node-role.kubernetes.io/master:NoSchedule" not found
-06:59:17: error: taint "node-role.kubernetes.io/control-plane:NoSchedule" not found
+no matches found for ERROR in https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16451/pull-kubevirt-e2e-k8s-1.32-sig-storage/2009194142705389568
+-----------------------------------------
 ```
-
 </details>
 
 <details>
-<summary>Failed Build Job URLs</summary>
+<summary>Failed Job URLs</summary>
 
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
-
+- https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16451/pull-kubevirt-e2e-k8s-1.32-sig-storage/2009194142705389568
 </details>
 
 <details>
 <summary>Pull Request History URLs</summary>
 
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
-
+- https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16451
 </details>
 
-## Non-Fixable Errors
-
-### Body Not Decodable
-
-*   **Quantity Total:** 3
-*   **Branch Name(s):** main
-*   **SIG(s):** compute, network
-*   **Kubernetes Version(s):** 1.33, 1.34
-*   **Description:** The `kube-apiserver` is unable to decode a request body. This is likely a transient network issue or a bug in the client sending the request.
-
-<details>
-<summary>Example Log Snippet</summary>
-
-```
-18:11:31: I1130 13:11:31.124825    1593 request.go:1664] "Body was not decodable (unable to check for Status)" err="couldn't get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \"json:\\\"apiVersion,omitempty\\\""; Kind string \"json:\\\"kind,omitempty\\\" }"
-```
-
-</details>
-
-<details>
-<summary>Failed Build Job URLs</summary>
-
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15868/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/1995532685656723456
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15863/pull-kubevirt-e2e-k8s-1.33-sig-network/1995192046280773632
-
-</details>
-
-<details>
-<summary>Pull Request History URLs</summary>
-
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15868
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15863
-
-</details>
-
-### Unexpected Build Process Termination
-
-*   **Quantity Total:** 2
-*   **Branch Name(s):** main
-*   **SIG(s):** compute, network
-*   **Kubernetes Version(s):** 1.34
-*   **Description:** The build process was terminated unexpectedly, resulting in a generic `make Error 125`. This is likely a Prow infrastructure issue.
-
-<details>
-<summary>Example Log Snippet</summary>
-
-```
-make: *** [Makefile:174: cluster-sync] Error 125
-+ ret=2
-+ check_for_panics
-+ set +x
-+ make cluster-down
-./kubevirtci/cluster-up/down.sh
-16:56:01: selecting podman as container runtime
-16:56:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations is being used by the following container(s): 50b8a0948caa46015eeae689b925b42fae8b1d6e4e81145be63d08115590be4e, 7902b42406fd3a8b5791833ebd0dd71b3edd44e26a7a684: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-```
-
-</details>
-
-<details>
-<summary>Failed Build Job URLs</summary>
-
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15868/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/1995532679772114944
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-k8s-1.34-sig-network/1993268139609034752
-
-</details>
-
-<details>
-<summary>Pull Request History URLs</summary>
-
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=15868
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
-
-</details>
-
-### Content Length Mismatch
-
-*   **Quantity Total:** 1
-*   **Branch Name(s):** main
-*   **SIG(s):** compute
-*   **Kubernetes Version(s):** 1.33
-*   **Description:** Error downloading a container image from `quay.io` due to a content length mismatch. This is likely a transient network or registry issue.
-
-<details>
-<summary>Example Log Snippet</summary>
-
-```
-06:52:39: WARNING: Download from https://quay.io/v2/kubevirtci/fedora-with-test-tooling/blobs/sha256:6b529a079d4da130025f4e7b899f7203685411e5cb722a9ea0debbb953208d0f failed: class com.google.devtools.build.lib.bazel.repository.downloader.ContentLengthMismatchException Bytes read 908066816 but wanted 972172954
-```
-
-</details>
-
-<details>
-<summary>Failed Build Job URLs</summary>
-
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16131/pull-kubevirt-e2e-kind-1.33-vgpu/1993935254829666304
-
-</details>
-
-<details>
-<summary>Pull Request History URLs</summary>
-
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16131
-
-</details>
-
-### Host Audio Device Issue
-
-*   **Quantity Total:** 1
-*   **Branch Name(s):** release-1.5
-*   **SIG(s):** network
-*   **Kubernetes Version(s):** 1.31
-*   **Description:** The job fails due to errors related to the host's audio devices (SDL/ALSA). This is an infrastructure issue.
-
-<details>
-<summary>Example Log Snippet</summary>
-
-```
-sdl: Reason: ALSA: Couldn't open audio device: Host is down
-audio: Could not create a backend for voice `ac97.pi'
-```
-
-</details>
-
-<details>
-<summary>Failed Build Job URLs</summary>
-
-*   https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16237/pull-kubevirt-e2e-k8s-1.31-sig-network-1.5/1993747414808268800
-
-</details>
-
-<details>
-<summary>Pull Request History URLs</summary>
-
-*   https://prow.ci.kubevirt.io/pr-history/?org=kubevirt&repo=kubevirt&pr=16237
-
-</details>
