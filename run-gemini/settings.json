@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer $GH_BEARER_TOKEN"
+      }
+    },
+    "godevmcp": {
+      "command": "godevmcp",
+      "args": [
+        "serve"
+      ]
+    },
+    "prow": {
+      "command": "/home/dhiller/.local/bin/uv",
+      "args": [
+        "run",
+        "/home/dhiller/Projects/github.com/redhat-community-ai-tools/prow-mcp-server/.venv/bin/python",
+        "/home/dhiller/Projects/github.com/redhat-community-ai-tools/prow-mcp-server/main.py"
+      ],
+      "env": {
+        "DEFAULT_ORG_REPO": "kubevirt/kubevirt",
+        "DEFAULT_JOB_NAME": "pull-kubevirt-check-tests-for-flakes"
+      }
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  }
+}
