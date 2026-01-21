@@ -18,6 +18,7 @@ require (
 	golang.org/x/net v0.38.0
 	golang.org/x/oauth2 v0.28.0
 	gonum.org/v1/plot v0.15.2
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -48,5 +49,4 @@ require (
 	golang.org/x/tools v0.26.0 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
