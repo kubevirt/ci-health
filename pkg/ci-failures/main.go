@@ -25,14 +25,9 @@ var (
 	jobNamePattern = regexp.MustCompile(`.*(pull-kubevirt-[^/]+).*`)
 
 	// Regex to find errors in log files
-	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: `)
+	// make: *** [Makefile:174: cluster-sync] Error 125
+	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |^make:.*Error (1[0-9]+|[2-9][0-9]*)`)
 )
-
-type JobFailureData struct {
-	URL string
-	Sig string
-	ID  string
-}
 
 // ShowCIFailureJobs fetches URLs for the CI failure runs from the data of the latest run,
 // covering the last 7 days. Resulting URLs are sorted by sig and then by id section,
@@ -151,38 +146,28 @@ func DownloadBuildLogs(ciFailureJobURLs []string) ([]string, error) {
 	return logFiles, nil
 }
 
-type BuildLogErrorSnippet struct {
-	ErrorText     string `yaml:"error_text"`
-	LinkToLogLine string `yaml:"link_to_log_line"`
-	StartLine     int    `yaml:"start_line"`
-	ErrorLine     int    `yaml:"error_line"`
-	EndLine       int    `yaml:"end_line"`
-	Context       string `yaml:"context"`
+var groups = map[string]string{
+	"sig-compute":    "sig-compute|sig-operator|sev|vgpu|windows",
+	"sig-network":    "sig-network|sriov",
+	"sig-storage":    "sig-storage",
+	"sig-monitoring": "sig-monitoring",
 }
 
-type JobBuildError struct {
-	JobURL                string                  `yaml:"job_url"`
-	BuildID               int                     `yaml:"build_id"`
-	Started               time.Time               `yaml:"started"`
-	Finished              time.Time               `yaml:"finished"`
-	BuildLogErrorSnippets []*BuildLogErrorSnippet `yaml:"build_log_error_snippets"`
-}
-
-type JobBuildErrors struct {
-	JobName     string           `yaml:"job_name"`
-	BuildErrors []*JobBuildError `yaml:"build_errors"`
+func SIGForGroup(whatever string) string {
+	for sig, group := range groups {
+		groupMatcher := regexp.MustCompile(group)
+		if groupMatcher.MatchString(whatever) {
+			return sig
+		}
+	}
+	log.Fatalf("no sig found for %s", whatever)
+	return ""
 }
 
 // ExtractErrors fetches failures from the build logs of build urls given through the file.
 // It writes matching lines into one file per group, prefixed with 'output/tmp/errors-'.
 // It returns the file names of the files created.
 func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
-	groups := map[string]string{
-		"sig-compute":    "sig-compute|sig-operator|sev|vgpu|windows",
-		"sig-network":    "sig-network|sriov",
-		"sig-storage":    "sig-storage",
-		"sig-monitoring": "sig-monitoring",
-	}
 	var outputFiles []string
 
 	for sigName, group := range groups {

@@ -6,6 +6,7 @@ toolchain go1.24.3
 
 require (
 	github.com/avast/retry-go v3.0.0+incompatible
+	github.com/hyperjumptech/beda v1.1.0
 	github.com/joshdk/go-junit v1.0.0
 	github.com/narqo/go-badge v0.0.0-20230821190521-c9a75c019a59
 	github.com/onsi/ginkgo v1.16.5

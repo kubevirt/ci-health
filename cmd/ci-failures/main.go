@@ -1,49 +1,61 @@
 package main
 
 import (
-	"crypto/sha256"
-	"encoding/hex"
+	_ "embed"
 	"fmt"
-	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
-	"github.com/spf13/cobra"
-	"gopkg.in/yaml.v3"
+	"html/template"
 	"io"
-	"log"
 	"os"
 	"path/filepath"
-	"sort"
 	"strings"
+	"time"
+
+	"gopkg.in/yaml.v3"
+
+	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 )
 
-const outputDirectory = "output/tmp"
+const (
+	tmpOutputPath = "output/tmp"
+	mdOutputPath  = "output/kubevirt/kubevirt/ci-failures"
+)
 
-var rootCmd = &cobra.Command{
-	Use:   "ci-failures",
-	Short: "A CLI tool to process CI failures.",
-}
+var (
+	//go:embed ci-failures.gomd
+	ciFailuresTemplateContent string
 
-var generateCmd = &cobra.Command{
-	Use:   "generate",
-	Short: "Generate reports.",
-}
+	ciFailuresTemplate *template.Template
 
-var yamlCmd = &cobra.Command{
-	Use:   "yaml",
-	Short: "Generate YAML failure reports.",
-	RunE:  generateYAML,
-}
+	rootCmd = &cobra.Command{
+		Use:   "ci-failures",
+		Short: "A CLI tool to process CI failures.",
+	}
 
-var mdCmd = &cobra.Command{
-	Use:   "md",
-	Short: "Generate Markdown summary report from YAML files.",
-	RunE:  generateMarkdown,
-}
+	generateCmd = &cobra.Command{
+		Use:   "generate",
+		Short: "Generate reports.",
+	}
 
-var reportCmd = &cobra.Command{
-	Use:   "report",
-	Short: "Generate YAML files and full Markdown summary report.",
-	RunE:  generateReport,
-}
+	yamlCmd = &cobra.Command{
+		Use:   "yaml",
+		Short: "Generate YAML failure reports.",
+		RunE:  generateYAML,
+	}
+
+	mdCmd = &cobra.Command{
+		Use:   "md",
+		Short: "Generate Markdown summary report from YAML files.",
+		RunE:  generateMarkdown,
+	}
+
+	reportCmd = &cobra.Command{
+		Use:   "report",
+		Short: "Generate YAML files and full Markdown summary report.",
+		RunE:  generateReport,
+	}
+)
 
 func generateReport(cmd *cobra.Command, args []string) error {
 	err := generateYAML(cmd, args)
@@ -62,7 +74,7 @@ func generateYAML(_ *cobra.Command, _ []string) error {
 	if err != nil {
 		return fmt.Errorf("failed retrieving ci failure job urls: %v", err)
 	}
-	if err = os.MkdirAll(outputDirectory, 0755); err != nil {
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
 		return fmt.Errorf("failed to create output directory: %w", err)
 	}
 	err = writeCIFailureJobsURLFile(ciFailureJobURLs)
@@ -81,8 +93,8 @@ func generateYAML(_ *cobra.Command, _ []string) error {
 }
 
 func writeCIFailureJobsURLFile(ciFailureJobURLs []string) error {
-	log.Printf("generating output in directory %s", outputDirectory)
-	ciFailureJobsFile, err := os.Create(filepath.Join(outputDirectory, "ci-failure-jobs.txt"))
+	log.Printf("generating output in directory %s", tmpOutputPath)
+	ciFailureJobsFile, err := os.Create(filepath.Join(tmpOutputPath, "ci-failure-jobs.txt"))
 	if err != nil {
 		return fmt.Errorf("failed creating ci failure jobs file: %v", err)
 	}
@@ -94,127 +106,75 @@ func writeCIFailureJobsURLFile(ciFailureJobURLs []string) error {
 	return nil
 }
 
-type ErrorFrequency struct {
-	Content string
-	Hash    string
-	Jobs    []string
-	Count   int
-}
-
 func generateMarkdown(_ *cobra.Command, _ []string) error {
-	files, err := filepath.Glob("output/tmp/errors-*/*.yaml")
+	if err := os.MkdirAll(mdOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	files, err := filepath.Glob(filepath.Join(tmpOutputPath, "/errors-*/*.yaml"))
 	if err != nil {
 		return fmt.Errorf("failed to find yaml files: %v", err)
 	}
 
-	errorOccurrences := make(map[string][]string)
-	sigFailures := make(map[string]int)
-	failedJobURLs := make(map[string]struct{})
+	templateData := TemplateData{
+		Date:              time.Now().Format(time.DateTime),
+		Org:               "kubevirt",
+		Repo:              "kubevirt",
+		FailuresPerBranch: Failures{CategoryName: "per branch"},
+		FailuresPerDay:    Failures{CategoryName: "per day"},
+		FailuresPerSIG:    Failures{CategoryName: "per SIG"},
+	}
 
-	for _, file := range files {
-		// Extract SIGs from directory path
-		dir := filepath.Dir(file)
-		dirName := filepath.Base(dir)
-		if strings.HasPrefix(dirName, "errors-") {
-			trimmed := strings.TrimPrefix(dirName, "errors-")
-			lastDash := strings.LastIndex(trimmed, "-")
-			if lastDash != -1 {
-				sigsStr := trimmed[:lastDash]
-				sigs := strings.Split(sigsStr, "-")
-				for _, sig := range sigs {
-					if sig != "" {
-						sigFailures["sig-"+sig]++
-					}
-				}
-			}
-		}
+	jobBuildErrorsByJobName := map[string]*cifailures.JobBuildErrors{}
 
-		data, err := os.ReadFile(file)
+	// Deserialize JobBuildErrors files
+	for _, fileName := range files {
+		file, err := os.Open(fileName)
+		var jobBuildErrors *cifailures.JobBuildErrors
+		err = yaml.NewDecoder(file).Decode(&jobBuildErrors)
 		if err != nil {
-			return fmt.Errorf("failed to read file %s: %v", file, err)
+			return fmt.Errorf("failed to decode file %q: %v", fileName, err)
 		}
+		jobBuildErrorsByJobName[jobBuildErrors.JobName] = jobBuildErrors
+	}
 
-		var jobErrors cifailures.JobBuildErrors
-		err = yaml.Unmarshal(data, &jobErrors)
-		if err != nil {
-			return fmt.Errorf("failed to unmarshal yaml from %s: %v", file, err)
-		}
+	for _, jobBuildErrorsForJob := range jobBuildErrorsByJobName {
 
-		for _, buildError := range jobErrors.BuildErrors {
-			failedJobURLs[buildError.JobURL] = struct{}{}
-			for _, snippet := range buildError.BuildLogErrorSnippets {
-				trimmedContent := strings.TrimSpace(snippet.Context)
-				errorOccurrences[trimmedContent] = append(errorOccurrences[trimmedContent], buildError.JobURL)
-			}
+		templateData.FailuresPerSIG.AddAll(jobBuildErrorsForJob.SIG(), jobBuildErrorsForJob)
+		templateData.FailuresPerBranch.AddAll(jobBuildErrorsForJob.Branch(), jobBuildErrorsForJob)
+
+		for _, jobBuildError := range jobBuildErrorsForJob.BuildErrors {
+			day := jobBuildError.Started.Format(time.DateOnly)
+			templateData.FailuresPerDay.AddError(day, jobBuildError)
 		}
 	}
 
-	var sortedErrors []ErrorFrequency
-	for content, jobs := range errorOccurrences {
-		hash := sha256.Sum256([]byte(content))
-		sortedErrors = append(sortedErrors, ErrorFrequency{
-			Content: content,
-			Hash:    hex.EncodeToString(hash[:])[:8],
-			Jobs:    jobs,
-			Count:   len(jobs),
-		})
-	}
-
-	sort.Slice(sortedErrors, func(i, j int) bool {
-		return sortedErrors[i].Count > sortedErrors[j].Count
-	})
-
-	var mdContent strings.Builder
-	mdContent.WriteString("# CI Failure Summary\n\n")
-
-	mdContent.WriteString("## Top 10 Failing Error Snippets\n\n")
-	limit := 10
-	if len(sortedErrors) < limit {
-		limit = len(sortedErrors)
-	}
-	for i := 0; i < limit; i++ {
-		err := sortedErrors[i]
-		mdContent.WriteString(fmt.Sprintf("### Error: `%s`\n\n", err.Hash))
-		mdContent.WriteString(fmt.Sprintf("**Occurrences:** %d\n\n", err.Count))
-		mdContent.WriteString("```\n")
-		mdContent.WriteString(err.Content)
-		mdContent.WriteString("\n```\n\n")
-		mdContent.WriteString("**Failed Jobs:**\n")
-		// unique jobs
-		jobMap := make(map[string]struct{})
-		for _, job := range err.Jobs {
-			jobMap[job] = struct{}{}
-		}
-		for job := range jobMap {
-			mdContent.WriteString(fmt.Sprintf("- %s\n", job))
-		}
-		mdContent.WriteString("\n")
-	}
-
-	mdContent.WriteString("## Failures per SIG\n\n")
-	for sig, count := range sigFailures {
-		mdContent.WriteString(fmt.Sprintf("- **%s:** %d failures\n", sig, count))
-	}
-	mdContent.WriteString("\n")
-
-	mdContent.WriteString("## All Failed Jobs\n\n")
-	for url := range failedJobURLs {
-		mdContent.WriteString(fmt.Sprintf("- %s\n", url))
-	}
-
-	err = os.WriteFile("output/tmp/summary.md", []byte(mdContent.String()), 0644)
+	file, err := os.Create("output/kubevirt/kubevirt/ci-failures/summary.md")
 	if err != nil {
-		log.Fatalf("failed to write summary.md: %v", err)
+		log.Fatalf("failed to create summary.md: %v", err)
 	}
-	fmt.Println("Generated Markdown summary: output/tmp/summary.md")
+	err = ciFailuresTemplate.Execute(file, &templateData)
+	if err != nil {
+		log.Fatalf("failed to create summary.md when executing template: %v", err)
+	}
+	log.Printf("Generated Markdown summary: %s", file.Name())
 	return nil
 }
 
 func init() {
+	log.SetFormatter(&log.JSONFormatter{})
+	log.SetLevel(log.DebugLevel)
+
 	rootCmd.AddCommand(generateCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
+
+	var err error
+	ciFailuresTemplate, err = template.New("summary.md").Parse(ciFailuresTemplateContent)
+	if err != nil {
+		log.Fatalf("failed to create summary.md when executing template: %v", err)
+	}
 }
 
 func main() {
