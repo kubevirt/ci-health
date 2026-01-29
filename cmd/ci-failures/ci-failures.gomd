@@ -1,0 +1,29 @@
+{{- /* gotype: github.com/kubevirt/ci-health/cmd/ci-failures.TemplateData */ -}}
+
+{{ define "failures" }}
+## {{ .CategoryName }} ({{ .Total }}x)
+{{ range $categorizedFailure := .GetSortedFailures }}
+<details>
+<summary> {{ $categorizedFailure.CategoryValue }} ({{ len $categorizedFailure.JobBuildErrors }}x / {{ printf "%.2f" $categorizedFailure.Share }}%) </summary>
+{{ range $cluster := $categorizedFailure.Clusters }}
+<hr/>
+
+**{{ len $cluster.Errors }}x**: _{{ $cluster.Representative.Started }}_: {{ if $cluster.Representative.BuildLogErrorSnippets }}<code>{{ (index $cluster.Representative.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $cluster.Representative.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }} _(no match in error message grep)_ [build-log]({{ $cluster.Representative.JobURL }}){{ end }}
+<details>
+<summary>all...</summary>
+{{ range $jobErrorInCluster := $cluster.Errors }}
+* _{{ $jobErrorInCluster.Started }}_: {{ if $jobErrorInCluster.BuildLogErrorSnippets }}<code>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
+{{ end }}
+</details>
+{{ end }}
+<hr/>
+</details>
+{{- end }}
+{{- end }}
+
+# CI failures for {{$.Org}}/{{$.Repo}}
+{{ template "failures" $.FailuresPerBranch }}
+{{ template "failures" $.FailuresPerDay }}
+{{ template "failures" $.FailuresPerSIG }}
+
+Last updated: {{ $.Date }}
