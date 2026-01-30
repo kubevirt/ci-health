@@ -6,6 +6,7 @@ toolchain go1.24.3
 
 require (
 	github.com/avast/retry-go v3.0.0+incompatible
+	github.com/hyperjumptech/beda v1.1.0
 	github.com/joshdk/go-junit v1.0.0
 	github.com/narqo/go-badge v0.0.0-20230821190521-c9a75c019a59
 	github.com/onsi/ginkgo v1.16.5
@@ -18,6 +19,7 @@ require (
 	golang.org/x/net v0.38.0
 	golang.org/x/oauth2 v0.28.0
 	gonum.org/v1/plot v0.15.2
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -48,5 +50,4 @@ require (
 	golang.org/x/tools v0.26.0 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

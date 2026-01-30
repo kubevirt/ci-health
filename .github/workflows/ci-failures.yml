@@ -1,0 +1,33 @@
+name: ci-failures.yml
+on:
+  push:
+    paths:
+      - 'output/kubevirt/kubevirt/results.json'
+    branches:
+      - main # or your default branch, e.g., 'main' or 'master'
+
+jobs:
+  summary-update:
+    runs-on: ubuntu-latest
+    container: docker.io/golang:1.24
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
+      - name: batch update for kubevirt/kubevirt
+        env:
+          GITHUB_TOKEN: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
+          SOURCE: kubevirt/kubevirt
+        run: |
+          echo -n $GITHUB_TOKEN > $(pwd)/token
+          export GITHUB_TOKEN_PATH=$(pwd)/token
+          git config --global --add safe.directory '*'
+
+          go run ./cmd/ci-failures generate report
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: KubeVirt Bot
+          author_email: kubevirtbot@redhat.com
+          message: 'ci-failures summary updated'
+          add: 'output/*'
