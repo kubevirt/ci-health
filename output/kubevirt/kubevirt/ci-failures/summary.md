@@ -127,21 +127,21 @@
 
 <hr/>
 
-**1x**: _2026-01-22 15:30:38 &#43;0000 UTC_: <code>16:08:30: Error: cannot remove container bee30d69ae01beabe7dce82fdb6fd0f4bfaed282239821d99a811e5741eadcff as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15898/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2014359956572082176#1:build-log.txt%3A4119)
-<details>
-<summary>all...</summary>
-
-* _2026-01-22 15:30:38 &#43;0000 UTC_: <code>16:08:30: Error: cannot remove container bee30d69ae01beabe7dce82fdb6fd0f4bfaed282239821d99a811e5741eadcff as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15898/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2014359956572082176#1:build-log.txt%3A4119)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-01-22 11:02:02 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16603/pull-kubevirt-e2e-k8s-1.33-sig-storage/2014286809197973504#1:build-log.txt%3A4285)
 <details>
 <summary>all...</summary>
 
 * _2026-01-22 11:02:02 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16603/pull-kubevirt-e2e-k8s-1.33-sig-storage/2014286809197973504#1:build-log.txt%3A4285)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-01-22 15:30:38 &#43;0000 UTC_: <code>16:08:30: Error: cannot remove container bee30d69ae01beabe7dce82fdb6fd0f4bfaed282239821d99a811e5741eadcff as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15898/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2014359956572082176#1:build-log.txt%3A4119)
+<details>
+<summary>all...</summary>
+
+* _2026-01-22 15:30:38 &#43;0000 UTC_: <code>16:08:30: Error: cannot remove container bee30d69ae01beabe7dce82fdb6fd0f4bfaed282239821d99a811e5741eadcff as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/15898/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2014359956572082176#1:build-log.txt%3A4119)
 
 </details>
 
@@ -251,13 +251,13 @@
 
 <hr/>
 
-**2x**: _2026-01-26 11:10:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16649/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2015737210128568320#1:build-log.txt%3A1141)
+**2x**: _2026-01-23 02:11:21 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16603/pull-kubevirt-e2e-k8s-1.34-sig-storage/2014385304634396672#1:build-log.txt%3A536)
 <details>
 <summary>all...</summary>
 
-* _2026-01-26 11:10:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16649/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2015737210128568320#1:build-log.txt%3A1141)
-
 * _2026-01-23 02:11:21 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16603/pull-kubevirt-e2e-k8s-1.34-sig-storage/2014385304634396672#1:build-log.txt%3A536)
+
+* _2026-01-26 11:10:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16649/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2015737210128568320#1:build-log.txt%3A1141)
 
 </details>
 
@@ -289,4 +289,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-01-30 15:35:22
+Last updated: 2026-01-30 15:55:23
