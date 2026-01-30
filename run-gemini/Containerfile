@@ -1,0 +1,24 @@
+FROM quay.io/kubevirtci/golang:v20251218-e7a7fc9 as builder
+RUN  /usr/local/bin/runner.sh /bin/sh -ce 'GOBIN=/usr/bin go install github.com/fpt/go-dev-mcp/godevmcp@latest'
+
+FROM quay.io/fedora/fedora:43
+
+# script requirements
+RUN dnf install -y jq rg
+
+# godevmcp
+RUN dnf install -y gh
+COPY --from=builder /usr/bin/godevmcp /usr/bin/
+
+# prow
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+WORKDIR /
+RUN mkdir /prow-mcp-server && \
+    git clone --depth=1 https://github.com/redhat-community-ai-tools/prow-mcp-server.git /prow-mcp-server
+
+# gemini
+RUN dnf install -y nodejs
+RUN npm install -g @google/gemini-cli
+COPY ./settings.json /etc/gemini-cli/settings.json
+WORKDIR /workspace
+ENTRYPOINT ["/usr/local/bin/gemini"]
