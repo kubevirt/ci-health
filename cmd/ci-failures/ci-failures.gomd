@@ -26,4 +26,27 @@
 {{ template "failures" $.FailuresPerDay }}
 {{ template "failures" $.FailuresPerSIG }}
 
+## Clusters of error messages in log files
+
+<details>
+<summary>{{ len $.ClusteredSnippets }}x clusters...</summary>
+{{ range $cluster := $.ClusteredSnippets }}
+<hr/>
+
+**{{ len $cluster.Errors }}x**: <code>{{ $cluster.Representative.ErrorText }}</code> 
+<pre>{{ $cluster.Representative.Context }}</pre>
+
+[build-log]({{ $cluster.Representative.LinkToLogLine }})
+<details>
+<summary>similar...</summary>
+{{ range $snippetInCluster := $cluster.Errors }}
+<pre>{{ $snippetInCluster.Context }}</pre>
+
+[build-log]({{ $snippetInCluster.LinkToLogLine }})
+{{ end }}
+</details>
+{{ end }}
+<hr/>
+</details>
+
 Last updated: {{ $.Date }}

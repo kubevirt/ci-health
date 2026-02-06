@@ -5,10 +5,16 @@ import (
 	"time"
 )
 
-// Cluster holds a group of similar error messages.
-type Cluster struct {
+// ClusteredJobBuildErrors holds a group of similar job build errors.
+type ClusteredJobBuildErrors struct {
 	Representative *JobBuildError
 	Errors         []*JobBuildError
+}
+
+// ClusteredBuildLogErrorSnippets holds a group of similar error messages.
+type ClusteredBuildLogErrorSnippets struct {
+	Representative *BuildLogErrorSnippet
+	Errors         []*BuildLogErrorSnippet
 }
 
 type JobFailureData struct {

@@ -138,6 +138,7 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 		jobBuildErrorsByJobName[jobBuildErrors.JobName] = jobBuildErrors
 	}
 
+	var allSnippets []*cifailures.BuildLogErrorSnippet
 	for _, jobBuildErrorsForJob := range jobBuildErrorsByJobName {
 
 		templateData.FailuresPerSIG.AddAll(jobBuildErrorsForJob.SIG(), jobBuildErrorsForJob)
@@ -146,8 +147,11 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 		for _, jobBuildError := range jobBuildErrorsForJob.BuildErrors {
 			day := jobBuildError.Started.Format(time.DateOnly)
 			templateData.FailuresPerDay.AddError(day, jobBuildError)
+			allSnippets = append(allSnippets, jobBuildError.BuildLogErrorSnippets...)
 		}
 	}
+
+	templateData.ClusteredSnippets = cifailures.ClusterBuildLogErrorSnippets(allSnippets, 0.9)
 
 	file, err := os.Create("output/kubevirt/kubevirt/ci-failures/summary.md")
 	if err != nil {

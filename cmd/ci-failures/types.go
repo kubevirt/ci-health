@@ -5,6 +5,8 @@ import (
 	"sort"
 )
 
+const defaultThreshold = 0.9
+
 type ShareCategory struct {
 	CSSClassName       string
 	MinPercentageValue float64
@@ -41,7 +43,7 @@ type CategorizedFailure struct {
 	CategoryValue  string
 	Share          float64
 	JobBuildErrors []*cifailures.JobBuildError
-	Clusters       []cifailures.Cluster
+	Clusters       []cifailures.ClusteredJobBuildErrors
 	ShareCategory
 }
 
@@ -55,7 +57,7 @@ func (f *Failures) GetSortedFailures() []*CategorizedFailure {
 	var result []*CategorizedFailure
 	for categoryValue, jobBuildErrors := range f.CategorizedFailures {
 		share := float64(len(jobBuildErrors)) / float64(f.Total) * float64(100)
-		clusters := cifailures.ClusterErrors(jobBuildErrors, 0.9)
+		clusters := cifailures.ClusterErrors(jobBuildErrors, defaultThreshold)
 		categorizedFailure := &CategorizedFailure{
 			CategoryValue:  categoryValue,
 			JobBuildErrors: jobBuildErrors,
@@ -108,4 +110,5 @@ type TemplateData struct {
 	FailuresPerBranch Failures
 	FailuresPerDay    Failures
 	FailuresPerSIG    Failures
+	ClusteredSnippets []cifailures.ClusteredBuildLogErrorSnippets
 }

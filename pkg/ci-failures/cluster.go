@@ -7,8 +7,8 @@ import (
 
 // ClusterErrors groups similar errors together.
 // It takes a slice of errors and a similarity threshold (0.0 to 1.0).
-func ClusterErrors(errors []*JobBuildError, threshold float64) []Cluster {
-	var clusters []Cluster
+func ClusterErrors(errors []*JobBuildError, threshold float64) []ClusteredJobBuildErrors {
+	var clusters []ClusteredJobBuildErrors
 
 	for _, jobBuildError := range errors {
 		foundCluster := false
@@ -32,9 +32,45 @@ func ClusterErrors(errors []*JobBuildError, threshold float64) []Cluster {
 		}
 
 		if !foundCluster {
-			clusters = append(clusters, Cluster{
+			clusters = append(clusters, ClusteredJobBuildErrors{
 				Representative: jobBuildError,
 				Errors:         []*JobBuildError{jobBuildError},
+			})
+		}
+	}
+
+	sort.Slice(clusters, func(i, j int) bool {
+		return len(clusters[i].Errors) > len(clusters[j].Errors)
+	})
+
+	return clusters
+}
+
+// ClusterBuildLogErrorSnippets groups similar errors together.
+// It takes a slice of errors and a similarity threshold (0.0 to 1.0).
+func ClusterBuildLogErrorSnippets(errors []*BuildLogErrorSnippet, threshold float64) []ClusteredBuildLogErrorSnippets {
+	var clusters []ClusteredBuildLogErrorSnippets
+
+	for _, errorSnippet := range errors {
+		foundCluster := false
+		for i, cluster := range clusters {
+			repErrTxt := cluster.Representative.ErrorText
+			errorText := errorSnippet.ErrorText
+
+			// Using Jaro-Winkler as it's good for short text like error messages.
+			similarity := float64(beda.JaroWinklerDistance(repErrTxt, errorText, 0.1))
+
+			if similarity >= threshold {
+				clusters[i].Errors = append(clusters[i].Errors, errorSnippet)
+				foundCluster = true
+				break
+			}
+		}
+
+		if !foundCluster {
+			clusters = append(clusters, ClusteredBuildLogErrorSnippets{
+				Representative: errorSnippet,
+				Errors:         []*BuildLogErrorSnippet{errorSnippet},
 			})
 		}
 	}
