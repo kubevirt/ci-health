@@ -2,28 +2,30 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (12x)
+## per branch (13x)
 
 <details>
-<summary> main (10x / 83.33%) </summary>
+<summary> main (11x / 84.62%) </summary>
 
 <hr/>
 
-**7x**: _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
+**8x**: _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
 <details>
 <summary>all...</summary>
 
-* _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
-
-* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
-
-* _2026-01-29 08:51:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16617/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2016796159380557824#1:build-log.txt%3A989)
-
-* _2026-02-03 11:50:01 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16686/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2018652933012328448#1:build-log.txt%3A990)
+* _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
 
 * _2026-02-05 16:17:54 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16161/pull-kubevirt-e2e-kind-1.34-sev/2019445171174772736#1:build-log.txt%3A1181)
 
 * _2026-02-05 17:05:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16142/pull-kubevirt-e2e-k8s-1.33-sig-network/2019427538337533952#1:build-log.txt%3A1148)
+
+* _2026-02-03 11:50:01 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16686/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2018652933012328448#1:build-log.txt%3A990)
+
+* _2026-01-29 08:51:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16617/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2016796159380557824#1:build-log.txt%3A989)
+
+* _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
+
+* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
 
 * _2026-02-04 11:16:59 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16448/pull-kubevirt-e2e-k8s-1.34-sig-storage/2019001276209041408#1:build-log.txt%3A1301)
 
@@ -62,7 +64,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 16.67%) </summary>
+<summary> release-1.7 (2x / 15.38%) </summary>
 
 <hr/>
 
@@ -87,10 +89,10 @@
 <hr/>
 </details>
 
-## per day (12x)
+## per day (13x)
 
 <details>
-<summary> 2026-02-04 (4x / 33.33%) </summary>
+<summary> 2026-02-04 (4x / 30.77%) </summary>
 
 <hr/>
 
@@ -127,26 +129,26 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-05 (3x / 25.00%) </summary>
+<summary> 2026-02-05 (3x / 23.08%) </summary>
 
 <hr/>
 
-**3x**: _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
+**3x**: _2026-02-05 16:17:54 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16161/pull-kubevirt-e2e-kind-1.34-sev/2019445171174772736#1:build-log.txt%3A1181)
 <details>
 <summary>all...</summary>
-
-* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
 
 * _2026-02-05 16:17:54 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16161/pull-kubevirt-e2e-kind-1.34-sev/2019445171174772736#1:build-log.txt%3A1181)
 
 * _2026-02-05 17:05:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16142/pull-kubevirt-e2e-k8s-1.33-sig-network/2019427538337533952#1:build-log.txt%3A1148)
 
+* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
+
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> 2026-01-29 (2x / 16.67%) </summary>
+<summary> 2026-01-29 (2x / 15.38%) </summary>
 
 <hr/>
 
@@ -171,22 +173,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-02 (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
-<details>
-<summary>all...</summary>
-
-* _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-01-21 (1x / 8.33%) </summary>
+<summary> 2026-01-21 (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -201,7 +188,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-03 (1x / 8.33%) </summary>
+<summary> 2026-02-03 (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -215,27 +202,59 @@
 
 <hr/>
 </details>
-
-## per SIG (12x)
-
 <details>
-<summary> sig-compute (8x / 66.67%) </summary>
+<summary> 2026-02-02 (1x / 7.69%) </summary>
 
 <hr/>
 
-**5x**: _2026-02-04 05:54:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16733/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial-1.7/2018925881434574848#1:build-log.txt%3A1022)
+**1x**: _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
 <details>
 <summary>all...</summary>
 
-* _2026-02-04 05:54:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16733/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial-1.7/2018925881434574848#1:build-log.txt%3A1022)
-
 * _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
 
-* _2026-01-29 08:51:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16617/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2016796159380557824#1:build-log.txt%3A989)
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-09 (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
+<details>
+<summary>all...</summary>
+
+* _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
+
+</details>
+
+<hr/>
+</details>
+
+## per SIG (13x)
+
+<details>
+<summary> sig-compute (9x / 69.23%) </summary>
+
+<hr/>
+
+**6x**: _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
+<details>
+<summary>all...</summary>
+
+* _2026-02-09 11:22:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16653/pull-kubevirt-e2e-k8s-1.32-sig-compute/2020820065670139904#1:build-log.txt%3A3704)
+
+* _2026-02-05 16:17:54 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16161/pull-kubevirt-e2e-kind-1.34-sev/2019445171174772736#1:build-log.txt%3A1181)
+
+* _2026-02-04 05:54:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16733/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial-1.7/2018925881434574848#1:build-log.txt%3A1022)
 
 * _2026-02-03 11:50:01 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16686/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2018652933012328448#1:build-log.txt%3A990)
 
-* _2026-02-05 16:17:54 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16161/pull-kubevirt-e2e-kind-1.34-sev/2019445171174772736#1:build-log.txt%3A1181)
+* _2026-01-29 08:51:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16617/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2016796159380557824#1:build-log.txt%3A989)
+
+* _2026-02-02 08:46:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16706/pull-kubevirt-e2e-k8s-1.34-windows2016/2018244554561425408#1:build-log.txt%3A1016)
 
 </details>
 
@@ -272,24 +291,24 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (2x / 16.67%) </summary>
+<summary> sig-network (2x / 15.38%) </summary>
 
 <hr/>
 
-**2x**: _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
+**2x**: _2026-02-05 17:05:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16142/pull-kubevirt-e2e-k8s-1.33-sig-network/2019427538337533952#1:build-log.txt%3A1148)
 <details>
 <summary>all...</summary>
 
-* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
-
 * _2026-02-05 17:05:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16142/pull-kubevirt-e2e-k8s-1.33-sig-network/2019427538337533952#1:build-log.txt%3A1148)
+
+* _2026-02-05 11:50:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16740/pull-kubevirt-e2e-k8s-1.34-sig-network/2019376632006971392#1:build-log.txt%3A3825)
 
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> sig-storage (2x / 16.67%) </summary>
+<summary> sig-storage (2x / 15.38%) </summary>
 
 <hr/>
 
@@ -314,4 +333,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-02-10 05:09:24
+Last updated: 2026-02-10 06:41:33
