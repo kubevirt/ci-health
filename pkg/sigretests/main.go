@@ -167,11 +167,14 @@ func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job
 	var filteredJobs []job
 	for _, j := range unfilteredJobs {
 		prowJobJSON, err := http.Get(fmt.Sprintf(prowJobJSONURL, org, repo, prNumber, j.jobName, j.buildNumber))
+		if prowJobJSON.StatusCode != 200 {
+			continue
+		}
 		if err != nil {
 			return nil, err
 		}
-
 		defer prowJobJSON.Body.Close()
+
 		prowJobData, err := io.ReadAll(prowJobJSON.Body)
 		if err != nil {
 			return nil, err
