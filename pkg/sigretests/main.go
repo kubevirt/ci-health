@@ -134,13 +134,13 @@ func getLatestCommit(node *html.Node) (latestCommit string) {
 func filterForLastCommit(org string, repo string, prNumber string, latestCommit string, jobList []job) (filteredJobList []job, err error) {
 	for _, job := range jobList {
 		finishedJSON, err := http.Get(finishedJSONURL(org, repo, prNumber, job.jobName, job.buildNumber))
-		if finishedJSON.StatusCode != http.StatusOK {
-			continue
-		}
 		if err != nil {
 			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
 		}
 		defer finishedJSON.Body.Close()
+		if finishedJSON.StatusCode != http.StatusOK {
+			continue
+		}
 
 		finishedJSONData, err := io.ReadAll(finishedJSON.Body)
 		if err != nil {
@@ -167,13 +167,13 @@ func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job
 	var filteredJobs []job
 	for _, j := range unfilteredJobs {
 		prowJobJSON, err := http.Get(fmt.Sprintf(prowJobJSONURL, org, repo, prNumber, j.jobName, j.buildNumber))
-		if prowJobJSON.StatusCode != 200 {
-			continue
-		}
 		if err != nil {
 			return nil, err
 		}
 		defer prowJobJSON.Body.Close()
+		if prowJobJSON.StatusCode != 200 {
+			continue
+		}
 
 		prowJobData, err := io.ReadAll(prowJobJSON.Body)
 		if err != nil {
