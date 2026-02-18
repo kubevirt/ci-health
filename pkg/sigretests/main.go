@@ -80,10 +80,10 @@ func filterJobs(node *html.Node) (jobs []job) {
 					if strings.Contains(href.Val, "e2e") {
 						e2eJob.failure = true
 						e2eJob.buildURL = fmt.Sprintf("https://prow.ci.kubevirt.io/%s", href.Val)
-						buildLogUrl := strings.Split(href.Val, "/")
-						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
-						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
-						prNumber := buildLogUrl[len(buildLogUrl)-3]
+						buildLogURL := strings.Split(href.Val, "/")
+						e2eJob.jobName = buildLogURL[len(buildLogURL)-2]
+						e2eJob.buildNumber = buildLogURL[len(buildLogURL)-1]
+						prNumber := buildLogURL[len(buildLogURL)-3]
 						e2eJob.artifactsURL = fmt.Sprintf("https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/%s/%s/%s/artifacts",
 							prNumber, e2eJob.jobName, e2eJob.buildNumber)
 						prowjobs = append(prowjobs, e2eJob)
@@ -96,9 +96,9 @@ func filterJobs(node *html.Node) (jobs []job) {
 					if strings.Contains(href.Val, "e2e") {
 						e2eJob.failure = false
 						e2eJob.buildURL = href.Val
-						buildLogUrl := strings.Split(href.Val, "/")
-						e2eJob.jobName = buildLogUrl[len(buildLogUrl)-2]
-						e2eJob.buildNumber = buildLogUrl[len(buildLogUrl)-1]
+						buildLogURL := strings.Split(href.Val, "/")
+						e2eJob.jobName = buildLogURL[len(buildLogURL)-2]
+						e2eJob.buildNumber = buildLogURL[len(buildLogURL)-1]
 						prowjobs = append(prowjobs, e2eJob)
 						continue
 					}
@@ -236,15 +236,15 @@ func HttpGetWithRetry(url string) (resp *http.Response, err error) {
 		func() error {
 			resp, err = http.Get(url)
 			switch {
+			case err != nil:
+				httpRetryLog.Debugf("failed to http get, aborting")
+				return retry.Unrecoverable(err)
 			case resp.StatusCode == http.StatusOK:
 				httpRetryLog.Debugf("http get succeeded")
 				return nil
 			case resp.StatusCode == http.StatusGatewayTimeout:
 				httpRetryLog.Debugf("failed to http get, will retry")
 				return fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err)
-			case err != nil:
-				httpRetryLog.Debugf("failed to http get, aborting")
-				return retry.Unrecoverable(err)
 			default:
 				httpRetryLog.Debugf("failed to http get, aborting")
 				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err))
