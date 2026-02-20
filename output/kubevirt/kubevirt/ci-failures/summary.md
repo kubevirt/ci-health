@@ -2,52 +2,48 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (12x)
+## per branch (9x)
 
 <details>
-<summary> main (11x / 91.67%) </summary>
+<summary> main (9x / 100.00%) </summary>
 
 <hr/>
 
-**4x**: _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
-<details>
-<summary>all...</summary>
-
-* _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
-
-* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
-
-* _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
-
-* _2026-02-09 16:15:11 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2020893992060719104#1:build-log.txt%3A568)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
+**3x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 <details>
 <summary>all...</summary>
 
 * _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
-
 * _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
 
-* _2026-02-12 13:51:38 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/2021944605393555456#1:build-log.txt%3A4571)
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
 
 </details>
 
 <hr/>
 
-**2x**: _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
+**3x**: _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
 <details>
 <summary>all...</summary>
 
-* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
+* _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
+
+* _2026-02-09 16:15:11 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2020893992060719104#1:build-log.txt%3A568)
+
+* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
+
+</details>
+
+<hr/>
+
+**2x**: _2026-02-09 17:06:14 &#43;0000 UTC_: <code>17:12:17: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-network/2020870037857898496#1:build-log.txt%3A396)
+<details>
+<summary>all...</summary>
 
 * _2026-02-09 17:06:14 &#43;0000 UTC_: <code>17:12:17: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-network/2020870037857898496#1:build-log.txt%3A396)
+
+* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
 
 </details>
 
@@ -63,73 +59,21 @@
 
 <hr/>
 </details>
+
+## per day (9x)
+
 <details>
-<summary> release-1.7 (1x / 8.33%) </summary>
+<summary> 2026-02-09 (3x / 33.33%) </summary>
 
 <hr/>
 
-**1x**: _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
+**2x**: _2026-02-09 17:06:14 &#43;0000 UTC_: <code>17:12:17: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-network/2020870037857898496#1:build-log.txt%3A396)
 <details>
 <summary>all...</summary>
-
-* _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
-
-</details>
-
-<hr/>
-</details>
-
-## per day (12x)
-
-<details>
-<summary> 2026-02-12 (4x / 33.33%) </summary>
-
-<hr/>
-
-**2x**: _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
-<details>
-<summary>all...</summary>
-
-* _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
-
-* _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
-<details>
-<summary>all...</summary>
-
-* _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-02-12 13:51:38 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/2021944605393555456#1:build-log.txt%3A4571)
-<details>
-<summary>all...</summary>
-
-* _2026-02-12 13:51:38 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/2021944605393555456#1:build-log.txt%3A4571)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-02-09 (3x / 25.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
-<details>
-<summary>all...</summary>
-
-* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
 
 * _2026-02-09 17:06:14 &#43;0000 UTC_: <code>17:12:17: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-network/2020870037857898496#1:build-log.txt%3A396)
+
+* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
 
 </details>
 
@@ -146,34 +90,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-18 (2x / 16.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
-<details>
-<summary>all...</summary>
-
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
-
-* _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-02-16 (2x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
-<details>
-<summary>all...</summary>
-
-* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
-
-</details>
+<summary> 2026-02-16 (2x / 22.22%) </summary>
 
 <hr/>
 
@@ -186,9 +103,51 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
+<details>
+<summary>all...</summary>
+
+* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> 2026-02-02 (1x / 8.33%) </summary>
+<summary> 2026-02-18 (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
+<details>
+<summary>all...</summary>
+
+* _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
+
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-12 (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
+<details>
+<summary>all...</summary>
+
+* _2026-02-12 17:39:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16655/pull-kubevirt-e2e-k8s-1.33-sig-storage/2021998298461638656#1:build-log.txt%3A1242)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-02 (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -203,58 +162,34 @@
 <hr/>
 </details>
 
-## per SIG (12x)
+## per SIG (9x)
 
 <details>
-<summary> sig-compute (10x / 83.33%) </summary>
+<summary> sig-compute (7x / 77.78%) </summary>
 
 <hr/>
 
-**4x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
+**3x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 <details>
 <summary>all...</summary>
 
 * _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
-
 * _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
 
-* _2026-02-12 13:51:38 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/2021944605393555456#1:build-log.txt%3A4571)
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
 
 </details>
 
 <hr/>
 
-**3x**: _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
+**2x**: _2026-02-09 16:15:11 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2020893992060719104#1:build-log.txt%3A568)
 <details>
 <summary>all...</summary>
-
-* _2026-02-12 14:01:22 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16791/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2021947388012269568#1:build-log.txt%3A3667)
-
-* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
 
 * _2026-02-09 16:15:11 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64/2020893992060719104#1:build-log.txt%3A568)
 
-</details>
-
-<hr/>
-
-**1x**: _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
-<details>
-<summary>all...</summary>
-
-* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
-<details>
-<summary>all...</summary>
-
-* _2026-02-12 12:48:17 &#43;0000 UTC_: <code>12:52:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16829/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2021928138975481856#1:build-log.txt%3A319)
+* _2026-02-16 10:26:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16855/pull-kubevirt-e2e-k8s-1.34-sig-compute-serial/2023342595807121408#1:build-log.txt%3A987)
 
 </details>
 
@@ -269,9 +204,19 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
+<details>
+<summary>all...</summary>
+
+* _2026-02-09 17:06:35 &#43;0000 UTC_: <code>17:12:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16658/pull-kubevirt-e2e-k8s-1.33-sig-compute/2020870038331854848#1:build-log.txt%3A377)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> sig-network (1x / 8.33%) </summary>
+<summary> sig-network (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -286,7 +231,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (1x / 8.33%) </summary>
+<summary> sig-storage (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -301,4 +246,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-02-20 04:42:48
+Last updated: 2026-02-20 06:35:36
