@@ -2,22 +2,24 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (9x)
+## per branch (10x)
 
 <details>
-<summary> main (9x / 100.00%) </summary>
+<summary> main (10x / 100.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
+**4x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 <details>
 <summary>all...</summary>
 
 * _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+
 * _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
 
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+* _2026-02-18 20:50:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16656/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821063192576#1:build-log.txt%3A285)
 
 </details>
 
@@ -60,10 +62,10 @@
 <hr/>
 </details>
 
-## per day (9x)
+## per day (10x)
 
 <details>
-<summary> 2026-02-09 (3x / 33.33%) </summary>
+<summary> 2026-02-09 (3x / 30.00%) </summary>
 
 <hr/>
 
@@ -90,7 +92,26 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-16 (2x / 22.22%) </summary>
+<summary> 2026-02-18 (3x / 30.00%) </summary>
+
+<hr/>
+
+**3x**: _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+<details>
+<summary>all...</summary>
+
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+
+* _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
+
+* _2026-02-18 20:50:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16656/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821063192576#1:build-log.txt%3A285)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-16 (2x / 20.00%) </summary>
 
 <hr/>
 
@@ -115,24 +136,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-18 (2x / 22.22%) </summary>
-
-<hr/>
-
-**2x**: _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
-<details>
-<summary>all...</summary>
-
-* _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
-
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-02-12 (1x / 11.11%) </summary>
+<summary> 2026-02-12 (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -147,7 +151,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-02 (1x / 11.11%) </summary>
+<summary> 2026-02-02 (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -162,22 +166,24 @@
 <hr/>
 </details>
 
-## per SIG (9x)
+## per SIG (10x)
 
 <details>
-<summary> sig-compute (7x / 77.78%) </summary>
+<summary> sig-compute (8x / 80.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
+**4x**: _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 <details>
 <summary>all...</summary>
 
 * _2026-02-02 17:08:58 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16722/pull-kubevirt-e2e-k8s-1.34-sig-compute/2018369549157535744#1:build-log.txt%3A4263)
 
+* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+
 * _2026-02-18 20:44:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16792/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223267501379584#1:build-log.txt%3A311)
 
-* _2026-02-18 20:43:24 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16818/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024219951849541632#1:build-log.txt%3A302)
+* _2026-02-18 20:50:10 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16656/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821063192576#1:build-log.txt%3A285)
 
 </details>
 
@@ -216,7 +222,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (1x / 11.11%) </summary>
+<summary> sig-network (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -231,7 +237,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (1x / 11.11%) </summary>
+<summary> sig-storage (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -246,4 +252,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-02-20 06:35:36
+Last updated: 2026-02-20 06:50:36
