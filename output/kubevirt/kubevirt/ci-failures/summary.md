@@ -9,13 +9,11 @@
 
 <hr/>
 
-**9x**: _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
+**9x**: _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 <details>
 <summary>all...</summary>
 
-* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
-
-* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 
 * _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16657/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821507788800#1:build-log.txt%3A270)
 
@@ -27,21 +25,11 @@
 
 * _2026-02-18 20:55:54 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16379/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024226247562760192#1:build-log.txt%3A288)
 
-* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
+* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+
+* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
 
 * _2026-02-18 20:40:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16812/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024222098527883264#1:build-log.txt%3A290)
-
-</details>
-
-<hr/>
-
-**2x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-<details>
-<summary>all...</summary>
-
-* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-
-* _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
 
 </details>
 
@@ -59,11 +47,13 @@
 
 <hr/>
 
-**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+**2x**: _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
 <details>
 <summary>all...</summary>
 
-* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+* _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
+
+* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
 
 </details>
 
@@ -88,6 +78,16 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+<details>
+<summary>all...</summary>
+
+* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+
+</details>
+
+<hr/>
 </details>
 
 ## per day (16x)
@@ -97,13 +97,11 @@
 
 <hr/>
 
-**9x**: _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
+**9x**: _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 <details>
 <summary>all...</summary>
 
-* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
-
-* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 
 * _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16657/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821507788800#1:build-log.txt%3A270)
 
@@ -115,26 +113,11 @@
 
 * _2026-02-18 20:55:54 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16379/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024226247562760192#1:build-log.txt%3A288)
 
-* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
+* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+
+* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
 
 * _2026-02-18 20:40:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16812/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024222098527883264#1:build-log.txt%3A290)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-02-22 (2x / 12.50%) </summary>
-
-<hr/>
-
-**2x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-<details>
-<summary>all...</summary>
-
-* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-
-* _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
 
 </details>
 
@@ -152,6 +135,23 @@
 * _2026-02-10 09:23:25 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.33-sig-compute/2021152888784424960#1:build-log.txt%3A984)
 
 * _2026-02-10 21:05:01 &#43;0000 UTC_: <code>make: *** [Makefile:187: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16582/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations/2021272084226772992#1:build-log.txt%3A4088)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-22 (2x / 12.50%) </summary>
+
+<hr/>
+
+**2x**: _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
+<details>
+<summary>all...</summary>
+
+* _2026-02-22 15:36:25 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-exportproxy:virt-exportproxy-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-sig-compute/2025595410671734784#1:build-log.txt%3A449)
+
+* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
 
 </details>
 
@@ -210,13 +210,11 @@
 
 <hr/>
 
-**9x**: _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
+**9x**: _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 <details>
 <summary>all...</summary>
 
-* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
-
-* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
 
 * _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16657/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224821507788800#1:build-log.txt%3A270)
 
@@ -228,7 +226,9 @@
 
 * _2026-02-18 20:55:54 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16379/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024226247562760192#1:build-log.txt%3A288)
 
-* _2026-02-18 20:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224812649418752#1:build-log.txt%3A267)
+* _2026-02-18 20:49:09 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16684/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024224555538583552#1:build-log.txt%3A270)
+
+* _2026-02-18 20:45:02 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16788/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223515334414336#1:build-log.txt%3A267)
 
 * _2026-02-18 20:40:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16812/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024222098527883264#1:build-log.txt%3A290)
 
@@ -279,21 +279,6 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (1x / 6.25%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-<details>
-<summary>all...</summary>
-
-* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> sig-storage (1x / 6.25%) </summary>
 
 <hr/>
@@ -308,5 +293,20 @@
 
 <hr/>
 </details>
+<details>
+<summary> sig-network (1x / 6.25%) </summary>
 
-Last updated: 2026-02-27 09:50:45
+<hr/>
+
+**1x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
+<details>
+<summary>all...</summary>
+
+* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-02-27 10:09:44
