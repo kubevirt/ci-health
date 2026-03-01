@@ -129,21 +129,6 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-26 (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
-<details>
-<summary>all...</summary>
-
-* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> 2026-02-10 (1x / 7.69%) </summary>
 
 <hr/>
@@ -198,6 +183,21 @@
 <summary>all...</summary>
 
 * _2026-02-23 09:53:22 &#43;0000 UTC_: <code>10:41:43: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16911/pull-kubevirt-e2e-kind-1.34-sev/2025871200697192448#1:build-log.txt%3A4690)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-26 (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+<details>
+<summary>all...</summary>
+
+* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
 
 </details>
 
@@ -274,21 +274,6 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-<details>
-<summary>all...</summary>
-
-* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> sig-storage (1x / 7.69%) </summary>
 
 <hr/>
@@ -303,5 +288,20 @@
 
 <hr/>
 </details>
+<details>
+<summary> sig-network (1x / 7.69%) </summary>
 
-Last updated: 2026-03-01 18:47:54
+<hr/>
+
+**1x**: _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
+<details>
+<summary>all...</summary>
+
+* _2026-02-22 15:36:28 &#43;0000 UTC_: <code>15:38:49: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16528/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2025595410361356288#1:build-log.txt%3A428)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-03-01 19:06:09
