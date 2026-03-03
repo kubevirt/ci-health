@@ -91,21 +91,6 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-02-10 (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-10 09:23:25 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.33-sig-compute/2021152888784424960#1:build-log.txt%3A984)
-<details>
-<summary>all...</summary>
-
-* _2026-02-10 09:23:25 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.33-sig-compute/2021152888784424960#1:build-log.txt%3A984)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> 2026-02-27 (1x / 14.29%) </summary>
 
 <hr/>
@@ -145,6 +130,21 @@
 <summary>all...</summary>
 
 * _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-02-10 (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-10 09:23:25 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.33-sig-compute/2021152888784424960#1:build-log.txt%3A984)
+<details>
+<summary>all...</summary>
+
+* _2026-02-10 09:23:25 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16659/pull-kubevirt-e2e-k8s-1.33-sig-compute/2021152888784424960#1:build-log.txt%3A984)
 
 </details>
 
@@ -223,4 +223,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-03 12:25:22
+Last updated: 2026-03-03 12:42:14
