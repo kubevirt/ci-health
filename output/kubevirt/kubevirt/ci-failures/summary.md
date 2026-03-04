@@ -193,21 +193,6 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
-<details>
-<summary>all...</summary>
-
-* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> sig-monitoring (1x / 14.29%) </summary>
 
 <hr/>
@@ -222,5 +207,20 @@
 
 <hr/>
 </details>
+<details>
+<summary> sig-storage (1x / 14.29%) </summary>
 
-Last updated: 2026-03-04 04:38:47
+<hr/>
+
+**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+<details>
+<summary>all...</summary>
+
+* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-03-04 06:29:20
