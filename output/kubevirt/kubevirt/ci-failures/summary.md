@@ -91,6 +91,21 @@
 <hr/>
 </details>
 <details>
+<summary> 2026-02-26 (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+<details>
+<summary>all...</summary>
+
+* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> 2026-02-10 (1x / 14.29%) </summary>
 
 <hr/>
@@ -130,21 +145,6 @@
 <summary>all...</summary>
 
 * _2026-01-20 10:59:02 &#43;0000 UTC_: <code>11:24:04: I0120 06:24:04.513526    1600 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16588/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.7/2013566717766144000#1:build-log.txt%3A769)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-02-26 (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
-<details>
-<summary>all...</summary>
-
-* _2026-02-26 20:46:13 &#43;0000 UTC_: <code>20:48:19: ERROR: Analysis of target &#39;//cmd/virt-api:virt-api-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16604/pull-kubevirt-e2e-k8s-1.33-sig-storage/2027074770331242496#1:build-log.txt%3A487)
 
 </details>
 
@@ -223,4 +223,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-04 12:41:15
+Last updated: 2026-03-04 13:00:11
