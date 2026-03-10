@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/kubevirt/ci-health/pkg/prow"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 	"io"
@@ -75,7 +76,7 @@ func checkJunitFuncTestXMLExists(jobURL string) (bool, error) {
 	artifactURL := strings.Replace(jobURL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
 	artifactURL = fmt.Sprintf("%s/artifacts/junit.functest.xml", artifactURL)
 
-	resp, err := http.Head(artifactURL)
+	resp, err := sigretests.HttpHeadWithRetry(artifactURL)
 	if err != nil {
 		return false, err
 	}

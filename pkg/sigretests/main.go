@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"reflect"
+	"runtime"
 	"strconv"
 	"strings"
 
@@ -231,22 +233,30 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLates
 }
 
 func HttpGetWithRetry(url string) (resp *http.Response, err error) {
-	httpRetryLog := log.WithField("url", url)
+	return DoHTTPWithRetry(url, http.Get)
+}
+
+func HttpHeadWithRetry(url string) (resp *http.Response, err error) {
+	return DoHTTPWithRetry(url, http.Head)
+}
+
+func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response, err error)) (resp *http.Response, err error) {
+	httpRetryLog := log.WithField("url", url).WithField("verb", runtime.FuncForPC(reflect.ValueOf(httpVerb).Pointer()).Name())
 	retry.Do(
 		func() error {
-			resp, err = http.Get(url)
+			resp, err = httpVerb(url)
 			switch {
 			case err != nil:
-				httpRetryLog.Debugf("failed to http get, aborting")
+				httpRetryLog.Warnf("failed with error %v, aborting", err)
 				return retry.Unrecoverable(err)
 			case resp.StatusCode == http.StatusOK:
-				httpRetryLog.Debugf("http get succeeded")
+				httpRetryLog.Debugf("succeeded")
 				return nil
 			case resp.StatusCode == http.StatusGatewayTimeout:
-				httpRetryLog.Debugf("failed to http get, will retry")
-				return fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err)
+				httpRetryLog.Infof("failed with %d, will retry", resp.StatusCode)
+				return fmt.Errorf("failed with %d: %v", resp.StatusCode, err)
 			default:
-				httpRetryLog.Debugf("failed to http get, aborting")
+				httpRetryLog.Warnf("failed with status %d, aborting", resp.StatusCode)
 				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err))
 			}
 		},
