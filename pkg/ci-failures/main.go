@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/kubevirt/ci-health/pkg/prow"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 	"io"
@@ -13,7 +14,6 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -29,10 +29,8 @@ var (
 	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |^make:.*Error (1[0-9]+|[2-9][0-9]*)`)
 )
 
-// ShowCIFailureJobs fetches URLs for the CI failure runs from the data of the latest run,
-// covering the last 7 days. Resulting URLs are sorted by sig and then by id section,
-// where both are captured via regular expression matching on the job url.
-// It then returns only the URLs for which the junit.functest.xml artifact does not exist.
+// ShowCIFailureJobs fetches URLs for the CI failure runs from the data of the latest run.
+// It returns only those URLs for which the junit.functest.xml artifact does not exist.
 func ShowCIFailureJobs() ([]string, error) {
 	// 1. Read and parse the JSON file
 	jsonFile, err := os.Open("./output/kubevirt/kubevirt/results.json")
@@ -57,63 +55,42 @@ func ShowCIFailureJobs() ([]string, error) {
 		return nil, fmt.Errorf("failed to unmarshal json: %v", err)
 	}
 
-	// 2. Extract, capture groups, and flatten URLs
-	var jobFailures []JobFailureData
-	re := regexp.MustCompile(`.*pull-kubevirt-.*-[0-9]+.[0-9]+-(?P<id>(?P<prefix>(ipv6-)?)(?P<sig>sig-[a-z]+)?[^/]*).*`)
-	names := re.SubexpNames()
-
+	var ciFailureJobURLs []string
 	for _, board := range result.Data.SIGRetests.FailedJobLeaderBoard {
 		for _, url := range board.FailureURLs {
-			match := re.FindStringSubmatch(url)
-			if match == nil {
+			exists, err := checkJunitFuncTestXMLExists(url)
+			if err != nil {
+				return nil, fmt.Errorf("failed to check junit xml: %v", err)
+			}
+			if exists {
 				continue
 			}
-
-			jobFailure := JobFailureData{URL: url}
-			for i, n := range names {
-				if i > 0 && i < len(match) {
-					switch n {
-					case "sig":
-						jobFailure.Sig = match[i]
-					case "id":
-						jobFailure.ID = match[i]
-					}
-				}
-			}
-			jobFailures = append(jobFailures, jobFailure)
-		}
-	}
-
-	// 3. Sort the data
-	sort.Slice(jobFailures, func(i, j int) bool {
-		if jobFailures[i].Sig != jobFailures[j].Sig {
-			return jobFailures[i].Sig < jobFailures[j].Sig
-		}
-		return jobFailures[i].ID < jobFailures[j].ID
-	})
-
-	// 4. Check for artifact existence and add URL to list if not found
-	var ciFailureJobURLs []string
-	for _, jf := range jobFailures {
-		artifactURL := strings.Replace(jf.URL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
-		artifactURL = fmt.Sprintf("%s/artifacts/junit.functest.xml", artifactURL)
-
-		resp, err := http.Head(artifactURL)
-		if err != nil {
-			ciFailureJobURLs = append(ciFailureJobURLs, jf.URL)
-			continue
-		}
-
-		if resp.StatusCode != http.StatusOK {
-			ciFailureJobURLs = append(ciFailureJobURLs, jf.URL)
-		}
-		err = resp.Body.Close()
-		if err != nil {
-			return nil, fmt.Errorf("failed to close output file: %v", err)
+			ciFailureJobURLs = append(ciFailureJobURLs, url)
 		}
 	}
 
 	return ciFailureJobURLs, nil
+}
+
+func checkJunitFuncTestXMLExists(jobURL string) (bool, error) {
+	artifactURL := strings.Replace(jobURL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
+	artifactURL = fmt.Sprintf("%s/artifacts/junit.functest.xml", artifactURL)
+
+	resp, err := sigretests.HttpHeadWithRetry(artifactURL)
+	if err != nil {
+		return false, err
+	}
+	defer func() {
+		err := resp.Body.Close()
+		if err != nil {
+			log.WithError(err).Errorf("failed to close response")
+		}
+	}()
+
+	if resp.StatusCode == http.StatusOK {
+		return true, nil
+	}
+	return false, nil
 }
 
 type buildLog struct {
@@ -408,18 +385,4 @@ func filterURLsByGroup(ciFailureJobURLs []string, groupPattern string) []string 
 		}
 	}
 	return urls
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
