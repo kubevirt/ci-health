@@ -9,16 +9,6 @@
 
 <hr/>
 
-**1x**: _2026-02-16 10:15:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.32-sig-operator/2023320070595284992#1:build-log.txt%3A3680)
-<details>
-<summary>all...</summary>
-
-* _2026-02-16 10:15:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.32-sig-operator/2023320070595284992#1:build-log.txt%3A3680)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-02-18 20:46:13 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223820428087296#1:build-log.txt%3A267)
 <details>
 <summary>all...</summary>
@@ -38,14 +28,6 @@
 </details>
 
 <hr/>
-</details>
-
-## per day (3x)
-
-<details>
-<summary> 2026-02-16 (1x / 33.33%) </summary>
-
-<hr/>
 
 **1x**: _2026-02-16 10:15:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.32-sig-operator/2023320070595284992#1:build-log.txt%3A3680)
 <details>
@@ -57,6 +39,9 @@
 
 <hr/>
 </details>
+
+## per day (3x)
+
 <details>
 <summary> 2026-02-18 (1x / 33.33%) </summary>
 
@@ -87,11 +72,8 @@
 
 <hr/>
 </details>
-
-## per SIG (3x)
-
 <details>
-<summary> sig-compute (2x / 66.67%) </summary>
+<summary> 2026-02-16 (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -104,12 +86,30 @@
 </details>
 
 <hr/>
+</details>
+
+## per SIG (3x)
+
+<details>
+<summary> sig-compute (2x / 66.67%) </summary>
+
+<hr/>
 
 **1x**: _2026-02-18 20:46:13 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223820428087296#1:build-log.txt%3A267)
 <details>
 <summary>all...</summary>
 
 * _2026-02-18 20:46:13 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223820428087296#1:build-log.txt%3A267)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-02-16 10:15:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.32-sig-operator/2023320070595284992#1:build-log.txt%3A3680)
+<details>
+<summary>all...</summary>
+
+* _2026-02-16 10:15:18 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16748/pull-kubevirt-e2e-k8s-1.32-sig-operator/2023320070595284992#1:build-log.txt%3A3680)
 
 </details>
 
@@ -131,4 +131,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-11 22:01:20
+Last updated: 2026-03-11 22:14:16
