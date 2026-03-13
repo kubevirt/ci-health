@@ -2,10 +2,30 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (1x)
+## per branch (4x)
 
 <details>
-<summary> main (1x / 100.00%) </summary>
+<summary> main (3x / 75.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+<details>
+<summary>all...</summary>
+
+* _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+<details>
+<summary>all...</summary>
+
+* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+
+</details>
 
 <hr/>
 
@@ -19,11 +39,56 @@
 
 <hr/>
 </details>
+<details>
+<summary> release-1.7 (1x / 25.00%) </summary>
 
-## per day (1x)
+<hr/>
+
+**1x**: _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+<details>
+<summary>all...</summary>
+
+* _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+
+</details>
+
+<hr/>
+</details>
+
+## per day (4x)
 
 <details>
-<summary> 2026-03-07 (1x / 100.00%) </summary>
+<summary> 2026-03-11 (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+<details>
+<summary>all...</summary>
+
+* _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-12 (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+<details>
+<summary>all...</summary>
+
+* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-07 (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -37,11 +102,46 @@
 
 <hr/>
 </details>
+<details>
+<summary> 2026-02-18 (1x / 25.00%) </summary>
 
-## per SIG (1x)
+<hr/>
+
+**1x**: _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+<details>
+<summary>all...</summary>
+
+* _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+
+</details>
+
+<hr/>
+</details>
+
+## per SIG (4x)
 
 <details>
-<summary> sig-storage (1x / 100.00%) </summary>
+<summary> sig-storage (3x / 75.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+<details>
+<summary>all...</summary>
+
+* _2026-03-11 00:14:40 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17059/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2031515576999874560#1:build-log.txt%3A4417)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+<details>
+<summary>all...</summary>
+
+* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
+
+</details>
 
 <hr/>
 
@@ -55,5 +155,20 @@
 
 <hr/>
 </details>
+<details>
+<summary> sig-compute (1x / 25.00%) </summary>
 
-Last updated: 2026-03-13 07:09:23
+<hr/>
+
+**1x**: _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+<details>
+<summary>all...</summary>
+
+* _2026-02-18 20:44:41 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16783/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2024223355158138880#1:build-log.txt%3A273)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-03-13 09:28:38
