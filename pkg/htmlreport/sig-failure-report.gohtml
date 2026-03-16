@@ -66,6 +66,15 @@
             text-decoration: none;
             word-break: break-all;
         }
+        .timestamp {
+            color: #586069;
+            font-size: 0.9em;
+            float: right;
+        }
+        .generated-at {
+            color: #586069;
+            font-size: 0.9em;
+        }
         table.testcases {
             width: 100%;
             border-collapse: collapse;
@@ -100,12 +109,16 @@
 </head>
 <body>
     <h1>SIG Failure Report</h1>
-    {{- if . }}
-        {{- range . }}
+    <p class="generated-at">Generated at {{ .GeneratedAt.Format "2006-01-02 15:04 UTC" }}</p>
+    {{- if .Failures }}
+        {{- range .Failures }}
         <div class="failure-card">
             <div class="failure-header">
                 <span class="sig-label">{{ .Sig }}</span>
                 <span class="job-name">{{ .JobName }}</span>
+                {{- if not .Started.IsZero }}
+                <span class="timestamp">{{ .Started.Format "2006-01-02 15:04 UTC" }}</span>
+                {{- end }}
             </div>
             <a class="failure-url" href="{{ .FailureURL }}" target="_blank">{{ .FailureURL }}</a>
             {{ if .Testcase }}
