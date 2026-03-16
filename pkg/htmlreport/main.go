@@ -10,9 +10,12 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"sort"
 	"strings"
+	"time"
 
 	"github.com/joshdk/go-junit"
+	"github.com/kubevirt/ci-health/pkg/prow"
 	"github.com/kubevirt/ci-health/pkg/sigretests"
 	"github.com/kubevirt/ci-health/pkg/types"
 	log "github.com/sirupsen/logrus"
@@ -38,10 +41,16 @@ type Failure struct {
 	Value   string   `xml:",chardata"`
 }
 
+type ReportData struct {
+	GeneratedAt time.Time
+	Failures    []SigFailure
+}
+
 type SigFailure struct {
 	Sig        string
 	JobName    string
 	FailureURL string
+	Started    time.Time
 	Testcase   []junit.Test
 }
 
@@ -100,6 +109,10 @@ func constructReportFilePath(opt *types.Options) string {
 	return fmt.Sprintf("%s/sig-%s-failure-report.html", opt.Path, opt.Sig)
 }
 
+func constructGCSBaseURL(failureURL string) string {
+	return strings.Replace(failureURL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
+}
+
 func constructJunitURL(failureURL string) string {
 	junitURL := strings.Replace(failureURL, "prow.ci.kubevirt.io//view/gs", "gcsweb.ci.kubevirt.io/gcs", 1)
 	if !strings.HasSuffix(junitURL, "/") {
@@ -107,6 +120,37 @@ func constructJunitURL(failureURL string) string {
 	}
 	junitURL += "artifacts/junit.functest.xml"
 	return junitURL
+}
+
+func fetchStartedTime(failureURL string) time.Time {
+	gcsBaseURL := constructGCSBaseURL(failureURL)
+	startedURL := gcsBaseURL + "/started.json"
+
+	resp, err := sigretests.HttpGetWithRetry(startedURL)
+	if err != nil {
+		log.Warnf("failed to fetch started.json: %s", err)
+		return time.Time{}
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		log.Warnf("failed to fetch started.json from %s: status code %d", startedURL, resp.StatusCode)
+		return time.Time{}
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Warnf("failed to read started.json body: %s", err)
+		return time.Time{}
+	}
+
+	var started prow.Started
+	if err := json.Unmarshal(body, &started); err != nil {
+		log.Warnf("failed to unmarshal started.json: %s", err)
+		return time.Time{}
+	}
+
+	return started.Time()
 }
 
 func Generate(opt *types.Options) error {
@@ -151,6 +195,7 @@ func Generate(opt *types.Options) error {
 			sigFail.Sig = opt.Sig
 			sigFail.JobName = job.JobName
 			sigFail.FailureURL = failureURL
+			sigFail.Started = fetchStartedTime(failureURL)
 
 			for _, suite := range testSuites {
 				for _, test := range suite.Tests {
@@ -164,6 +209,15 @@ func Generate(opt *types.Options) error {
 
 	}
 
+	sort.Slice(sigFailures, func(i, j int) bool {
+		return sigFailures[i].Started.After(sigFailures[j].Started)
+	})
+
+	reportData := ReportData{
+		GeneratedAt: time.Now().UTC(),
+		Failures:    sigFailures,
+	}
+
 	reportTemplate, err := template.New("sigFailures").Parse(sigFailureReportTemplate)
 	if err != nil {
 		return fmt.Errorf("could not read template: %w", err)
@@ -175,7 +229,7 @@ func Generate(opt *types.Options) error {
 	}
 	defer outputFile.Close()
 
-	err = reportTemplate.Execute(outputFile, sigFailures)
+	err = reportTemplate.Execute(outputFile, reportData)
 	if err != nil {
 		return fmt.Errorf("could not execute template: %w", err)
 	}
