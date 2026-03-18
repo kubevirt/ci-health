@@ -4,10 +4,12 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"net/http"
 	"sort"
 	"strings"
 	"time"
 
+	retry "github.com/avast/retry-go"
 	"github.com/shurcooL/githubv4"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
@@ -15,6 +17,45 @@ import (
 	"github.com/kubevirt/ci-health/pkg/constants"
 	"github.com/kubevirt/ci-health/pkg/types"
 )
+
+// retryRoundTripper wraps an http.RoundTripper and retries on transient 5xx errors.
+type retryRoundTripper struct {
+	inner http.RoundTripper
+}
+
+func (rt *retryRoundTripper) RoundTrip(req *http.Request) (resp *http.Response, err error) {
+	retryErr := retry.Do(
+		func() error {
+			// Reset the request body for retries (POST bodies are consumed after the first attempt).
+			if req.GetBody != nil {
+				body, bodyErr := req.GetBody()
+				if bodyErr != nil {
+					return retry.Unrecoverable(bodyErr)
+				}
+				req.Body = body
+			}
+			resp, err = rt.inner.RoundTrip(req)
+			if err != nil {
+				return retry.Unrecoverable(err)
+			}
+			switch resp.StatusCode {
+			case http.StatusBadGateway, http.StatusServiceUnavailable, http.StatusGatewayTimeout:
+				log.Warnf("GitHub API returned %d, will retry", resp.StatusCode)
+				return fmt.Errorf("transient HTTP %d from GitHub API", resp.StatusCode)
+			default:
+				return nil
+			}
+		},
+		retry.Attempts(5),
+		retry.Delay(2*time.Second),
+		retry.MaxDelay(30*time.Second),
+		retry.LastErrorOnly(true),
+	)
+	if retryErr != nil && err == nil {
+		err = retryErr
+	}
+	return
+}
 
 var (
 	zeroDate = time.Time{}
@@ -34,6 +75,7 @@ func NewClient(tokenPath string, source string) (*Client, error) {
 		&oauth2.Token{AccessToken: strings.TrimSpace(string(token))},
 	)
 	httpClient := oauth2.NewClient(context.Background(), src)
+	httpClient.Transport = &retryRoundTripper{inner: httpClient.Transport}
 
 	inner := githubv4.NewClient(httpClient)
 
