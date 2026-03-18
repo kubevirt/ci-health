@@ -9,6 +9,7 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 
@@ -47,16 +48,18 @@ type SigRetests struct {
 
 var prowjobs []job
 
+const defaultStorageBaseURL = "https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow"
+
 func prHistoryURL(org string, repo string, prNumber string) string {
 	return fmt.Sprintf("https://prow.ci.kubevirt.io/pr-history/?org=%s&repo=%s&pr=%s", org, repo, prNumber)
 }
 
-func prStorageURL(org string, repo string, prNumber string) string {
-	return fmt.Sprintf("https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow/pr-logs/pull/%s_%s/%s/", org, repo, prNumber)
+func prStorageURL(baseURL string, org string, repo string, prNumber string) string {
+	return fmt.Sprintf("%s/pr-logs/pull/%s_%s/%s", baseURL, org, repo, prNumber)
 }
 
-func finishedJSONURL(org string, repo string, prNumber string, jobName string, buildNumber string) string {
-	return fmt.Sprintf("%s/%s/%s/finished.json", prStorageURL(org, repo, prNumber), jobName, buildNumber)
+func finishedJSONURL(baseURL string, org string, repo string, prNumber string, jobName string, buildNumber string) string {
+	return fmt.Sprintf("%s/%s/%s/finished.json", prStorageURL(baseURL, org, repo, prNumber), jobName, buildNumber)
 }
 
 func checkSIGCIFailure(job job) bool {
@@ -133,9 +136,9 @@ func getLatestCommit(node *html.Node) (latestCommit string) {
 	return ""
 }
 
-func filterForLastCommit(org string, repo string, prNumber string, latestCommit string, jobList []job) (filteredJobList []job, err error) {
+func filterForLastCommit(storageBaseURL string, org string, repo string, prNumber string, latestCommit string, jobList []job, notBefore time.Time) (filteredJobList []job, err error) {
 	for _, job := range jobList {
-		finishedJSON, err := http.Get(finishedJSONURL(org, repo, prNumber, job.jobName, job.buildNumber))
+		finishedJSON, err := http.Get(finishedJSONURL(storageBaseURL, org, repo, prNumber, job.jobName, job.buildNumber))
 		if err != nil {
 			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
 		}
@@ -153,9 +156,24 @@ func filterForLastCommit(org string, repo string, prNumber string, latestCommit 
 		if err != nil {
 			return nil, fmt.Errorf("Failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
 		}
-		if latestCommit == data["revision"] {
-			filteredJobList = append(filteredJobList, job)
+		if latestCommit != data["revision"] {
+			continue
 		}
+		if !notBefore.IsZero() {
+			ts, ok := data["timestamp"].(float64)
+			if !ok {
+				log.Warnf("Job %s build %s has no valid timestamp field in finished.json", job.jobName, job.buildNumber)
+			} else {
+				jobTime := time.Unix(int64(ts), 0)
+				if jobTime.IsZero() {
+					log.Warnf("Job %s build %s has zero timestamp in finished.json", job.jobName, job.buildNumber)
+				} else if jobTime.Before(notBefore) {
+					log.Debugf("Skipping job %s build %s: finished at %s, before cutoff %s", job.jobName, job.buildNumber, jobTime, notBefore)
+					continue
+				}
+			}
+		}
+		filteredJobList = append(filteredJobList, job)
 	}
 	return filteredJobList, nil
 }
@@ -200,7 +218,7 @@ func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job
 	return filteredJobs, nil
 }
 
-func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLatestCommit []job, err error) {
+func getJobsForLatestCommit(storageBaseURL string, org string, repo string, prNumber string, notBefore time.Time) (jobsLatestCommit []job, err error) {
 	prHistory := prHistoryURL(org, repo, prNumber)
 	resp, err := HttpGetWithRetry(prHistory)
 	if err != nil {
@@ -219,7 +237,7 @@ func getJobsForLatestCommit(org string, repo string, prNumber string) (jobsLates
 	jobsAllCommits := filterJobs(prHistoryPage)
 	prowjobs = nil
 
-	jobsLatestCommit, err = filterForLastCommit(org, repo, prNumber, latestCommit, jobsAllCommits)
+	jobsLatestCommit, err = filterForLastCommit(storageBaseURL, org, repo, prNumber, latestCommit, jobsAllCommits, notBefore)
 	if err != nil {
 		return nil, err
 	}
@@ -274,8 +292,8 @@ func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests)
 	return sigRetests
 }
 
-func GetJobsPerSIG(prNumber string, org string, repo string, supportedBranches []string) (prSigRetests SigRetests, err error) {
-	prowJobs, err := getJobsForLatestCommit(org, repo, prNumber)
+func GetJobsPerSIG(prNumber string, org string, repo string, supportedBranches []string, notBefore time.Time) (prSigRetests SigRetests, err error) {
+	prowJobs, err := getJobsForLatestCommit(defaultStorageBaseURL, org, repo, prNumber, notBefore)
 	if err != nil {
 		return SigRetests{}, fmt.Errorf("Error filtering failed jobs from the latest commit - %s", err)
 	}

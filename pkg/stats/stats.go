@@ -273,13 +273,14 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		DataPoints: []types.DataPoint{},
 	}
 
-	mergedPRs, err := h.mq.MergedPRsBetween(currentTime.AddDate(0, 0, -1*results.DataDays), currentTime)
+	startTime := currentTime.AddDate(0, 0, -1*results.DataDays)
+	mergedPRs, err := h.mq.MergedPRsBetween(startTime, currentTime)
 	if err != nil {
 		return results, err
 	}
 
 	for _, mergedPR := range mergedPRs {
-		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt", h.supportedBranches)
+		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt", h.supportedBranches, startTime)
 		if err != nil {
 			return results, err
 		}
