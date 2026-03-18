@@ -2,7 +2,7 @@
 name: badges-update
 on:
   schedule:
-    - cron:  '* */3 * * *'
+    - cron:  '0 */3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container: docker.io/golang:1.24
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         token: ${{ secrets.KUBEVIRT_BOT_TOKEN }}
     - name: badge update for kubevirt/kubevirt
