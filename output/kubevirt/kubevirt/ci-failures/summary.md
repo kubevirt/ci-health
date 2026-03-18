@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (11x)
+## per branch (14x)
 
 <details>
-<summary> main (9x / 81.82%) </summary>
+<summary> main (9x / 64.29%) </summary>
 
 <hr/>
 
@@ -44,7 +44,34 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 18.18%) </summary>
+<summary> release-1.6 (3x / 21.43%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+<details>
+<summary>all...</summary>
+
+* _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+
+* _2026-03-17 16:18:54 &#43;0000 UTC_: <code>16:27:06: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033941010450485248#1:build-log.txt%3A1057)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+<details>
+<summary>all...</summary>
+
+* _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> release-1.7 (2x / 14.29%) </summary>
 
 <hr/>
 
@@ -69,10 +96,45 @@
 <hr/>
 </details>
 
-## per day (11x)
+## per day (14x)
 
 <details>
-<summary> 2026-03-12 (4x / 36.36%) </summary>
+<summary> 2026-03-17 (7x / 50.00%) </summary>
+
+<hr/>
+
+**6x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+<details>
+<summary>all...</summary>
+
+* _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+
+* _2026-03-17 16:18:54 &#43;0000 UTC_: <code>16:27:06: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033941010450485248#1:build-log.txt%3A1057)
+
+* _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
+
+* _2026-03-17 23:34:50 &#43;0000 UTC_: <code>23:44:43: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034050731836706816#1:build-log.txt%3A1210)
+
+* _2026-03-17 20:17:23 &#43;0000 UTC_: <code>20:27:03: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034000957154529280#1:build-log.txt%3A1133)
+
+* _2026-03-17 17:22:33 &#43;0000 UTC_: <code>17:31:11: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2033957031165038592#1:build-log.txt%3A1109)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+<details>
+<summary>all...</summary>
+
+* _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-12 (4x / 28.57%) </summary>
 
 <hr/>
 
@@ -93,28 +155,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-17 (4x / 36.36%) </summary>
-
-<hr/>
-
-**4x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
-<details>
-<summary>all...</summary>
-
-* _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
-
-* _2026-03-17 23:34:50 &#43;0000 UTC_: <code>23:44:43: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034050731836706816#1:build-log.txt%3A1210)
-
-* _2026-03-17 20:17:23 &#43;0000 UTC_: <code>20:27:03: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034000957154529280#1:build-log.txt%3A1133)
-
-* _2026-03-17 17:22:33 &#43;0000 UTC_: <code>17:31:11: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2033957031165038592#1:build-log.txt%3A1109)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-03-13 (3x / 27.27%) </summary>
+<summary> 2026-03-13 (3x / 21.43%) </summary>
 
 <hr/>
 
@@ -141,16 +182,20 @@
 <hr/>
 </details>
 
-## per SIG (11x)
+## per SIG (14x)
 
 <details>
-<summary> sig-compute (5x / 45.45%) </summary>
+<summary> sig-compute (8x / 57.14%) </summary>
 
 <hr/>
 
-**4x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
+**6x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
 <details>
 <summary>all...</summary>
+
+* _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+
+* _2026-03-17 16:18:54 &#43;0000 UTC_: <code>16:27:06: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033941010450485248#1:build-log.txt%3A1057)
 
 * _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 
@@ -173,9 +218,19 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+<details>
+<summary>all...</summary>
+
+* _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> sig-network (4x / 36.36%) </summary>
+<summary> sig-network (4x / 28.57%) </summary>
 
 <hr/>
 
@@ -204,7 +259,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (2x / 18.18%) </summary>
+<summary> sig-storage (2x / 14.29%) </summary>
 
 <hr/>
 
@@ -221,4 +276,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-18 18:41:31
+Last updated: 2026-03-18 21:35:04
