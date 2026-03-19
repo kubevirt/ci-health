@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (12x)
+## per branch (16x)
 
 <details>
-<summary> release-1.6 (3x / 25.00%) </summary>
+<summary> release-1.6 (3x / 18.75%) </summary>
 
 <hr/>
 
@@ -32,27 +32,35 @@
 <hr/>
 </details>
 <details>
-<summary> main (7x / 58.33%) </summary>
+<summary> main (11x / 68.75%) </summary>
 
 <hr/>
 
-**4x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
+**8x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 <details>
 <summary>all...</summary>
 
+* _2026-03-18 00:35:04 &#43;0000 UTC_: <code>00:43:38: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034065885412462592#1:build-log.txt%3A1131)
+
 * _2026-03-17 23:34:50 &#43;0000 UTC_: <code>23:44:43: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034050731836706816#1:build-log.txt%3A1210)
 
+* _2026-03-17 20:34:52 &#43;0000 UTC_: <code>20:45:01: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034005427519229952#1:build-log.txt%3A1136)
+
 * _2026-03-17 20:17:23 &#43;0000 UTC_: <code>20:27:03: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034000957154529280#1:build-log.txt%3A1133)
+
+* _2026-03-17 17:43:11 &#43;0000 UTC_: <code>17:52:23: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033962220181786624#1:build-log.txt%3A1145)
 
 * _2026-03-17 17:22:33 &#43;0000 UTC_: <code>17:31:11: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2033957031165038592#1:build-log.txt%3A1109)
 
 * _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 
+* _2026-03-17 14:13:11 &#43;0000 UTC_: <code>14:22:09: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033909383447973888#1:build-log.txt%3A1138)
+
 </details>
 
 <hr/>
 
-**3x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+**3x**: _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
 <details>
 <summary>all...</summary>
 
@@ -67,7 +75,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 16.67%) </summary>
+<summary> release-1.7 (2x / 12.50%) </summary>
 
 <hr/>
 
@@ -92,28 +100,49 @@
 <hr/>
 </details>
 
-## per day (12x)
+## per day (16x)
 
 <details>
-<summary> 2026-03-17 (7x / 58.33%) </summary>
+<summary> 2026-03-18 (1x / 6.25%) </summary>
 
 <hr/>
 
-**6x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+**1x**: _2026-03-18 00:35:04 &#43;0000 UTC_: <code>00:43:38: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034065885412462592#1:build-log.txt%3A1131)
+<details>
+<summary>all...</summary>
+
+* _2026-03-18 00:35:04 &#43;0000 UTC_: <code>00:43:38: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034065885412462592#1:build-log.txt%3A1131)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-17 (10x / 62.50%) </summary>
+
+<hr/>
+
+**9x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 <details>
 <summary>all...</summary>
 
 * _2026-03-17 23:34:50 &#43;0000 UTC_: <code>23:44:43: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034050731836706816#1:build-log.txt%3A1210)
 
+* _2026-03-17 20:34:52 &#43;0000 UTC_: <code>20:45:01: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034005427519229952#1:build-log.txt%3A1136)
+
 * _2026-03-17 20:17:23 &#43;0000 UTC_: <code>20:27:03: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034000957154529280#1:build-log.txt%3A1133)
 
 * _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+
+* _2026-03-17 17:43:11 &#43;0000 UTC_: <code>17:52:23: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033962220181786624#1:build-log.txt%3A1145)
 
 * _2026-03-17 17:22:33 &#43;0000 UTC_: <code>17:31:11: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2033957031165038592#1:build-log.txt%3A1109)
 
 * _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 
 * _2026-03-17 16:18:54 &#43;0000 UTC_: <code>16:27:06: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033941010450485248#1:build-log.txt%3A1057)
+
+* _2026-03-17 14:13:11 &#43;0000 UTC_: <code>14:22:09: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033909383447973888#1:build-log.txt%3A1138)
 
 </details>
 
@@ -130,7 +159,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-13 (3x / 25.00%) </summary>
+<summary> 2026-03-13 (3x / 18.75%) </summary>
 
 <hr/>
 
@@ -157,11 +186,11 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-12 (2x / 16.67%) </summary>
+<summary> 2026-03-12 (2x / 12.50%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+**2x**: _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
 <details>
 <summary>all...</summary>
 
@@ -174,28 +203,36 @@
 <hr/>
 </details>
 
-## per SIG (12x)
+## per SIG (16x)
 
 <details>
-<summary> sig-compute (7x / 58.33%) </summary>
+<summary> sig-compute (11x / 68.75%) </summary>
 
 <hr/>
 
-**6x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+**10x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 <details>
 <summary>all...</summary>
 
+* _2026-03-18 00:35:04 &#43;0000 UTC_: <code>00:43:38: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034065885412462592#1:build-log.txt%3A1131)
+
 * _2026-03-17 23:34:50 &#43;0000 UTC_: <code>23:44:43: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034050731836706816#1:build-log.txt%3A1210)
+
+* _2026-03-17 20:34:52 &#43;0000 UTC_: <code>20:45:01: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2034005427519229952#1:build-log.txt%3A1136)
 
 * _2026-03-17 20:17:23 &#43;0000 UTC_: <code>20:27:03: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2034000957154529280#1:build-log.txt%3A1133)
 
 * _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
+
+* _2026-03-17 17:43:11 &#43;0000 UTC_: <code>17:52:23: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033962220181786624#1:build-log.txt%3A1145)
 
 * _2026-03-17 17:22:33 &#43;0000 UTC_: <code>17:31:11: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16773/pull-kubevirt-e2e-kind-1.35-vgpu/2033957031165038592#1:build-log.txt%3A1109)
 
 * _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
 
 * _2026-03-17 16:18:54 &#43;0000 UTC_: <code>16:27:06: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033941010450485248#1:build-log.txt%3A1057)
+
+* _2026-03-17 14:13:11 &#43;0000 UTC_: <code>14:22:09: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17000/pull-kubevirt-e2e-kind-1.35-vgpu/2033909383447973888#1:build-log.txt%3A1138)
 
 </details>
 
@@ -212,7 +249,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (4x / 33.33%) </summary>
+<summary> sig-network (4x / 25.00%) </summary>
 
 <hr/>
 
@@ -241,7 +278,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (1x / 8.33%) </summary>
+<summary> sig-storage (1x / 6.25%) </summary>
 
 <hr/>
 
@@ -256,4 +293,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-19 12:25:30
+Last updated: 2026-03-19 18:35:06
