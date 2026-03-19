@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (16x)
+## per branch (14x)
 
 <details>
-<summary> release-1.6 (3x / 18.75%) </summary>
+<summary> release-1.6 (3x / 21.43%) </summary>
 
 <hr/>
 
@@ -32,7 +32,7 @@
 <hr/>
 </details>
 <details>
-<summary> main (11x / 68.75%) </summary>
+<summary> main (9x / 64.29%) </summary>
 
 <hr/>
 
@@ -60,22 +60,18 @@
 
 <hr/>
 
-**3x**: _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
+**1x**: _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
 <details>
 <summary>all...</summary>
 
 * _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
-
-* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
-
-* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
 
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 12.50%) </summary>
+<summary> release-1.7 (2x / 14.29%) </summary>
 
 <hr/>
 
@@ -100,10 +96,10 @@
 <hr/>
 </details>
 
-## per day (16x)
+## per day (14x)
 
 <details>
-<summary> 2026-03-18 (1x / 6.25%) </summary>
+<summary> 2026-03-18 (1x / 7.14%) </summary>
 
 <hr/>
 
@@ -118,11 +114,11 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-17 (10x / 62.50%) </summary>
+<summary> 2026-03-17 (10x / 71.43%) </summary>
 
 <hr/>
 
-**9x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
+**9x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
 <details>
 <summary>all...</summary>
 
@@ -159,7 +155,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-13 (3x / 18.75%) </summary>
+<summary> 2026-03-13 (3x / 21.43%) </summary>
 
 <hr/>
 
@@ -185,32 +181,15 @@
 
 <hr/>
 </details>
+
+## per SIG (14x)
+
 <details>
-<summary> 2026-03-12 (2x / 12.50%) </summary>
+<summary> sig-compute (11x / 78.57%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
-<details>
-<summary>all...</summary>
-
-* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
-
-* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-
-</details>
-
-<hr/>
-</details>
-
-## per SIG (16x)
-
-<details>
-<summary> sig-compute (11x / 68.75%) </summary>
-
-<hr/>
-
-**10x**: _2026-03-17 16:32:32 &#43;0000 UTC_: <code>16:41:33: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17182/pull-kubevirt-e2e-kind-1.35-vgpu/2033944457228849152#1:build-log.txt%3A1107)
+**10x**: _2026-03-17 19:07:25 &#43;0000 UTC_: <code>19:15:53: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033983387022135296#1:build-log.txt%3A1055)
 <details>
 <summary>all...</summary>
 
@@ -249,19 +228,17 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (4x / 25.00%) </summary>
+<summary> sig-network (3x / 21.43%) </summary>
 
 <hr/>
 
-**3x**: _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
+**2x**: _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
 <details>
 <summary>all...</summary>
 
 * _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
 
 * _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
-
-* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
 
 </details>
 
@@ -277,20 +254,5 @@
 
 <hr/>
 </details>
-<details>
-<summary> sig-storage (1x / 6.25%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-<details>
-<summary>all...</summary>
-
-* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-03-19 18:35:06
+Last updated: 2026-03-19 21:30:56
