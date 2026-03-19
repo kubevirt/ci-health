@@ -124,10 +124,11 @@ func DownloadBuildLogs(ciFailureJobURLs []string) ([]string, error) {
 }
 
 var groups = map[string]string{
-	"sig-compute":    "sig-compute|sig-operator|sev|vgpu|windows",
-	"sig-network":    "sig-network|sriov",
-	"sig-storage":    "sig-storage",
-	"sig-monitoring": "sig-monitoring",
+	"sig-compute":     "sig-compute|sig-operator|sev|vgpu|windows",
+	"sig-network":     "sig-network|sriov",
+	"sig-storage":     "sig-storage",
+	"sig-monitoring":  "sig-monitoring",
+	"sig-performance": "sig-performance",
 }
 
 func SIGForGroup(whatever string) string {
@@ -147,10 +148,18 @@ func SIGForGroup(whatever string) string {
 func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 	var outputFiles []string
 
+	urlsNotMatchedByGroup := make(map[string]struct{})
+	for _, url := range ciFailureJobURLs {
+		urlsNotMatchedByGroup[url] = struct{}{}
+	}
+
 	for sigName, group := range groups {
 		urlsMatchingGroup := filterURLsByGroup(ciFailureJobURLs, group)
 		if len(urlsMatchingGroup) == 0 {
 			continue
+		}
+		for _, url := range urlsMatchingGroup {
+			delete(urlsNotMatchedByGroup, url)
 		}
 
 		jobErrorsByJobName := map[string]*JobBuildErrors{}
@@ -247,6 +256,11 @@ func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 			outputFiles = append(outputFiles, outputFileName)
 		}
 	}
+
+	if len(urlsNotMatchedByGroup) > 0 {
+		log.Warnf("unmatched job urls: %v+", urlsNotMatchedByGroup)
+	}
+
 	return outputFiles, nil
 }
 

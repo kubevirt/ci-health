@@ -2,6 +2,7 @@ package cifailures
 
 import (
 	"regexp"
+	"sort"
 	"time"
 )
 
@@ -9,6 +10,20 @@ import (
 type Cluster struct {
 	Representative *JobBuildError
 	Errors         []*JobBuildError
+}
+
+func (c *Cluster) SortByDateDesc() {
+	if len(c.Errors) == 0 {
+		return
+	}
+
+	// sort the errors by date desc
+	sort.Slice(c.Errors, func(i, j int) bool {
+		return c.Errors[i].Started.After(c.Errors[j].Started)
+	})
+
+	// use the most recent one as representative
+	c.Representative = c.Errors[0]
 }
 
 type JobFailureData struct {

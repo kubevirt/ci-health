@@ -71,7 +71,7 @@ func (f *Failures) GetSortedFailures() []*CategorizedFailure {
 		result = append(result, categorizedFailure)
 	}
 	sort.Slice(result, func(i, j int) bool {
-		return result[i].Share > result[j].Share
+		return result[i].Clusters[0].Representative.Started.After(result[j].Clusters[0].Representative.Started)
 	})
 	return result
 }

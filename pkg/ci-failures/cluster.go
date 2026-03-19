@@ -39,7 +39,13 @@ func ClusterErrors(errors []*JobBuildError, threshold float64) []Cluster {
 		}
 	}
 
+	for _, c := range clusters {
+		c.SortByDateDesc()
+	}
 	sort.Slice(clusters, func(i, j int) bool {
+		if clusters[i].Representative.Started.After(clusters[j].Representative.Started) {
+			return true
+		}
 		return len(clusters[i].Errors) > len(clusters[j].Errors)
 	})
 
