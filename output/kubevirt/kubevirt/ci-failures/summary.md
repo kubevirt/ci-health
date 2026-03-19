@@ -2,28 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (14x)
+## per branch (12x)
 
 <details>
-<summary> main (9x / 64.29%) </summary>
-
-<hr/>
-
-**5x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-<details>
-<summary>all...</summary>
-
-* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-
-* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
-
-* _2026-03-12 01:41:46 &#43;0000 UTC_: <code>01:43:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16768/pull-kubevirt-e2e-k8s-1.34-sig-operator/2031808221139701760#1:build-log.txt%3A1265)
-
-* _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
-
-* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
-
-</details>
+<summary> main (7x / 58.33%) </summary>
 
 <hr/>
 
@@ -42,9 +24,23 @@
 </details>
 
 <hr/>
+
+**3x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+<details>
+<summary>all...</summary>
+
+* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+
+* _2026-03-13 06:59:29 &#43;0000 UTC_: <code>07:18:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17115/pull-kubevirt-e2e-k8s-1.33-sig-network/2032350684950564864#1:build-log.txt%3A4722)
+
+* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> release-1.6 (3x / 21.43%) </summary>
+<summary> release-1.6 (3x / 25.00%) </summary>
 
 <hr/>
 
@@ -71,17 +67,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-13 02:56:00 &#43;0000 UTC_: <code>03:18:31: Error: cannot remove container 0fa258a5a121ca17b294c8b6578b267bb69d9a05a5b27debeb2fac16feb76567 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17023/pull-kubevirt-e2e-kind-sriov-1.7/2032250155629023232#1:build-log.txt%3A6389)
-<details>
-<summary>all...</summary>
-
-* _2026-03-13 02:56:00 &#43;0000 UTC_: <code>03:18:31: Error: cannot remove container 0fa258a5a121ca17b294c8b6578b267bb69d9a05a5b27debeb2fac16feb76567 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17023/pull-kubevirt-e2e-kind-sriov-1.7/2032250155629023232#1:build-log.txt%3A6389)
-
-</details>
+<summary> release-1.7 (2x / 16.67%) </summary>
 
 <hr/>
 
@@ -94,12 +80,22 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-03-13 02:56:00 &#43;0000 UTC_: <code>03:18:31: Error: cannot remove container 0fa258a5a121ca17b294c8b6578b267bb69d9a05a5b27debeb2fac16feb76567 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17023/pull-kubevirt-e2e-kind-sriov-1.7/2032250155629023232#1:build-log.txt%3A6389)
+<details>
+<summary>all...</summary>
+
+* _2026-03-13 02:56:00 &#43;0000 UTC_: <code>03:18:31: Error: cannot remove container 0fa258a5a121ca17b294c8b6578b267bb69d9a05a5b27debeb2fac16feb76567 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17023/pull-kubevirt-e2e-kind-sriov-1.7/2032250155629023232#1:build-log.txt%3A6389)
+
 </details>
 
-## per day (14x)
+<hr/>
+</details>
+
+## per day (12x)
 
 <details>
-<summary> 2026-03-17 (7x / 50.00%) </summary>
+<summary> 2026-03-17 (7x / 58.33%) </summary>
 
 <hr/>
 
@@ -134,28 +130,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-12 (4x / 28.57%) </summary>
-
-<hr/>
-
-**4x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-<details>
-<summary>all...</summary>
-
-* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
-
-* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
-
-* _2026-03-12 01:41:46 &#43;0000 UTC_: <code>01:43:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16768/pull-kubevirt-e2e-k8s-1.34-sig-operator/2031808221139701760#1:build-log.txt%3A1265)
-
-* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> 2026-03-13 (3x / 21.43%) </summary>
+<summary> 2026-03-13 (3x / 25.00%) </summary>
 
 <hr/>
 
@@ -181,11 +156,28 @@
 
 <hr/>
 </details>
+<details>
+<summary> 2026-03-12 (2x / 16.67%) </summary>
 
-## per SIG (14x)
+<hr/>
+
+**2x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+<details>
+<summary>all...</summary>
+
+* _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+
+* _2026-03-12 18:21:23 &#43;0000 UTC_: <code>18:38:33: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17129/pull-kubevirt-e2e-k8s-1.35-sig-network/2032159826745757696#1:build-log.txt%3A4055)
+
+</details>
+
+<hr/>
+</details>
+
+## per SIG (12x)
 
 <details>
-<summary> sig-compute (8x / 57.14%) </summary>
+<summary> sig-compute (7x / 58.33%) </summary>
 
 <hr/>
 
@@ -209,16 +201,6 @@
 
 <hr/>
 
-**1x**: _2026-03-12 01:41:46 &#43;0000 UTC_: <code>01:43:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16768/pull-kubevirt-e2e-k8s-1.34-sig-operator/2031808221139701760#1:build-log.txt%3A1265)
-<details>
-<summary>all...</summary>
-
-* _2026-03-12 01:41:46 &#43;0000 UTC_: <code>01:43:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16768/pull-kubevirt-e2e-k8s-1.34-sig-operator/2031808221139701760#1:build-log.txt%3A1265)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-03-17 15:34:01 &#43;0000 UTC_: <code>15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17196/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2033929688916692992#1:build-log.txt%3A1383)
 <details>
 <summary>all...</summary>
@@ -230,7 +212,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-network (4x / 28.57%) </summary>
+<summary> sig-network (4x / 33.33%) </summary>
 
 <hr/>
 
@@ -259,21 +241,19 @@
 <hr/>
 </details>
 <details>
-<summary> sig-storage (2x / 14.29%) </summary>
+<summary> sig-storage (1x / 8.33%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
+**1x**: _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
 <details>
 <summary>all...</summary>
 
 * _2026-03-12 17:58:34 &#43;0000 UTC_: <code>18:19:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17009/pull-kubevirt-e2e-k8s-1.33-sig-storage/2032046500288139264#1:build-log.txt%3A3986)
 
-* _2026-03-12 03:25:17 &#43;0000 UTC_: <code>03:27:19: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16781/pull-kubevirt-e2e-k8s-1.33-sig-storage/2031753119712415744#1:build-log.txt%3A1350)
-
 </details>
 
 <hr/>
 </details>
 
-Last updated: 2026-03-19 00:26:48
+Last updated: 2026-03-19 04:07:48
