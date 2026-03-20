@@ -25,5 +25,6 @@
 {{ template "failures" $.FailuresPerBranch }}
 {{ template "failures" $.FailuresPerDay }}
 {{ template "failures" $.FailuresPerSIG }}
+{{ template "failures" $.FailuresPerCategory }}
 
 Last updated: {{ $.Date }}
