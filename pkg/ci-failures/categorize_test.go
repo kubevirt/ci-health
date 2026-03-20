@@ -8,15 +8,110 @@ func TestCategorizeError(t *testing.T) {
 		errorText string
 		expected  ErrorCategory
 	}{
-		// External patterns
+		// === External patterns ===
 		{
 			name:      "GitHub download 404",
-			errorText: `13:34:47: ERROR: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/buildifier_prebuilt_toolchains/BUILD.bazel:26:18: @buildifier_prebuilt_toolchains//:buildifier_linux_amd64 depends on @buildifier_linux_amd64//file:buildifier in repository @buildifier_linux_amd64 which failed to fetch. no such package '@buildifier_linux_amd64//file': java.io.IOException: Error downloading [https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/buildifier-linux-amd64] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/buildifier_linux_amd64/file/buildifier: GET returned 404 Not Found`,
+			errorText: `13:34:47: ERROR: java.io.IOException: Error downloading [https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/buildifier-linux-amd64] to /tmp/buildifier: GET returned 404 Not Found`,
 			expected:  CategoryExternal,
 		},
 		{
 			name:      "GitHub download 502",
-			errorText: `16:52:49: ERROR: Error computing the main repository mapping: no such package '@aspect_bazel_lib//lib': java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /root/.cache/bazel/temp/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error`,
+			errorText: `16:52:49: ERROR: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/bazel-lib: GET returned 502 Bad Gateway or Proxy Error`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "mirror download 404",
+			errorText: `ERROR: Error downloading [http://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/libvirt-client-10.10.0-13.el9.x86_64.rpm] to /tmp/downloaded: GET returned 404 Not Found`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel fetch repository error",
+			errorText: `15:38:45: ERROR: An error occurred during the fetch of repository 'oci_regctl_linux_amd64':`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel fetch repository buildifier",
+			errorText: `09:21:03: ERROR: An error occurred during the fetch of repository 'buildifier_linux_amd64':`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel fetch repository bazel_features",
+			errorText: `13:59:25: ERROR: An error occurred during the fetch of repository 'bazel_features':`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel fetch repository rpm",
+			errorText: `ERROR: An error occurred during the fetch of repository 'libvirt-client-0__10.10.0-13.el9.x86_64':`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "WORKSPACE fetch http_file rule",
+			errorText: `09:21:03: ERROR: /root/go/src/kubevirt.io/kubevirt/WORKSPACE:84:40: fetching http_file rule //external:buildifier_linux_amd64: Traceback (most recent call last):`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "WORKSPACE fetch http_archive rule",
+			errorText: `13:59:25: ERROR: /root/go/src/kubevirt.io/kubevirt/WORKSPACE:36:23: fetching http_archive rule //external:bazel_features: Traceback (most recent call last):`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "WORKSPACE fetch go_repository rule",
+			errorText: `ERROR: /root/go/src/kubevirt.io/kubevirt/WORKSPACE:267:14: fetching go_repository rule //external:com_github_masterzen_winrmcli: Traceback (most recent call last):`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "WORKSPACE fetch rpm rule",
+			errorText: `ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/WORKSPACE:4823:4: fetching rpm rule //external:libvirt-client-0__10.10.0-13.el9.x86_64: Traceback (most recent call last):`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "WORKSPACE fetch regctl_repositories rule",
+			errorText: `20:48:14: ERROR: /root/go/src/kubevirt.io/kubevirt/WORKSPACE:40:24: fetching regctl_repositories rule //external:oci_regctl_linux_amd64: Traceback (most recent call last):`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "failed to fetch no such package",
+			errorText: `20:48:14: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-operator/BUILD.bazel:47:10: //cmd/virt-operator:virt-operator-image depends on @oci_regctl_linux_amd64//:regctl_toolchain in repository @oci_regctl_linux_amd64 which failed to fetch. no such package '@oci_regctl_linux_amd64//'`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "RPM depends on failed fetch",
+			errorText: `ERROR: /home/prow/go/src/github.com/kubevirt/kubevirt/rpm/BUILD.bazel:1031:8: //rpm:launcherbase_x86_64 depends on @libvirt-client-0__10.10.0-13.el9.x86_64//rpm:rpm in repository @libvirt-client-0__10.10.0-13.el9.x86_64 which failed to fetch. no such package '@libvirt-client-0__10.10.0-13.el9.x86_64//rpm'`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "quay.io image pull 500",
+			errorText: `20:44:21: Error: unable to copy from source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: copying system image from manifest list: parsing image configuration: fetching blob: received unexpected HTTP status: 500 Internal Server Error`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "quay.io image pull 502",
+			errorText: `Error: unable to copy from source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: initializing source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: pinging container registry quay.io: received unexpected HTTP status: 502 Bad Gateway`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "container registry bearer token failure",
+			errorText: `20:40:43: time="2026-02-18T20:40:43Z" level=warning msg="Failed, retrying in 1s ... (1/3). Error: initializing source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: Requesting bearer token: received unexpected HTTP status: 502 Bad Gateway"`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "DNS resolution failure",
+			errorText: `Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: Get "https://quay.io/v2/auth": dial tcp: lookup quay.io: Temporary failure in name resolution`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "git clone HTTP2 framing error",
+			errorText: `17:12:38: fatal: unable to access 'https://github.com/masterzen/winrm-cli/': Error in the HTTP2 framing layer`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "git clone 502",
+			errorText: `17:08:39: fatal: unable to access 'https://github.com/masterzen/winrm-cli/': The requested URL returned error: 502`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "git clone 500",
+			errorText: `17:10:46: fatal: unable to access 'https://github.com/packer-community/winrmcp/': The requested URL returned error: 500`,
 			expected:  CategoryExternal,
 		},
 		{
@@ -26,7 +121,7 @@ func TestCategorizeError(t *testing.T) {
 		},
 		{
 			name:      "podman storage file timeout",
-			errorText: `18:01:07: Error: timed out waiting for file /var/lib/containers/storage/overlay-containers/5bc99eb00b10da749245414b8f8e6618a36bc3cd00e5284797ff1aafe1d47fc7/userdata/29017a592eaba4813b285a2991ab2453f22c71d973f44d9efd9931b4bc2fd0a0/exit/5bc99eb00b10da749245414b8f8e6618a36bc3cd00e5284797ff1aafe1d47fc7`,
+			errorText: `18:01:07: Error: timed out waiting for file /var/lib/containers/storage/overlay-containers/5bc99eb00b10/exit/5bc99eb00b10`,
 			expected:  CategoryExternal,
 		},
 		{
@@ -36,7 +131,7 @@ func TestCategorizeError(t *testing.T) {
 		},
 		{
 			name:      "kube-apiserver body decode noise",
-			errorText: `00:43:10: I0318 00:43:08.163777     241 request.go:1500] "Body was not decodable (unable to check for Status)" err="couldn't get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \"json:\\\"apiVersion,omitempty\\\"\"; Kind string \"json:\\\"kind,omitempty\\\"\" }"`,
+			errorText: `00:43:10: I0318 00:43:08.163777     241 request.go:1500] "Body was not decodable (unable to check for Status)"`,
 			expected:  CategoryExternal,
 		},
 		{
@@ -44,8 +139,18 @@ func TestCategorizeError(t *testing.T) {
 			errorText: `09:52:59:           msg: "client rate limiter Wait returned an error: context deadline exceeded",`,
 			expected:  CategoryExternal,
 		},
+		{
+			name:      "skopeo retry warning",
+			errorText: `time="2026-02-18T21:10:38Z" level=warning msg="Failed, retrying in 1s ... (1/3). Error: initializing source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: pinging container registry quay.io: received unexpected HTTP status: 504 Gateway Time-out"`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "winrmcli build depends on failed git clone",
+			errorText: `ERROR: /root/go/src/kubevirt.io/kubevirt/images/winrmcli/BUILD.bazel:7:8: //images/winrmcli:winrm-cli-tar depends on @com_github_masterzen_winrmcli//:winrm-cli in repository @com_github_masterzen_winrmcli which failed to fetch. no such package '@com_github_masterzen_winrmcli//'`,
+			expected:  CategoryExternal,
+		},
 
-		// PR Build patterns
+		// === PR Build patterns ===
 		{
 			name:      "bazel analysis failure",
 			errorText: `13:34:47: ERROR: Analysis of target '//:buildifier' failed; build aborted:`,
@@ -61,18 +166,8 @@ func TestCategorizeError(t *testing.T) {
 			errorText: `07:18:28: ERROR: Build failed. Not running target`,
 			expected:  CategoryPRBuild,
 		},
-		{
-			name:      "make bazel-build-images failure",
-			errorText: `make: *** [Makefile:37: bazel-build-images] Error 125`,
-			expected:  CategoryPRBuild,
-		},
-		{
-			name:      "make bazel-build-functests failure",
-			errorText: `make: *** [Makefile:26: bazel-build-functests] Error 125`,
-			expected:  CategoryPRBuild,
-		},
 
-		// Internal patterns
+		// === Internal patterns ===
 		{
 			name:      "taint control-plane not found",
 			errorText: `16:41:33: error: taint "node-role.kubernetes.io/control-plane:NoSchedule" not found`,
@@ -99,8 +194,23 @@ func TestCategorizeError(t *testing.T) {
 			expected:  CategoryInternal,
 		},
 		{
+			name:      "make bazel-build-images failure",
+			errorText: `make: *** [Makefile:37: bazel-build-images] Error 125`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "make bazel-build-functests failure",
+			errorText: `make: *** [Makefile:26: bazel-build-functests] Error 125`,
+			expected:  CategoryInternal,
+		},
+		{
 			name:      "kubevirt deployment timeout",
 			errorText: `10:41:43: error: timed out waiting for the condition on kubevirts/kubevirt`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "CNAO deployment timeout",
+			errorText: `error: timed out waiting for the condition on deployments/cluster-network-addons-operator`,
 			expected:  CategoryInternal,
 		},
 		{
@@ -109,7 +219,7 @@ func TestCategorizeError(t *testing.T) {
 			expected:  CategoryInternal,
 		},
 
-		// Needs investigation
+		// === Needs investigation ===
 		{
 			name:      "unknown error",
 			errorText: `some completely unknown error message`,
@@ -126,7 +236,7 @@ func TestCategorizeError(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got := CategorizeError(tt.errorText)
 			if got != tt.expected {
-				t.Errorf("CategorizeError() = %q, want %q", got, tt.expected)
+				t.Errorf("CategorizeError() = %q, want %q\nerror_text: %s", got, tt.expected, tt.errorText)
 			}
 		})
 	}
@@ -149,6 +259,93 @@ func TestCategorizeJobBuildError(t *testing.T) {
 		}
 		if got := CategorizeJobBuildError(err); got != CategoryInternal {
 			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryInternal)
+		}
+	})
+
+	t.Run("context-based reclassification: make error with download failure in context", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `make: *** [Makefile:37: bazel-build-images] Error 125`,
+					Context:   "20:52:12: Trying to pull quay.io/kubevirt/builder:2510281240-82d14f4b41...\n20:52:18: Error: unable to copy from source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41\nmake: *** [Makefile:37: bazel-build-images] Error 125",
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryExternal {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
+		}
+	})
+
+	t.Run("context-based reclassification: build failed with download error in context", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `07:18:28: ERROR: Build failed. Not running target`,
+					Context:   "07:18:28: Error in download: java.io.IOException: Error downloading [https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/buildifier-linux-amd64]\n07:18:28: ERROR: Build failed. Not running target",
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryExternal {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
+		}
+	})
+
+	t.Run("context-based reclassification: analysis failed with download error in another snippet", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `15:38:49: ERROR: Analysis of target '//cmd/virt-operator:virt-operator-image' failed; build aborted: Analysis failed`,
+					Context:   "15:38:49: ERROR: Analysis of target '//cmd/virt-operator:virt-operator-image' failed; build aborted: Analysis failed",
+				},
+				{
+					ErrorText: `15:38:49: ERROR: An error occurred during the fetch of repository 'oci_regctl_linux_amd64':`,
+					Context:   "WARNING: Download from https://github.com/regclient/regclient/releases/download/v0.7.0/regctl-linux-amd64 failed",
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryExternal {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
+		}
+	})
+
+	t.Run("context-based reclassification: git clone failure in context", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `ERROR: Analysis of target '//images/winrmcli:winrmcli-image' failed; build aborted:`,
+					Context:   "fatal: unable to access 'https://github.com/masterzen/winrm-cli/': Error in the HTTP2 framing layer\nERROR: Analysis of target '//images/winrmcli:winrmcli-image' failed; build aborted:",
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryExternal {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
+		}
+	})
+
+	t.Run("genuine pr-build failure stays pr-build", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `ERROR: Build failed. Not running target`,
+					Context:   "INFO: Elapsed time: 446.112s\nINFO: 7435 processes: 269 internal, 6 local, 7160 processwrapper-sandbox.\nERROR: Build failed. Not running target",
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryPRBuild {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryPRBuild)
+		}
+	})
+
+	t.Run("external error stays external", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `Error: unable to copy from source docker://quay.io/kubevirt/builder:2510281240-82d14f4b41: received unexpected HTTP status: 500`,
+				},
+			},
+		}
+		if got := CategorizeJobBuildError(err); got != CategoryExternal {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
 		}
 	})
 }
