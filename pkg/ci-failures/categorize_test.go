@@ -348,4 +348,44 @@ func TestCategorizeJobBuildError(t *testing.T) {
 			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
 		}
 	})
+
+	t.Run("CategoryReason is populated for direct match", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `Error: unable to copy from source docker://quay.io/kubevirt/builder:latest`},
+			},
+		}
+		CategorizeJobBuildError(err)
+		if err.CategoryReason != "container image pull failure" {
+			t.Errorf("CategoryReason = %q, want %q", err.CategoryReason, "container image pull failure")
+		}
+	})
+
+	t.Run("CategoryReason is populated for context reclassification", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{
+					ErrorText: `make: *** [Makefile:37: bazel-build-images] Error 125`,
+					Context:   "Error: unable to copy from source docker://quay.io/kubevirt/builder:latest\nmake: *** [Makefile:37: bazel-build-images] Error 125",
+				},
+			},
+		}
+		CategorizeJobBuildError(err)
+		if err.CategoryReason != "container image pull failure in context" {
+			t.Errorf("CategoryReason = %q, want %q", err.CategoryReason, "container image pull failure in context")
+		}
+	})
+
+	t.Run("CategoryReason is populated for secondary snippet", func(t *testing.T) {
+		err := &JobBuildError{
+			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `ERROR: Analysis of target '//cmd/virt-operator:virt-operator-image' failed; build aborted: Analysis failed`},
+				{ErrorText: `ERROR: An error occurred during the fetch of repository 'oci_regctl_linux_amd64':`},
+			},
+		}
+		CategorizeJobBuildError(err)
+		if err.CategoryReason != "bazel repository fetch failure (from secondary snippet)" {
+			t.Errorf("CategoryReason = %q, want %q", err.CategoryReason, "bazel repository fetch failure (from secondary snippet)")
+		}
+	})
 }

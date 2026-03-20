@@ -23,8 +23,15 @@ const (
 	CategoryNeedsInvestigation ErrorCategory = "needs-investigation"
 )
 
+// CategorizationResult holds the category and the reason it was assigned.
+type CategorizationResult struct {
+	Category ErrorCategory
+	Reason   string
+}
+
 type categoryRule struct {
 	category ErrorCategory
+	reason   string
 	pattern  *regexp.Regexp
 }
 
@@ -33,97 +40,89 @@ type categoryRule struct {
 var rules = []categoryRule{
 	// --- External: service/infra failures outside CI team's control ---
 
-	// GitHub/external download failures (404, 502, etc.) via bazel
-	{CategoryExternal, regexp.MustCompile(`Error downloading \[https?://`)},
-	// Bazel repository fetch failures (covers all "An error occurred during the fetch of repository" errors)
-	{CategoryExternal, regexp.MustCompile(`ERROR: An error occurred during the fetch of repository`)},
-	// Bazel WORKSPACE fetch rule failures (traceback from fetching rules)
-	{CategoryExternal, regexp.MustCompile(`fetching (http_file|http_archive|go_repository|rpm|regctl_repositories|oci_pull|oci_alias|jq_platform_repo|zstd_binary_repo) rule //external:`)},
-	// Bazel build target depends on failed external fetch
-	{CategoryExternal, regexp.MustCompile(`which failed to fetch\. no such package`)},
-	// Container image pull failures from quay.io (500, 502, 504, DNS, etc.)
-	{CategoryExternal, regexp.MustCompile(`unable to copy from source docker://`)},
-	// Container registry bearer token / ping failures
-	{CategoryExternal, regexp.MustCompile(`(pinging container registry|Requesting bearer token|initializing source docker://).*received unexpected HTTP status:`)},
-	// DNS resolution failures for container registries
-	{CategoryExternal, regexp.MustCompile(`dial tcp: lookup .+: (Temporary failure in name resolution|no such host)`)},
-	// git clone failures to GitHub (HTTP2 framing, 500, 502, etc.)
-	{CategoryExternal, regexp.MustCompile(`fatal: unable to access 'https://github\.com/`)},
-	// Podman container removal timeout
-	{CategoryExternal, regexp.MustCompile(`cannot remove container .+ as it could not be stopped`)},
-	// Podman storage file timeout
-	{CategoryExternal, regexp.MustCompile(`timed out waiting for file /var/lib/containers/storage/`)},
-	// kind cluster deletion failure via podman
-	{CategoryExternal, regexp.MustCompile(`failed to delete cluster .+: failed to delete nodes`)},
-	// Transient kube-apiserver body decode noise (not a real failure)
-	{CategoryExternal, regexp.MustCompile(`Body was not decodable \(unable to check for Status\)`)},
-	// API rate limiter timeout
-	{CategoryExternal, regexp.MustCompile(`client rate limiter Wait returned an error: context deadline exceeded`)},
-	// Skopeo/podman retry warnings with HTTP errors
-	{CategoryExternal, regexp.MustCompile(`Failed, retrying in \d+s .* Error:`)},
-	// RPM download failures from mirrors (centos, fedora, etc.)
-	{CategoryExternal, regexp.MustCompile(`Error downloading \[http://mirror\.`)},
+	{CategoryExternal, "download failure from external URL", regexp.MustCompile(`Error downloading \[https?://`)},
+	{CategoryExternal, "bazel repository fetch failure", regexp.MustCompile(`ERROR: An error occurred during the fetch of repository`)},
+	{CategoryExternal, "bazel WORKSPACE fetch rule failure", regexp.MustCompile(`fetching (http_file|http_archive|go_repository|rpm|regctl_repositories|oci_pull|oci_alias|jq_platform_repo|zstd_binary_repo) rule //external:`)},
+	{CategoryExternal, "build target depends on failed external fetch", regexp.MustCompile(`which failed to fetch\. no such package`)},
+	{CategoryExternal, "container image pull failure", regexp.MustCompile(`unable to copy from source docker://`)},
+	{CategoryExternal, "container registry HTTP error", regexp.MustCompile(`(pinging container registry|Requesting bearer token|initializing source docker://).*received unexpected HTTP status:`)},
+	{CategoryExternal, "DNS resolution failure", regexp.MustCompile(`dial tcp: lookup .+: (Temporary failure in name resolution|no such host)`)},
+	{CategoryExternal, "git clone failure to GitHub", regexp.MustCompile(`fatal: unable to access 'https://github\.com/`)},
+	{CategoryExternal, "podman container removal timeout", regexp.MustCompile(`cannot remove container .+ as it could not be stopped`)},
+	{CategoryExternal, "podman storage file timeout", regexp.MustCompile(`timed out waiting for file /var/lib/containers/storage/`)},
+	{CategoryExternal, "kind cluster deletion failure", regexp.MustCompile(`failed to delete cluster .+: failed to delete nodes`)},
+	{CategoryExternal, "transient kube-apiserver body decode noise", regexp.MustCompile(`Body was not decodable \(unable to check for Status\)`)},
+	{CategoryExternal, "API rate limiter timeout", regexp.MustCompile(`client rate limiter Wait returned an error: context deadline exceeded`)},
+	{CategoryExternal, "skopeo/podman retry with HTTP error", regexp.MustCompile(`Failed, retrying in \d+s .* Error:`)},
+	{CategoryExternal, "RPM download failure from mirror", regexp.MustCompile(`Error downloading \[http://mirror\.`)},
 
 	// --- PR Build: code/build failures caused by the PR itself ---
 
-	// Bazel build failure (only when NOT caused by external fetch — those are caught above)
-	{CategoryPRBuild, regexp.MustCompile(`ERROR: Build failed\. Not running target`)},
-	// Bazel analysis failure (only when NOT caused by external fetch — those are caught above)
-	{CategoryPRBuild, regexp.MustCompile(`ERROR: Analysis of target '.+' failed; build aborted`)},
+	{CategoryPRBuild, "bazel build failure", regexp.MustCompile(`ERROR: Build failed\. Not running target`)},
+	{CategoryPRBuild, "bazel analysis failure", regexp.MustCompile(`ERROR: Analysis of target '.+' failed; build aborted`)},
 
 	// --- Internal: CI configuration errors fixable by sig-ci ---
 
-	// Taint not found during cluster setup
-	{CategoryInternal, regexp.MustCompile(`error: taint "node-role\.kubernetes\.io/(control-plane|master):NoSchedule" not found`)},
-	// make target failures for CI lifecycle (cluster-up, cluster-sync, cluster-down)
-	{CategoryInternal, regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: cluster-(up|sync|down)\] Error`)},
-	// make target failures for bazel build (generic, after more specific external patterns are tried)
-	{CategoryInternal, regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: bazel-build-(images|functests)\] Error`)},
-	// KubeVirt deployment timeout
-	{CategoryInternal, regexp.MustCompile(`timed out waiting for the condition on kubevirts/kubevirt`)},
-	// Other deployment timeouts (e.g. CNAO)
-	{CategoryInternal, regexp.MustCompile(`timed out waiting for the condition on deployments/`)},
-	// Cluster bootstrap JWS token issue
-	{CategoryInternal, regexp.MustCompile(`could not find a JWS signature in the cluster-info ConfigMap`)},
+	{CategoryInternal, "taint not found during cluster setup", regexp.MustCompile(`error: taint "node-role\.kubernetes\.io/(control-plane|master):NoSchedule" not found`)},
+	{CategoryInternal, "make cluster lifecycle target failure", regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: cluster-(up|sync|down)\] Error`)},
+	{CategoryInternal, "make bazel-build target failure", regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: bazel-build-(images|functests)\] Error`)},
+	{CategoryInternal, "KubeVirt deployment timeout", regexp.MustCompile(`timed out waiting for the condition on kubevirts/kubevirt`)},
+	{CategoryInternal, "deployment timeout", regexp.MustCompile(`timed out waiting for the condition on deployments/`)},
+	{CategoryInternal, "cluster bootstrap JWS token issue", regexp.MustCompile(`could not find a JWS signature in the cluster-info ConfigMap`)},
+}
+
+type contextExternalPattern struct {
+	reason  string
+	pattern *regexp.Regexp
 }
 
 // contextExternalPatterns are checked on the context field to reclassify
 // errors that would otherwise be internal/pr-build but are actually caused
 // by external service failures visible only in the surrounding log lines.
-var contextExternalPatterns = []*regexp.Regexp{
-	regexp.MustCompile(`Error downloading \[https?://`),
-	regexp.MustCompile(`unable to copy from source docker://`),
-	regexp.MustCompile(`fatal: unable to access 'https://github\.com/`),
-	regexp.MustCompile(`received unexpected HTTP status:`),
-	regexp.MustCompile(`dial tcp: lookup .+: (Temporary failure in name resolution|no such host)`),
-	regexp.MustCompile(`which failed to fetch\. no such package`),
-	regexp.MustCompile(`Error in download`),
+var contextExternalPatterns = []contextExternalPattern{
+	{"download failure in context", regexp.MustCompile(`Error downloading \[https?://`)},
+	{"container image pull failure in context", regexp.MustCompile(`unable to copy from source docker://`)},
+	{"git clone failure in context", regexp.MustCompile(`fatal: unable to access 'https://github\.com/`)},
+	{"HTTP error in context", regexp.MustCompile(`received unexpected HTTP status:`)},
+	{"DNS failure in context", regexp.MustCompile(`dial tcp: lookup .+: (Temporary failure in name resolution|no such host)`)},
+	{"failed external fetch in context", regexp.MustCompile(`which failed to fetch\. no such package`)},
+	{"download error in context", regexp.MustCompile(`Error in download`)},
 }
 
 // CategorizeError classifies a single error text into one of the known categories.
 func CategorizeError(errorText string) ErrorCategory {
+	return categorizeError(errorText).Category
+}
+
+func categorizeError(errorText string) CategorizationResult {
 	for _, rule := range rules {
 		if rule.pattern.MatchString(errorText) {
-			return rule.category
+			return CategorizationResult{rule.category, rule.reason}
 		}
 	}
-	return CategoryNeedsInvestigation
+	return CategorizationResult{CategoryNeedsInvestigation, "no matching pattern"}
 }
 
 // CategorizeJobBuildError classifies a JobBuildError by examining all its error snippets.
 // It uses the first snippet's error_text for primary classification, then checks
 // the context of all snippets to detect external failures that aren't apparent
-// from the error_text alone.
+// from the error_text alone. It sets err.CategoryReason with the explanation.
 func CategorizeJobBuildError(err *JobBuildError) ErrorCategory {
+	result := categorizeJobBuildError(err)
+	err.CategoryReason = result.Reason
+	return result.Category
+}
+
+func categorizeJobBuildError(err *JobBuildError) CategorizationResult {
 	if len(err.BuildLogErrorSnippets) == 0 {
-		return CategoryNeedsInvestigation
+		return CategorizationResult{CategoryNeedsInvestigation, "no error snippets"}
 	}
 
-	primary := CategorizeError(err.BuildLogErrorSnippets[0].ErrorText)
+	primary := categorizeError(err.BuildLogErrorSnippets[0].ErrorText)
 
 	// If already external, no need to refine
-	if primary == CategoryExternal {
-		return CategoryExternal
+	if primary.Category == CategoryExternal {
+		return primary
 	}
 
 	// For non-external categories, check if any snippet's context reveals
@@ -131,13 +130,13 @@ func CategorizeJobBuildError(err *JobBuildError) ErrorCategory {
 	for _, snippet := range err.BuildLogErrorSnippets {
 		// Check context
 		for _, pat := range contextExternalPatterns {
-			if pat.MatchString(snippet.Context) {
-				return CategoryExternal
+			if pat.pattern.MatchString(snippet.Context) {
+				return CategorizationResult{CategoryExternal, pat.reason}
 			}
 		}
 		// Also check error_text of non-primary snippets
-		if CategorizeError(snippet.ErrorText) == CategoryExternal {
-			return CategoryExternal
+		if r := categorizeError(snippet.ErrorText); r.Category == CategoryExternal {
+			return CategorizationResult{CategoryExternal, r.Reason + " (from secondary snippet)"}
 		}
 	}
 
