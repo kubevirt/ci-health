@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (14x)
+## per branch (13x)
 
 <details>
-<summary> main (10x / 71.43%) </summary>
+<summary> main (10x / 76.92%) </summary>
 
 <hr/>
 
@@ -46,7 +46,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.6 (3x / 21.43%) </summary>
+<summary> release-1.6 (3x / 23.08%) </summary>
 
 <hr/>
 
@@ -72,26 +72,11 @@
 
 <hr/>
 </details>
-<details>
-<summary> release-1.7 (1x / 7.14%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-<details>
-<summary>all...</summary>
-
-* _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-
-</details>
-
-<hr/>
-</details>
-
-## per day (14x)
+## per day (13x)
 
 <details>
-<summary> 2026-03-19 (1x / 7.14%) </summary>
+<summary> 2026-03-19 (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -106,7 +91,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-18 (2x / 14.29%) </summary>
+<summary> 2026-03-18 (2x / 15.38%) </summary>
 
 <hr/>
 
@@ -123,7 +108,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-17 (10x / 71.43%) </summary>
+<summary> 2026-03-17 (10x / 76.92%) </summary>
 
 <hr/>
 
@@ -163,26 +148,11 @@
 
 <hr/>
 </details>
-<details>
-<summary> 2026-03-13 (1x / 7.14%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-<details>
-<summary>all...</summary>
-
-* _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-
-</details>
-
-<hr/>
-</details>
-
-## per SIG (14x)
+## per SIG (13x)
 
 <details>
-<summary> sig-network (2x / 14.29%) </summary>
+<summary> sig-network (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -195,19 +165,9 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-<details>
-<summary>all...</summary>
-
-* _2026-03-13 13:08:30 &#43;0000 UTC_: <code>13:34:47: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17144/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2032383449070833664#1:build-log.txt%3A4356)
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> sig-compute (12x / 85.71%) </summary>
+<summary> sig-compute (12x / 92.31%) </summary>
 
 <hr/>
 
@@ -252,4 +212,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-20 12:24:58
+Last updated: 2026-03-20 15:31:49
