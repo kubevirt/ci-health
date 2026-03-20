@@ -33,7 +33,11 @@
 <details>
 <summary>all...</summary>
 {{ range $jobErrorInCluster := $cluster.Errors }}
-* _{{ $jobErrorInCluster.Started }}_: {{ if $jobErrorInCluster.CategoryReason }}**{{ $jobErrorInCluster.CategoryReason }}** — {{ end }}{{ if $jobErrorInCluster.BuildLogErrorSnippets }}<code>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
+* _{{ $jobErrorInCluster.Started }}_: {{ if $jobErrorInCluster.CategoryReason }}**{{ $jobErrorInCluster.CategoryReason }}** — {{ end }}{{ if $jobErrorInCluster.BuildLogErrorSnippets }}<code>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).LinkToLogLine }}){{ if (index $jobErrorInCluster.BuildLogErrorSnippets 0).Context }}
+<details><summary>context</summary>
+<pre>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).Context }}</pre>
+</details>
+{{ end }}{{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
 {{ end }}
 </details>
 {{ end }}
