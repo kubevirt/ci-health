@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (17x)
+## per branch (18x)
 
 <details>
-<summary> main (14x / 82.35%) </summary>
+<summary> main (15x / 83.33%) </summary>
 
 <hr/>
 
@@ -47,9 +47,11 @@
 
 <hr/>
 
-**3x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
+**4x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
+
+* _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 
 * _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 
@@ -62,7 +64,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.6 (3x / 17.65%) </summary>
+<summary> release-1.6 (3x / 16.67%) </summary>
 
 <hr/>
 
@@ -89,10 +91,25 @@
 <hr/>
 </details>
 
-## per day (17x)
+## per day (18x)
 
 <details>
-<summary> 2026-03-20 (4x / 23.53%) </summary>
+<summary> 2026-03-22 (1x / 5.56%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
+<details>
+<summary>all...</summary>
+
+* _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-20 (4x / 22.22%) </summary>
 
 <hr/>
 
@@ -121,7 +138,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-19 (1x / 5.88%) </summary>
+<summary> 2026-03-19 (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -136,7 +153,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-18 (2x / 11.76%) </summary>
+<summary> 2026-03-18 (2x / 11.11%) </summary>
 
 <hr/>
 
@@ -153,7 +170,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-17 (10x / 58.82%) </summary>
+<summary> 2026-03-17 (10x / 55.56%) </summary>
 
 <hr/>
 
@@ -194,10 +211,10 @@
 <hr/>
 </details>
 
-## per SIG (17x)
+## per SIG (18x)
 
 <details>
-<summary> sig-network (2x / 11.76%) </summary>
+<summary> sig-network (2x / 11.11%) </summary>
 
 <hr/>
 
@@ -222,7 +239,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-compute (15x / 88.24%) </summary>
+<summary> sig-compute (16x / 88.89%) </summary>
 
 <hr/>
 
@@ -258,9 +275,11 @@
 
 <hr/>
 
-**2x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
+**3x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
+
+* _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 
 * _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 
@@ -281,4 +300,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-23 09:29:01
+Last updated: 2026-03-23 12:23:34
