@@ -79,7 +79,7 @@
 
 <hr/>
 
-**5x**: _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
+**5x**: _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 <details>
 <summary>all...</summary>
 
@@ -317,7 +317,7 @@
 
 <hr/>
 
-**5x**: _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
+**5x**: _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 <details>
 <summary>all...</summary>
 
@@ -346,4 +346,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-03-24 03:55:35
+Last updated: 2026-03-24 06:27:19
