@@ -115,6 +115,16 @@
 
 <hr/>
 
+**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+
+</details>
+
+<hr/>
+
 **3x**: _2026-03-24 08:40:59 &#43;0000 UTC_: <code>08:50:30: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17259/pull-kubevirt-e2e-kind-sriov/2036361073493282816#1:build-log.txt%3A1431)
 <details>
 <summary>all...</summary>
@@ -136,16 +146,6 @@
 * _2026-03-24 14:29:08 &#43;0000 UTC_: <code>14:38:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17065/pull-kubevirt-e2e-kind-1.35-vgpu/2036441913225121792#1:build-log.txt%3A1207)
 
 * _2026-03-24 04:43:34 &#43;0000 UTC_: <code>04:53:10: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17069/pull-kubevirt-e2e-kind-1.35-vgpu/2036302744054140928#1:build-log.txt%3A1136)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
 
 </details>
 
@@ -295,6 +295,16 @@
 
 <hr/>
 
+**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+
+</details>
+
+<hr/>
+
 **4x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
 <details>
 <summary>all...</summary>
@@ -310,16 +320,6 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-
 </details>
 
-<hr/>
-</details>
-
-Last updated: 2026-03-26 04:03:04
+Last updated: 2026-03-26 06:29:21
