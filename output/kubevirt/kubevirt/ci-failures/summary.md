@@ -2,10 +2,10 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (21x)
+## per branch (20x)
 
 <details>
-<summary> main (19x / 90.48%) </summary>
+<summary> main (19x / 95.00%) </summary>
 
 <hr/>
 
@@ -53,7 +53,7 @@
 
 <hr/>
 
-**5x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**5x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
 
@@ -72,7 +72,7 @@
 <hr/>
 </details>
 <details>
-<summary> release-1.7 (2x / 9.52%) </summary>
+<summary> release-1.7 (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -85,22 +85,12 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-03-18 23:32:43 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17219/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2034400005564928000#1:build-log.txt%3A1017)
-<details>
-<summary>all...</summary>
-
-* _2026-03-18 23:32:43 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17219/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2034400005564928000#1:build-log.txt%3A1017)
-
 </details>
 
-<hr/>
-</details>
-
-## per day (21x)
+## per day (20x)
 
 <details>
-<summary> 2026-03-25 (5x / 23.81%) </summary>
+<summary> 2026-03-25 (5x / 25.00%) </summary>
 
 <hr/>
 
@@ -123,7 +113,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-24 (6x / 28.57%) </summary>
+<summary> 2026-03-24 (6x / 30.00%) </summary>
 
 <hr/>
 
@@ -164,7 +154,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-23 (3x / 14.29%) </summary>
+<summary> 2026-03-23 (3x / 15.00%) </summary>
 
 <hr/>
 
@@ -199,7 +189,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-22 (1x / 4.76%) </summary>
+<summary> 2026-03-22 (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -214,11 +204,11 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-20 (4x / 19.05%) </summary>
+<summary> 2026-03-20 (4x / 20.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**2x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
 
@@ -243,7 +233,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-19 (1x / 4.76%) </summary>
+<summary> 2026-03-19 (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -257,26 +247,11 @@
 
 <hr/>
 </details>
-<details>
-<summary> 2026-03-18 (1x / 4.76%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-18 23:32:43 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17219/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2034400005564928000#1:build-log.txt%3A1017)
-<details>
-<summary>all...</summary>
-
-* _2026-03-18 23:32:43 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17219/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2034400005564928000#1:build-log.txt%3A1017)
-
-</details>
-
-<hr/>
-</details>
-
-## per SIG (21x)
+## per SIG (20x)
 
 <details>
-<summary> sig-network (8x / 38.10%) </summary>
+<summary> sig-network (8x / 40.00%) </summary>
 
 <hr/>
 
@@ -313,7 +288,7 @@
 <hr/>
 </details>
 <details>
-<summary> sig-compute (13x / 61.90%) </summary>
+<summary> sig-compute (12x / 60.00%) </summary>
 
 <hr/>
 
@@ -347,7 +322,17 @@
 
 <hr/>
 
-**5x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+
+</details>
+
+<hr/>
+
+**4x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
 
@@ -359,21 +344,9 @@
 
 * _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
 
-* _2026-03-18 23:32:43 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17219/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2034400005564928000#1:build-log.txt%3A1017)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-
 </details>
 
 <hr/>
 </details>
 
-Last updated: 2026-03-25 21:18:44
+Last updated: 2026-03-26 00:18:57
