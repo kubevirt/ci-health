@@ -2,10 +2,20 @@
 
 # CI failures for kubevirt/kubevirt
 
-## per branch (19x)
+## per branch (21x)
 
 <details>
-<summary> main (18x / 94.74%) </summary>
+<summary> main (20x / 95.24%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+
+</details>
 
 <hr/>
 
@@ -53,7 +63,7 @@
 
 <hr/>
 
-**4x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**4x**: _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 <details>
 <summary>all...</summary>
 
@@ -68,9 +78,19 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> release-1.7 (1x / 5.26%) </summary>
+<summary> release-1.7 (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -85,10 +105,35 @@
 <hr/>
 </details>
 
-## per day (19x)
+## per day (21x)
 
 <details>
-<summary> 2026-03-25 (5x / 26.32%) </summary>
+<summary> 2026-03-26 (2x / 9.52%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> 2026-03-25 (5x / 23.81%) </summary>
 
 <hr/>
 
@@ -111,7 +156,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-24 (6x / 31.58%) </summary>
+<summary> 2026-03-24 (6x / 28.57%) </summary>
 
 <hr/>
 
@@ -152,7 +197,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-23 (3x / 15.79%) </summary>
+<summary> 2026-03-23 (3x / 14.29%) </summary>
 
 <hr/>
 
@@ -187,7 +232,7 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-22 (1x / 5.26%) </summary>
+<summary> 2026-03-22 (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -202,11 +247,11 @@
 <hr/>
 </details>
 <details>
-<summary> 2026-03-20 (4x / 21.05%) </summary>
+<summary> 2026-03-20 (4x / 19.05%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**2x**: _2026-03-20 13:04:15 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.33-sig-operator/2034979183943225344#1:build-log.txt%3A601)
 <details>
 <summary>all...</summary>
 
@@ -231,10 +276,10 @@
 <hr/>
 </details>
 
-## per SIG (19x)
+## per SIG (21x)
 
 <details>
-<summary> sig-network (7x / 36.84%) </summary>
+<summary> sig-network (8x / 38.10%) </summary>
 
 <hr/>
 
@@ -259,9 +304,19 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> sig-compute (12x / 63.16%) </summary>
+<summary> sig-compute (13x / 61.90%) </summary>
 
 <hr/>
 
@@ -295,17 +350,7 @@
 
 <hr/>
 
-**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-03-20 13:04:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744#1:build-log.txt%3A622)
+**4x**: _2026-03-22 08:15:00 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 28</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17109/pull-kubevirt-e2e-kind-1.34-sev/2035631211845521408#1:build-log.txt%3A532)
 <details>
 <summary>all...</summary>
 
@@ -320,6 +365,26 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:11 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-kind-1.34-sev/2037085594152079360#1:build-log.txt%3A5063)
+
 </details>
 
-Last updated: 2026-03-26 12:20:28
+<hr/>
+
+**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-03-26 15:36:31
