@@ -55,11 +55,23 @@ var rules = []categoryRule{
 	{CategoryExternal, "API rate limiter timeout", regexp.MustCompile(`client rate limiter Wait returned an error: context deadline exceeded`)},
 	{CategoryExternal, "skopeo/podman retry with HTTP error", regexp.MustCompile(`Failed, retrying in \d+s .* Error:`)},
 	{CategoryExternal, "RPM download failure from mirror", regexp.MustCompile(`Error downloading \[http://mirror\.`)},
+	// Bazel remote cache blob fetch failure
+	{CategoryExternal, "bazel remote cache blob fetch failure", regexp.MustCompile(`Failed to fetch blobs because they do not exist remotely`)},
+	// Bazel remote cache connection timeout (Java/Netty)
+	{CategoryExternal, "bazel remote cache connection timeout", regexp.MustCompile(`io\.netty\.channel\.ConnectTimeoutException: connection timed out: bazel-cache`)},
+	// Bazel remote cache download timeout
+	{CategoryExternal, "bazel remote cache download timeout", regexp.MustCompile(`Exec failed due to IOException:.*Download of .+ timed out`)},
+	// Bazel remote cache DNS failure
+	{CategoryExternal, "bazel remote cache DNS failure", regexp.MustCompile(`Exec failed due to IOException:.*UnknownHostException: bazel-cache`)},
+	// Bazel remote cache IOException (general)
+	{CategoryExternal, "bazel remote cache IO failure", regexp.MustCompile(`Exec failed due to IOException:`)},
 
 	// --- PR Build: code/build failures caused by the PR itself ---
 
 	{CategoryPRBuild, "bazel build failure", regexp.MustCompile(`ERROR: Build failed\. Not running target`)},
 	{CategoryPRBuild, "bazel analysis failure", regexp.MustCompile(`ERROR: Analysis of target '.+' failed; build aborted`)},
+	// Test panic detected in output
+	{CategoryPRBuild, "panic detected in test output", regexp.MustCompile(`ERROR: Found panic in test output`)},
 
 	// --- Internal: CI configuration errors fixable by sig-ci ---
 
@@ -69,6 +81,10 @@ var rules = []categoryRule{
 	{CategoryInternal, "KubeVirt deployment timeout", regexp.MustCompile(`timed out waiting for the condition on kubevirts/kubevirt`)},
 	{CategoryInternal, "deployment timeout", regexp.MustCompile(`timed out waiting for the condition on deployments/`)},
 	{CategoryInternal, "cluster bootstrap JWS token issue", regexp.MustCompile(`could not find a JWS signature in the cluster-info ConfigMap`)},
+	// Control plane failed to start during kind cluster creation
+	{CategoryInternal, "control plane startup failure", regexp.MustCompile(`error.*execution phase wait-control-plane: failed while waiting for the control plane to start`)},
+	// Kind cluster creation failure (log line pattern not found)
+	{CategoryInternal, "kind cluster creation failure", regexp.MustCompile(`ERROR: failed to create cluster: could not find a log line that matches`)},
 }
 
 type contextExternalPattern struct {

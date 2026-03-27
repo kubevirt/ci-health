@@ -219,6 +219,52 @@ func TestCategorizeError(t *testing.T) {
 			expected:  CategoryInternal,
 		},
 
+		// === External: bazel remote cache ===
+		{
+			name:      "bazel remote cache blob fetch failure",
+			errorText: `07:53:32: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel remote cache blob fetch bulk transfer",
+			errorText: `18:37:58: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel remote cache connection timeout",
+			errorText: `09:00:52: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel remote cache download timeout",
+			errorText: `08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of '/kubevirt/kubevirt,...' timed out. Received 21508688 of 24245460 bytes.`,
+			expected:  CategoryExternal,
+		},
+		{
+			name:      "bazel remote cache DNS failure",
+			errorText: `08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output failed: Exec failed due to IOException: java.net.UnknownHostException: bazel-cache.kubevirt-prow`,
+			expected:  CategoryExternal,
+		},
+
+		// === PR Build: panic ===
+		{
+			name:      "panic in test output",
+			errorText: `ERROR: Found panic in test output`,
+			expected:  CategoryPRBuild,
+		},
+
+		// === Internal: cluster creation ===
+		{
+			name:      "control plane startup failure",
+			errorText: `04:03:20: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-apiserver check failed]`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "kind cluster creation log line not found",
+			errorText: `08:54:22: ERROR: failed to create cluster: could not find a log line that matches "Reached target .*Multi-User System.*|detected cgroup v1"`,
+			expected:  CategoryInternal,
+		},
+
 		// === Needs investigation ===
 		{
 			name:      "unknown error",
