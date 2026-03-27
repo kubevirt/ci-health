@@ -120,10 +120,10 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 		Date:                time.Now().Format(time.DateTime),
 		Org:                 "kubevirt",
 		Repo:                "kubevirt",
-		FailuresPerBranch:   Failures{CategoryName: "per branch"},
-		FailuresPerDay:      Failures{CategoryName: "per day"},
-		FailuresPerSIG:      Failures{CategoryName: "per SIG"},
-		FailuresPerCategory: Failures{CategoryName: "per error category"},
+		FailuresPerBranch:   Failures{CategoryName: "per branch", Anchor: "per-branch"},
+		FailuresPerDay:      Failures{CategoryName: "per day", Anchor: "per-day"},
+		FailuresPerSIG:      Failures{CategoryName: "per SIG", Anchor: "per-sig"},
+		FailuresPerCategory: Failures{CategoryName: "per error category", Anchor: "per-error-category"},
 	}
 
 	jobBuildErrorsByJobName := map[string]*cifailures.JobBuildErrors{}
