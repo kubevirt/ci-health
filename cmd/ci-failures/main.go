@@ -117,12 +117,13 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 	}
 
 	templateData := TemplateData{
-		Date:              time.Now().Format(time.DateTime),
-		Org:               "kubevirt",
-		Repo:              "kubevirt",
-		FailuresPerBranch: Failures{CategoryName: "per branch"},
-		FailuresPerDay:    Failures{CategoryName: "per day"},
-		FailuresPerSIG:    Failures{CategoryName: "per SIG"},
+		Date:                time.Now().Format(time.DateTime),
+		Org:                 "kubevirt",
+		Repo:                "kubevirt",
+		FailuresPerBranch:   Failures{CategoryName: "per branch", Anchor: "per-branch"},
+		FailuresPerDay:      Failures{CategoryName: "per day", Anchor: "per-day"},
+		FailuresPerSIG:      Failures{CategoryName: "per SIG", Anchor: "per-sig"},
+		FailuresPerCategory: Failures{CategoryName: "per error category", Anchor: "per-error-category"},
 	}
 
 	jobBuildErrorsByJobName := map[string]*cifailures.JobBuildErrors{}
@@ -146,6 +147,8 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 		for _, jobBuildError := range jobBuildErrorsForJob.BuildErrors {
 			day := jobBuildError.Started.Format(time.DateOnly)
 			templateData.FailuresPerDay.AddError(day, jobBuildError)
+
+			templateData.FailuresPerCategory.AddError(jobBuildError.Category, jobBuildError)
 		}
 	}
 

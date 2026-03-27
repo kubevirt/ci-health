@@ -1,11 +1,19 @@
 {{- /* gotype: github.com/kubevirt/ci-health/cmd/ci-failures.TemplateData */ -}}
 
 {{ define "failures" }}
-## {{ .CategoryName }} ({{ .Total }}x)
+<a id="{{ .Anchor }}"></a>
+
+## {{ .CategoryName }} [⬆](#top)
 {{ range $categorizedFailure := .GetSortedFailures }}
+
+### {{ $categorizedFailure.CategoryValue }} ({{ len $categorizedFailure.JobBuildErrors }}x / {{ printf "%.2f" $categorizedFailure.Share }}%)
+{{ range $catGroup := $categorizedFailure.GetGroupedByReason }}
+
+#### {{ $catGroup.Category }} ({{ $catGroup.Count }}x / {{ printf "%.2f" $catGroup.Share }}%)
+{{ range $reasonGroup := $catGroup.ReasonGroups }}
 <details>
-<summary> {{ $categorizedFailure.CategoryValue }} ({{ len $categorizedFailure.JobBuildErrors }}x / {{ printf "%.2f" $categorizedFailure.Share }}%) </summary>
-{{ range $cluster := $categorizedFailure.Clusters }}
+<summary> {{ $reasonGroup.Reason }} ({{ $reasonGroup.Count }}x / {{ printf "%.2f" $reasonGroup.Share }}%) </summary>
+{{ range $cluster := $reasonGroup.Clusters }}
 <hr/>
 
 **{{ len $cluster.Errors }}x**: _{{ $cluster.Representative.Started }}_: {{ if $cluster.Representative.BuildLogErrorSnippets }}<code>{{ (index $cluster.Representative.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $cluster.Representative.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }} _(no match in error message grep)_ [build-log]({{ $cluster.Representative.JobURL }}){{ end }}
@@ -20,8 +28,50 @@
 </details>
 {{- end }}
 {{- end }}
+{{- end }}
+{{- end }}
+
+{{ define "categorized-failures" }}
+<a id="{{ .Anchor }}"></a>
+
+## {{ .CategoryName }} [⬆](#top)
+{{ range $catGroup := .GetGroupedByReason }}
+
+### {{ $catGroup.Category }} ({{ $catGroup.Count }}x / {{ printf "%.2f" $catGroup.Share }}%)
+{{ range $reasonGroup := $catGroup.ReasonGroups }}
+<details>
+<summary> {{ $reasonGroup.Reason }} ({{ $reasonGroup.Count }}x / {{ printf "%.2f" $reasonGroup.Share }}%) </summary>
+{{ range $cluster := $reasonGroup.Clusters }}
+<hr/>
+
+**{{ len $cluster.Errors }}x**: _{{ $cluster.Representative.Started }}_: {{ if $cluster.Representative.BuildLogErrorSnippets }}<code>{{ (index $cluster.Representative.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $cluster.Representative.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }} _(no match in error message grep)_ [build-log]({{ $cluster.Representative.JobURL }}){{ end }}
+<details>
+<summary>all...</summary>
+{{ range $jobErrorInCluster := $cluster.Errors }}
+* _{{ $jobErrorInCluster.Started }}_: {{ if $jobErrorInCluster.BuildLogErrorSnippets }}<code>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).LinkToLogLine }}){{ if (index $jobErrorInCluster.BuildLogErrorSnippets 0).Context }}
+<details><summary>context</summary>
+<pre>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).Context }}</pre>
+</details>
+{{ end }}{{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
+{{ end }}
+</details>
+{{ end }}
+<hr/>
+</details>
+{{- end }}
+{{- end }}
+{{- end }}
+
+<a id="top"></a>
 
 # CI failures for {{$.Org}}/{{$.Repo}}
+
+- [per error category](#per-error-category)
+- [per branch](#per-branch)
+- [per day](#per-day)
+- [per SIG](#per-sig)
+
+{{ template "categorized-failures" $.FailuresPerCategory }}
 {{ template "failures" $.FailuresPerBranch }}
 {{ template "failures" $.FailuresPerDay }}
 {{ template "failures" $.FailuresPerSIG }}
