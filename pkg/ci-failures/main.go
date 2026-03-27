@@ -225,6 +225,8 @@ func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 					nextBuildError.BuildLogErrorSnippets = append(nextBuildError.BuildLogErrorSnippets, buildErrorLogSnippet)
 				}
 			}
+
+			nextBuildError.Category = string(CategorizeJobBuildError(nextBuildError))
 		}
 
 		if len(jobErrorsByJobName) == 0 {

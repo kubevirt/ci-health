@@ -148,8 +148,7 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 			day := jobBuildError.Started.Format(time.DateOnly)
 			templateData.FailuresPerDay.AddError(day, jobBuildError)
 
-			category := string(cifailures.CategorizeJobBuildError(jobBuildError))
-			templateData.FailuresPerCategory.AddError(category, jobBuildError)
+			templateData.FailuresPerCategory.AddError(jobBuildError.Category, jobBuildError)
 		}
 	}
 
