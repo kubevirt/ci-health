@@ -52,18 +52,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037088891659358208#1:build-log.txt%3A518)
-<details><summary>context</summary>
-<pre>08:53:32: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:53:32: /usr/bin/ld: /tmp/go-link-2025919358/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-08:53:32: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-08:53:51: INFO: Elapsed time: 90.892s, Critical Path: 38.62s
-08:53:51: INFO: 7551 processes: 7515 remote cache hit, 31 internal, 5 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 * _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:52:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037088891520946176#1:build-log.txt%3A515)
 <details><summary>context</summary>
 <pre>08:52:15: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -76,14 +64,14 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
+* _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037088891659358208#1:build-log.txt%3A518)
 <details><summary>context</summary>
-<pre>08:52:20: /usr/bin/ld: /tmp/go-link-3408989329/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-08:52:20: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-08:53:12: INFO: Elapsed time: 53.656s, Critical Path: 29.02s
-08:53:12: INFO: 6762 processes: 6732 remote cache hit, 30 internal.
+<pre>08:53:32: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:53:32: /usr/bin/ld: /tmp/go-link-2025919358/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+08:53:32: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+08:53:51: INFO: Elapsed time: 90.892s, Critical Path: 38.62s
+08:53:51: INFO: 7551 processes: 7515 remote cache hit, 31 internal, 5 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -96,6 +84,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
 08:52:39: INFO: Elapsed time: 49.050s, Critical Path: 14.33s
 08:52:39: INFO: 7686 processes: 7655 remote cache hit, 31 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
+<details><summary>context</summary>
+<pre>08:52:20: /usr/bin/ld: /tmp/go-link-3408989329/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+08:52:20: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+08:53:12: INFO: Elapsed time: 53.656s, Critical Path: 29.02s
+08:53:12: INFO: 6762 processes: 6732 remote cache hit, 30 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -284,21 +284,9 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**8x**: _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
+**11x**: _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
-<details><summary>context</summary>
-<pre>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-05:09:45: INFO: Elapsed time: 41.707s, Critical Path: 21.86s</pre>
-</details>
-
 
 * _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
 <details><summary>context</summary>
@@ -348,39 +336,87 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
 <details><summary>context</summary>
-<pre>21:42:19: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:42:19: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-21:42:19: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:42:31: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:42:31: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:42:32: INFO: Elapsed time: 34.574s, Critical Path: 6.51s</pre>
+<pre>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:57:14: INFO: Elapsed time: 56.981s, Critical Path: 27.81s</pre>
 </details>
 
 
-* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
 <details><summary>context</summary>
-<pre>21:39:51: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:39:51: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-21:39:51: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:40:21: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:40:21: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:40:21: INFO: Elapsed time: 44.479s, Critical Path: 13.17s</pre>
+<pre>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:57:14: INFO: Elapsed time: 57.683s, Critical Path: 28.90s</pre>
 </details>
 
 
-* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
 <details><summary>context</summary>
-<pre>21:41:33: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:41:33: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-21:41:33: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:41:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:41:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:41:47: INFO: Elapsed time: 39.956s, Critical Path: 14.05s</pre>
+<pre>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:56:07: INFO: Elapsed time: 62.506s, Critical Path: 33.50s</pre>
+</details>
+
+
+* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
+<details><summary>context</summary>
+<pre>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:54:47: INFO: Elapsed time: 42.126s, Critical Path: 18.22s</pre>
+</details>
+
+
+* _2026-03-25 21:43:46 &#43;0000 UTC_: <code>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036909664993546240#1:build-log.txt%3A565)
+<details><summary>context</summary>
+<pre>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:50:52: INFO: Elapsed time: 69.978s, Critical Path: 25.19s</pre>
+</details>
+
+
+* _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
+<details><summary>context</summary>
+<pre>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:13:18: INFO: Elapsed time: 33.704s, Critical Path: 6.41s</pre>
+</details>
+
+
+* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+<details><summary>context</summary>
+<pre>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
+20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
+20:02:40: INFO: Elapsed time: 114.520s, Critical Path: 15.74s</pre>
 </details>
 
 
@@ -416,18 +452,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
-<details><summary>context</summary>
-<pre>01:58:02:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
-01:58:02:       |   ^~~~~~~~
-01:58:02:       |   vsprintf
-01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:59:05: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:59:05: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:59:05: INFO: Elapsed time: 89.207s, Critical Path: 58.44s</pre>
-</details>
-
-
 * _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036983575923920896#1:build-log.txt%3A480)
 <details><summary>context</summary>
 <pre>01:58:02: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -437,6 +461,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 01:59:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
 01:59:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
 01:59:15: INFO: Elapsed time: 97.126s, Critical Path: 56.30s</pre>
+</details>
+
+
+* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
+<details><summary>context</summary>
+<pre>01:58:02:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
+01:58:02:       |   ^~~~~~~~
+01:58:02:       |   vsprintf
+01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:59:05: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:59:05: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:59:05: INFO: Elapsed time: 89.207s, Critical Path: 58.44s</pre>
 </details>
 
 
@@ -488,18 +524,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
-<details><summary>context</summary>
-<pre>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:55:04: INFO: Elapsed time: 51.737s, Critical Path: 20.20s</pre>
-</details>
-
-
 * _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:53:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036983573973569536#1:build-log.txt%3A531)
 <details><summary>context</summary>
 <pre>01:53:29: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -509,6 +533,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 01:53:34: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
 01:53:34: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
 01:53:34: INFO: Elapsed time: 34.693s, Critical Path: 13.69s</pre>
+</details>
+
+
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
+<details><summary>context</summary>
+<pre>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:55:04: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:55:04: INFO: Elapsed time: 51.737s, Critical Path: 20.20s</pre>
 </details>
 
 
@@ -524,18 +560,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
-<details><summary>context</summary>
-<pre>01:54:03: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-01:54:03: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-01:54:03: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:54:56: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:54:56: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:54:56: INFO: Elapsed time: 59.946s, Critical Path: 27.62s</pre>
-</details>
-
-
 * _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
 <details><summary>context</summary>
 <pre>01:54:30:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
@@ -545,6 +569,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 01:55:16: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
 01:55:16: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
 01:55:16: INFO: Elapsed time: 56.180s, Critical Path: 18.88s</pre>
+</details>
+
+
+* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
+<details><summary>context</summary>
+<pre>01:54:03: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+01:54:03: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+01:54:03: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+01:54:56: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+01:54:56: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+01:54:56: INFO: Elapsed time: 59.946s, Critical Path: 27.62s</pre>
 </details>
 
 
@@ -644,79 +680,19 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**6x**: _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
+**1x**: _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
+* _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 <details><summary>context</summary>
-<pre>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:57:14: INFO: Elapsed time: 56.981s, Critical Path: 27.81s</pre>
-</details>
-
-
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
-<details><summary>context</summary>
-<pre>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:57:14: INFO: Elapsed time: 57.683s, Critical Path: 28.90s</pre>
-</details>
-
-
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
-<details><summary>context</summary>
-<pre>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:56:07: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:56:07: INFO: Elapsed time: 62.506s, Critical Path: 33.50s</pre>
-</details>
-
-
-* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
-<details><summary>context</summary>
-<pre>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-01:54:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-01:54:47: INFO: Elapsed time: 42.126s, Critical Path: 18.22s</pre>
-</details>
-
-
-* _2026-03-25 21:43:46 &#43;0000 UTC_: <code>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036909664993546240#1:build-log.txt%3A565)
-<details><summary>context</summary>
-<pre>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:50:52: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:50:52: INFO: Elapsed time: 69.978s, Critical Path: 25.19s</pre>
-</details>
-
-
-* _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
-<details><summary>context</summary>
-<pre>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
-21:13:18: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
-21:13:18: INFO: Elapsed time: 33.704s, Critical Path: 6.41s</pre>
+<pre>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+05:09:45: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+05:09:45: INFO: Elapsed time: 41.707s, Critical Path: 21.86s</pre>
 </details>
 
 
@@ -872,18 +848,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
-<details><summary>context</summary>
-<pre>00:52:35: /usr/bin/ld: /tmp/go-link-1280386486/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:52:35: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:52:37: INFO: Elapsed time: 72.171s, Critical Path: 41.13s
-00:52:37: INFO: 7682 processes: 7648 remote cache hit, 31 internal, 3 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036967849838252032#1:build-log.txt%3A446)
 <details><summary>context</summary>
 <pre>00:52:05: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
@@ -908,38 +872,14 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
+* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
 <details><summary>context</summary>
-<pre>00:52:03: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:52:03: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:52:03: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:52:45: INFO: Elapsed time: 62.248s, Critical Path: 31.43s
-00:52:45: INFO: 7434 processes: 7403 remote cache hit, 31 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
-<details><summary>context</summary>
-<pre>00:51:18: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:51:18: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:51:18: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:51:29: INFO: Elapsed time: 36.177s, Critical Path: 29.57s
-00:51:29: INFO: 5541 processes: 5508 remote cache hit, 30 internal, 3 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
-<details><summary>context</summary>
-<pre>00:51:18: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:51:18: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:51:57: INFO: Elapsed time: 63.470s, Critical Path: 16.31s
-00:51:57: INFO: 7681 processes: 7650 remote cache hit, 31 internal.
+<pre>00:52:35: /usr/bin/ld: /tmp/go-link-1280386486/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:52:35: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:52:37: INFO: Elapsed time: 72.171s, Critical Path: 41.13s
+00:52:37: INFO: 7682 processes: 7648 remote cache hit, 31 internal, 3 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -956,6 +896,42 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
+<details><summary>context</summary>
+<pre>00:52:03: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:52:03: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:52:03: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:52:45: INFO: Elapsed time: 62.248s, Critical Path: 31.43s
+00:52:45: INFO: 7434 processes: 7403 remote cache hit, 31 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
+<details><summary>context</summary>
+<pre>00:51:18: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:51:18: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:51:57: INFO: Elapsed time: 63.470s, Critical Path: 16.31s
+00:51:57: INFO: 7681 processes: 7650 remote cache hit, 31 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
+<details><summary>context</summary>
+<pre>00:51:18: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:51:18: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:51:18: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:51:29: INFO: Elapsed time: 36.177s, Critical Path: 29.57s
+00:51:29: INFO: 5541 processes: 5508 remote cache hit, 30 internal, 3 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-network/2036967845614587904#1:build-log.txt%3A520)
 <details><summary>context</summary>
 <pre>00:52:52: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -964,42 +940,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
 00:53:15: INFO: Elapsed time: 70.296s, Critical Path: 33.38s
 00:53:15: INFO: 7698 processes: 7665 remote cache hit, 31 internal, 2 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
-<details><summary>context</summary>
-<pre>00:53:56:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
-00:53:56:       |   ^~~~~~~~
-00:53:56:       |   vsprintf
-00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:54:11: INFO: Elapsed time: 37.048s, Critical Path: 16.59s
-00:54:11: INFO: 6728 processes: 6697 remote cache hit, 30 internal, 1 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
-<details><summary>context</summary>
-<pre>00:51:40: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:51:40: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:52:15: INFO: Elapsed time: 51.100s, Critical Path: 25.70s
-00:52:15: INFO: 7673 processes: 7642 remote cache hit, 31 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
-<details><summary>context</summary>
-<pre>00:51:27: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:51:27: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:51:27: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:51:42: INFO: Elapsed time: 54.798s, Critical Path: 11.73s
-00:51:42: INFO: 7513 processes: 7481 remote cache hit, 31 internal, 1 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -1016,14 +956,38 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
 <details><summary>context</summary>
-<pre>00:53:47: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:53:47: /usr/bin/ld: /tmp/go-link-2529653012/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-00:53:47: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-00:54:47: INFO: Elapsed time: 93.058s, Critical Path: 45.42s
-00:54:47: INFO: 7692 processes: 7660 remote cache hit, 31 internal, 1 processwrapper-sandbox.
+<pre>00:53:56:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
+00:53:56:       |   ^~~~~~~~
+00:53:56:       |   vsprintf
+00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:54:11: INFO: Elapsed time: 37.048s, Critical Path: 16.59s
+00:54:11: INFO: 6728 processes: 6697 remote cache hit, 30 internal, 1 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
+<details><summary>context</summary>
+<pre>00:51:27: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:51:27: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:51:27: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:51:42: INFO: Elapsed time: 54.798s, Critical Path: 11.73s
+00:51:42: INFO: 7513 processes: 7481 remote cache hit, 31 internal, 1 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
+<details><summary>context</summary>
+<pre>00:51:40: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:51:40: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:52:15: INFO: Elapsed time: 51.100s, Critical Path: 25.70s
+00:52:15: INFO: 7673 processes: 7642 remote cache hit, 31 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -1036,6 +1000,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 00:52:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
 00:52:25: INFO: Elapsed time: 66.264s, Critical Path: 25.85s
 00:52:25: INFO: 7686 processes: 7647 remote cache hit, 31 internal, 8 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
+<details><summary>context</summary>
+<pre>00:53:47: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:53:47: /usr/bin/ld: /tmp/go-link-2529653012/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+00:53:47: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+00:54:47: INFO: Elapsed time: 93.058s, Critical Path: 45.42s
+00:54:47: INFO: 7692 processes: 7660 remote cache hit, 31 internal, 1 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -1116,7 +1092,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**7x**: _2026-03-25 22:08:13 &#43;0000 UTC_: <code>22:12:17: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036857991180849152#1:build-log.txt%3A346)
+**7x**: _2026-03-25 18:25:43 &#43;0000 UTC_: <code>18:30:50: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-windows2016/2036871960771694592#1:build-log.txt%3A468)
 <details>
 <summary>all...</summary>
 
@@ -1208,7 +1184,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**5x**: _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
+**5x**: _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 <details>
 <summary>all...</summary>
 
@@ -1224,15 +1200,15 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
 <details><summary>context</summary>
-<pre>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
-20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-20:02:40: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
-20:02:40: INFO: Elapsed time: 114.520s, Critical Path: 15.74s</pre>
+<pre>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
+19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
+19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
+19:57:15: INFO: Elapsed time: 39.917s, Critical Path: 12.72s</pre>
 </details>
 
 
@@ -1276,19 +1252,43 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**1x**: _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
+**3x**: _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
 <details>
 <summary>all...</summary>
 
-* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
+* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
 <details><summary>context</summary>
-<pre>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
-19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: d28cd0c48ee89103d13e6e7f79d4a0dea1133a032079012c434887177586f5d4/4163532 for bazel-out/k8-fastbuild/bin/tests/storage/go_default_library.x
-19:57:14: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x
-19:57:15: INFO: Elapsed time: 39.917s, Critical Path: 12.72s</pre>
+<pre>21:42:19: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:42:19: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+21:42:19: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:42:31: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:42:31: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:42:32: INFO: Elapsed time: 34.574s, Critical Path: 6.51s</pre>
+</details>
+
+
+* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+<details><summary>context</summary>
+<pre>21:39:51: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:39:51: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+21:39:51: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:40:21: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:40:21: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:40:21: INFO: Elapsed time: 44.479s, Critical Path: 13.17s</pre>
+</details>
+
+
+* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
+<details><summary>context</summary>
+<pre>21:41:33: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:41:33: /usr/bin/ld: /tmp/go-link-2942130853/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+21:41:33: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+21:41:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: ad00773da5a5af3427cc60043da295cc3948fa0e7d75a9c5b30cd73d744605f2/22302 for bazel-out/k8-fastbuild/bin/vendor/github.com/mitchellh/go-vnc/go_default_library.x
+21:41:47: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4781398cf1ae263e2808fe390f4a931ba696e3ed541e68e4a87992bdedea1cc9/48934 for bazel-out/k8-fastbuild/bin/tests/libssh/go_default_library.x
+21:41:47: INFO: Elapsed time: 39.956s, Critical Path: 14.05s</pre>
 </details>
 
 
@@ -1413,6 +1413,74 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
+**5x**: _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
+<details><summary>context</summary>
+<pre>07:09:11:
+07:09:11: Error: name &#34;pull-kubevirt-e2e-kind-1.35-sig-compute-arm64-bazel-server&#34; is in use: container already exists
+07:09:13: &#43; rm -f /tmp/kubevirt.deploy.sJtB
+make: *** [Makefile:188: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+* _2026-03-24 05:48:40 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-kind-sriov/2036317747708694528#1:build-log.txt%3A6522)
+<details><summary>context</summary>
+<pre>06:17:02:
+06:17:07: Error: no such object: &#34;pull-kubevirt-e2e-kind-sriov-bazel-server&#34;
+06:17:08: &#43; rm -f /tmp/kubevirt.deploy.uRDo
+make: *** [Makefile:188: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+* _2026-03-23 17:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17225/pull-kubevirt-e2e-kind-1.35-vgpu/2036130015560601600#1:build-log.txt%3A4621)
+<details><summary>context</summary>
+<pre>17:49:35:
+17:49:36: Error: name &#34;pull-kubevirt-e2e-kind-1.35-vgpu-bazel-server&#34; is in use: container already exists
+17:49:37: &#43; rm -f /tmp/kubevirt.deploy.83AR
+make: *** [Makefile:188: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+* _2026-03-23 13:15:38 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-kind-sriov/2036061047529410560#1:build-log.txt%3A3348)
+<details><summary>context</summary>
+<pre>13:30:46:
+13:30:48: Error: no such object: &#34;pull-kubevirt-e2e-kind-sriov-bazel-server&#34;
+13:30:50: &#43; rm -f /tmp/kubevirt.deploy.cRkh
+make: *** [Makefile:188: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+* _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
+<details><summary>context</summary>
+<pre>11:53:00:
+11:53:01: Error: name &#34;pull-kubevirt-e2e-kind-1.35-vgpu-bazel-server&#34; is in use: container already exists
+11:53:03: &#43; rm -f /tmp/kubevirt.deploy.Qv3c
+make: *** [Makefile:188: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
 **9x**: _2026-03-23 14:09:47 &#43;0000 UTC_: <code>14:16:40: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17065/pull-kubevirt-e2e-kind-1.34-sev/2036082886125293568#1:build-log.txt%3A1309)
 <details>
 <summary>all...</summary>
@@ -1529,74 +1597,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**5x**: _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
-<details><summary>context</summary>
-<pre>07:09:11:
-07:09:11: Error: name &#34;pull-kubevirt-e2e-kind-1.35-sig-compute-arm64-bazel-server&#34; is in use: container already exists
-07:09:13: &#43; rm -f /tmp/kubevirt.deploy.sJtB
-make: *** [Makefile:188: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-* _2026-03-24 05:48:40 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-kind-sriov/2036317747708694528#1:build-log.txt%3A6522)
-<details><summary>context</summary>
-<pre>06:17:02:
-06:17:07: Error: no such object: &#34;pull-kubevirt-e2e-kind-sriov-bazel-server&#34;
-06:17:08: &#43; rm -f /tmp/kubevirt.deploy.uRDo
-make: *** [Makefile:188: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-* _2026-03-23 17:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17225/pull-kubevirt-e2e-kind-1.35-vgpu/2036130015560601600#1:build-log.txt%3A4621)
-<details><summary>context</summary>
-<pre>17:49:35:
-17:49:36: Error: name &#34;pull-kubevirt-e2e-kind-1.35-vgpu-bazel-server&#34; is in use: container already exists
-17:49:37: &#43; rm -f /tmp/kubevirt.deploy.83AR
-make: *** [Makefile:188: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-* _2026-03-23 13:15:38 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-kind-sriov/2036061047529410560#1:build-log.txt%3A3348)
-<details><summary>context</summary>
-<pre>13:30:46:
-13:30:48: Error: no such object: &#34;pull-kubevirt-e2e-kind-sriov-bazel-server&#34;
-13:30:50: &#43; rm -f /tmp/kubevirt.deploy.cRkh
-make: *** [Makefile:188: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-* _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
-<details><summary>context</summary>
-<pre>11:53:00:
-11:53:01: Error: name &#34;pull-kubevirt-e2e-kind-1.35-vgpu-bazel-server&#34; is in use: container already exists
-11:53:03: &#43; rm -f /tmp/kubevirt.deploy.Qv3c
-make: *** [Makefile:188: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
 **1x**: _2026-03-26 06:47:21 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17273/pull-kubevirt-e2e-kind-1.34-sev/2037058711163244544#1:build-log.txt%3A5065)
 <details>
 <summary>all...</summary>
@@ -1622,7 +1622,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1727
 
 <hr/>
 
-**3x**: _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
+**5x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 <details>
 <summary>all...</summary>
 
@@ -1635,6 +1635,30 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1727
 08:57:27: java.net.UnknownHostException: bazel-cache.kubevirt-prow
 08:57:27: java.net.UnknownHostException: bazel-cache.kubevirt-prow
 08:57:27: java.net.UnknownHostException: bazel-cache.kubevirt-prow</pre>
+</details>
+
+
+* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
+<details><summary>context</summary>
+<pre>08:57:26: INFO: Analyzed 30 targets (0 packages loaded, 0 targets configured).
+08:57:26: INFO: Found 30 targets...
+08:57:26: WARNING: Remote Cache: bazel-cache.kubevirt-prow
+08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:
+08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow</pre>
+</details>
+
+
+* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
+<details><summary>context</summary>
+<pre>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/go.yaml.in/yaml/v2/BUILD.bazel:3:11: Running nogo on //vendor/go.yaml.in/yaml/v2:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:
+08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:
+08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:58:24: INFO: Elapsed time: 0.719s, Critical Path: 0.42s</pre>
 </details>
 
 
@@ -1666,33 +1690,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1727
 
 <hr/>
 
-**3x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
+**1x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
-<details><summary>context</summary>
-<pre>08:57:26: INFO: Analyzed 30 targets (0 packages loaded, 0 targets configured).
-08:57:26: INFO: Found 30 targets...
-08:57:26: WARNING: Remote Cache: bazel-cache.kubevirt-prow
-08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:
-08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:57:26: java.net.UnknownHostException: bazel-cache.kubevirt-prow</pre>
-</details>
-
-
-* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
-<details><summary>context</summary>
-<pre>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/go.yaml.in/yaml/v2/BUILD.bazel:3:11: Running nogo on //vendor/go.yaml.in/yaml/v2:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:
-08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:
-08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:58:24: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:58:24: INFO: Elapsed time: 0.719s, Critical Path: 0.42s</pre>
-</details>
-
 
 * _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 <details><summary>context</summary>
@@ -1808,7 +1808,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**3x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
+**3x**: _2026-03-26 03:48:42 &#43;0000 UTC_: <code>04:06:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037013641730985984#1:build-log.txt%3A4356)
 <details>
 <summary>all...</summary>
 
@@ -1923,31 +1923,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (1x / 0.58%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
-<details><summary>context</summary>
-<pre>08:57:20: java.net.UnknownHostException: bazel-cache.kubevirt-prow
-08:57:20: INFO: Elapsed time: 0.497s, Critical Path: 0.06s
-08:57:20: INFO: 6 processes: 6 internal.
-08:57:20: ERROR: Build failed. Not running target
-make: *** [Makefile:28: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; check_for_panics</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 0.58%) </summary>
 
 <hr/>
@@ -1965,6 +1940,31 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 &#43; exit 2
 &#43; EXIT_VALUE=2
 &#43; set &#43;o xtrace</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 0.58%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details><summary>context</summary>
+<pre>08:57:20: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+08:57:20: INFO: Elapsed time: 0.497s, Critical Path: 0.06s
+08:57:20: INFO: 6 processes: 6 internal.
+08:57:20: ERROR: Build failed. Not running target
+make: *** [Makefile:28: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; check_for_panics</pre>
 </details>
 
 
@@ -2456,13 +2456,13 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 08:47:27 &#43;0000 UTC_: <code>08:56:00: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-network/2037088890619170816#1:build-log.txt%3A516)
 
-* _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037088891659358208#1:build-log.txt%3A518)
-
 * _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:52:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037088891520946176#1:build-log.txt%3A515)
 
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
+* _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037088891659358208#1:build-log.txt%3A518)
 
 * _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037088891369951232#1:build-log.txt%3A524)
+
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
 
 * _2026-03-26 07:56:52 &#43;0000 UTC_: <code>08:01:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037076170310160384#1:build-log.txt%3A511)
 
@@ -2498,11 +2498,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**8x**: _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
+**11x**: _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 
 * _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
 
@@ -2512,11 +2510,19 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:23: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037032781506154496#1:build-log.txt%3A522)
 
-* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
 
-* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
 
-* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
+
+* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
+
+* _2026-03-25 21:43:46 &#43;0000 UTC_: <code>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036909664993546240#1:build-log.txt%3A565)
+
+* _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
+
+* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
 
 </details>
 
@@ -2530,9 +2536,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 01:49:28 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036983573042434048#1:build-log.txt%3A534)
 
-* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
-
 * _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036983575923920896#1:build-log.txt%3A480)
+
+* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
 
 * _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
 
@@ -2542,15 +2548,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 01:48:59 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036983575089254400#1:build-log.txt%3A505)
 
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
-
 * _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:53:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036983573973569536#1:build-log.txt%3A531)
+
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
 
 * _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:55:06: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036983573587693568#1:build-log.txt%3A540)
 
-* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
-
 * _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
+
+* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
 
 </details>
 
@@ -2578,21 +2584,11 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**6x**: _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
+**1x**: _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
-
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
-
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
-
-* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
-
-* _2026-03-25 21:43:46 &#43;0000 UTC_: <code>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036909664993546240#1:build-log.txt%3A565)
-
-* _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
+* _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 
 </details>
 
@@ -2626,33 +2622,33 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 00:46:32 &#43;0000 UTC_: <code>00:54:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-network/2036967848978419712#1:build-log.txt%3A451)
 
-* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
-
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036967849838252032#1:build-log.txt%3A446)
 
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036967847292309504#1:build-log.txt%3A508)
 
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
-
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
-
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
+* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
 
 * _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036967850643558400#1:build-log.txt%3A505)
 
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
+
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
+
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
+
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-network/2036967845614587904#1:build-log.txt%3A520)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
 
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:55:50: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036967845870440448#1:build-log.txt%3A504)
 
-* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
 
 * _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:52:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-compute/2036967846478614528#1:build-log.txt%3A510)
+
+* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
 
 * _2026-03-26 00:46:23 &#43;0000 UTC_: <code>00:54:50: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-windows2016/2036967844863807488#1:build-log.txt%3A520)
 
@@ -2670,7 +2666,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**7x**: _2026-03-25 22:08:13 &#43;0000 UTC_: <code>22:12:17: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036857991180849152#1:build-log.txt%3A346)
+**7x**: _2026-03-25 18:25:43 &#43;0000 UTC_: <code>18:30:50: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-windows2016/2036871960771694592#1:build-log.txt%3A468)
 <details>
 <summary>all...</summary>
 
@@ -2692,13 +2688,13 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**5x**: _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
+**5x**: _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 <details>
 <summary>all...</summary>
 
 * _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
 
-* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
 
 * _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 
@@ -2710,11 +2706,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**1x**: _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
+**3x**: _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
 <details>
 <summary>all...</summary>
 
-* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
+* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
+
+* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+
+* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
 
 </details>
 
@@ -2757,6 +2757,24 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
+**5x**: _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
+<details>
+<summary>all...</summary>
+
+* _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
+
+* _2026-03-24 05:48:40 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-kind-sriov/2036317747708694528#1:build-log.txt%3A6522)
+
+* _2026-03-23 17:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17225/pull-kubevirt-e2e-kind-1.35-vgpu/2036130015560601600#1:build-log.txt%3A4621)
+
+* _2026-03-23 13:15:38 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-kind-sriov/2036061047529410560#1:build-log.txt%3A3348)
+
+* _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
+
+</details>
+
+<hr/>
+
 **9x**: _2026-03-23 14:09:47 &#43;0000 UTC_: <code>14:16:40: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17065/pull-kubevirt-e2e-kind-1.34-sev/2036082886125293568#1:build-log.txt%3A1309)
 <details>
 <summary>all...</summary>
@@ -2783,24 +2801,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**5x**: _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
-<details>
-<summary>all...</summary>
-
-* _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
-
-* _2026-03-24 05:48:40 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-kind-sriov/2036317747708694528#1:build-log.txt%3A6522)
-
-* _2026-03-23 17:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17225/pull-kubevirt-e2e-kind-1.35-vgpu/2036130015560601600#1:build-log.txt%3A4621)
-
-* _2026-03-23 13:15:38 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-kind-sriov/2036061047529410560#1:build-log.txt%3A3348)
-
-* _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-03-26 06:47:21 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17273/pull-kubevirt-e2e-kind-1.34-sev/2037058711163244544#1:build-log.txt%3A5065)
 <details>
 <summary>all...</summary>
@@ -2816,11 +2816,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
+**5x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 <details>
 <summary>all...</summary>
 
 * _2026-03-26 08:52:44 &#43;0000 UTC_: <code>08:57:27: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 33 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037090118291951616#1:build-log.txt%3A439)
+
+* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
+
+* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
 
 * _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 
@@ -2830,13 +2834,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
+**1x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
-
-* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
 
 * _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 
@@ -2895,6 +2895,21 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <hr/>
 </details>
 <details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 0.60%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> failed external fetch in context (1x / 0.60%) </summary>
 
 <hr/>
@@ -2919,21 +2934,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <summary>all...</summary>
 
 * _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of &#39;/kubevirt/kubevirt,6b868b264dd2c4a4788a96bbe7462b63/cas/1c6882fc7400bd46e51aa4130768869fb62c82d129bba7bf916ca68ab6a2ac1c&#39; timed out. Received 21508688 of 24245460 bytes.</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-network/2037088891227344896#1:build-log.txt%3A466)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache IO failure (from secondary snippet) (1x / 0.60%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
 
 </details>
 
@@ -3222,9 +3222,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 08:47:26 &#43;0000 UTC_: <code>08:53:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037088891659358208#1:build-log.txt%3A518)
 
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037088891369951232#1:build-log.txt%3A524)
-
 * _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
+
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037088891369951232#1:build-log.txt%3A524)
 
 * _2026-03-26 07:56:52 &#43;0000 UTC_: <code>08:01:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037076170310160384#1:build-log.txt%3A511)
 
@@ -3234,13 +3234,37 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 07:47:38 &#43;0000 UTC_: <code>07:53:35: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-windows2016/2037073830886772736#1:build-log.txt%3A549)
 
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-network/2037073831499141120#1:build-log.txt%3A540)
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037073831637553152#1:build-log.txt%3A529)
 
 * _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-sig-compute/2037073835894771712#1:build-log.txt%3A511)
 
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037073831637553152#1:build-log.txt%3A529)
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-network/2037073831499141120#1:build-log.txt%3A540)
 
 * _2026-03-26 06:47:31 &#43;0000 UTC_: <code>06:51:22: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17273/pull-kubevirt-e2e-k8s-1.33-sig-compute/2037058711255519232#1:build-log.txt%3A424)
+
+</details>
+
+<hr/>
+
+**8x**: _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
+
+* _2026-03-26 05:04:28 &#43;0000 UTC_: <code>05:08:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037032781342576640#1:build-log.txt%3A534)
+
+* _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
+
+* _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:23: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037032781506154496#1:build-log.txt%3A522)
+
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
+
+* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
+
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
+
+* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
 
 </details>
 
@@ -3254,9 +3278,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 01:49:28 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036983573042434048#1:build-log.txt%3A534)
 
-* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
-
 * _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036983575923920896#1:build-log.txt%3A480)
+
+* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
 
 * _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
 
@@ -3266,15 +3290,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 01:48:59 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036983575089254400#1:build-log.txt%3A505)
 
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
-
 * _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:53:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036983573973569536#1:build-log.txt%3A531)
+
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:55:04: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036983578432114688#1:build-log.txt%3A527)
 
 * _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:55:06: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036983573587693568#1:build-log.txt%3A540)
 
-* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
-
 * _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
+
+* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
 
 </details>
 
@@ -3300,35 +3324,11 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**5x**: _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
+**1x**: _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
 <details>
 <summary>all...</summary>
 
 * _2026-03-26 05:04:37 &#43;0000 UTC_: <code>05:09:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2037032781271273472#1:build-log.txt%3A572)
-
-* _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
-
-* _2026-03-26 05:04:28 &#43;0000 UTC_: <code>05:08:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037032781342576640#1:build-log.txt%3A534)
-
-* _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
-
-* _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:23: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037032781506154496#1:build-log.txt%3A522)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
-
-* _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036983579300335616#1:build-log.txt%3A541)
-
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
-
-* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
 
 </details>
 
@@ -3362,33 +3362,33 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 00:46:32 &#43;0000 UTC_: <code>00:54:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-network/2036967848978419712#1:build-log.txt%3A451)
 
-* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036967847292309504#1:build-log.txt%3A508)
-
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036967849838252032#1:build-log.txt%3A446)
+
+* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036967847292309504#1:build-log.txt%3A508)
 
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
 
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
-
 * _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
 
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036967850643558400#1:build-log.txt%3A505)
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
 
 * _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
 
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-network/2036967845614587904#1:build-log.txt%3A520)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036967850643558400#1:build-log.txt%3A505)
 
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:55:50: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036967845870440448#1:build-log.txt%3A504)
 
-* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-network/2036967845614587904#1:build-log.txt%3A520)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
 
 * _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:52:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-compute/2036967846478614528#1:build-log.txt%3A510)
+
+* _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-monitoring/2036967845480370176#1:build-log.txt%3A508)
 
 * _2026-03-26 00:46:23 &#43;0000 UTC_: <code>00:54:50: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-windows2016/2036967844863807488#1:build-log.txt%3A520)
 
@@ -3401,11 +3401,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
+**5x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 <details>
 <summary>all...</summary>
 
 * _2026-03-26 08:52:44 &#43;0000 UTC_: <code>08:57:27: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 33 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037090118291951616#1:build-log.txt%3A439)
+
+* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
+
+* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
 
 * _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 
@@ -3415,13 +3419,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
+**1x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
-
-* _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
 
 * _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
 
@@ -3682,7 +3682,23 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**7x**: _2026-03-25 22:08:13 &#43;0000 UTC_: <code>22:12:17: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036857991180849152#1:build-log.txt%3A346)
+**4x**: _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
+<details>
+<summary>all...</summary>
+
+* _2026-03-25 23:46:23 &#43;0000 UTC_: <code>23:50:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036952734418079744#1:build-log.txt%3A498)
+
+* _2026-03-25 21:47:42 &#43;0000 UTC_: <code>21:52:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036892374516371456#1:build-log.txt%3A439)
+
+* _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
+
+* _2026-03-25 21:46:12 &#43;0000 UTC_: <code>21:51:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-network/2036892370359816192#1:build-log.txt%3A487)
+
+</details>
+
+<hr/>
+
+**7x**: _2026-03-25 18:25:43 &#43;0000 UTC_: <code>18:30:50: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-windows2016/2036871960771694592#1:build-log.txt%3A468)
 <details>
 <summary>all...</summary>
 
@@ -3704,29 +3720,13 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**4x**: _2026-03-25 21:47:42 &#43;0000 UTC_: <code>21:52:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036892374516371456#1:build-log.txt%3A439)
-<details>
-<summary>all...</summary>
-
-* _2026-03-25 23:46:23 &#43;0000 UTC_: <code>23:50:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036952734418079744#1:build-log.txt%3A498)
-
-* _2026-03-25 21:47:42 &#43;0000 UTC_: <code>21:52:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036892374516371456#1:build-log.txt%3A439)
-
-* _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
-
-* _2026-03-25 21:46:12 &#43;0000 UTC_: <code>21:51:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-network/2036892370359816192#1:build-log.txt%3A487)
-
-</details>
-
-<hr/>
-
-**5x**: _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
+**5x**: _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 <details>
 <summary>all...</summary>
 
 * _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
 
-* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
 
 * _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 
@@ -3738,7 +3738,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+**3x**: _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
 <details>
 <summary>all...</summary>
 
@@ -3752,13 +3752,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**2x**: _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
+**3x**: _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
 <details>
 <summary>all...</summary>
 
 * _2026-03-25 21:43:46 &#43;0000 UTC_: <code>21:50:52: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036909664993546240#1:build-log.txt%3A565)
 
 * _2026-03-25 21:08:47 &#43;0000 UTC_: <code>21:13:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036912517216735232#1:build-log.txt%3A557)
+
+* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
 
 </details>
 
@@ -3769,16 +3771,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <summary>all...</summary>
 
 * _2026-03-25 20:46:36 &#43;0000 UTC_: <code>20:51:59: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036906547623235584#1:build-log.txt%3A519)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
-<details>
-<summary>all...</summary>
-
-* _2026-03-25 19:52:50 &#43;0000 UTC_: <code>19:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-network/2036892366677217280#1:build-log.txt%3A529)
 
 </details>
 
@@ -4049,21 +4041,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-23 13:47:24 &#43;0000 UTC_: <code>14:03:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036077235785437184#1:build-log.txt%3A4214)
-<details>
-<summary>all...</summary>
-
-* _2026-03-23 13:47:24 &#43;0000 UTC_: <code>14:03:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036077235785437184#1:build-log.txt%3A4214)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 7.69%) </summary>
 
 <hr/>
@@ -4073,6 +4050,21 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <summary>all...</summary>
 
 * _2026-03-23 13:47:28 &#43;0000 UTC_: <code>14:03:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036077235860934656#1:build-log.txt%3A4345)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-23 13:47:24 &#43;0000 UTC_: <code>14:03:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036077235785437184#1:build-log.txt%3A4214)
+<details>
+<summary>all...</summary>
+
+* _2026-03-23 13:47:24 &#43;0000 UTC_: <code>14:03:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036077235785437184#1:build-log.txt%3A4214)
 
 </details>
 
@@ -4139,6 +4131,166 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 ## per SIG [⬆](#top)
 
 
+### sig-storage (27x / 15.70%)
+
+
+#### external (27x / 100.00%)
+
+<details>
+<summary> bazel remote cache blob fetch failure (22x / 81.48%) </summary>
+
+<hr/>
+
+**4x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:52:26: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037088894213689344#1:build-log.txt%3A518)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:52:26: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037088894213689344#1:build-log.txt%3A518)
+
+* _2026-03-26 07:47:36 &#43;0000 UTC_: <code>07:54:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037073835026550784#1:build-log.txt%3A532)
+
+* _2026-03-25 23:46:23 &#43;0000 UTC_: <code>23:50:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036952734418079744#1:build-log.txt%3A498)
+
+* _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
+
+</details>
+
+<hr/>
+
+**4x**: _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 05:04:28 &#43;0000 UTC_: <code>05:08:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037032781342576640#1:build-log.txt%3A534)
+
+* _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
+
+* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:53:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036983573973569536#1:build-log.txt%3A531)
+
+* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
+
+</details>
+
+<hr/>
+
+**6x**: _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037088891369951232#1:build-log.txt%3A524)
+
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037073831637553152#1:build-log.txt%3A529)
+
+* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036967849838252032#1:build-log.txt%3A446)
+
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
+
+* _2026-03-25 22:28:59 &#43;0000 UTC_: <code>22:35:02: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036892367205699584#1:build-log.txt%3A517)
+
+</details>
+
+<hr/>
+
+**5x**: _2026-03-25 20:46:36 &#43;0000 UTC_: <code>20:51:59: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036906547623235584#1:build-log.txt%3A519)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 07:56:52 &#43;0000 UTC_: <code>08:01:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037076170310160384#1:build-log.txt%3A511)
+
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:44: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037073831281037312#1:build-log.txt%3A530)
+
+* _2026-03-26 05:47:21 &#43;0000 UTC_: <code>05:51:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037043575102902272#1:build-log.txt%3A550)
+
+* _2026-03-26 04:47:33 &#43;0000 UTC_: <code>04:53:53: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037028524841242624#1:build-log.txt%3A499)
+
+* _2026-03-25 20:46:36 &#43;0000 UTC_: <code>20:51:59: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036906547623235584#1:build-log.txt%3A519)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-25 21:48:21 &#43;0000 UTC_: <code>21:51:40: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:93:10: OCI Image //containerimages:fedora-with-test-tooling failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036892400621719552#1:build-log.txt%3A438)
+<details>
+<summary>all...</summary>
+
+* _2026-03-25 21:48:21 &#43;0000 UTC_: <code>21:51:40: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:93:10: OCI Image //containerimages:fedora-with-test-tooling failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036892400621719552#1:build-log.txt%3A438)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+<details>
+<summary>all...</summary>
+
+* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-03-25 17:27:42 &#43;0000 UTC_: <code>19:27:04: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036873472784732160#1:build-log.txt%3A385)
+<details>
+<summary>all...</summary>
+
+* _2026-03-25 17:27:42 &#43;0000 UTC_: <code>19:27:04: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036873472784732160#1:build-log.txt%3A385)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache connection timeout (2x / 7.41%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-26 08:47:24 &#43;0000 UTC_: <code>08:59:51: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037088890786942976#1:build-log.txt%3A971)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+
+* _2026-03-26 08:47:24 &#43;0000 UTC_: <code>08:59:51: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037088890786942976#1:build-log.txt%3A971)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache IO failure (2x / 7.41%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:52:44 &#43;0000 UTC_: <code>08:57:27: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 33 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037090118291951616#1:build-log.txt%3A439)
+
+* _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 3.70%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
+<details>
+<summary>all...</summary>
+
+* _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-compute (104x / 60.47%)
 
 
@@ -4181,7 +4333,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**5x**: _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:54: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2037032781178998784#1:build-log.txt%3A529)
+**7x**: _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
 <details>
 <summary>all...</summary>
 
@@ -4190,18 +4342,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 * _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037032781090918400#1:build-log.txt%3A632)
 
 * _2026-03-26 05:04:26 &#43;0000 UTC_: <code>05:10:23: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037032781506154496#1:build-log.txt%3A522)
-
-* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
-
-* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
-<details>
-<summary>all...</summary>
 
 * _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036983573143097344#1:build-log.txt%3A615)
 
@@ -4221,9 +4361,9 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 05:04:29 &#43;0000 UTC_: <code>05:08:51: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute/2037032781422268416#1:build-log.txt%3A541)
 
-* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036983575923920896#1:build-log.txt%3A480)
-
 * _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:05: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-windows2016/2036983572635586560#1:build-log.txt%3A561)
+
+* _2026-03-26 01:49:19 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036983575923920896#1:build-log.txt%3A480)
 
 * _2026-03-26 01:49:01 &#43;0000 UTC_: <code>01:57:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: Running nogo on //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2036983574225227776#1:build-log.txt%3A534)
 
@@ -4271,17 +4411,17 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 00:46:37 &#43;0000 UTC_: <code>00:55:44: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-operator/2036967851490807808#1:build-log.txt%3A510)
 
-* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036967847292309504#1:build-log.txt%3A508)
-
 * _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036967848152141824#1:build-log.txt%3A478)
 
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036967850643558400#1:build-log.txt%3A505)
+* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-operator/2036967847292309504#1:build-log.txt%3A508)
 
 * _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-operator/2036967846004658176#1:build-log.txt%3A506)
 
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
+* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute/2036967850643558400#1:build-log.txt%3A505)
 
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:55:50: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036967845870440448#1:build-log.txt%3A504)
+
+* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:52:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036967845358735360#1:build-log.txt%3A588)
 
 * _2026-03-26 00:46:25 &#43;0000 UTC_: <code>00:52:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-compute/2036967846478614528#1:build-log.txt%3A510)
 
@@ -4295,7 +4435,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**5x**: _2026-03-25 22:08:13 &#43;0000 UTC_: <code>22:12:17: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036857991180849152#1:build-log.txt%3A346)
+**5x**: _2026-03-25 18:25:43 &#43;0000 UTC_: <code>18:30:50: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-windows2016/2036871960771694592#1:build-log.txt%3A468)
 <details>
 <summary>all...</summary>
 
@@ -4313,7 +4453,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-25 19:56:46 &#43;0000 UTC_: <code>20:08:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-compute/2036892366803046400#1:build-log.txt%3A506)
+**3x**: _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 <details>
 <summary>all...</summary>
 
@@ -4322,6 +4462,18 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 * _2026-03-25 19:52:47 &#43;0000 UTC_: <code>19:56:55: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036892366597525504#1:build-log.txt%3A586)
 
 * _2026-03-25 19:46:36 &#43;0000 UTC_: <code>19:51:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-windows2016/2036892366194872320#1:build-log.txt%3A512)
+
+</details>
+
+<hr/>
+
+**2x**: _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
+<details>
+<summary>all...</summary>
+
+* _2026-03-25 21:36:01 &#43;0000 UTC_: <code>21:40:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2036909661638103040#1:build-log.txt%3A555)
+
+* _2026-03-25 21:35:18 &#43;0000 UTC_: <code>21:41:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2036909659150880768#1:build-log.txt%3A648)
 
 </details>
 
@@ -4358,7 +4510,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-23 11:28:30 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17250/pull-kubevirt-e2e-kind-1.35-vgpu/2036042272675467264#1:build-log.txt%3A4433)
+**3x**: _2026-03-24 06:43:08 &#43;0000 UTC_: <code>make: *** [Makefile:188: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2036332853876232192#1:build-log.txt%3A4688)
 <details>
 <summary>all...</summary>
 
@@ -4418,7 +4570,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**2x**: _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:58:56: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vsock/system/BUILD.bazel:3:11 Validating nogo output for //pkg/virt-handler/vsock/system:go_default_library failed: Exec failed due to IOException: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-operator/2037088895878828032#1:build-log.txt%3A883)
+**2x**: _2026-03-26 08:52:30 &#43;0000 UTC_: <code>08:58:24: ERROR: /root/go/src/kubevirt.io/kubevirt/tools/csv-generator/BUILD.bazel:16:10 Validating nogo output for //tools/csv-generator:csv-generator failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-compute/2037090114504495104#1:build-log.txt%3A490)
 <details>
 <summary>all...</summary>
 
@@ -4431,15 +4583,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 0.96%) </summary>
+<summary> podman container removal timeout (1x / 0.96%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-26 03:48:42 &#43;0000 UTC_: <code>04:06:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037013641730985984#1:build-log.txt%3A4356)
+**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 03:48:42 &#43;0000 UTC_: <code>04:06:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037013641730985984#1:build-log.txt%3A4356)
+* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
 
 </details>
 
@@ -4461,15 +4613,15 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 0.96%) </summary>
+<summary> download failure in context (1x / 0.96%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+**1x**: _2026-03-26 03:48:42 &#43;0000 UTC_: <code>04:06:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037013641730985984#1:build-log.txt%3A4356)
 <details>
 <summary>all...</summary>
 
-* _2026-03-24 13:09:20 &#43;0000 UTC_: <code>13:25:22: Error: cannot remove container 2f1cf993a4a9c84d32a41e048f8e0eb6c0008584f22cfe56f9d1133657d2cc05 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17271/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2036429922599178240#1:build-log.txt%3A1559)
+* _2026-03-26 03:48:42 &#43;0000 UTC_: <code>04:06:36: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17251/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2037013641730985984#1:build-log.txt%3A4356)
 
 </details>
 
@@ -4680,32 +4832,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**3x**: _2026-03-26 01:49:28 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036983573042434048#1:build-log.txt%3A534)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 01:49:28 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036983573042434048#1:build-log.txt%3A534)
-
-* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
-
-* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
-
-</details>
-
-<hr/>
-
-**2x**: _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
-
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037073831012601856#1:build-log.txt%3A540)
-
-</details>
-
-<hr/>
-
 **2x**: _2026-03-26 07:47:38 &#43;0000 UTC_: <code>07:53:21: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.33-sig-network/2037073831209734144#1:build-log.txt%3A540)
 <details>
 <summary>all...</summary>
@@ -4728,25 +4854,31 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**1x**: _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
+**5x**: _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
 <details>
 <summary>all...</summary>
 
+* _2026-03-26 01:49:28 &#43;0000 UTC_: <code>01:59:14: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11 Validating nogo output for //tests/virtctl:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036983573042434048#1:build-log.txt%3A534)
+
 * _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:56:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-network/2036983576750198784#1:build-log.txt%3A549)
+
+* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:55:16: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2036983573851934720#1:build-log.txt%3A538)
+
+* _2026-03-26 01:48:56 &#43;0000 UTC_: <code>01:54:56: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2036983573382172672#1:build-log.txt%3A538)
+
+* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
 
 </details>
 
 <hr/>
 
-**8x**: _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:54:11: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2036967845245489152#1:build-log.txt%3A517)
+**6x**: _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:51:57: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-network/2036967846151458816#1:build-log.txt%3A521)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 08:47:27 &#43;0000 UTC_: <code>08:56:00: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-network/2037088890619170816#1:build-log.txt%3A516)
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:53:12: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037088890333958144#1:build-log.txt%3A516)
 
-* _2026-03-26 07:47:38 &#43;0000 UTC_: <code>07:51:30: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-sig-network/2037073834191884288#1:build-log.txt%3A524)
-
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-network/2037073831499141120#1:build-log.txt%3A540)
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:36: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2037073831012601856#1:build-log.txt%3A540)
 
 * _2026-03-26 00:46:32 &#43;0000 UTC_: <code>00:54:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-network/2036967848978419712#1:build-log.txt%3A451)
 
@@ -4756,17 +4888,21 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 * _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:53:15: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-network/2036967845614587904#1:build-log.txt%3A520)
 
-* _2026-03-25 22:28:15 &#43;0000 UTC_: <code>22:33:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-sig-network/2036892367029538816#1:build-log.txt%3A529)
-
 </details>
 
 <hr/>
 
-**1x**: _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
+**4x**: _2026-03-25 22:28:15 &#43;0000 UTC_: <code>22:33:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-sig-network/2036892367029538816#1:build-log.txt%3A529)
 <details>
 <summary>all...</summary>
 
-* _2026-03-25 21:37:27 &#43;0000 UTC_: <code>21:42:31: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-network/2036909662514712576#1:build-log.txt%3A542)
+* _2026-03-26 08:47:27 &#43;0000 UTC_: <code>08:56:00: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-network/2037088890619170816#1:build-log.txt%3A516)
+
+* _2026-03-26 07:47:38 &#43;0000 UTC_: <code>07:51:30: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-sig-network/2037073834191884288#1:build-log.txt%3A524)
+
+* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:51:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-network/2037073831499141120#1:build-log.txt%3A540)
+
+* _2026-03-25 22:28:15 &#43;0000 UTC_: <code>22:33:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-sig-network/2036892367029538816#1:build-log.txt%3A529)
 
 </details>
 
@@ -4784,7 +4920,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**2x**: _2026-03-25 18:30:51 &#43;0000 UTC_: <code>18:37:58: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-network/2036873262641713152#1:build-log.txt%3A469)
+**2x**: _2026-03-25 17:45:13 &#43;0000 UTC_: <code>17:48:29: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-sig-network/2036861683703484416#1:build-log.txt%3A432)
 <details>
 <summary>all...</summary>
 
@@ -4850,7 +4986,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 
-**2x**: _2026-03-26 08:52:43 &#43;0000 UTC_: <code>08:57:26: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/libvirt-hook-client/BUILD.bazel:10:10: GoCompilePkg cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client.a failed: Exec failed due to IOException: 351 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-network/2037090113296535552#1:build-log.txt%3A760)
+**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>08:57:24: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 73 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-network/2037090114290585600#1:build-log.txt%3A725)
 <details>
 <summary>all...</summary>
 
@@ -4867,36 +5003,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <summary>all...</summary>
 
 * _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:55:51: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/pierrec/lz4/v4/internal/xxh32/BUILD.bazel:3:11: Validating nogo output for //vendor/github.com/pierrec/lz4/v4/internal/xxh32:go_default_library failed: Exec failed due to IOException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-network/2037088893345468416#1:build-log.txt%3A467)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache IO failure (from secondary snippet) (1x / 2.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache download timeout (1x / 2.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of &#39;/kubevirt/kubevirt,6b868b264dd2c4a4788a96bbe7462b63/cas/1c6882fc7400bd46e51aa4130768869fb62c82d129bba7bf916ca68ab6a2ac1c&#39; timed out. Received 21508688 of 24245460 bytes.</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-network/2037088891227344896#1:build-log.txt%3A466)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of &#39;/kubevirt/kubevirt,6b868b264dd2c4a4788a96bbe7462b63/cas/1c6882fc7400bd46e51aa4130768869fb62c82d129bba7bf916ca68ab6a2ac1c&#39; timed out. Received 21508688 of 24245460 bytes.</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-network/2037088891227344896#1:build-log.txt%3A466)
 
 </details>
 
@@ -4932,6 +5038,36 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 2.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:34:18 &#43;0000 UTC_: <code>08:57:20: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17240/pull-kubevirt-e2e-k8s-1.34-sig-network/2037085594298880000#1:build-log.txt%3A4832)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache download timeout (1x / 2.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of &#39;/kubevirt/kubevirt,6b868b264dd2c4a4788a96bbe7462b63/cas/1c6882fc7400bd46e51aa4130768869fb62c82d129bba7bf916ca68ab6a2ac1c&#39; timed out. Received 21508688 of 24245460 bytes.</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-network/2037088891227344896#1:build-log.txt%3A466)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:54:51: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportproxy/BUILD.bazel:27:10: GoLink cmd/virt-exportproxy/virt-exportproxy_/virt-exportproxy failed: Exec failed due to IOException: Download of &#39;/kubevirt/kubevirt,6b868b264dd2c4a4788a96bbe7462b63/cas/1c6882fc7400bd46e51aa4130768869fb62c82d129bba7bf916ca68ab6a2ac1c&#39; timed out. Received 21508688 of 24245460 bytes.</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-network/2037088891227344896#1:build-log.txt%3A466)
+
+</details>
+
+<hr/>
+</details>
 
 #### internal (1x / 2.50%)
 
@@ -4945,166 +5081,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <summary>all...</summary>
 
 * _2026-03-25 08:15:24 &#43;0000 UTC_: <code>08:24:55: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17069/pull-kubevirt-e2e-kind-sriov/2036714041346363392#1:build-log.txt%3A1533)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-storage (27x / 15.70%)
-
-
-#### external (27x / 100.00%)
-
-<details>
-<summary> bazel remote cache blob fetch failure (22x / 81.48%) </summary>
-
-<hr/>
-
-**4x**: _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 05:04:28 &#43;0000 UTC_: <code>05:08:25: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037032781342576640#1:build-log.txt%3A534)
-
-* _2026-03-26 01:49:16 &#43;0000 UTC_: <code>01:59:08: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036983573491224576#1:build-log.txt%3A496)
-
-* _2026-03-26 01:48:58 &#43;0000 UTC_: <code>01:53:34: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/virtctl/BUILD.bazel:3:11: GoCompilePkg tests/virtctl/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036983573973569536#1:build-log.txt%3A531)
-
-* _2026-03-26 01:48:57 &#43;0000 UTC_: <code>01:54:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036983577610031104#1:build-log.txt%3A481)
-
-</details>
-
-<hr/>
-
-**6x**: _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:47:25 &#43;0000 UTC_: <code>08:52:38: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037088891369951232#1:build-log.txt%3A524)
-
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:29: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037073831637553152#1:build-log.txt%3A529)
-
-* _2026-03-26 00:46:28 &#43;0000 UTC_: <code>00:52:46: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036967849838252032#1:build-log.txt%3A446)
-
-* _2026-03-26 00:46:27 &#43;0000 UTC_: <code>00:52:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036967845736222720#1:build-log.txt%3A484)
-
-* _2026-03-26 00:46:26 &#43;0000 UTC_: <code>00:51:42: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17253/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036967846302453760#1:build-log.txt%3A509)
-
-* _2026-03-25 22:28:59 &#43;0000 UTC_: <code>22:35:02: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: GoCompilePkg tests/go_default_test.internal.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036892367205699584#1:build-log.txt%3A517)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:47:28 &#43;0000 UTC_: <code>08:52:26: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037088894213689344#1:build-log.txt%3A518)
-
-* _2026-03-26 07:47:36 &#43;0000 UTC_: <code>07:54:01: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037073835026550784#1:build-log.txt%3A532)
-
-* _2026-03-25 23:46:23 &#43;0000 UTC_: <code>23:50:45: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036952734418079744#1:build-log.txt%3A498)
-
-* _2026-03-25 21:47:10 &#43;0000 UTC_: <code>21:51:33: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036922551527018496#1:build-log.txt%3A509)
-
-</details>
-
-<hr/>
-
-**5x**: _2026-03-25 20:46:36 &#43;0000 UTC_: <code>20:51:59: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036906547623235584#1:build-log.txt%3A519)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 07:56:52 &#43;0000 UTC_: <code>08:01:18: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037076170310160384#1:build-log.txt%3A511)
-
-* _2026-03-26 07:47:37 &#43;0000 UTC_: <code>07:53:44: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16842/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037073831281037312#1:build-log.txt%3A530)
-
-* _2026-03-26 05:47:21 &#43;0000 UTC_: <code>05:51:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17276/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037043575102902272#1:build-log.txt%3A550)
-
-* _2026-03-26 04:47:33 &#43;0000 UTC_: <code>04:53:53: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17087/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037028524841242624#1:build-log.txt%3A499)
-
-* _2026-03-25 20:46:36 &#43;0000 UTC_: <code>20:51:59: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8: Running nogo on //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: a72f131812f04bc6dd583d392bb3fb253b5db26a4c0694fda7cb33bc77ac4e83/139666 for bazel-out/k8-fastbuild/bin/tests/virtctl/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036906547623235584#1:build-log.txt%3A519)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-25 21:48:21 &#43;0000 UTC_: <code>21:51:40: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:93:10: OCI Image //containerimages:fedora-with-test-tooling failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036892400621719552#1:build-log.txt%3A438)
-<details>
-<summary>all...</summary>
-
-* _2026-03-25 21:48:21 &#43;0000 UTC_: <code>21:51:40: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:93:10: OCI Image //containerimages:fedora-with-test-tooling failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.33-sig-storage/2036892400621719552#1:build-log.txt%3A438)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
-<details>
-<summary>all...</summary>
-
-* _2026-03-25 19:56:13 &#43;0000 UTC_: <code>20:02:40: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16889/pull-kubevirt-e2e-k8s-1.35-sig-storage/2036894133938819072#1:build-log.txt%3A522)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-03-25 17:27:42 &#43;0000 UTC_: <code>19:27:04: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036873472784732160#1:build-log.txt%3A385)
-<details>
-<summary>all...</summary>
-
-* _2026-03-25 17:27:42 &#43;0000 UTC_: <code>19:27:04: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:113:10: OCI Image //containerimages:alpine-ext-kernel-boot-demo-container failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17138/pull-kubevirt-e2e-k8s-1.34-sig-storage/2036873472784732160#1:build-log.txt%3A385)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache connection timeout (2x / 7.41%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-26 08:47:24 &#43;0000 UTC_: <code>08:59:51: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037088890786942976#1:build-log.txt%3A971)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
-
-* _2026-03-26 08:47:24 &#43;0000 UTC_: <code>08:59:51: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.173.157:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17042/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037088890786942976#1:build-log.txt%3A971)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache IO failure (2x / 7.41%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:52:44 &#43;0000 UTC_: <code>08:57:27: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-controller/BUILD.bazel:16:10 Validating nogo output for //cmd/virt-controller:virt-controller failed: Exec failed due to IOException: 33 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.35-sig-storage/2037090118291951616#1:build-log.txt%3A439)
-
-* _2026-03-26 08:52:20 &#43;0000 UTC_: <code>08:57:23: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-exportserver/BUILD.bazel:20:10: GoLink cmd/virt-exportserver/virt-exportserver_/virt-exportserver failed: Exec failed due to IOException: 161 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.33-sig-storage/2037090113539805184#1:build-log.txt%3A479)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 3.70%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
-<details>
-<summary>all...</summary>
-
-* _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
 
 </details>
 
@@ -5132,4 +5108,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1725
 <hr/>
 </details>
 
-Last updated: 2026-03-29 18:17:47
+Last updated: 2026-03-29 21:21:22
