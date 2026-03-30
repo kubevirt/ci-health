@@ -55,6 +55,13 @@ var (
 		Short: "Generate YAML files and full Markdown summary report.",
 		RunE:  generateReport,
 	}
+
+	analyzeBuildCmd = &cobra.Command{
+		Use:   "analyze-build [prow-job-url]",
+		Short: "Analyze a single build failure given a Prow job URL and output YAML.",
+		Args:  cobra.ExactArgs(1),
+		RunE:  analyzeBuild,
+	}
 )
 
 func generateReport(cmd *cobra.Command, args []string) error {
@@ -164,11 +171,33 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 	return nil
 }
 
+func analyzeBuild(_ *cobra.Command, args []string) error {
+	prowJobURL := args[0]
+
+	jobBuildErrors, err := cifailures.AnalyzeBuild(prowJobURL)
+	if err != nil {
+		return fmt.Errorf("failed to analyze build: %v", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("%s.yaml", jobBuildErrors.JobName))
+	if err = cifailures.WriteJobBuildErrorsYAML(outputPath, jobBuildErrors); err != nil {
+		return fmt.Errorf("failed to write YAML output: %v", err)
+	}
+
+	log.Printf("wrote analysis to %s", outputPath)
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
 
 	rootCmd.AddCommand(generateCmd)
+	rootCmd.AddCommand(analyzeBuildCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)

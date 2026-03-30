@@ -22,8 +22,6 @@ import (
 const logsDir = "output/tmp/build-logs"
 
 var (
-	jobNamePattern = regexp.MustCompile(`.*(pull-kubevirt-[^/]+).*`)
-
 	// Regex to find errors in log files
 	// make: *** [Makefile:174: cluster-sync] Error 125
 	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |^make:.*Error (1[0-9]+|[2-9][0-9]*)`)
@@ -179,11 +177,10 @@ func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 
 			lines := strings.Split(log.LogContent, "\n")
 
-			jobNameSubmatch := jobNamePattern.FindStringSubmatch(ciFailureJobURL)
-			if len(jobNameSubmatch) < 2 {
-				return nil, fmt.Errorf("could not extract job name from URL: %s", ciFailureJobURL)
+			jobName, err := jobNameFromURL(ciFailureJobURL)
+			if err != nil {
+				return nil, err
 			}
-			jobName := jobNameSubmatch[1]
 
 			jobErrorsForJob, exists := jobErrorsByJobName[jobName]
 			if !exists {
@@ -377,6 +374,14 @@ func retrieveFileContentFromGCS(url string) ([]byte, error) {
 		return nil, fmt.Errorf("failed to read content body from %s: %v", url, err)
 	}
 	return gcsFileContent, nil
+}
+
+func jobNameFromURL(jobURL string) (string, error) {
+	jobName := filepath.Base(filepath.Dir(jobURL))
+	if jobName == "." || jobName == "/" {
+		return "", fmt.Errorf("could not extract job name from URL: %s", jobURL)
+	}
+	return jobName, nil
 }
 
 func buildIDFromJobURL(url string) (int, error) {
