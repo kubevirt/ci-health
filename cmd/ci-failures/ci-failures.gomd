@@ -66,14 +66,14 @@
 
 # CI failures for {{$.Org}}/{{$.Repo}}
 
+- [per day](#per-day)
 - [per error category](#per-error-category)
 - [per branch](#per-branch)
-- [per day](#per-day)
 - [per SIG](#per-sig)
 
+{{ template "failures" $.FailuresPerDay }}
 {{ template "categorized-failures" $.FailuresPerCategory }}
 {{ template "failures" $.FailuresPerBranch }}
-{{ template "failures" $.FailuresPerDay }}
 {{ template "failures" $.FailuresPerSIG }}
 
 Last updated: {{ $.Date }}
