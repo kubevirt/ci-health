@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-03-31 (1x / 16.67%)
+### 2026-03-31 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-03-30 (1x / 16.67%)
+### 2026-03-30 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -59,7 +59,7 @@
 <hr/>
 </details>
 
-### 2026-03-29 (1x / 16.67%)
+### 2026-03-29 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -80,35 +80,17 @@
 <hr/>
 </details>
 
-### 2026-03-26 (3x / 50.00%)
+### 2026-03-26 (2x / 40.00%)
 
 
-#### internal (1x / 33.33%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
+<summary> bazel remote cache connection timeout (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 66.67%)
-
-<details>
-<summary> bazel remote cache connection timeout (2x / 66.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 <details>
 <summary>all...</summary>
 
@@ -126,51 +108,14 @@
 ## per error category [⬆](#top)
 
 
-### external (5x / 83.33%)
+### external (5x / 100.00%)
 
 <details>
-<summary> download failure in context (2x / 33.33%) </summary>
+<summary> bazel remote cache connection timeout (2x / 40.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details><summary>context</summary>
-<pre>14:25:07: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-14:25:07: INFO: Elapsed time: 0.472s
-14:25:07: INFO: 0 processes.
-14:25:07: ERROR: Build failed. Not running target
-14:25:09: &#43; rm -f /tmp/kubevirt.deploy.X7LK
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
-<details><summary>context</summary>
-<pre>10:53:31: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted:
-10:53:31: INFO: Elapsed time: 0.330s
-10:53:31: INFO: 0 processes.
-10:53:31: ERROR: Build failed. Not running target
-make: *** [Makefile:37: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache connection timeout (2x / 33.33%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 <details>
 <summary>all...</summary>
 
@@ -203,7 +148,44 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 16.67%) </summary>
+<summary> download failure in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+<details><summary>context</summary>
+<pre>14:25:07: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+14:25:07: INFO: Elapsed time: 0.472s
+14:25:07: INFO: 0 processes.
+14:25:07: ERROR: Build failed. Not running target
+14:25:09: &#43; rm -f /tmp/kubevirt.deploy.X7LK
+make: *** [Makefile:188: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
+<details><summary>context</summary>
+<pre>10:53:31: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted:
+10:53:31: INFO: Elapsed time: 0.330s
+10:53:31: INFO: 0 processes.
+10:53:31: ERROR: Build failed. Not running target
+make: *** [Makefile:37: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -228,50 +210,22 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### internal (1x / 16.67%)
-
-<details>
-<summary> kind cluster creation failure (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-<details><summary>context</summary>
-<pre>09:28:58:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
-09:28:58:  • Preparing nodes 📦 📦   ...
-09:29:01:  ✗ Preparing nodes 📦 📦
-09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-09:29:01:
-09:29:01: Stack Trace:
-09:29:01: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (5x / 83.33%)
+### main (4x / 80.00%)
 
 
-#### external (4x / 80.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (2x / 40.00%) </summary>
+<summary> bazel remote cache connection timeout (2x / 50.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 <details>
 <summary>all...</summary>
 
@@ -284,22 +238,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> failed external fetch in context (1x / 20.00%) </summary>
+<summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -313,26 +252,23 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
-
-#### internal (1x / 20.00%)
-
 <details>
-<summary> kind cluster creation failure (1x / 20.00%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
+**1x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
+* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 
 </details>
 
 <hr/>
 </details>
 
-### release-1.7 (1x / 16.67%)
+### release-1.7 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -358,13 +294,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-compute (4x / 66.67%)
+### sig-compute (3x / 60.00%)
 
 
-#### external (3x / 75.00%)
+#### external (3x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (1x / 25.00%) </summary>
+<summary> bazel remote cache connection timeout (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -379,7 +315,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -394,7 +330,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 25.00%) </summary>
+<summary> failed external fetch in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -409,25 +345,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### internal (1x / 25.00%)
-
-<details>
-<summary> kind cluster creation failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 09:22:19 &#43;0000 UTC_: <code>09:29:01: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17296/pull-kubevirt-e2e-kind-1.34-sev/2037097667556806656#1:build-log.txt%3A816)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-storage (2x / 33.33%)
+### sig-storage (2x / 40.00%)
 
 
 #### external (2x / 100.00%)
@@ -463,4 +381,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-04-02 09:33:04
+Last updated: 2026-04-02 12:26:58
