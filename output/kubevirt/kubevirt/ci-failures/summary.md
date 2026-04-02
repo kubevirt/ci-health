@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-03-31 (1x / 20.00%)
+### 2026-03-31 (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -38,19 +38,38 @@
 <hr/>
 </details>
 
-### 2026-03-30 (1x / 20.00%)
+### 2026-03-30 (4x / 57.14%)
 
 
-#### external (1x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> container image pull failure in context (2x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+**2x**: _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
 <details>
 <summary>all...</summary>
+
+* _2026-03-30 20:19:50 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-network/2038608442087706624#1:build-log.txt%3A237)
+
+* _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (2x / 50.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
 
 * _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 
@@ -59,7 +78,7 @@
 <hr/>
 </details>
 
-### 2026-03-29 (1x / 20.00%)
+### 2026-03-29 (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -80,21 +99,19 @@
 <hr/>
 </details>
 
-### 2026-03-26 (2x / 40.00%)
+### 2026-03-26 (1x / 14.29%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (2x / 100.00%) </summary>
+<summary> bazel remote cache connection timeout (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+**1x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 <details>
 <summary>all...</summary>
-
-* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
 
 * _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 
@@ -108,53 +125,28 @@
 ## per error category [⬆](#top)
 
 
-### external (5x / 100.00%)
+### external (7x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (2x / 40.00%) </summary>
+<summary> download failure in context (3x / 42.86%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+**3x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
 <details><summary>context</summary>
-<pre>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:169&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.Options.ExecuteProcess&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not finish before 4h0m0s timeout&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T12:53:09Z&#34;}
-{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:267&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.gracefullyTerminate&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not exit before 5m0s grace period&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T12:58:09Z&#34;}
-</pre>
+<pre>20:02:40: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+20:02:40: INFO: Elapsed time: 0.474s
+20:02:40: INFO: 0 processes.
+20:02:40: ERROR: Build failed. Not running target
+20:02:42: &#43; rm -f /tmp/kubevirt.deploy.IbSk
+make: *** [Makefile:188: cluster-sync] Error 1
+&#43; ret=2</pre>
 </details>
 
-
-* _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
-<details><summary>context</summary>
-<pre>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
-{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:169&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.Options.ExecuteProcess&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not finish before 7h0m0s timeout&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T15:52:30Z&#34;}
-{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:267&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.gracefullyTerminate&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not exit before 5m0s grace period&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T15:57:30Z&#34;}
-</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
 
 * _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 <details><summary>context</summary>
@@ -185,7 +177,69 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 20.00%) </summary>
+<summary> container image pull failure in context (2x / 28.57%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 20:19:50 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-network/2038608442087706624#1:build-log.txt%3A237)
+<details><summary>context</summary>
+<pre>20:20:50: time=&#34;2026-03-30T20:20:50Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (2/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: Requesting bearer token: received unexpected HTTP status: 502 Bad Gateway&#34;
+20:20:59: time=&#34;2026-03-30T20:20:59Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (3/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: Requesting bearer token: received unexpected HTTP status: 502 Bad Gateway&#34;
+20:21:01: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 502 Bad Gateway
+make: *** [Makefile:39: bazel-build-images] Error 125
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+<details><summary>context</summary>
+<pre>20:21:20: time=&#34;2026-03-30T20:21:20Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (2/3). Error: copying system image from manifest list: determining manifest MIME type for docker://quay.io/kubevirt/builder:2602201229-4494d1587: reading manifest sha256:4cf5a164d0818ff8a3f05be1006bb2dd503e4f5d24c91df9cad845b3f9866102 in quay.io/kubevirt/builder: received unexpected HTTP status: 502 Bad Gateway&#34;
+20:21:28: time=&#34;2026-03-30T20:21:28Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (3/3). Error: copying system image from manifest list: determining manifest MIME type for docker://quay.io/kubevirt/builder:2602201229-4494d1587: reading manifest sha256:4cf5a164d0818ff8a3f05be1006bb2dd503e4f5d24c91df9cad845b3f9866102 in quay.io/kubevirt/builder: received unexpected HTTP status: 502 Bad Gateway&#34;
+20:21:29: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 502 Bad Gateway
+make: *** [Makefile:39: bazel-build-images] Error 125
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache connection timeout (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+<details>
+<summary>all...</summary>
+
+* _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+<details><summary>context</summary>
+<pre>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
+15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
+15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
+15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080
+{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:169&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.Options.ExecuteProcess&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not finish before 7h0m0s timeout&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T15:52:30Z&#34;}
+{&#34;component&#34;:&#34;entrypoint&#34;,&#34;file&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint/run.go:267&#34;,&#34;func&#34;:&#34;sigs.k8s.io/prow/pkg/entrypoint.gracefullyTerminate&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Process did not exit before 5m0s grace period&#34;,&#34;severity&#34;:&#34;error&#34;,&#34;time&#34;:&#34;2026-03-26T15:57:30Z&#34;}
+</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -215,21 +269,53 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per branch [⬆](#top)
 
 
-### main (4x / 80.00%)
+### main (6x / 85.71%)
 
 
-#### external (4x / 100.00%)
+#### external (6x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (2x / 50.00%) </summary>
+<summary> download failure in context (2x / 33.33%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
 <details>
 <summary>all...</summary>
 
-* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+
+* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (2x / 33.33%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 20:19:50 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-network/2038608442087706624#1:build-log.txt%3A237)
+
+* _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache connection timeout (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
+<details>
+<summary>all...</summary>
 
 * _2026-03-26 08:52:28 &#43;0000 UTC_: <code>15:28:16: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-operator/2037090115150417920#1:build-log.txt%3A1004)
 
@@ -238,7 +324,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 25.00%) </summary>
+<summary> failed external fetch in context (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -252,23 +338,8 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
-<details>
-<summary> download failure in context (1x / 25.00%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.7 (1x / 20.00%)
+### release-1.7 (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -294,13 +365,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 60.00%)
+### sig-compute (4x / 57.14%)
 
 
-#### external (3x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> bazel remote cache connection timeout (1x / 33.33%) </summary>
+<summary> bazel remote cache connection timeout (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -315,7 +386,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -330,7 +401,22 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 33.33%) </summary>
+<summary> container image pull failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 20:19:48 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2038608441399840768#1:build-log.txt%3A223)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -345,19 +431,42 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-storage (2x / 40.00%)
+### sig-network (1x / 14.29%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 20:19:50 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-network/2038608442087706624#1:build-log.txt%3A237)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 20:19:50 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-network/2038608442087706624#1:build-log.txt%3A237)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (2x / 28.57%)
 
 
 #### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
+<summary> download failure in context (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
+**2x**: _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
 <details>
 <summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
 
 * _2026-03-29 10:49:43 &#43;0000 UTC_: <code>10:53:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17227/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2038206823877578752#1:build-log.txt%3A309)
 
@@ -365,20 +474,5 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
-<details>
-<summary> bazel remote cache connection timeout (1x / 50.00%) </summary>
 
-<hr/>
-
-**1x**: _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
-<details>
-<summary>all...</summary>
-
-* _2026-03-26 08:53:02 &#43;0000 UTC_: <code>12:20:45: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.210.196:8080</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16514/pull-kubevirt-e2e-k8s-1.34-sig-storage/2037090114382860288#1:build-log.txt%3A1122)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-04-02 12:26:58
+Last updated: 2026-04-02 15:39:16
