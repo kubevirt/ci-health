@@ -121,31 +121,6 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-<details><summary>context</summary>
-<pre>20:02:40: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-20:02:40: INFO: Elapsed time: 0.474s
-20:02:40: INFO: 0 processes.
-20:02:40: ERROR: Build failed. Not running target
-20:02:42: &#43; rm -f /tmp/kubevirt.deploy.IbSk
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -163,6 +138,31 @@ make: *** [Makefile:188: cluster-sync] Error 1
 21:07:21: INFO: Elapsed time: 6.558s
 21:07:21: INFO: 0 processes.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details><summary>context</summary>
+<pre>20:02:40: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+20:02:40: INFO: Elapsed time: 0.474s
+20:02:40: INFO: 0 processes.
+20:02:40: ERROR: Build failed. Not running target
+20:02:42: &#43; rm -f /tmp/kubevirt.deploy.IbSk
+make: *** [Makefile:188: cluster-sync] Error 1
+&#43; ret=2</pre>
 </details>
 
 
@@ -199,21 +199,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -223,6 +208,21 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <summary>all...</summary>
 
 * _2026-03-31 21:04:34 &#43;0000 UTC_: <code>21:07:21: ERROR: Analysis of target &#39;//cmd/virt-handler:virt-handler-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17315/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2039070412440080384#1:build-log.txt%3A521)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
 
 </details>
 
@@ -312,4 +312,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-04-06 15:24:24
+Last updated: 2026-04-06 18:24:14
