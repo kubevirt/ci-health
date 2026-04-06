@@ -86,43 +86,6 @@
 ### external (5x / 100.00%)
 
 <details>
-<summary> download failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-<details><summary>context</summary>
-<pre>20:02:40: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-20:02:40: INFO: Elapsed time: 0.474s
-20:02:40: INFO: 0 processes.
-20:02:40: ERROR: Build failed. Not running target
-20:02:42: &#43; rm -f /tmp/kubevirt.deploy.IbSk
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details><summary>context</summary>
-<pre>14:25:07: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-14:25:07: INFO: Elapsed time: 0.472s
-14:25:07: INFO: 0 processes.
-14:25:07: ERROR: Build failed. Not running target
-14:25:09: &#43; rm -f /tmp/kubevirt.deploy.X7LK
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (2x / 40.00%) </summary>
 
 <hr/>
@@ -151,6 +114,43 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 make: *** [Makefile:39: bazel-build-images] Error 125
 &#43; rc=2
 &#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details><summary>context</summary>
+<pre>20:02:40: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+20:02:40: INFO: Elapsed time: 0.474s
+20:02:40: INFO: 0 processes.
+20:02:40: ERROR: Build failed. Not running target
+20:02:42: &#43; rm -f /tmp/kubevirt.deploy.IbSk
+make: *** [Makefile:188: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+<details><summary>context</summary>
+<pre>14:25:07: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+14:25:07: INFO: Elapsed time: 0.472s
+14:25:07: INFO: 0 processes.
+14:25:07: ERROR: Build failed. Not running target
+14:25:09: &#43; rm -f /tmp/kubevirt.deploy.X7LK
+make: *** [Makefile:188: cluster-sync] Error 1
 &#43; ret=2</pre>
 </details>
 
@@ -343,4 +343,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-04-05 21:14:39
+Last updated: 2026-04-06 00:20:22
