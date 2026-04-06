@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-03-31 (1x / 20.00%)
+### 2026-03-31 (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,30 +38,13 @@
 <hr/>
 </details>
 
-### 2026-03-30 (4x / 80.00%)
+### 2026-03-30 (3x / 75.00%)
 
 
-#### external (4x / 100.00%)
+#### external (3x / 100.00%)
 
 <details>
-<summary> download failure in context (2x / 50.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (2x / 50.00%) </summary>
+<summary> container image pull failure in context (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -77,16 +60,31 @@
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (5x / 100.00%)
+### external (4x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (2x / 40.00%) </summary>
+<summary> container image pull failure in context (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -123,11 +121,11 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 40.00%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
+**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
 <details>
 <summary>all...</summary>
 
@@ -143,24 +141,12 @@ make: *** [Makefile:188: cluster-sync] Error 1
 </details>
 
 
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details><summary>context</summary>
-<pre>14:25:07: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-14:25:07: INFO: Elapsed time: 0.472s
-14:25:07: INFO: 0 processes.
-14:25:07: ERROR: Build failed. Not running target
-14:25:09: &#43; rm -f /tmp/kubevirt.deploy.X7LK
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 20.00%) </summary>
+<summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -190,30 +176,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per branch [⬆](#top)
 
 
-### main (5x / 100.00%)
+### main (4x / 100.00%)
 
 
-#### external (5x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> download failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (2x / 40.00%) </summary>
+<summary> container image pull failure in context (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -230,7 +199,22 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 20.00%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+<details>
+<summary>all...</summary>
+
+* _2026-03-30 19:49:00 &#43;0000 UTC_: <code>20:02:40: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17344/pull-kubevirt-e2e-k8s-1.35-sig-storage/2038608442943344640#1:build-log.txt%3A4148)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -250,28 +234,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 60.00%)
+### sig-compute (2x / 50.00%)
 
 
-#### external (3x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-<details>
-<summary>all...</summary>
-
-* _2026-03-30 14:15:10 &#43;0000 UTC_: <code>14:25:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17102/pull-kubevirt-e2e-k8s-1.34-windows2016/2038620138231566336#1:build-log.txt%3A4029)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 33.33%) </summary>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -286,7 +255,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 33.33%) </summary>
+<summary> failed external fetch in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -301,7 +270,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-network (1x / 20.00%)
+### sig-network (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -322,7 +291,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-storage (1x / 20.00%)
+### sig-storage (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -343,4 +312,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-04-06 12:22:15
+Last updated: 2026-04-06 15:24:24
