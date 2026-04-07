@@ -12,8 +12,8 @@ codeberg.org/go-fonts/liberation/liberationserifbold
 codeberg.org/go-fonts/liberation/liberationserifbolditalic
 codeberg.org/go-fonts/liberation/liberationserifitalic
 codeberg.org/go-fonts/liberation/liberationserifregular
-# codeberg.org/go-latex/latex v0.1.0
-## explicit; go 1.23.0
+# codeberg.org/go-latex/latex v0.2.0
+## explicit; go 1.24
 codeberg.org/go-latex/latex
 codeberg.org/go-latex/latex/ast
 codeberg.org/go-latex/latex/drawtex
@@ -24,11 +24,11 @@ codeberg.org/go-latex/latex/mtex
 codeberg.org/go-latex/latex/mtex/symbols
 codeberg.org/go-latex/latex/tex
 codeberg.org/go-latex/latex/token
-# codeberg.org/go-pdf/fpdf v0.10.0
+# codeberg.org/go-pdf/fpdf v0.11.1
 ## explicit; go 1.21
 codeberg.org/go-pdf/fpdf
-# git.sr.ht/~sbinet/gg v0.6.0
-## explicit; go 1.22
+# git.sr.ht/~sbinet/gg v0.7.0
+## explicit; go 1.24
 git.sr.ht/~sbinet/gg
 # github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b
 ## explicit; go 1.15
@@ -39,10 +39,6 @@ github.com/avast/retry-go
 # github.com/beorn7/perks v1.0.1
 ## explicit; go 1.11
 github.com/beorn7/perks/quantile
-# github.com/campoy/embedmd v1.0.0
-## explicit
-github.com/campoy/embedmd
-github.com/campoy/embedmd/embedmd
 # github.com/cespare/xxhash/v2 v2.3.0
 ## explicit; go 1.11
 github.com/cespare/xxhash/v2
@@ -122,45 +118,45 @@ github.com/onsi/gomega/matchers/support/goraph/edge
 github.com/onsi/gomega/matchers/support/goraph/node
 github.com/onsi/gomega/matchers/support/goraph/util
 github.com/onsi/gomega/types
-# github.com/pmezard/go-difflib v1.0.0
-## explicit
-github.com/pmezard/go-difflib/difflib
-# github.com/prometheus/client_golang v1.21.1
-## explicit; go 1.21
+# github.com/prometheus/client_golang v1.23.2
+## explicit; go 1.23.0
 github.com/prometheus/client_golang/prometheus
 github.com/prometheus/client_golang/prometheus/internal
 github.com/prometheus/client_golang/prometheus/promauto
-# github.com/prometheus/client_model v0.6.1
-## explicit; go 1.19
+# github.com/prometheus/client_model v0.6.2
+## explicit; go 1.22.0
 github.com/prometheus/client_model/go
-# github.com/prometheus/common v0.63.0
-## explicit; go 1.21
+# github.com/prometheus/common v0.67.5
+## explicit; go 1.24.0
 github.com/prometheus/common/expfmt
 github.com/prometheus/common/model
-# github.com/prometheus/procfs v0.16.0
-## explicit; go 1.21
+# github.com/prometheus/procfs v0.20.1
+## explicit; go 1.25.0
 github.com/prometheus/procfs
 github.com/prometheus/procfs/internal/fs
 github.com/prometheus/procfs/internal/util
-# github.com/shurcooL/githubv4 v0.0.0-20240727222349-48295856cce7
+# github.com/shurcooL/githubv4 v0.0.0-20260209031235-2402fdf4a9ed
 ## explicit; go 1.19
 github.com/shurcooL/githubv4
-# github.com/shurcooL/graphql v0.0.0-20230722043721-ed46e5a46466
+# github.com/shurcooL/graphql v0.0.0-20240915155400-7ee5256398cf
 ## explicit; go 1.19
 github.com/shurcooL/graphql
 github.com/shurcooL/graphql/ident
 github.com/shurcooL/graphql/internal/jsonutil
-# github.com/sirupsen/logrus v1.9.3
-## explicit; go 1.13
+# github.com/sirupsen/logrus v1.9.4
+## explicit; go 1.17
 github.com/sirupsen/logrus
-# github.com/spf13/cobra v1.9.1
+# github.com/spf13/cobra v1.10.2
 ## explicit; go 1.15
 github.com/spf13/cobra
-# github.com/spf13/pflag v1.0.6
+# github.com/spf13/pflag v1.0.10
 ## explicit; go 1.12
 github.com/spf13/pflag
-# golang.org/x/image v0.25.0
-## explicit; go 1.23.0
+# go.yaml.in/yaml/v2 v2.4.4
+## explicit; go 1.15
+go.yaml.in/yaml/v2
+# golang.org/x/image v0.38.0
+## explicit; go 1.25.0
 golang.org/x/image/ccitt
 golang.org/x/image/draw
 golang.org/x/image/font
@@ -176,21 +172,21 @@ golang.org/x/image/math/fixed
 golang.org/x/image/tiff
 golang.org/x/image/tiff/lzw
 golang.org/x/image/vector
-# golang.org/x/net v0.38.0
-## explicit; go 1.23.0
+# golang.org/x/net v0.52.0
+## explicit; go 1.25.0
 golang.org/x/net/html
 golang.org/x/net/html/atom
 golang.org/x/net/html/charset
-# golang.org/x/oauth2 v0.28.0
-## explicit; go 1.23.0
+# golang.org/x/oauth2 v0.36.0
+## explicit; go 1.25.0
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
-# golang.org/x/sys v0.31.0
-## explicit; go 1.23.0
+# golang.org/x/sys v0.42.0
+## explicit; go 1.25.0
 golang.org/x/sys/unix
 golang.org/x/sys/windows
-# golang.org/x/text v0.23.0
-## explicit; go 1.23.0
+# golang.org/x/text v0.35.0
+## explicit; go 1.25.0
 golang.org/x/text/encoding
 golang.org/x/text/encoding/charmap
 golang.org/x/text/encoding/htmlindex
@@ -208,10 +204,8 @@ golang.org/x/text/internal/utf8internal
 golang.org/x/text/language
 golang.org/x/text/runes
 golang.org/x/text/transform
-# golang.org/x/tools v0.26.0
-## explicit; go 1.22.0
-# gonum.org/v1/plot v0.15.2
-## explicit; go 1.22.0
+# gonum.org/v1/plot v0.16.0
+## explicit; go 1.23.0
 gonum.org/v1/plot
 gonum.org/v1/plot/font
 gonum.org/v1/plot/font/liberation
@@ -226,8 +220,8 @@ gonum.org/v1/plot/vg/vgimg
 gonum.org/v1/plot/vg/vgpdf
 gonum.org/v1/plot/vg/vgsvg
 gonum.org/v1/plot/vg/vgtex
-# google.golang.org/protobuf v1.36.5
-## explicit; go 1.21
+# google.golang.org/protobuf v1.36.11
+## explicit; go 1.23
 google.golang.org/protobuf/encoding/protodelim
 google.golang.org/protobuf/encoding/prototext
 google.golang.org/protobuf/encoding/protowire
