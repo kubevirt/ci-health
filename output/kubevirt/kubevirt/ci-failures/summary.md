@@ -63,6 +63,34 @@
 ## per error category [⬆](#top)
 
 
+### external (1x / 33.33%)
+
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+<details>
+<summary>all...</summary>
+
+* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+<details><summary>context</summary>
+<pre>14:31:10: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+14:31:10: INFO: Elapsed time: 1.273s
+14:31:10: INFO: 0 processes.
+14:31:10: ERROR: Build failed. Not running target
+14:31:12: &#43; rm -f /tmp/kubevirt.deploy.7s31
+make: *** [Makefile:188: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
 ### internal (2x / 66.67%)
 
 <details>
@@ -95,34 +123,6 @@ make: *** [Makefile:174: cluster-sync] Error 125
 &#43; ret=2
 &#43; make cluster-down
 ./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### external (1x / 33.33%)
-
-<details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-<details>
-<summary>all...</summary>
-
-* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-<details><summary>context</summary>
-<pre>14:31:10: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-14:31:10: INFO: Elapsed time: 1.273s
-14:31:10: INFO: 0 processes.
-14:31:10: ERROR: Build failed. Not running target
-14:31:12: &#43; rm -f /tmp/kubevirt.deploy.7s31
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
 </details>
 
 
@@ -245,4 +245,4 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-04-14 12:35:29
+Last updated: 2026-04-14 15:51:20
