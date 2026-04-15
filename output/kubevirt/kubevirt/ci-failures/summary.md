@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-12 (3x / 42.86%)
+### 2026-04-12 (3x / 37.50%)
 
 
 #### needs-investigation (2x / 66.67%)
@@ -58,13 +58,31 @@
 <hr/>
 </details>
 
-### 2026-04-10 (1x / 14.29%)
+### 2026-04-10 (2x / 25.00%)
 
 
-#### needs-investigation (1x / 100.00%)
+#### external (1x / 50.00%)
 
 <details>
-<summary> no matching pattern (1x / 100.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
+<details>
+<summary>all...</summary>
+
+* _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 50.00%)
+
+<details>
+<summary> no matching pattern (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -79,7 +97,7 @@
 <hr/>
 </details>
 
-### 2026-04-09 (3x / 42.86%)
+### 2026-04-09 (3x / 37.50%)
 
 
 #### internal (2x / 66.67%)
@@ -89,7 +107,7 @@
 
 <hr/>
 
-**2x**: _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+**2x**: _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
 <details>
 <summary>all...</summary>
 
@@ -125,10 +143,10 @@
 ## per error category [⬆](#top)
 
 
-### external (2x / 28.57%)
+### external (3x / 37.50%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 14.29%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 25.00%) </summary>
 
 <hr/>
 
@@ -151,9 +169,29 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
+<details>
+<summary>all...</summary>
+
+* _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
+<details><summary>context</summary>
+<pre>08:04:38:
+08:04:38:   There were additional failures detected.  To view them in detail run ginkgo -vv
+08:04:38: ------------------------------
+08:07:33: • [FAILED] [175.103 seconds]
+08:07:33: [sig-operator]Operator [BeforeEach] [rfe_id:2291][crit:high][vendor:cnv-qe@redhat.com][level:component]infrastructure management [test_id:3150]should be able to update kubevirt install with custom image tag [Serial, sig-operator, Upgrade]
+08:07:33:   [BeforeEach] tests/operator/operator.go:169
+08:07:33:   [It] tests/operator/operator.go:1224</pre>
+</details>
+
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 14.29%) </summary>
+<summary> download failure in context (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -178,10 +216,50 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### needs-investigation (3x / 42.86%)
+### internal (2x / 25.00%)
 
 <details>
-<summary> no matching pattern (3x / 42.86%) </summary>
+<summary> make cluster lifecycle target failure (2x / 25.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
+<details>
+<summary>all...</summary>
+
+* _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
+<details><summary>context</summary>
+<pre>02:23:46: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
+02:23:46: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+02:23:58: &#43; rm -f /tmp/kubevirt.deploy.h4Rn
+make: *** [Makefile:174: cluster-sync] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+<details><summary>context</summary>
+<pre>02:40:33: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
+02:40:33: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+02:40:50: &#43; rm -f /tmp/kubevirt.deploy.RzZ0
+make: *** [Makefile:174: cluster-sync] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (3x / 37.50%)
+
+<details>
+<summary> no matching pattern (3x / 37.50%) </summary>
 
 <hr/>
 
@@ -238,52 +316,12 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### internal (2x / 28.57%)
-
-<details>
-<summary> make cluster lifecycle target failure (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
-<details>
-<summary>all...</summary>
-
-* _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
-<details><summary>context</summary>
-<pre>02:23:46: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-02:23:46: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-02:23:58: &#43; rm -f /tmp/kubevirt.deploy.h4Rn
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
-<details><summary>context</summary>
-<pre>02:40:33: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-02:40:33: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-02:40:50: &#43; rm -f /tmp/kubevirt.deploy.RzZ0
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.8 (3x / 42.86%)
+### release-1.8 (3x / 37.50%)
 
 
 #### needs-investigation (2x / 66.67%)
@@ -324,8 +362,28 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### release-1.7 (3x / 42.86%)
+### release-1.7 (3x / 37.50%)
 
+
+#### internal (2x / 66.67%)
+
+<details>
+<summary> make cluster lifecycle target failure (2x / 66.67%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
+<details>
+<summary>all...</summary>
+
+* _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
+
+* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (1x / 33.33%)
 
@@ -345,27 +403,28 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-#### internal (2x / 66.67%)
+### release-1.6 (1x / 12.50%)
+
+
+#### external (1x / 100.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (2x / 66.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+**1x**: _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
 <details>
 <summary>all...</summary>
 
-* _2026-04-09 01:56:54 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2042059010437287936#1:build-log.txt%3A1142)
-
-* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+* _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
 
 </details>
 
 <hr/>
 </details>
 
-### main (1x / 14.29%)
+### main (1x / 12.50%)
 
 
 #### external (1x / 100.00%)
@@ -391,7 +450,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-storage (4x / 57.14%)
+### sig-storage (4x / 50.00%)
 
 
 #### needs-investigation (2x / 50.00%)
@@ -450,7 +509,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### sig-network (1x / 14.29%)
+### sig-network (1x / 12.50%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -471,31 +530,28 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### sig-compute (2x / 28.57%)
+### sig-compute (3x / 37.50%)
 
 
-#### internal (1x / 50.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+**1x**: _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
 <details>
 <summary>all...</summary>
 
-* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+* _2026-04-10 06:11:44 &#43;0000 UTC_: <code>08:07:33: • [FAILED] [175.103 seconds]</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17444/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.6/2042485527759818752#1:build-log.txt%3A3381)
 
 </details>
 
 <hr/>
 </details>
-
-#### external (1x / 50.00%)
-
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -510,4 +566,22 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-04-15 12:29:39
+#### internal (1x / 33.33%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+<details>
+<summary>all...</summary>
+
+* _2026-04-09 01:56:53 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io//view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17426/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2042058998902951936#1:build-log.txt%3A1040)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-04-15 15:43:21
