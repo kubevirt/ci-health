@@ -71,7 +71,7 @@ func ShowCIFailureJobs() ([]string, error) {
 }
 
 func checkJunitFuncTestXMLExists(jobURL string) (bool, error) {
-	artifactURL := strings.Replace(jobURL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
+	artifactURL := strings.Replace(jobURL, "https://prow.ci.kubevirt.io/view/gs/", "https://storage.googleapis.com/", 1)
 	artifactURL = fmt.Sprintf("%s/artifacts/junit.functest.xml", artifactURL)
 
 	resp, err := sigretests.HttpHeadWithRetry(artifactURL)
@@ -284,6 +284,7 @@ func readBuildLog(logFilePath string) (*buildLog, error) {
 }
 
 func storeBuildLogIfNotExists(url string) (string, error) {
+	url = normalizeJobURL(url)
 	buildID, err := buildIDFromJobURL(url)
 	if err != nil {
 		return "", err
@@ -292,7 +293,7 @@ func storeBuildLogIfNotExists(url string) (string, error) {
 	logFilePath := filepath.Join(logsDir, fmt.Sprintf("%d.yaml", buildID))
 	_, err = os.Stat(logFilePath)
 	if errors.Is(err, fs.ErrNotExist) {
-		gcsBaseURL := strings.Replace(url, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
+		gcsBaseURL := strings.Replace(url, "https://prow.ci.kubevirt.io/view/gs/", "https://storage.googleapis.com/", 1)
 
 		var gcsBuildLogFileContent []byte
 		gcsBuildLogFileContent, err = retrieveFileContentFromGCS(gcsBaseURL + "/build-log.txt")

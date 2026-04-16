@@ -84,7 +84,7 @@ func filterJobs(node *html.Node) (jobs []job) {
 				for _, href := range node.FirstChild.Attr {
 					if strings.Contains(href.Val, "e2e") {
 						e2eJob.failure = true
-						e2eJob.buildURL = fmt.Sprintf("https://prow.ci.kubevirt.io/%s", href.Val)
+						e2eJob.buildURL = fmt.Sprintf("https://prow.ci.kubevirt.io%s", href.Val)
 						buildLogURL := strings.Split(href.Val, "/")
 						e2eJob.jobName = buildLogURL[len(buildLogURL)-2]
 						e2eJob.buildNumber = buildLogURL[len(buildLogURL)-1]

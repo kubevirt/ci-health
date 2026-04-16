@@ -8,13 +8,13 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// normalizeJobURL ensures the URL uses the double-slash format expected by storeBuildLogIfNotExists.
+// normalizeJobURL ensures the URL uses the canonical single-slash format.
 func normalizeJobURL(url string) string {
 	url = strings.TrimRight(url, "/")
 	const singleSlash = "https://prow.ci.kubevirt.io/view/gs/"
 	const doubleSlash = "https://prow.ci.kubevirt.io//view/gs/"
-	if strings.HasPrefix(url, singleSlash) && !strings.HasPrefix(url, doubleSlash) {
-		url = doubleSlash + strings.TrimPrefix(url, singleSlash)
+	if after, found := strings.CutPrefix(url, doubleSlash); found {
+		url = singleSlash + after
 	}
 	return url
 }
