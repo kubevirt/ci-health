@@ -110,11 +110,11 @@ func constructReportFilePath(opt *types.Options) string {
 }
 
 func constructGCSBaseURL(failureURL string) string {
-	return strings.Replace(failureURL, "https://prow.ci.kubevirt.io//view/gs/", "https://storage.googleapis.com/", 1)
+	return strings.Replace(failureURL, "https://prow.ci.kubevirt.io/view/gs/", "https://storage.googleapis.com/", 1)
 }
 
 func constructJunitURL(failureURL string) string {
-	junitURL := strings.Replace(failureURL, "prow.ci.kubevirt.io//view/gs", "gcsweb.ci.kubevirt.io/gcs", 1)
+	junitURL := strings.Replace(failureURL, "prow.ci.kubevirt.io/view/gs", "gcsweb.ci.kubevirt.io/gcs", 1)
 	if !strings.HasSuffix(junitURL, "/") {
 		junitURL += "/"
 	}

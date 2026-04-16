@@ -73,6 +73,21 @@ var rules = []categoryRule{
 	// Test panic detected in output
 	{CategoryPRBuild, "panic detected in test output", regexp.MustCompile(`ERROR: Found panic in test output`)},
 
+	// --- PR Build: Ginkgo / Go test failures ---
+
+	{CategoryPRBuild, "ginkgo test suite failure summary", regexp.MustCompile(`FAIL! -- \d+ Passed \| \d+ Failed`)},
+	{CategoryPRBuild, "ginkgo test failure with timeout", regexp.MustCompile(`\[FAILED\] Timed out after`)},
+	{CategoryPRBuild, "ginkgo test failure location", regexp.MustCompile(`\[FAILED\] in \[It\]`)},
+	{CategoryPRBuild, "ginkgo test failure marker", regexp.MustCompile(`• \[FAILED\]`)},
+	{CategoryPRBuild, "ginkgo test failure summary", regexp.MustCompile(`\[FAIL\] .*\[It\]`)},
+	{CategoryPRBuild, "go test failure", regexp.MustCompile(`--- FAIL: Test`)},
+	{CategoryPRBuild, "go test exit FAIL", regexp.MustCompile(`^\d+:\d+:\d+: FAIL$`)},
+
+	// --- Internal: artifact collection / CI noise ---
+
+	{CategoryInternal, "artifact collection command failure", regexp.MustCompile(`failed to execute command \[`)},
+	{CategoryInternal, "command terminated with non-zero exit code", regexp.MustCompile(`command terminated with exit code \d+`)},
+
 	// --- Internal: CI configuration errors fixable by sig-ci ---
 
 	{CategoryInternal, "taint not found during cluster setup", regexp.MustCompile(`error: taint "node-role\.kubernetes\.io/(control-plane|master):NoSchedule" not found`)},

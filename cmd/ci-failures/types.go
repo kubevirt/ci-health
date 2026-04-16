@@ -177,11 +177,11 @@ type Category struct {
 }
 
 type TemplateData struct {
-	Date               string
-	Org                string
-	Repo               string
-	FailuresPerBranch  Failures
-	FailuresPerDay     Failures
-	FailuresPerSIG     Failures
+	Date                string
+	Org                 string
+	Repo                string
+	FailuresPerBranch   Failures
+	FailuresPerDay      Failures
+	FailuresPerSIG      Failures
 	FailuresPerCategory Failures
 }
