@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-14 (17x / 62.96%)
+### 2026-04-14 (17x / 65.38%)
 
 
 #### external (15x / 88.24%)
@@ -27,7 +27,7 @@
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**3x**: _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
 <details>
 <summary>all...</summary>
 
@@ -41,7 +41,7 @@
 
 <hr/>
 
-**5x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+**5x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
 <details>
 <summary>all...</summary>
 
@@ -112,21 +112,6 @@
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 5.88%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure from external URL (1x / 5.88%) </summary>
 
 <hr/>
@@ -136,6 +121,21 @@
 <summary>all...</summary>
 
 * _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 5.88%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
 
 </details>
 
@@ -170,7 +170,7 @@
 <hr/>
 </details>
 
-### 2026-04-12 (7x / 25.93%)
+### 2026-04-12 (7x / 26.92%)
 
 
 #### external (3x / 42.86%)
@@ -215,7 +215,7 @@
 
 <hr/>
 
-**2x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**2x**: _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
 <details>
 <summary>all...</summary>
 
@@ -261,26 +261,8 @@
 <hr/>
 </details>
 
-### 2026-04-10 (2x / 7.41%)
+### 2026-04-10 (2x / 7.69%)
 
-
-#### pr-build (1x / 50.00%)
-
-<details>
-<summary> ginkgo test failure marker (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-10 06:12:35 &#43;0000 UTC_: <code>08:07:41: • [FAILED] [182.207 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17445/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2042485694953164800#1:build-log.txt%3A5316)
-<details>
-<summary>all...</summary>
-
-* _2026-04-10 06:12:35 &#43;0000 UTC_: <code>08:07:41: • [FAILED] [182.207 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17445/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2042485694953164800#1:build-log.txt%3A5316)
-
-</details>
-
-<hr/>
-</details>
 
 #### external (1x / 50.00%)
 
@@ -300,21 +282,18 @@
 <hr/>
 </details>
 
-### 2026-04-09 (1x / 3.70%)
-
-
-#### external (1x / 100.00%)
+#### pr-build (1x / 50.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> ginkgo test failure marker (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+**1x**: _2026-04-10 06:12:35 &#43;0000 UTC_: <code>08:07:41: • [FAILED] [182.207 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17445/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2042485694953164800#1:build-log.txt%3A5316)
 <details>
 <summary>all...</summary>
 
-* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+* _2026-04-10 06:12:35 &#43;0000 UTC_: <code>08:07:41: • [FAILED] [182.207 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17445/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2042485694953164800#1:build-log.txt%3A5316)
 
 </details>
 
@@ -326,14 +305,14 @@
 ## per error category [⬆](#top)
 
 
-### external (20x / 74.07%)
+### external (19x / 73.08%)
 
 <details>
-<summary> container image pull failure in context (9x / 33.33%) </summary>
+<summary> container image pull failure in context (9x / 34.62%) </summary>
 
 <hr/>
 
-**4x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**4x**: _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
 <details>
 <summary>all...</summary>
 
@@ -389,7 +368,7 @@ make: *** [Makefile:159: cluster-up] Error 125
 
 <hr/>
 
-**5x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+**5x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
 <details>
 <summary>all...</summary>
 
@@ -458,7 +437,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (6x / 22.22%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (6x / 23.08%) </summary>
 
 <hr/>
 
@@ -567,11 +546,11 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (3x / 11.11%) </summary>
+<summary> download failure in context (2x / 7.69%) </summary>
 
 <hr/>
 
-**3x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+**2x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 <details>
 <summary>all...</summary>
 
@@ -599,24 +578,12 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 </details>
 
 
-* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-<details><summary>context</summary>
-<pre>14:31:10: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-14:31:10: INFO: Elapsed time: 1.273s
-14:31:10: INFO: 0 processes.
-14:31:10: ERROR: Build failed. Not running target
-14:31:12: &#43; rm -f /tmp/kubevirt.deploy.7s31
-make: *** [Makefile:188: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 3.70%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 3.85%) </summary>
 
 <hr/>
 
@@ -641,7 +608,7 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure from external URL (1x / 3.70%) </summary>
+<summary> download failure from external URL (1x / 3.85%) </summary>
 
 <hr/>
 
@@ -666,10 +633,10 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### needs-investigation (5x / 18.52%)
+### needs-investigation (5x / 19.23%)
 
 <details>
-<summary> no matching pattern (4x / 14.81%) </summary>
+<summary> no matching pattern (4x / 15.38%) </summary>
 
 <hr/>
 
@@ -693,7 +660,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
 <details>
 <summary>all...</summary>
 
@@ -738,7 +705,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> no error snippets (1x / 3.70%) </summary>
+<summary> no error snippets (1x / 3.85%) </summary>
 
 <hr/>
 
@@ -753,38 +720,10 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### internal (1x / 3.70%)
+### pr-build (1x / 3.85%)
 
 <details>
-<summary> make bazel-build target failure (1x / 3.70%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
-<details><summary>context</summary>
-<pre>08:45:57: INFO: Elapsed time: 0.440s, Critical Path: 0.15s
-08:45:57: INFO: 1 process: 1 internal.
-08:45:57: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-make: *** [Makefile:26: bazel-build-functests] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### pr-build (1x / 3.70%)
-
-<details>
-<summary> ginkgo test failure marker (1x / 3.70%) </summary>
+<summary> ginkgo test failure marker (1x / 3.85%) </summary>
 
 <hr/>
 
@@ -809,12 +748,40 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
+### internal (1x / 3.85%)
+
+<details>
+<summary> make bazel-build target failure (1x / 3.85%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
+<details><summary>context</summary>
+<pre>08:45:57: INFO: Elapsed time: 0.440s, Critical Path: 0.15s
+08:45:57: INFO: 1 process: 1 internal.
+08:45:57: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+make: *** [Makefile:26: bazel-build-functests] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.7 (15x / 55.56%)
+### release-1.7 (15x / 57.69%)
 
 
 #### external (11x / 73.33%)
@@ -824,7 +791,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**4x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**4x**: _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
 <details>
 <summary>all...</summary>
 
@@ -938,24 +905,6 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-#### internal (1x / 6.67%)
-
-<details>
-<summary> make bazel-build target failure (1x / 6.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
-
-</details>
-
-<hr/>
-</details>
-
 #### pr-build (1x / 6.67%)
 
 <details>
@@ -974,28 +923,29 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### release-1.8 (9x / 33.33%)
+#### internal (1x / 6.67%)
+
+<details>
+<summary> make bazel-build target failure (1x / 6.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 08:21:13 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043242879446421504#1:build-log.txt%3A4241)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.8 (9x / 34.62%)
 
 
 #### external (6x / 66.67%)
 
-<details>
-<summary> container image pull failure in context (2x / 22.22%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
-
-* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 22.22%) </summary>
 
@@ -1022,15 +972,17 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
+<summary> container image pull failure in context (2x / 22.22%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+**2x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
 <details>
 <summary>all...</summary>
 
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
+
+* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
 
 </details>
 
@@ -1051,6 +1003,21 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (3x / 33.33%)
 
@@ -1059,7 +1026,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
 <details>
 <summary>all...</summary>
 
@@ -1074,7 +1041,28 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### release-1.6 (1x / 3.70%)
+### main (1x / 3.85%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> download failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.6 (1x / 3.85%)
 
 
 #### external (1x / 100.00%)
@@ -1095,64 +1083,16 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### main (2x / 7.41%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> download failure in context (2x / 100.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
-
-* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-network (5x / 18.52%)
+### sig-network (5x / 19.23%)
 
 
 #### external (4x / 80.00%)
 
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:41:27 &#43;0000 UTC_: <code>22:55:06: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-kind-sriov-1.7/2044182599898763264#1:build-log.txt%3A1401)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:41:27 &#43;0000 UTC_: <code>22:55:06: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-kind-sriov-1.7/2044182599898763264#1:build-log.txt%3A1401)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:43 &#43;0000 UTC_: <code>00:33:03:   [FAILED] in [AfterEach] - tests/libkubevirt/kubevirt.go:49 @ 04/15/26 00:33:03.525</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2044182452733218816#1:build-log.txt%3A4923)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:43 &#43;0000 UTC_: <code>00:33:03:   [FAILED] in [AfterEach] - tests/libkubevirt/kubevirt.go:49 @ 04/15/26 00:33:03.525</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2044182452733218816#1:build-log.txt%3A4923)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> container image pull failure in context (2x / 40.00%) </summary>
 
@@ -1178,6 +1118,31 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:41:27 &#43;0000 UTC_: <code>22:55:06: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-kind-sriov-1.7/2044182599898763264#1:build-log.txt%3A1401)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:41:27 &#43;0000 UTC_: <code>22:55:06: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-kind-sriov-1.7/2044182599898763264#1:build-log.txt%3A1401)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:43 &#43;0000 UTC_: <code>00:33:03:   [FAILED] in [AfterEach] - tests/libkubevirt/kubevirt.go:49 @ 04/15/26 00:33:03.525</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2044182452733218816#1:build-log.txt%3A4923)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:43 &#43;0000 UTC_: <code>00:33:03:   [FAILED] in [AfterEach] - tests/libkubevirt/kubevirt.go:49 @ 04/15/26 00:33:03.525</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2044182452733218816#1:build-log.txt%3A4923)
+
+</details>
+
+<hr/>
+</details>
 
 #### pr-build (1x / 20.00%)
 
@@ -1197,13 +1162,13 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### sig-compute (12x / 44.44%)
+### sig-compute (11x / 42.31%)
 
 
-#### external (11x / 91.67%)
+#### external (10x / 90.91%)
 
 <details>
-<summary> container image pull failure in context (7x / 58.33%) </summary>
+<summary> container image pull failure in context (7x / 63.64%) </summary>
 
 <hr/>
 
@@ -1221,7 +1186,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**4x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+**4x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
 <details>
 <summary>all...</summary>
 
@@ -1238,7 +1203,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 16.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 18.18%) </summary>
 
 <hr/>
 
@@ -1255,27 +1220,25 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 16.67%) </summary>
+<summary> download failure in context (1x / 9.09%) </summary>
 
 <hr/>
 
-**2x**: _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
+**1x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 <details>
 <summary>all...</summary>
 
 * _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 
-* _2026-04-09 14:20:27 &#43;0000 UTC_: <code>14:31:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17340/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2042246124231725056#1:build-log.txt%3A4058)
-
 </details>
 
 <hr/>
 </details>
 
-#### internal (1x / 8.33%)
+#### internal (1x / 9.09%)
 
 <details>
-<summary> make bazel-build target failure (1x / 8.33%) </summary>
+<summary> make bazel-build target failure (1x / 9.09%) </summary>
 
 <hr/>
 
@@ -1290,7 +1253,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### sig-storage (10x / 37.04%)
+### sig-storage (10x / 38.46%)
 
 
 #### external (5x / 50.00%)
@@ -1307,21 +1270,6 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 * _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
 
 * _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
 
 </details>
 
@@ -1357,6 +1305,21 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (5x / 50.00%)
 
@@ -1375,7 +1338,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
 <details>
 <summary>all...</summary>
 
@@ -1405,4 +1368,4 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-04-16 12:38:27
+Last updated: 2026-04-16 15:43:43
