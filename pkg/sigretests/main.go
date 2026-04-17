@@ -309,6 +309,99 @@ func getJobTargetBranch(jobName string) string {
 	return "main"
 }
 
+func parseAllJobs(node *html.Node, prOrg, prRepo string) []job {
+	var jobs []job
+	var walk func(*html.Node)
+	walk = func(n *html.Node) {
+		if n.Type == html.ElementNode && n.Data == "td" {
+			var isFailure, isSuccess bool
+			for _, attr := range n.Attr {
+				if strings.Contains(attr.Val, "run-failure") {
+					isFailure = true
+				}
+				if strings.Contains(attr.Val, "run-success") {
+					isSuccess = true
+				}
+			}
+			if (isFailure || isSuccess) && n.FirstChild != nil {
+				for _, attr := range n.FirstChild.Attr {
+					if attr.Key == "href" {
+						parts := strings.Split(attr.Val, "/")
+						if len(parts) >= 2 {
+							j := job{
+								failure:     isFailure,
+								buildURL:    fmt.Sprintf("https://prow.ci.kubevirt.io%s", attr.Val),
+								jobName:     parts[len(parts)-2],
+								buildNumber: parts[len(parts)-1],
+							}
+							if isFailure && len(parts) >= 3 {
+								prNumber := parts[len(parts)-3]
+								j.artifactsURL = fmt.Sprintf("%s/pr-logs/pull/%s_%s/%s/%s/%s/artifacts",
+									defaultStorageBaseURL, prOrg, prRepo, prNumber, j.jobName, j.buildNumber)
+							}
+							jobs = append(jobs, j)
+						}
+					}
+				}
+			}
+		}
+		for child := n.FirstChild; child != nil; child = child.NextSibling {
+			walk(child)
+		}
+	}
+	walk(node)
+	return jobs
+}
+
+// ListPRFailures returns the Prow build URLs of the latest failed run per job
+// for the most recent commit on the given PR. Jobs whose latest run succeeded
+// are excluded, so only currently-failing jobs are returned.
+func ListPRFailures(prNumber, prOrg, prRepo string) ([]string, error) {
+	prHistory := prHistoryURL(prOrg, prRepo, prNumber)
+	resp, err := HttpGetWithRetry(prHistory)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	prHistoryPage, err := html.Parse(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error parsing history page: %s", err)
+	}
+	latestCommit := getLatestCommit(prHistoryPage)
+	if latestCommit == "" {
+		return nil, fmt.Errorf("failed to get latest commit from %s", prHistory)
+	}
+
+	allJobs := parseAllJobs(prHistoryPage, prOrg, prRepo)
+
+	latestCommitJobs, err := filterForLastCommit(defaultStorageBaseURL, prOrg, prRepo, prNumber, latestCommit, allJobs, time.Time{})
+	if err != nil {
+		return nil, err
+	}
+
+	latestByJob := map[string]job{}
+	for _, j := range latestCommitJobs {
+		if existing, ok := latestByJob[j.jobName]; ok {
+			existingNum, _ := strconv.Atoi(existing.buildNumber)
+			currentNum, _ := strconv.Atoi(j.buildNumber)
+			if currentNum > existingNum {
+				latestByJob[j.jobName] = j
+			}
+		} else {
+			latestByJob[j.jobName] = j
+		}
+	}
+
+	var failedURLs []string
+	for _, j := range latestByJob {
+		if j.failure {
+			failedURLs = append(failedURLs, j.buildURL)
+		}
+	}
+	return failedURLs, nil
+}
+
 func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests SigRetests) {
 	prSigRetests = SigRetests{}
 	for _, job := range jobs {

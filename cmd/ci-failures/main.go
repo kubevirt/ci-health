@@ -7,12 +7,14 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
 	"gopkg.in/yaml.v3"
 
 	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
@@ -61,6 +63,19 @@ var (
 		Short: "Analyze a single build failure given a Prow job URL and output YAML.",
 		Args:  cobra.ExactArgs(1),
 		RunE:  analyzeBuild,
+	}
+
+	analyzePRCmd = &cobra.Command{
+		Use:   "analyze-pr [github-pr-url]",
+		Short: "Analyze all failed builds for a GitHub PR.",
+		Long: `Analyze all failed builds for a GitHub PR.
+
+Accepts a GitHub pull request URL, e.g.:
+  https://github.com/kubevirt/kubevirt/pull/17287
+
+Only repos served by prow.ci.kubevirt.io are supported.`,
+		Args: cobra.ExactArgs(1),
+		RunE: analyzePR,
 	}
 )
 
@@ -192,12 +207,79 @@ func analyzeBuild(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+var allowedOrgs = map[string]bool{
+	"kubevirt": true,
+}
+
+func parsePRURL(prURL string) (org, repo, prNumber string, err error) {
+	const prefix = "https://github.com/"
+	if !strings.HasPrefix(prURL, prefix) {
+		return "", "", "", fmt.Errorf("expected a GitHub PR URL (https://github.com/org/repo/pull/N), got: %s", prURL)
+	}
+	parts := strings.Split(strings.TrimPrefix(prURL, prefix), "/")
+	if len(parts) < 4 || parts[2] != "pull" {
+		return "", "", "", fmt.Errorf("invalid GitHub PR URL format: %s", prURL)
+	}
+	org = parts[0]
+	repo = parts[1]
+	prNumber = parts[3]
+	if _, parseErr := strconv.Atoi(prNumber); parseErr != nil {
+		return "", "", "", fmt.Errorf("invalid PR number in URL: %s", prNumber)
+	}
+	if !allowedOrgs[org] {
+		return "", "", "", fmt.Errorf("org %q is not served by prow.ci.kubevirt.io (allowed: %v)", org, allowedOrgs)
+	}
+	return org, repo, prNumber, nil
+}
+
+func analyzePR(_ *cobra.Command, args []string) error {
+	prOrg, prRepo, prNumber, err := parsePRURL(args[0])
+	if err != nil {
+		return err
+	}
+
+	failedURLs, err := sigretests.ListPRFailures(prNumber, prOrg, prRepo)
+	if err != nil {
+		return fmt.Errorf("failed to list PR failures: %v", err)
+	}
+
+	if len(failedURLs) == 0 {
+		log.Info("no failed builds found for this PR")
+		return nil
+	}
+
+	log.Infof("found %d failed build(s)", len(failedURLs))
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	for _, url := range failedURLs {
+		jobBuildErrors, err := cifailures.AnalyzeBuild(url)
+		if err != nil {
+			log.WithError(err).Warnf("failed to analyze build %s, skipping", url)
+			continue
+		}
+
+		outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("%s.yaml", jobBuildErrors.JobName))
+		if err = cifailures.WriteJobBuildErrorsYAML(outputPath, jobBuildErrors); err != nil {
+			log.WithError(err).Warnf("failed to write YAML for %s", jobBuildErrors.JobName)
+			continue
+		}
+
+		log.Infof("wrote analysis to %s", outputPath)
+	}
+
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
 
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
+	rootCmd.AddCommand(analyzePRCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
