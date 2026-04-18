@@ -105,7 +105,7 @@
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**3x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
 <details>
 <summary>all...</summary>
 
@@ -142,7 +142,7 @@
 
 <hr/>
 
-**4x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+**4x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 <details>
 <summary>all...</summary>
 
@@ -194,21 +194,6 @@
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 4.76%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure from external URL (1x / 4.76%) </summary>
 
 <hr/>
@@ -223,6 +208,21 @@
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 4.76%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (4x / 19.05%)
 
@@ -231,7 +231,7 @@
 
 <hr/>
 
-**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+**3x**: _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
 <details>
 <summary>all...</summary>
 
@@ -259,41 +259,6 @@
 ### 2026-04-12 (7x / 21.88%)
 
 
-#### needs-investigation (3x / 42.86%)
-
-<details>
-<summary> no matching pattern (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
-
-* _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> no error snippets (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-12 06:06:33 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 06:06:33 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (3x / 42.86%)
 
 <details>
@@ -301,7 +266,7 @@
 
 <hr/>
 
-**2x**: _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
+**2x**: _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
 <details>
 <summary>all...</summary>
 
@@ -323,6 +288,41 @@
 <summary>all...</summary>
 
 * _2026-04-12 06:06:24 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2043208958654550016#1:build-log.txt%3A539)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (3x / 42.86%)
+
+<details>
+<summary> no matching pattern (2x / 28.57%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
+
+* _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no error snippets (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-12 06:06:33 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 06:06:33 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
 
 </details>
 
@@ -359,7 +359,7 @@
 
 <hr/>
 
-**4x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**4x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
 <details>
 <summary>all...</summary>
 
@@ -508,7 +508,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**6x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+**6x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 <details>
 <summary>all...</summary>
 
@@ -593,27 +593,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**1x**: _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
-<details>
-<summary>all...</summary>
-
-* _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
-<details><summary>context</summary>
-<pre>13:42:41: Downloading cni-plugins-linux-amd64-v0.8.5.tgz
-13:42:41: &#43;&#43; curl -sSL -o /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/cni-plugins-linux-amd64-v0.8.5.tgz https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz
-13:42:47: curl: (6) Could not resolve host: github.com
-make: *** [Makefile:173: cluster-up] Error 6
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**2x**: _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
+**2x**: _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
 <details>
 <summary>all...</summary>
 
@@ -638,6 +618,26 @@ make: *** [Makefile:173: cluster-up] Error 6
 08:24:22:   &lt;&lt; Captured StdOut/StdErr Output
 08:24:22: ------------------------------
 08:24:24: • [64.167 seconds]</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
+<details>
+<summary>all...</summary>
+
+* _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
+<details><summary>context</summary>
+<pre>13:42:41: Downloading cni-plugins-linux-amd64-v0.8.5.tgz
+13:42:41: &#43;&#43; curl -sSL -o /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/cni-plugins-linux-amd64-v0.8.5.tgz https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz
+13:42:47: curl: (6) Could not resolve host: github.com
+make: *** [Makefile:173: cluster-up] Error 6
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -763,7 +763,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+**3x**: _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
 <details>
 <summary>all...</summary>
 
@@ -807,7 +807,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
 <details>
 <summary>all...</summary>
 
@@ -960,7 +960,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**4x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**4x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
 <details>
 <summary>all...</summary>
 
@@ -1102,7 +1102,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**2x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+**2x**: _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
 <details>
 <summary>all...</summary>
 
@@ -1122,7 +1122,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**2x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+**2x**: _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
 <details>
 <summary>all...</summary>
 
@@ -1140,6 +1140,23 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 #### external (6x / 66.67%)
 
+<details>
+<summary> container image pull failure in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
+
+* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 22.22%) </summary>
 
@@ -1166,17 +1183,15 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (2x / 22.22%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
 
 <hr/>
 
-**2x**: _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
 <details>
 <summary>all...</summary>
 
-* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
-
-* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
 
 </details>
 
@@ -1197,21 +1212,6 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
 
 #### needs-investigation (3x / 33.33%)
 
@@ -1220,7 +1220,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
 <details>
 <summary>all...</summary>
 
@@ -1321,6 +1321,125 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
+### sig-storage (12x / 37.50%)
+
+
+#### external (5x / 41.67%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 16.67%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
+
+* _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure from external URL (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (7x / 58.33%)
+
+<details>
+<summary> no matching pattern (6x / 50.00%) </summary>
+
+<hr/>
+
+**3x**: _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
+
+* _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+
+* _2026-04-14 22:35:33 &#43;0000 UTC_: <code>00:56:47:   {&#34;[namespace kubevirt-test-default2 name testvmi-l826p-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c2be602b-f84f-4cf3-8368-3243dbee43ef]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:56:38.578042Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2044182618622136320#1:build-log.txt%3A5169)
+
+</details>
+
+<hr/>
+
+**3x**: _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
+
+* _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
+
+* _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no error snippets (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-12 06:06:33 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
+<details>
+<summary>all...</summary>
+
+* _2026-04-12 06:06:33 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-compute (14x / 43.75%)
 
 
@@ -1347,7 +1466,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**3x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
 <details>
 <summary>all...</summary>
 
@@ -1366,7 +1485,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 
 <hr/>
 
-**5x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+**5x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
 <details>
 <summary>all...</summary>
 
@@ -1418,123 +1537,4 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-### sig-storage (12x / 37.50%)
-
-
-#### external (5x / 41.67%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 16.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 06:07:17 &#43;0000 UTC_: <code>08:02:42:   {&#34;[namespace kubevirt-test-default4 name testvmi-nnfwm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 64014b11-57a1-461e-b599-71f814ffcd45]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:02:28.034865Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:02:28.074924Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2043209126841946112#1:build-log.txt%3A4930)
-
-* _2026-04-12 06:06:47 &#43;0000 UTC_: <code>08:24:22:   {&#34;[namespace kubevirt-test-default3 name testvmi-zzvjh-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 6fd3fa08-b22f-457c-a6f2-fa4f38378618]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:24:15.430696Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:24:15.463892Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2043208964530769920#1:build-log.txt%3A5700)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure from external URL (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (7x / 58.33%)
-
-<details>
-<summary> no matching pattern (6x / 50.00%) </summary>
-
-<hr/>
-
-**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
-
-* _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
-
-* _2026-04-14 22:35:33 &#43;0000 UTC_: <code>00:56:47:   {&#34;[namespace kubevirt-test-default2 name testvmi-l826p-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c2be602b-f84f-4cf3-8368-3243dbee43ef]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:56:38.578042Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2044182618622136320#1:build-log.txt%3A5169)
-
-</details>
-
-<hr/>
-
-**3x**: _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:46 &#43;0000 UTC_: <code>01:48:44:   {&#34;[namespace kubevirt-test-default2 name testvmi-rljs5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 8017f1d0-8e11-49df-bdbd-fa1d76cff6d8]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-15T01:48:19.933126Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:48:19.973140Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2044182453085540352#1:build-log.txt%3A5398)
-
-* _2026-04-12 06:07:04 &#43;0000 UTC_: <code>08:44:24:   {&#34;[namespace kubevirt-test-default2 name testvmi-56m8w-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 28ac500b-21a1-49e4-999e-ac55e4a75146]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:43:59.412605Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:43:59.440925Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2043209130977529856#1:build-log.txt%3A7635)
-
-* _2026-04-12 06:07:02 &#43;0000 UTC_: <code>08:59:54:   {&#34;[namespace kubevirt-test-default3 name testvmi-v2bmp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid dd335e64-0fa8-4b94-8995-6c7eff1ebb59]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-04-12T08:59:30.101369Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-12T08:59:30.131590Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17465/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2043209123444559872#1:build-log.txt%3A9526)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> no error snippets (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-12 06:06:33 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
-<details>
-<summary>all...</summary>
-
-* _2026-04-12 06:06:33 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17464/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2043208957803106304)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-04-18 09:32:52
+Last updated: 2026-04-18 12:20:46
