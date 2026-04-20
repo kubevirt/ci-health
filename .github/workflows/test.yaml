@@ -6,10 +6,6 @@ on:
     - 'e2e/**'
     - 'pkg/**'
     - 'go.*'
-    - 'deps.bzl'
-    - 'BUILD.bazel'
-    - 'WORKSPACE'
-    - '.bazel*'
     - '.github/**'
 jobs:
   test:
