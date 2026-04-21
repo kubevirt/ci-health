@@ -105,11 +105,19 @@
 
 <hr/>
 
-**9x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+**1x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
 <details>
 <summary>all...</summary>
 
 * _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+
+</details>
+
+<hr/>
+
+**8x**: _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
+<details>
+<summary>all...</summary>
 
 * _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
 
@@ -136,21 +144,7 @@
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
-
-* _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
-
-* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-
-</details>
-
-<hr/>
-
-**5x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
+**5x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
 <details>
 <summary>all...</summary>
 
@@ -163,6 +157,20 @@
 * _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
 
 * _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+
+</details>
+
+<hr/>
+
+**3x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+
+* _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
+
+* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
 
 </details>
 
@@ -204,21 +212,6 @@
 <hr/>
 </details>
 <details>
-<summary> download failure from external URL (1x / 3.85%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (1x / 3.85%) </summary>
 
 <hr/>
@@ -233,6 +226,21 @@
 
 <hr/>
 </details>
+<details>
+<summary> download failure from external URL (1x / 3.85%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:35:23 &#43;0000 UTC_: <code>22:38:35: ERROR: Error computing the main repository mapping: no such package &#39;@bazel_features//&#39;: java.io.IOException: Error downloading [https://github.com/bazel-contrib/bazel_features/releases/download/v1.10.0/bazel_features-v1.10.0.tar.gz] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_features/temp1058507301603734894/bazel_features-v1.10.0.tar.gz: Unknown host: release-assets.githubusercontent.com</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2044182611907055616#1:build-log.txt%3A297)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (4x / 15.38%)
 
@@ -241,7 +249,7 @@
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:33 &#43;0000 UTC_: <code>00:56:47:   {&#34;[namespace kubevirt-test-default2 name testvmi-l826p-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c2be602b-f84f-4cf3-8368-3243dbee43ef]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:56:38.578042Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2044182618622136320#1:build-log.txt%3A5169)
+**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
 <details>
 <summary>all...</summary>
 
@@ -298,7 +306,27 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**11x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+**1x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+<details><summary>context</summary>
+<pre>22:40:07: ERROR: no such package &#39;@bazel_skylib//lib&#39;: java.io.IOException: Error downloading [https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz, https://github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_skylib/temp11324301706757646990/bazel-skylib-1.1.1.tar.gz: Unknown host: release-assets.githubusercontent.com
+22:40:07: INFO: Elapsed time: 36.395s
+22:40:07: INFO: 0 processes.
+22:40:07: ERROR: Build failed. Not running target
+make: *** [Makefile:40: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**10x**: _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
 <details>
 <summary>all...</summary>
 
@@ -323,18 +351,6 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 20:18:10: &#43; rm -f /tmp/kubevirt.deploy.YmnF
 make: *** [Makefile:188: cluster-sync] Error 1
 &#43; ret=2</pre>
-</details>
-
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
-<details><summary>context</summary>
-<pre>22:40:07: ERROR: no such package &#39;@bazel_skylib//lib&#39;: java.io.IOException: Error downloading [https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz, https://github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz] to /tmp/cache/bazel/18316b1300bb8985bc913139d5cc6323/external/bazel_skylib/temp11324301706757646990/bazel-skylib-1.1.1.tar.gz: Unknown host: release-assets.githubusercontent.com
-22:40:07: INFO: Elapsed time: 36.395s
-22:40:07: INFO: 0 processes.
-22:40:07: ERROR: Build failed. Not running target
-make: *** [Makefile:40: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
 </details>
 
 
@@ -443,51 +459,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
-<details><summary>context</summary>
-<pre>22:52:05: Trying to pull quay.io/kubevirtci/gocli:2510241540-9fd40b1c...
-22:53:15: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
-22:53:15: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:159: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-* _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
-<details><summary>context</summary>
-<pre>23:02:06: Copying blob sha256:d256b949f856f7e42232670152385765dc793323d146a5728c5524041022e431
-23:02:06: Copying blob sha256:18084e71cbfaebe8260f15f560912a624b8167f904c0fea7913b758991d61c7f
-23:03:39: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-<details><summary>context</summary>
-<pre>23:16:21: Copying blob sha256:d7947dd0f4d10823605cb7ec555f03d25af0a9435628af6d1e95c8d16814fa46
-23:17:47: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
-23:17:47: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:159: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**5x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
+**5x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
 <details>
 <summary>all...</summary>
 
@@ -548,6 +520,50 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 &#43; rc=2
 &#43; return 2
 &#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**3x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+<details><summary>context</summary>
+<pre>22:52:05: Trying to pull quay.io/kubevirtci/gocli:2510241540-9fd40b1c...
+22:53:15: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
+22:53:15: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:159: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+* _2026-04-14 22:35:57 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-ipv6-sig-network-1.7/2044182607771471872#1:build-log.txt%3A582)
+<details><summary>context</summary>
+<pre>23:02:06: Copying blob sha256:d256b949f856f7e42232670152385765dc793323d146a5728c5524041022e431
+23:02:06: Copying blob sha256:18084e71cbfaebe8260f15f560912a624b8167f904c0fea7913b758991d61c7f
+23:03:39: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
+make: *** [Makefile:162: cluster-down] Error 125
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+<details><summary>context</summary>
+<pre>23:16:21: Copying blob sha256:d7947dd0f4d10823605cb7ec555f03d25af0a9435628af6d1e95c8d16814fa46
+23:17:47: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: initializing source docker://quay.io/kubevirtci/gocli:2510241540-9fd40b1c: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
+23:17:47: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:159: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -698,7 +714,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:33 &#43;0000 UTC_: <code>00:56:47:   {&#34;[namespace kubevirt-test-default2 name testvmi-l826p-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c2be602b-f84f-4cf3-8368-3243dbee43ef]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:56:38.578042Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2044182618622136320#1:build-log.txt%3A5169)
+**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
 <details>
 <summary>all...</summary>
 
@@ -788,7 +804,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**8x**: _2026-04-14 15:40:05 &#43;0000 UTC_: <code>15:43:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17067/pull-kubevirt-e2e-k8s-1.34-sig-storage/2044078011715686400#1:build-log.txt%3A353)
+**8x**: _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
 <details>
 <summary>all...</summary>
 
@@ -828,49 +844,6 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### release-1.6 (4x / 13.33%)
-
-
-#### needs-investigation (2x / 50.00%)
-
-<details>
-<summary> no matching pattern (2x / 50.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
-
-* _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 50.00%)
-
-<details>
-<summary> download failure in context (2x / 50.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
-
-* _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
-
-</details>
-
-<hr/>
-</details>
-
 ### release-1.7 (10x / 33.33%)
 
 
@@ -881,7 +854,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+**3x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
 <details>
 <summary>all...</summary>
 
@@ -895,7 +868,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
+**3x**: _2026-04-14 22:35:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2044182619574243328#1:build-log.txt%3A203)
 <details>
 <summary>all...</summary>
 
@@ -968,6 +941,49 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
+### release-1.6 (4x / 13.33%)
+
+
+#### external (2x / 50.00%)
+
+<details>
+<summary> download failure in context (2x / 50.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+
+* _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (2x / 50.00%)
+
+<details>
+<summary> no matching pattern (2x / 50.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:38 &#43;0000 UTC_: <code>00:59:09:   {&#34;[namespace kubevirt-test-default4 name testvmi-hz4mf-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 1296b6c2-024d-4270-8b10-f2b0ce4c230d]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:59:00.422621Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.6/2044182791259688960#1:build-log.txt%3A9926)
+
+* _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
+
+</details>
+
+<hr/>
+</details>
+
 ### release-1.8 (6x / 20.00%)
 
 
@@ -985,6 +1001,21 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 * _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
 
 * _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
 
 </details>
 
@@ -1015,21 +1046,6 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <summary>all...</summary>
 
 * _2026-04-14 22:34:43 &#43;0000 UTC_: <code>00:33:03:   [FAILED] in [AfterEach] - tests/libkubevirt/kubevirt.go:49 @ 04/15/26 00:33:03.525</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2044182452733218816#1:build-log.txt%3A4923)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:34:50 &#43;0000 UTC_: <code>23:54:10: I0414 19:54:10.637122    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2044182448891236352#1:build-log.txt%3A762)
 
 </details>
 
@@ -1140,91 +1156,6 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### sig-compute (16x / 53.33%)
-
-
-#### external (16x / 100.00%)
-
-<details>
-<summary> download failure in context (9x / 56.25%) </summary>
-
-<hr/>
-
-**9x**: _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
-<details>
-<summary>all...</summary>
-
-* _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
-
-* _2026-04-16 20:05:44 &#43;0000 UTC_: <code>20:18:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17437/pull-kubevirt-e2e-k8s-1.35-sig-compute/2044869730921091072#1:build-log.txt%3A4004)
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
-
-* _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
-
-* _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
-
-* _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
-
-* _2026-04-14 15:53:52 &#43;0000 UTC_: <code>15:56:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-operator/2044080985447862272#1:build-log.txt%3A306)
-
-* _2026-04-14 15:53:45 &#43;0000 UTC_: <code>15:56:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2044080987104612352#1:build-log.txt%3A386)
-
-* _2026-04-14 15:52:19 &#43;0000 UTC_: <code>15:56:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute/2044080984571252736#1:build-log.txt%3A302)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (6x / 37.50%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
-
-* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:35:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2044182619574243328#1:build-log.txt%3A203)
-
-* _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
-
-* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
-
-* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 6.25%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-14 22:36:18 &#43;0000 UTC_: <code>00:32:50: • [FAILED] [464.111 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2044182608597749760#1:build-log.txt%3A4664)
-<details>
-<summary>all...</summary>
-
-* _2026-04-14 22:36:18 &#43;0000 UTC_: <code>00:32:50: • [FAILED] [464.111 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2044182608597749760#1:build-log.txt%3A4664)
-
-</details>
-
-<hr/>
-</details>
-
 ### sig-storage (8x / 26.67%)
 
 
@@ -1285,7 +1216,7 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-04-14 22:35:33 &#43;0000 UTC_: <code>00:56:47:   {&#34;[namespace kubevirt-test-default2 name testvmi-l826p-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c2be602b-f84f-4cf3-8368-3243dbee43ef]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T00:56:38.578042Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2044182618622136320#1:build-log.txt%3A5169)
+**3x**: _2026-04-14 22:36:13 &#43;0000 UTC_: <code>01:14:31:   {&#34;[namespace kubevirt-test-default1 name testvmi-gnklc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 7f75faab-a51e-44b0-a355-dc176d472057]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-04-15T01:14:22.408215Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.31-sig-storage-1.6/2044182787979743232#1:build-log.txt%3A11483)
 <details>
 <summary>all...</summary>
 
@@ -1310,4 +1241,97 @@ make: *** [Makefile:37: bazel-build-images] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-04-21 00:26:39
+### sig-compute (16x / 53.33%)
+
+
+#### external (16x / 100.00%)
+
+<details>
+<summary> download failure in context (9x / 56.25%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>22:40:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2044182775736569856#1:build-log.txt%3A256)
+
+</details>
+
+<hr/>
+
+**8x**: _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
+<details>
+<summary>all...</summary>
+
+* _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
+
+* _2026-04-16 20:05:44 &#43;0000 UTC_: <code>20:18:08: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17437/pull-kubevirt-e2e-k8s-1.35-sig-compute/2044869730921091072#1:build-log.txt%3A4004)
+
+* _2026-04-14 22:36:02 &#43;0000 UTC_: <code>22:38:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17501/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2044182784552996864#1:build-log.txt%3A341)
+
+* _2026-04-14 22:34:41 &#43;0000 UTC_: <code>22:39:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2044182449767845888#1:build-log.txt%3A253)
+
+* _2026-04-14 15:53:55 &#43;0000 UTC_: <code>15:56:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2044080992989220864#1:build-log.txt%3A301)
+
+* _2026-04-14 15:53:52 &#43;0000 UTC_: <code>15:56:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-operator/2044080985447862272#1:build-log.txt%3A306)
+
+* _2026-04-14 15:53:45 &#43;0000 UTC_: <code>15:56:56: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2044080987104612352#1:build-log.txt%3A386)
+
+* _2026-04-14 15:52:19 &#43;0000 UTC_: <code>15:56:51: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17495/pull-kubevirt-e2e-k8s-1.35-sig-compute/2044080984571252736#1:build-log.txt%3A302)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (6x / 37.50%) </summary>
+
+<hr/>
+
+**4x**: _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:35:28 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.7/2044182619574243328#1:build-log.txt%3A203)
+
+* _2026-04-14 22:35:21 &#43;0000 UTC_: <code>make: *** [Makefile:37: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.7/2044182616965386240#1:build-log.txt%3A210)
+
+* _2026-04-14 22:34:45 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2044182454352220160#1:build-log.txt%3A193)
+
+* _2026-04-14 22:34:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17499/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2044182447226097664#1:build-log.txt%3A197)
+
+</details>
+
+<hr/>
+
+**2x**: _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:44 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.32-sig-compute-1.7/2044182612783665152#1:build-log.txt%3A542)
+
+* _2026-04-14 22:35:35 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.7/2044182620316635136#1:build-log.txt%3A559)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 6.25%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-14 22:36:18 &#43;0000 UTC_: <code>00:32:50: • [FAILED] [464.111 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2044182608597749760#1:build-log.txt%3A4664)
+<details>
+<summary>all...</summary>
+
+* _2026-04-14 22:36:18 &#43;0000 UTC_: <code>00:32:50: • [FAILED] [464.111 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17500/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2044182608597749760#1:build-log.txt%3A4664)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-04-21 04:11:10
