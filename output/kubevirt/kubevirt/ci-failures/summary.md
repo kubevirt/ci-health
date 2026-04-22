@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-17 (2x / 50.00%)
+### 2026-04-17 (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -53,7 +53,7 @@
 <hr/>
 </details>
 
-### 2026-04-16 (1x / 25.00%)
+### 2026-04-16 (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -74,36 +74,15 @@
 <hr/>
 </details>
 
-### 2026-04-15 (1x / 25.00%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> download failure in context (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-<details>
-<summary>all...</summary>
-
-* _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (4x / 100.00%)
+### external (3x / 100.00%)
 
 <details>
-<summary> download failure in context (3x / 75.00%) </summary>
+<summary> download failure in context (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -138,29 +117,9 @@ make: *** [Makefile:188: cluster-sync] Error 1
 </details>
 
 <hr/>
-
-**1x**: _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-<details>
-<summary>all...</summary>
-
-* _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-<details><summary>context</summary>
-<pre>14:20:43: 		rctx.download(
-14:20:43: Error in download: java.io.IOException: Error downloading [https://github.com/regclient/regclient/releases/download/v0.8.0/regctl-linux-amd64] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/oci_regctl_linux_amd64/regctl: Unknown host: release-assets.githubusercontent.com
-14:20:43: ERROR: /root/go/src/kubevirt.io/kubevirt/cmd/virt-launcher/BUILD.bazel:254:10: //cmd/virt-launcher:virt-launcher-image depends on @oci_regctl_linux_amd64//:regctl_toolchain in repository @oci_regctl_linux_amd64 which failed to fetch. no such package &#39;@oci_regctl_linux_amd64//&#39;: java.io.IOException: Error downloading [https://github.com/regclient/regclient/releases/download/v0.8.0/regctl-linux-amd64] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/oci_regctl_linux_amd64/regctl: Unknown host: release-assets.githubusercontent.com
-14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed
-14:20:43: INFO: Elapsed time: 19.255s
-14:20:43: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -190,13 +149,13 @@ make: *** [Makefile:173: cluster-up] Error 6
 ## per branch [⬆](#top)
 
 
-### main (4x / 100.00%)
+### main (3x / 100.00%)
 
 
-#### external (4x / 100.00%)
+#### external (3x / 100.00%)
 
 <details>
-<summary> download failure in context (3x / 75.00%) </summary>
+<summary> download failure in context (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -211,19 +170,9 @@ make: *** [Makefile:173: cluster-up] Error 6
 </details>
 
 <hr/>
-
-**1x**: _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-<details>
-<summary>all...</summary>
-
-* _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -243,28 +192,13 @@ make: *** [Makefile:173: cluster-up] Error 6
 ## per SIG [⬆](#top)
 
 
-### sig-network (2x / 50.00%)
+### sig-network (1x / 33.33%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-<details>
-<summary>all...</summary>
-
-* _2026-04-15 14:15:15 &#43;0000 UTC_: <code>14:20:43: ERROR: Analysis of target &#39;//cmd/virt-launcher:virt-launcher-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17469/pull-kubevirt-e2e-kind-sriov/2044411425639632896#1:build-log.txt%3A751)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -279,7 +213,7 @@ make: *** [Makefile:173: cluster-up] Error 6
 <hr/>
 </details>
 
-### sig-compute (2x / 50.00%)
+### sig-compute (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -302,4 +236,4 @@ make: *** [Makefile:173: cluster-up] Error 6
 <hr/>
 </details>
 
-Last updated: 2026-04-22 12:25:02
+Last updated: 2026-04-22 15:39:44
