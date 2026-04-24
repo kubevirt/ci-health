@@ -50,7 +50,7 @@
 
 <hr/>
 
-**7x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-operator/2046711709980168192#1:build-log.txt%3A228)
+**7x**: _2026-04-21 22:05:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-windows2016/2046711708981923840#1:build-log.txt%3A250)
 <details>
 <summary>all...</summary>
 
@@ -98,7 +98,7 @@
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
+**5x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
 <details>
 <summary>all...</summary>
 
@@ -179,116 +179,11 @@
 ### external (15x / 83.33%)
 
 <details>
-<summary> download failure in context (7x / 38.89%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
-<details>
-<summary>all...</summary>
-
-* _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
-<details><summary>context</summary>
-<pre>22:07:22: Repository rule oci_alias defined at:
-22:07:22:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_oci/oci/private/pull.bzl:472:28: in &lt;toplevel&gt;
-22:07:22: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:103:10: //containerimages:alpine-with-test-tooling depends on @alpine_with_test_tooling//:alpine_with_test_tooling in repository @alpine_with_test_tooling which failed to fetch. no such package &#39;@alpine_with_test_tooling//&#39;: java.io.IOException: Error downloading [https://quay.io/v2/auth?scope=repository:kubevirtci/alpine-with-test-tooling-container-disk:pull&amp;service=quay.io] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/alpine_with_test_tooling/www-authenticate.json: GET returned 502 Bad Gateway
-22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed
-22:07:22: INFO: Elapsed time: 4.444s
-22:07:22: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**6x**: _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-<details><summary>context</summary>
-<pre>18:24:04: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:24:04: INFO: Elapsed time: 24.850s
-18:24:04: INFO: 0 processes.
-18:24:04: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details><summary>context</summary>
-<pre>18:28:57: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:28:57: INFO: Elapsed time: 25.243s
-18:28:57: INFO: 0 processes.
-18:28:57: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-<details><summary>context</summary>
-<pre>18:23:44: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:23:44: INFO: Elapsed time: 24.581s
-18:23:44: INFO: 0 processes.
-18:23:44: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-<details><summary>context</summary>
-<pre>18:15:31: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:15:31: INFO: Elapsed time: 24.557s
-18:15:31: INFO: 0 processes.
-18:15:31: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
-<details><summary>context</summary>
-<pre>17:52:35: ERROR: Analysis of target &#39;//rpm:sandbox_x86_64&#39; failed; build aborted:
-17:52:35: INFO: Elapsed time: 13.524s
-17:52:35: INFO: 0 processes.
-17:52:35: ERROR: Build failed. Not running target
-make: *** [Makefile:40: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-* _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
-<details><summary>context</summary>
-<pre>13:37:52: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-13:37:52: INFO: Elapsed time: 18.277s
-13:37:52: INFO: 0 processes.
-13:37:52: ERROR: Build failed. Not running target
-make: *** [Makefile:28: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; check_for_panics</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (7x / 38.89%) </summary>
 
 <hr/>
 
-**7x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-operator/2046711709980168192#1:build-log.txt%3A228)
+**7x**: _2026-04-21 22:05:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-windows2016/2046711708981923840#1:build-log.txt%3A250)
 <details>
 <summary>all...</summary>
 
@@ -373,6 +268,111 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 &#43; rc=2
 &#43; return 2
 &#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (7x / 38.89%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
+<details>
+<summary>all...</summary>
+
+* _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
+<details><summary>context</summary>
+<pre>22:07:22: Repository rule oci_alias defined at:
+22:07:22:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_oci/oci/private/pull.bzl:472:28: in &lt;toplevel&gt;
+22:07:22: ERROR: /root/go/src/kubevirt.io/kubevirt/containerimages/BUILD.bazel:103:10: //containerimages:alpine-with-test-tooling depends on @alpine_with_test_tooling//:alpine_with_test_tooling in repository @alpine_with_test_tooling which failed to fetch. no such package &#39;@alpine_with_test_tooling//&#39;: java.io.IOException: Error downloading [https://quay.io/v2/auth?scope=repository:kubevirtci/alpine-with-test-tooling-container-disk:pull&amp;service=quay.io] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/alpine_with_test_tooling/www-authenticate.json: GET returned 502 Bad Gateway
+22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed
+22:07:22: INFO: Elapsed time: 4.444s
+22:07:22: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**6x**: _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
+<details>
+<summary>all...</summary>
+
+* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
+<details><summary>context</summary>
+<pre>18:24:04: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
+18:24:04: INFO: Elapsed time: 24.850s
+18:24:04: INFO: 0 processes.
+18:24:04: ERROR: Build failed. Not running target
+make: *** [Makefile:26: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; make cluster-down</pre>
+</details>
+
+
+* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
+<details><summary>context</summary>
+<pre>18:28:57: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
+18:28:57: INFO: Elapsed time: 25.243s
+18:28:57: INFO: 0 processes.
+18:28:57: ERROR: Build failed. Not running target
+make: *** [Makefile:26: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; make cluster-down</pre>
+</details>
+
+
+* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
+<details><summary>context</summary>
+<pre>18:23:44: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
+18:23:44: INFO: Elapsed time: 24.581s
+18:23:44: INFO: 0 processes.
+18:23:44: ERROR: Build failed. Not running target
+make: *** [Makefile:26: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; make cluster-down</pre>
+</details>
+
+
+* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
+<details><summary>context</summary>
+<pre>18:15:31: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
+18:15:31: INFO: Elapsed time: 24.557s
+18:15:31: INFO: 0 processes.
+18:15:31: ERROR: Build failed. Not running target
+make: *** [Makefile:26: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; make cluster-down</pre>
+</details>
+
+
+* _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
+<details><summary>context</summary>
+<pre>17:52:35: ERROR: Analysis of target &#39;//rpm:sandbox_x86_64&#39; failed; build aborted:
+17:52:35: INFO: Elapsed time: 13.524s
+17:52:35: INFO: 0 processes.
+17:52:35: ERROR: Build failed. Not running target
+make: *** [Makefile:40: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2</pre>
+</details>
+
+
+* _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
+<details><summary>context</summary>
+<pre>13:37:52: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
+13:37:52: INFO: Elapsed time: 18.277s
+13:37:52: INFO: 0 processes.
+13:37:52: ERROR: Build failed. Not running target
+make: *** [Makefile:28: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; check_for_panics</pre>
 </details>
 
 
@@ -489,7 +489,7 @@ make: *** [Makefile:166: cluster-up] Error 2
 
 <hr/>
 
-**7x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-operator/2046711709980168192#1:build-log.txt%3A228)
+**7x**: _2026-04-21 22:05:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-windows2016/2046711708981923840#1:build-log.txt%3A250)
 <details>
 <summary>all...</summary>
 
@@ -582,7 +582,7 @@ make: *** [Makefile:166: cluster-up] Error 2
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
+**5x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
 <details>
 <summary>all...</summary>
 
@@ -649,21 +649,6 @@ make: *** [Makefile:166: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
-<details>
-<summary>all...</summary>
-
-* _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 12.50%) </summary>
 
 <hr/>
@@ -673,6 +658,21 @@ make: *** [Makefile:166: cluster-up] Error 2
 <summary>all...</summary>
 
 * _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
+<details>
+<summary>all...</summary>
+
+* _2026-04-17 13:33:58 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-kind-sriov/2045131370006581248#1:build-log.txt%3A1394)
 
 </details>
 
@@ -717,6 +717,27 @@ make: *** [Makefile:166: cluster-up] Error 2
 <hr/>
 </details>
 
+### sig-storage (1x / 5.56%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> download failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
+<details>
+<summary>all...</summary>
+
+* _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-compute (9x / 50.00%)
 
 
@@ -727,7 +748,7 @@ make: *** [Makefile:166: cluster-up] Error 2
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
+**5x**: _2026-04-17 13:25:22 &#43;0000 UTC_: <code>13:37:52: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17391/pull-kubevirt-e2e-k8s-1.34-windows2016/2045131369809448960#1:build-log.txt%3A4706)
 <details>
 <summary>all...</summary>
 
@@ -750,7 +771,7 @@ make: *** [Makefile:166: cluster-up] Error 2
 
 <hr/>
 
-**4x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-operator/2046711709980168192#1:build-log.txt%3A228)
+**4x**: _2026-04-21 22:05:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-windows2016/2046711708981923840#1:build-log.txt%3A250)
 <details>
 <summary>all...</summary>
 
@@ -767,25 +788,4 @@ make: *** [Makefile:166: cluster-up] Error 2
 <hr/>
 </details>
 
-### sig-storage (1x / 5.56%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> download failure in context (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
-<details>
-<summary>all...</summary>
-
-* _2026-04-21 22:05:03 &#43;0000 UTC_: <code>22:07:22: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-storage/2046711709757870080#1:build-log.txt%3A569)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-04-24 06:41:03
+Last updated: 2026-04-24 09:39:17
