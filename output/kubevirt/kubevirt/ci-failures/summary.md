@@ -116,7 +116,7 @@
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
+**5x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
 <details>
 <summary>all...</summary>
 
@@ -264,7 +264,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
+**5x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
 <details>
 <summary>all...</summary>
 
@@ -333,34 +333,6 @@ make: *** [Makefile:40: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### internal (1x / 6.25%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 6.25%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-18 17:56:00 &#43;0000 UTC_: <code>make: *** [Makefile:166: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-sriov-1.6/2045560409401856000#1:build-log.txt%3A1338)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:56:00 &#43;0000 UTC_: <code>make: *** [Makefile:166: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-sriov-1.6/2045560409401856000#1:build-log.txt%3A1338)
-<details><summary>context</summary>
-<pre>18:05:33: gzip: stdin: not in gzip format
-18:05:33: tar: Child returned status 1
-18:05:33: tar: Error is not recoverable: exiting now
-make: *** [Makefile:166: cluster-up] Error 2
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### needs-investigation (2x / 12.50%)
 
 <details>
@@ -393,6 +365,34 @@ Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108
 time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete layer \&#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6\&#34;, deleting it&#34;
 /usr/local/bin/runner.sh: line 50: wait: pid 1220 is not a child of this shell
 ================================================================================</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### internal (1x / 6.25%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 6.25%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-18 17:56:00 &#43;0000 UTC_: <code>make: *** [Makefile:166: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-sriov-1.6/2045560409401856000#1:build-log.txt%3A1338)
+<details>
+<summary>all...</summary>
+
+* _2026-04-18 17:56:00 &#43;0000 UTC_: <code>make: *** [Makefile:166: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-sriov-1.6/2045560409401856000#1:build-log.txt%3A1338)
+<details><summary>context</summary>
+<pre>18:05:33: gzip: stdin: not in gzip format
+18:05:33: tar: Child returned status 1
+18:05:33: tar: Error is not recoverable: exiting now
+make: *** [Makefile:166: cluster-up] Error 2
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -484,7 +484,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**5x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
+**5x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
 <details>
 <summary>all...</summary>
 
@@ -631,27 +631,6 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 #### external (8x / 100.00%)
 
 <details>
-<summary> download failure in context (4x / 50.00%) </summary>
-
-<hr/>
-
-**4x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-
-* _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (4x / 50.00%) </summary>
 
 <hr/>
@@ -672,5 +651,26 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (4x / 50.00%) </summary>
 
-Last updated: 2026-04-25 09:22:38
+<hr/>
+
+**4x**: _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
+<details>
+<summary>all...</summary>
+
+* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
+
+* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
+
+* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
+
+* _2026-04-18 17:50:13 &#43;0000 UTC_: <code>17:52:35: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-kind-1.30-vgpu-1.6/2045560409280221184#1:build-log.txt%3A450)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-04-25 12:17:26
