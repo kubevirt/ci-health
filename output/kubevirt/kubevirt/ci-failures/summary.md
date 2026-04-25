@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-23 (2x / 14.29%)
+### 2026-04-23 (2x / 20.00%)
 
 
 #### needs-investigation (2x / 100.00%)
@@ -27,7 +27,7 @@
 
 <hr/>
 
-**2x**: _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
+**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
 <details>
 <summary>all...</summary>
 
@@ -40,7 +40,7 @@
 <hr/>
 </details>
 
-### 2026-04-21 (8x / 57.14%)
+### 2026-04-21 (8x / 80.00%)
 
 
 #### external (8x / 100.00%)
@@ -88,42 +88,15 @@
 <hr/>
 </details>
 
-### 2026-04-18 (4x / 28.57%)
-
-
-#### external (4x / 100.00%)
-
-<details>
-<summary> download failure in context (4x / 100.00%) </summary>
-
-<hr/>
-
-**4x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-
-* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (12x / 85.71%)
+### external (8x / 80.00%)
 
 <details>
-<summary> container image pull failure in context (7x / 50.00%) </summary>
+<summary> container image pull failure in context (7x / 70.00%) </summary>
 
 <hr/>
 
@@ -220,63 +193,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (5x / 35.71%) </summary>
-
-<hr/>
-
-**4x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-<details><summary>context</summary>
-<pre>18:24:04: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:24:04: INFO: Elapsed time: 24.850s
-18:24:04: INFO: 0 processes.
-18:24:04: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details><summary>context</summary>
-<pre>18:28:57: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:28:57: INFO: Elapsed time: 25.243s
-18:28:57: INFO: 0 processes.
-18:28:57: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-<details><summary>context</summary>
-<pre>18:23:44: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:23:44: INFO: Elapsed time: 24.581s
-18:23:44: INFO: 0 processes.
-18:23:44: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-<details><summary>context</summary>
-<pre>18:15:31: ERROR: Analysis of target &#39;//:buildifier&#39; failed; build aborted:
-18:15:31: INFO: Elapsed time: 24.557s
-18:15:31: INFO: 0 processes.
-18:15:31: ERROR: Build failed. Not running target
-make: *** [Makefile:26: bazel-build-functests] Error 1
-&#43; ret=2
-&#43; make cluster-down</pre>
-</details>
-
-
-</details>
+<summary> download failure in context (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -301,14 +218,14 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### needs-investigation (2x / 14.29%)
+### needs-investigation (2x / 20.00%)
 
 <details>
-<summary> no matching pattern (2x / 14.29%) </summary>
+<summary> no matching pattern (2x / 20.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
+**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
 <details>
 <summary>all...</summary>
 
@@ -346,7 +263,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (10x / 71.43%)
+### main (10x / 100.00%)
 
 
 #### external (8x / 80.00%)
@@ -401,7 +318,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**2x**: _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
+**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
 <details>
 <summary>all...</summary>
 
@@ -414,49 +331,22 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.6 (4x / 28.57%)
-
-
-#### external (4x / 100.00%)
-
-<details>
-<summary> download failure in context (4x / 100.00%) </summary>
-
-<hr/>
-
-**4x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-
-* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-network (6x / 42.86%)
+### sig-network (5x / 50.00%)
 
 
-#### external (4x / 66.67%)
+#### external (3x / 60.00%)
 
 <details>
-<summary> container image pull failure in context (3x / 50.00%) </summary>
+<summary> container image pull failure in context (3x / 60.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-04-21 22:05:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2046711709439102976#1:build-log.txt%3A238)
+**3x**: _2026-04-21 22:05:03 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17555/pull-kubevirt-e2e-k8s-1.34-sig-network/2046711709594292224#1:build-log.txt%3A238)
 <details>
 <summary>all...</summary>
 
@@ -470,30 +360,15 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
+
+#### needs-investigation (2x / 40.00%)
+
 <details>
-<summary> download failure in context (1x / 16.67%) </summary>
+<summary> no matching pattern (2x / 40.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:18 &#43;0000 UTC_: <code>18:23:44: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-network-1.6/2045560420638396416#1:build-log.txt%3A2734)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (2x / 33.33%)
-
-<details>
-<summary> no matching pattern (2x / 33.33%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
+**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
 <details>
 <summary>all...</summary>
 
@@ -506,7 +381,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-storage (1x / 7.14%)
+### sig-storage (1x / 10.00%)
 
 
 #### external (1x / 100.00%)
@@ -527,13 +402,13 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-compute (7x / 50.00%)
+### sig-compute (4x / 40.00%)
 
 
-#### external (7x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (4x / 57.14%) </summary>
+<summary> container image pull failure in context (4x / 100.00%) </summary>
 
 <hr/>
 
@@ -553,24 +428,5 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
-<details>
-<summary> download failure in context (3x / 42.86%) </summary>
 
-<hr/>
-
-**3x**: _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-<details>
-<summary>all...</summary>
-
-* _2026-04-18 17:50:20 &#43;0000 UTC_: <code>18:24:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.32-sig-operator-1.6/2045560426552365056#1:build-log.txt%3A2670)
-
-* _2026-04-18 17:50:19 &#43;0000 UTC_: <code>18:28:57: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.6/2045560430264324096#1:build-log.txt%3A2580)
-
-* _2026-04-18 17:50:17 &#43;0000 UTC_: <code>18:15:31: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17529/pull-kubevirt-e2e-k8s-1.31-sig-operator-1.6/2045560423167561728#1:build-log.txt%3A2611)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-04-25 18:16:27
+Last updated: 2026-04-25 21:16:32
