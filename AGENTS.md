@@ -55,9 +55,11 @@ This directory contains the packages that implement the core logic of the `ci-he
 
 This applies to all PRs regardless of size or scope. The author will mark them as ready for review when appropriate.
 
-## GitHub Actions Workflows
+## Automation & Workflows
 
-The repository uses GitHub Actions to automate the process of data collection, report generation, and testing.
+The repository uses GitHub Actions and a Prow postsubmit in `kubevirt/project-infra` to automate data collection, report generation, and testing.
+
+`output/kubevirt/kubevirt/results.json` is the central artifact that chains several of these together: `badges-update.yaml` produces it every 3 hours, and its commit to `main` triggers both `ci-failures.yml` and the `ci-health-sig-report-publish` postsubmit.
 
 ### `test.yaml`
 
@@ -93,3 +95,14 @@ The repository uses GitHub Actions to automate the process of data collection, r
     2. Runs the `batch` command in `fetch` and then `plot` mode for several key metrics: `retests-to-merge`, `time-to-merge`, `merge-queue-length`, `merged-prs`, and `quarantined-tests`.
     3. This process updates the historical data files and regenerates the trend plots (PNG images).
     4. A final step commits the updated data and plots back to the repository.
+
+### `ci-health-sig-report-publish` (Prow postsubmit in `kubevirt/project-infra`)
+
+- **Defined in**: [`ci-health-postsubmits.yaml`](https://github.com/kubevirt/project-infra/blob/main/github/ci/prow-deploy/files/jobs/kubevirt/ci-health/ci-health-postsubmits.yaml) in the `kubevirt/project-infra` repository.
+- **Trigger**: Prow postsubmit that runs when `output/kubevirt/kubevirt/results.json` changes on `main` (via `run_if_changed`). It fires on every commit that touches `results.json`.
+- **Purpose**: To generate per-SIG HTML failure reports and publish them to GCS so the README badges can link to them.
+- **Action**:
+    1. Loops over SIGs: compute, network, storage, operator, monitoring.
+    2. Runs `go run ./cmd/html-report --sig <SIG> --results-path ./output/kubevirt/kubevirt/results.json` for each.
+    3. Uploads the generated HTML files to `gs://kubevirt-prow/reports/sig-failure-reports/` via `gsutil`.
+    4. The reports are then available at `https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-<name>-failure-report.html`.
