@@ -77,6 +77,22 @@ Only repos served by prow.ci.kubevirt.io are supported.`,
 		Args: cobra.ExactArgs(1),
 		RunE: analyzePR,
 	}
+
+	analyzeK8sCmd = &cobra.Command{
+		Use:   "analyze-k8s [prow-job-url]",
+		Short: "Analyze Kubernetes cluster state from k8s-reporter artifacts.",
+		Long: `Analyze Kubernetes cluster state from k8s-reporter artifacts for a Prow job.
+
+Downloads pods, nodes, events, and KubeVirt object dumps from the k8s-reporter
+artifacts directory in GCS, then runs failure detectors to identify issues like
+CrashLoopBackOff, OOMKilled, NotReady nodes, warning events, and failed VMI
+migrations.
+
+Accepts a Prow job URL, e.g.:
+  https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17287/pull-kubevirt-e2e-k8s-1.31-sig-compute/2045831803410845696`,
+		Args: cobra.ExactArgs(1),
+		RunE: analyzeK8s,
+	}
 )
 
 func generateReport(cmd *cobra.Command, args []string) error {
@@ -204,6 +220,19 @@ func analyzeBuild(_ *cobra.Command, args []string) error {
 	}
 
 	log.Printf("wrote analysis to %s", outputPath)
+
+	k8sResult, k8sErr := cifailures.AnalyzeK8s(prowJobURL)
+	if k8sErr != nil {
+		log.WithError(k8sErr).Warn("k8s artifact analysis failed, skipping")
+	} else {
+		k8sOutputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("k8s-analysis-%d.yaml", k8sResult.BuildID))
+		if writeErr := cifailures.WriteK8sAnalysisResultYAML(k8sOutputPath, k8sResult); writeErr != nil {
+			log.WithError(writeErr).Warn("failed to write k8s analysis YAML")
+		} else {
+			log.Infof("wrote k8s analysis to %s (%d findings)", k8sOutputPath, k8sResult.Summary.TotalFindings)
+		}
+	}
+
 	return nil
 }
 
@@ -268,8 +297,41 @@ func analyzePR(_ *cobra.Command, args []string) error {
 		}
 
 		log.Infof("wrote analysis to %s", outputPath)
+
+		k8sResult, k8sErr := cifailures.AnalyzeK8s(url)
+		if k8sErr != nil {
+			log.WithError(k8sErr).Warnf("k8s artifact analysis failed for %s, skipping", url)
+		} else {
+			k8sOutputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("k8s-analysis-%d.yaml", k8sResult.BuildID))
+			if writeErr := cifailures.WriteK8sAnalysisResultYAML(k8sOutputPath, k8sResult); writeErr != nil {
+				log.WithError(writeErr).Warnf("failed to write k8s analysis YAML for %s", url)
+			} else {
+				log.Infof("wrote k8s analysis to %s (%d findings)", k8sOutputPath, k8sResult.Summary.TotalFindings)
+			}
+		}
 	}
 
+	return nil
+}
+
+func analyzeK8s(_ *cobra.Command, args []string) error {
+	prowJobURL := args[0]
+
+	result, err := cifailures.AnalyzeK8s(prowJobURL)
+	if err != nil {
+		return fmt.Errorf("failed to analyze k8s artifacts: %v", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("k8s-analysis-%d.yaml", result.BuildID))
+	if err = cifailures.WriteK8sAnalysisResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %v", err)
+	}
+
+	log.Infof("wrote k8s analysis to %s (%d findings)", outputPath, result.Summary.TotalFindings)
 	return nil
 }
 
@@ -280,6 +342,7 @@ func init() {
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
 	rootCmd.AddCommand(analyzePRCmd)
+	rootCmd.AddCommand(analyzeK8sCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
