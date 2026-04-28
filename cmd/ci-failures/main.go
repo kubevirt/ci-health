@@ -88,6 +88,10 @@ artifacts directory in GCS, then runs failure detectors to identify issues like
 CrashLoopBackOff, OOMKilled, NotReady nodes, warning events, and failed VMI
 migrations.
 
+Also fetches etcd-storage-profile.json from artifacts/etcd-profiler/ when
+available (produced by runs with KUBEVIRT_PROFILE_ETCD=true) and detects etcd
+tmpfs exhaustion, tmpfs pressure, large WAL files, and DB growth trends.
+
 Accepts a Prow job URL, e.g.:
   https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17287/pull-kubevirt-e2e-k8s-1.31-sig-compute/2045831803410845696`,
 		Args: cobra.ExactArgs(1),

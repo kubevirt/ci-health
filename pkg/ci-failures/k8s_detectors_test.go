@@ -508,6 +508,114 @@ func TestDetectVMIFailures(t *testing.T) {
 	}
 }
 
+func TestDetectEtcdIssues(t *testing.T) {
+	tests := []struct {
+		name             string
+		profile          *EtcdStorageProfile
+		expectedCount    int
+		expectedDetector string
+		expectedSeverity string
+	}{
+		{
+			name:          "nil profile",
+			profile:       nil,
+			expectedCount: 0,
+		},
+		{
+			name: "healthy profile",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      10,
+				FinalTmpfsTotal: 1024 * 1024 * 1024,
+				PeakTmpfsUsed:   100 * 1024 * 1024,
+				FinalWALSize:    50 * 1024 * 1024,
+			},
+			expectedCount: 0,
+		},
+		{
+			name: "tmpfs exhaustion over 90%",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      10,
+				FinalTmpfsTotal: 512 * 1024 * 1024,
+				PeakTmpfsUsed:   480 * 1024 * 1024, // ~93.75%
+				FinalWALSize:    50 * 1024 * 1024,
+			},
+			expectedCount:    1,
+			expectedDetector: "etcd-tmpfs-exhaustion",
+			expectedSeverity: "error",
+		},
+		{
+			name: "tmpfs pressure between 75% and 90%",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      10,
+				FinalTmpfsTotal: 512 * 1024 * 1024,
+				PeakTmpfsUsed:   420 * 1024 * 1024, // ~82%
+				FinalWALSize:    50 * 1024 * 1024,
+			},
+			expectedCount:    1,
+			expectedDetector: "etcd-tmpfs-pressure",
+			expectedSeverity: "warning",
+		},
+		{
+			name: "large WAL over 50% of tmpfs",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      10,
+				FinalTmpfsTotal: 512 * 1024 * 1024,
+				PeakTmpfsUsed:   100 * 1024 * 1024,
+				FinalWALSize:    300 * 1024 * 1024, // ~58.6%
+			},
+			expectedCount:    1,
+			expectedDetector: "etcd-large-wal",
+			expectedSeverity: "warning",
+		},
+		{
+			name: "DB growth across specs",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      3,
+				FinalTmpfsTotal: 1024 * 1024 * 1024,
+				PeakTmpfsUsed:   100 * 1024 * 1024,
+				FinalWALSize:    50 * 1024 * 1024,
+				Records: []EtcdStorageSpecRecord{
+					{SpecName: "spec1", DeltaDBSize: 1000},
+					{SpecName: "spec2", DeltaDBSize: -500},
+					{SpecName: "spec3", DeltaDBSize: 2000},
+				},
+			},
+			expectedCount:    1,
+			expectedDetector: "etcd-db-growth",
+			expectedSeverity: "info",
+		},
+		{
+			name: "zero tmpfs total avoids division by zero",
+			profile: &EtcdStorageProfile{
+				TotalSpecs:      1,
+				FinalTmpfsTotal: 0,
+				PeakTmpfsUsed:   100,
+			},
+			expectedCount: 0,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			findings := detectEtcdIssues(tt.profile)
+			if len(findings) != tt.expectedCount {
+				t.Fatalf("expected %d findings, got %d: %+v", tt.expectedCount, len(findings), findings)
+			}
+			if tt.expectedCount > 0 {
+				if findings[0].Detector != tt.expectedDetector {
+					t.Errorf("expected detector %q, got %q", tt.expectedDetector, findings[0].Detector)
+				}
+				if findings[0].Severity != tt.expectedSeverity {
+					t.Errorf("expected severity %q, got %q", tt.expectedSeverity, findings[0].Severity)
+				}
+				if findings[0].Kind != "EtcdProfile" {
+					t.Errorf("expected kind %q, got %q", "EtcdProfile", findings[0].Kind)
+				}
+			}
+		})
+	}
+}
+
 func TestDetectVMIMFailures(t *testing.T) {
 	tests := []struct {
 		name          string

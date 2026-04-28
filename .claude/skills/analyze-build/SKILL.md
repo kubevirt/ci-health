@@ -10,9 +10,10 @@ allowed-tools: [Read, Glob, Bash(go run:*)]
 
 This skill helps the user to find the root cause and mitigations for failing prowjobs.
 
-It combines two analyses:
+It combines three analyses:
 1. **Build log analysis** — extracts error snippets from the build log and categorizes them
 2. **Kubernetes cluster state analysis** — downloads k8s-reporter artifacts (pods, nodes, events, VMIs) and detects infrastructure-level failures like CrashLoopBackOff, OOMKilled, NotReady nodes, failed migrations, and warning events
+3. **Etcd storage profiling** — if the job was run with `KUBEVIRT_PROFILE_ETCD=true`, downloads `etcd-storage-profile.json` from `artifacts/etcd-profiler/` and detects tmpfs exhaustion, tmpfs pressure, large WAL files, and DB growth trends
 
 ## Analysis data generation
 
@@ -24,9 +25,9 @@ Example how to generate the data files for a specific prowjob, given is the url 
 $ go run ./cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
 ```
 
-This produces two output files:
+This produces up to three output files:
 - `output/tmp/{job-name}.yaml` — build log error analysis
-- `output/tmp/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist)
+- `output/tmp/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist), includes etcd profiler findings and full etcd profile data when available
 
 ## Analysis
 
@@ -40,5 +41,6 @@ After data generation:
    - `snapshots`: list of cluster state capture points (process + failure count)
    - `findings`: list of detected issues, each with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`
    - `summary`: aggregate counts by kind, severity, and detector
-4. Correlate both analyses: k8s findings (e.g. CrashLoopBackOff on a component pod) often explain build log errors (e.g. test timeouts)
+   - `etcd_profile` (optional): full etcd storage profile with `peak_tmpfs_used_bytes`, `final_tmpfs_total_bytes`, `final_wal_size_bytes`, and per-spec `records` showing DB size deltas and tmpfs usage. Etcd-related findings use kind `EtcdProfile` and detectors `etcd-tmpfs-exhaustion`, `etcd-tmpfs-pressure`, `etcd-large-wal`, `etcd-db-growth`
+4. Correlate all analyses: k8s findings (e.g. CrashLoopBackOff on a component pod) often explain build log errors (e.g. test timeouts); etcd findings (e.g. tmpfs exhaustion) can explain node-level or apiserver issues
 5. Deduce the root cause and possible mitigations from the combined data

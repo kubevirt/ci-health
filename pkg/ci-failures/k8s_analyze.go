@@ -93,15 +93,22 @@ func AnalyzeK8s(prowJobURL string) (*K8sAnalysisResult, error) {
 		}
 	}
 
+	etcdProfile := fetchEtcdProfile(gcsBaseURL, cacheDir)
+	if etcdProfile != nil {
+		etcdFindings := detectEtcdIssues(etcdProfile)
+		allFindings = append(allFindings, etcdFindings...)
+	}
+
 	result := &K8sAnalysisResult{
-		ProwJobURL: prowJobURL,
-		JobName:    jobName,
-		BuildID:    buildID,
-		Started:    started,
-		Finished:   finished,
-		Snapshots:  snapshotList,
-		Findings:   allFindings,
-		Summary:    buildSummary(allFindings),
+		ProwJobURL:  prowJobURL,
+		JobName:     jobName,
+		BuildID:     buildID,
+		Started:     started,
+		Finished:    finished,
+		Snapshots:   snapshotList,
+		Findings:    allFindings,
+		Summary:     buildSummary(allFindings),
+		EtcdProfile: etcdProfile,
 	}
 
 	return result, nil
@@ -270,10 +277,41 @@ func parseAndDetect(raw []byte, artifactType string) []*K8sFinding {
 			return nil
 		}
 		return detectVMIMFailures(&vmims)
+	case "etcd-storage-profile":
+		var profile EtcdStorageProfile
+		if err := json.Unmarshal(raw, &profile); err != nil {
+			log.WithError(err).Warnf("failed to parse %s JSON", artifactType)
+			return nil
+		}
+		return detectEtcdIssues(&profile)
 	default:
 		log.Warnf("unknown artifact type: %s", artifactType)
 		return nil
 	}
+}
+
+func fetchEtcdProfile(gcsBaseURL, cacheDir string) *EtcdStorageProfile {
+	etcdURL := gcsBaseURL + "/artifacts/etcd-profiler/etcd-storage-profile.json"
+	if !probeExists(etcdURL) {
+		log.Info("no etcd-storage-profile.json found, skipping etcd analysis")
+		return nil
+	}
+
+	raw, err := downloadK8sArtifact(etcdURL, cacheDir, "etcd-storage-profile")
+	if err != nil {
+		log.WithError(err).Warn("failed to download etcd-storage-profile.json")
+		return nil
+	}
+
+	var profile EtcdStorageProfile
+	if err := json.Unmarshal(raw, &profile); err != nil {
+		log.WithError(err).Warn("failed to parse etcd-storage-profile.json")
+		return nil
+	}
+
+	log.Infof("loaded etcd profile: %d specs, peak tmpfs %d/%d bytes",
+		profile.TotalSpecs, profile.PeakTmpfsUsed, profile.FinalTmpfsTotal)
+	return &profile
 }
 
 func buildSummary(findings []*K8sFinding) K8sSummary {

@@ -26,7 +26,7 @@ This command:
 3. Keeps only the latest run per job (jobs that eventually passed are excluded)
 4. Downloads build logs and extracts error snippets for each failure
 5. Writes one YAML file per failed job to `output/tmp/{job-name}.yaml`
-6. For each failed job, also downloads k8s-reporter artifacts and writes `output/tmp/k8s-analysis-{build-id}.yaml`
+6. For each failed job, also downloads k8s-reporter artifacts (and etcd profiler data if available) and writes `output/tmp/k8s-analysis-{build-id}.yaml`
 
 ## Analysis
 
@@ -46,8 +46,9 @@ After data generation:
    - `snapshots`: list of cluster state capture points (process + failure count)
    - `findings`: list of detected issues with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`
    - `summary`: aggregate counts by kind, severity, and detector
+   - `etcd_profile` (optional): full etcd storage profile with peak/final tmpfs and WAL metrics, plus per-spec records. Etcd-related findings use kind `EtcdProfile` and detectors `etcd-tmpfs-exhaustion`, `etcd-tmpfs-pressure`, `etcd-large-wal`, `etcd-db-growth`
 4. For each failure, examine build log errors AND k8s findings to determine the root cause
-5. Correlate k8s findings with build log errors — e.g. CrashLoopBackOff on a component pod often explains test timeouts
+5. Correlate k8s findings with build log errors — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver or node-level failures
 6. Group failures with the same root cause together
 
 ## Output

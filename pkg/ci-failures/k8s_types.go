@@ -197,14 +197,55 @@ type K8sFinding struct {
 
 // K8sAnalysisResult is the top-level output for analyze-k8s.
 type K8sAnalysisResult struct {
-	ProwJobURL string        `yaml:"prow_job_url"`
-	JobName    string        `yaml:"job_name"`
-	BuildID    int           `yaml:"build_id"`
-	Started    time.Time     `yaml:"started"`
-	Finished   time.Time     `yaml:"finished"`
-	Snapshots  []K8sSnapshot `yaml:"snapshots"`
-	Findings   []*K8sFinding `yaml:"findings"`
-	Summary    K8sSummary    `yaml:"summary"`
+	ProwJobURL  string               `yaml:"prow_job_url"`
+	JobName     string               `yaml:"job_name"`
+	BuildID     int                  `yaml:"build_id"`
+	Started     time.Time            `yaml:"started"`
+	Finished    time.Time            `yaml:"finished"`
+	Snapshots   []K8sSnapshot        `yaml:"snapshots"`
+	Findings    []*K8sFinding        `yaml:"findings"`
+	Summary     K8sSummary           `yaml:"summary"`
+	EtcdProfile *EtcdStorageProfile  `yaml:"etcd_profile,omitempty"`
+}
+
+// EtcdStorageProfile is the top-level structure of etcd-storage-profile.json
+// produced by the etcd profiler in kubevirt test runs.
+type EtcdStorageProfile struct {
+	CollectedAt     string                  `json:"collectedAt"     yaml:"collected_at"`
+	TotalSpecs      int                     `json:"totalSpecs"      yaml:"total_specs"`
+	FinalDBSize     int64                   `json:"finalDBSizeBytes"     yaml:"final_db_size_bytes"`
+	FinalTmpfsUsed  int64                   `json:"finalTmpfsUsedBytes"  yaml:"final_tmpfs_used_bytes"`
+	FinalTmpfsTotal int64                   `json:"finalTmpfsTotalBytes" yaml:"final_tmpfs_total_bytes"`
+	FinalWALSize    int64                   `json:"finalWALSizeBytes"    yaml:"final_wal_size_bytes"`
+	FinalSnapSize   int64                   `json:"finalSnapSizeBytes"   yaml:"final_snap_size_bytes"`
+	PeakTmpfsUsed   int64                   `json:"peakTmpfsUsedBytes"   yaml:"peak_tmpfs_used_bytes"`
+	PeakDBSize      int64                   `json:"peakDBSizeBytes"      yaml:"peak_db_size_bytes"`
+	Records         []EtcdStorageSpecRecord `json:"records"              yaml:"records,omitempty"`
+}
+
+// EtcdStorageSnapshot captures a point-in-time etcd state measurement.
+type EtcdStorageSnapshot struct {
+	DBSizeBytes      int64  `json:"dbSizeBytes"      yaml:"db_size_bytes"`
+	DBSizeInUseBytes int64  `json:"dbSizeInUseBytes"  yaml:"db_size_in_use_bytes"`
+	Revision         int64  `json:"revision"          yaml:"revision"`
+	TmpfsUsedBytes   int64  `json:"tmpfsUsedBytes"    yaml:"tmpfs_used_bytes"`
+	TmpfsTotalBytes  int64  `json:"tmpfsTotalBytes"   yaml:"tmpfs_total_bytes"`
+	TmpfsAvailBytes  int64  `json:"tmpfsAvailBytes"   yaml:"tmpfs_avail_bytes"`
+	WALSizeBytes     int64  `json:"walSizeBytes"      yaml:"wal_size_bytes"`
+	SnapSizeBytes    int64  `json:"snapSizeBytes"     yaml:"snap_size_bytes"`
+	Error            string `json:"error,omitempty"   yaml:"error,omitempty"`
+}
+
+// EtcdStorageSpecRecord captures etcd state before and after a single test spec.
+type EtcdStorageSpecRecord struct {
+	SpecName        string              `json:"specName"           yaml:"spec_name"`
+	Before          EtcdStorageSnapshot `json:"before"             yaml:"before"`
+	After           EtcdStorageSnapshot `json:"after"              yaml:"after"`
+	DeltaDBSize     int64               `json:"deltaDBSizeBytes"   yaml:"delta_db_size_bytes"`
+	DeltaTmpfsUsed  int64               `json:"deltaTmpfsUsedBytes" yaml:"delta_tmpfs_used_bytes"`
+	DeltaRevision   int64               `json:"deltaRevision"      yaml:"delta_revision"`
+	Passed          bool                `json:"passed"             yaml:"passed"`
+	DurationSeconds float64             `json:"durationSeconds"    yaml:"duration_seconds"`
 }
 
 // K8sSummary provides aggregate counts by kind, severity, and detector.

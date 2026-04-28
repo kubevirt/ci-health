@@ -296,6 +296,68 @@ func detectVMIFailures(vmis *K8sVMIList) []*K8sFinding {
 	return findings
 }
 
+func detectEtcdIssues(profile *EtcdStorageProfile) []*K8sFinding {
+	if profile == nil {
+		return nil
+	}
+	var findings []*K8sFinding
+
+	if profile.FinalTmpfsTotal > 0 {
+		usagePct := float64(profile.PeakTmpfsUsed) / float64(profile.FinalTmpfsTotal) * 100
+
+		if usagePct > 90 {
+			findings = append(findings, &K8sFinding{
+				Detector: "etcd-tmpfs-exhaustion",
+				Severity: "error",
+				Kind:     "EtcdProfile",
+				Name:     "etcd",
+				Reason:   "TmpfsExhaustion",
+				Message:  fmt.Sprintf("Peak tmpfs usage %.1f%% (%d/%d bytes)", usagePct, profile.PeakTmpfsUsed, profile.FinalTmpfsTotal),
+			})
+		} else if usagePct > 75 {
+			findings = append(findings, &K8sFinding{
+				Detector: "etcd-tmpfs-pressure",
+				Severity: "warning",
+				Kind:     "EtcdProfile",
+				Name:     "etcd",
+				Reason:   "TmpfsPressure",
+				Message:  fmt.Sprintf("Peak tmpfs usage %.1f%% (%d/%d bytes)", usagePct, profile.PeakTmpfsUsed, profile.FinalTmpfsTotal),
+			})
+		}
+
+		walPct := float64(profile.FinalWALSize) / float64(profile.FinalTmpfsTotal) * 100
+		if walPct > 50 {
+			findings = append(findings, &K8sFinding{
+				Detector: "etcd-large-wal",
+				Severity: "warning",
+				Kind:     "EtcdProfile",
+				Name:     "etcd",
+				Reason:   "LargeWAL",
+				Message:  fmt.Sprintf("WAL consuming %.1f%% of tmpfs (%d/%d bytes)", walPct, profile.FinalWALSize, profile.FinalTmpfsTotal),
+			})
+		}
+	}
+
+	var totalDBGrowth int64
+	for _, r := range profile.Records {
+		if r.DeltaDBSize > 0 {
+			totalDBGrowth += r.DeltaDBSize
+		}
+	}
+	if totalDBGrowth > 0 {
+		findings = append(findings, &K8sFinding{
+			Detector: "etcd-db-growth",
+			Severity: "info",
+			Kind:     "EtcdProfile",
+			Name:     "etcd",
+			Reason:   "DBGrowth",
+			Message:  fmt.Sprintf("Total DB growth across %d specs: %d bytes", profile.TotalSpecs, totalDBGrowth),
+		})
+	}
+
+	return findings
+}
+
 func detectVMIMFailures(vmims *K8sVMIMList) []*K8sFinding {
 	if vmims == nil {
 		return nil

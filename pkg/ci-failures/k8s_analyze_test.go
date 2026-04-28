@@ -89,6 +89,23 @@ func TestParseAndDetect(t *testing.T) {
 			expectedCount: 0,
 		},
 		{
+			name:         "etcd-storage-profile with tmpfs exhaustion",
+			artifactType: "etcd-storage-profile",
+			json: `{
+				"collectedAt": "2026-03-05T18:30:39Z",
+				"totalSpecs": 2,
+				"finalDBSizeBytes": 10000000,
+				"finalTmpfsUsedBytes": 480000000,
+				"finalTmpfsTotalBytes": 512000000,
+				"finalWALSizeBytes": 50000000,
+				"finalSnapSizeBytes": 10000000,
+				"peakTmpfsUsedBytes": 480000000,
+				"peakDBSizeBytes": 10000000,
+				"records": []
+			}`,
+			expectedCount: 1,
+		},
+		{
 			name:          "unknown type returns nil",
 			artifactType:  "unknown",
 			json:          `{}`,
@@ -390,6 +407,65 @@ func TestK8sSnapshotString(t *testing.T) {
 	s := K8sSnapshot{Process: "1", FailureCount: 3}
 	if s.String() != "process=1/failure=3" {
 		t.Errorf("unexpected String(): %q", s.String())
+	}
+}
+
+func TestFetchEtcdProfile(t *testing.T) {
+	profileJSON := `{
+		"collectedAt": "2026-03-05T18:30:39Z",
+		"totalSpecs": 5,
+		"finalDBSizeBytes": 10000000,
+		"finalTmpfsUsedBytes": 200000000,
+		"finalTmpfsTotalBytes": 536870912,
+		"finalWALSizeBytes": 50000000,
+		"finalSnapSizeBytes": 10000000,
+		"peakTmpfsUsedBytes": 450000000,
+		"peakDBSizeBytes": 12000000,
+		"records": []
+	}`
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/artifacts/etcd-profiler/etcd-storage-profile.json", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == http.MethodHead {
+			w.WriteHeader(http.StatusOK)
+			return
+		}
+		fmt.Fprint(w, profileJSON)
+	})
+	mux.HandleFunc("/", notFound)
+
+	server := httptest.NewServer(mux)
+	defer server.Close()
+
+	cacheDir := t.TempDir()
+	profile := fetchEtcdProfile(server.URL, cacheDir)
+
+	if profile == nil {
+		t.Fatal("expected non-nil profile")
+	}
+	if profile.TotalSpecs != 5 {
+		t.Errorf("expected 5 specs, got %d", profile.TotalSpecs)
+	}
+	if profile.PeakTmpfsUsed != 450000000 {
+		t.Errorf("expected peak tmpfs 450000000, got %d", profile.PeakTmpfsUsed)
+	}
+	if profile.FinalTmpfsTotal != 536870912 {
+		t.Errorf("expected tmpfs total 536870912, got %d", profile.FinalTmpfsTotal)
+	}
+}
+
+func TestFetchEtcdProfileNotPresent(t *testing.T) {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", notFound)
+
+	server := httptest.NewServer(mux)
+	defer server.Close()
+
+	cacheDir := t.TempDir()
+	profile := fetchEtcdProfile(server.URL, cacheDir)
+
+	if profile != nil {
+		t.Errorf("expected nil profile when not present, got %+v", profile)
 	}
 }
 
