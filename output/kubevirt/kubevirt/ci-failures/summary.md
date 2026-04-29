@@ -17,13 +17,13 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-28 (3x / 37.50%)
+### 2026-04-28 (4x / 44.44%)
 
 
-#### external (1x / 33.33%)
+#### external (2x / 50.00%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -37,11 +37,26 @@
 
 <hr/>
 </details>
+<details>
+<summary> download failure from external URL (1x / 25.00%) </summary>
 
-#### internal (1x / 33.33%)
+<hr/>
+
+**1x**: _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 25.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
+<summary> kind cluster creation failure (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -56,10 +71,10 @@
 <hr/>
 </details>
 
-#### needs-investigation (1x / 33.33%)
+#### needs-investigation (1x / 25.00%)
 
 <details>
-<summary> no error snippets (1x / 33.33%) </summary>
+<summary> no error snippets (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -74,7 +89,7 @@
 <hr/>
 </details>
 
-### 2026-04-27 (1x / 12.50%)
+### 2026-04-27 (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -95,7 +110,7 @@
 <hr/>
 </details>
 
-### 2026-04-26 (1x / 12.50%)
+### 2026-04-26 (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -116,7 +131,7 @@
 <hr/>
 </details>
 
-### 2026-04-23 (3x / 37.50%)
+### 2026-04-23 (3x / 33.33%)
 
 
 #### needs-investigation (2x / 66.67%)
@@ -162,10 +177,10 @@
 ## per error category [⬆](#top)
 
 
-### external (4x / 50.00%)
+### external (5x / 55.56%)
 
 <details>
-<summary> download failure in context (3x / 37.50%) </summary>
+<summary> download failure in context (3x / 33.33%) </summary>
 
 <hr/>
 
@@ -230,7 +245,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 12.50%) </summary>
+<summary> failed external fetch in context (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -254,11 +269,36 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
+<details>
+<summary> download failure from external URL (1x / 11.11%) </summary>
 
-### needs-investigation (3x / 37.50%)
+<hr/>
+
+**1x**: _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+<details><summary>context</summary>
+<pre>09:55:54: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 132, column 45, in _http_archive_impl
+09:55:54: 		download_info = ctx.download_and_extract(
+09:55:54: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error
+09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error
+make: *** [Makefile:39: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (3x / 33.33%)
 
 <details>
-<summary> no matching pattern (2x / 25.00%) </summary>
+<summary> no matching pattern (2x / 22.22%) </summary>
 
 <hr/>
 
@@ -295,7 +335,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 <details>
-<summary> no error snippets (1x / 12.50%) </summary>
+<summary> no error snippets (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -310,10 +350,10 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### internal (1x / 12.50%)
+### internal (1x / 11.11%)
 
 <details>
-<summary> kind cluster creation failure (1x / 12.50%) </summary>
+<summary> kind cluster creation failure (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -343,7 +383,93 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### release-1.8 (3x / 37.50%)
+### main (6x / 66.67%)
+
+
+#### external (3x / 50.00%)
+
+<details>
+<summary> failed external fetch in context (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
+<details>
+<summary>all...</summary>
+
+* _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-26 18:34:25 &#43;0000 UTC_: <code>18:35:51: ERROR: Analysis of target &#39;//cmd/virt-controller:virt-controller-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2048470635738304512#1:build-log.txt%3A560)
+<details>
+<summary>all...</summary>
+
+* _2026-04-26 18:34:25 &#43;0000 UTC_: <code>18:35:51: ERROR: Analysis of target &#39;//cmd/virt-controller:virt-controller-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2048470635738304512#1:build-log.txt%3A560)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure from external URL (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (3x / 50.00%)
+
+<details>
+<summary> no matching pattern (2x / 33.33%) </summary>
+
+<hr/>
+
+**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
+<details>
+<summary>all...</summary>
+
+* _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
+
+* _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no error snippets (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:57:44 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:57:44 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.8 (3x / 33.33%)
 
 
 #### external (2x / 66.67%)
@@ -392,89 +518,18 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### main (5x / 62.50%)
-
-
-#### external (2x / 40.00%)
-
-<details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-26 18:34:25 &#43;0000 UTC_: <code>18:35:51: ERROR: Analysis of target &#39;//cmd/virt-controller:virt-controller-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2048470635738304512#1:build-log.txt%3A560)
-<details>
-<summary>all...</summary>
-
-* _2026-04-26 18:34:25 &#43;0000 UTC_: <code>18:35:51: ERROR: Analysis of target &#39;//cmd/virt-controller:virt-controller-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2048470635738304512#1:build-log.txt%3A560)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> failed external fetch in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
-<details>
-<summary>all...</summary>
-
-* _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (3x / 60.00%)
-
-<details>
-<summary> no matching pattern (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
-<details>
-<summary>all...</summary>
-
-* _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
-
-* _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> no error snippets (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:57:44 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:57:44 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-compute (5x / 62.50%)
+### sig-compute (6x / 66.67%)
 
 
-#### external (3x / 60.00%)
+#### external (4x / 66.67%)
 
 <details>
-<summary> download failure in context (3x / 60.00%) </summary>
+<summary> download failure in context (3x / 50.00%) </summary>
 
 <hr/>
 
@@ -508,29 +563,26 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
-
-#### internal (1x / 20.00%)
-
 <details>
-<summary> kind cluster creation failure (1x / 20.00%) </summary>
+<summary> download failure from external URL (1x / 16.67%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+**1x**: _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
 <details>
 <summary>all...</summary>
 
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+* _2026-04-28 09:55:02 &#43;0000 UTC_: <code>09:55:54: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp7199907394090039910/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17481/pull-kubevirt-e2e-kind-1.34-sev/2049064726003978240#1:build-log.txt%3A289)
 
 </details>
 
 <hr/>
 </details>
 
-#### needs-investigation (1x / 20.00%)
+#### needs-investigation (1x / 16.67%)
 
 <details>
-<summary> no error snippets (1x / 20.00%) </summary>
+<summary> no error snippets (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -545,7 +597,25 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-storage (1x / 12.50%)
+#### internal (1x / 16.67%)
+
+<details>
+<summary> kind cluster creation failure (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -566,7 +636,7 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-network (2x / 25.00%)
+### sig-network (2x / 22.22%)
 
 
 #### needs-investigation (2x / 100.00%)
@@ -589,4 +659,4 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-Last updated: 2026-04-29 04:19:15
+Last updated: 2026-04-29 06:51:24
