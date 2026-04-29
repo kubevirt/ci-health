@@ -134,6 +134,24 @@
 ### 2026-04-23 (3x / 33.33%)
 
 
+#### external (1x / 33.33%)
+
+<details>
+<summary> failed external fetch in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
+<details>
+<summary>all...</summary>
+
+* _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
+
+</details>
+
+<hr/>
+</details>
+
 #### needs-investigation (2x / 66.67%)
 
 <details>
@@ -148,24 +166,6 @@
 * _2026-04-23 12:47:46 &#43;0000 UTC_: <code>Error: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: cleaning up container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a storage: unmounting container b28c55058e1707937637487dc58dfa2ec9d99b2c01efd3a96edffc155e28a92a root filesystem: deleting layer &#34;9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2010581549/1-9efad812e38cafd4b6973fe4c9c995cf9877578d2da6e132787fa52ebbde6374: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.34-sig-network/2047295730711793664#1:build-log.txt%3A682)
 
 * _2026-04-23 12:45:40 &#43;0000 UTC_: <code>Error: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: cleaning up container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 storage: unmounting container 8745183952e1b6c794d16f9a7a8f87b3bd22ddab239a8e62108c4b136234b604 root filesystem: deleting layer &#34;da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6 /var/lib/containers/storage/overlay/tempdirs/temp-dir-1832193173/1-da67bdf77bd503357e818379be44cece56761cec88d0031f8f55dbe87656a6a6: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17487/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2047295730619518976#1:build-log.txt%3A680)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 33.33%)
-
-<details>
-<summary> failed external fetch in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
-<details>
-<summary>all...</summary>
-
-* _2026-04-23 16:42:15 &#43;0000 UTC_: <code>16:44:12: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17028/pull-kubevirt-e2e-k8s-1.35-sig-storage/2047355194563366912#1:build-log.txt%3A542)
 
 </details>
 
@@ -383,6 +383,55 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
+### release-1.8 (3x / 33.33%)
+
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (2x / 66.67%)
+
+<details>
+<summary> download failure in context (2x / 66.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
+<details>
+<summary>all...</summary>
+
+* _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
+
+</details>
+
+<hr/>
+</details>
+
 ### main (6x / 66.67%)
 
 
@@ -469,55 +518,6 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.8 (3x / 33.33%)
-
-
-#### external (2x / 66.67%)
-
-<details>
-<summary> download failure in context (2x / 66.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
-<details>
-<summary>all...</summary>
-
-* _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
-
-<details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
@@ -579,24 +579,6 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-#### needs-investigation (1x / 16.67%)
-
-<details>
-<summary> no error snippets (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:57:44 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:57:44 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
-
-</details>
-
-<hr/>
-</details>
-
 #### internal (1x / 16.67%)
 
 <details>
@@ -609,6 +591,24 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <summary>all...</summary>
 
 * _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 16.67%)
+
+<details>
+<summary> no error snippets (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:57:44 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:57:44 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17603/pull-kubevirt-e2e-kind-1.34-sev/2049035197751496704)
 
 </details>
 
@@ -659,4 +659,4 @@ time=&#34;2026-04-23T13:29:21Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-Last updated: 2026-04-29 06:51:24
+Last updated: 2026-04-29 09:47:59
