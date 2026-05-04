@@ -27,20 +27,6 @@
 
 <hr/>
 
-**3x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
 <details>
 <summary>all...</summary>
@@ -56,6 +42,20 @@
 <summary>all...</summary>
 
 * _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+
+</details>
+
+<hr/>
+
+**3x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
 
 </details>
 
@@ -103,21 +103,6 @@
 #### internal (2x / 28.57%)
 
 <details>
-<summary> kind cluster creation failure (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
 
 <hr/>
@@ -127,6 +112,21 @@
 <summary>all...</summary>
 
 * _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
 
 </details>
 
@@ -187,6 +187,59 @@
 ## per error category [⬆](#top)
 
 
+### internal (2x / 15.38%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+<details><summary>context</summary>
+<pre>15:35:18: gzip: stdin: not in gzip format
+15:35:18: tar: Child returned status 1
+15:35:18: tar: Error is not recoverable: exiting now
+make: *** [Makefile:173: cluster-up] Error 2
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details><summary>context</summary>
+<pre>07:53:12:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
+07:53:12:  • Preparing nodes 📦 📦   ...
+07:53:14:  ✗ Preparing nodes 📦 📦
+07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
+07:53:14:
+07:53:14: Stack Trace:
+07:53:14: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
 ### external (9x / 69.23%)
 
 <details>
@@ -234,7 +287,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**5x**: _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
+**5x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
 <details>
 <summary>all...</summary>
 
@@ -348,59 +401,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### internal (2x / 15.38%)
-
-<details>
-<summary> kind cluster creation failure (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details><summary>context</summary>
-<pre>07:53:12:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
-07:53:12:  • Preparing nodes 📦 📦   ...
-07:53:14:  ✗ Preparing nodes 📦 📦
-07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-07:53:14:
-07:53:14: Stack Trace:
-07:53:14: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-<details><summary>context</summary>
-<pre>15:35:18: gzip: stdin: not in gzip format
-15:35:18: tar: Child returned status 1
-15:35:18: tar: Error is not recoverable: exiting now
-make: *** [Makefile:173: cluster-up] Error 2
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### needs-investigation (2x / 15.38%)
 
 <details>
@@ -434,6 +434,94 @@ make: *** [Makefile:173: cluster-up] Error 2
 ## per branch [⬆](#top)
 
 
+### release-1.8 (8x / 61.54%)
+
+
+#### internal (2x / 25.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (6x / 75.00%)
+
+<details>
+<summary> download failure in context (6x / 75.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+
+</details>
+
+<hr/>
+
+**3x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
+
+* _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
+<details>
+<summary>all...</summary>
+
+* _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
+
+</details>
+
+<hr/>
+</details>
+
 ### main (5x / 38.46%)
 
 
@@ -444,7 +532,7 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 
-**2x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+**2x**: _2026-04-28 09:53:40 &#43;0000 UTC_: <code>10:11:07: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17049/pull-kubevirt-e2e-k8s-1.35-sig-compute/2049064376685563904#1:build-log.txt%3A4739)
 <details>
 <summary>all...</summary>
 
@@ -500,28 +588,18 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-### release-1.8 (8x / 61.54%)
+<a id="per-sig"></a>
+
+## per SIG [⬆](#top)
 
 
-#### internal (2x / 25.00%)
+### sig-compute (10x / 76.92%)
+
+
+#### internal (2x / 20.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
+<summary> make cluster lifecycle target failure (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -535,99 +613,21 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 </details>
-
-#### external (6x / 75.00%)
-
 <details>
-<summary> download failure in context (6x / 75.00%) </summary>
+<summary> kind cluster creation failure (1x / 10.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
+**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
 <details>
 <summary>all...</summary>
 
-* _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-
-</details>
-
-<hr/>
-
-**3x**: _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
-
-* _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
-<details>
-<summary>all...</summary>
-
-* _2026-04-27 07:18:06 &#43;0000 UTC_: <code>07:21:17: ERROR: Analysis of target &#39;//cmd/virt-operator:virt-operator-image&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17612/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2048662822543429632#1:build-log.txt%3A498)
+* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
 
 </details>
 
 <hr/>
 </details>
-
-<a id="per-sig"></a>
-
-## per SIG [⬆](#top)
-
-
-### sig-network (3x / 23.08%)
-
-
-#### external (3x / 100.00%)
-
-<details>
-<summary> download failure in context (3x / 100.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (10x / 76.92%)
-
 
 #### external (6x / 60.00%)
 
@@ -646,7 +646,7 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 
-**3x**: _2026-04-28 09:06:28 &#43;0000 UTC_: <code>09:21:58: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049052505228185600#1:build-log.txt%3A5334)
+**3x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
 <details>
 <summary>all...</summary>
 
@@ -686,39 +686,6 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-#### internal (2x / 20.00%)
-
-<details>
-<summary> kind cluster creation failure (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 07:39:01 &#43;0000 UTC_: <code>07:53:14: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17590/pull-kubevirt-e2e-kind-1.34-sev-1.8/2049030373865689088#1:build-log.txt%3A1092)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (2x / 20.00%)
 
 <details>
@@ -747,4 +714,37 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-Last updated: 2026-05-04 04:26:16
+### sig-network (3x / 23.08%)
+
+
+#### external (3x / 100.00%)
+
+<details>
+<summary> download failure in context (3x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+
+</details>
+
+<hr/>
+
+**2x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-05-04 07:02:14
