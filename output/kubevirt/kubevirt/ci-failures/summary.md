@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-04-29 (6x / 85.71%)
+### 2026-05-04 (1x / 12.50%)
+
+
+#### pr-build (1x / 100.00%)
+
+<details>
+<summary> go test exit FAIL (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-04-29 (6x / 75.00%)
 
 
 #### external (6x / 100.00%)
@@ -64,7 +85,7 @@
 <hr/>
 </details>
 
-### 2026-04-28 (1x / 14.29%)
+### 2026-04-28 (1x / 12.50%)
 
 
 #### internal (1x / 100.00%)
@@ -90,10 +111,10 @@
 ## per error category [⬆](#top)
 
 
-### external (6x / 85.71%)
+### external (6x / 75.00%)
 
 <details>
-<summary> download failure in context (6x / 85.71%) </summary>
+<summary> download failure in context (6x / 75.00%) </summary>
 
 <hr/>
 
@@ -194,10 +215,38 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 <hr/>
 </details>
 
-### internal (1x / 14.29%)
+### pr-build (1x / 12.50%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
+<summary> go test exit FAIL (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details><summary>context</summary>
+<pre>19:48:34: Ran 3 of 1433 Specs in 2825.199 seconds
+19:48:34: FAIL! -- 2 Passed | 1 Failed | 3 Pending | 1427 Skipped
+19:48:34: --- FAIL: TestTests (2828.62s)
+19:48:34: FAIL
+19:48:34:
+19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
+19:48:34:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### internal (1x / 12.50%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -227,7 +276,28 @@ make: *** [Makefile:173: cluster-up] Error 2
 ## per branch [⬆](#top)
 
 
-### main (2x / 28.57%)
+### release-1.6 (1x / 12.50%)
+
+
+#### pr-build (1x / 100.00%)
+
+<details>
+<summary> go test exit FAIL (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+
+</details>
+
+<hr/>
+</details>
+
+### main (2x / 25.00%)
 
 
 #### external (2x / 100.00%)
@@ -250,26 +320,8 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-### release-1.8 (5x / 71.43%)
+### release-1.8 (5x / 62.50%)
 
-
-#### internal (1x / 20.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-<details>
-<summary>all...</summary>
-
-* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
-
-</details>
-
-<hr/>
-</details>
 
 #### external (4x / 80.00%)
 
@@ -311,12 +363,51 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
+#### internal (1x / 20.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+<details>
+<summary>all...</summary>
+
+* _2026-04-28 15:26:50 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17631/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049148231257952256#1:build-log.txt%3A1217)
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-compute (4x / 57.14%)
+### sig-performance (1x / 12.50%)
+
+
+#### pr-build (1x / 100.00%)
+
+<details>
+<summary> go test exit FAIL (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (4x / 50.00%)
 
 
 #### external (3x / 75.00%)
@@ -367,7 +458,7 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-### sig-network (3x / 42.86%)
+### sig-network (3x / 37.50%)
 
 
 #### external (3x / 100.00%)
@@ -400,4 +491,4 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 
-Last updated: 2026-05-05 12:25:39
+Last updated: 2026-05-05 15:58:27
