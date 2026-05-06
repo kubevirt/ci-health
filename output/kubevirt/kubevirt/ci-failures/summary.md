@@ -159,34 +159,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-### internal (1x / 25.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details>
-<summary>all...</summary>
-
-* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details><summary>context</summary>
-<pre>02:26:00: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-02:26:00: INFO: Running command line: bazel-bin/manifest-templator-copier /root/go/src/kubevirt.io/kubevirt/_out/tests/tools/manifest-templator
-02:26:50: &#43; rm -f /tmp/kubevirt.deploy.bTWS
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### pr-build (1x / 25.00%)
 
 <details>
@@ -207,6 +179,34 @@ make: *** [Makefile:174: cluster-sync] Error 125
 19:48:34:
 19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
 19:48:34:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### internal (1x / 25.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
+<details>
+<summary>all...</summary>
+
+* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
+<details><summary>context</summary>
+<pre>02:26:00: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
+02:26:00: INFO: Running command line: bazel-bin/manifest-templator-copier /root/go/src/kubevirt.io/kubevirt/_out/tests/tools/manifest-templator
+02:26:50: &#43; rm -f /tmp/kubevirt.deploy.bTWS
+make: *** [Makefile:174: cluster-sync] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
 </details>
 
 
@@ -336,21 +336,6 @@ make: *** [Makefile:174: cluster-sync] Error 125
 #### external (2x / 66.67%)
 
 <details>
-<summary> container image pull failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
-<details>
-<summary>all...</summary>
-
-* _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
@@ -360,6 +345,21 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <summary>all...</summary>
 
 * _2026-04-29 16:24:52 &#43;0000 UTC_: <code>16:26:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17652/pull-kubevirt-e2e-k8s-1.35-sig-compute/2049525179276595200#1:build-log.txt%3A307)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
+<details>
+<summary>all...</summary>
+
+* _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
 
 </details>
 
@@ -384,4 +384,4 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-05-06 12:43:46
+Last updated: 2026-05-06 15:58:40
