@@ -90,22 +90,6 @@
 
 <hr/>
 
-**4x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 16:24:52 &#43;0000 UTC_: <code>16:26:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17652/pull-kubevirt-e2e-k8s-1.35-sig-compute/2049525179276595200#1:build-log.txt%3A307)
-
-* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
-
-* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
 <details>
 <summary>all...</summary>
@@ -125,6 +109,22 @@
 </details>
 
 <hr/>
+
+**4x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 16:24:52 &#43;0000 UTC_: <code>16:26:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17652/pull-kubevirt-e2e-k8s-1.35-sig-compute/2049525179276595200#1:build-log.txt%3A307)
+
+* _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
+
+* _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
+
+</details>
+
+<hr/>
 </details>
 
 <a id="per-error-category"></a>
@@ -139,7 +139,47 @@
 
 <hr/>
 
-**4x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+**1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
+<details><summary>context</summary>
+<pre>11:34:30: Repository rule rpm defined at:
+11:34:30:   /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazeldnf/internal/rpm.bzl:48:22: in &lt;toplevel&gt;
+11:34:30: ERROR: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/busybox_single/BUILD.bazel:5:18: @busybox_single//:busybox_single depends on @copy_to_directory_linux_amd64//:copy_to_directory_toolchain in repository @copy_to_directory_linux_amd64 which failed to fetch. no such package &#39;@copy_to_directory_linux_amd64//&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/copy_to_directory-linux_amd64] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/copy_to_directory_linux_amd64/copy_to_directory: GET returned 502 Bad Gateway or Proxy Error
+11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:
+11:34:30: INFO: Elapsed time: 1.200s
+11:34:30: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+<details><summary>context</summary>
+<pre>11:34:28: Repository rule rpm defined at:
+11:34:28:   /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazeldnf/internal/rpm.bzl:48:22: in &lt;toplevel&gt;
+11:34:28: ERROR: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/alpine_with_test_tooling_single/BUILD.bazel:5:18: @alpine_with_test_tooling_single//:alpine_with_test_tooling_single depends on @copy_to_directory_linux_amd64//:copy_to_directory_toolchain in repository @copy_to_directory_linux_amd64 which failed to fetch. no such package &#39;@copy_to_directory_linux_amd64//&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/copy_to_directory-linux_amd64] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/copy_to_directory_linux_amd64/copy_to_directory: GET returned 502 Bad Gateway or Proxy Error
+11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:
+11:34:28: INFO: Elapsed time: 0.483s
+11:34:28: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**4x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:53:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2049451503768309760#1:build-log.txt%3A5396)
 <details>
 <summary>all...</summary>
 
@@ -194,46 +234,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 </details>
 
 <hr/>
-
-**1x**: _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:06 &#43;0000 UTC_: <code>11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2049451511481634816#1:build-log.txt%3A564)
-<details><summary>context</summary>
-<pre>11:34:30: Repository rule rpm defined at:
-11:34:30:   /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazeldnf/internal/rpm.bzl:48:22: in &lt;toplevel&gt;
-11:34:30: ERROR: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/busybox_single/BUILD.bazel:5:18: @busybox_single//:busybox_single depends on @copy_to_directory_linux_amd64//:copy_to_directory_toolchain in repository @copy_to_directory_linux_amd64 which failed to fetch. no such package &#39;@copy_to_directory_linux_amd64//&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/copy_to_directory-linux_amd64] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/copy_to_directory_linux_amd64/copy_to_directory: GET returned 502 Bad Gateway or Proxy Error
-11:34:30: ERROR: Analysis of target &#39;//cmd/cniplugins/passt-binding/cmd:network-passt-binding-cni-image&#39; failed; build aborted:
-11:34:30: INFO: Elapsed time: 1.200s
-11:34:30: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-<details><summary>context</summary>
-<pre>11:34:28: Repository rule rpm defined at:
-11:34:28:   /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazeldnf/internal/rpm.bzl:48:22: in &lt;toplevel&gt;
-11:34:28: ERROR: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/alpine_with_test_tooling_single/BUILD.bazel:5:18: @alpine_with_test_tooling_single//:alpine_with_test_tooling_single depends on @copy_to_directory_linux_amd64//:copy_to_directory_toolchain in repository @copy_to_directory_linux_amd64 which failed to fetch. no such package &#39;@copy_to_directory_linux_amd64//&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/copy_to_directory-linux_amd64] to /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/copy_to_directory_linux_amd64/copy_to_directory: GET returned 502 Bad Gateway or Proxy Error
-11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:
-11:34:28: INFO: Elapsed time: 0.483s
-11:34:28: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
 </details>
 <details>
 <summary> container image pull failure in context (1x / 11.11%) </summary>
@@ -253,34 +253,6 @@ make: *** [Makefile:173: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### pr-build (1x / 11.11%)
-
-<details>
-<summary> go test exit FAIL (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-<details>
-<summary>all...</summary>
-
-* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-<details><summary>context</summary>
-<pre>19:48:34: Ran 3 of 1433 Specs in 2825.199 seconds
-19:48:34: FAIL! -- 2 Passed | 1 Failed | 3 Pending | 1427 Skipped
-19:48:34: --- FAIL: TestTests (2828.62s)
-19:48:34: FAIL
-19:48:34:
-19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
-19:48:34:</pre>
 </details>
 
 
@@ -309,6 +281,34 @@ make: *** [Makefile:174: cluster-sync] Error 125
 &#43; ret=2
 &#43; make cluster-down
 ./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### pr-build (1x / 11.11%)
+
+<details>
+<summary> go test exit FAIL (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details><summary>context</summary>
+<pre>19:48:34: Ran 3 of 1433 Specs in 2825.199 seconds
+19:48:34: FAIL! -- 2 Passed | 1 Failed | 3 Pending | 1427 Skipped
+19:48:34: --- FAIL: TestTests (2828.62s)
+19:48:34: FAIL
+19:48:34:
+19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
+19:48:34:</pre>
 </details>
 
 
@@ -432,7 +432,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 
-**2x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+**2x**: _2026-04-29 16:24:52 &#43;0000 UTC_: <code>16:26:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17652/pull-kubevirt-e2e-k8s-1.35-sig-compute/2049525179276595200#1:build-log.txt%3A307)
 <details>
 <summary>all...</summary>
 
@@ -547,7 +547,17 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 
-**2x**: _2026-04-29 12:01:51 &#43;0000 UTC_: <code>12:02:55: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17647/pull-kubevirt-e2e-kind-sriov/2049458981394452480#1:build-log.txt%3A307)
+**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+<details>
+<summary>all...</summary>
+
+* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
+
+</details>
+
+<hr/>
+
+**2x**: _2026-04-29 11:32:02 &#43;0000 UTC_: <code>11:33:02: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2049451505487974400#1:build-log.txt%3A307)
 <details>
 <summary>all...</summary>
 
@@ -558,16 +568,6 @@ make: *** [Makefile:174: cluster-sync] Error 125
 </details>
 
 <hr/>
-
-**1x**: _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-<details>
-<summary>all...</summary>
-
-* _2026-04-29 11:32:03 &#43;0000 UTC_: <code>11:34:28: ERROR: Analysis of target &#39;//containerimages:alpine-with-test-tooling&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17646/pull-kubevirt-e2e-kind-sriov-1.8/2049451494389846016#1:build-log.txt%3A529)
-
 </details>
 
-<hr/>
-</details>
-
-Last updated: 2026-05-06 00:27:12
+Last updated: 2026-05-06 04:30:49
