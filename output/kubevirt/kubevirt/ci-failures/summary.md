@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-05 (1x / 33.33%)
+### 2026-05-05 (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-05-04 (1x / 33.33%)
+### 2026-05-04 (1x / 50.00%)
 
 
 #### pr-build (1x / 100.00%)
@@ -59,64 +59,15 @@
 <hr/>
 </details>
 
-### 2026-04-30 (1x / 33.33%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details>
-<summary>all...</summary>
-
-* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### internal (1x / 33.33%)
+### external (1x / 50.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details>
-<summary>all...</summary>
-
-* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details><summary>context</summary>
-<pre>02:26:00: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-02:26:00: INFO: Running command line: bazel-bin/manifest-templator-copier /root/go/src/kubevirt.io/kubevirt/_out/tests/tools/manifest-templator
-02:26:50: &#43; rm -f /tmp/kubevirt.deploy.bTWS
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### external (1x / 33.33%)
-
-<details>
-<summary> container image pull failure in context (1x / 33.33%) </summary>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -141,10 +92,10 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 
-### pr-build (1x / 33.33%)
+### pr-build (1x / 50.00%)
 
 <details>
-<summary> go test exit FAIL (1x / 33.33%) </summary>
+<summary> go test exit FAIL (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -174,7 +125,7 @@ make: *** [Makefile:173: cluster-up] Error 125
 ## per branch [⬆](#top)
 
 
-### release-1.8 (1x / 33.33%)
+### release-1.8 (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -195,7 +146,7 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 
-### release-1.6 (1x / 33.33%)
+### release-1.6 (1x / 50.00%)
 
 
 #### pr-build (1x / 100.00%)
@@ -210,27 +161,6 @@ make: *** [Makefile:173: cluster-up] Error 125
 <summary>all...</summary>
 
 * _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.7 (1x / 33.33%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details>
-<summary>all...</summary>
-
-* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
 
 </details>
 
@@ -242,52 +172,13 @@ make: *** [Makefile:173: cluster-up] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-performance (1x / 33.33%)
+### sig-compute (1x / 50.00%)
 
 
-#### pr-build (1x / 100.00%)
-
-<details>
-<summary> go test exit FAIL (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-<details>
-<summary>all...</summary>
-
-* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (2x / 66.67%)
-
-
-#### internal (1x / 50.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-<details>
-<summary>all...</summary>
-
-* _2026-04-30 01:58:40 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17659/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.7/2049669602421510144#1:build-log.txt%3A3769)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 50.00%)
-
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
+<summary> container image pull failure in context (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -302,4 +193,25 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-05-07 00:30:06
+### sig-performance (1x / 50.00%)
+
+
+#### pr-build (1x / 100.00%)
+
+<details>
+<summary> go test exit FAIL (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-05-07 04:24:40
