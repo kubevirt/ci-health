@@ -64,34 +64,6 @@
 ## per error category [⬆](#top)
 
 
-### external (1x / 50.00%)
-
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
-<details>
-<summary>all...</summary>
-
-* _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
-<details><summary>context</summary>
-<pre>10:26:42: Trying to pull quay.io/kubevirtci/gocli:2602190951-056f8f79...
-10:28:28: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2602190951-056f8f79: initializing source docker://quay.io/kubevirtci/gocli:2602190951-056f8f79: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
-10:28:28: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:173: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### pr-build (1x / 50.00%)
 
 <details>
@@ -112,6 +84,34 @@ make: *** [Makefile:173: cluster-up] Error 125
 19:48:34:
 19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
 19:48:34:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### external (1x / 50.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
+<details>
+<summary>all...</summary>
+
+* _2026-05-05 10:04:34 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17704/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2051603690623602688#1:build-log.txt%3A553)
+<details><summary>context</summary>
+<pre>10:26:42: Trying to pull quay.io/kubevirtci/gocli:2602190951-056f8f79...
+10:28:28: Error: unable to copy from source docker://quay.io/kubevirtci/gocli:2602190951-056f8f79: initializing source docker://quay.io/kubevirtci/gocli:2602190951-056f8f79: pinging container registry quay.io: Get &#34;https://quay.io/v2/&#34;: net/http: TLS handshake timeout
+10:28:28: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:173: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -214,4 +214,4 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-05-07 10:02:27
+Last updated: 2026-05-07 12:44:42
