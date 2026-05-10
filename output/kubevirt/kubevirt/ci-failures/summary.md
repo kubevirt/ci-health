@@ -99,6 +99,34 @@
 ## per error category [⬆](#top)
 
 
+### pr-build (1x / 10.00%)
+
+<details>
+<summary> go test exit FAIL (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details>
+<summary>all...</summary>
+
+* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
+<details><summary>context</summary>
+<pre>19:48:34: Ran 3 of 1433 Specs in 2825.199 seconds
+19:48:34: FAIL! -- 2 Passed | 1 Failed | 3 Pending | 1427 Skipped
+19:48:34: --- FAIL: TestTests (2828.62s)
+19:48:34: FAIL
+19:48:34:
+19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
+19:48:34:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
 ### external (9x / 90.00%)
 
 <details>
@@ -223,34 +251,6 @@ make: *** [Makefile:173: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### pr-build (1x / 10.00%)
-
-<details>
-<summary> go test exit FAIL (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-<details>
-<summary>all...</summary>
-
-* _2026-05-04 18:36:02 &#43;0000 UTC_: <code>19:48:34: FAIL</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17692/pull-kubevirt-e2e-k8s-1.31-sig-performance-1.6/2051369950953607168#1:build-log.txt%3A81318)
-<details><summary>context</summary>
-<pre>19:48:34: Ran 3 of 1433 Specs in 2825.199 seconds
-19:48:34: FAIL! -- 2 Passed | 1 Failed | 3 Pending | 1427 Skipped
-19:48:34: --- FAIL: TestTests (2828.62s)
-19:48:34: FAIL
-19:48:34:
-19:48:34: Ginkgo ran 1 suite in 47m12.41912815s
-19:48:34:</pre>
 </details>
 
 
@@ -416,7 +416,7 @@ make: *** [Makefile:173: cluster-up] Error 125
 
 <hr/>
 
-**2x**: _2026-05-07 17:46:15 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-network/2052442388223234048#1:build-log.txt%3A263)
+**2x**: _2026-05-07 17:45:54 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.34-sig-network/2052442387564728320#1:build-log.txt%3A264)
 <details>
 <summary>all...</summary>
 
@@ -450,4 +450,4 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-05-09 21:20:58
+Last updated: 2026-05-10 00:26:26
