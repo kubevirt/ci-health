@@ -3,7 +3,7 @@ name: analyze-pr-builds
 description: >
     Analyze all failed builds for a GitHub pull request.
     Use when user provides a GitHub PR URL and wants to understand why builds are failing.
-allowed-tools: [Read, Glob, Bash(go run:*)]
+allowed-tools: [Read, Glob, Bash(go run:*), Bash(grep:*)]
 ---
 
 ## Overview
@@ -47,9 +47,11 @@ After data generation:
    - `findings`: list of detected issues with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`
    - `summary`: aggregate counts by kind, severity, and detector
    - `etcd_profile` (optional): full etcd storage profile with peak/final tmpfs and WAL metrics, plus per-spec records. Etcd-related findings use kind `EtcdProfile` and detectors `etcd-tmpfs-exhaustion`, `etcd-tmpfs-pressure`, `etcd-large-wal`, `etcd-db-growth`
-4. For each failure, examine build log errors AND k8s findings to determine the root cause
-5. Correlate k8s findings with build log errors — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver or node-level failures
-6. Group failures with the same root cause together
+   - `container_log_files` (optional): list of cached kubevirt component container logs (virt-controller, virt-handler, virt-api, virt-operator) with `pod_name`, `container_name`, `namespace`, `cached_path`, and `size_bytes`
+4. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from build log errors and k8s findings, then use `grep` on the cached virt-controller and virt-handler logs to find the actual rejection reason. Example: `grep -i "testvmi-xxxxx" <cached_path>`
+5. For each failure, examine build log errors, k8s findings, AND container log matches to determine the root cause
+6. Correlate findings across all sources — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver failures; virt-controller log errors (schema validation, sync failures) reveal why VMIs are stuck in non-Running phases
+7. Group failures with the same root cause together
 
 ## Output
 

@@ -469,6 +469,250 @@ func TestFetchEtcdProfileNotPresent(t *testing.T) {
 	}
 }
 
+func TestParseContainerLogFileName(t *testing.T) {
+	tests := []struct {
+		name          string
+		fileName      string
+		expectOK      bool
+		expectNS      string
+		expectPod     string
+		expectCont    string
+	}{
+		{
+			name:       "virt-controller log",
+			fileName:   "0_kubevirt_virt-controller-65cc5dc497-75jjr-virt-controller.log",
+			expectOK:   true,
+			expectNS:   "kubevirt",
+			expectPod:  "virt-controller-65cc5dc497-75jjr",
+			expectCont: "virt-controller",
+		},
+		{
+			name:       "virt-handler log",
+			fileName:   "0_kubevirt_virt-handler-7cdkk-virt-handler.log",
+			expectOK:   true,
+			expectNS:   "kubevirt",
+			expectPod:  "virt-handler-7cdkk",
+			expectCont: "virt-handler",
+		},
+		{
+			name:       "virt-api log",
+			fileName:   "0_kubevirt_virt-api-5bf5dd6df9-6nxcf-virt-api.log",
+			expectOK:   true,
+			expectNS:   "kubevirt",
+			expectPod:  "virt-api-5bf5dd6df9-6nxcf",
+			expectCont: "virt-api",
+		},
+		{
+			name:       "virt-operator log",
+			fileName:   "0_kubevirt_virt-operator-7b646765b4-4b2ks-virt-operator.log",
+			expectOK:   true,
+			expectNS:   "kubevirt",
+			expectPod:  "virt-operator-7b646765b4-4b2ks",
+			expectCont: "virt-operator",
+		},
+		{
+			name:     "previous log is skipped",
+			fileName: "0_kubevirt_virt-controller-65cc5dc497-75jjr-virt-controller_previous.log",
+			expectOK: false,
+		},
+		{
+			name:     "non-kubevirt component is skipped by caller",
+			fileName: "0_kube-system_coredns-64b977d65c-gkhvz-coredns.log",
+			expectOK: false,
+		},
+		{
+			name:     "object dump is not a container log",
+			fileName: "0_pods.log",
+			expectOK: false,
+		},
+		{
+			name:     "non-log file",
+			fileName: "0_pods.json",
+			expectOK: false,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			meta, ok := parseContainerLogFileName(tt.fileName)
+			if ok != tt.expectOK {
+				t.Fatalf("expected ok=%v, got %v", tt.expectOK, ok)
+			}
+			if !ok {
+				return
+			}
+			if meta.namespace != tt.expectNS {
+				t.Errorf("namespace: expected %q, got %q", tt.expectNS, meta.namespace)
+			}
+			if meta.podName != tt.expectPod {
+				t.Errorf("podName: expected %q, got %q", tt.expectPod, meta.podName)
+			}
+			if meta.containerName != tt.expectCont {
+				t.Errorf("containerName: expected %q, got %q", tt.expectCont, meta.containerName)
+			}
+		})
+	}
+}
+
+func TestListAndFilterContainerLogs(t *testing.T) {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/list", func(w http.ResponseWriter, r *http.Request) {
+		resp := gcsListResponse{
+			Items: []struct {
+				Name string `json:"name"`
+				Size string `json:"size"`
+			}{
+				{Name: "prefix/suite/0_kubevirt_virt-controller-abc123-virt-controller.log", Size: "1000"},
+				{Name: "prefix/suite/0_kubevirt_virt-handler-xyz-virt-handler.log", Size: "2000"},
+				{Name: "prefix/suite/0_pods.log", Size: "5000"},
+				{Name: "prefix/suite/0_kube-system_coredns-abc-coredns.log", Size: "3000"},
+				{Name: "prefix/suite/0_kubevirt_virt-controller-abc123-virt-controller_previous.log", Size: "900"},
+			},
+		}
+		json.NewEncoder(w).Encode(resp)
+	})
+
+	server := httptest.NewServer(mux)
+	defer server.Close()
+
+	files := listAndFilterContainerLogs(server.URL+"/list", server.URL+"/")
+
+	if len(files) != 2 {
+		t.Fatalf("expected 2 container log files, got %d", len(files))
+	}
+
+	foundController := false
+	foundHandler := false
+	for _, f := range files {
+		if f.containerName == "virt-controller" {
+			foundController = true
+		}
+		if f.containerName == "virt-handler" {
+			foundHandler = true
+		}
+	}
+	if !foundController {
+		t.Error("expected virt-controller log")
+	}
+	if !foundHandler {
+		t.Error("expected virt-handler log")
+	}
+}
+
+func TestGcsBaseToListURL(t *testing.T) {
+	listURL, downloadBase := gcsBaseToListURL("https://storage.googleapis.com/kubevirt-prow/logs/job/123/artifacts/k8s-reporter/suite")
+	if listURL == "" {
+		t.Fatal("expected non-empty listURL")
+	}
+	if !strings.Contains(listURL, "storage/v1/b/kubevirt-prow/o") {
+		t.Errorf("unexpected listURL: %s", listURL)
+	}
+	if downloadBase != "https://storage.googleapis.com/kubevirt-prow/" {
+		t.Errorf("unexpected downloadBase: %s", downloadBase)
+	}
+
+	listURL, _ = gcsBaseToListURL("http://localhost:8080/test")
+	if listURL != "" {
+		t.Error("expected empty listURL for non-GCS URL")
+	}
+}
+
+func TestDownloadContainerLogCaching(t *testing.T) {
+	callCount := 0
+	logContent := "level=error msg=\"test error\"\n"
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		callCount++
+		fmt.Fprint(w, logContent)
+	}))
+	defer server.Close()
+
+	cacheDir := t.TempDir()
+	fileName := "0_kubevirt_virt-controller-abc-virt-controller.log"
+
+	path1, size1, err := downloadContainerLog(server.URL+"/log", cacheDir, fileName)
+	if err != nil {
+		t.Fatalf("first download failed: %v", err)
+	}
+	if callCount != 1 {
+		t.Fatalf("expected 1 HTTP call, got %d", callCount)
+	}
+	if size1 != int64(len(logContent)) {
+		t.Errorf("expected size %d, got %d", len(logContent), size1)
+	}
+
+	path2, _, err := downloadContainerLog(server.URL+"/log", cacheDir, fileName)
+	if err != nil {
+		t.Fatalf("second download failed: %v", err)
+	}
+	if callCount != 1 {
+		t.Errorf("expected cache hit (still 1 call), got %d", callCount)
+	}
+	if path1 != path2 {
+		t.Error("cached path should be the same")
+	}
+}
+
+func TestFetchContainerLogsEndToEnd(t *testing.T) {
+	logContent := "level=error msg=\"schema validation failed\"\n"
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/list", func(w http.ResponseWriter, r *http.Request) {
+		resp := gcsListResponse{
+			Items: []struct {
+				Name string `json:"name"`
+				Size string `json:"size"`
+			}{
+				{Name: "suite/0_kubevirt_virt-controller-abc-virt-controller.log", Size: "100"},
+			},
+		}
+		json.NewEncoder(w).Encode(resp)
+	})
+	mux.HandleFunc("/suite/0_kubevirt_virt-controller-abc-virt-controller.log", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, logContent)
+	})
+	mux.HandleFunc("/", notFound)
+
+	server := httptest.NewServer(mux)
+	defer server.Close()
+
+	cacheDir := t.TempDir()
+	logCacheDir := filepath.Join(cacheDir, "container-logs")
+	if err := os.MkdirAll(logCacheDir, 0755); err != nil {
+		t.Fatal(err)
+	}
+
+	// Use listAndFilterContainerLogs directly, then download
+	files := listAndFilterContainerLogs(server.URL+"/list", server.URL+"/")
+	if len(files) != 1 {
+		t.Fatalf("expected 1 file from listing, got %d", len(files))
+	}
+
+	f := files[0]
+	cached, size, err := downloadContainerLog(f.url, logCacheDir, f.fileName)
+	if err != nil {
+		t.Fatalf("download failed: %v", err)
+	}
+
+	if f.containerName != "virt-controller" {
+		t.Errorf("expected container name 'virt-controller', got %q", f.containerName)
+	}
+	if f.namespace != "kubevirt" {
+		t.Errorf("expected namespace 'kubevirt', got %q", f.namespace)
+	}
+	if size != int64(len(logContent)) {
+		t.Errorf("expected size %d, got %d", len(logContent), size)
+	}
+
+	content, err := os.ReadFile(cached)
+	if err != nil {
+		t.Fatalf("failed to read cached file: %v", err)
+	}
+	if string(content) != logContent {
+		t.Errorf("cached content mismatch: got %q", string(content))
+	}
+}
+
 func ok(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
