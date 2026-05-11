@@ -8,7 +8,7 @@ allowed-tools: [Read, Glob, Bash(go run:*)]
 
 ## Overview
 
-This skill looks up the historical success rate for each test that failed in a Prow build, using the kubevirt flakefinder 7-day (168h) report.
+This skill looks up the historical success rate for each test that failed in a Prow build, using kubevirt flakefinder 7-day (168h) reports. Use `--days` to extend the analysis window up to 28 days by fetching and merging multiple weekly reports.
 
 ## Data generation
 
@@ -18,10 +18,16 @@ Run the `test-rate` subcommand with the Prow job URL:
 $ go run ./cmd/ci-failures test-rate <prow-job-url>
 ```
 
+To cover a longer period (up to 28 days):
+
+```bash
+$ go run ./cmd/ci-failures test-rate --days 14 <prow-job-url>
+```
+
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures test-rate https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
+$ go run ./cmd/ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
 ```
 
 This produces `output/tmp/test-rate-{job-name}.yaml`.
@@ -34,11 +40,13 @@ After data generation:
 2. Read the YAML. The structure is:
    - `prow_job_url`: the analyzed build URL
    - `job_name`: the Prow job name
-   - `report_period_end`: end date of the 7-day flakefinder report
+   - `report_days`: number of days covered
+   - `report_period_start`: start date of the merged flakefinder window
+   - `report_period_end`: end date of the merged flakefinder window
    - `failed_tests`: list of failed tests, each with:
      - `test_name`: original test name from the build log
      - `matched_name`: the matching test name in the flakefinder report (empty if no match)
-     - `total_succeeded`: total successes across all jobs in the 7-day period
+     - `total_succeeded`: total successes across all jobs in the covered period
      - `total_failed`: total failures across all jobs
      - `total_skipped`: total skips
      - `success_rate`: percentage (0-100)

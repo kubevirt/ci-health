@@ -98,14 +98,19 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
+	testRateDays int
+
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
 		Short: "Show historical success rate for tests that failed in a build.",
 		Long: `Look up historical success rates for each test that failed in a Prow build.
 
-Uses the kubevirt flakefinder 7-day (168h) report to compute per-test success
-rates across all jobs. Classifies each failure as likely-pr-related (>= 95%
-success rate), inconclusive (>= 80%), or likely-flaky (< 80%).
+Uses kubevirt flakefinder 7-day (168h) reports to compute per-test success
+rates across all jobs. Use --days to extend the analysis period up to 28 days
+by fetching and merging multiple weekly reports.
+
+Classifies each failure as likely-pr-related (>= 95% success rate),
+inconclusive (>= 80%), or likely-flaky (< 80%).
 
 Accepts a Prow job URL, e.g.:
   https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144`,
@@ -357,7 +362,7 @@ func analyzeK8s(_ *cobra.Command, args []string) error {
 func testRate(_ *cobra.Command, args []string) error {
 	prowJobURL := args[0]
 
-	result, err := cifailures.AnalyzeTestRate(prowJobURL)
+	result, err := cifailures.AnalyzeTestRate(prowJobURL, testRateDays)
 	if err != nil {
 		return fmt.Errorf("failed to analyze test rate: %v", err)
 	}
@@ -378,6 +383,8 @@ func testRate(_ *cobra.Command, args []string) error {
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
+
+	testRateCmd.Flags().IntVar(&testRateDays, "days", 7, "Number of days to cover (max 28, fetches multiple weekly reports)")
 
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)

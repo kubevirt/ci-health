@@ -223,6 +223,118 @@ func TestExtractFailedTestNames(t *testing.T) {
 	}
 }
 
+func TestMergeReports(t *testing.T) {
+	r1 := &FlakefinderReport{
+		StartOfReport: "2026-04-26",
+		EndOfReport:   "2026-05-03",
+		Headers:       []string{"job-a", "job-b"},
+		Tests:         []string{"[sig-compute] test one", "[sig-compute] test two"},
+		Data: map[string]map[string]*TestDetails{
+			"[sig-compute] test one": {
+				"job-a": {Succeeded: 50, Failed: 10, Skipped: 2},
+			},
+			"[sig-compute] test two": {
+				"job-b": {Succeeded: 30, Failed: 5, Skipped: 1},
+			},
+		},
+	}
+	r2 := &FlakefinderReport{
+		StartOfReport: "2026-05-03",
+		EndOfReport:   "2026-05-10",
+		Headers:       []string{"job-a", "job-c"},
+		Tests:         []string{"[sig-compute] test one", "[sig-network] test three"},
+		Data: map[string]map[string]*TestDetails{
+			"[sig-compute] test one": {
+				"job-a": {Succeeded: 40, Failed: 8, Skipped: 3},
+			},
+			"[sig-network] test three": {
+				"job-c": {Succeeded: 20, Failed: 2, Skipped: 0},
+			},
+		},
+	}
+
+	merged := mergeReports([]*FlakefinderReport{r1, r2})
+
+	if merged.StartOfReport != "2026-04-26" {
+		t.Errorf("StartOfReport = %q, want %q", merged.StartOfReport, "2026-04-26")
+	}
+	if merged.EndOfReport != "2026-05-10" {
+		t.Errorf("EndOfReport = %q, want %q", merged.EndOfReport, "2026-05-10")
+	}
+	if len(merged.Tests) != 3 {
+		t.Fatalf("len(Tests) = %d, want 3", len(merged.Tests))
+	}
+
+	d := merged.Data["[sig-compute] test one"]["job-a"]
+	if d == nil {
+		t.Fatal("missing data for test one / job-a")
+	}
+	if d.Succeeded != 90 {
+		t.Errorf("test one job-a Succeeded = %d, want 90", d.Succeeded)
+	}
+	if d.Failed != 18 {
+		t.Errorf("test one job-a Failed = %d, want 18", d.Failed)
+	}
+	if d.Skipped != 5 {
+		t.Errorf("test one job-a Skipped = %d, want 5", d.Skipped)
+	}
+
+	if _, ok := merged.Data["[sig-compute] test two"]["job-b"]; !ok {
+		t.Error("missing data for test two / job-b")
+	}
+	if _, ok := merged.Data["[sig-network] test three"]["job-c"]; !ok {
+		t.Error("missing data for test three / job-c")
+	}
+}
+
+func TestMergeReportsSingle(t *testing.T) {
+	r := &FlakefinderReport{
+		StartOfReport: "2026-05-03",
+		EndOfReport:   "2026-05-10",
+		Tests:         []string{"test"},
+		Data:          map[string]map[string]*TestDetails{},
+	}
+	merged := mergeReports([]*FlakefinderReport{r})
+	if merged != r {
+		t.Error("single report merge should return the same pointer")
+	}
+}
+
+func TestFetchFlakefinderReports(t *testing.T) {
+	reports := map[string]*FlakefinderReport{
+		"week1": {StartOfReport: "2026-05-03", EndOfReport: "2026-05-10", Tests: []string{"t1"}, Data: map[string]map[string]*TestDetails{}},
+		"week2": {StartOfReport: "2026-04-26", EndOfReport: "2026-05-03", Tests: []string{"t2"}, Data: map[string]map[string]*TestDetails{}},
+	}
+
+	served := map[string]bool{}
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		path := r.URL.Path
+		for label, report := range reports {
+			if !served[label] {
+				served[label] = true
+				w.Header().Set("Content-Type", "application/json")
+				json.NewEncoder(w).Encode(report)
+				return
+			}
+			_ = path
+		}
+		http.NotFound(w, r)
+	}))
+	defer server.Close()
+
+	origBase := flakefinderBaseURL
+	defer func() { flakefinderBaseURL = origBase }()
+	flakefinderBaseURL = server.URL
+
+	result, err := fetchFlakefinderReports(14)
+	if err != nil {
+		t.Fatalf("fetchFlakefinderReports(14) error: %v", err)
+	}
+	if len(result) != 2 {
+		t.Errorf("got %d reports, want 2", len(result))
+	}
+}
+
 func TestFetchFlakefinderReport(t *testing.T) {
 	report := FlakefinderReport{
 		StartOfReport: "2026-05-03",
