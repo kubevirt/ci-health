@@ -4,8 +4,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"io/fs"
 	"net/http"
+	"net/url"
 	"os"
 	"path/filepath"
 	"slices"
@@ -406,7 +408,11 @@ func gcsBaseToListURL(gcsBasePath string) (listURL, downloadBase string) {
 		prefix += "/"
 	}
 
-	return fmt.Sprintf("%sstorage/v1/b/%s/o?prefix=%s&maxResults=500", storagePrefix, bucket, prefix),
+	v := url.Values{}
+	v.Set("prefix", prefix)
+	v.Set("maxResults", "500")
+
+	return fmt.Sprintf("%sstorage/v1/b/%s/o?%s", storagePrefix, bucket, v.Encode()),
 		storagePrefix + bucket + "/"
 }
 
@@ -419,36 +425,47 @@ func discoverContainerLogFiles(gcsBasePath string) []containerLogMeta {
 }
 
 func listAndFilterContainerLogs(listURL, downloadBase string) []containerLogMeta {
-	resp, err := http.Get(listURL)
-	if err != nil {
-		log.WithError(err).Warn("failed to list GCS objects for container logs")
-		return nil
-	}
-	defer closeAndLogErr(resp.Body)
-
-	if resp.StatusCode != http.StatusOK {
-		log.Warnf("GCS listing returned status %d", resp.StatusCode)
-		return nil
-	}
-
-	var listing gcsListResponse
-	if err := json.NewDecoder(resp.Body).Decode(&listing); err != nil {
-		log.WithError(err).Warn("failed to decode GCS listing response")
-		return nil
-	}
-
 	var result []containerLogMeta
-	for _, item := range listing.Items {
-		fileName := filepath.Base(item.Name)
-		meta, ok := parseContainerLogFileName(fileName)
-		if !ok {
-			continue
+	pageURL := listURL
+
+	for pageURL != "" {
+		resp, err := http.Get(pageURL)
+		if err != nil {
+			log.WithError(err).Warn("failed to list GCS objects for container logs")
+			return nil
 		}
-		if !isKubevirtComponent(meta.containerName) {
-			continue
+
+		if resp.StatusCode != http.StatusOK {
+			closeAndLogErr(resp.Body)
+			log.Warnf("GCS listing returned status %d", resp.StatusCode)
+			return nil
 		}
-		meta.url = downloadBase + item.Name
-		result = append(result, meta)
+
+		var listing gcsListResponse
+		if err := json.NewDecoder(resp.Body).Decode(&listing); err != nil {
+			closeAndLogErr(resp.Body)
+			log.WithError(err).Warn("failed to decode GCS listing response")
+			return nil
+		}
+		closeAndLogErr(resp.Body)
+
+		for _, item := range listing.Items {
+			fileName := filepath.Base(item.Name)
+			meta, ok := parseContainerLogFileName(fileName)
+			if !ok {
+				continue
+			}
+			if !isKubevirtComponent(meta.containerName) {
+				continue
+			}
+			meta.url = downloadBase + item.Name
+			result = append(result, meta)
+		}
+
+		if listing.NextPageToken == "" {
+			break
+		}
+		pageURL = listURL + "&pageToken=" + url.QueryEscape(listing.NextPageToken)
 	}
 
 	return result
@@ -522,16 +539,28 @@ func downloadContainerLog(gcsURL, cacheDir, fileName string) (string, int64, err
 		return "", 0, err
 	}
 
-	raw, err := retrieveFileContentFromGCS(gcsURL)
+	resp, err := http.Get(gcsURL)
+	if err != nil {
+		return "", 0, err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", 0, fmt.Errorf("failed to download log from GCS: status %d", resp.StatusCode)
+	}
+
+	out, err := os.Create(cachePath)
+	if err != nil {
+		return "", 0, err
+	}
+	defer out.Close()
+
+	size, err := io.Copy(out, resp.Body)
 	if err != nil {
 		return "", 0, err
 	}
 
-	if writeErr := os.WriteFile(cachePath, raw, 0644); writeErr != nil {
-		return "", 0, fmt.Errorf("failed to write cached log: %w", writeErr)
-	}
-
-	return cachePath, int64(len(raw)), nil
+	return cachePath, size, nil
 }
 
 func buildSummary(findings []*K8sFinding) K8sSummary {

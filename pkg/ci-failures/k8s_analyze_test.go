@@ -599,6 +599,52 @@ func TestListAndFilterContainerLogs(t *testing.T) {
 	}
 }
 
+func TestListAndFilterContainerLogsPagination(t *testing.T) {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/storage/v1/b/bucket/o", func(w http.ResponseWriter, r *http.Request) {
+		pageToken := r.URL.Query().Get("pageToken")
+		var resp gcsListResponse
+		switch pageToken {
+		case "":
+			resp = gcsListResponse{
+				Items: []struct {
+					Name string `json:"name"`
+					Size string `json:"size"`
+				}{
+					{Name: "suite/0_kubevirt_virt-controller-abc-virt-controller.log", Size: "1000"},
+				},
+				NextPageToken: "page2",
+			}
+		case "page2":
+			resp = gcsListResponse{
+				Items: []struct {
+					Name string `json:"name"`
+					Size string `json:"size"`
+				}{
+					{Name: "suite/0_kubevirt_virt-handler-xyz-virt-handler.log", Size: "2000"},
+				},
+			}
+		}
+		json.NewEncoder(w).Encode(resp)
+	})
+
+	server := httptest.NewServer(mux)
+	defer server.Close()
+
+	listURL := server.URL + "/storage/v1/b/bucket/o?prefix=suite%2F&maxResults=500"
+	files := listAndFilterContainerLogs(listURL, server.URL+"/")
+
+	if len(files) != 2 {
+		t.Fatalf("expected 2 container log files across pages, got %d", len(files))
+	}
+	if files[0].containerName != "virt-controller" {
+		t.Errorf("expected virt-controller first, got %q", files[0].containerName)
+	}
+	if files[1].containerName != "virt-handler" {
+		t.Errorf("expected virt-handler second, got %q", files[1].containerName)
+	}
+}
+
 func TestGcsBaseToListURL(t *testing.T) {
 	listURL, downloadBase := gcsBaseToListURL("https://storage.googleapis.com/kubevirt-prow/logs/job/123/artifacts/k8s-reporter/suite")
 	if listURL == "" {
@@ -606,6 +652,12 @@ func TestGcsBaseToListURL(t *testing.T) {
 	}
 	if !strings.Contains(listURL, "storage/v1/b/kubevirt-prow/o") {
 		t.Errorf("unexpected listURL: %s", listURL)
+	}
+	if !strings.Contains(listURL, "maxResults=500") {
+		t.Errorf("expected maxResults parameter in listURL: %s", listURL)
+	}
+	if !strings.Contains(listURL, "prefix=") {
+		t.Errorf("expected prefix parameter in listURL: %s", listURL)
 	}
 	if downloadBase != "https://storage.googleapis.com/kubevirt-prow/" {
 		t.Errorf("unexpected downloadBase: %s", downloadBase)
