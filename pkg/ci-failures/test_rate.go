@@ -3,6 +3,7 @@ package cifailures
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 	"os"
 	"regexp"
 	"strings"
@@ -11,6 +12,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )
+
+const maxDays = 28
 
 var flakefinderBaseURL = "https://storage.googleapis.com/kubevirt-prow/reports/flakefinder/kubevirt/kubevirt"
 
@@ -30,10 +33,12 @@ type TestDetails struct {
 }
 
 type TestRateResult struct {
-	ProwJobURL      string          `yaml:"prow_job_url"`
-	JobName         string          `yaml:"job_name"`
-	ReportPeriodEnd string          `yaml:"report_period_end"`
-	FailedTests     []TestRateEntry `yaml:"failed_tests"`
+	ProwJobURL        string          `yaml:"prow_job_url"`
+	JobName           string          `yaml:"job_name"`
+	ReportDays        int             `yaml:"report_days"`
+	ReportPeriodStart string          `yaml:"report_period_start"`
+	ReportPeriodEnd   string          `yaml:"report_period_end"`
+	FailedTests       []TestRateEntry `yaml:"failed_tests"`
 }
 
 type TestRateEntry struct {
@@ -46,8 +51,15 @@ type TestRateEntry struct {
 	Severity       string  `yaml:"severity"`
 }
 
-func AnalyzeTestRate(prowJobURL string) (*TestRateResult, error) {
+func AnalyzeTestRate(prowJobURL string, days int) (*TestRateResult, error) {
 	prowJobURL = normalizeJobURL(prowJobURL)
+
+	if days < 1 {
+		days = 7
+	}
+	if days > maxDays {
+		days = maxDays
+	}
 
 	jobBuildErrors, err := AnalyzeBuild(prowJobURL)
 	if err != nil {
@@ -61,32 +73,28 @@ func AnalyzeTestRate(prowJobURL string) (*TestRateResult, error) {
 
 	log.Infof("found %d failed test(s) in build log", len(failedTests))
 
-	var report *FlakefinderReport
-	var reportDate time.Time
-	for i := 1; i <= 3; i++ {
-		reportDate = time.Now().UTC().AddDate(0, 0, -i)
-		report, err = fetchFlakefinderReport(reportDate)
-		if err == nil {
-			break
-		}
-	}
+	reports, err := fetchFlakefinderReports(days)
 	if err != nil {
-		return nil, fmt.Errorf("failed to fetch flakefinder report: %w", err)
+		return nil, fmt.Errorf("failed to fetch flakefinder reports: %w", err)
 	}
 
-	log.Infof("fetched flakefinder report: %s to %s (%d tests)", report.StartOfReport, report.EndOfReport, len(report.Tests))
+	merged := mergeReports(reports)
+
+	log.Infof("merged %d flakefinder report(s) covering %s to %s (%d tests)", len(reports), merged.StartOfReport, merged.EndOfReport, len(merged.Tests))
 
 	var entries []TestRateEntry
 	for _, testName := range failedTests {
-		entry := computeTestRate(testName, report)
+		entry := computeTestRate(testName, merged)
 		entries = append(entries, entry)
 	}
 
 	return &TestRateResult{
-		ProwJobURL:      prowJobURL,
-		JobName:         jobBuildErrors.JobName,
-		ReportPeriodEnd: reportDate.Format(time.DateOnly),
-		FailedTests:     entries,
+		ProwJobURL:        prowJobURL,
+		JobName:           jobBuildErrors.JobName,
+		ReportDays:        days,
+		ReportPeriodStart: merged.StartOfReport,
+		ReportPeriodEnd:   merged.EndOfReport,
+		FailedTests:       entries,
 	}, nil
 }
 
@@ -137,6 +145,97 @@ func fetchFlakefinderReport(date time.Time) (*FlakefinderReport, error) {
 	}
 
 	return &report, nil
+}
+
+func fetchFlakefinderReports(days int) ([]*FlakefinderReport, error) {
+	numReports := int(math.Ceil(float64(days) / 7.0))
+	var reports []*FlakefinderReport
+
+	anchorDate := time.Now().UTC().AddDate(0, 0, -1)
+	for r := range numReports {
+		var report *FlakefinderReport
+		var err error
+		for try := range 3 {
+			date := anchorDate.AddDate(0, 0, -try)
+			report, err = fetchFlakefinderReport(date)
+			if err == nil {
+				break
+			}
+		}
+		if err != nil {
+			return nil, fmt.Errorf("failed to fetch flakefinder report for period %d: %w", r+1, err)
+		}
+		reports = append(reports, report)
+
+		if start, parseErr := time.Parse(time.DateOnly, report.StartOfReport); parseErr == nil {
+			anchorDate = start
+		} else {
+			anchorDate = anchorDate.AddDate(0, 0, -7)
+		}
+	}
+
+	return reports, nil
+}
+
+func mergeReports(reports []*FlakefinderReport) *FlakefinderReport {
+	if len(reports) == 1 {
+		return reports[0]
+	}
+
+	merged := &FlakefinderReport{
+		StartOfReport: reports[0].StartOfReport,
+		EndOfReport:   reports[0].EndOfReport,
+		Data:          make(map[string]map[string]*TestDetails),
+	}
+
+	testSet := map[string]bool{}
+	headerSet := map[string]bool{}
+
+	for _, r := range reports {
+		if r.StartOfReport < merged.StartOfReport {
+			merged.StartOfReport = r.StartOfReport
+		}
+		if r.EndOfReport > merged.EndOfReport {
+			merged.EndOfReport = r.EndOfReport
+		}
+
+		for _, h := range r.Headers {
+			if !headerSet[h] {
+				headerSet[h] = true
+				merged.Headers = append(merged.Headers, h)
+			}
+		}
+
+		for _, t := range r.Tests {
+			if !testSet[t] {
+				testSet[t] = true
+				merged.Tests = append(merged.Tests, t)
+			}
+		}
+
+		for testName, jobData := range r.Data {
+			if merged.Data[testName] == nil {
+				merged.Data[testName] = make(map[string]*TestDetails)
+			}
+			for jobName, details := range jobData {
+				existing, ok := merged.Data[testName][jobName]
+				if !ok {
+					merged.Data[testName][jobName] = &TestDetails{
+						Succeeded: details.Succeeded,
+						Failed:    details.Failed,
+						Skipped:   details.Skipped,
+						Severity:  details.Severity,
+					}
+				} else {
+					existing.Succeeded += details.Succeeded
+					existing.Failed += details.Failed
+					existing.Skipped += details.Skipped
+				}
+			}
+		}
+	}
+
+	return merged
 }
 
 var (
