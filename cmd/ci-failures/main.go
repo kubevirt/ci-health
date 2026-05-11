@@ -78,6 +78,19 @@ Only repos served by prow.ci.kubevirt.io are supported.`,
 		RunE: analyzePR,
 	}
 
+	changeRelevanceCmd = &cobra.Command{
+		Use:   "change-relevance [prow-job-url]",
+		Short: "Check whether PR changes overlap with failed test code areas.",
+		Long: `Determine whether a PR's code changes are related to tests that failed in a Prow build.
+
+Accepts a Prow job URL for a PR build, e.g.:
+  https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17760/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2053843644594524160
+
+Only PR builds (URLs containing pr-logs/pull/) are supported.`,
+		Args: cobra.ExactArgs(1),
+		RunE: changeRelevance,
+	}
+
 	analyzeK8sCmd = &cobra.Command{
 		Use:   "analyze-k8s [prow-job-url]",
 		Short: "Analyze Kubernetes cluster state from k8s-reporter artifacts.",
@@ -380,6 +393,27 @@ func testRate(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func changeRelevance(_ *cobra.Command, args []string) error {
+	prowJobURL := args[0]
+
+	result, err := cifailures.AnalyzeChangeRelevance(prowJobURL)
+	if err != nil {
+		return fmt.Errorf("failed to analyze change relevance: %v", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("change-relevance-%s.yaml", result.JobName))
+	if err = cifailures.WriteChangeRelevanceResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %v", err)
+	}
+
+	log.Infof("wrote change relevance analysis to %s", outputPath)
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
@@ -391,6 +425,7 @@ func init() {
 	rootCmd.AddCommand(analyzePRCmd)
 	rootCmd.AddCommand(analyzeK8sCmd)
 	rootCmd.AddCommand(testRateCmd)
+	rootCmd.AddCommand(changeRelevanceCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
