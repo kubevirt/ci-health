@@ -97,6 +97,21 @@ Accepts a Prow job URL, e.g.:
 		Args: cobra.ExactArgs(1),
 		RunE: analyzeK8s,
 	}
+
+	testRateCmd = &cobra.Command{
+		Use:   "test-rate [prow-job-url]",
+		Short: "Show historical success rate for tests that failed in a build.",
+		Long: `Look up historical success rates for each test that failed in a Prow build.
+
+Uses the kubevirt flakefinder 7-day (168h) report to compute per-test success
+rates across all jobs. Classifies each failure as likely-pr-related (>= 95%
+success rate), inconclusive (>= 80%), or likely-flaky (< 80%).
+
+Accepts a Prow job URL, e.g.:
+  https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144`,
+		Args: cobra.ExactArgs(1),
+		RunE: testRate,
+	}
 )
 
 func generateReport(cmd *cobra.Command, args []string) error {
@@ -339,6 +354,27 @@ func analyzeK8s(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func testRate(_ *cobra.Command, args []string) error {
+	prowJobURL := args[0]
+
+	result, err := cifailures.AnalyzeTestRate(prowJobURL)
+	if err != nil {
+		return fmt.Errorf("failed to analyze test rate: %v", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("test-rate-%s.yaml", result.JobName))
+	if err = cifailures.WriteTestRateResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %v", err)
+	}
+
+	log.Infof("wrote test rate analysis to %s (%d tests)", outputPath, len(result.FailedTests))
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
@@ -347,6 +383,7 @@ func init() {
 	rootCmd.AddCommand(analyzeBuildCmd)
 	rootCmd.AddCommand(analyzePRCmd)
 	rootCmd.AddCommand(analyzeK8sCmd)
+	rootCmd.AddCommand(testRateCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)

@@ -1,0 +1,266 @@
+package cifailures
+
+import (
+	"encoding/json"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+	"time"
+)
+
+func TestStripTimestamp(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+	}{
+		{"13:34:47: [FAIL] some test", "[FAIL] some test"},
+		{"  13:34:47:  [FAIL] some test", "[FAIL] some test"},
+		{"[FAIL] no timestamp", "[FAIL] no timestamp"},
+		{"", ""},
+	}
+	for _, tt := range tests {
+		got := stripTimestamp(tt.input)
+		if got != tt.expected {
+			t.Errorf("stripTimestamp(%q) = %q, want %q", tt.input, got, tt.expected)
+		}
+	}
+}
+
+func TestNormalizeTestName(t *testing.T) {
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "strips [It] marker",
+			input:    "[sig-compute] Live Migrations [It] with a live-migrate eviction strategy set",
+			expected: "[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+		},
+		{
+			name:     "strips trailing labels",
+			input:    "[sig-compute] Live Migrations with a strategy set [sig-compute, sig-compute-migrations, Serial]",
+			expected: "[sig-compute] Live Migrations with a strategy set",
+		},
+		{
+			name:     "strips both [It] and trailing labels",
+			input:    "[sig-compute] Live Migrations [It] with a strategy set [sig-compute, sig-compute-migrations]",
+			expected: "[sig-compute] Live Migrations with a strategy set",
+		},
+		{
+			name:     "no-op for clean name",
+			input:    "[sig-compute] Live Migrations with a strategy set",
+			expected: "[sig-compute] Live Migrations with a strategy set",
+		},
+		{
+			name:     "does not strip single-element brackets",
+			input:    "[sig-compute] Live Migrations [rfe_id:393] with a strategy set",
+			expected: "[sig-compute] Live Migrations [rfe_id:393] with a strategy set",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := normalizeTestName(tt.input)
+			if got != tt.expected {
+				t.Errorf("normalizeTestName() = %q, want %q", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestFindMatchingTest(t *testing.T) {
+	report := &FlakefinderReport{
+		Tests: []string{
+			"[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+			"[sig-network] VMI connectivity should allow regular network traffic",
+		},
+	}
+
+	tests := []struct {
+		name     string
+		input    string
+		expected string
+	}{
+		{
+			name:     "exact match",
+			input:    "[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+			expected: "[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+		},
+		{
+			name:     "match after normalization (strip [It])",
+			input:    "[sig-compute] Live Migrations [It] with a live-migrate eviction strategy set",
+			expected: "[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+		},
+		{
+			name:     "match after normalization (strip trailing labels)",
+			input:    "[sig-compute] Live Migrations with a live-migrate eviction strategy set [sig-compute, Serial]",
+			expected: "[sig-compute] Live Migrations with a live-migrate eviction strategy set",
+		},
+		{
+			name:     "no match",
+			input:    "[sig-storage] something completely different",
+			expected: "",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := findMatchingTest(tt.input, report)
+			if got != tt.expected {
+				t.Errorf("findMatchingTest() = %q, want %q", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestComputeTestRate(t *testing.T) {
+	report := &FlakefinderReport{
+		Tests: []string{
+			"[sig-compute] Live Migrations with a strategy set",
+		},
+		Data: map[string]map[string]*TestDetails{
+			"[sig-compute] Live Migrations with a strategy set": {
+				"job-a": {Succeeded: 80, Failed: 10, Skipped: 5},
+				"job-b": {Succeeded: 70, Failed: 20, Skipped: 3},
+			},
+		},
+	}
+
+	entry := computeTestRate("[sig-compute] Live Migrations with a strategy set", report)
+
+	if entry.TotalSucceeded != 150 {
+		t.Errorf("TotalSucceeded = %d, want 150", entry.TotalSucceeded)
+	}
+	if entry.TotalFailed != 30 {
+		t.Errorf("TotalFailed = %d, want 30", entry.TotalFailed)
+	}
+	if entry.TotalSkipped != 8 {
+		t.Errorf("TotalSkipped = %d, want 8", entry.TotalSkipped)
+	}
+
+	expectedRate := float64(150) / float64(180) * 100.0
+	if entry.SuccessRate != expectedRate {
+		t.Errorf("SuccessRate = %f, want %f", entry.SuccessRate, expectedRate)
+	}
+	if entry.Severity != "inconclusive" {
+		t.Errorf("Severity = %q, want %q", entry.Severity, "inconclusive")
+	}
+}
+
+func TestComputeTestRateNoMatch(t *testing.T) {
+	report := &FlakefinderReport{
+		Tests: []string{"[sig-compute] something else"},
+		Data:  map[string]map[string]*TestDetails{},
+	}
+
+	entry := computeTestRate("[sig-storage] unknown test", report)
+
+	if entry.MatchedName != "" {
+		t.Errorf("MatchedName = %q, want empty", entry.MatchedName)
+	}
+	if entry.Severity != "unknown" {
+		t.Errorf("Severity = %q, want %q", entry.Severity, "unknown")
+	}
+}
+
+func TestComputeTestRateSeverityBuckets(t *testing.T) {
+	tests := []struct {
+		name             string
+		succeeded        int
+		failed           int
+		expectedSeverity string
+	}{
+		{"high success rate", 98, 2, "likely-pr-related"},
+		{"exactly 95%", 95, 5, "likely-pr-related"},
+		{"moderate success rate", 85, 15, "inconclusive"},
+		{"exactly 80%", 80, 20, "inconclusive"},
+		{"low success rate", 60, 40, "likely-flaky"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			testName := "[sig-compute] test"
+			report := &FlakefinderReport{
+				Tests: []string{testName},
+				Data: map[string]map[string]*TestDetails{
+					testName: {
+						"job-a": {Succeeded: tt.succeeded, Failed: tt.failed},
+					},
+				},
+			}
+
+			entry := computeTestRate(testName, report)
+			if entry.Severity != tt.expectedSeverity {
+				t.Errorf("Severity = %q, want %q (rate=%.1f%%)", entry.Severity, tt.expectedSeverity, entry.SuccessRate)
+			}
+		})
+	}
+}
+
+func TestExtractFailedTestNames(t *testing.T) {
+	jobBuildErrors := &JobBuildErrors{
+		BuildErrors: []*JobBuildError{
+			{
+				BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+					{ErrorText: "13:34:47: [FAIL] [sig-compute] Live Migrations [It] with a strategy set [sig-compute, Serial]"},
+					{ErrorText: "some other error without FAIL marker"},
+					{ErrorText: "[FAIL] [sig-network] VMI connectivity [It] should work [sig-network]"},
+					{ErrorText: "13:34:47: [FAIL] [sig-compute] Live Migrations [It] with a strategy set [sig-compute, Serial]"},
+				},
+			},
+		},
+	}
+
+	result := extractFailedTestNames(jobBuildErrors)
+
+	if len(result) != 2 {
+		t.Fatalf("got %d test names, want 2", len(result))
+	}
+	if result[0] != "[sig-compute] Live Migrations [It] with a strategy set [sig-compute, Serial]" {
+		t.Errorf("result[0] = %q, unexpected", result[0])
+	}
+	if result[1] != "[sig-network] VMI connectivity [It] should work [sig-network]" {
+		t.Errorf("result[1] = %q, unexpected", result[1])
+	}
+}
+
+func TestFetchFlakefinderReport(t *testing.T) {
+	report := FlakefinderReport{
+		StartOfReport: "2026-05-03",
+		EndOfReport:   "2026-05-10",
+		Headers:       []string{"job-a", "job-b"},
+		Tests:         []string{"[sig-compute] test one"},
+		Data: map[string]map[string]*TestDetails{
+			"[sig-compute] test one": {
+				"job-a": {Succeeded: 90, Failed: 10, Skipped: 0, Severity: "yellow"},
+			},
+		},
+	}
+
+	reportJSON, err := json.Marshal(report)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(reportJSON)
+	}))
+	defer server.Close()
+
+	origBase := flakefinderBaseURL
+	defer func() { flakefinderBaseURL = origBase }()
+	flakefinderBaseURL = server.URL
+
+	date := time.Date(2026, 5, 10, 0, 0, 0, 0, time.UTC)
+	result, err := fetchFlakefinderReport(date)
+	if err != nil {
+		t.Fatalf("fetchFlakefinderReport() error: %v", err)
+	}
+
+	if result.StartOfReport != "2026-05-03" {
+		t.Errorf("StartOfReport = %q, want %q", result.StartOfReport, "2026-05-03")
+	}
+	if len(result.Tests) != 1 {
+		t.Errorf("len(Tests) = %d, want 1", len(result.Tests))
+	}
+}
