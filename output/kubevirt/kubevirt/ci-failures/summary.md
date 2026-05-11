@@ -17,28 +17,30 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-10 (1x / 7.69%)
+### 2026-05-10 (2x / 14.29%)
 
 
-#### external (1x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> download failure in context (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
 <details>
 <summary>all...</summary>
 
 * _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
 
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+
 </details>
 
 <hr/>
 </details>
 
-### 2026-05-07 (10x / 76.92%)
+### 2026-05-07 (10x / 71.43%)
 
 
 #### external (10x / 100.00%)
@@ -48,7 +50,7 @@
 
 <hr/>
 
-**8x**: _2026-05-07 17:46:18 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-compute/2052442388785270784#1:build-log.txt%3A231)
+**8x**: _2026-05-07 17:46:15 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-network/2052442388223234048#1:build-log.txt%3A263)
 <details>
 <summary>all...</summary>
 
@@ -77,7 +79,7 @@
 
 <hr/>
 
-**2x**: _2026-05-07 18:43:42 &#43;0000 UTC_: <code>19:08:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2052458730666070016#1:build-log.txt%3A4079)
+**2x**: _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
 <details>
 <summary>all...</summary>
 
@@ -90,7 +92,7 @@
 <hr/>
 </details>
 
-### 2026-05-05 (1x / 7.69%)
+### 2026-05-05 (1x / 7.14%)
 
 
 #### external (1x / 100.00%)
@@ -111,7 +113,7 @@
 <hr/>
 </details>
 
-### 2026-05-04 (1x / 7.69%)
+### 2026-05-04 (1x / 7.14%)
 
 
 #### pr-build (1x / 100.00%)
@@ -137,14 +139,14 @@
 ## per error category [⬆](#top)
 
 
-### external (12x / 92.31%)
+### external (13x / 92.86%)
 
 <details>
-<summary> container image pull failure in context (9x / 69.23%) </summary>
+<summary> container image pull failure in context (9x / 64.29%) </summary>
 
 <hr/>
 
-**8x**: _2026-05-07 17:46:18 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-compute/2052442388785270784#1:build-log.txt%3A231)
+**8x**: _2026-05-07 17:46:15 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-network/2052442388223234048#1:build-log.txt%3A263)
 <details>
 <summary>all...</summary>
 
@@ -269,11 +271,11 @@ make: *** [Makefile:173: cluster-up] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (3x / 23.08%) </summary>
+<summary> download failure in context (4x / 28.57%) </summary>
 
 <hr/>
 
-**3x**: _2026-05-07 18:43:42 &#43;0000 UTC_: <code>19:08:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2052458730666070016#1:build-log.txt%3A4079)
+**4x**: _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
 <details>
 <summary>all...</summary>
 
@@ -286,6 +288,18 @@ make: *** [Makefile:173: cluster-up] Error 125
 make: *** [Makefile:28: bazel-build-functests] Error 1
 &#43; ret=2
 &#43; check_for_panics</pre>
+</details>
+
+
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+<details><summary>context</summary>
+<pre>07:11:16: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted:
+07:11:16: INFO: Elapsed time: 0.354s
+07:11:16: INFO: 0 processes.
+07:11:16: ERROR: Build failed. Not running target
+make: *** [Makefile:39: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2</pre>
 </details>
 
 
@@ -318,10 +332,10 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### pr-build (1x / 7.69%)
+### pr-build (1x / 7.14%)
 
 <details>
-<summary> go test exit FAIL (1x / 7.69%) </summary>
+<summary> go test exit FAIL (1x / 7.14%) </summary>
 
 <hr/>
 
@@ -351,17 +365,17 @@ make: *** [Makefile:188: cluster-sync] Error 1
 ## per branch [⬆](#top)
 
 
-### main (9x / 69.23%)
+### main (10x / 71.43%)
 
 
-#### external (9x / 100.00%)
+#### external (10x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (8x / 88.89%) </summary>
+<summary> container image pull failure in context (8x / 80.00%) </summary>
 
 <hr/>
 
-**8x**: _2026-05-07 17:46:18 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-compute/2052442388785270784#1:build-log.txt%3A231)
+**8x**: _2026-05-07 17:46:15 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-network/2052442388223234048#1:build-log.txt%3A263)
 <details>
 <summary>all...</summary>
 
@@ -386,22 +400,24 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 11.11%) </summary>
+<summary> download failure in context (2x / 20.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
 <details>
 <summary>all...</summary>
 
 * _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
 
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+
 </details>
 
 <hr/>
 </details>
 
-### release-1.8 (3x / 23.08%)
+### release-1.8 (3x / 21.43%)
 
 
 #### external (3x / 100.00%)
@@ -411,7 +427,7 @@ make: *** [Makefile:188: cluster-sync] Error 1
 
 <hr/>
 
-**2x**: _2026-05-07 18:43:42 &#43;0000 UTC_: <code>19:08:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2052458730666070016#1:build-log.txt%3A4079)
+**2x**: _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
 <details>
 <summary>all...</summary>
 
@@ -439,7 +455,7 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### release-1.6 (1x / 7.69%)
+### release-1.6 (1x / 7.14%)
 
 
 #### pr-build (1x / 100.00%)
@@ -465,17 +481,17 @@ make: *** [Makefile:188: cluster-sync] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-compute (8x / 61.54%)
+### sig-compute (9x / 64.29%)
 
 
-#### external (8x / 100.00%)
+#### external (9x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (6x / 75.00%) </summary>
+<summary> container image pull failure in context (6x / 66.67%) </summary>
 
 <hr/>
 
-**5x**: _2026-05-07 17:46:18 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-compute/2052442388785270784#1:build-log.txt%3A231)
+**5x**: _2026-05-07 17:46:15 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.34-sig-operator/2052442388017713152#1:build-log.txt%3A258)
 <details>
 <summary>all...</summary>
 
@@ -504,15 +520,17 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 25.00%) </summary>
+<summary> download failure in context (3x / 33.33%) </summary>
 
 <hr/>
 
-**2x**: _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
+**3x**: _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
 <details>
 <summary>all...</summary>
 
 * _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
 
 * _2026-05-07 18:48:03 &#43;0000 UTC_: <code>19:09:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17738/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2052458735401439232#1:build-log.txt%3A3970)
 
@@ -521,26 +539,11 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### sig-storage (2x / 15.38%)
+### sig-storage (2x / 14.29%)
 
 
 #### external (2x / 100.00%)
 
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-07 17:46:16 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-storage/2052442388537806848#1:build-log.txt%3A255)
-<details>
-<summary>all...</summary>
-
-* _2026-05-07 17:46:16 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-storage/2052442388537806848#1:build-log.txt%3A255)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> download failure in context (1x / 50.00%) </summary>
 
@@ -556,8 +559,23 @@ make: *** [Makefile:188: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
-### sig-network (2x / 15.38%)
+<hr/>
+
+**1x**: _2026-05-07 17:46:16 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-storage/2052442388537806848#1:build-log.txt%3A255)
+<details>
+<summary>all...</summary>
+
+* _2026-05-07 17:46:16 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16575/pull-kubevirt-e2e-k8s-1.35-sig-storage/2052442388537806848#1:build-log.txt%3A255)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (2x / 14.29%)
 
 
 #### external (2x / 100.00%)
@@ -580,7 +598,7 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-### sig-performance (1x / 7.69%)
+### sig-performance (1x / 7.14%)
 
 
 #### pr-build (1x / 100.00%)
@@ -601,4 +619,4 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-05-11 16:11:06
+Last updated: 2026-05-11 18:42:00
