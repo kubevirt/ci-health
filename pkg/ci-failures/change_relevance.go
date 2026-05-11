@@ -4,10 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"net/url"
 	"os"
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
@@ -111,28 +113,28 @@ var broadChangeAreas = []string{
 const prowPRLogsMarker = "/pr-logs/pull/"
 
 func ParseProwJobPR(prowJobURL string) (*ProwJobPR, error) {
-	url := normalizeJobURL(prowJobURL)
+	jobURL := normalizeJobURL(prowJobURL)
 
-	idx := strings.Index(url, prowPRLogsMarker)
+	idx := strings.Index(jobURL, prowPRLogsMarker)
 	if idx < 0 {
-		return nil, fmt.Errorf("URL is not a PR build (no pr-logs/pull/ segment): %s", url)
+		return nil, fmt.Errorf("URL is not a PR build (no pr-logs/pull/ segment): %s", jobURL)
 	}
 
-	remainder := url[idx+len(prowPRLogsMarker):]
+	remainder := jobURL[idx+len(prowPRLogsMarker):]
 	parts := strings.Split(remainder, "/")
 	if len(parts) < 2 {
-		return nil, fmt.Errorf("malformed Prow PR URL, expected {org}_{repo}/{pr}/...: %s", url)
+		return nil, fmt.Errorf("malformed Prow PR URL, expected {org}_{repo}/{pr}/...: %s", jobURL)
 	}
 
 	orgRepo := parts[0]
 	sepIdx := strings.Index(orgRepo, "_")
 	if sepIdx < 1 || sepIdx >= len(orgRepo)-1 {
-		return nil, fmt.Errorf("malformed org_repo segment %q in URL: %s", orgRepo, url)
+		return nil, fmt.Errorf("malformed org_repo segment %q in URL: %s", orgRepo, jobURL)
 	}
 
 	prNumber, err := strconv.Atoi(parts[1])
 	if err != nil {
-		return nil, fmt.Errorf("invalid PR number %q in URL: %s", parts[1], url)
+		return nil, fmt.Errorf("invalid PR number %q in URL: %s", parts[1], jobURL)
 	}
 
 	return &ProwJobPR{
@@ -149,12 +151,16 @@ type ghPRFile struct {
 func FetchPRChangedFiles(org, repo string, prNumber int) ([]string, error) {
 	var allFiles []string
 	page := 1
+	client := &http.Client{Timeout: 30 * time.Second}
 
 	for {
-		url := fmt.Sprintf("%s/repos/%s/%s/pulls/%d/files?per_page=100&page=%d",
-			githubAPIBaseURL, org, repo, prNumber, page)
+		params := url.Values{}
+		params.Set("per_page", "100")
+		params.Set("page", strconv.Itoa(page))
+		apiURL := fmt.Sprintf("%s/repos/%s/%s/pulls/%d/files?%s",
+			githubAPIBaseURL, org, repo, prNumber, params.Encode())
 
-		req, err := http.NewRequest(http.MethodGet, url, nil)
+		req, err := http.NewRequest(http.MethodGet, apiURL, nil)
 		if err != nil {
 			return nil, fmt.Errorf("failed to create request: %w", err)
 		}
@@ -164,14 +170,14 @@ func FetchPRChangedFiles(org, repo string, prNumber int) ([]string, error) {
 			req.Header.Set("Authorization", "Bearer "+token)
 		}
 
-		resp, err := http.DefaultClient.Do(req)
+		resp, err := client.Do(req)
 		if err != nil {
 			return nil, fmt.Errorf("failed to fetch PR files: %w", err)
 		}
 
 		if resp.StatusCode != http.StatusOK {
 			resp.Body.Close()
-			return nil, fmt.Errorf("GitHub API returned status %d for %s", resp.StatusCode, url)
+			return nil, fmt.Errorf("GitHub API returned status %d for %s", resp.StatusCode, apiURL)
 		}
 
 		var files []ghPRFile
@@ -279,6 +285,7 @@ func AnalyzeChangeRelevance(prowJobURL string) (*ChangeRelevanceResult, error) {
 	var entries []ChangeRelevanceEntry
 	var summary RelevanceSummary
 
+	broadOverlap := CheckFileOverlap(changedFiles, broadChangeAreas)
 	for _, testName := range failedTests {
 		sig := ExtractSIGFromTestName(testName)
 		if sig == "" {
@@ -291,7 +298,6 @@ func AnalyzeChangeRelevance(prowJobURL string) (*ChangeRelevanceResult, error) {
 		}
 
 		sigOverlap := CheckFileOverlap(changedFiles, codeAreas)
-		broadOverlap := CheckFileOverlap(changedFiles, broadChangeAreas)
 		relevance, reason := ClassifyRelevance(sigOverlap, broadOverlap, sig)
 
 		entry := ChangeRelevanceEntry{
