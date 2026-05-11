@@ -3,17 +3,18 @@ name: analyze-build
 description: >
     Analyze the root cause inside a failed prowjob.
     Use when user mentions to analyze a prowjob failure or adds a prowjob url
-allowed-tools: [Read, Glob, Bash(go run:*)]
+allowed-tools: [Read, Glob, Bash(go run:*), Bash(grep:*)]
 ---
 
 ## Overview
 
 This skill helps the user to find the root cause and mitigations for failing prowjobs.
 
-It combines three analyses:
+It combines four analyses:
 1. **Build log analysis** — extracts error snippets from the build log and categorizes them
 2. **Kubernetes cluster state analysis** — downloads k8s-reporter artifacts (pods, nodes, events, VMIs) and detects infrastructure-level failures like CrashLoopBackOff, OOMKilled, NotReady nodes, failed migrations, and warning events
 3. **Etcd storage profiling** — if the job was run with `KUBEVIRT_PROFILE_ETCD=true`, downloads `etcd-storage-profile.json` from `artifacts/etcd-profiler/` and detects tmpfs exhaustion, tmpfs pressure, large WAL files, and DB growth trends
+4. **Container log analysis** — downloads virt-controller, virt-handler, virt-api, and virt-operator container logs from k8s-reporter suite artifacts for interactive grep
 
 ## Analysis data generation
 
@@ -42,5 +43,14 @@ After data generation:
    - `findings`: list of detected issues, each with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`
    - `summary`: aggregate counts by kind, severity, and detector
    - `etcd_profile` (optional): full etcd storage profile with `peak_tmpfs_used_bytes`, `final_tmpfs_total_bytes`, `final_wal_size_bytes`, and per-spec `records` showing DB size deltas and tmpfs usage. Etcd-related findings use kind `EtcdProfile` and detectors `etcd-tmpfs-exhaustion`, `etcd-tmpfs-pressure`, `etcd-large-wal`, `etcd-db-growth`
-4. Correlate all analyses: k8s findings (e.g. CrashLoopBackOff on a component pod) often explain build log errors (e.g. test timeouts); etcd findings (e.g. tmpfs exhaustion) can explain node-level or apiserver issues
-5. Deduce the root cause and possible mitigations from the combined data
+4. Read the container log files list from `container_log_files` in the k8s analysis YAML. Each entry has:
+   - `pod_name`, `container_name`, `namespace`: identify the component
+   - `cached_path`: local file path to grep
+   - `size_bytes`: file size
+5. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from build log errors (e.g. `testvmi-xxxxx`) and k8s findings (e.g. VMIs stuck in Scheduling), then use `grep` on the cached virt-controller and virt-handler logs to find why those VMIs failed. Common patterns to look for:
+   - Schema validation errors (e.g. `admission webhook` or `validation failed`)
+   - Sync failures (e.g. `syncError` or `failed to sync`)
+   - Device/resource issues (e.g. `device not found`, `resource not available`)
+   - Example: `grep -i "testvmi-xxxxx" <cached_path>` to find all log lines related to a specific VMI
+6. Correlate all analyses: k8s findings (e.g. CrashLoopBackOff on a component pod) often explain build log errors (e.g. test timeouts); etcd findings (e.g. tmpfs exhaustion) can explain node-level or apiserver issues; container log errors (e.g. schema validation failures in virt-controller) reveal the actual rejection reason when VMIs are stuck in non-Running phases
+7. Deduce the root cause and possible mitigations from the combined data

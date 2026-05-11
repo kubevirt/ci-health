@@ -4,10 +4,13 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"io/fs"
 	"net/http"
+	"net/url"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"time"
 
@@ -99,16 +102,19 @@ func AnalyzeK8s(prowJobURL string) (*K8sAnalysisResult, error) {
 		allFindings = append(allFindings, etcdFindings...)
 	}
 
+	containerLogFiles := fetchContainerLogs(gcsBaseURL, cacheDir)
+
 	result := &K8sAnalysisResult{
-		ProwJobURL:  prowJobURL,
-		JobName:     jobName,
-		BuildID:     buildID,
-		Started:     started,
-		Finished:    finished,
-		Snapshots:   snapshotList,
-		Findings:    allFindings,
-		Summary:     buildSummary(allFindings),
-		EtcdProfile: etcdProfile,
+		ProwJobURL:        prowJobURL,
+		JobName:           jobName,
+		BuildID:           buildID,
+		Started:           started,
+		Finished:          finished,
+		Snapshots:         snapshotList,
+		Findings:          allFindings,
+		Summary:           buildSummary(allFindings),
+		EtcdProfile:       etcdProfile,
+		ContainerLogFiles: containerLogFiles,
 	}
 
 	return result, nil
@@ -312,6 +318,249 @@ func fetchEtcdProfile(gcsBaseURL, cacheDir string) *EtcdStorageProfile {
 	log.Infof("loaded etcd profile: %d specs, peak tmpfs %d/%d bytes",
 		profile.TotalSpecs, profile.PeakTmpfsUsed, profile.FinalTmpfsTotal)
 	return &profile
+}
+
+var containerLogComponents = []string{
+	"virt-controller",
+	"virt-handler",
+	"virt-api",
+	"virt-operator",
+}
+
+func fetchContainerLogs(gcsBaseURL, cacheDir string) []ContainerLogFile {
+	k8sReporterBase := gcsBaseURL + "/artifacts/k8s-reporter"
+
+	// Container logs are in suite snapshots: {n}_{namespace}_{podName}-{containerName}.log
+	// Try suite first, then flat layout.
+	bases := []string{
+		k8sReporterBase + "/suite",
+		k8sReporterBase,
+	}
+
+	for _, base := range bases {
+		files := discoverContainerLogFiles(base)
+		if len(files) == 0 {
+			continue
+		}
+
+		logCacheDir := filepath.Join(cacheDir, "container-logs")
+		if err := os.MkdirAll(logCacheDir, 0755); err != nil {
+			log.WithError(err).Warn("failed to create container-logs cache dir")
+			return nil
+		}
+
+		var result []ContainerLogFile
+		for _, f := range files {
+			cached, size, err := downloadContainerLog(f.url, logCacheDir, f.fileName)
+			if err != nil {
+				log.WithError(err).Warnf("failed to download container log %s", f.fileName)
+				continue
+			}
+			result = append(result, ContainerLogFile{
+				PodName:       f.podName,
+				ContainerName: f.containerName,
+				Namespace:     f.namespace,
+				CachedPath:    cached,
+				SizeBytes:     size,
+			})
+			log.Infof("cached container log %s (%d bytes)", f.fileName, size)
+		}
+		return result
+	}
+
+	log.Info("no container log files found for kubevirt components")
+	return nil
+}
+
+type containerLogMeta struct {
+	fileName      string
+	namespace     string
+	podName       string
+	containerName string
+	url           string
+}
+
+// gcsListResponse is the JSON response from the GCS Storage JSON API list objects endpoint.
+type gcsListResponse struct {
+	Items []struct {
+		Name string `json:"name"`
+		Size string `json:"size"`
+	} `json:"items"`
+	NextPageToken string `json:"nextPageToken"`
+}
+
+// gcsBaseToListURL converts a GCS storage URL to the corresponding JSON API listing URL.
+// Returns the listing URL and the download base URL, or empty strings if parsing fails.
+func gcsBaseToListURL(gcsBasePath string) (listURL, downloadBase string) {
+	const storagePrefix = "https://storage.googleapis.com/"
+	if !strings.HasPrefix(gcsBasePath, storagePrefix) {
+		return "", ""
+	}
+
+	remainder := strings.TrimPrefix(gcsBasePath, storagePrefix)
+	slashIdx := strings.Index(remainder, "/")
+	if slashIdx < 0 {
+		return "", ""
+	}
+	bucket := remainder[:slashIdx]
+	prefix := remainder[slashIdx+1:]
+	if !strings.HasSuffix(prefix, "/") {
+		prefix += "/"
+	}
+
+	v := url.Values{}
+	v.Set("prefix", prefix)
+	v.Set("maxResults", "500")
+
+	return fmt.Sprintf("%sstorage/v1/b/%s/o?%s", storagePrefix, bucket, v.Encode()),
+		storagePrefix + bucket + "/"
+}
+
+func discoverContainerLogFiles(gcsBasePath string) []containerLogMeta {
+	listURL, downloadBase := gcsBaseToListURL(gcsBasePath)
+	if listURL == "" {
+		return nil
+	}
+	return listAndFilterContainerLogs(listURL, downloadBase)
+}
+
+func listAndFilterContainerLogs(listURL, downloadBase string) []containerLogMeta {
+	var result []containerLogMeta
+	pageURL := listURL
+
+	for pageURL != "" {
+		resp, err := http.Get(pageURL)
+		if err != nil {
+			log.WithError(err).Warn("failed to list GCS objects for container logs")
+			return nil
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			closeAndLogErr(resp.Body)
+			log.Warnf("GCS listing returned status %d", resp.StatusCode)
+			return nil
+		}
+
+		var listing gcsListResponse
+		if err := json.NewDecoder(resp.Body).Decode(&listing); err != nil {
+			closeAndLogErr(resp.Body)
+			log.WithError(err).Warn("failed to decode GCS listing response")
+			return nil
+		}
+		closeAndLogErr(resp.Body)
+
+		for _, item := range listing.Items {
+			fileName := filepath.Base(item.Name)
+			meta, ok := parseContainerLogFileName(fileName)
+			if !ok {
+				continue
+			}
+			if !isKubevirtComponent(meta.containerName) {
+				continue
+			}
+			meta.url = downloadBase + item.Name
+			result = append(result, meta)
+		}
+
+		if listing.NextPageToken == "" {
+			break
+		}
+		pageURL = listURL + "&pageToken=" + url.QueryEscape(listing.NextPageToken)
+	}
+
+	return result
+}
+
+// parseContainerLogFileName parses filenames like "0_kubevirt_virt-controller-65cc5dc497-75jjr-virt-controller.log"
+// into namespace, pod name, and container name components.
+func parseContainerLogFileName(fileName string) (containerLogMeta, bool) {
+	if !strings.HasSuffix(fileName, ".log") {
+		return containerLogMeta{}, false
+	}
+
+	name := strings.TrimSuffix(fileName, ".log")
+
+	// Format: {n}_{namespace}_{podName}-{containerName}
+	// First segment before _ is the failure count number
+	firstUnderscore := strings.Index(name, "_")
+	if firstUnderscore < 0 {
+		return containerLogMeta{}, false
+	}
+
+	rest := name[firstUnderscore+1:]
+
+	// Second _ separates namespace from podName-containerName
+	secondUnderscore := strings.Index(rest, "_")
+	if secondUnderscore < 0 {
+		return containerLogMeta{}, false
+	}
+
+	namespace := rest[:secondUnderscore]
+	podContainer := rest[secondUnderscore+1:]
+
+	// The container name is the last hyphen-separated segment that matches a known
+	// component name. Since pod names can contain hyphens (e.g., "virt-controller-65cc5dc497-75jjr"),
+	// we find the container name by checking known suffixes.
+	for _, component := range containerLogComponents {
+		suffix := "-" + component
+		if strings.HasSuffix(podContainer, suffix) {
+			podName := podContainer[:len(podContainer)-len(suffix)]
+			return containerLogMeta{
+				fileName:      fileName,
+				namespace:     namespace,
+				podName:       podName,
+				containerName: component,
+			}, true
+		}
+	}
+
+	// Also match files where the pod name prefix equals the container name
+	// (e.g., "virt-handler" container in "virt-handler-n64dk" pod has suffix "-virt-handler")
+	// Already covered above. For "_previous" logs, skip them.
+	if strings.HasSuffix(podContainer, "_previous") {
+		return containerLogMeta{}, false
+	}
+
+	return containerLogMeta{}, false
+}
+
+func isKubevirtComponent(containerName string) bool {
+	return slices.Contains(containerLogComponents, containerName)
+}
+
+func downloadContainerLog(gcsURL, cacheDir, fileName string) (string, int64, error) {
+	cachePath := filepath.Join(cacheDir, fileName)
+
+	info, err := os.Stat(cachePath)
+	if err == nil {
+		return cachePath, info.Size(), nil
+	}
+	if !errors.Is(err, fs.ErrNotExist) {
+		return "", 0, err
+	}
+
+	resp, err := http.Get(gcsURL)
+	if err != nil {
+		return "", 0, err
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", 0, fmt.Errorf("failed to download log from GCS: status %d", resp.StatusCode)
+	}
+
+	out, err := os.Create(cachePath)
+	if err != nil {
+		return "", 0, err
+	}
+	defer out.Close()
+
+	size, err := io.Copy(out, resp.Body)
+	if err != nil {
+		return "", 0, err
+	}
+
+	return cachePath, size, nil
 }
 
 func buildSummary(findings []*K8sFinding) K8sSummary {
