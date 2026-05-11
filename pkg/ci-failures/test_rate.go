@@ -151,12 +151,12 @@ func fetchFlakefinderReports(days int) ([]*FlakefinderReport, error) {
 	numReports := int(math.Ceil(float64(days) / 7.0))
 	var reports []*FlakefinderReport
 
+	anchorDate := time.Now().UTC().AddDate(0, 0, -1)
 	for r := range numReports {
-		baseOffset := r * 7
 		var report *FlakefinderReport
 		var err error
-		for try := 1; try <= 3; try++ {
-			date := time.Now().UTC().AddDate(0, 0, -(baseOffset + try))
+		for try := range 3 {
+			date := anchorDate.AddDate(0, 0, -try)
 			report, err = fetchFlakefinderReport(date)
 			if err == nil {
 				break
@@ -166,6 +166,12 @@ func fetchFlakefinderReports(days int) ([]*FlakefinderReport, error) {
 			return nil, fmt.Errorf("failed to fetch flakefinder report for period %d: %w", r+1, err)
 		}
 		reports = append(reports, report)
+
+		if start, parseErr := time.Parse(time.DateOnly, report.StartOfReport); parseErr == nil {
+			anchorDate = start
+		} else {
+			anchorDate = anchorDate.AddDate(0, 0, -7)
+		}
 	}
 
 	return reports, nil

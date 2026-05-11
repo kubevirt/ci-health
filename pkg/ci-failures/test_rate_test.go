@@ -2,6 +2,7 @@ package cifailures
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -301,22 +302,32 @@ func TestMergeReportsSingle(t *testing.T) {
 }
 
 func TestFetchFlakefinderReports(t *testing.T) {
-	reports := map[string]*FlakefinderReport{
-		"week1": {StartOfReport: "2026-05-03", EndOfReport: "2026-05-10", Tests: []string{"t1"}, Data: map[string]map[string]*TestDetails{}},
-		"week2": {StartOfReport: "2026-04-26", EndOfReport: "2026-05-03", Tests: []string{"t2"}, Data: map[string]map[string]*TestDetails{}},
+	reportsByDate := map[string]*FlakefinderReport{}
+
+	now := time.Now().UTC()
+	week1Date := now.AddDate(0, 0, -1).Format(time.DateOnly)
+	reportsByDate[week1Date] = &FlakefinderReport{
+		StartOfReport: now.AddDate(0, 0, -8).Format(time.DateOnly),
+		EndOfReport:   week1Date,
+		Tests:         []string{"t1"},
+		Data:          map[string]map[string]*TestDetails{},
+	}
+	week2Date := now.AddDate(0, 0, -8).Format(time.DateOnly)
+	reportsByDate[week2Date] = &FlakefinderReport{
+		StartOfReport: now.AddDate(0, 0, -15).Format(time.DateOnly),
+		EndOfReport:   week2Date,
+		Tests:         []string{"t2"},
+		Data:          map[string]map[string]*TestDetails{},
 	}
 
-	served := map[string]bool{}
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		path := r.URL.Path
-		for label, report := range reports {
-			if !served[label] {
-				served[label] = true
+		for date, report := range reportsByDate {
+			expected := fmt.Sprintf("/flakefinder-%s-168h.json", date)
+			if r.URL.Path == expected {
 				w.Header().Set("Content-Type", "application/json")
 				json.NewEncoder(w).Encode(report)
 				return
 			}
-			_ = path
 		}
 		http.NotFound(w, r)
 	}))
