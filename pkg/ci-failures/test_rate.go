@@ -61,8 +61,15 @@ func AnalyzeTestRate(prowJobURL string) (*TestRateResult, error) {
 
 	log.Infof("found %d failed test(s) in build log", len(failedTests))
 
-	yesterday := time.Now().UTC().AddDate(0, 0, -1)
-	report, err := fetchFlakefinderReport(yesterday)
+	var report *FlakefinderReport
+	var reportDate time.Time
+	for i := 1; i <= 3; i++ {
+		reportDate = time.Now().UTC().AddDate(0, 0, -i)
+		report, err = fetchFlakefinderReport(reportDate)
+		if err == nil {
+			break
+		}
+	}
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch flakefinder report: %w", err)
 	}
@@ -78,7 +85,7 @@ func AnalyzeTestRate(prowJobURL string) (*TestRateResult, error) {
 	return &TestRateResult{
 		ProwJobURL:      prowJobURL,
 		JobName:         jobBuildErrors.JobName,
-		ReportPeriodEnd: yesterday.Format(time.DateOnly),
+		ReportPeriodEnd: reportDate.Format(time.DateOnly),
 		FailedTests:     entries,
 	}, nil
 }
@@ -97,10 +104,11 @@ func extractFailedTestNames(jobBuildErrors *JobBuildErrors) []string {
 				continue
 			}
 			name := strings.TrimSpace(matches[1])
-			if name == "" || seen[name] {
+			norm := normalizeTestName(name)
+			if name == "" || seen[norm] {
 				continue
 			}
-			seen[name] = true
+			seen[norm] = true
 			result = append(result, name)
 		}
 	}
