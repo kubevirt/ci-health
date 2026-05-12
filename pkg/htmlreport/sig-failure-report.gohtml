@@ -19,11 +19,44 @@
 */ -}}
 
 {{- /* sig-failure-report.gohtml */ -}}
+
+{{- define "failureCard" -}}
+                    <div class="failure-card">
+                        <a class="failure-url" href="{{ .FailureURL }}" target="_blank">{{ .FailureURL }}</a>
+                        {{- if .Testcase }}
+                        <table class="testcases">
+                            <thead>
+                                <tr>
+                                    <th>Test Name</th>
+                                    <th>Failure Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{- range .Testcase }}
+                                <tr>
+                                    <td>{{ .Name }}</td>
+                                    <td>
+                                        {{- if .Error }}
+                                            <span class="failure-message">{{ .Error }}</span>
+                                        {{- else }}
+                                            <span class="result-passed">Passed</span>
+                                        {{- end }}
+                                    </td>
+                                </tr>
+                                {{- end }}
+                            </tbody>
+                        </table>
+                        {{- else }}
+                        <p>No failed test cases found for this build.</p>
+                        {{- end }}
+                    </div>
+{{- end -}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SIG Failure Report</title>
+    <title>SIG {{ .Sig }} Merge Failure Report</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,31 +70,16 @@
             background: #fff;
             border: 1px solid #e1e4e8;
             border-radius: 8px;
-            margin-bottom: 2em;
-            padding: 1.5em 2em;
+            margin-bottom: 1em;
+            padding: 1em 1.5em;
             box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-            max-width: 800px;
         }
         .failure-header {
-            margin-bottom: 1em;
-        }
-        .sig-label {
-            background: #e3fcef;
-            color: #22863a;
-            padding: 0.3em 0.7em;
-            border-radius: 16px;
-            font-weight: bold;
-            margin-right: 14px;
-            font-size: 1.1em;
-        }
-        .job-name {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #0366d6;
+            margin-bottom: 0.5em;
         }
         .failure-url {
             display: block;
-            margin-bottom: 1em;
+            margin-bottom: 0.5em;
             color: #586069;
             text-decoration: none;
             word-break: break-all;
@@ -78,7 +96,7 @@
         table.testcases {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1em;
+            margin-top: 0.5em;
         }
         table.testcases th, table.testcases td {
             border: 1px solid #e1e4e8;
@@ -101,54 +119,368 @@
             color: #d73a49;
             font-size: 0.98em;
         }
-        .test-url {
+        table.branch-summary {
+            border-collapse: collapse;
+            margin: 1.5em 0;
+            max-width: 800px;
+        }
+        table.branch-summary th, table.branch-summary td {
+            border: 1px solid #e1e4e8;
+            padding: 0.5em 1em;
+            text-align: left;
+        }
+        table.branch-summary th {
+            background: #24292e;
+            color: #fff;
+        }
+        table.branch-summary tr:nth-child(even) {
+            background: #f6f8fa;
+        }
+        .rate-high {
+            color: #d73a49;
+            font-weight: bold;
+        }
+        .rate-medium {
+            color: #e36209;
+            font-weight: bold;
+        }
+        .rate-low {
+            color: #22863a;
+            font-weight: bold;
+        }
+        details.branch-details {
+            margin: 1em 0;
+        }
+        details.branch-details > summary {
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #24292e;
+            padding: 0.3em 0;
+        }
+        details.job-details {
+            margin: 0.5em 0 0.5em 1em;
+        }
+        details.job-details-top {
+            margin: 0.5em 0;
+        }
+        details.job-details-top > summary {
+            cursor: pointer;
+            color: #0366d6;
+            font-size: 1em;
+            padding: 0.2em 0;
+        }
+        table.job-summary {
+            border-collapse: collapse;
+            margin: 1.5em 0;
+            max-width: 800px;
+        }
+        table.job-summary th, table.job-summary td {
+            border: 1px solid #e1e4e8;
+            padding: 0.5em 1em;
+            text-align: left;
+        }
+        table.job-summary th {
+            background: #24292e;
+            color: #fff;
+        }
+        table.job-summary tr:nth-child(even) {
+            background: #f6f8fa;
+        }
+        details.job-details > summary {
+            cursor: pointer;
+            color: #0366d6;
+            font-size: 1em;
+            padding: 0.2em 0;
+        }
+        .job-stats {
+            color: #586069;
+            font-size: 0.9em;
+        }
+        details.build-details {
+            margin: 0.5em 0 0.5em 1em;
+        }
+        details.build-details > summary {
+            cursor: pointer;
+            color: #586069;
             font-size: 0.95em;
-            color: #005cc5;
+            padding: 0.2em 0;
+        }
+        .overall-summary {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 1.5em 2em;
+            margin: 1.5em 0;
+            max-width: 800px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .overall-headline {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6em;
+            margin-bottom: 0.5em;
+        }
+        .overall-rate {
+            font-size: 2.2em;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .overall-label {
+            font-size: 1.1em;
+            color: #586069;
+        }
+        .overall-detail {
+            color: #586069;
+            font-size: 0.95em;
+            margin-top: 0.4em;
+            line-height: 1.5;
+        }
+        details.section-details {
+            margin: 1.5em 0;
+        }
+        details.section-details > summary {
+            cursor: pointer;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #24292e;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 0.3em;
+            list-style: revert;
+        }
+        .toggle-controls {
+            margin: 0.5em 0;
+        }
+        .toggle-controls.top-level {
+            margin: 1em 0;
+        }
+        .toggle-btn {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 4px;
+            padding: 0.3em 0.8em;
+            cursor: pointer;
+            font-size: 0.85em;
+            color: #0366d6;
+            margin-right: 0.3em;
+        }
+        .toggle-btn:hover {
+            background: #e1e4e8;
         }
     </style>
+    <script>
+        function toggleAll(container, open) {
+            container.querySelectorAll('details').forEach(function(d) {
+                d.open = open;
+            });
+        }
+    </script>
 </head>
 <body>
-    <h1>SIG Failure Report</h1>
-    <p class="generated-at">Generated at {{ .GeneratedAt.Format "2006-01-02 15:04 UTC" }}</p>
-    {{- if .Failures }}
-        {{- range .Failures }}
-        <div class="failure-card">
-            <div class="failure-header">
-                <span class="sig-label">{{ .Sig }}</span>
-                <span class="job-name">{{ .JobName }}</span>
-                {{- if not .Started.IsZero }}
-                <span class="timestamp">{{ .Started.Format "2006-01-02 15:04 UTC" }}</span>
+    <h1>SIG {{ .Sig }} Merge Failure Report <span class="generated-at">— Generated at {{ .GeneratedAt.Format "2006-01-02 15:04 UTC" }}</span></h1>
+
+    {{- if .BranchStats }}
+    <div class="toggle-controls top-level">
+        <button class="toggle-btn" onclick="toggleAll(document.body, true)">Expand All</button>
+        <button class="toggle-btn" onclick="toggleAll(document.body, false)">Collapse All</button>
+    </div>
+    <div class="overall-summary">
+        <div class="overall-headline">
+            <span class="overall-rate">
+                {{- if gt .Overall.FailureRate 10.0 }}<span class="rate-high">{{ .Overall.FailureRate | printf "%.1f%%" }}</span>
+                {{- else if gt .Overall.FailureRate 5.0 }}<span class="rate-medium">{{ .Overall.FailureRate | printf "%.1f%%" }}</span>
+                {{- else }}<span class="rate-low">{{ .Overall.FailureRate | printf "%.1f%%" }}</span>
                 {{- end }}
-            </div>
-            <a class="failure-url" href="{{ .FailureURL }}" target="_blank">{{ .FailureURL }}</a>
-            {{ if .Testcase }}
-            <table class="testcases">
-                <thead>
-                    <tr>
-                        <th>Test Name</th>
-                        <th>Failure Message</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{- range .Testcase }}
-                    <tr>
-                        <td>{{ .Name }}</td>
-                        <td>
-                            {{- if .Error }}
-                                <span class="failure-message">{{ .Error }}</span>
-                            {{- else }}
-                                <span class="result-passed">Passed</span>
-                            {{- end }}
-                        </td>
-                    </tr>
-                    {{- end }}
-                </tbody>
-            </table>
-            {{ else }}
-                <p>No failed test cases found for this job.</p>
-            {{ end }}
+            </span>
+            <span class="overall-label">overall failure rate</span>
         </div>
+        <div class="overall-detail">
+            <strong>{{ .Overall.Failures }}</strong> SIG {{ .Sig }} test failures out of <strong>{{ .Overall.TotalRuns }}</strong> total job runs across all branches on merged commits over the last 7 days.
+        </div>
+    </div>
+
+    <details class="section-details">
+        <summary>Failure Rate by Branch</summary>
+        <div class="toggle-controls">
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), true)">Expand All</button>
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), false)">Collapse All</button>
+        </div>
+        <table class="branch-summary">
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Failures</th>
+                    <th>Successes</th>
+                    <th>Total</th>
+                    <th>Failure Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .BranchStats }}
+                <tr>
+                    <td><strong>{{ .Branch }}</strong></td>
+                    <td>{{ .Failures }}</td>
+                    <td>{{ .Successes }}</td>
+                    <td>{{ .Total }}</td>
+                    <td>
+                        {{- if gt .FailureRate 10.0 }}<span class="rate-high">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- else if gt .FailureRate 5.0 }}<span class="rate-medium">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- else }}<span class="rate-low">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- end }}
+                    </td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+
+        {{- range .BranchStats }}
+        <details class="branch-details">
+            <summary>{{ .Branch }} ({{ .Failures }} failures across {{ len .Jobs }} jobs)</summary>
+            {{- range .Jobs }}
+            <details class="job-details">
+                <summary>{{ .JobName }} <span class="job-stats">— {{ .FailureCount }}F / {{ .SuccessCount }}S ({{ .FailureRate | printf "%.1f%%" }})</span></summary>
+                {{- range .SigFailures }}
+                <details class="build-details">
+                    <summary>{{ buildID .FailureURL }}{{- if not .Started.IsZero }} — {{ .Started.Format "2006-01-02 15:04 UTC" }}{{ end }}</summary>
+                    {{- template "failureCard" . }}
+                </details>
+                {{- end }}
+            </details>
+            {{- end }}
+        </details>
         {{- end }}
+    </details>
+
+    {{- if .JobFailures }}
+    <details class="section-details">
+        <summary>Failure Rate by Job</summary>
+        <div class="toggle-controls">
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), true)">Expand All</button>
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), false)">Collapse All</button>
+        </div>
+        <table class="job-summary">
+            <thead>
+                <tr>
+                    <th>Job</th>
+                    <th>Failures</th>
+                    <th>Successes</th>
+                    <th>Total</th>
+                    <th>Failure Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .JobFailures }}
+                <tr>
+                    <td>{{ .JobName }}</td>
+                    <td>{{ .FailureCount }}</td>
+                    <td>{{ .SuccessCount }}</td>
+                    <td>{{ .Total }}</td>
+                    <td>
+                        {{- if gt .FailureRate 10.0 }}<span class="rate-high">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- else if gt .FailureRate 5.0 }}<span class="rate-medium">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- else }}<span class="rate-low">{{ .FailureRate | printf "%.1f%%" }}</span>
+                        {{- end }}
+                    </td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+
+        {{- range .JobFailures }}
+        <details class="job-details-top">
+            <summary>{{ .JobName }} <span class="job-stats">— {{ .FailureCount }}F / {{ .SuccessCount }}S ({{ .FailureRate | printf "%.1f%%" }})</span></summary>
+            {{- range .SigFailures }}
+            <details class="build-details">
+                <summary>{{ buildID .FailureURL }}{{- if not .Started.IsZero }} — {{ .Started.Format "2006-01-02 15:04 UTC" }}{{ end }}</summary>
+                {{- template "failureCard" . }}
+            </details>
+            {{- end }}
+        </details>
+        {{- end }}
+    </details>
+    {{- end }}
+
+    {{- if .TestFailures }}
+    <details class="section-details">
+        <summary>Failure Rate by Test</summary>
+        <div class="toggle-controls">
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), true)">Expand All</button>
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), false)">Collapse All</button>
+        </div>
+        <table class="job-summary">
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Failure Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .TestFailures }}
+                <tr>
+                    <td>{{ .TestName }}</td>
+                    <td>{{ .Count }}</td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+
+        {{- range .TestFailures }}
+        <details class="job-details-top">
+            <summary>{{ .TestName }} <span class="job-stats">— {{ .Count }} failure{{ if ne .Count 1 }}s{{ end }}</span></summary>
+            {{- range .Instances }}
+            <details class="build-details">
+                <summary>{{ .JobName }} / {{ buildID .FailureURL }}{{- if not .Started.IsZero }} — {{ .Started.Format "2006-01-02 15:04 UTC" }}{{ end }}</summary>
+                <div class="failure-card">
+                    <a class="failure-url" href="{{ .FailureURL }}" target="_blank">{{ .FailureURL }}</a>
+                    {{- if .Error }}
+                    <p><span class="failure-message">{{ .Error }}</span></p>
+                    {{- end }}
+                </div>
+            </details>
+            {{- end }}
+        </details>
+        {{- end }}
+    </details>
+    {{- end }}
+
+    {{- if .DateFailures }}
+    <details class="section-details">
+        <summary>Failure Rate by Date</summary>
+        <div class="toggle-controls">
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), true)">Expand All</button>
+            <button class="toggle-btn" onclick="toggleAll(this.closest('details'), false)">Collapse All</button>
+        </div>
+        <table class="job-summary">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Failures</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .DateFailures }}
+                <tr>
+                    <td>{{ .Date }}</td>
+                    <td>{{ .Count }}</td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+
+        {{- range .DateFailures }}
+        <details class="job-details-top">
+            <summary>{{ .Date }} <span class="job-stats">— {{ .Count }} failure{{ if ne .Count 1 }}s{{ end }}</span></summary>
+            {{- range .Failures }}
+            <details class="build-details">
+                <summary>{{ .JobName }} / {{ buildID .FailureURL }}{{- if not .Started.IsZero }} — {{ .Started.Format "15:04 UTC" }}{{ end }}</summary>
+                {{- template "failureCard" . }}
+            </details>
+            {{- end }}
+        </details>
+        {{- end }}
+    </details>
+    {{- end }}
+
     {{- else }}
         <p>No SIG failures to display.</p>
     {{- end }}
