@@ -19,10 +19,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const (
-	tmpOutputPath = "output/tmp"
-	mdOutputPath  = "output/kubevirt/kubevirt/ci-failures"
-)
+var tmpOutputPath = "output/tmp"
+
+const mdOutputPath = "output/kubevirt/kubevirt/ci-failures"
+
+var sessionID string
 
 var (
 	//go:embed ci-failures.gomd
@@ -33,6 +34,15 @@ var (
 	rootCmd = &cobra.Command{
 		Use:   "ci-failures",
 		Short: "A CLI tool to process CI failures.",
+		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
+			if sessionID == "" {
+				sessionID = os.Getenv("CLAUDE_CODE_SESSION_ID")
+			}
+			if sessionID != "" {
+				tmpOutputPath = filepath.Join("output/tmp/sessions", sessionID)
+			}
+			return nil
+		},
 	}
 
 	generateCmd = &cobra.Command{
@@ -160,7 +170,7 @@ func generateYAML(_ *cobra.Command, _ []string) error {
 	if err != nil {
 		return fmt.Errorf("failed downloading build logs: %v", err)
 	}
-	_, err = cifailures.ExtractErrors(ciFailureJobURLs)
+	_, err = cifailures.ExtractErrors(ciFailureJobURLs, tmpOutputPath)
 	if err != nil {
 		return fmt.Errorf("failed extracting errors from build logs: %v", err)
 	}
@@ -417,6 +427,9 @@ func changeRelevance(_ *cobra.Command, args []string) error {
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
+
+	rootCmd.PersistentFlags().StringVar(&sessionID, "session-id", "",
+		"Isolate analysis output in a per-session directory; defaults to CLAUDE_CODE_SESSION_ID env var if set")
 
 	testRateCmd.Flags().IntVar(&testRateDays, "days", 7, "Number of days to cover (max 28, fetches multiple weekly reports)")
 
