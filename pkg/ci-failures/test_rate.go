@@ -6,6 +6,7 @@ import (
 	"math"
 	"os"
 	"regexp"
+	"sort"
 	"strings"
 	"time"
 
@@ -42,13 +43,33 @@ type TestRateResult struct {
 }
 
 type TestRateEntry struct {
-	TestName       string  `yaml:"test_name"`
-	MatchedName    string  `yaml:"matched_name,omitempty"`
-	TotalSucceeded int     `yaml:"total_succeeded"`
-	TotalFailed    int     `yaml:"total_failed"`
-	TotalSkipped   int     `yaml:"total_skipped"`
-	SuccessRate    float64 `yaml:"success_rate"`
-	Severity       string  `yaml:"severity"`
+	TestName       string           `yaml:"test_name"`
+	MatchedName    string           `yaml:"matched_name,omitempty"`
+	TotalSucceeded int              `yaml:"total_succeeded"`
+	TotalFailed    int              `yaml:"total_failed"`
+	TotalSkipped   int              `yaml:"total_skipped"`
+	SuccessRate    float64          `yaml:"success_rate"`
+	Severity       string           `yaml:"severity"`
+	K8sVersions    []K8sVersionRate `yaml:"k8s_versions,omitempty"`
+}
+
+type K8sVersionRate struct {
+	Version     string     `yaml:"version"`
+	Succeeded   int        `yaml:"succeeded"`
+	Failed      int        `yaml:"failed"`
+	Skipped     int        `yaml:"skipped"`
+	SuccessRate float64    `yaml:"success_rate"`
+	Severity    string     `yaml:"severity"`
+	Lanes       []LaneRate `yaml:"lanes"`
+}
+
+type LaneRate struct {
+	Lane        string  `yaml:"lane"`
+	Succeeded   int     `yaml:"succeeded"`
+	Failed      int     `yaml:"failed"`
+	Skipped     int     `yaml:"skipped"`
+	SuccessRate float64 `yaml:"success_rate"`
+	Severity    string  `yaml:"severity"`
 }
 
 func AnalyzeTestRate(prowJobURL string, days int) (*TestRateResult, error) {
@@ -293,27 +314,89 @@ func computeTestRate(testName string, report *FlakefinderReport) TestRateEntry {
 		return entry
 	}
 
-	for _, details := range jobData {
+	versionLanes := map[string][]LaneRate{}
+	for laneName, details := range jobData {
 		entry.TotalSucceeded += details.Succeeded
 		entry.TotalFailed += details.Failed
 		entry.TotalSkipped += details.Skipped
+
+		lane := LaneRate{
+			Lane:      laneName,
+			Succeeded: details.Succeeded,
+			Failed:    details.Failed,
+			Skipped:   details.Skipped,
+		}
+		laneTotal := details.Succeeded + details.Failed
+		if laneTotal > 0 {
+			lane.SuccessRate = float64(details.Succeeded) / float64(laneTotal) * 100.0
+		}
+		lane.Severity = classifySeverity(lane.SuccessRate, laneTotal)
+
+		version := extractK8sVersion(laneName)
+		versionLanes[version] = append(versionLanes[version], lane)
 	}
+
+	for version, lanes := range versionLanes {
+		sort.Slice(lanes, func(i, j int) bool {
+			if lanes[i].SuccessRate != lanes[j].SuccessRate {
+				return lanes[i].SuccessRate < lanes[j].SuccessRate
+			}
+			return lanes[i].Lane < lanes[j].Lane
+		})
+		vr := K8sVersionRate{
+			Version: version,
+			Lanes:   lanes,
+		}
+		for _, l := range lanes {
+			vr.Succeeded += l.Succeeded
+			vr.Failed += l.Failed
+			vr.Skipped += l.Skipped
+		}
+		vrTotal := vr.Succeeded + vr.Failed
+		if vrTotal > 0 {
+			vr.SuccessRate = float64(vr.Succeeded) / float64(vrTotal) * 100.0
+		}
+		vr.Severity = classifySeverity(vr.SuccessRate, vrTotal)
+		entry.K8sVersions = append(entry.K8sVersions, vr)
+	}
+
+	sort.Slice(entry.K8sVersions, func(i, j int) bool {
+		if entry.K8sVersions[i].SuccessRate != entry.K8sVersions[j].SuccessRate {
+			return entry.K8sVersions[i].SuccessRate < entry.K8sVersions[j].SuccessRate
+		}
+		return entry.K8sVersions[i].Version < entry.K8sVersions[j].Version
+	})
 
 	total := entry.TotalSucceeded + entry.TotalFailed
 	if total > 0 {
 		entry.SuccessRate = float64(entry.TotalSucceeded) / float64(total) * 100.0
 	}
 
-	switch {
-	case entry.SuccessRate >= 95:
-		entry.Severity = "likely-pr-related"
-	case entry.SuccessRate >= 80:
-		entry.Severity = "inconclusive"
-	default:
-		entry.Severity = "likely-flaky"
-	}
+	entry.Severity = classifySeverity(entry.SuccessRate, total)
 
 	return entry
+}
+
+func extractK8sVersion(laneName string) string {
+	m := k8sVersionRegex.FindStringSubmatch(laneName)
+	if len(m) < 2 {
+		return "unknown"
+	}
+	return m[1]
+}
+
+func classifySeverity(successRate float64, total int) string {
+	if total == 0 {
+		return "unknown"
+	}
+	switch {
+	case successRate >= 95:
+		return "likely-pr-related"
+	case successRate >= 80:
+		return "inconclusive"
+	default:
+		return "likely-flaky"
+	}
 }
 
 func WriteTestRateResultYAML(outputPath string, result *TestRateResult) error {
