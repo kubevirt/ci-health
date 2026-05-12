@@ -51,6 +51,16 @@ After data generation:
      - `total_skipped`: total skips
      - `success_rate`: percentage (0-100)
      - `severity`: classification of the failure
+     - `k8s_versions`: per-Kubernetes-version breakdown, sorted by success rate ascending (worst first), each with:
+       - `version`: Kubernetes version (e.g., "1.35", "1.36", or "unknown")
+       - `succeeded`, `failed`, `skipped`: counts aggregated across all lanes for this version
+       - `success_rate`: percentage (0-100)
+       - `severity`: classification for this version
+       - `lanes`: per-lane breakdown within this version, sorted by success rate ascending, each with:
+         - `lane`: job name
+         - `succeeded`, `failed`, `skipped`: counts for this lane
+         - `success_rate`: percentage (0-100)
+         - `severity`: classification for this lane
 
 ## Severity classification
 
@@ -63,6 +73,8 @@ After data generation:
 
 For each failed test, report:
 1. The test name
-2. The success rate and total runs (succeeded + failed)
+2. The overall success rate and total runs (succeeded + failed)
 3. The severity classification
 4. If severity is "unknown", note that the test may be new or not covered by flakefinder
+5. Per-k8s-version success rates, highlighting versions where the test is notably worse
+6. Per-lane details when they reveal that specific lanes drive the flakiness

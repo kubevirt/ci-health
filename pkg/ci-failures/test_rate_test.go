@@ -120,30 +120,82 @@ func TestComputeTestRate(t *testing.T) {
 		},
 		Data: map[string]map[string]*TestDetails{
 			"[sig-compute] Live Migrations with a strategy set": {
-				"job-a": {Succeeded: 80, Failed: 10, Skipped: 5},
-				"job-b": {Succeeded: 70, Failed: 20, Skipped: 3},
+				"pull-kubevirt-e2e-k8s-1.35-sig-compute":   {Succeeded: 80, Failed: 10, Skipped: 5},
+				"pull-kubevirt-e2e-k8s-1.36-sig-compute":   {Succeeded: 70, Failed: 20, Skipped: 3},
+				"pull-kubevirt-e2e-kind-1.35-sig-compute":  {Succeeded: 50, Failed: 5, Skipped: 1},
 			},
 		},
 	}
 
 	entry := computeTestRate("[sig-compute] Live Migrations with a strategy set", report)
 
-	if entry.TotalSucceeded != 150 {
-		t.Errorf("TotalSucceeded = %d, want 150", entry.TotalSucceeded)
+	if entry.TotalSucceeded != 200 {
+		t.Errorf("TotalSucceeded = %d, want 200", entry.TotalSucceeded)
 	}
-	if entry.TotalFailed != 30 {
-		t.Errorf("TotalFailed = %d, want 30", entry.TotalFailed)
+	if entry.TotalFailed != 35 {
+		t.Errorf("TotalFailed = %d, want 35", entry.TotalFailed)
 	}
-	if entry.TotalSkipped != 8 {
-		t.Errorf("TotalSkipped = %d, want 8", entry.TotalSkipped)
+	if entry.TotalSkipped != 9 {
+		t.Errorf("TotalSkipped = %d, want 9", entry.TotalSkipped)
 	}
 
-	expectedRate := float64(150) / float64(180) * 100.0
+	expectedRate := float64(200) / float64(235) * 100.0
 	if entry.SuccessRate != expectedRate {
 		t.Errorf("SuccessRate = %f, want %f", entry.SuccessRate, expectedRate)
 	}
 	if entry.Severity != "inconclusive" {
 		t.Errorf("Severity = %q, want %q", entry.Severity, "inconclusive")
+	}
+
+	// Two k8s versions: 1.35 (two lanes aggregated) and 1.36 (one lane)
+	if len(entry.K8sVersions) != 2 {
+		t.Fatalf("len(K8sVersions) = %d, want 2", len(entry.K8sVersions))
+	}
+	// Sorted by success rate ascending: 1.36 (77.8%) before 1.35 (89.7%)
+	if entry.K8sVersions[0].Version != "1.36" {
+		t.Errorf("K8sVersions[0].Version = %q, want %q", entry.K8sVersions[0].Version, "1.36")
+	}
+	if entry.K8sVersions[0].Succeeded != 70 || entry.K8sVersions[0].Failed != 20 {
+		t.Errorf("K8sVersions[0] = %d/%d, want 70/20", entry.K8sVersions[0].Succeeded, entry.K8sVersions[0].Failed)
+	}
+	if entry.K8sVersions[0].Severity != "likely-flaky" {
+		t.Errorf("K8sVersions[0].Severity = %q, want %q", entry.K8sVersions[0].Severity, "likely-flaky")
+	}
+	if len(entry.K8sVersions[0].Lanes) != 1 {
+		t.Fatalf("K8sVersions[0] lane count = %d, want 1", len(entry.K8sVersions[0].Lanes))
+	}
+
+	if entry.K8sVersions[1].Version != "1.35" {
+		t.Errorf("K8sVersions[1].Version = %q, want %q", entry.K8sVersions[1].Version, "1.35")
+	}
+	// 1.35 aggregates k8s-1.35 (80/10) + kind-1.35 (50/5) = 130/15
+	if entry.K8sVersions[1].Succeeded != 130 || entry.K8sVersions[1].Failed != 15 {
+		t.Errorf("K8sVersions[1] = %d/%d, want 130/15", entry.K8sVersions[1].Succeeded, entry.K8sVersions[1].Failed)
+	}
+	if len(entry.K8sVersions[1].Lanes) != 2 {
+		t.Fatalf("K8sVersions[1] lane count = %d, want 2", len(entry.K8sVersions[1].Lanes))
+	}
+}
+
+func TestExtractK8sVersion(t *testing.T) {
+	tests := []struct {
+		lane    string
+		version string
+	}{
+		{"pull-kubevirt-e2e-k8s-1.35-sig-compute", "1.35"},
+		{"periodic-kubevirt-e2e-k8s-1.36-sig-network", "1.36"},
+		{"periodic-kubevirt-e2e-kind-1.34-sev", "1.34"},
+		{"pull-kubevirt-e2e-kind-1.35-sig-compute-arm64", "1.35"},
+		{"periodic-kubevirt-e2e-test-S390X", "unknown"},
+		{"some-job-without-version", "unknown"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.lane, func(t *testing.T) {
+			got := extractK8sVersion(tt.lane)
+			if got != tt.version {
+				t.Errorf("extractK8sVersion(%q) = %q, want %q", tt.lane, got, tt.version)
+			}
+		})
 	}
 }
 
