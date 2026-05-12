@@ -141,7 +141,7 @@ func SIGForGroup(whatever string) string {
 }
 
 // ExtractErrors fetches failures from the build logs of build urls given through the file.
-// It writes matching lines into one file per group, prefixed with 'output/tmp/errors-'.
+// It writes matching lines into one file per group, under the provided output directory.
 // It returns the file names of the files created.
 func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 	var outputFiles []string
