@@ -338,7 +338,10 @@ func computeTestRate(testName string, report *FlakefinderReport) TestRateEntry {
 
 	for version, lanes := range versionLanes {
 		sort.Slice(lanes, func(i, j int) bool {
-			return lanes[i].SuccessRate < lanes[j].SuccessRate
+			if lanes[i].SuccessRate != lanes[j].SuccessRate {
+				return lanes[i].SuccessRate < lanes[j].SuccessRate
+			}
+			return lanes[i].Lane < lanes[j].Lane
 		})
 		vr := K8sVersionRate{
 			Version: version,
@@ -358,7 +361,10 @@ func computeTestRate(testName string, report *FlakefinderReport) TestRateEntry {
 	}
 
 	sort.Slice(entry.K8sVersions, func(i, j int) bool {
-		return entry.K8sVersions[i].SuccessRate < entry.K8sVersions[j].SuccessRate
+		if entry.K8sVersions[i].SuccessRate != entry.K8sVersions[j].SuccessRate {
+			return entry.K8sVersions[i].SuccessRate < entry.K8sVersions[j].SuccessRate
+		}
+		return entry.K8sVersions[i].Version < entry.K8sVersions[j].Version
 	})
 
 	total := entry.TotalSucceeded + entry.TotalFailed
