@@ -71,10 +71,23 @@ After data generation:
 
 ## Presenting results
 
+### Periodic vs presubmit lanes
+
+**Periodic lanes** (prefixed `periodic-`) run against `main` and reflect the true baseline flakiness of a test. **Presubmit lanes** (prefixed `pull-`) run against PR code and may fail due to faulty changes — their failures don't necessarily indicate flakiness.
+
+When interpreting results:
+- Base the flakiness assessment primarily on **periodic lane** success rates
+- If a test fails frequently in periodic lanes, it is a known flake regardless of presubmit results
+- If a test passes consistently in periodic lanes but fails in the presubmit lane under analysis, the failure is likely PR-related
+- Presubmit lane data is supplementary — mention it but don't let it override the periodic signal
+
+### What to report
+
 For each failed test, report:
 1. The test name
 2. The overall success rate and total runs (succeeded + failed)
 3. The severity classification
 4. If severity is "unknown", note that the test may be new or not covered by flakefinder
 5. Per-k8s-version success rates, highlighting versions where the test is notably worse
-6. Per-lane details when they reveal that specific lanes drive the flakiness
+6. Per-lane details, **leading with periodic lanes** — call out when a specific periodic lane drives the flakiness
+7. Note when periodic and presubmit lanes diverge (e.g. periodic passes 100% but pull lane shows failures)
