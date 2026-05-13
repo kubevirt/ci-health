@@ -16,6 +16,10 @@ import (
 
 var testgridBaseURL = "https://testgrid.k8s.io"
 
+var httpClient = &http.Client{
+	Timeout: 30 * time.Second,
+}
+
 type testGridTableResponse struct {
 	Timestamps []int64         `json:"timestamps"`
 	Tests      []testGridTest  `json:"tests"`
@@ -87,15 +91,20 @@ func ParseTestGridURL(rawURL string) (dashboard, tab string, err error) {
 		fragment = fragment[:idx]
 	}
 	tab = fragment
+	if tab == "" {
+		return "", "", fmt.Errorf("no tab name in URL fragment: %s", rawURL)
+	}
 
 	return dashboard, tab, nil
 }
 
 func fetchTestGridTable(dashboard, tab string) (*testGridTableResponse, error) {
-	apiURL := fmt.Sprintf("%s/%s/table?tab=%s", testgridBaseURL, dashboard, url.QueryEscape(tab))
+	params := url.Values{}
+	params.Add("tab", tab)
+	apiURL := fmt.Sprintf("%s/%s/table?%s", testgridBaseURL, dashboard, params.Encode())
 	log.Infof("fetching testgrid table from %s", apiURL)
 
-	resp, err := http.Get(apiURL)
+	resp, err := httpClient.Get(apiURL)
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch testgrid table: %w", err)
 	}
@@ -114,7 +123,11 @@ func fetchTestGridTable(dashboard, tab string) (*testGridTableResponse, error) {
 }
 
 func expandStatuses(statuses []testGridStatus) []int {
-	var result []int
+	var total int
+	for _, s := range statuses {
+		total += s.Count
+	}
+	result := make([]int, 0, total)
 	for _, s := range statuses {
 		for range s.Count {
 			result = append(result, s.Value)
@@ -238,13 +251,13 @@ func AnalyzeLaneRate(testgridURL string, days int) (*LaneRateResult, error) {
 func WriteLaneRateResultYAML(outputPath string, result *LaneRateResult) error {
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
-		return fmt.Errorf("failed to create output file %s: %v", outputPath, err)
+		return fmt.Errorf("failed to create output file %s: %w", outputPath, err)
 	}
 	defer outputFile.Close()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {
-		return fmt.Errorf("failed to encode YAML: %v", err)
+		return fmt.Errorf("failed to encode YAML: %w", err)
 	}
 	return nil
 }

@@ -44,6 +44,11 @@ func TestParseTestGridURL(t *testing.T) {
 			url:     "https://testgrid.k8s.io/#some-tab",
 			wantErr: true,
 		},
+		{
+			name:    "empty tab after stripping params",
+			url:     "https://testgrid.k8s.io/kubevirt-periodics#&width=20",
+			wantErr: true,
+		},
 	}
 
 	for _, tt := range tests {

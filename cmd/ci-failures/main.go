@@ -449,16 +449,17 @@ func laneRate(_ *cobra.Command, args []string) error {
 
 	result, err := cifailures.AnalyzeLaneRate(testgridURL, laneRateDays)
 	if err != nil {
-		return fmt.Errorf("failed to analyze lane rate: %v", err)
+		return fmt.Errorf("failed to analyze lane rate: %w", err)
 	}
 
 	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
 		return fmt.Errorf("failed to create output directory: %w", err)
 	}
 
-	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("lane-rate-%s.yaml", result.Tab))
+	safeTab := strings.ReplaceAll(result.Tab, "/", "-")
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("lane-rate-%s.yaml", safeTab))
 	if err = cifailures.WriteLaneRateResultYAML(outputPath, result); err != nil {
-		return fmt.Errorf("failed to write YAML output: %v", err)
+		return fmt.Errorf("failed to write YAML output: %w", err)
 	}
 
 	log.Infof("wrote lane rate analysis to %s (%d tests with failures)", outputPath, len(result.FailedTests))
