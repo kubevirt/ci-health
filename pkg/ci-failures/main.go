@@ -143,7 +143,7 @@ func SIGForGroup(whatever string) string {
 // ExtractErrors fetches failures from the build logs of build urls given through the file.
 // It writes matching lines into one file per group, under the provided output directory.
 // It returns the file names of the files created.
-func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
+func ExtractErrors(ciFailureJobURLs []string, outputDir string) ([]string, error) {
 	var outputFiles []string
 
 	urlsNotMatchedByGroup := make(map[string]struct{})
@@ -230,7 +230,7 @@ func ExtractErrors(ciFailureJobURLs []string) ([]string, error) {
 			continue
 		}
 
-		outputDirName := fmt.Sprintf("output/tmp/errors-%s", sigName)
+		outputDirName := filepath.Join(outputDir, fmt.Sprintf("errors-%s", sigName))
 		if err := os.MkdirAll(outputDirName, 0755); err != nil {
 			return nil, fmt.Errorf("failed to create output directory: %w", err)
 		}
