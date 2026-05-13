@@ -127,6 +127,7 @@ Accepts a Prow job URL, e.g.:
 	}
 
 	testRateDays int
+	laneRateDays int
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
@@ -144,6 +145,20 @@ Accepts a Prow job URL, e.g.:
   https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144`,
 		Args: cobra.ExactArgs(1),
 		RunE: testRate,
+	}
+
+	laneRateCmd = &cobra.Command{
+		Use:   "lane-rate [testgrid-url]",
+		Short: "Show failure rates for all tests in a testgrid lane.",
+		Long: `Analyze a testgrid lane and show failure rates for every test that has
+at least one failure in the last N days.
+
+Accepts a testgrid URL, e.g.:
+  https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage
+
+Use --days to control the analysis window (default 14).`,
+		Args: cobra.ExactArgs(1),
+		RunE: laneRate,
 	}
 )
 
@@ -429,6 +444,27 @@ func changeRelevance(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func laneRate(_ *cobra.Command, args []string) error {
+	testgridURL := args[0]
+
+	result, err := cifailures.AnalyzeLaneRate(testgridURL, laneRateDays)
+	if err != nil {
+		return fmt.Errorf("failed to analyze lane rate: %v", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("lane-rate-%s.yaml", result.Tab))
+	if err = cifailures.WriteLaneRateResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %v", err)
+	}
+
+	log.Infof("wrote lane rate analysis to %s (%d tests with failures)", outputPath, len(result.FailedTests))
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
@@ -437,12 +473,14 @@ func init() {
 		"Isolate analysis output in a per-session directory; defaults to CLAUDE_CODE_SESSION_ID env var if set")
 
 	testRateCmd.Flags().IntVar(&testRateDays, "days", 7, "Number of days to cover (max 28, fetches multiple weekly reports)")
+	laneRateCmd.Flags().IntVar(&laneRateDays, "days", 14, "Number of days to analyze (default 14)")
 
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
 	rootCmd.AddCommand(analyzePRCmd)
 	rootCmd.AddCommand(analyzeK8sCmd)
 	rootCmd.AddCommand(testRateCmd)
+	rootCmd.AddCommand(laneRateCmd)
 	rootCmd.AddCommand(changeRelevanceCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
