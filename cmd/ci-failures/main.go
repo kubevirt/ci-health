@@ -39,7 +39,12 @@ var (
 				sessionID = os.Getenv("CLAUDE_CODE_SESSION_ID")
 			}
 			if sessionID != "" {
+				if strings.Contains(sessionID, "..") || strings.Contains(sessionID, "/") || strings.Contains(sessionID, "\\") {
+					return fmt.Errorf("invalid session ID: %s", sessionID)
+				}
 				tmpOutputPath = filepath.Join("output/tmp/sessions", sessionID)
+			} else {
+				tmpOutputPath = "output/tmp"
 			}
 			return nil
 		},
