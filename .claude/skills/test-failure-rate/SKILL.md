@@ -1,8 +1,9 @@
 ---
 name: test-failure-rate
 description: >
-    Show historical success rate for tests that failed in a build.
-    Use when the user wants to know if a test failure is flaky or PR-related.
+    Analyze test failures from a Prow build against historical flakefinder data.
+    Classifies failures as flaky, PR-related, or infrastructure-related using
+    success rates, failure dispersion across lanes, and cross-test correlation.
 allowed-tools: [Read, Glob, Bash(go run:*)]
 ---
 
@@ -69,17 +70,44 @@ After data generation:
 - **likely-flaky** (success rate < 80%): the test fails frequently across all jobs, likely a known flake
 - **unknown**: the test was not found in the flakefinder report
 
-## Presenting results
+## Deeper flakiness analysis
 
-### Periodic vs presubmit lanes
+The severity classification above is a starting point. Success rate alone can be misleading — a test at 85% could be flaky (failing sporadically everywhere) or broken in one specific lane (failing deterministically there, passing everywhere else). Use these techniques to distinguish the two.
 
-**Periodic lanes** (prefixed `periodic-`) run against `main` and reflect the true baseline flakiness of a test. **Presubmit lanes** (prefixed `pull-`) run against PR code and may fail due to faulty changes — their failures don't necessarily indicate flakiness.
+### Failure dispersion across lanes
 
-When interpreting results:
+Count how many lanes show failures for a given test:
+
+- **Concentrated failures** (1–2 lanes account for most failures): likely a lane-specific or k8s-version-specific issue, not a true flake. Check whether those lanes share an environment trait (same k8s version, same provider, Serial tag).
+- **Dispersed failures** (failures spread across many lanes): genuine flaky behavior — the test is nondeterministic regardless of environment.
+
+When failures are concentrated, upgrade the severity toward "likely-pr-related" or "lane-specific issue" even if the aggregate success rate is low. When dispersed, treat it as a stronger flake signal even if the aggregate rate looks moderate.
+
+### Periodic lanes as ground truth
+
+**Periodic lanes** (prefixed `periodic-`) run against `main` and reflect the true baseline flakiness of a test. **Presubmit lanes** (prefixed `pull-`) run against PR code and may fail due to faulty changes.
+
 - Base the flakiness assessment primarily on **periodic lane** success rates
 - If a test fails frequently in periodic lanes, it is a known flake regardless of presubmit results
 - If a test passes consistently in periodic lanes but fails in the presubmit lane under analysis, the failure is likely PR-related
 - Presubmit lane data is supplementary — mention it but don't let it override the periodic signal
+
+### Infrastructure flake detection
+
+When multiple unrelated tests all fail in the **same lane(s)** during the analysis period, suspect an infrastructure problem rather than individual test flakiness:
+
+- Look for lanes where many of the build's failed tests show low success rates simultaneously
+- If a lane shows failures across tests that share no code path, that lane likely experienced infra instability (node issues, storage problems, network flakes)
+- Flag these as "infra flake" and note the affected lane — the individual tests are not at fault
+
+### Windowed trend analysis
+
+Use `--days` to compare different time windows and detect trends:
+
+- **7 days vs 21 days**: if the 7-day rate is much worse than the 21-day rate, the flakiness is recent (possible regression). If similar, it's a long-standing flake.
+- **Recommend quarantine** when a test shows sustained flakiness (consistent across windows) with dispersed failures
+
+## Presenting results
 
 ### What to report
 
@@ -87,7 +115,24 @@ For each failed test, report:
 1. The test name
 2. The overall success rate and total runs (succeeded + failed)
 3. The severity classification
-4. If severity is "unknown", note that the test may be new or not covered by flakefinder
-5. Per-k8s-version success rates, highlighting versions where the test is notably worse
-6. Per-lane details, **leading with periodic lanes** — call out when a specific periodic lane drives the flakiness
-7. Note when periodic and presubmit lanes diverge (e.g. periodic passes 100% but pull lane shows failures)
+4. The **failure pattern** — concentrated in specific lanes/versions or dispersed across many (this often matters more than the raw success rate)
+5. If severity is "unknown", note that the test may be new or not covered by flakefinder
+6. Per-k8s-version success rates, highlighting versions where the test is notably worse
+7. Per-lane details, **leading with periodic lanes** — call out when a specific periodic lane drives the flakiness
+8. Note when periodic and presubmit lanes diverge (e.g. periodic passes 100% but pull lane shows failures)
+9. When multiple tests share the same failing lane pattern, group them and flag as a probable infrastructure flake
+
+### Summary table
+
+After the per-test details, provide a summary table:
+
+| Test | Success Rate | Runs | Pattern | Assessment |
+|------|-------------|------|---------|------------|
+
+Where **Pattern** is one of:
+- **dispersed** — failures spread across many lanes (true flake)
+- **concentrated** — failures in 1–2 lanes (lane-specific or version-specific)
+- **infra-correlated** — fails alongside other unrelated tests in same lane(s)
+- **unknown** — not found in flakefinder
+
+And **Assessment** refines the raw severity by incorporating the pattern analysis.

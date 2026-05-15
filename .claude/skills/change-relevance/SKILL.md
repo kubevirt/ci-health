@@ -67,7 +67,24 @@ Summarize with the aggregate counts from the `summary` section.
 ## Combining with test-failure-rate
 
 For the most complete picture, run both `change-relevance` and `test-rate` on the same Prow job URL. Together they answer:
-- **test-rate**: Is this test historically flaky?
+- **test-rate**: Is this test historically flaky? Are failures dispersed or concentrated?
 - **change-relevance**: Did this PR touch the code the test covers?
 
-A test that is "likely-pr-related" by success rate AND "related" by change analysis is very likely caused by the PR.
+### Decision matrix
+
+Use this matrix to combine signals from both skills for a definitive assessment:
+
+| test-rate severity | change-relevance | failure pattern | verdict |
+|---|---|---|---|
+| likely-pr-related | related | concentrated in PR lane | **PR-caused** — the PR broke this test |
+| likely-pr-related | possibly-related | concentrated in PR lane | **likely PR-caused** — broad-impact files changed, test rarely fails |
+| likely-pr-related | unrelated | concentrated in PR lane | **suspicious** — test almost never fails but PR didn't touch its area; check for indirect dependencies |
+| inconclusive | related | dispersed | **investigate** — PR touches the area but the test has some flake history |
+| inconclusive | unrelated | dispersed | **likely flake** — moderate flakiness and PR doesn't touch the area |
+| likely-flaky | unrelated | dispersed | **flake — ignore** — known flake, PR is irrelevant |
+| likely-flaky | related | dispersed | **flake despite overlap** — the test flakes regardless of changes; PR overlap is coincidental |
+| likely-flaky | any | infra-correlated | **infra flake** — fails alongside unrelated tests in same lanes |
+| unknown | related | n/a | **investigate** — test may be new or renamed, but PR touches the area |
+| unknown | unrelated | n/a | **likely new test or flake** — not in flakefinder, PR doesn't touch the area |
+
+The **failure pattern** column comes from test-rate's dispersion analysis (dispersed = fails across many lanes, concentrated = fails in few lanes, infra-correlated = fails alongside unrelated tests).
