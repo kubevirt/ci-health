@@ -98,7 +98,7 @@ When the same test fails across multiple *different* PRs in the data, it is almo
 When many errors from the same time window share infrastructure signatures, group them as a single infra event rather than analyzing each individually:
 
 1. Compare `started`/`finished` timestamps across build errors from different jobs
-2. If multiple unrelated jobs (different SIGs, different PRs) all failed within the same time window with similar error patterns (e.g., registry pull failures, DNS timeouts, node provisioning failures), they likely hit the same infra event
+2. If multiple unrelated jobs (different SIGs, different PRs) all failed within the same **2-4 hour window** with similar error patterns (e.g., registry pull failures, DNS timeouts, node provisioning failures), they likely hit the same infra event
 3. Group these as **"infra event at {time range}"** and describe the common infrastructure signature
 4. Common infra signatures to look for:
    - Image pull errors (`ErrImagePull`, `ImagePullBackOff`) — registry or network issue
