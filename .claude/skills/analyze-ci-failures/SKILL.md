@@ -81,6 +81,40 @@ These files can be very large. When reading them, start searching from the end s
 5. **Classify** each failure as fixable or non-fixable
 6. **Group similar failures** across jobs — errors with the same root cause should be combined into a single group even if they appear in different SIGs or branches
 
+## Flakiness and infrastructure event detection
+
+After grouping failures by root cause, apply these additional analyses:
+
+### Cross-PR flake detection
+
+When the same test fails across multiple *different* PRs in the data, it is almost certainly a systemic flake, not caused by any individual PR. To identify these:
+
+1. After reading all error YAML files, collect failing test names across all jobs and PRs (extract PR number from `job_url`)
+2. Tests that appear in failures from 3+ different PRs are **quarantine candidates** — flag them prominently
+3. For these tests, the mitigation is quarantining the test, not fixing individual PRs
+
+### Infrastructure event detection
+
+When many errors from the same time window share infrastructure signatures, group them as a single infra event rather than analyzing each individually:
+
+1. Compare `started`/`finished` timestamps across build errors from different jobs
+2. If multiple unrelated jobs (different SIGs, different PRs) all failed within the same **2-4 hour window** with similar error patterns (e.g., registry pull failures, DNS timeouts, node provisioning failures), they likely hit the same infra event
+3. Group these as **"infra event at {time range}"** and describe the common infrastructure signature
+4. Common infra signatures to look for:
+   - Image pull errors (`ErrImagePull`, `ImagePullBackOff`) — registry or network issue
+   - Node provisioning failures — cloud provider issue
+   - DNS resolution failures — cluster DNS issue
+   - Timeout errors across many unrelated tests — general cluster instability
+   - `context deadline exceeded` in cluster setup — provisioning infra overloaded
+
+### Prioritization
+
+When presenting results, prioritize by actionability:
+1. **Cross-PR flakes** (quarantine candidates) — highest signal, immediately actionable
+2. **Infrastructure events** — not fixable by code changes, useful for incident tracking
+3. **Individual fixable failures** — specific to a PR or code change
+4. **Non-fixable/external failures** — lowest priority
+
 ## Goal for analysis
 
 The output is to be looked at as described above, then reasons and possible mitigations are to be deduced.
