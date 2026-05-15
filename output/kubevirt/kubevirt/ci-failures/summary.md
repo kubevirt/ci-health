@@ -367,6 +367,26 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 ### sig-compute (5x / 62.50%)
 
 
+#### external (2x / 40.00%)
+
+<details>
+<summary> download failure in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+
+</details>
+
+<hr/>
+</details>
+
 #### needs-investigation (3x / 60.00%)
 
 <details>
@@ -399,26 +419,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <summary>all...</summary>
 
 * _2026-05-13 12:02:10 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17794/pull-kubevirt-e2e-k8s-1.35-sig-operator/2054532503019982848)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 40.00%)
-
-<details>
-<summary> download failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
-
-* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
 
 </details>
 
@@ -474,4 +474,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-05-15 00:31:21
+Last updated: 2026-05-15 04:27:45
