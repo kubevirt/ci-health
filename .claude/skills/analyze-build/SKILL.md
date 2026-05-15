@@ -38,7 +38,7 @@ Before diving into individual test failures, assess whether the entire build was
 
 1. Count the number of distinct failed tests in the build log
 2. Check the k8s analysis (if present) for infrastructure-level problems: NotReady nodes, CrashLoopBackOff on system pods (virt-controller, virt-handler, virt-api, virt-operator), etcd issues (tmpfs exhaustion, large WAL)
-3. If **many unrelated tests** failed AND **infrastructure findings** are present, classify the build as an **infrastructure flake** — the individual test failures are symptoms, not causes. Report the infra root cause and skip per-test analysis.
+3. If **5 or more unrelated tests** failed AND **infrastructure findings** are present, classify the build as an **infrastructure flake** — the individual test failures are symptoms, not causes. Report the infra root cause and skip per-test analysis.
 4. If only a few tests failed or no infra findings exist, proceed with per-test analysis below.
 
 This avoids wasting time analyzing each test individually when the real problem is a bad node or a crashed component.
