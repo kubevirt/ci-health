@@ -223,7 +223,7 @@
 
 <hr/>
 
-**2x**: _2026-05-13 16:43:43 &#43;0000 UTC_: <code>16:49:17: I0513 12:49:17.114198    1610 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054569150063316992#1:build-log.txt%3A783)
+**2x**: _2026-05-13 15:06:33 &#43;0000 UTC_: <code>15:12:22: I0513 11:12:22.171698    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054578675570970624#1:build-log.txt%3A1887)
 <details>
 <summary>all...</summary>
 
@@ -246,7 +246,7 @@
 
 <hr/>
 
-**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
 <details>
 <summary>all...</summary>
 
@@ -320,7 +320,7 @@
 
 <hr/>
 
-**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
 <details>
 <summary>all...</summary>
 
@@ -470,21 +470,21 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
 <details>
 <summary>all...</summary>
 
 * _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
+<details>
+<summary>all...</summary>
+
+* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
 
 </details>
 
@@ -551,7 +551,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
+**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
 <details>
 <summary>all...</summary>
 
@@ -681,21 +681,21 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
 **1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
 <details>
 <summary>all...</summary>
 
 * _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
+<details>
+<summary>all...</summary>
+
+* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
 
 </details>
 
@@ -782,26 +782,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 ### sig-compute (7x / 36.84%)
 
 
-#### external (2x / 28.57%)
-
-<details>
-<summary> download failure in context (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
-<details>
-<summary>all...</summary>
-
-* _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
-
-* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (4x / 57.14%)
 
 <details>
@@ -844,6 +824,26 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <summary>all...</summary>
 
 * _2026-05-13 12:02:10 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17794/pull-kubevirt-e2e-k8s-1.35-sig-operator/2054532503019982848)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (2x / 28.57%)
+
+<details>
+<summary> download failure in context (2x / 28.57%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-10 14:21:04 &#43;0000 UTC_: <code>14:33:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17611/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2053480299794272256#1:build-log.txt%3A4762)
+
+* _2026-05-10 07:10:19 &#43;0000 UTC_: <code>07:11:16: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17746/pull-kubevirt-e2e-k8s-1.35-sig-compute/2053371905993347072#1:build-log.txt%3A324)
 
 </details>
 
@@ -951,4 +951,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-05-17 00:28:20
+Last updated: 2026-05-17 04:34:28
