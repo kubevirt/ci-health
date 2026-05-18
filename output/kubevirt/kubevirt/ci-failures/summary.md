@@ -79,24 +79,6 @@
 ### 2026-05-14 (4x / 22.22%)
 
 
-#### pr-build (1x / 25.00%)
-
-<details>
-<summary> ginkgo test failure marker (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
-<details>
-<summary>all...</summary>
-
-* _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (3x / 75.00%)
 
 <details>
@@ -129,6 +111,24 @@
 <summary>all...</summary>
 
 * _2026-05-14 03:11:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.34-sig-storage/2054750758351409152)
+
+</details>
+
+<hr/>
+</details>
+
+#### pr-build (1x / 25.00%)
+
+<details>
+<summary> ginkgo test failure marker (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
+<details>
+<summary>all...</summary>
+
+* _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
 
 </details>
 
@@ -894,4 +894,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-05-18 07:24:57
+Last updated: 2026-05-18 10:34:36
