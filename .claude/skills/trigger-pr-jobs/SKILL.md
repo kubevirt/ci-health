@@ -17,7 +17,7 @@ It works for any repo in the `kubevirt` GitHub org that uses Prow.
 
 ### 1. Extract PR details
 
-Parse the PR URL from the arguments to get `owner`, `repo`, and `pr_number`.
+Parse the PR URL from the arguments to get `owner`, `repo`, and `pr_number`. Validate that all three values were successfully extracted and are non-empty. If the URL is malformed or any component is missing, report the error to the user and stop.
 
 ### 2. Get the target branch
 
@@ -31,28 +31,17 @@ gh api repos/{owner}/{repo}/pulls/{pr_number} --jq '.base.ref'
 gh api repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks --jq '.contexts[]'
 ```
 
+If this returns a 404 (branch protection not configured), treat it as having no required checks. Tell the user that no required status checks are configured for the target branch and stop.
+
 ### 4. Get current check results
 
-Get the names of all statuses and check runs reported on the latest commit:
+Get the status of all checks reported on the PR:
 
 ```bash
-gh api repos/{owner}/{repo}/commits/{sha}/statuses --paginate --jq '.[].context' | sort -u
-gh api repos/{owner}/{repo}/commits/{sha}/check-runs --paginate --jq '.check_runs[].name' | sort -u
+gh pr checks {pr_number} --repo {owner}/{repo} --json name,state,bucket
 ```
 
-Get the latest commit SHA with:
-
-```bash
-gh pr view {pr_number} --repo {owner}/{repo} --json headRefOid --jq '.headRefOid'
-```
-
-Also get the status of each check for distinguishing pass/fail/pending:
-
-```bash
-gh pr checks {pr_number} --repo {owner}/{repo}
-```
-
-The output is tab-separated: `name\tstatus\tduration\turl\tdescription`. The status column is one of `pass`, `fail`, or `pending`.
+This returns a JSON array of objects containing the check name and its current state (e.g., `SUCCESS`, `FAILURE`, `PENDING`).
 
 ### 5. Find checks to trigger
 
