@@ -171,6 +171,26 @@
 ### 2026-05-13 (10x / 47.62%)
 
 
+#### external (2x / 20.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (2x / 20.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-13 16:43:43 &#43;0000 UTC_: <code>16:49:17: I0513 12:49:17.114198    1610 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054569150063316992#1:build-log.txt%3A783)
+<details>
+<summary>all...</summary>
+
+* _2026-05-13 16:43:43 &#43;0000 UTC_: <code>16:49:17: I0513 12:49:17.114198    1610 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054569150063316992#1:build-log.txt%3A783)
+
+* _2026-05-13 15:06:33 &#43;0000 UTC_: <code>15:12:22: I0513 11:12:22.171698    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054578675570970624#1:build-log.txt%3A1887)
+
+</details>
+
+<hr/>
+</details>
+
 #### needs-investigation (8x / 80.00%)
 
 <details>
@@ -253,26 +273,6 @@
 <summary>all...</summary>
 
 * _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 20.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (2x / 20.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-13 16:43:43 &#43;0000 UTC_: <code>16:49:17: I0513 12:49:17.114198    1610 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054569150063316992#1:build-log.txt%3A783)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 16:43:43 &#43;0000 UTC_: <code>16:49:17: I0513 12:49:17.114198    1610 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054569150063316992#1:build-log.txt%3A783)
-
-* _2026-05-13 15:06:33 &#43;0000 UTC_: <code>15:12:22: I0513 11:12:22.171698    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054578675570970624#1:build-log.txt%3A1887)
 
 </details>
 
@@ -501,7 +501,7 @@
 
 <hr/>
 
-**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+**1x**: _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
 <details>
 <summary>all...</summary>
 
@@ -517,6 +517,14 @@
 </details>
 
 
+</details>
+
+<hr/>
+
+**2x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
+<details>
+<summary>all...</summary>
+
 * _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
 <details><summary>context</summary>
 <pre>11:00:05:   {&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;system is in sync with kubevirt config resource version 200331&#34;,&#34;pos&#34;:&#34;kvconfig.go:102&#34;,&#34;timestamp&#34;:&#34;2026-05-18T11:00:05.879219Z&#34;}
@@ -528,14 +536,6 @@
 11:09:36:   [It] tests/storage/reservation.go:344</pre>
 </details>
 
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
-<details>
-<summary>all...</summary>
 
 * _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
 <details><summary>context</summary>
@@ -808,26 +808,6 @@
 ### sig-storage (7x / 33.33%)
 
 
-#### pr-build (2x / 28.57%)
-
-<details>
-<summary> ginkgo test failure marker (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
-
-* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (5x / 71.43%)
 
 <details>
@@ -880,6 +860,26 @@
 <summary>all...</summary>
 
 * _2026-05-13 19:09:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17771/pull-kubevirt-e2e-k8s-1.34-sig-storage/2054551663221411840)
+
+</details>
+
+<hr/>
+</details>
+
+#### pr-build (2x / 28.57%)
+
+<details>
+<summary> ginkgo test failure marker (2x / 28.57%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+
+* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
 
 </details>
 
@@ -1048,4 +1048,4 @@
 <hr/>
 </details>
 
-Last updated: 2026-05-19 18:42:58
+Last updated: 2026-05-19 21:40:58
