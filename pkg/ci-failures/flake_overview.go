@@ -111,7 +111,10 @@ func aggregateLaneFailures(reports []*FlakefinderReport, filterLaneRegex *regexp
 	}
 
 	sort.Slice(lanes, func(i, j int) bool {
-		return lanes[i].failures > lanes[j].failures
+		if lanes[i].failures != lanes[j].failures {
+			return lanes[i].failures > lanes[j].failures
+		}
+		return lanes[i].name < lanes[j].name
 	})
 
 	return lanes, totalFailures
@@ -146,7 +149,7 @@ func AnalyzeFlakeOverview(days int, org, repo, filterLaneRegexStr string, concur
 }
 
 func fetch24hReportsForDays(days int, org, repo string) ([]*FlakefinderReport, error) {
-	var reports []*FlakefinderReport
+	reports := make([]*FlakefinderReport, 0, days)
 	date := time.Now().UTC().AddDate(0, 0, -1)
 
 	for i := 0; i < days; i++ {
@@ -166,6 +169,9 @@ func fetch24hReportsForDays(days int, org, repo string) ([]*FlakefinderReport, e
 
 func fetchLaneRates(lanes []laneSummary, totalFailures, days, concurrency int) []FlakeOverviewLane {
 	overviewLanes := make([]FlakeOverviewLane, len(lanes))
+	if concurrency < 1 {
+		concurrency = 1
+	}
 	sem := make(chan struct{}, concurrency)
 	var wg sync.WaitGroup
 
