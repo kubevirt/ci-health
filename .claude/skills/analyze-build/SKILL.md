@@ -26,9 +26,11 @@ Example how to generate the data files for a specific prowjob, given is the url 
 $ go run ./cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
 ```
 
-This produces up to three output files:
-- `output/tmp/{job-name}.yaml` — build log error analysis
-- `output/tmp/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist), includes etcd profiler findings and full etcd profile data when available
+This produces up to two output files in a session directory:
+- `output/tmp/sessions/<session-id>/{job-name}.yaml` — build log error analysis
+- `output/tmp/sessions/<session-id>/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist), includes etcd profiler findings and full etcd profile data when available
+
+The tool logs each written file path. Extract the session directory from the first `"wrote analysis to ..."` or `"wrote k8s analysis to ..."` log line (e.g. `output/tmp/sessions/abc123/`).
 
 ## Analysis
 
@@ -51,7 +53,7 @@ Consider suggesting the `test-failure-rate` skill on this build URL as a quick p
 
 After data generation:
 
-1. Use Glob to find all `output/tmp/*.yaml` files produced by the command
+1. Extract the session directory path from the tool's log output, then list all `*.yaml` files in that directory
 2. Read the build log analysis YAML (`{job-name}.yaml`). The structure is:
    - `job_name`: the Prow job name
    - `build_errors`: list of build errors with `category`, `category_reason`, and `build_log_error_snippets`
