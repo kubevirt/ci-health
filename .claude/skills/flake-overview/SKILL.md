@@ -3,7 +3,7 @@ name: flake-overview
 description: >
     Unified flake analysis combining PR-based flakefinder data with periodic lane failure rates.
     Use when the user wants an overview of test flakiness across the project.
-allowed-tools: [Read, Bash(go run:*), Write]
+allowed-tools: [Read, Bash(go run:*), Bash(grep:*), Bash(find:*), Bash(ls:*), Bash(test:*), Write]
 ---
 
 ## Overview
@@ -121,6 +121,21 @@ When identifying quarantine candidates, rank by these criteria (not just success
 3. **Low priority**: burst pattern or consecutive failures — transient, may already be resolved; verify with trend detection before quarantining
 4. **Not a quarantine candidate**: infra-correlated (many tests failing together in same builds within a lane) — quarantining individual tests won't help; the lane needs investigation
 
+## Step 3: Resolve test source locations
+
+For each unique failing test, find its source file and line number so the report can link directly to the code. This helps readers who are not familiar with the test codebase.
+
+1. **Locate the kubevirt/kubevirt repo**: look for `kubevirt.io/kubevirt` (or `kubevirt/kubevirt`) relative to the ci-health repo's parent directory.
+2. **Extract the `It("...")` description** from each test name. The test name is a concatenation of Ginkgo `Describe`/`Context`/`It` blocks separated by spaces. The `It` text is the last meaningful segment — typically everything after the last known context boundary. For example:
+   - Full name: `KubeVirt Tests Suite.[sig-compute]VSOCK Live migration should retain the CID for migration target`
+   - Search string: `should retain the CID for migration target`
+3. **Grep for the description** in the `tests/` directory: `grep -rn "<description>" tests/ --include="*.go"`
+4. **Construct a GitHub permalink**: `https://github.com/kubevirt/kubevirt/blob/main/<path>#L<line>` (e.g., `https://github.com/kubevirt/kubevirt/blob/main/tests/vmi_vsock_test.go#L121`)
+
+If the kubevirt repo is not available locally, skip this step — the report will still be useful without links, just less navigable.
+
+Skip `.Pod` and `BeforeSuite`/`AfterSuite` entries — these are infrastructure-level, not test code.
+
 ## Presenting results
 
 Always write the report to `output/kubevirt/kubevirt/flake-overview/flake-overview-YYYY-MM-DD.md`. The reports are long and structured — a file is easier to read, share, and diff against future runs than inline output.
@@ -171,6 +186,7 @@ For each SIG, create a section with:
 - **SIG header** with total failures and failure share across all lanes in that SIG
 - **Lanes table**: list all lanes for this SIG with failures, share, builds, and 28d-vs-7d trend
 - **Failing tests table** for each lane, sorted by success rate (worst first). For each test include:
+  - Test name as a **markdown link to the source code** (GitHub permalink from Step 3). If no source link was resolved, use the plain test name.
   - Success rate (28d and 7d), total runs, and severity
   - **Trend**: arrow or label indicating direction (28d→7d)
   - **Dispersion**: how many lanes this test fails in (dispersed / concentrated / universal)
@@ -185,8 +201,9 @@ After all SIG sections, provide a cross-SIG quarantine candidate table:
 |------|-----|-------|-------------------|----------|---------|------------|----------|
 
 Where:
+- **Test** is a markdown link to the source code (GitHub permalink from Step 3)
 - **Priority** is high/medium/low/not-candidate per the quarantine prioritization criteria
 - **7d Trend** is improving/stable/worsening with the rate delta
 - Only include non-quarantined tests (exclude those already tagged `[QUARANTINE]`)
 
-Then list already-quarantined tests that remain severely broken (success rate <50%) as a "quarantine debt" reminder — these have been quarantined but never fixed.
+Then list already-quarantined tests that remain severely broken (success rate <50%) as a "quarantine debt" reminder — these have been quarantined but never fixed. These should also link to source code.
