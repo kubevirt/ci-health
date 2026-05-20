@@ -15,7 +15,11 @@ This skill runs a single command that combines two complementary views of test f
 
 Together they answer: "which tests are flaky, is it a PR-interaction problem or a baseline issue, and is it getting better or worse?"
 
-## Step 1: Run flake-overview twice
+## Step 1: Locate the ci-health repository and run flake-overview twice
+
+Before running, determine the correct working directory:
+- If the current working directory already contains `cmd/ci-failures/`, you are inside the ci-health repo — run commands directly.
+- Otherwise, look for a `kubevirt.io/ci-health` subdirectory relative to the current working directory and `cd` into it before running.
 
 Run the command twice — once for a 28-day window and once for a 7-day window — to enable trend detection:
 
