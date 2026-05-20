@@ -126,8 +126,11 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
-	testRateDays int
-	laneRateDays int
+	testRateDays         int
+	laneRateDays         int
+	flakeOverviewDays    int
+	flakeOverviewFilter  string
+	flakeOverviewConc    int
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
@@ -159,6 +162,19 @@ Accepts a testgrid URL, e.g.:
 Use --days to control the analysis window (default 14).`,
 		Args: cobra.ExactArgs(1),
 		RunE: laneRate,
+	}
+
+	flakeOverviewCmd = &cobra.Command{
+		Use:   "flake-overview",
+		Short: "Combined flake analysis: flakefinder PR data + testgrid lane rates.",
+		Long: `Fetch flakefinder reports from GCS for the last N days, aggregate per-lane
+failure counts, then fetch testgrid data for each lane to compute per-test
+failure rates. Produces a single YAML file combining both views.
+
+Use --days to control the analysis window (default 14).
+Use --filter-lane-regex to exclude lanes matching a pattern (default: .*-root$).
+Use --concurrency to control parallel testgrid fetches (default 6).`,
+		RunE: flakeOverview,
 	}
 )
 
@@ -444,6 +460,25 @@ func changeRelevance(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func flakeOverview(_ *cobra.Command, _ []string) error {
+	result, err := cifailures.AnalyzeFlakeOverview(flakeOverviewDays, "kubevirt", "kubevirt", flakeOverviewFilter, flakeOverviewConc)
+	if err != nil {
+		return fmt.Errorf("failed to analyze flake overview: %w", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, "flake-overview.yaml")
+	if err = cifailures.WriteFlakeOverviewResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %w", err)
+	}
+
+	log.Infof("wrote flake overview to %s (%d lanes, %d total failures)", outputPath, len(result.Lanes), result.TotalFailures)
+	return nil
+}
+
 func laneRate(_ *cobra.Command, args []string) error {
 	testgridURL := args[0]
 
@@ -475,6 +510,9 @@ func init() {
 
 	testRateCmd.Flags().IntVar(&testRateDays, "days", 7, "Number of days to cover (max 28, fetches multiple weekly reports)")
 	laneRateCmd.Flags().IntVar(&laneRateDays, "days", 14, "Number of days to analyze (default 14)")
+	flakeOverviewCmd.Flags().IntVar(&flakeOverviewDays, "days", 14, "Number of days to analyze (default 14)")
+	flakeOverviewCmd.Flags().StringVar(&flakeOverviewFilter, "filter-lane-regex", `.*-root$`, "Regex for lanes to exclude")
+	flakeOverviewCmd.Flags().IntVar(&flakeOverviewConc, "concurrency", 6, "Parallel testgrid fetches (default 6)")
 
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
@@ -482,6 +520,7 @@ func init() {
 	rootCmd.AddCommand(analyzeK8sCmd)
 	rootCmd.AddCommand(testRateCmd)
 	rootCmd.AddCommand(laneRateCmd)
+	rootCmd.AddCommand(flakeOverviewCmd)
 	rootCmd.AddCommand(changeRelevanceCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
