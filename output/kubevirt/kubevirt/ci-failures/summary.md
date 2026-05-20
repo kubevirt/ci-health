@@ -17,13 +17,13 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-19 (1x / 4.35%)
+### 2026-05-19 (2x / 9.52%)
 
 
-#### external (1x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 100.00%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -37,9 +37,42 @@
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 50.00%) </summary>
 
-### 2026-05-18 (3x / 13.04%)
+<hr/>
 
+**1x**: _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+<details>
+<summary>all...</summary>
+
+* _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-18 (3x / 14.29%)
+
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
 
 #### pr-build (2x / 66.67%)
 
@@ -61,25 +94,7 @@
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
-
-<details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-
-</details>
-
-<hr/>
-</details>
-
-### 2026-05-15 (5x / 21.74%)
+### 2026-05-15 (5x / 23.81%)
 
 
 #### needs-investigation (4x / 80.00%)
@@ -148,7 +163,7 @@
 <hr/>
 </details>
 
-### 2026-05-14 (4x / 17.39%)
+### 2026-05-14 (4x / 19.05%)
 
 
 #### needs-investigation (3x / 75.00%)
@@ -207,13 +222,13 @@
 <hr/>
 </details>
 
-### 2026-05-13 (10x / 43.48%)
+### 2026-05-13 (7x / 33.33%)
 
 
-#### needs-investigation (8x / 80.00%)
+#### needs-investigation (5x / 71.43%)
 
 <details>
-<summary> no error snippets (8x / 80.00%) </summary>
+<summary> no error snippets (5x / 71.43%) </summary>
 
 <hr/>
 
@@ -266,42 +281,12 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-05-13 09:01:51 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 09:01:51 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-
 </details>
 
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 20.00%)
+#### external (2x / 28.57%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (2x / 20.00%) </summary>
+<summary> transient kube-apiserver body decode noise (2x / 28.57%) </summary>
 
 <hr/>
 
@@ -323,10 +308,10 @@
 ## per error category [⬆](#top)
 
 
-### external (4x / 17.39%)
+### external (5x / 23.81%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 13.04%) </summary>
+<summary> transient kube-apiserver body decode noise (3x / 14.29%) </summary>
 
 <hr/>
 
@@ -375,7 +360,7 @@
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 4.35%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -399,11 +384,94 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 4.76%) </summary>
 
-### needs-investigation (15x / 65.22%)
+<hr/>
+
+**1x**: _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+<details>
+<summary>all...</summary>
+
+* _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+<details><summary>context</summary>
+<pre>15:33:10: java.net.UnknownHostException: bazel-cache.kubevirt-prow
+15:33:10: INFO: Elapsed time: 0.726s, Critical Path: 0.25s
+15:33:10: INFO: 10 processes: 6 internal, 4 processwrapper-sandbox.
+15:33:10: ERROR: Build failed. Not running target
+make: *** [Makefile:28: bazel-build-functests] Error 1
+&#43; ret=2
+&#43; check_for_panics</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### pr-build (3x / 14.29%)
 
 <details>
-<summary> no error snippets (15x / 65.22%) </summary>
+<summary> ginkgo test failure marker (3x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+<details><summary>context</summary>
+<pre>11:00:00:   {&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;system is in sync with kubevirt config resource version 206657&#34;,&#34;pos&#34;:&#34;kvconfig.go:101&#34;,&#34;timestamp&#34;:&#34;2026-05-18T11:00:00.128573Z&#34;}
+11:00:00:   &lt;&lt; Captured StdOut/StdErr Output
+11:00:00: ------------------------------
+11:09:10: • [FAILED] [549.986 seconds]
+11:09:10: [sig-storage] Hotplug with PCI hostdev [It] should restart a VM after hotplugging a block volume [sig-storage, Serial, RequiresBlockStorage]
+11:09:10: tests/storage/hotplug.go:2216
+11:09:10:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**2x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+<details><summary>context</summary>
+<pre>11:00:05:   {&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;system is in sync with kubevirt config resource version 200331&#34;,&#34;pos&#34;:&#34;kvconfig.go:102&#34;,&#34;timestamp&#34;:&#34;2026-05-18T11:00:05.879219Z&#34;}
+11:00:05:   &lt;&lt; Captured StdOut/StdErr Output
+11:00:05: ------------------------------
+11:09:36: • [FAILED] [570.279 seconds]
+11:09:36: [sig-storage] SCSI persistent reservation [BeforeEach] with PersistentReservation feature gate toggled should delete and recreate virt-handler [sig-storage, Serial]
+11:09:36:   [BeforeEach] tests/storage/reservation.go:186
+11:09:36:   [It] tests/storage/reservation.go:344</pre>
+</details>
+
+
+* _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
+<details><summary>context</summary>
+<pre>20:14:00:
+20:14:00:   There were additional failures detected.  To view them in detail run ginkgo -vv
+20:14:00: ------------------------------
+20:18:29: • [FAILED] [269.183 seconds]
+20:18:29: [rfe_id:393][crit:high][vendor:cnv-qe@redhat.com][level:system][sig-compute] Live Migration with a live-migrate eviction strategy set [ref_id:2293</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (12x / 57.14%)
+
+<details>
+<summary> no error snippets (12x / 57.14%) </summary>
 
 <hr/>
 
@@ -526,42 +594,12 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
-
-**1x**: _2026-05-13 09:01:51 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 09:01:51 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-
 </details>
 
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-
-</details>
-
-<hr/>
-</details>
-
-### internal (1x / 4.35%)
+### internal (1x / 4.76%)
 
 <details>
-<summary> kind cluster creation failure (1x / 4.35%) </summary>
+<summary> kind cluster creation failure (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -586,97 +624,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### pr-build (3x / 13.04%)
-
-<details>
-<summary> ginkgo test failure marker (3x / 13.04%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
-<details><summary>context</summary>
-<pre>11:00:00:   {&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;system is in sync with kubevirt config resource version 206657&#34;,&#34;pos&#34;:&#34;kvconfig.go:101&#34;,&#34;timestamp&#34;:&#34;2026-05-18T11:00:00.128573Z&#34;}
-11:00:00:   &lt;&lt; Captured StdOut/StdErr Output
-11:00:00: ------------------------------
-11:09:10: • [FAILED] [549.986 seconds]
-11:09:10: [sig-storage] Hotplug with PCI hostdev [It] should restart a VM after hotplugging a block volume [sig-storage, Serial, RequiresBlockStorage]
-11:09:10: tests/storage/hotplug.go:2216
-11:09:10:</pre>
-</details>
-
-
-* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-<details><summary>context</summary>
-<pre>11:00:05:   {&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;system is in sync with kubevirt config resource version 200331&#34;,&#34;pos&#34;:&#34;kvconfig.go:102&#34;,&#34;timestamp&#34;:&#34;2026-05-18T11:00:05.879219Z&#34;}
-11:00:05:   &lt;&lt; Captured StdOut/StdErr Output
-11:00:05: ------------------------------
-11:09:36: • [FAILED] [570.279 seconds]
-11:09:36: [sig-storage] SCSI persistent reservation [BeforeEach] with PersistentReservation feature gate toggled should delete and recreate virt-handler [sig-storage, Serial]
-11:09:36:   [BeforeEach] tests/storage/reservation.go:186
-11:09:36:   [It] tests/storage/reservation.go:344</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
-<details>
-<summary>all...</summary>
-
-* _2026-05-14 18:29:24 &#43;0000 UTC_: <code>20:18:29: • [FAILED] [269.183 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17801/pull-kubevirt-e2e-k8s-1.32-sig-compute-migrations-1.6/2054959179134668800#1:build-log.txt%3A4093)
-<details><summary>context</summary>
-<pre>20:14:00:
-20:14:00:   There were additional failures detected.  To view them in detail run ginkgo -vv
-20:14:00: ------------------------------
-20:18:29: • [FAILED] [269.183 seconds]
-20:18:29: [rfe_id:393][crit:high][vendor:cnv-qe@redhat.com][level:system][sig-compute] Live Migration with a live-migrate eviction strategy set [ref_id:2293</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.8 (1x / 4.35%)
+### main (19x / 90.48%)
 
 
-#### pr-build (1x / 100.00%)
-
-<details>
-<summary> ginkgo test failure marker (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-
-</details>
-
-<hr/>
-</details>
-
-### main (21x / 91.30%)
-
-
-#### external (4x / 19.05%)
+#### external (5x / 26.32%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 14.29%) </summary>
+<summary> transient kube-apiserver body decode noise (3x / 15.79%) </summary>
 
 <hr/>
 
@@ -695,7 +654,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 4.76%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 5.26%) </summary>
 
 <hr/>
 
@@ -709,11 +668,26 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 5.26%) </summary>
 
-#### needs-investigation (15x / 71.43%)
+<hr/>
+
+**1x**: _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+<details>
+<summary>all...</summary>
+
+* _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (12x / 63.16%)
 
 <details>
-<summary> no error snippets (15x / 71.43%) </summary>
+<summary> no error snippets (12x / 63.16%) </summary>
 
 <hr/>
 
@@ -836,60 +810,12 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
-
-**1x**: _2026-05-13 09:01:51 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 09:01:51 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-
 </details>
 
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-
-</details>
-
-<hr/>
-</details>
-
-#### pr-build (1x / 4.76%)
+#### internal (1x / 5.26%)
 
 <details>
-<summary> ginkgo test failure marker (1x / 4.76%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 4.76%)
-
-<details>
-<summary> kind cluster creation failure (1x / 4.76%) </summary>
+<summary> kind cluster creation failure (1x / 5.26%) </summary>
 
 <hr/>
 
@@ -904,7 +830,46 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### release-1.6 (1x / 4.35%)
+#### pr-build (1x / 5.26%)
+
+<details>
+<summary> ginkgo test failure marker (1x / 5.26%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.8 (1x / 4.76%)
+
+
+#### pr-build (1x / 100.00%)
+
+<details>
+<summary> ginkgo test failure marker (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.6 (1x / 4.76%)
 
 
 #### pr-build (1x / 100.00%)
@@ -930,13 +895,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-network (9x / 39.13%)
+### sig-network (6x / 28.57%)
 
 
-#### external (4x / 44.44%)
+#### external (4x / 66.67%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (3x / 50.00%) </summary>
 
 <hr/>
 
@@ -955,7 +920,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 11.11%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -970,10 +935,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (5x / 55.56%)
+#### needs-investigation (2x / 33.33%)
 
 <details>
-<summary> no error snippets (5x / 55.56%) </summary>
+<summary> no error snippets (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -996,45 +961,15 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
-
-**1x**: _2026-05-13 09:01:51 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 09:01:51 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17539/pull-kubevirt-e2e-k8s-1.35-sig-network/2054487143505465344)
-
 </details>
 
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.34-sig-network/2054449906545856512)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-13 06:33:53 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-<details>
-<summary>all...</summary>
-
-* _2026-05-13 06:33:53 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17680/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2054449906466164736)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (7x / 30.43%)
+### sig-compute (8x / 38.10%)
 
 
-#### internal (1x / 14.29%)
+#### internal (1x / 12.50%)
 
 <details>
-<summary> kind cluster creation failure (1x / 14.29%) </summary>
+<summary> kind cluster creation failure (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -1049,10 +984,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### pr-build (1x / 14.29%)
+#### pr-build (1x / 12.50%)
 
 <details>
-<summary> ginkgo test failure marker (1x / 14.29%) </summary>
+<summary> ginkgo test failure marker (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -1067,10 +1002,28 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (5x / 71.43%)
+#### external (1x / 12.50%)
 
 <details>
-<summary> no error snippets (5x / 71.43%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+<details>
+<summary>all...</summary>
+
+* _2026-05-19 15:07:21 &#43;0000 UTC_: <code>15:33:10: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17833/pull-kubevirt-e2e-k8s-1.34-sig-compute/2056706870336294912#1:build-log.txt%3A4672)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (5x / 62.50%)
+
+<details>
+<summary> no error snippets (5x / 62.50%) </summary>
 
 <hr/>
 
@@ -1125,28 +1078,8 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-storage (7x / 30.43%)
+### sig-storage (7x / 33.33%)
 
-
-#### pr-build (2x / 28.57%)
-
-<details>
-<summary> ginkgo test failure marker (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
-
-* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-
-</details>
-
-<hr/>
-</details>
 
 #### needs-investigation (5x / 71.43%)
 
@@ -1206,4 +1139,24 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-05-20 07:16:50
+#### pr-build (2x / 28.57%)
+
+<details>
+<summary> ginkgo test failure marker (2x / 28.57%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
+
+* _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-05-20 10:16:21
