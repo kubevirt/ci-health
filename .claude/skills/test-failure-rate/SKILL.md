@@ -31,13 +31,15 @@ Example:
 $ go run ./cmd/ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
 ```
 
-This produces `output/tmp/test-rate-{job-name}.yaml`.
+This produces `output/tmp/sessions/<session-id>/test-rate-{job-name}.yaml`.
+
+The tool logs the written file path. Extract the session directory from the `"wrote test rate analysis to ..."` log line.
 
 ## Analysis
 
 After data generation:
 
-1. Use Glob to find the `output/tmp/test-rate-*.yaml` file
+1. Extract the session directory path from the tool's log output, then find the `test-rate-*.yaml` file in that directory
 2. Read the YAML. The structure is:
    - `prow_job_url`: the analyzed build URL
    - `job_name`: the Prow job name
