@@ -176,6 +176,16 @@ Use --filter-lane-regex to exclude lanes matching a pattern (default: .*-root$).
 Use --concurrency to control parallel testgrid fetches (default 6).`,
 		RunE: flakeOverview,
 	}
+
+	summarizeSessionCmd = &cobra.Command{
+		Use:   "summarize-session",
+		Short: "Output a condensed YAML summary of all analysis files in the current session.",
+		Long: `Read all job build error and k8s analysis YAML files from the session
+directory and emit a single condensed YAML summary to stdout.
+
+Requires a session ID (via --session-id flag or CLAUDE_CODE_SESSION_ID env var).`,
+		RunE: summarizeSession,
+	}
 )
 
 func generateReport(cmd *cobra.Command, args []string) error {
@@ -501,6 +511,23 @@ func laneRate(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func summarizeSession(_ *cobra.Command, _ []string) error {
+	if tmpOutputPath == "output/tmp" {
+		return fmt.Errorf("no session ID set; use --session-id or set CLAUDE_CODE_SESSION_ID")
+	}
+
+	summary, err := cifailures.SummarizeSession(tmpOutputPath)
+	if err != nil {
+		return fmt.Errorf("failed to summarize session: %w", err)
+	}
+
+	encoder := yaml.NewEncoder(os.Stdout)
+	if err = encoder.Encode(summary); err != nil {
+		return err
+	}
+	return encoder.Close()
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
@@ -522,6 +549,7 @@ func init() {
 	rootCmd.AddCommand(laneRateCmd)
 	rootCmd.AddCommand(flakeOverviewCmd)
 	rootCmd.AddCommand(changeRelevanceCmd)
+	rootCmd.AddCommand(summarizeSessionCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)

@@ -3,7 +3,7 @@ name: analyze-pr-builds
 description: >
     Analyze all failed builds for a GitHub pull request.
     Use when user provides a GitHub PR URL and wants to understand why builds are failing.
-allowed-tools: [Read, Glob, Bash(go run:*), Bash(grep:*)]
+allowed-tools: [Read, Bash(go run:*), Bash(grep:*)]
 ---
 
 ## Overview
@@ -14,44 +14,43 @@ It works for any repo served by prow.ci.kubevirt.io (currently the `kubevirt` Gi
 
 ## Data Generation
 
-Run the `analyze-pr` command with the GitHub PR URL to fetch and analyze all failed builds:
+Two commands to run sequentially:
+
+### Step 1: Fetch and analyze all failed builds
 
 ```bash
 $ go run ./cmd/ci-failures analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
 ```
 
-This command:
-1. Fetches the PR history from prow
-2. Finds all jobs for the latest commit
-3. Keeps only the latest run per job (jobs that eventually passed are excluded)
-4. Downloads build logs and extracts error snippets for each failure
-5. Writes one YAML file per failed job to `output/tmp/{job-name}.yaml`
-6. For each failed job, also downloads k8s-reporter artifacts (and etcd profiler data if available) and writes `output/tmp/k8s-analysis-{build-id}.yaml`
+This downloads build logs, k8s-reporter artifacts, and container logs for every currently-failing job in the PR. Output files go to the session directory.
+
+### Step 2: Get a condensed summary
+
+```bash
+$ go run ./cmd/ci-failures summarize-session
+```
+
+This reads all session YAML files and emits a **single condensed YAML** to stdout containing just the key fields needed for analysis. This replaces the need to read individual files.
 
 ## Analysis
 
-After data generation:
+After running both commands:
 
-1. Use Glob to find all `output/tmp/*.yaml` files produced by the command
-2. Read each build log YAML (`{job-name}.yaml`). The structure is:
-   - `job_name`: the Prow job name
-   - `build_errors`: list of build errors, each containing:
+1. Read the `summarize-session` stdout output. The structure is:
+   - `jobs`: list of failed jobs, each with:
+     - `job_name`: the Prow job name
      - `job_url`: link to the Prow job UI
      - `build_id`: the build number
-     - `started` / `finished`: timestamps
      - `category`: error category (external, internal, pr-build, needs-investigation)
      - `category_reason`: explanation of the categorization
-     - `build_log_error_snippets`: list of error matches with `error_text`, `context`, and `link_to_log_line`
-3. Read each k8s analysis YAML (`k8s-analysis-*.yaml`) if present. The structure is:
-   - `snapshots`: list of cluster state capture points (process + failure count)
-   - `findings`: list of detected issues with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`
-   - `summary`: aggregate counts by kind, severity, and detector
-   - `etcd_profile` (optional): full etcd storage profile with peak/final tmpfs and WAL metrics, plus per-spec records. Etcd-related findings use kind `EtcdProfile` and detectors `etcd-tmpfs-exhaustion`, `etcd-tmpfs-pressure`, `etcd-large-wal`, `etcd-db-growth`
-   - `container_log_files` (optional): list of cached kubevirt component container logs (virt-controller, virt-handler, virt-api, virt-operator) with `pod_name`, `container_name`, `namespace`, `cached_path`, and `size_bytes`
-4. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from build log errors and k8s findings, then use `grep` on the cached virt-controller and virt-handler logs to find the actual rejection reason. Example: `grep -i "testvmi-xxxxx" <cached_path>`
-5. For each failure, examine build log errors, k8s findings, AND container log matches to determine the root cause
-6. Correlate findings across all sources — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver failures; virt-controller log errors (schema validation, sync failures) reveal why VMIs are stuck in non-Running phases
-7. Group failures with the same root cause together
+     - `error_snippets`: list of `{error_text, link}` — one-line error text and link to the log line
+   - `k8s_analyses`: list of k8s analysis results per build, each with:
+     - `build_id`, `job_name`, `total_findings`
+     - `findings`: list of `{detector, severity, kind, namespace, name, reason, message}`
+     - `container_log_files`: list of `{pod_name, container_name, namespace, cached_path, size_bytes}` for grep cross-referencing
+2. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from error snippets and k8s findings, then use `grep` on the cached virt-controller and virt-handler logs to find the actual rejection reason. Example: `grep -i "testvmi-xxxxx" <cached_path>`
+3. Correlate findings across all sources — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver failures; virt-controller log errors (schema validation, sync failures) reveal why VMIs are stuck in non-Running phases
+4. Group failures with the same root cause together
 
 ## Cross-job failure correlation
 
@@ -77,7 +76,7 @@ Present a concise summary to the user:
 - Include relevant k8s findings that explain or contribute to the failure
 - Note the **cross-job pattern** for each group: appears in all jobs (likely PR-caused), appears in one job only (possible flake), or correlates with infra findings (infra flake)
 - Classify each as **fixable** (CI config or code issue) or **non-fixable** (external/infra)
-- Include the `link_to_log_line` for the most relevant error in each group
+- Include the `link` for the most relevant error in each group
 
 ## Suggested follow-up skills
 
