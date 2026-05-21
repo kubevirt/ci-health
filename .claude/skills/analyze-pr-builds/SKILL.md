@@ -14,6 +14,8 @@ It works for any repo served by prow.ci.kubevirt.io (currently the `kubevirt` Gi
 
 ## Data Generation
 
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+
 Two commands to run sequentially:
 
 ### Step 1: Fetch and analyze all failed builds

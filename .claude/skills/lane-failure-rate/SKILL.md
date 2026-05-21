@@ -14,7 +14,9 @@ This skill analyzes a testgrid lane and calculates failure rates for every test 
 
 ## Data generation
 
-Run the `lane-rate` subcommand with a testgrid URL:
+Run the `lane-rate` subcommand from the `kubevirt.io/ci-health` repository with a testgrid URL.
+
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 ```bash
 $ go run ./cmd/ci-failures lane-rate <testgrid-url>

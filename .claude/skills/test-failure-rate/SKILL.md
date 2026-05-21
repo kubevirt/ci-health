@@ -13,7 +13,9 @@ This skill looks up the historical success rate for each test that failed in a P
 
 ## Data generation
 
-Run the `test-rate` subcommand with the Prow job URL:
+Run the `test-rate` subcommand from the `kubevirt.io/ci-health` repository with the Prow job URL.
+
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 ```bash
 $ go run ./cmd/ci-failures test-rate <prow-job-url>

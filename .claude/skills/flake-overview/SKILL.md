@@ -17,9 +17,7 @@ Together they answer: "which tests are flaky, is it a PR-interaction problem or 
 
 ## Step 1: Locate the ci-health repository and run flake-overview twice
 
-Before running, determine the correct working directory:
-- If the current working directory already contains `cmd/ci-failures/`, you are inside the ci-health repo — run commands directly.
-- Otherwise, look for a `kubevirt.io/ci-health` subdirectory relative to the current working directory and `cd` into it before running.
+The `cmd/ci-failures` tool lives in the `kubevirt.io/ci-health` repository. If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Run the command twice — once for a 28-day window and once for a 7-day window — to enable trend detection:
 
