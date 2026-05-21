@@ -24,7 +24,7 @@ const logsDir = "output/tmp/build-logs"
 var (
 	// Regex to find errors in log files
 	// make: *** [Makefile:174: cluster-sync] Error 125
-	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |^make:.*Error (1[0-9]+|[2-9][0-9]*)`)
+	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |^make:.*Error (1[0-9]+|[2-9][0-9]*)|command not found`)
 )
 
 // ShowCIFailureJobs fetches URLs for the CI failure runs from the data of the latest run.
