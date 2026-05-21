@@ -64,24 +64,19 @@ func SummarizeSession(sessionDir string) (*SessionSummary, error) {
 
 	for _, f := range allFiles {
 		base := filepath.Base(f)
-		if isExcluded(base) {
-			continue
+		if strings.HasPrefix(base, "k8s-analysis-") {
+			k8s, err := readK8sFile(f)
+			if err != nil {
+				return nil, fmt.Errorf("failed to read %s: %w", base, err)
+			}
+			summary.K8sAnalyses = append(summary.K8sAnalyses, k8s)
+		} else if !isExcluded(base) {
+			job, err := readJobFile(f)
+			if err != nil {
+				return nil, fmt.Errorf("failed to read %s: %w", base, err)
+			}
+			summary.Jobs = append(summary.Jobs, job)
 		}
-
-		job, err := readJobFile(f)
-		if err != nil {
-			return nil, fmt.Errorf("failed to read %s: %w", base, err)
-		}
-		summary.Jobs = append(summary.Jobs, job)
-	}
-
-	k8sFiles, _ := filepath.Glob(filepath.Join(sessionDir, "k8s-analysis-*.yaml"))
-	for _, f := range k8sFiles {
-		k8s, err := readK8sFile(f)
-		if err != nil {
-			return nil, fmt.Errorf("failed to read %s: %w", filepath.Base(f), err)
-		}
-		summary.K8sAnalyses = append(summary.K8sAnalyses, k8s)
 	}
 
 	return summary, nil
@@ -118,6 +113,7 @@ func readJobFile(path string) (SummaryJob, error) {
 		job.Category = be.Category
 		job.CategoryReason = be.CategoryReason
 
+		job.ErrorSnippets = make([]SummaryErrorSnippet, 0, len(be.BuildLogErrorSnippets))
 		for _, s := range be.BuildLogErrorSnippets {
 			job.ErrorSnippets = append(job.ErrorSnippets, SummaryErrorSnippet{
 				ErrorText: s.ErrorText,
@@ -147,6 +143,7 @@ func readK8sFile(path string) (SummaryK8s, error) {
 		ContainerLogFiles: result.ContainerLogFiles,
 	}
 
+	k8s.Findings = make([]SummaryK8sFinding, 0, len(result.Findings))
 	for _, f := range result.Findings {
 		k8s.Findings = append(k8s.Findings, SummaryK8sFinding{
 			Detector:  f.Detector,

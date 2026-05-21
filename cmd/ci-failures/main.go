@@ -522,8 +522,10 @@ func summarizeSession(_ *cobra.Command, _ []string) error {
 	}
 
 	encoder := yaml.NewEncoder(os.Stdout)
-	defer encoder.Close()
-	return encoder.Encode(summary)
+	if err = encoder.Encode(summary); err != nil {
+		return err
+	}
+	return encoder.Close()
 }
 
 func init() {
