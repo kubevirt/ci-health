@@ -14,22 +14,26 @@ This skill analyzes a testgrid lane and calculates failure rates for every test 
 
 ## Data generation
 
-Run the `lane-rate` subcommand with a testgrid URL:
+Run the `lane-rate` subcommand from the `kubevirt.io/ci-health` repository with a testgrid URL.
+
+The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
+- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
+- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate <testgrid-url>
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures lane-rate <testgrid-url>
 ```
 
 To control the analysis window (default 14 days):
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 21 <testgrid-url>
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures lane-rate --days 21 <testgrid-url>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
 ```
 
 This produces `output/tmp/lane-rate-{tab-name}.yaml`.

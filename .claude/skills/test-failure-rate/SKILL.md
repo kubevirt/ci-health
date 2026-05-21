@@ -13,22 +13,26 @@ This skill looks up the historical success rate for each test that failed in a P
 
 ## Data generation
 
-Run the `test-rate` subcommand with the Prow job URL:
+Run the `test-rate` subcommand from the `kubevirt.io/ci-health` repository with the Prow job URL.
+
+The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
+- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
+- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
 
 ```bash
-$ go run ./cmd/ci-failures test-rate <prow-job-url>
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures test-rate <prow-job-url>
 ```
 
 To cover a longer period (up to 28 days):
 
 ```bash
-$ go run ./cmd/ci-failures test-rate --days 14 <prow-job-url>
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures test-rate --days 14 <prow-job-url>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
+$ go run ./kubevirt.io/ci-health/cmd/ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
 ```
 
 This produces `output/tmp/sessions/<session-id>/test-rate-{job-name}.yaml`.
