@@ -14,16 +14,14 @@ It works for any repo served by prow.ci.kubevirt.io (currently the `kubevirt` Gi
 
 ## Data Generation
 
-The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
-- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
-- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Two commands to run sequentially:
 
 ### Step 1: Fetch and analyze all failed builds
 
 ```bash
-$ go run ./kubevirt.io/ci-health/cmd/ci-failures analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
+$ go run ./cmd/ci-failures analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
 ```
 
 This downloads build logs, k8s-reporter artifacts, and container logs for every currently-failing job in the PR. Output files go to the session directory.

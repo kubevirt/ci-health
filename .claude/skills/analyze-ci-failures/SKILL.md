@@ -15,14 +15,12 @@ This skill helps the user to find the root cause and mitigations for all ci fail
 As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used. As a base for the data the file
 `output/kubevirt/kubevirt/results.json` is used.
 
-The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
-- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
-- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Example how to generate the data files for the prowjobs failing ci:
 
 ```bash
-$ go run ./kubevirt.io/ci-health/cmd/ci-failures generate yaml
+$ go run ./cmd/ci-failures generate yaml
 ```
 
 This produces:

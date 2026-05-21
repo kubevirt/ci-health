@@ -17,20 +17,18 @@ Together they answer: "which tests are flaky, is it a PR-interaction problem or 
 
 ## Step 1: Locate the ci-health repository and run flake-overview twice
 
-The `cmd/ci-failures` tool lives in the `kubevirt.io/ci-health` repository. The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
-- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
-- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
+The `cmd/ci-failures` tool lives in the `kubevirt.io/ci-health` repository. If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Run the command twice — once for a 28-day window and once for a 7-day window — to enable trend detection:
 
 ```bash
-go run ./kubevirt.io/ci-health/cmd/ci-failures flake-overview --days 28
+go run ./cmd/ci-failures flake-overview --days 28
 ```
 
 Read the output YAML, then run:
 
 ```bash
-go run ./kubevirt.io/ci-health/cmd/ci-failures flake-overview --days 7
+go run ./cmd/ci-failures flake-overview --days 7
 ```
 
 Read that output YAML too. Both runs produce a file at `output/tmp/flake-overview.yaml` (or `output/tmp/sessions/{session-id}/flake-overview.yaml` when a session ID is set). The second run overwrites the first, so read the first output before running the second.

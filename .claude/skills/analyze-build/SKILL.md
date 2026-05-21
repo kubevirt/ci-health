@@ -20,14 +20,12 @@ It combines four analyses:
 
 As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used.
 
-The skill may be executed from either the top-level `github.com` directory or directly inside the `ci-health` repository. Determine the correct path to the tool based on the current working directory:
-- From `github.com/`: `go run ./kubevirt.io/ci-health/cmd/ci-failures ...`
-- From `kubevirt.io/ci-health/`: `go run ./cmd/ci-failures ...`
+If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Example how to generate the data files for a specific prowjob, given is the url to the prowjob build:
 
 ```bash
-$ go run ./kubevirt.io/ci-health/cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
+$ go run ./cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
 ```
 
 This produces up to two output files in a session directory:
