@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-19 (3x / 30.00%)
+### 2026-05-19 (3x / 42.86%)
 
 
 #### external (3x / 100.00%)
@@ -55,8 +55,26 @@
 <hr/>
 </details>
 
-### 2026-05-18 (3x / 30.00%)
+### 2026-05-18 (3x / 42.86%)
 
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
 
 #### pr-build (2x / 66.67%)
 
@@ -78,31 +96,13 @@
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
+### 2026-05-15 (1x / 14.29%)
+
+
+#### needs-investigation (1x / 100.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-
-</details>
-
-<hr/>
-</details>
-
-### 2026-05-15 (4x / 40.00%)
-
-
-#### needs-investigation (4x / 100.00%)
-
-<details>
-<summary> no error snippets (4x / 100.00%) </summary>
+<summary> no error snippets (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -115,36 +115,6 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-05-15 08:44:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 08:44:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:22 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:22 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-
-</details>
-
-<hr/>
 </details>
 
 <a id="per-error-category"></a>
@@ -152,10 +122,10 @@
 ## per error category [⬆](#top)
 
 
-### external (3x / 30.00%)
+### external (3x / 42.86%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 20.00%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 28.57%) </summary>
 
 <hr/>
 
@@ -192,7 +162,7 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 10.00%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -217,10 +187,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### pr-build (2x / 20.00%)
+### pr-build (2x / 28.57%)
 
 <details>
-<summary> ginkgo test failure marker (2x / 20.00%) </summary>
+<summary> ginkgo test failure marker (2x / 28.57%) </summary>
 
 <hr/>
 
@@ -257,10 +227,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### needs-investigation (4x / 40.00%)
+### needs-investigation (1x / 14.29%)
 
 <details>
-<summary> no error snippets (4x / 40.00%) </summary>
+<summary> no error snippets (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -273,42 +243,12 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
-
-**1x**: _2026-05-15 08:44:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 08:44:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-
 </details>
 
-<hr/>
-
-**1x**: _2026-05-15 07:29:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:22 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:22 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-
-</details>
-
-<hr/>
-</details>
-
-### internal (1x / 10.00%)
+### internal (1x / 14.29%)
 
 <details>
-<summary> kind cluster creation failure (1x / 10.00%) </summary>
+<summary> kind cluster creation failure (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -338,13 +278,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per branch [⬆](#top)
 
 
-### main (9x / 90.00%)
+### main (6x / 85.71%)
 
 
-#### external (3x / 33.33%)
+#### external (3x / 50.00%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 22.22%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -361,7 +301,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 11.11%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -376,76 +316,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (4x / 44.44%)
+#### pr-build (1x / 16.67%)
 
 <details>
-<summary> no error snippets (4x / 44.44%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-15 11:34:55 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16257/pull-kubevirt-e2e-k8s-1.35-sig-operator/2055241605253697536)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 11:34:55 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16257/pull-kubevirt-e2e-k8s-1.35-sig-operator/2055241605253697536)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 08:44:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 08:44:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:22 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:22 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 11.11%)
-
-<details>
-<summary> kind cluster creation failure (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-
-</details>
-
-<hr/>
-</details>
-
-#### pr-build (1x / 11.11%)
-
-<details>
-<summary> ginkgo test failure marker (1x / 11.11%) </summary>
+<summary> ginkgo test failure marker (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -460,7 +334,43 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### release-1.8 (1x / 10.00%)
+#### needs-investigation (1x / 16.67%)
+
+<details>
+<summary> no error snippets (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-15 11:34:55 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16257/pull-kubevirt-e2e-k8s-1.35-sig-operator/2055241605253697536)
+<details>
+<summary>all...</summary>
+
+* _2026-05-15 11:34:55 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16257/pull-kubevirt-e2e-k8s-1.35-sig-operator/2055241605253697536)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 16.67%)
+
+<details>
+<summary> kind cluster creation failure (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.8 (1x / 14.29%)
 
 
 #### pr-build (1x / 100.00%)
@@ -486,7 +396,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 10.00%)
+### sig-network (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -507,13 +417,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-compute (5x / 50.00%)
+### sig-compute (4x / 57.14%)
 
 
-#### external (2x / 40.00%)
+#### external (2x / 50.00%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 40.00%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -530,10 +440,10 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (2x / 40.00%)
+#### needs-investigation (1x / 25.00%)
 
 <details>
-<summary> no error snippets (2x / 40.00%) </summary>
+<summary> no error snippets (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -546,22 +456,12 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
-
-**1x**: _2026-05-15 07:29:22 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:22 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.34-sig-operator/2055186770034692096)
-
 </details>
 
-<hr/>
-</details>
-
-#### internal (1x / 20.00%)
+#### internal (1x / 25.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 20.00%) </summary>
+<summary> kind cluster creation failure (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -576,13 +476,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-storage (4x / 40.00%)
+### sig-storage (2x / 28.57%)
 
 
-#### pr-build (2x / 50.00%)
+#### pr-build (2x / 100.00%)
 
 <details>
-<summary> ginkgo test failure marker (2x / 50.00%) </summary>
+<summary> ginkgo test failure marker (2x / 100.00%) </summary>
 
 <hr/>
 
@@ -599,32 +499,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (2x / 50.00%)
-
-<details>
-<summary> no error snippets (2x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-15 08:44:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 08:44:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17351/pull-kubevirt-e2e-k8s-1.34-sig-storage/2055207418115133440)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-15 07:29:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-<details>
-<summary>all...</summary>
-
-* _2026-05-15 07:29:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17802/pull-kubevirt-e2e-k8s-1.35-sig-storage/2055186770911301632)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-05-22 07:24:03
+Last updated: 2026-05-22 10:15:09
