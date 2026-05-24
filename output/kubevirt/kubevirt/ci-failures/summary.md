@@ -17,26 +17,11 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-22 (3x / 30.00%)
+### 2026-05-22 (3x / 25.00%)
 
 
 #### external (3x / 100.00%)
 
-<details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> download failure in context (1x / 33.33%) </summary>
 
@@ -67,14 +52,47 @@
 
 <hr/>
 </details>
+<details>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 33.33%) </summary>
 
-### 2026-05-21 (1x / 10.00%)
+<hr/>
+
+**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-21 (3x / 25.00%)
 
 
-#### needs-investigation (1x / 100.00%)
+#### internal (1x / 33.33%)
 
 <details>
-<summary> no matching pattern (1x / 100.00%) </summary>
+<summary> control plane startup failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -89,7 +107,25 @@
 <hr/>
 </details>
 
-### 2026-05-19 (3x / 30.00%)
+#### external (1x / 33.33%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-19 (3x / 25.00%)
 
 
 #### external (3x / 100.00%)
@@ -127,8 +163,26 @@
 <hr/>
 </details>
 
-### 2026-05-18 (3x / 30.00%)
+### 2026-05-18 (3x / 25.00%)
 
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
 
 #### pr-build (2x / 66.67%)
 
@@ -150,33 +204,15 @@
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
-
-<details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (6x / 60.00%)
+### external (7x / 58.33%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 20.00%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 16.67%) </summary>
 
 <hr/>
 
@@ -213,7 +249,7 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 10.00%) </summary>
+<summary> bazel remote cache blob fetch failure (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -238,7 +274,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 10.00%) </summary>
+<summary> download failure in context (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -263,7 +299,32 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 10.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details><summary>context</summary>
+<pre>21:11:59: &#43;&#43; _kubectl wait -n kube-system --timeout=12m --for=condition=Ready -l k8s-app=kube-dns pods
+21:11:59: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.35/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.35/.kubeconfig wait -n kube-system --timeout=12m --for=condition=Ready -l k8s-app=kube-dns pods
+21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-m6h9d
+21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -288,7 +349,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 10.00%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -313,10 +374,10 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### internal (1x / 10.00%)
+### internal (2x / 16.67%)
 
 <details>
-<summary> kind cluster creation failure (1x / 10.00%) </summary>
+<summary> kind cluster creation failure (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -340,11 +401,36 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> control plane startup failure (1x / 8.33%) </summary>
 
-### pr-build (2x / 20.00%)
+<hr/>
+
+**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details><summary>context</summary>
+<pre>18:38:10: 	Once you have found the failing container, you can inspect its logs with:
+18:38:10: 	- &#39;crictl --runtime-endpoint unix:///run/containerd/containerd.sock logs CONTAINERID&#39;
+18:38:10:
+18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]
+18:38:10: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+18:38:10: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262
+18:38:10: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).visitAll</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### pr-build (2x / 16.67%)
 
 <details>
-<summary> ginkgo test failure marker (2x / 20.00%) </summary>
+<summary> ginkgo test failure marker (2x / 16.67%) </summary>
 
 <hr/>
 
@@ -381,10 +467,10 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### needs-investigation (1x / 10.00%)
+### needs-investigation (1x / 8.33%)
 
 <details>
-<summary> no matching pattern (1x / 10.00%) </summary>
+<summary> no matching pattern (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -414,13 +500,13 @@ make: *** [Makefile:189: cluster-sync] Error 1
 ## per branch [⬆](#top)
 
 
-### main (8x / 80.00%)
+### main (10x / 83.33%)
 
 
-#### external (6x / 75.00%)
+#### external (7x / 70.00%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 25.00%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 20.00%) </summary>
 
 <hr/>
 
@@ -437,22 +523,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-19 15:39:19 &#43;0000 UTC_: <code>15:53:38: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/monitoring/metrics/common/labels/BUILD.bazel:3:11 Validating nogo output for //pkg/monitoring/metrics/common/labels:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: bde6d7dca14b3f54ffbf70a90243fc32dc05c7f9396548125b1c2e39a6940d2f/65452 for bazel-out/k8-fastbuild/bin/staging/src/kubevirt.io/client-go/log/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16500/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2056690058336931840#1:build-log.txt%3A414)
-<details>
-<summary>all...</summary>
-
-* _2026-05-19 15:39:19 &#43;0000 UTC_: <code>15:53:38: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/monitoring/metrics/common/labels/BUILD.bazel:3:11 Validating nogo output for //pkg/monitoring/metrics/common/labels:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: bde6d7dca14b3f54ffbf70a90243fc32dc05c7f9396548125b1c2e39a6940d2f/65452 for bazel-out/k8-fastbuild/bin/staging/src/kubevirt.io/client-go/log/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16500/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2056690058336931840#1:build-log.txt%3A414)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 12.50%) </summary>
+<summary> download failure in context (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -467,7 +538,22 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 12.50%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -482,7 +568,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 12.50%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -496,11 +582,59 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache blob fetch failure (1x / 10.00%) </summary>
 
-#### pr-build (1x / 12.50%)
+<hr/>
+
+**1x**: _2026-05-19 15:39:19 &#43;0000 UTC_: <code>15:53:38: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/monitoring/metrics/common/labels/BUILD.bazel:3:11 Validating nogo output for //pkg/monitoring/metrics/common/labels:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: bde6d7dca14b3f54ffbf70a90243fc32dc05c7f9396548125b1c2e39a6940d2f/65452 for bazel-out/k8-fastbuild/bin/staging/src/kubevirt.io/client-go/log/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16500/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2056690058336931840#1:build-log.txt%3A414)
+<details>
+<summary>all...</summary>
+
+* _2026-05-19 15:39:19 &#43;0000 UTC_: <code>15:53:38: ERROR: /root/go/src/kubevirt.io/kubevirt/pkg/monitoring/metrics/common/labels/BUILD.bazel:3:11 Validating nogo output for //pkg/monitoring/metrics/common/labels:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: bde6d7dca14b3f54ffbf70a90243fc32dc05c7f9396548125b1c2e39a6940d2f/65452 for bazel-out/k8-fastbuild/bin/staging/src/kubevirt.io/client-go/log/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16500/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2056690058336931840#1:build-log.txt%3A414)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (2x / 20.00%)
 
 <details>
-<summary> ginkgo test failure marker (1x / 12.50%) </summary>
+<summary> kind cluster creation failure (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> control plane startup failure (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+
+</details>
+
+<hr/>
+</details>
+
+#### pr-build (1x / 10.00%)
+
+<details>
+<summary> ginkgo test failure marker (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -515,25 +649,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-#### internal (1x / 12.50%)
-
-<details>
-<summary> kind cluster creation failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.7 (1x / 10.00%)
+### release-1.7 (1x / 8.33%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -554,7 +670,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### release-1.8 (1x / 10.00%)
+### release-1.8 (1x / 8.33%)
 
 
 #### pr-build (1x / 100.00%)
@@ -580,13 +696,13 @@ make: *** [Makefile:189: cluster-sync] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-compute (7x / 70.00%)
+### sig-compute (9x / 75.00%)
 
 
-#### external (5x / 71.43%)
+#### external (6x / 66.67%)
 
 <details>
-<summary> bazel remote cache IO failure (from secondary snippet) (2x / 28.57%) </summary>
+<summary> bazel remote cache IO failure (from secondary snippet) (2x / 22.22%) </summary>
 
 <hr/>
 
@@ -603,7 +719,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 14.29%) </summary>
+<summary> download failure in context (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -618,7 +734,22 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 14.29%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -633,7 +764,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 14.29%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -648,10 +779,10 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-#### internal (1x / 14.29%)
+#### internal (2x / 22.22%)
 
 <details>
-<summary> kind cluster creation failure (1x / 14.29%) </summary>
+<summary> kind cluster creation failure (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -665,11 +796,26 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> control plane startup failure (1x / 11.11%) </summary>
 
-#### needs-investigation (1x / 14.29%)
+<hr/>
+
+**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 11.11%)
 
 <details>
-<summary> no matching pattern (1x / 14.29%) </summary>
+<summary> no matching pattern (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -684,7 +830,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### sig-network (1x / 10.00%)
+### sig-network (1x / 8.33%)
 
 
 #### external (1x / 100.00%)
@@ -705,7 +851,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### sig-storage (2x / 20.00%)
+### sig-storage (2x / 16.67%)
 
 
 #### pr-build (2x / 100.00%)
@@ -728,4 +874,4 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-05-24 09:48:19
+Last updated: 2026-05-24 12:33:19
