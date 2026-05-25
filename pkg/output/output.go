@@ -383,5 +383,6 @@ func NoRetestBadgeColor(value float64, mergedPRs float64, levels *Levels) badge.
 	}
 
 	return color
+
 	
 }
