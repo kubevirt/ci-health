@@ -166,6 +166,24 @@
 ### 2026-05-18 (3x / 25.00%)
 
 
+#### internal (1x / 33.33%)
+
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+<details>
+<summary>all...</summary>
+
+* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
+
+</details>
+
+<hr/>
+</details>
+
 #### pr-build (2x / 66.67%)
 
 <details>
@@ -180,24 +198,6 @@
 * _2026-05-18 07:52:18 &#43;0000 UTC_: <code>11:09:10: • [FAILED] [549.986 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17829/pull-kubevirt-e2e-k8s-1.35-sig-storage/2056281442882686976#1:build-log.txt%3A9108)
 
 * _2026-05-18 07:45:55 &#43;0000 UTC_: <code>11:09:36: • [FAILED] [570.279 seconds]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17828/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2056279962301763584#1:build-log.txt%3A9570)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
-
-<details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
-<details>
-<summary>all...</summary>
-
-* _2026-05-18 10:20:53 &#43;0000 UTC_: <code>10:29:29: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17257/pull-kubevirt-e2e-kind-1.34-sev/2056318973946892288#1:build-log.txt%3A731)
 
 </details>
 
@@ -241,6 +241,31 @@ make: *** [Makefile:28: bazel-build-functests] Error 1
 make: *** [Makefile:28: bazel-build-functests] Error 1
 &#43; ret=2
 &#43; check_for_panics</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 8.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details><summary>context</summary>
+<pre>00:13:39: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+00:13:39: INFO: Elapsed time: 2.275s
+00:13:39: INFO: 0 processes.
+00:13:39: ERROR: Build failed. Not running target
+00:13:40: &#43; rm -f /tmp/kubevirt.deploy.2EHQ
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
 </details>
 
 
@@ -341,31 +366,6 @@ make: *** [Makefile:174: cluster-up] Error 1
 15:53:38: INFO: Elapsed time: 3.489s, Critical Path: 2.92s
 15:53:38: INFO: 7 processes: 1 remote cache hit, 5 internal, 1 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details><summary>context</summary>
-<pre>00:13:39: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-00:13:39: INFO: Elapsed time: 2.275s
-00:13:39: INFO: 0 processes.
-00:13:39: ERROR: Build failed. Not running target
-00:13:40: &#43; rm -f /tmp/kubevirt.deploy.2EHQ
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
 </details>
 
 
@@ -874,4 +874,4 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-05-24 21:52:25
+Last updated: 2026-05-25 00:42:01
