@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-26 (5x / 29.41%)
+### 2026-05-26 (5x / 27.78%)
 
 
 #### needs-investigation (3x / 60.00%)
@@ -27,7 +27,7 @@
 
 <hr/>
 
-**3x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+**3x**: _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
 <details>
 <summary>all...</summary>
 
@@ -62,36 +62,8 @@
 <hr/>
 </details>
 
-### 2026-05-25 (6x / 35.29%)
+### 2026-05-25 (6x / 33.33%)
 
-
-#### needs-investigation (2x / 33.33%)
-
-<details>
-<summary> no matching pattern (2x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-
-</details>
-
-<hr/>
-</details>
 
 #### internal (3x / 50.00%)
 
@@ -100,7 +72,7 @@
 
 <hr/>
 
-**3x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+**3x**: _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
 <details>
 <summary>all...</summary>
 
@@ -133,11 +105,75 @@
 <hr/>
 </details>
 
-### 2026-05-22 (3x / 17.65%)
+#### needs-investigation (2x / 33.33%)
+
+<details>
+<summary> no matching pattern (2x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-23 (1x / 5.56%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no matching pattern (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details>
+<summary>all...</summary>
+
+* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-22 (3x / 16.67%)
 
 
 #### external (3x / 100.00%)
 
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> API rate limiter timeout (1x / 33.33%) </summary>
 
@@ -168,42 +204,9 @@
 
 <hr/>
 </details>
-<details>
-<summary> download failure in context (1x / 33.33%) </summary>
 
-<hr/>
+### 2026-05-21 (3x / 16.67%)
 
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-
-</details>
-
-<hr/>
-</details>
-
-### 2026-05-21 (3x / 17.65%)
-
-
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no matching pattern (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
-
-</details>
-
-<hr/>
-</details>
 
 #### external (1x / 33.33%)
 
@@ -241,15 +244,33 @@
 <hr/>
 </details>
 
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (5x / 29.41%)
+### external (5x / 27.78%)
 
 <details>
-<summary> download failure in context (1x / 5.88%) </summary>
+<summary> download failure in context (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -274,7 +295,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.88%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -299,7 +320,7 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 5.88%) </summary>
+<summary> API rate limiter timeout (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -324,7 +345,7 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 5.88%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -349,7 +370,7 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 5.88%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -374,14 +395,14 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 
-### internal (6x / 35.29%)
+### internal (6x / 33.33%)
 
 <details>
-<summary> make bazel-build target failure (5x / 29.41%) </summary>
+<summary> make bazel-build target failure (5x / 27.78%) </summary>
 
 <hr/>
 
-**5x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+**5x**: _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
 <details>
 <summary>all...</summary>
 
@@ -450,7 +471,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 5.88%) </summary>
+<summary> control plane startup failure (1x / 5.56%) </summary>
 
 <hr/>
 
@@ -475,14 +496,14 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### needs-investigation (6x / 35.29%)
+### needs-investigation (7x / 38.89%)
 
 <details>
-<summary> no matching pattern (6x / 35.29%) </summary>
+<summary> no matching pattern (7x / 38.89%) </summary>
 
 <hr/>
 
-**4x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+**4x**: _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
 <details>
 <summary>all...</summary>
 
@@ -558,6 +579,26 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 
+**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details>
+<summary>all...</summary>
+
+* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details><summary>context</summary>
+<pre>00:13:34: kind: KubeProxyConfiguration
+00:13:34: mode: iptables
+00:13:36:  ✗ Writing configuration 📜
+00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1
+00:13:36:
+00:13:36: Command Output: 109
+00:13:36: Job for containerd.service failed because the control process exited with error code.</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
 **1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
 <details>
 <summary>all...</summary>
@@ -584,26 +625,8 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per branch [⬆](#top)
 
 
-### release-1.8 (4x / 23.53%)
+### release-1.8 (4x / 22.22%)
 
-
-#### internal (1x / 25.00%)
-
-<details>
-<summary> make bazel-build target failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-
-</details>
-
-<hr/>
-</details>
 
 #### needs-investigation (3x / 75.00%)
 
@@ -635,58 +658,31 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### main (12x / 70.59%)
-
-
-#### external (5x / 41.67%)
+#### internal (1x / 25.00%)
 
 <details>
-<summary> download failure in context (1x / 8.33%) </summary>
+<summary> make bazel-build target failure (1x / 25.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+**1x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
 <details>
 <summary>all...</summary>
 
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
 
 </details>
 
 <hr/>
 </details>
+
+### main (13x / 72.22%)
+
+
+#### external (5x / 38.46%)
+
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> API rate limiter timeout (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 8.33%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -701,7 +697,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 8.33%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -715,11 +711,56 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 7.69%) </summary>
 
-#### internal (5x / 41.67%)
+<hr/>
+
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (5x / 38.46%)
 
 <details>
-<summary> make bazel-build target failure (4x / 33.33%) </summary>
+<summary> make bazel-build target failure (4x / 30.77%) </summary>
 
 <hr/>
 
@@ -740,7 +781,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 8.33%) </summary>
+<summary> control plane startup failure (1x / 7.69%) </summary>
 
 <hr/>
 
@@ -755,10 +796,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### needs-investigation (2x / 16.67%)
+#### needs-investigation (3x / 23.08%)
 
 <details>
-<summary> no matching pattern (2x / 16.67%) </summary>
+<summary> no matching pattern (3x / 23.08%) </summary>
 
 <hr/>
 
@@ -773,9 +814,19 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 </details>
 
 <hr/>
+
+**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details>
+<summary>all...</summary>
+
+* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+
 </details>
 
-### release-1.7 (1x / 5.88%)
+<hr/>
+</details>
+
+### release-1.7 (1x / 5.56%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -801,13 +852,13 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per SIG [⬆](#top)
 
 
-### sig-compute (16x / 94.12%)
+### sig-compute (17x / 94.44%)
 
 
-#### external (4x / 25.00%)
+#### external (4x / 23.53%)
 
 <details>
-<summary> download failure in context (1x / 6.25%) </summary>
+<summary> download failure in context (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -822,7 +873,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 6.25%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -837,7 +888,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 6.25%) </summary>
+<summary> API rate limiter timeout (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -852,7 +903,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 6.25%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -867,14 +918,14 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (6x / 37.50%)
+#### internal (6x / 35.29%)
 
 <details>
-<summary> make bazel-build target failure (5x / 31.25%) </summary>
+<summary> make bazel-build target failure (5x / 29.41%) </summary>
 
 <hr/>
 
-**5x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+**5x**: _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
 <details>
 <summary>all...</summary>
 
@@ -893,7 +944,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 6.25%) </summary>
+<summary> control plane startup failure (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -908,14 +959,14 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### needs-investigation (6x / 37.50%)
+#### needs-investigation (7x / 41.18%)
 
 <details>
-<summary> no matching pattern (6x / 37.50%) </summary>
+<summary> no matching pattern (7x / 41.18%) </summary>
 
 <hr/>
 
-**4x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+**4x**: _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
 <details>
 <summary>all...</summary>
 
@@ -941,6 +992,16 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 
+**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details>
+<summary>all...</summary>
+
+* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+
+</details>
+
+<hr/>
+
 **1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
 <details>
 <summary>all...</summary>
@@ -952,7 +1013,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### sig-storage (1x / 5.88%)
+### sig-storage (1x / 5.56%)
 
 
 #### external (1x / 100.00%)
@@ -973,4 +1034,4 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-05-27 00:36:41
+Last updated: 2026-05-27 04:40:27
