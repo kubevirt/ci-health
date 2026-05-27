@@ -160,21 +160,6 @@
 #### external (3x / 100.00%)
 
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
@@ -199,6 +184,21 @@
 <summary>all...</summary>
 
 * _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
 
 </details>
 
@@ -269,6 +269,31 @@
 
 ### external (5x / 27.78%)
 
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 5.56%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+<details><summary>context</summary>
+<pre>09:16:06: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+09:16:07: [control-plane-check] kube-controller-manager is healthy after 1.092449818s
+09:16:08: [control-plane-check] kube-scheduler is healthy after 1.978771755s
+09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+09:16:10: [control-plane-check] kube-apiserver is healthy after 4.001529214s
+09:16:10: I0525 05:16:10.566861    1606 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
+09:16:10: I0525 05:16:10.569311    1606 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> download failure in context (1x / 5.56%) </summary>
 
@@ -362,31 +387,6 @@ make: *** [Makefile:174: cluster-up] Error 1
 00:22:48: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
 00:22:48: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262
 00:22:48: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).visitAll</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 5.56%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details><summary>context</summary>
-<pre>09:16:06: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-09:16:07: [control-plane-check] kube-controller-manager is healthy after 1.092449818s
-09:16:08: [control-plane-check] kube-scheduler is healthy after 1.978771755s
-09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:16:10: [control-plane-check] kube-apiserver is healthy after 4.001529214s
-09:16:10: I0525 05:16:10.566861    1606 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-09:16:10: I0525 05:16:10.569311    1606 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
 </details>
 
 
@@ -858,36 +858,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 #### external (4x / 23.53%)
 
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 5.88%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 5.88%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.88%) </summary>
 
 <hr/>
@@ -912,6 +882,36 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <summary>all...</summary>
 
 * _2026-05-22 06:01:24 &#43;0000 UTC_: <code>06:17:49: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: client rate limiter Wait returned an error: context deadline exceeded, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057703244842405888#1:build-log.txt%3A10629)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 5.88%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:29 &#43;0000 UTC_: <code>00:22:48: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-apiserver check failed at https://10.89.0.5:6443/livez: Get &#34;https://10.89.0.5:6443/livez?timeout=10s&#34;: dial tcp 10.89.0.5:6443: connect: connection refused]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057612824133242880#1:build-log.txt%3A9756)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 5.88%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
 
 </details>
 
@@ -1034,4 +1034,4 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-05-27 13:20:13
+Last updated: 2026-05-27 16:26:18
