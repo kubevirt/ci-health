@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-27 (1x / 4.17%)
+### 2026-05-27 (1x / 4.00%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -38,13 +38,52 @@
 <hr/>
 </details>
 
-### 2026-05-26 (9x / 37.50%)
+### 2026-05-26 (10x / 40.00%)
 
 
-#### needs-investigation (4x / 44.44%)
+#### internal (5x / 50.00%)
 
 <details>
-<summary> no matching pattern (3x / 33.33%) </summary>
+<summary> make bazel-build target failure (4x / 40.00%) </summary>
+
+<hr/>
+
+**4x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
+
+* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
+
+* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> taint not found during cluster setup (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (4x / 40.00%)
+
+<details>
+<summary> no matching pattern (3x / 30.00%) </summary>
 
 <hr/>
 
@@ -63,7 +102,7 @@
 <hr/>
 </details>
 <details>
-<summary> no error snippets (1x / 11.11%) </summary>
+<summary> no error snippets (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -78,47 +117,10 @@
 <hr/>
 </details>
 
-#### internal (4x / 44.44%)
+#### external (1x / 10.00%)
 
 <details>
-<summary> make bazel-build target failure (3x / 33.33%) </summary>
-
-<hr/>
-
-**3x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-
-* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
-
-* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 11.11%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -133,7 +135,7 @@
 <hr/>
 </details>
 
-### 2026-05-25 (7x / 29.17%)
+### 2026-05-25 (7x / 28.00%)
 
 
 #### needs-investigation (3x / 42.86%)
@@ -179,6 +181,24 @@
 <hr/>
 </details>
 
+#### external (1x / 14.29%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+
+</details>
+
+<hr/>
+</details>
+
 #### internal (3x / 42.86%)
 
 <details>
@@ -201,25 +221,7 @@
 <hr/>
 </details>
 
-#### external (1x / 14.29%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-
-### 2026-05-23 (1x / 4.17%)
+### 2026-05-23 (1x / 4.00%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -240,7 +242,7 @@
 <hr/>
 </details>
 
-### 2026-05-22 (3x / 12.50%)
+### 2026-05-22 (3x / 12.00%)
 
 
 #### external (3x / 100.00%)
@@ -291,7 +293,7 @@
 <hr/>
 </details>
 
-### 2026-05-21 (3x / 12.50%)
+### 2026-05-21 (3x / 12.00%)
 
 
 #### needs-investigation (1x / 33.33%)
@@ -353,14 +355,14 @@
 ## per error category [⬆](#top)
 
 
-### external (6x / 25.00%)
+### external (6x / 24.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (2x / 8.33%) </summary>
+<summary> transient kube-apiserver body decode noise (2x / 8.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
+**2x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
 <details>
 <summary>all...</summary>
 
@@ -393,7 +395,32 @@
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 4.17%) </summary>
+<summary> download failure in context (1x / 4.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details>
+<summary>all...</summary>
+
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
+<details><summary>context</summary>
+<pre>00:13:39: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+00:13:39: INFO: Elapsed time: 2.275s
+00:13:39: INFO: 0 processes.
+00:13:39: ERROR: Build failed. Not running target
+00:13:40: &#43; rm -f /tmp/kubevirt.deploy.2EHQ
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 4.00%) </summary>
 
 <hr/>
 
@@ -418,7 +445,7 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 4.17%) </summary>
+<summary> API rate limiter timeout (1x / 4.00%) </summary>
 
 <hr/>
 
@@ -443,7 +470,7 @@ make: *** [Makefile:174: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 4.17%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 4.00%) </summary>
 
 <hr/>
 
@@ -467,40 +494,15 @@ make: *** [Makefile:174: cluster-up] Error 1
 
 <hr/>
 </details>
+
+### internal (9x / 36.00%)
+
 <details>
-<summary> download failure in context (1x / 4.17%) </summary>
+<summary> make bazel-build target failure (7x / 28.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details><summary>context</summary>
-<pre>00:13:39: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-00:13:39: INFO: Elapsed time: 2.275s
-00:13:39: INFO: 0 processes.
-00:13:39: ERROR: Build failed. Not running target
-00:13:40: &#43; rm -f /tmp/kubevirt.deploy.2EHQ
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### internal (8x / 33.33%)
-
-<details>
-<summary> make bazel-build target failure (6x / 25.00%) </summary>
-
-<hr/>
-
-**6x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+**7x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
 <details>
 <summary>all...</summary>
 
@@ -521,6 +523,18 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <pre>&#43; make bazel-build-images
 hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
 07:27:31: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-efe2b228ff2a1ce1d95aab1fb13854b583e8e74cebd8c3956352cd52d22d5414`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+06:09:38: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-d8b008396422eaa941cfdb4eeaeab217298aa937b4d801bf1374a8fcde5537a3`: No space left on device
 make: *** [Makefile:39: bazel-build-images] Error 126
 &#43; rc=2
 &#43; return 2
@@ -581,7 +595,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 4.17%) </summary>
+<summary> control plane startup failure (1x / 4.00%) </summary>
 
 <hr/>
 
@@ -606,7 +620,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 4.17%) </summary>
+<summary> taint not found during cluster setup (1x / 4.00%) </summary>
 
 <hr/>
 
@@ -631,10 +645,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### needs-investigation (10x / 41.67%)
+### needs-investigation (10x / 40.00%)
 
 <details>
-<summary> no matching pattern (7x / 29.17%) </summary>
+<summary> no matching pattern (7x / 28.00%) </summary>
 
 <hr/>
 
@@ -755,7 +769,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no error snippets (3x / 12.50%) </summary>
+<summary> no error snippets (3x / 12.00%) </summary>
 
 <hr/>
 
@@ -795,17 +809,17 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per branch [⬆](#top)
 
 
-### main (19x / 79.17%)
+### main (20x / 80.00%)
 
 
-#### external (6x / 31.58%)
+#### external (6x / 30.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (2x / 10.53%) </summary>
+<summary> transient kube-apiserver body decode noise (2x / 10.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
+**2x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
 <details>
 <summary>all...</summary>
 
@@ -818,22 +832,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> API rate limiter timeout (1x / 5.26%) </summary>
+<summary> API rate limiter timeout (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -848,7 +847,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 5.26%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -863,7 +862,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 5.26%) </summary>
+<summary> download failure in context (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -877,21 +876,38 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
-
-#### internal (7x / 36.84%)
-
 <details>
-<summary> make bazel-build target failure (5x / 26.32%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.00%) </summary>
 
 <hr/>
 
-**5x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (8x / 40.00%)
+
+<details>
+<summary> make bazel-build target failure (6x / 30.00%) </summary>
+
+<hr/>
+
+**6x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
 <details>
 <summary>all...</summary>
 
 * _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
 
 * _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
 
 * _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
 
@@ -904,22 +920,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 5.26%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 5.26%) </summary>
+<summary> taint not found during cluster setup (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -933,11 +934,26 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
+<details>
+<summary> control plane startup failure (1x / 5.00%) </summary>
 
-#### needs-investigation (6x / 31.58%)
+<hr/>
+
+**1x**: _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (6x / 30.00%)
 
 <details>
-<summary> no error snippets (3x / 15.79%) </summary>
+<summary> no error snippets (3x / 15.00%) </summary>
 
 <hr/>
 
@@ -972,7 +988,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no matching pattern (3x / 15.79%) </summary>
+<summary> no matching pattern (3x / 15.00%) </summary>
 
 <hr/>
 
@@ -999,8 +1015,26 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### release-1.8 (4x / 16.67%)
+### release-1.8 (4x / 16.00%)
 
+
+#### internal (1x / 25.00%)
+
+<details>
+<summary> make bazel-build target failure (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (3x / 75.00%)
 
@@ -1032,25 +1066,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (1x / 25.00%)
-
-<details>
-<summary> make bazel-build target failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.7 (1x / 4.17%)
+### release-1.7 (1x / 4.00%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -1076,7 +1092,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per SIG [⬆](#top)
 
 
-### sig-storage (2x / 8.33%)
+### sig-storage (2x / 8.00%)
 
 
 #### needs-investigation (1x / 50.00%)
@@ -1115,8 +1131,26 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### sig-network (3x / 12.50%)
+### sig-network (3x / 12.00%)
 
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> taint not found during cluster setup (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (1x / 33.33%)
 
@@ -1154,31 +1188,28 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
+### sig-compute (20x / 80.00%)
+
+
+#### external (4x / 20.00%)
 
 <details>
-<summary> taint not found during cluster setup (1x / 33.33%) </summary>
+<summary> download failure in context (1x / 5.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
 <details>
 <summary>all...</summary>
 
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
 
 </details>
 
 <hr/>
 </details>
-
-### sig-compute (19x / 79.17%)
-
-
-#### external (4x / 21.05%)
-
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -1193,7 +1224,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (1x / 5.26%) </summary>
+<summary> API rate limiter timeout (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -1208,7 +1239,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> API rate limiter timeout (from secondary snippet) (1x / 5.26%) </summary>
+<summary> API rate limiter timeout (from secondary snippet) (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -1222,26 +1253,11 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
-<details>
-<summary> download failure in context (1x / 5.26%) </summary>
 
-<hr/>
-
-**1x**: _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-<details>
-<summary>all...</summary>
-
-* _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (8x / 42.11%)
+#### needs-investigation (8x / 40.00%)
 
 <details>
-<summary> no matching pattern (7x / 36.84%) </summary>
+<summary> no matching pattern (7x / 35.00%) </summary>
 
 <hr/>
 
@@ -1292,7 +1308,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no error snippets (1x / 5.26%) </summary>
+<summary> no error snippets (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -1307,20 +1323,22 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (7x / 36.84%)
+#### internal (8x / 40.00%)
 
 <details>
-<summary> make bazel-build target failure (6x / 31.58%) </summary>
+<summary> make bazel-build target failure (7x / 35.00%) </summary>
 
 <hr/>
 
-**6x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+**7x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
 <details>
 <summary>all...</summary>
 
 * _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
 
 * _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
 
 * _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
 
@@ -1335,7 +1353,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> control plane startup failure (1x / 5.26%) </summary>
+<summary> control plane startup failure (1x / 5.00%) </summary>
 
 <hr/>
 
@@ -1350,4 +1368,4 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-05-28 00:35:27
+Last updated: 2026-05-28 04:46:21
