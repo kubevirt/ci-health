@@ -294,6 +294,24 @@
 ### 2026-05-21 (3x / 12.50%)
 
 
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
+
+</details>
+
+<hr/>
+</details>
+
 #### external (1x / 33.33%)
 
 <details>
@@ -324,24 +342,6 @@
 <summary>all...</summary>
 
 * _2026-05-21 18:17:18 &#43;0000 UTC_: <code>18:38:10: error: error execution phase wait-control-plane: failed while waiting for the control plane to start: [kube-controller-manager check failed at https://127.0.0.1:10257/healthz: Get &#34;https://127.0.0.1:10257/healthz&#34;: dial tcp 127.0.0.1:10257: connect: connection refused, kube-scheduler check failed at https://127.0.0.1:10259/livez: Get &#34;https://127.0.0.1:10259/livez&#34;: dial tcp 127.0.0.1:10259: connect: connection refused, kube-apiserver check failed at https://10.89.0.4:6443/livez: client rate limiter Wait returned an error: rate: Wait(n=1) would exceed context deadline]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057525899489710080#1:build-log.txt%3A5710)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no matching pattern (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 23:01:27 &#43;0000 UTC_: <code>23:18:41: error: error execution phase kubelet-wait-bootstrap: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17728/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2057597520984412160#1:build-log.txt%3A1943)
 
 </details>
 
@@ -581,31 +581,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 4.17%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details><summary>context</summary>
-<pre>08:22:41: &#43;&#43; for node in ${master_nodes[@]}
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: node/sriov-control-plane untainted</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> control plane startup failure (1x / 4.17%) </summary>
 
 <hr/>
@@ -623,6 +598,31 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 18:38:10: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
 18:38:10: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262
 18:38:10: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).visitAll</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> taint not found during cluster setup (1x / 4.17%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details><summary>context</summary>
+<pre>08:22:41: &#43;&#43; for node in ${master_nodes[@]}
+08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
+08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
+08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
+08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
+08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
+08:22:41: node/sriov-control-plane untainted</pre>
 </details>
 
 
@@ -818,6 +818,21 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> API rate limiter timeout (1x / 5.26%) </summary>
 
 <hr/>
@@ -862,21 +877,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-
-</details>
-
-<hr/>
-</details>
 
 #### internal (7x / 36.84%)
 
@@ -904,21 +904,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 5.26%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> control plane startup failure (1x / 5.26%) </summary>
 
 <hr/>
@@ -933,36 +918,24 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 </details>
+<details>
+<summary> taint not found during cluster setup (1x / 5.26%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (6x / 31.58%)
 
-<details>
-<summary> no matching pattern (3x / 15.79%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
-
-* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
-<details>
-<summary>all...</summary>
-
-* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> no error snippets (3x / 15.79%) </summary>
 
@@ -993,6 +966,33 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <summary>all...</summary>
 
 * _2026-05-25 13:13:34 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17757/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2058899143815860224)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no matching pattern (3x / 15.79%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
+
+* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
+<details>
+<summary>all...</summary>
+
+* _2026-05-23 00:05:29 &#43;0000 UTC_: <code>00:13:36: ERROR: failed to create cluster: failed to restart containerd after patching config: command &#34;podman exec --privileged kind-1.35-control-plane bash -c &#39;! pgrep --exact containerd || systemctl restart containerd&#39;&#34; failed with error: exit status 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17795/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057976065573261312#1:build-log.txt%3A1426)
 
 </details>
 
@@ -1079,24 +1079,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ### sig-storage (2x / 8.33%)
 
 
-#### external (1x / 50.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (1x / 50.00%)
 
 <details>
@@ -1109,6 +1091,24 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <summary>all...</summary>
 
 * _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
 
 </details>
 
@@ -1178,6 +1178,21 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 #### external (4x / 21.05%)
 
 <details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> API rate limiter timeout (1x / 5.26%) </summary>
 
 <hr/>
@@ -1217,21 +1232,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <summary>all...</summary>
 
 * _2026-05-22 00:02:20 &#43;0000 UTC_: <code>00:13:39: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17866/pull-kubevirt-e2e-kind-1.34-sev/2057612816566718464#1:build-log.txt%3A4457)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.26%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
-<details>
-<summary>all...</summary>
-
-* _2026-05-21 21:03:25 &#43;0000 UTC_: <code>21:23:59: timed out waiting for the condition on pods/coredns-7d764666f9-wzncv</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17874/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2057567382322286592#1:build-log.txt%3A1224)
 
 </details>
 
@@ -1350,4 +1350,4 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-05-27 21:49:11
+Last updated: 2026-05-28 00:35:27
