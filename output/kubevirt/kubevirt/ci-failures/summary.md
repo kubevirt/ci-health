@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-27 (1x / 3.45%)
+### 2026-05-28 (1x / 3.23%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no error snippets (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-05-27 (1x / 3.23%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -38,13 +59,13 @@
 <hr/>
 </details>
 
-### 2026-05-26 (11x / 37.93%)
+### 2026-05-26 (12x / 38.71%)
 
 
-#### needs-investigation (5x / 45.45%)
+#### needs-investigation (6x / 50.00%)
 
 <details>
-<summary> no matching pattern (4x / 36.36%) </summary>
+<summary> no matching pattern (4x / 33.33%) </summary>
 
 <hr/>
 
@@ -73,7 +94,17 @@
 <hr/>
 </details>
 <details>
-<summary> no error snippets (1x / 9.09%) </summary>
+<summary> no error snippets (2x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+
+</details>
 
 <hr/>
 
@@ -88,10 +119,10 @@
 <hr/>
 </details>
 
-#### internal (5x / 45.45%)
+#### internal (5x / 41.67%)
 
 <details>
-<summary> make bazel-build target failure (4x / 36.36%) </summary>
+<summary> make bazel-build target failure (4x / 33.33%) </summary>
 
 <hr/>
 
@@ -112,7 +143,7 @@
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 9.09%) </summary>
+<summary> taint not found during cluster setup (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -127,10 +158,10 @@
 <hr/>
 </details>
 
-#### external (1x / 9.09%)
+#### external (1x / 8.33%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 9.09%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 8.33%) </summary>
 
 <hr/>
 
@@ -145,7 +176,7 @@
 <hr/>
 </details>
 
-### 2026-05-25 (16x / 55.17%)
+### 2026-05-25 (16x / 51.61%)
 
 
 #### needs-investigation (7x / 43.75%)
@@ -215,6 +246,28 @@
 <hr/>
 </details>
 
+#### external (3x / 18.75%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (3x / 18.75%) </summary>
+
+<hr/>
+
+**3x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
+
+* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+
+* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+
+</details>
+
+<hr/>
+</details>
+
 #### internal (6x / 37.50%)
 
 <details>
@@ -243,29 +296,7 @@
 <hr/>
 </details>
 
-#### external (3x / 18.75%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (3x / 18.75%) </summary>
-
-<hr/>
-
-**3x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
-
-* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-
-### 2026-05-23 (1x / 3.45%)
+### 2026-05-23 (1x / 3.23%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -291,10 +322,171 @@
 ## per error category [⬆](#top)
 
 
-### needs-investigation (14x / 48.28%)
+### internal (11x / 35.48%)
 
 <details>
-<summary> no matching pattern (9x / 31.03%) </summary>
+<summary> make bazel-build target failure (10x / 32.26%) </summary>
+
+<hr/>
+
+**10x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+08:00:34: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3ade505c57e218819e3b2588636252484d69f1c39a5d0b601f611893f13dff83`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+07:27:31: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-efe2b228ff2a1ce1d95aab1fb13854b583e8e74cebd8c3956352cd52d22d5414`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+06:09:38: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-d8b008396422eaa941cfdb4eeaeab217298aa937b4d801bf1374a8fcde5537a3`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+01:07:58: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-90a0783b2881336943496bef956125c62eaf5e7261df0077ef92209fc1315874`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 21:06:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059018181887922176#1:build-log.txt%3A205)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+21:07:01: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-5f5a9b56d6e99ccf443eb29568f3e995c544703b2d8074653773ef2f790040f8`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+19:52:39: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3b6963538642576dc5e085a242ae8cf52a73f2621d3b14cf4115284e2b9e3de1`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+17:11:16: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-b0d249f272298390f6f04648e0394a2014389781537f15f35b3ee15c3c28c9e7`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 16:57:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058955558613946368#1:build-log.txt%3A212)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+16:58:09: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-50696fa3ed6b5067c2a55c35d8faaec48ad10fd9f74941d9ddbd6820ae8cf086`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 15:06:25 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058927566504333312#1:build-log.txt%3A205)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+15:06:53: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-db258cc59e9e8630f72efb71bd85054c350d77722b1efbc478f8f2f89f9f2555`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-05-25 13:29:41 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058903179210264576#1:build-log.txt%3A208)
+<details><summary>context</summary>
+<pre>&#43; make bazel-build-images
+hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
+13:31:23: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-d049bac7d5d79e49ab46708c1555ab6646f6baafd2c46104cee6e1455b1e0476`: No space left on device
+make: *** [Makefile:39: bazel-build-images] Error 126
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> taint not found during cluster setup (1x / 3.23%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details><summary>context</summary>
+<pre>08:22:41: &#43;&#43; for node in ${master_nodes[@]}
+08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
+08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
+08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
+08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
+08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
+08:22:41: node/sriov-control-plane untainted</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (16x / 51.61%)
+
+<details>
+<summary> no matching pattern (9x / 29.03%) </summary>
 
 <hr/>
 
@@ -439,7 +631,17 @@
 <hr/>
 </details>
 <details>
-<summary> no error snippets (5x / 17.24%) </summary>
+<summary> no error snippets (7x / 22.58%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+
+</details>
 
 <hr/>
 
@@ -448,6 +650,16 @@
 <summary>all...</summary>
 
 * _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
 
 </details>
 
@@ -494,175 +706,14 @@
 <hr/>
 </details>
 
-### internal (11x / 37.93%)
+### external (4x / 12.90%)
 
 <details>
-<summary> make bazel-build target failure (10x / 34.48%) </summary>
+<summary> transient kube-apiserver body decode noise (4x / 12.90%) </summary>
 
 <hr/>
 
-**10x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-08:00:34: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3ade505c57e218819e3b2588636252484d69f1c39a5d0b601f611893f13dff83`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-07:27:31: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-efe2b228ff2a1ce1d95aab1fb13854b583e8e74cebd8c3956352cd52d22d5414`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-06:09:38: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-d8b008396422eaa941cfdb4eeaeab217298aa937b4d801bf1374a8fcde5537a3`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-01:07:58: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-90a0783b2881336943496bef956125c62eaf5e7261df0077ef92209fc1315874`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 21:06:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059018181887922176#1:build-log.txt%3A205)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-21:07:01: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-5f5a9b56d6e99ccf443eb29568f3e995c544703b2d8074653773ef2f790040f8`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-19:52:39: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3b6963538642576dc5e085a242ae8cf52a73f2621d3b14cf4115284e2b9e3de1`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-17:11:16: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-b0d249f272298390f6f04648e0394a2014389781537f15f35b3ee15c3c28c9e7`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 16:57:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058955558613946368#1:build-log.txt%3A212)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-16:58:09: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-50696fa3ed6b5067c2a55c35d8faaec48ad10fd9f74941d9ddbd6820ae8cf086`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 15:06:25 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058927566504333312#1:build-log.txt%3A205)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-15:06:53: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-db258cc59e9e8630f72efb71bd85054c350d77722b1efbc478f8f2f89f9f2555`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-05-25 13:29:41 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058903179210264576#1:build-log.txt%3A208)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-13:31:23: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-d049bac7d5d79e49ab46708c1555ab6646f6baafd2c46104cee6e1455b1e0476`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 3.45%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details><summary>context</summary>
-<pre>08:22:41: &#43;&#43; for node in ${master_nodes[@]}
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: node/sriov-control-plane untainted</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### external (4x / 13.79%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (4x / 13.79%) </summary>
-
-<hr/>
-
-**4x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+**4x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
 <details>
 <summary>all...</summary>
 
@@ -724,13 +775,23 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per branch [⬆](#top)
 
 
-### main (24x / 82.76%)
+### main (26x / 83.87%)
 
 
-#### needs-investigation (10x / 41.67%)
+#### needs-investigation (12x / 46.15%)
 
 <details>
-<summary> no error snippets (5x / 20.83%) </summary>
+<summary> no error snippets (7x / 26.92%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+
+</details>
 
 <hr/>
 
@@ -739,6 +800,16 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <summary>all...</summary>
 
 * _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
 
 </details>
 
@@ -785,7 +856,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no matching pattern (5x / 20.83%) </summary>
+<summary> no matching pattern (5x / 19.23%) </summary>
 
 <hr/>
 
@@ -824,10 +895,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (10x / 41.67%)
+#### internal (10x / 38.46%)
 
 <details>
-<summary> make bazel-build target failure (9x / 37.50%) </summary>
+<summary> make bazel-build target failure (9x / 34.62%) </summary>
 
 <hr/>
 
@@ -858,7 +929,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 4.17%) </summary>
+<summary> taint not found during cluster setup (1x / 3.85%) </summary>
 
 <hr/>
 
@@ -873,14 +944,14 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### external (4x / 16.67%)
+#### external (4x / 15.38%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (4x / 16.67%) </summary>
+<summary> transient kube-apiserver body decode noise (4x / 15.38%) </summary>
 
 <hr/>
 
-**4x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+**4x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
 <details>
 <summary>all...</summary>
 
@@ -897,7 +968,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### release-1.8 (5x / 17.24%)
+### release-1.8 (5x / 16.13%)
 
 
 #### needs-investigation (4x / 80.00%)
@@ -963,13 +1034,23 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per SIG [⬆](#top)
 
 
-### sig-storage (3x / 10.34%)
+### sig-storage (5x / 16.13%)
 
 
-#### needs-investigation (2x / 66.67%)
+#### needs-investigation (4x / 80.00%)
 
 <details>
-<summary> no error snippets (1x / 33.33%) </summary>
+<summary> no error snippets (3x / 60.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+
+</details>
 
 <hr/>
 
@@ -982,9 +1063,19 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 </details>
 
 <hr/>
+
+**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+
+</details>
+
+<hr/>
 </details>
 <details>
-<summary> no matching pattern (1x / 33.33%) </summary>
+<summary> no matching pattern (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -999,10 +1090,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### external (1x / 33.33%)
+#### external (1x / 20.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -1017,8 +1108,26 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### sig-network (3x / 10.34%)
+### sig-network (3x / 9.68%)
 
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> taint not found during cluster setup (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
+
+</details>
+
+<hr/>
+</details>
 
 #### needs-investigation (1x / 33.33%)
 
@@ -1056,25 +1165,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (23x / 79.31%)
+### sig-compute (23x / 74.19%)
 
 
 #### needs-investigation (11x / 47.83%)
@@ -1203,7 +1294,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 <hr/>
 
-**2x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+**2x**: _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
 <details>
 <summary>all...</summary>
 
@@ -1216,4 +1307,4 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-05-29 07:24:02
+Last updated: 2026-05-29 10:34:18
