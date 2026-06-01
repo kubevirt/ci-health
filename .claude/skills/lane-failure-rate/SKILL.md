@@ -5,12 +5,65 @@ description: >
     Uses flip-rate analysis, burst detection, and cross-test correlation in addition
     to success rates. Use when the user provides a testgrid URL and wants to see
     which tests are failing in that lane.
-allowed-tools: [Read, Glob, Bash(go run:*)]
+allowed-tools: [Read, Glob, Bash(go run:*), Bash(gh:*)]
 ---
 
 ## Overview
 
 This skill analyzes a testgrid lane and calculates failure rates for every test that has at least one failure in the requested time window. Unlike test-failure-rate (which starts from a single build's failed tests and looks them up in flakefinder), this skill operates at the lane level — it fetches all test results directly from testgrid and computes rates from raw pass/fail data.
+
+## Lane discovery
+
+When the user asks to analyze lanes for a Kubernetes version (e.g. "kubevirt 1.36 lanes") without providing specific testgrid URLs, use the `discover-lanes` subcommand to find all matching lanes across both periodic and presubmit dashboards.
+
+```bash
+$ go run ./cmd/ci-failures discover-lanes <version>
+```
+
+Example:
+
+```bash
+$ go run ./cmd/ci-failures discover-lanes 1.36
+```
+
+This queries the testgrid summary API for both `kubevirt-periodics` and `kubevirt-presubmits` dashboards and produces `output/tmp/discover-lanes-{version}.yaml`.
+
+### Discovery output YAML structure
+
+```yaml
+version_filter: "1.36"
+dashboards:
+  - name: kubevirt-periodics
+    lanes:
+      - tab: periodic-kubevirt-e2e-k8s-1.36-sig-compute
+        overall_status: FAILING
+        testgrid_url: "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-compute"
+  - name: kubevirt-presubmits
+    lanes:
+      - tab: pull-kubevirt-e2e-k8s-1.36-sig-compute
+        overall_status: FLAKY
+        testgrid_url: "https://testgrid.k8s.io/kubevirt-presubmits#pull-kubevirt-e2e-k8s-1.36-sig-compute"
+```
+
+Note: some SIG lanes only exist on one dashboard (e.g. `sig-compute-serial` is presubmit-only).
+
+### Specialized presubmit lanes
+
+Presubmits often include specialized lanes beyond the standard SIG lanes — for specific architectures (e.g. `sig-compute-arm64`), subsets (e.g. `sig-compute-windows`), or serial execution (`sig-compute-serial`). These lanes typically do **not** have periodic counterparts. However, the tests they run usually also exist in the standard SIG lane of the same type (e.g. an arm64-specific test failure may also appear in the regular `sig-compute` periodic lane). When cross-referencing failures, check the standard SIG lane for the same test name even if the specialized lane has no periodic equivalent.
+
+### Workflow for multi-lane analysis
+
+1. Run `discover-lanes` to find all matching lanes
+2. Read the discovery YAML to get testgrid URLs
+3. Run `lane-rate` for each discovered lane (can run in parallel), using the `testgrid_url` from the discovery output
+4. Analyze and present results across all lanes, noting cross-lane patterns
+
+### Interpreting periodic vs presubmit data
+
+- **Periodic lanes** run on a fixed schedule against the latest merged code. Failures here indicate problems in mainline — they affect everyone.
+- **Presubmit lanes** run against unmerged PR code. Failures may be caused by individual PR changes, so the baseline failure rate is noisier. However, tests that fail consistently in presubmits with high volume are strong flake signals.
+- When a test fails in **both** periodic and presubmit lanes, it's almost certainly a real issue in mainline (not PR-caused).
+- When a test fails **only** in presubmits, it may be a genuine flake that's easier to trigger under presubmit conditions (different concurrency, resource pressure, timing).
 
 ## Data generation
 
@@ -28,6 +81,12 @@ To control the analysis window (default 14 days):
 $ go run ./cmd/ci-failures lane-rate --days 21 <testgrid-url>
 ```
 
+To filter out one-off failures and only keep tests at or below a success rate threshold (useful for noisy presubmit lanes):
+
+```bash
+$ go run ./cmd/ci-failures lane-rate --max-success-rate 95 <testgrid-url>
+```
+
 Example:
 
 ```bash
@@ -35,6 +94,8 @@ $ go run ./cmd/ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt
 ```
 
 This produces `output/tmp/lane-rate-{tab-name}.yaml`.
+
+When analyzing presubmit lanes (which typically have many one-off test failures from individual PRs), use `--max-success-rate 95` to focus on tests with meaningful failure patterns.
 
 ## Analysis
 
@@ -111,6 +172,7 @@ Compare `recent_failures` timestamps across different tests in the results:
    - Most recent failure messages for tests with low success rates
 5. Note the total builds count to contextualize rates — a test that failed 1/2 is different from 1/42
 6. Tests tagged `[QUARANTINE]` are already known flakes; note this when presenting
+7. **Quarantine transitions**: a test may be quarantined or unquarantined during the observation period. When this happens, the results show two entries for the same underlying test — one with `[QUARANTINE]` in the name and one without — each covering only the portion of the window where that variant was active. Treat these as a single test: combine their failure counts mentally, and note the transition (e.g. "quarantined mid-window, 0/45 before + 0/6 after"). A high skip count on one variant and low skip count on the other is the telltale sign of a mid-window quarantine change.
 
 ### Summary table
 
@@ -124,6 +186,33 @@ Where **Pattern** is one of:
 - **burst** — failures clustered in a short time window (transient event)
 - **consecutive** — 3+ failures in a row (deterministic breakage)
 - **infra-correlated** — fails alongside other unrelated tests in same builds
+
+## Issue tracking
+
+After presenting the analysis and top priorities, check GitHub for existing tracker issues and offer to create missing ones.
+
+### Searching for existing issues
+
+For each top-priority test failure, search the upstream repository (typically `kubevirt/kubevirt`) for open issues that reference the test name or a distinctive keyword from the error message:
+
+```bash
+gh issue list -R kubevirt/kubevirt --state open --search "virtiofs ServiceAccount token" --limit 5
+```
+
+Use a short, distinctive substring of the test name — not the full name, which is too long for search. Try the most specific part (e.g. `virtiofs ServiceAccount`, `should pause VMI on IO error`, `volume migrate block to filesystem`). If no results, try the error signature (e.g. `expired after 200 seconds config.go:173`).
+
+### Presenting results
+
+For each top-priority item, report whether a tracking issue exists:
+- **Found**: link the issue (number + title)
+- **Not found**: note that no existing issue was found
+
+After the search results, offer to create GitHub issues for any top-priority failures that lack a tracker. Do not create issues automatically — ask the user first. When creating, include:
+- Test name and lane(s) affected
+- Success rate and time window
+- Failure pattern (consecutive, flaky, infra-correlated)
+- Error message snippet
+- Testgrid link(s)
 
 ## Combining with test-failure-rate
 
