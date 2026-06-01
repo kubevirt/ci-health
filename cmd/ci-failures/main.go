@@ -126,8 +126,9 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
-	testRateDays         int
-	laneRateDays         int
+	testRateDays            int
+	laneRateDays            int
+	laneRateMaxSuccessRate  float64
 	flakeOverviewDays    int
 	flakeOverviewFilter  string
 	flakeOverviewConc    int
@@ -185,6 +186,20 @@ directory and emit a single condensed YAML summary to stdout.
 
 Requires a session ID (via --session-id flag or CLAUDE_CODE_SESSION_ID env var).`,
 		RunE: summarizeSession,
+	}
+
+	discoverLanesCmd = &cobra.Command{
+		Use:   "discover-lanes [version]",
+		Short: "Discover testgrid lanes for a Kubernetes version.",
+		Long: `Query testgrid summary API for both kubevirt-periodics and kubevirt-presubmits
+dashboards and list all lanes matching the given Kubernetes version.
+
+Accepts a version string, e.g.:
+  1.36
+
+Outputs a YAML file with all matching lanes and their overall status.`,
+		Args: cobra.ExactArgs(1),
+		RunE: discoverLanes,
 	}
 )
 
@@ -492,7 +507,7 @@ func flakeOverview(_ *cobra.Command, _ []string) error {
 func laneRate(_ *cobra.Command, args []string) error {
 	testgridURL := args[0]
 
-	result, err := cifailures.AnalyzeLaneRate(testgridURL, laneRateDays)
+	result, err := cifailures.AnalyzeLaneRate(testgridURL, laneRateDays, laneRateMaxSuccessRate)
 	if err != nil {
 		return fmt.Errorf("failed to analyze lane rate: %w", err)
 	}
@@ -508,6 +523,31 @@ func laneRate(_ *cobra.Command, args []string) error {
 	}
 
 	log.Infof("wrote lane rate analysis to %s (%d tests with failures)", outputPath, len(result.FailedTests))
+	return nil
+}
+
+func discoverLanes(_ *cobra.Command, args []string) error {
+	version := args[0]
+
+	result, err := cifailures.DiscoverLanes(version)
+	if err != nil {
+		return fmt.Errorf("failed to discover lanes: %w", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, fmt.Sprintf("discover-lanes-%s.yaml", version))
+	if err = cifailures.WriteDiscoverLanesResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %w", err)
+	}
+
+	var totalLanes int
+	for _, d := range result.Dashboards {
+		totalLanes += len(d.Lanes)
+	}
+	log.Infof("wrote lane discovery to %s (%d lanes across %d dashboards)", outputPath, totalLanes, len(result.Dashboards))
 	return nil
 }
 
@@ -537,6 +577,7 @@ func init() {
 
 	testRateCmd.Flags().IntVar(&testRateDays, "days", 7, "Number of days to cover (max 28, fetches multiple weekly reports)")
 	laneRateCmd.Flags().IntVar(&laneRateDays, "days", 14, "Number of days to analyze (default 14)")
+	laneRateCmd.Flags().Float64Var(&laneRateMaxSuccessRate, "max-success-rate", 100, "Only include tests with success rate at or below this threshold (0-100)")
 	flakeOverviewCmd.Flags().IntVar(&flakeOverviewDays, "days", 14, "Number of days to analyze (default 14)")
 	flakeOverviewCmd.Flags().StringVar(&flakeOverviewFilter, "filter-lane-regex", `.*-root$`, "Regex for lanes to exclude")
 	flakeOverviewCmd.Flags().IntVar(&flakeOverviewConc, "concurrency", 6, "Parallel testgrid fetches (default 6)")
@@ -550,6 +591,7 @@ func init() {
 	rootCmd.AddCommand(flakeOverviewCmd)
 	rootCmd.AddCommand(changeRelevanceCmd)
 	rootCmd.AddCommand(summarizeSessionCmd)
+	rootCmd.AddCommand(discoverLanesCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)

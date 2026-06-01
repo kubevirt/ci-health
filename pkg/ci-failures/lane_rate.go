@@ -149,7 +149,7 @@ func filterColumnsInRange(timestamps []int64, days int) (indices []int, periodSt
 	return indices, periodStart, periodEnd
 }
 
-func AnalyzeLaneRate(testgridURL string, days int) (*LaneRateResult, error) {
+func AnalyzeLaneRate(testgridURL string, days int, maxSuccessRate ...float64) (*LaneRateResult, error) {
 	dashboard, tab, err := ParseTestGridURL(testgridURL)
 	if err != nil {
 		return nil, err
@@ -227,6 +227,17 @@ func AnalyzeLaneRate(testgridURL string, days int) (*LaneRateResult, error) {
 			Severity:       classifySeverity(successRate, totalRuns),
 			RecentFailures: recentFailures,
 		})
+	}
+
+	if len(maxSuccessRate) > 0 && maxSuccessRate[0] < 100 {
+		threshold := maxSuccessRate[0]
+		filtered := entries[:0]
+		for _, e := range entries {
+			if e.SuccessRate <= threshold {
+				filtered = append(filtered, e)
+			}
+		}
+		entries = filtered
 	}
 
 	sort.Slice(entries, func(i, j int) bool {
