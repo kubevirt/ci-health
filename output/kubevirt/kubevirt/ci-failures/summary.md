@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-28 (3x / 8.82%)
+### 2026-05-28 (3x / 9.68%)
 
 
 #### needs-investigation (3x / 100.00%)
@@ -58,7 +58,7 @@
 <hr/>
 </details>
 
-### 2026-05-27 (1x / 2.94%)
+### 2026-05-27 (1x / 3.23%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -79,7 +79,7 @@
 <hr/>
 </details>
 
-### 2026-05-26 (12x / 35.29%)
+### 2026-05-26 (12x / 38.71%)
 
 
 #### internal (5x / 41.67%)
@@ -196,17 +196,17 @@
 <hr/>
 </details>
 
-### 2026-05-25 (18x / 52.94%)
+### 2026-05-25 (15x / 48.39%)
 
 
-#### needs-investigation (9x / 50.00%)
+#### needs-investigation (7x / 46.67%)
 
 <details>
-<summary> no matching pattern (6x / 33.33%) </summary>
+<summary> no matching pattern (4x / 26.67%) </summary>
 
 <hr/>
 
-**4x**: _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
+**3x**: _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
 <details>
 <summary>all...</summary>
 
@@ -216,26 +216,22 @@
 
 * _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
 
-* _2026-05-25 09:28:08 &#43;0000 UTC_: <code>09:45:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058842434028179456#1:build-log.txt%3A6661)
-
 </details>
 
 <hr/>
 
-**2x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
+**1x**: _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
 <details>
 <summary>all...</summary>
 
 * _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
 
-* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> no error snippets (3x / 16.67%) </summary>
+<summary> no error snippets (3x / 20.00%) </summary>
 
 <hr/>
 
@@ -270,14 +266,14 @@
 <hr/>
 </details>
 
-#### external (3x / 16.67%)
+#### external (2x / 13.33%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 16.67%) </summary>
+<summary> transient kube-apiserver body decode noise (2x / 13.33%) </summary>
 
 <hr/>
 
-**3x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+**2x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
 <details>
 <summary>all...</summary>
 
@@ -285,17 +281,15 @@
 
 * _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
 
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
 </details>
 
 <hr/>
 </details>
 
-#### internal (6x / 33.33%)
+#### internal (6x / 40.00%)
 
 <details>
-<summary> make bazel-build target failure (6x / 33.33%) </summary>
+<summary> make bazel-build target failure (6x / 40.00%) </summary>
 
 <hr/>
 
@@ -325,257 +319,10 @@
 ## per error category [⬆](#top)
 
 
-### needs-investigation (19x / 55.88%)
+### internal (11x / 35.48%)
 
 <details>
-<summary> no matching pattern (10x / 29.41%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 18:24:41 &#43;0000 UTC_: <code>20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17919/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2059339837684584448#1:build-log.txt%3A8998)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 18:24:41 &#43;0000 UTC_: <code>20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17919/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2059339837684584448#1:build-log.txt%3A8998)
-<details><summary>context</summary>
-<pre>20:51:02:
-20:51:02:   Captured StdOut/StdErr Output &gt;&gt;
-20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;Event(v1.ObjectReference{Kind:\&#34;VirtualMachineInstance\&#34;, Namespace:\&#34;kubevirt-test-default3\&#34;, Name:\&#34;testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\&#34;, UID:\&#34;c86a0bc5-07ae-4204-a46c-f89c66b191b5\&#34;, APIVersion:\&#34;kubevirt.io/v1\&#34;, ResourceVersion:\&#34;133481\&#34;, FieldPath:\&#34;\&#34;}): type: &#39;Normal&#39; reason: &#39;SuccessfulCreate&#39; Created virtual machine pod virt-launcher-testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxrqxxb&#34;,&#34;pos&#34;:&#34;watcher.go:150&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:34.380220Z&#34;}
-20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}
-20:51:02:   &lt;&lt; Captured StdOut/StdErr Output
-20:51:02: ------------------------------
-20:51:37: • [40.121 seconds]</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**7x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
-<details><summary>context</summary>
-<pre>04:23:46: 	- &#39;systemctl status kubelet&#39;
-04:23:46: 	- &#39;journalctl -xeu kubelet&#39;
-04:23:46:
-04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-04:23:46:
-04:23:46: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-04:23:46: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
-<details><summary>context</summary>
-<pre>02:23:47: 	- &#39;systemctl status kubelet&#39;
-02:23:47: 	- &#39;journalctl -xeu kubelet&#39;
-02:23:47:
-02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-02:23:47:
-02:23:47: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-02:23:47: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
-<details><summary>context</summary>
-<pre>00:23:57: 	- &#39;systemctl status kubelet&#39;
-00:23:57: 	- &#39;journalctl -xeu kubelet&#39;
-00:23:57:
-00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused
-00:23:57:
-00:23:57: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-00:23:57: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
-<details><summary>context</summary>
-<pre>22:22:52: 	- &#39;systemctl status kubelet&#39;
-22:22:52: 	- &#39;journalctl -xeu kubelet&#39;
-22:22:52:
-22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-22:22:52:
-22:22:52: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-22:22:52: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
-<details><summary>context</summary>
-<pre>12:20:46: 	- &#39;systemctl status kubelet&#39;
-12:20:46: 	- &#39;journalctl -xeu kubelet&#39;
-12:20:46:
-12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-12:20:46:
-12:20:46: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-12:20:46: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
-<details><summary>context</summary>
-<pre>11:07:53: 	- &#39;systemctl status kubelet&#39;
-11:07:53: 	- &#39;journalctl -xeu kubelet&#39;
-11:07:53:
-11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-11:07:53:
-11:07:53: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-11:07:53: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-* _2026-05-25 09:28:08 &#43;0000 UTC_: <code>09:45:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058842434028179456#1:build-log.txt%3A6661)
-<details><summary>context</summary>
-<pre>09:45:47: 	- &#39;systemctl status kubelet&#39;
-09:45:47: 	- &#39;journalctl -xeu kubelet&#39;
-09:45:47:
-09:45:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
-09:45:47:
-09:45:47: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
-09:45:47: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**2x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
-<details><summary>context</summary>
-<pre>18:19:50:  ✗ Preparing nodes 📦 📦
-18:19:50: ERROR: failed to create cluster: command &#34;podman run --name kind-1.35-worker --hostname kind-1.35-worker --label io.x-k8s.kind.role=worker --privileged --tmpfs /tmp --tmpfs /run --volume 44a1f40a1bfe0ea43c5f2787872ff4101f1ffc9c4e211135498f08c6230f4566:/var:suid,exec,dev --volume /lib/modules:/lib/modules:ro -e KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER --detach --tty --net kind --label io.x-k8s.kind.cluster=kind-1.35 -e container=podman --cgroupns=private --volume /dev/mapper:/dev/mapper --volume=/var/log/audit:/var/log/audit:ro docker.io/kindest/node@sha256:4613778f3cfcd10e615029370f5786704559103cf27bef934597ba562b269661&#34; failed with error: exit status 126
-18:19:50:
-18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device
-18:19:50:
-18:19:50: Stack Trace:
-18:19:50: sigs.k8s.io/kind/pkg/errors.WithStack</pre>
-</details>
-
-
-* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-<details><summary>context</summary>
-<pre>08:25:53:  ✗ Preparing nodes 📦 📦
-08:25:53: ERROR: failed to create cluster: command &#34;podman run --name kind-1.34-control-plane --hostname kind-1.34-control-plane --label io.x-k8s.kind.role=control-plane --privileged --tmpfs /tmp --tmpfs /run --volume e972a0936de444675a134034826b6ab581cc5cb5273dd45e9252f096913c1e7b:/var:suid,exec,dev --volume /lib/modules:/lib/modules:ro -e KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER --detach --tty --net kind --label io.x-k8s.kind.cluster=kind-1.34 -e container=podman --cgroupns=private --volume /dev/mapper:/dev/mapper --volume=/var/log/audit:/var/log/audit:ro --publish=127.0.0.1:34443:6443/tcp -e KUBECONFIG=/etc/kubernetes/admin.conf docker.io/kindest/node@sha256:08497ee19eace7b4b5348db5c6a1591d7752b164530a36f855cb0f2bdcbadd48&#34; failed with error: exit status 126
-08:25:53:
-08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device
-08:25:53:
-08:25:53: Stack Trace:
-08:25:53: sigs.k8s.io/kind/pkg/errors.WithStack</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> no error snippets (9x / 26.47%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-28 11:19:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059957565743173632)
-<details>
-<summary>all...</summary>
-
-* _2026-05-28 11:19:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059957565743173632)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-<details>
-<summary>all...</summary>
-
-* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
-<details>
-<summary>all...</summary>
-
-* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-<details>
-<summary>all...</summary>
-
-* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 13:32:59 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 13:32:59 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 13:13:34 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17757/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2058899143815860224)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 13:13:34 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17757/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2058899143815860224)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 12:02:41 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 12:02:41 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
-
-</details>
-
-<hr/>
-</details>
-
-### internal (11x / 32.35%)
-
-<details>
-<summary> make bazel-build target failure (10x / 29.41%) </summary>
+<summary> make bazel-build target failure (10x / 32.26%) </summary>
 
 <hr/>
 
@@ -708,7 +455,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 2.94%) </summary>
+<summary> taint not found during cluster setup (1x / 3.23%) </summary>
 
 <hr/>
 
@@ -733,82 +480,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### external (4x / 11.76%)
+### needs-investigation (17x / 54.84%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (4x / 11.76%) </summary>
-
-<hr/>
-
-**4x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details><summary>context</summary>
-<pre>08:05:23: [control-plane-check] kube-scheduler is healthy after 2.125371382s
-08:05:24: I0526 04:05:24.183164    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-08:05:24: I0526 04:05:24.682687    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-08:05:25: I0526 04:05:25.182693    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-08:05:25: [control-plane-check] kube-apiserver is healthy after 4.002363218s
-08:05:25: I0526 04:05:25.685619    1602 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
-</details>
-
-
-* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
-<details><summary>context</summary>
-<pre>13:43:48: I0525 09:43:48.675817    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-13:43:49: I0525 09:43:49.175326    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-13:43:49: I0525 09:43:49.675057    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-13:43:50: I0525 09:43:50.177368    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-13:43:50: [control-plane-check] kube-apiserver is healthy after 4.004390628s
-13:43:50: I0525 09:43:50.681968    1616 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
-</details>
-
-
-* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
-<details><summary>context</summary>
-<pre>13:38:06: [control-plane-check] kube-scheduler is healthy after 2.654985185s
-13:38:06: I0525 09:38:06.663665    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-13:38:07: I0525 09:38:07.165095    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-13:38:07: I0525 09:38:07.664706    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-13:38:08: [control-plane-check] kube-apiserver is healthy after 4.501516165s
-13:38:08: I0525 09:38:08.165936    1626 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
-</details>
-
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details><summary>context</summary>
-<pre>09:16:06: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-09:16:07: [control-plane-check] kube-controller-manager is healthy after 1.092449818s
-09:16:08: [control-plane-check] kube-scheduler is healthy after 1.978771755s
-09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:16:10: [control-plane-check] kube-apiserver is healthy after 4.001529214s
-09:16:10: I0525 05:16:10.566861    1606 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-09:16:10: I0525 05:16:10.569311    1606 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-<a id="per-branch"></a>
-
-## per branch [⬆](#top)
-
-
-### main (29x / 85.29%)
-
-
-#### needs-investigation (15x / 51.72%)
-
-<details>
-<summary> no error snippets (9x / 31.03%) </summary>
+<summary> no error snippets (9x / 29.03%) </summary>
 
 <hr/>
 
@@ -903,11 +578,294 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no matching pattern (6x / 20.69%) </summary>
+<summary> no matching pattern (8x / 25.81%) </summary>
 
 <hr/>
 
-**5x**: _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
+**1x**: _2026-05-26 18:24:41 &#43;0000 UTC_: <code>20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17919/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2059339837684584448#1:build-log.txt%3A8998)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 18:24:41 &#43;0000 UTC_: <code>20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17919/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2059339837684584448#1:build-log.txt%3A8998)
+<details><summary>context</summary>
+<pre>20:51:02:
+20:51:02:   Captured StdOut/StdErr Output &gt;&gt;
+20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;info&#34;,&#34;msg&#34;:&#34;Event(v1.ObjectReference{Kind:\&#34;VirtualMachineInstance\&#34;, Namespace:\&#34;kubevirt-test-default3\&#34;, Name:\&#34;testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\&#34;, UID:\&#34;c86a0bc5-07ae-4204-a46c-f89c66b191b5\&#34;, APIVersion:\&#34;kubevirt.io/v1\&#34;, ResourceVersion:\&#34;133481\&#34;, FieldPath:\&#34;\&#34;}): type: &#39;Normal&#39; reason: &#39;SuccessfulCreate&#39; Created virtual machine pod virt-launcher-testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxrqxxb&#34;,&#34;pos&#34;:&#34;watcher.go:150&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:34.380220Z&#34;}
+20:51:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-slpvj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid c86a0bc5-07ae-4204-a46c-f89c66b191b5]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;server error. command SyncVMI failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: process exited while connecting to monitor: 2026-05-26T20:50:37.865872Z qemu-kvm: -blockdev {\\\&#34;driver\\\&#34;:\\\&#34;file\\\&#34;,\\\&#34;filename\\\&#34;:\\\&#34;/var/run/kubevirt-private/vmi-disks/disk0/disk.img\\\&#34;,\\\&#34;node-name\\\&#34;:\\\&#34;libvirt-1-storage\\\&#34;,\\\&#34;read-only\\\&#34;:false,\\\&#34;discard\\\&#34;:\\\&#34;unmap\\\&#34;,\\\&#34;cache\\\&#34;:{\\\&#34;direct\\\&#34;:false,\\\&#34;no-flush\\\&#34;:false}}: Could not open &#39;/var/run/kubevirt-private/vmi-disks/disk0/disk.img&#39;: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-05-26T20:50:37.903851Z&#34;}
+20:51:02:   &lt;&lt; Captured StdOut/StdErr Output
+20:51:02: ------------------------------
+20:51:37: • [40.121 seconds]</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**6x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
+<details><summary>context</summary>
+<pre>04:23:46: 	- &#39;systemctl status kubelet&#39;
+04:23:46: 	- &#39;journalctl -xeu kubelet&#39;
+04:23:46:
+04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
+04:23:46:
+04:23:46: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+04:23:46: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+* _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+<details><summary>context</summary>
+<pre>02:23:47: 	- &#39;systemctl status kubelet&#39;
+02:23:47: 	- &#39;journalctl -xeu kubelet&#39;
+02:23:47:
+02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
+02:23:47:
+02:23:47: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+02:23:47: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
+<details><summary>context</summary>
+<pre>00:23:57: 	- &#39;systemctl status kubelet&#39;
+00:23:57: 	- &#39;journalctl -xeu kubelet&#39;
+00:23:57:
+00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused
+00:23:57:
+00:23:57: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+00:23:57: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
+<details><summary>context</summary>
+<pre>22:22:52: 	- &#39;systemctl status kubelet&#39;
+22:22:52: 	- &#39;journalctl -xeu kubelet&#39;
+22:22:52:
+22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
+22:22:52:
+22:22:52: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+22:22:52: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+* _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
+<details><summary>context</summary>
+<pre>12:20:46: 	- &#39;systemctl status kubelet&#39;
+12:20:46: 	- &#39;journalctl -xeu kubelet&#39;
+12:20:46:
+12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
+12:20:46:
+12:20:46: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+12:20:46: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+* _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
+<details><summary>context</summary>
+<pre>11:07:53: 	- &#39;systemctl status kubelet&#39;
+11:07:53: 	- &#39;journalctl -xeu kubelet&#39;
+11:07:53:
+11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded
+11:07:53:
+11:07:53: k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow.(*Runner).Run.func1
+11:07:53: 	k8s.io/kubernetes/cmd/kubeadm/app/cmd/phases/workflow/runner.go:262</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
+<details><summary>context</summary>
+<pre>18:19:50:  ✗ Preparing nodes 📦 📦
+18:19:50: ERROR: failed to create cluster: command &#34;podman run --name kind-1.35-worker --hostname kind-1.35-worker --label io.x-k8s.kind.role=worker --privileged --tmpfs /tmp --tmpfs /run --volume 44a1f40a1bfe0ea43c5f2787872ff4101f1ffc9c4e211135498f08c6230f4566:/var:suid,exec,dev --volume /lib/modules:/lib/modules:ro -e KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER --detach --tty --net kind --label io.x-k8s.kind.cluster=kind-1.35 -e container=podman --cgroupns=private --volume /dev/mapper:/dev/mapper --volume=/var/log/audit:/var/log/audit:ro docker.io/kindest/node@sha256:4613778f3cfcd10e615029370f5786704559103cf27bef934597ba562b269661&#34; failed with error: exit status 126
+18:19:50:
+18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device
+18:19:50:
+18:19:50: Stack Trace:
+18:19:50: sigs.k8s.io/kind/pkg/errors.WithStack</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### external (3x / 9.68%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (3x / 9.68%) </summary>
+
+<hr/>
+
+**3x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
+<details><summary>context</summary>
+<pre>08:05:23: [control-plane-check] kube-scheduler is healthy after 2.125371382s
+08:05:24: I0526 04:05:24.183164    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+08:05:24: I0526 04:05:24.682687    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+08:05:25: I0526 04:05:25.182693    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+08:05:25: [control-plane-check] kube-apiserver is healthy after 4.002363218s
+08:05:25: I0526 04:05:25.685619    1602 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
+<details><summary>context</summary>
+<pre>13:43:48: I0525 09:43:48.675817    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+13:43:49: I0525 09:43:49.175326    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+13:43:49: I0525 09:43:49.675057    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+13:43:50: I0525 09:43:50.177368    1616 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+13:43:50: [control-plane-check] kube-apiserver is healthy after 4.004390628s
+13:43:50: I0525 09:43:50.681968    1616 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+<details><summary>context</summary>
+<pre>13:38:06: [control-plane-check] kube-scheduler is healthy after 2.654985185s
+13:38:06: I0525 09:38:06.663665    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+13:38:07: I0525 09:38:07.165095    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+13:38:07: I0525 09:38:07.664706    1626 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+13:38:08: [control-plane-check] kube-apiserver is healthy after 4.501516165s
+13:38:08: I0525 09:38:08.165936    1626 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+<a id="per-branch"></a>
+
+## per branch [⬆](#top)
+
+
+### main (27x / 87.10%)
+
+
+#### needs-investigation (14x / 51.85%)
+
+<details>
+<summary> no error snippets (9x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 11:19:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059957565743173632)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 11:19:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059957565743173632)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-28 09:40:36 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 09:40:36 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17942/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059932689309372416)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+<details>
+<summary>all...</summary>
+
+* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-26 13:44:11 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 13:44:11 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17550/pull-kubevirt-e2e-k8s-1.35-sig-storage/2059267975239700480)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 13:32:59 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 13:32:59 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 13:13:34 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17757/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2058899143815860224)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 13:13:34 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17757/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2058899143815860224)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 12:02:41 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 12:02:41 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no matching pattern (5x / 18.52%) </summary>
+
+<hr/>
+
+**4x**: _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
 <details>
 <summary>all...</summary>
 
@@ -918,8 +876,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 * _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
 
 * _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
-
-* _2026-05-25 09:28:08 &#43;0000 UTC_: <code>09:45:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058842434028179456#1:build-log.txt%3A6661)
 
 </details>
 
@@ -936,10 +892,10 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### internal (10x / 34.48%)
+#### internal (10x / 37.04%)
 
 <details>
-<summary> make bazel-build target failure (9x / 31.03%) </summary>
+<summary> make bazel-build target failure (9x / 33.33%) </summary>
 
 <hr/>
 
@@ -970,7 +926,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (1x / 3.45%) </summary>
+<summary> taint not found during cluster setup (1x / 3.70%) </summary>
 
 <hr/>
 
@@ -985,14 +941,14 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### external (4x / 13.79%)
+#### external (3x / 11.11%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (4x / 13.79%) </summary>
+<summary> transient kube-apiserver body decode noise (3x / 11.11%) </summary>
 
 <hr/>
 
-**4x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
+**3x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
 <details>
 <summary>all...</summary>
 
@@ -1002,20 +958,18 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 
 * _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
 
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
 </details>
 
 <hr/>
 </details>
 
-### release-1.8 (5x / 14.71%)
+### release-1.8 (4x / 12.90%)
 
 
-#### needs-investigation (4x / 80.00%)
+#### needs-investigation (3x / 75.00%)
 
 <details>
-<summary> no matching pattern (4x / 80.00%) </summary>
+<summary> no matching pattern (3x / 75.00%) </summary>
 
 <hr/>
 
@@ -1040,22 +994,12 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 </details>
 
 <hr/>
-
-**1x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-
 </details>
 
-<hr/>
-</details>
-
-#### internal (1x / 20.00%)
+#### internal (1x / 25.00%)
 
 <details>
-<summary> make bazel-build target failure (1x / 20.00%) </summary>
+<summary> make bazel-build target failure (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -1075,13 +1019,13 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per SIG [⬆](#top)
 
 
-### sig-storage (6x / 17.65%)
+### sig-storage (5x / 16.13%)
 
 
-#### needs-investigation (5x / 83.33%)
+#### needs-investigation (5x / 100.00%)
 
 <details>
-<summary> no error snippets (4x / 66.67%) </summary>
+<summary> no error snippets (4x / 80.00%) </summary>
 
 <hr/>
 
@@ -1126,7 +1070,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 <details>
-<summary> no matching pattern (1x / 16.67%) </summary>
+<summary> no matching pattern (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -1141,171 +1085,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-#### external (1x / 16.67%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 09:12:21 &#43;0000 UTC_: <code>09:16:10: I0525 05:16:10.064112    1606 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-k8s-1.34-sig-storage/2058830816263278592#1:build-log.txt%3A762)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (25x / 73.53%)
-
-
-#### needs-investigation (13x / 52.00%)
-
-<details>
-<summary> no matching pattern (9x / 36.00%) </summary>
-
-<hr/>
-
-**7x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
-
-* _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
-
-* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
-
-* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
-
-* _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
-
-* _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
-
-* _2026-05-25 09:28:08 &#43;0000 UTC_: <code>09:45:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058842434028179456#1:build-log.txt%3A6661)
-
-</details>
-
-<hr/>
-
-**2x**: _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
-
-* _2026-05-25 08:14:21 &#43;0000 UTC_: <code>08:25:53: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-e2bf97930c84c036cb4bc89deb6708e780df3ddcdb4f359553f73f210835653b`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058823736756277248#1:build-log.txt%3A652)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> no error snippets (4x / 16.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-<details>
-<summary>all...</summary>
-
-* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 13:32:59 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 13:32:59 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-05-25 12:02:41 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 12:02:41 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (10x / 40.00%)
-
-<details>
-<summary> make bazel-build target failure (10x / 40.00%) </summary>
-
-<hr/>
-
-**10x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-
-* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
-
-* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
-
-* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
-
-* _2026-05-25 21:06:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059018181887922176#1:build-log.txt%3A205)
-
-* _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
-
-* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
-
-* _2026-05-25 16:57:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058955558613946368#1:build-log.txt%3A212)
-
-* _2026-05-25 15:06:25 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058927566504333312#1:build-log.txt%3A205)
-
-* _2026-05-25 13:29:41 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058903179210264576#1:build-log.txt%3A208)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 8.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (2x / 8.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
-<details>
-<summary>all...</summary>
-
-* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
-
-* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-network (3x / 8.82%)
+### sig-network (3x / 9.68%)
 
 
 #### needs-investigation (1x / 33.33%)
@@ -1362,4 +1142,146 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-Last updated: 2026-06-01 07:48:32
+### sig-compute (23x / 74.19%)
+
+
+#### needs-investigation (11x / 47.83%)
+
+<details>
+<summary> no matching pattern (7x / 30.43%) </summary>
+
+<hr/>
+
+**6x**: _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 04:07:33 &#43;0000 UTC_: <code>04:23:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059124119928049664#1:build-log.txt%3A6615)
+
+* _2026-05-26 02:07:30 &#43;0000 UTC_: <code>02:23:47: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059093907123212288#1:build-log.txt%3A6643)
+
+* _2026-05-26 00:07:20 &#43;0000 UTC_: <code>00:23:57: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: dial tcp 127.0.0.1:10248: connect: connection refused</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059063686630215680#1:build-log.txt%3A6633)
+
+* _2026-05-25 22:06:15 &#43;0000 UTC_: <code>22:22:52: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2059033219742830592#1:build-log.txt%3A6663)
+
+* _2026-05-25 12:02:20 &#43;0000 UTC_: <code>12:20:46: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058881203599052800#1:build-log.txt%3A6641)
+
+* _2026-05-25 10:51:45 &#43;0000 UTC_: <code>11:07:53: error: error execution phase wait-control-plane: failed while waiting for the kubelet to start: The HTTP call equal to &#39;curl -sSL http://127.0.0.1:10248/healthz&#39; returned error: Get &#34;http://127.0.0.1:10248/healthz&#34;: context deadline exceeded</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17836/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058863476897484800#1:build-log.txt%3A6626)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 18:09:04 &#43;0000 UTC_: <code>18:19:50: Command Output: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3f2e7223365c31e10f3aa8729b3bad4d3184cd6274f8ce715bd594be2df9e31f`: No space left on device</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058973438944481280#1:build-log.txt%3A641)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> no error snippets (4x / 17.39%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 13:32:59 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 13:32:59 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2058903178400763904)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-05-25 12:02:41 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 12:02:41 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-vgpu/2058881219403190272)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (2x / 8.70%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (2x / 8.70%) </summary>
+
+<hr/>
+
+**2x**: _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+<details>
+<summary>all...</summary>
+
+* _2026-05-25 13:38:47 &#43;0000 UTC_: <code>13:43:50: I0525 09:43:50.177279    1616 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-operator/2058903184314732544#1:build-log.txt%3A764)
+
+* _2026-05-25 13:34:07 &#43;0000 UTC_: <code>13:38:07: I0525 09:38:07.664647    1626 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial/2058903180946706432#1:build-log.txt%3A755)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (10x / 43.48%)
+
+<details>
+<summary> make bazel-build target failure (10x / 43.48%) </summary>
+
+<hr/>
+
+**10x**: _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+<details>
+<summary>all...</summary>
+
+* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
+
+* _2026-05-26 07:27:02 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059174345552433152#1:build-log.txt%3A203)
+
+* _2026-05-26 06:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17759/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059154748795260928#1:build-log.txt%3A200)
+
+* _2026-05-26 01:07:29 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17100/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059078799525416960#1:build-log.txt%3A203)
+
+* _2026-05-25 21:06:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059018181887922176#1:build-log.txt%3A205)
+
+* _2026-05-25 19:52:10 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058999436138254336#1:build-log.txt%3A212)
+
+* _2026-05-25 17:10:43 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17876/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.8/2058958831135756288#1:build-log.txt%3A204)
+
+* _2026-05-25 16:57:40 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17825/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058955558613946368#1:build-log.txt%3A212)
+
+* _2026-05-25 15:06:25 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17902/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058927566504333312#1:build-log.txt%3A205)
+
+* _2026-05-25 13:29:41 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17900/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2058903179210264576#1:build-log.txt%3A208)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-01 10:50:14
