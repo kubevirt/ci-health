@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-05-28 (3x / 25.00%)
+### 2026-05-28 (3x / 37.50%)
 
 
 #### needs-investigation (3x / 100.00%)
@@ -58,7 +58,7 @@
 <hr/>
 </details>
 
-### 2026-05-27 (1x / 8.33%)
+### 2026-05-27 (1x / 12.50%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -79,46 +79,13 @@
 <hr/>
 </details>
 
-### 2026-05-26 (8x / 66.67%)
+### 2026-05-26 (4x / 50.00%)
 
 
-#### internal (2x / 25.00%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make bazel-build target failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (5x / 62.50%)
+#### needs-investigation (4x / 100.00%)
 
 <details>
-<summary> no error snippets (4x / 50.00%) </summary>
+<summary> no error snippets (3x / 75.00%) </summary>
 
 <hr/>
 
@@ -151,19 +118,9 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> no matching pattern (1x / 12.50%) </summary>
+<summary> no matching pattern (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -178,33 +135,15 @@
 <hr/>
 </details>
 
-#### external (1x / 12.50%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### needs-investigation (9x / 75.00%)
+### needs-investigation (8x / 100.00%)
 
 <details>
-<summary> no error snippets (8x / 66.67%) </summary>
+<summary> no error snippets (7x / 87.50%) </summary>
 
 <hr/>
 
@@ -277,19 +216,9 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> no matching pattern (1x / 8.33%) </summary>
+<summary> no matching pattern (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -314,150 +243,18 @@
 <hr/>
 </details>
 
-### internal (2x / 16.67%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details><summary>context</summary>
-<pre>08:22:41: &#43;&#43; for node in ${master_nodes[@]}
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/master:NoSchedule-
-08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-08:22:41: &#43;&#43; _kubectl taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-sriov/.kubeconfig taint nodes sriov-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-08:22:41: node/sriov-control-plane untainted</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make bazel-build target failure (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details><summary>context</summary>
-<pre>&#43; make bazel-build-images
-hack/dockerized &#34;export BUILD_ARCH= &amp;&amp; DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT=kv- ./hack/multi-arch.sh build-images&#34;
-08:00:34: Error: OCI runtime error: crun: create `/sys/fs/cgroup/libpod_parent/libpod-3ade505c57e218819e3b2588636252484d69f1c39a5d0b601f611893f13dff83`: No space left on device
-make: *** [Makefile:39: bazel-build-images] Error 126
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### external (1x / 8.33%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 8.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details><summary>context</summary>
-<pre>08:05:23: [control-plane-check] kube-scheduler is healthy after 2.125371382s
-08:05:24: I0526 04:05:24.183164    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-08:05:24: I0526 04:05:24.682687    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-08:05:25: I0526 04:05:25.182693    1602 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-08:05:25: [control-plane-check] kube-apiserver is healthy after 4.002363218s
-08:05:25: I0526 04:05:25.685619    1602 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (11x / 91.67%)
+### main (7x / 87.50%)
 
 
-#### internal (2x / 18.18%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 9.09%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make bazel-build target failure (1x / 9.09%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 9.09%)
+#### needs-investigation (7x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 9.09%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (8x / 72.73%)
-
-<details>
-<summary> no error snippets (8x / 72.73%) </summary>
+<summary> no error snippets (7x / 100.00%) </summary>
 
 <hr/>
 
@@ -530,19 +327,9 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 </details>
 
 <hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
 </details>
 
-<hr/>
-</details>
-
-### release-1.8 (1x / 8.33%)
+### release-1.8 (1x / 12.50%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -568,7 +355,7 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 ## per SIG [⬆](#top)
 
 
-### sig-storage (5x / 41.67%)
+### sig-storage (5x / 62.50%)
 
 
 #### needs-investigation (5x / 100.00%)
@@ -634,31 +421,13 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 <hr/>
 </details>
 
-### sig-compute (5x / 41.67%)
+### sig-compute (3x / 37.50%)
 
 
-#### internal (1x / 20.00%)
-
-<details>
-<summary> make bazel-build target failure (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:01 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 126</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2059182623372087296#1:build-log.txt%3A200)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (4x / 80.00%)
+#### needs-investigation (3x / 100.00%)
 
 <details>
-<summary> no error snippets (4x / 80.00%) </summary>
+<summary> no error snippets (3x / 100.00%) </summary>
 
 <hr/>
 
@@ -691,55 +460,6 @@ make: *** [Makefile:39: bazel-build-images] Error 126
 </details>
 
 <hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-operator/2059182628493332480)
-
 </details>
 
-<hr/>
-</details>
-
-### sig-network (2x / 16.67%)
-
-
-#### internal (1x / 50.00%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:14:12 &#43;0000 UTC_: <code>08:22:41: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17830/pull-kubevirt-e2e-kind-sriov/2059184808495419392#1:build-log.txt%3A1431)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 50.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-<details>
-<summary>all...</summary>
-
-* _2026-05-26 08:00:04 &#43;0000 UTC_: <code>08:05:25: I0526 04:05:25.182639    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17907/pull-kubevirt-e2e-k8s-1.35-sig-network/2059182625913835520#1:build-log.txt%3A765)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-02 07:41:37
+Last updated: 2026-06-02 10:39:40
