@@ -17,11 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-06-01 (5x / 55.56%)
+### 2026-06-01 (5x / 62.50%)
 
 
 #### external (4x / 80.00%)
 
+<details>
+<summary> container image pull failure in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+
+* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> download failure in context (2x / 40.00%) </summary>
 
@@ -47,23 +64,6 @@
 
 <hr/>
 </details>
-<details>
-<summary> container image pull failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-
-* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-
-</details>
-
-<hr/>
-</details>
 
 #### internal (1x / 20.00%)
 
@@ -83,7 +83,7 @@
 <hr/>
 </details>
 
-### 2026-05-28 (3x / 33.33%)
+### 2026-05-28 (3x / 37.50%)
 
 
 #### needs-investigation (3x / 100.00%)
@@ -124,36 +124,52 @@
 <hr/>
 </details>
 
-### 2026-05-27 (1x / 11.11%)
-
-
-#### needs-investigation (1x / 100.00%)
-
-<details>
-<summary> no error snippets (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-<details>
-<summary>all...</summary>
-
-* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (4x / 44.44%)
+### external (4x / 50.00%)
 
 <details>
-<summary> download failure in context (2x / 22.22%) </summary>
+<summary> container image pull failure in context (2x / 25.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+<details><summary>context</summary>
+<pre>14:07:08: Copying blob sha256:ea389a75c17fde43e7cd5c66516847c2c408b5b3b516bafaeb3aedd7fe03ccf7
+14:07:08: Copying blob sha256:41d62e0ccf8c09688ae70cac2e6a437e05e4fb444268ccdf95995c226b7757e5
+14:07:14: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: copying system image from manifest list: reading blob sha256:957776ed783da3cb80920be93eaa5961b047f73eaccbd6a6ac22c5df186de45a: fetching blob: received unexpected HTTP status: 502 Bad Gateway
+make: *** [Makefile:39: bazel-build-images] Error 125
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+<details><summary>context</summary>
+<pre>14:23:41: time=&#34;2026-06-01T14:23:41Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (2/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 504 Gateway Time-out&#34;
+14:23:52: time=&#34;2026-06-01T14:23:52Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (3/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 504 Gateway Time-out&#34;
+14:23:53: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 502 Bad Gateway
+make: *** [Makefile:39: bazel-build-images] Error 125
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (2x / 25.00%) </summary>
 
 <hr/>
 
@@ -197,48 +213,11 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
-<details>
-<summary> container image pull failure in context (2x / 22.22%) </summary>
 
-<hr/>
-
-**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-<details><summary>context</summary>
-<pre>14:07:08: Copying blob sha256:ea389a75c17fde43e7cd5c66516847c2c408b5b3b516bafaeb3aedd7fe03ccf7
-14:07:08: Copying blob sha256:41d62e0ccf8c09688ae70cac2e6a437e05e4fb444268ccdf95995c226b7757e5
-14:07:14: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: copying system image from manifest list: reading blob sha256:957776ed783da3cb80920be93eaa5961b047f73eaccbd6a6ac22c5df186de45a: fetching blob: received unexpected HTTP status: 502 Bad Gateway
-make: *** [Makefile:39: bazel-build-images] Error 125
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-<details><summary>context</summary>
-<pre>14:23:41: time=&#34;2026-06-01T14:23:41Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (2/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 504 Gateway Time-out&#34;
-14:23:52: time=&#34;2026-06-01T14:23:52Z&#34; level=warning msg=&#34;Failed, retrying in 1s ... (3/3). Error: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 504 Gateway Time-out&#34;
-14:23:53: Error: unable to copy from source docker://quay.io/kubevirt/builder:2602201229-4494d1587: initializing source docker://quay.io/kubevirt/builder:2602201229-4494d1587: pinging container registry quay.io: received unexpected HTTP status: 502 Bad Gateway
-make: *** [Makefile:39: bazel-build-images] Error 125
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### needs-investigation (4x / 44.44%)
+### needs-investigation (3x / 37.50%)
 
 <details>
-<summary> no error snippets (4x / 44.44%) </summary>
+<summary> no error snippets (3x / 37.50%) </summary>
 
 <hr/>
 
@@ -271,22 +250,12 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 </details>
 
 <hr/>
-
-**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-<details>
-<summary>all...</summary>
-
-* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-
 </details>
 
-<hr/>
-</details>
-
-### internal (1x / 11.11%)
+### internal (1x / 12.50%)
 
 <details>
-<summary> deployment timeout (1x / 11.11%) </summary>
+<summary> deployment timeout (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -316,13 +285,30 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ## per branch [⬆](#top)
 
 
-### main (9x / 100.00%)
+### main (8x / 100.00%)
 
 
-#### external (4x / 44.44%)
+#### external (4x / 50.00%)
 
 <details>
-<summary> download failure in context (2x / 22.22%) </summary>
+<summary> container image pull failure in context (2x / 25.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+
+* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (2x / 25.00%) </summary>
 
 <hr/>
 
@@ -346,28 +332,11 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 </details>
-<details>
-<summary> container image pull failure in context (2x / 22.22%) </summary>
 
-<hr/>
-
-**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-
-* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (4x / 44.44%)
+#### needs-investigation (3x / 37.50%)
 
 <details>
-<summary> no error snippets (4x / 44.44%) </summary>
+<summary> no error snippets (3x / 37.50%) </summary>
 
 <hr/>
 
@@ -400,22 +369,12 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 </details>
 
 <hr/>
-
-**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-<details>
-<summary>all...</summary>
-
-* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-
 </details>
 
-<hr/>
-</details>
-
-#### internal (1x / 11.11%)
+#### internal (1x / 12.50%)
 
 <details>
-<summary> deployment timeout (1x / 11.11%) </summary>
+<summary> deployment timeout (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -435,7 +394,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 33.33%)
+### sig-compute (3x / 37.50%)
 
 
 #### external (2x / 66.67%)
@@ -476,13 +435,13 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### sig-storage (4x / 44.44%)
+### sig-storage (3x / 37.50%)
 
 
-#### external (1x / 25.00%)
+#### external (1x / 33.33%)
 
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -497,10 +456,10 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-#### needs-investigation (3x / 75.00%)
+#### needs-investigation (2x / 66.67%)
 
 <details>
-<summary> no error snippets (3x / 75.00%) </summary>
+<summary> no error snippets (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -523,19 +482,9 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 </details>
 
 <hr/>
-
-**1x**: _2026-05-27 10:39:00 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-<details>
-<summary>all...</summary>
-
-* _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
-
 </details>
 
-<hr/>
-</details>
-
-### sig-network (2x / 22.22%)
+### sig-network (2x / 25.00%)
 
 
 #### internal (1x / 50.00%)
@@ -574,4 +523,4 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-06-03 10:43:58
+Last updated: 2026-06-03 13:43:35
