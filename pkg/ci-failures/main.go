@@ -4,19 +4,21 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/kubevirt/ci-health/pkg/prow"
-	"github.com/kubevirt/ci-health/pkg/sigretests"
-	log "github.com/sirupsen/logrus"
-	"gopkg.in/yaml.v3"
 	"io"
 	"io/fs"
 	"net/http"
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/kubevirt/ci-health/pkg/prow"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
+	log "github.com/sirupsen/logrus"
+	"gopkg.in/yaml.v3"
 )
 
 const logsDir = "output/tmp/build-logs"
@@ -260,7 +262,18 @@ func ExtractErrors(ciFailureJobURLs []string, outputDir string) ([]string, error
 		log.Warnf("unmatched job urls: %v+", urlsNotMatchedByGroup)
 	}
 
+	slices.Sort(outputFiles)
 	return outputFiles, nil
+}
+
+// ReadBuildLogByID reads a cached build log YAML file by build ID and returns its decoded content.
+func ReadBuildLogByID(buildID int) (string, error) {
+	logFilePath := filepath.Join(logsDir, fmt.Sprintf("%d.yaml", buildID))
+	bl, err := readBuildLog(logFilePath)
+	if err != nil {
+		return "", err
+	}
+	return bl.LogContent, nil
 }
 
 func readBuildLog(logFilePath string) (*buildLog, error) {

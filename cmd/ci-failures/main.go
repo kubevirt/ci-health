@@ -132,6 +132,8 @@ Accepts a Prow job URL, e.g.:
 	flakeOverviewDays    int
 	flakeOverviewFilter  string
 	flakeOverviewConc    int
+	showLogTail  int
+	showLogGrep  string
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
@@ -188,6 +190,18 @@ Requires a session ID (via --session-id flag or CLAUDE_CODE_SESSION_ID env var).
 		RunE: summarizeSession,
 	}
 
+	showLogCmd = &cobra.Command{
+		Use:   "show-log [build-id]",
+		Short: "Print decoded build log content from a cached build log YAML file.",
+		Long: `Read a cached build log YAML file (output/tmp/build-logs/{build-id}.yaml),
+decode the binary log content, and print it to stdout.
+
+Use --tail to print only the last N lines (default: all).
+Use --grep to filter lines matching a pattern (case-insensitive).`,
+		Args: cobra.ExactArgs(1),
+		RunE: showLog,
+	}
+
 	discoverLanesCmd = &cobra.Command{
 		Use:   "discover-lanes [version]",
 		Short: "Discover testgrid lanes for a Kubernetes version.",
@@ -231,9 +245,13 @@ func generateYAML(_ *cobra.Command, _ []string) error {
 	if err != nil {
 		return fmt.Errorf("failed downloading build logs: %v", err)
 	}
-	_, err = cifailures.ExtractErrors(ciFailureJobURLs, tmpOutputPath)
+	outputFiles, err := cifailures.ExtractErrors(ciFailureJobURLs, tmpOutputPath)
 	if err != nil {
 		return fmt.Errorf("failed extracting errors from build logs: %v", err)
+	}
+	fmt.Println("generated_files:")
+	for _, f := range outputFiles {
+		fmt.Printf("  - %s\n", f)
 	}
 	return nil
 }
@@ -568,6 +586,40 @@ func summarizeSession(_ *cobra.Command, _ []string) error {
 	return encoder.Close()
 }
 
+func showLog(_ *cobra.Command, args []string) error {
+	buildID, err := strconv.Atoi(args[0])
+	if err != nil {
+		return fmt.Errorf("invalid build ID %q: %v", args[0], err)
+	}
+
+	content, err := cifailures.ReadBuildLogByID(buildID)
+	if err != nil {
+		return err
+	}
+
+	lines := strings.Split(content, "\n")
+
+	if showLogGrep != "" {
+		pattern := strings.ToLower(showLogGrep)
+		var matched []string
+		for i, line := range lines {
+			if strings.Contains(strings.ToLower(line), pattern) {
+				matched = append(matched, fmt.Sprintf("%d: %s", i+1, line))
+			}
+		}
+		lines = matched
+	}
+
+	if showLogTail > 0 && showLogTail < len(lines) {
+		lines = lines[len(lines)-showLogTail:]
+	}
+
+	for _, line := range lines {
+		fmt.Println(line)
+	}
+	return nil
+}
+
 func init() {
 	log.SetFormatter(&log.JSONFormatter{})
 	log.SetLevel(log.DebugLevel)
@@ -582,6 +634,9 @@ func init() {
 	flakeOverviewCmd.Flags().StringVar(&flakeOverviewFilter, "filter-lane-regex", `.*-root$`, "Regex for lanes to exclude")
 	flakeOverviewCmd.Flags().IntVar(&flakeOverviewConc, "concurrency", 6, "Parallel testgrid fetches (default 6)")
 
+	showLogCmd.Flags().IntVar(&showLogTail, "tail", 0, "Print only the last N lines (0 = all)")
+	showLogCmd.Flags().StringVar(&showLogGrep, "grep", "", "Filter lines containing this pattern (case-insensitive)")
+
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
 	rootCmd.AddCommand(analyzePRCmd)
@@ -592,6 +647,7 @@ func init() {
 	rootCmd.AddCommand(changeRelevanceCmd)
 	rootCmd.AddCommand(summarizeSessionCmd)
 	rootCmd.AddCommand(discoverLanesCmd)
+	rootCmd.AddCommand(showLogCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
