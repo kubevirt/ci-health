@@ -235,34 +235,6 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### internal (1x / 11.11%)
-
-<details>
-<summary> deployment timeout (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-<details><summary>context</summary>
-<pre>14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;Object whereabouts-config applied successfully&#34;
-14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;Object whereabouts applied successfully&#34;
-14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf wait deployment -n cluster-network-addons cluster-network-addons-operator --for condition=Available --timeout=200s&#34;
-14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator
-14:09:35:
-14:09:35: ===== 3aee673b550f462b438293ae65a86d9f03c54de2ada1f1c52a982ff5e1e7ba94 ====
-14:09:35: &#43; NUM_NODES=3</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### needs-investigation (4x / 44.44%)
 
 <details>
@@ -305,6 +277,34 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <summary>all...</summary>
 
 * _2026-05-27 10:39:00 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17911/pull-kubevirt-e2e-k8s-1.34-sig-storage/2059584804717858816)
+
+</details>
+
+<hr/>
+</details>
+
+### internal (1x / 11.11%)
+
+<details>
+<summary> deployment timeout (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+<details><summary>context</summary>
+<pre>14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;Object whereabouts-config applied successfully&#34;
+14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;Object whereabouts applied successfully&#34;
+14:06:15: time=&#34;2026-06-01T14:06:15Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf wait deployment -n cluster-network-addons cluster-network-addons-operator --for condition=Available --timeout=200s&#34;
+14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator
+14:09:35:
+14:09:35: ===== 3aee673b550f462b438293ae65a86d9f03c54de2ada1f1c52a982ff5e1e7ba94 ====
+14:09:35: &#43; NUM_NODES=3</pre>
+</details>
+
 
 </details>
 
@@ -479,6 +479,24 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ### sig-storage (4x / 44.44%)
 
 
+#### external (1x / 25.00%)
+
+<details>
+<summary> download failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-01 14:03:07 &#43;0000 UTC_: <code>14:05:31: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-storage/2061439596666818560#1:build-log.txt%3A590)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:03:07 &#43;0000 UTC_: <code>14:05:31: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-storage/2061439596666818560#1:build-log.txt%3A590)
+
+</details>
+
+<hr/>
+</details>
+
 #### needs-investigation (3x / 75.00%)
 
 <details>
@@ -517,44 +535,8 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-#### external (1x / 25.00%)
-
-<details>
-<summary> download failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-01 14:03:07 &#43;0000 UTC_: <code>14:05:31: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-storage/2061439596666818560#1:build-log.txt%3A590)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:03:07 &#43;0000 UTC_: <code>14:05:31: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-storage/2061439596666818560#1:build-log.txt%3A590)
-
-</details>
-
-<hr/>
-</details>
-
 ### sig-network (2x / 22.22%)
 
-
-#### external (1x / 50.00%)
-
-<details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
-
-</details>
-
-<hr/>
-</details>
 
 #### internal (1x / 50.00%)
 
@@ -574,4 +556,22 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-06-03 04:43:37
+#### external (1x / 50.00%)
+
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-03 10:43:58
