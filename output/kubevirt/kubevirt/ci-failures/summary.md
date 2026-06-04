@@ -525,24 +525,6 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ### sig-compute (3x / 33.33%)
 
 
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no error snippets (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-<details>
-<summary>all...</summary>
-
-* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (2x / 66.67%)
 
 <details>
@@ -557,6 +539,24 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 * _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
 
 * _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no error snippets (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-05-28 11:19:26 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
+<details>
+<summary>all...</summary>
+
+* _2026-05-28 11:19:26 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17822/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2059957561557258240)
 
 </details>
 
@@ -602,4 +602,4 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-06-04 04:40:01
+Last updated: 2026-06-04 07:38:10
