@@ -67,6 +67,43 @@ var _ = Describe("main", func() {
 		})
 	})
 
+	Context("DoHTTPWithRetry", func() {
+		var server *httptest.Server
+
+		AfterEach(func() {
+			if server != nil {
+				server.Close()
+			}
+		})
+
+		It("returns nil error for 200 OK", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusOK)
+			}))
+			resp, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+		})
+
+		It("returns nil error for 404 Not Found", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusNotFound)
+			}))
+			resp, err := DoHTTPWithRetry(server.URL, http.Head)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusNotFound))
+		})
+
+		It("returns error for 403 Forbidden", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusForbidden)
+			}))
+			_, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("status 403"))
+		})
+	})
+
 	Context("filterForLastCommit time filtering", func() {
 		var server *httptest.Server
 		var testCommit string
