@@ -9,7 +9,7 @@ on:
 jobs:
   summary-update:
     runs-on: ubuntu-latest
-    container: docker.io/golang:1.24
+    container: docker.io/golang:1.26
     steps:
       - uses: actions/checkout@v2
         with:
