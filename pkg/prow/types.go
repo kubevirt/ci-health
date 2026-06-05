@@ -6,7 +6,7 @@ type Started struct {
 	Timestamp int64  `json:"timestamp"`
 	Pull      string `json:"pull"`
 	Repos     struct {
-		repo string `json:"kubevirt/kubevirt"`
+		Repo string `json:"kubevirt/kubevirt"`
 	} `json:"repos"`
 	RepoCommit  string `json:"repo-commit"`
 	RepoVersion string `json:"repo-version"`
