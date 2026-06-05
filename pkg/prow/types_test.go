@@ -2,10 +2,11 @@ package prow
 
 import (
 	"encoding/json"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 	"os"
 	"testing"
+
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
 )
 
 func TestProw(t *testing.T) {

@@ -145,7 +145,11 @@ func fetchJunit(url string) ([]junit.Suite, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch %s: %s", url, err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	// Ignore missing junit files as it suggests an issue with the job
 	if resp.StatusCode == http.StatusNotFound {
@@ -195,7 +199,11 @@ func fetchStartedTime(failureURL string) time.Time {
 		log.Warnf("failed to fetch started.json: %s", err)
 		return time.Time{}
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	if resp.StatusCode != http.StatusOK {
 		log.Warnf("failed to fetch started.json from %s: status code %d", startedURL, resp.StatusCode)
@@ -425,7 +433,11 @@ func Generate(opt *types.Options) error {
 	if err != nil {
 		return fmt.Errorf("could not create report file: %w", err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing report file")
+		}
+	}()
 
 	err = reportTemplate.Execute(outputFile, reportData)
 	if err != nil {

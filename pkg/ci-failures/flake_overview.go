@@ -58,7 +58,11 @@ func fetchFlakefinder24hReport(reportURL string) (*FlakefinderReport, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch %s: %w", reportURL, err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("HTTP %d fetching %s", resp.StatusCode, reportURL)
@@ -233,7 +237,11 @@ func WriteFlakeOverviewResultYAML(outputPath string, result *FlakeOverviewResult
 	if err != nil {
 		return fmt.Errorf("failed to create %s: %w", outputPath, err)
 	}
-	defer f.Close()
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(f)
 	if err := encoder.Encode(result); err != nil {

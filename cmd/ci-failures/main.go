@@ -126,14 +126,14 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
-	testRateDays            int
-	laneRateDays            int
-	laneRateMaxSuccessRate  float64
-	flakeOverviewDays    int
-	flakeOverviewFilter  string
-	flakeOverviewConc    int
-	showLogTail  int
-	showLogGrep  string
+	testRateDays           int
+	laneRateDays           int
+	laneRateMaxSuccessRate float64
+	flakeOverviewDays      int
+	flakeOverviewFilter    string
+	flakeOverviewConc      int
+	showLogTail            int
+	showLogGrep            string
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
@@ -262,7 +262,11 @@ func writeCIFailureJobsURLFile(ciFailureJobURLs []string) error {
 	if err != nil {
 		return fmt.Errorf("failed creating ci failure jobs file: %v", err)
 	}
-	defer ciFailureJobsFile.Close()
+	defer func() {
+		if err := ciFailureJobsFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing ci failure jobs file")
+		}
+	}()
 	_, err = io.WriteString(ciFailureJobsFile, strings.Join(ciFailureJobURLs, "\n"))
 	if err != nil {
 		return fmt.Errorf("failed writing ci failure jobs file: %v", err)
@@ -295,6 +299,9 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 	// Deserialize JobBuildErrors files
 	for _, fileName := range files {
 		file, err := os.Open(fileName)
+		if err != nil {
+			return fmt.Errorf("failed to open file %q: %v", fileName, err)
+		}
 		var jobBuildErrors *cifailures.JobBuildErrors
 		err = yaml.NewDecoder(file).Decode(&jobBuildErrors)
 		if err != nil {

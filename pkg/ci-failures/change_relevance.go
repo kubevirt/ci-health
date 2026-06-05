@@ -176,16 +176,16 @@ func FetchPRChangedFiles(org, repo string, prNumber int) ([]string, error) {
 		}
 
 		if resp.StatusCode != http.StatusOK {
-			resp.Body.Close()
+			resp.Body.Close() //nolint:errcheck
 			return nil, fmt.Errorf("GitHub API returned status %d for %s", resp.StatusCode, apiURL)
 		}
 
 		var files []ghPRFile
 		if err := json.NewDecoder(resp.Body).Decode(&files); err != nil {
-			resp.Body.Close()
+			resp.Body.Close() //nolint:errcheck
 			return nil, fmt.Errorf("failed to decode GitHub API response: %w", err)
 		}
-		resp.Body.Close()
+		resp.Body.Close() //nolint:errcheck
 
 		for _, f := range files {
 			allFiles = append(allFiles, f.Filename)
@@ -345,7 +345,11 @@ func WriteChangeRelevanceResultYAML(outputPath string, result *ChangeRelevanceRe
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %v", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

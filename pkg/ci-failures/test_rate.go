@@ -19,10 +19,10 @@ const maxDays = 28
 var flakefinderBaseURL = "https://storage.googleapis.com/kubevirt-prow/reports/flakefinder/kubevirt/kubevirt"
 
 type FlakefinderReport struct {
-	StartOfReport string                            `json:"startOfReport"`
-	EndOfReport   string                            `json:"endOfReport"`
-	Headers       []string                          `json:"headers"`
-	Tests         []string                          `json:"tests"`
+	StartOfReport string                             `json:"startOfReport"`
+	EndOfReport   string                             `json:"endOfReport"`
+	Headers       []string                           `json:"headers"`
+	Tests         []string                           `json:"tests"`
 	Data          map[string]map[string]*TestDetails `json:"data"`
 }
 
@@ -404,7 +404,11 @@ func WriteTestRateResultYAML(outputPath string, result *TestRateResult) error {
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %v", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

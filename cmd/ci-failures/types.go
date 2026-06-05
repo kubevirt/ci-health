@@ -1,8 +1,9 @@
 package main
 
 import (
-	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
 	"sort"
+
+	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
 )
 
 type ShareCategory struct {

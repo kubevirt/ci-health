@@ -37,7 +37,12 @@ func ShowCIFailureJobs() ([]string, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to open results.json: %v", err)
 	}
-	defer jsonFile.Close()
+	defer func(jsonFile *os.File) {
+		err := jsonFile.Close()
+		if err != nil {
+			log.WithError(err).Warnf("failed to close jsonFile %s", jsonFile.Name())
+		}
+	}(jsonFile)
 
 	byteValue, _ := io.ReadAll(jsonFile)
 

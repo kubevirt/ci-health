@@ -238,7 +238,7 @@ func TestFetchPRChangedFiles(t *testing.T) {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(files)
+		json.NewEncoder(w).Encode(files) //nolint:errcheck
 	}))
 	defer server.Close()
 
@@ -266,9 +266,9 @@ func TestFetchPRChangedFilesPagination(t *testing.T) {
 		page := r.URL.Query().Get("page")
 		w.Header().Set("Content-Type", "application/json")
 		if page == "2" {
-			json.NewEncoder(w).Encode(page2)
+			json.NewEncoder(w).Encode(page2) //nolint:errcheck
 		} else {
-			json.NewEncoder(w).Encode(page1)
+			json.NewEncoder(w).Encode(page1) //nolint:errcheck
 		}
 	}))
 	defer server.Close()

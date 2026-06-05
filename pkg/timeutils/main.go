@@ -10,14 +10,10 @@ func ClosestMonday(date string) (time.Time, error) {
 	currentDate, err := time.Parse(layout, date)
 
 	if err != nil {
-		return time.Time{}, fmt.Errorf("Not a valid date: %q", date)
+		return time.Time{}, fmt.Errorf("not a valid date: %q", date)
 	}
 
-	for {
-		if currentDate.Weekday().String() == "Monday" {
-			break
-		}
-
+	for currentDate.Weekday() != time.Monday {
 		currentDate = currentDate.AddDate(0, 0, 1)
 	}
 

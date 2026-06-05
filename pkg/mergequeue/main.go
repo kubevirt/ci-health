@@ -130,16 +130,16 @@ func createMapsFromEvents(pr *types.MergeQueuePullRequestFragment, date time.Tim
 	labelsAdded = make(map[string]time.Time)
 	labelsRemoved = make(map[string]time.Time)
 
-	for _, timelineItem := range pr.TimelineItems.Nodes {
+	for _, timelineItem := range pr.Nodes {
 		if isLabeledEvent(timelineItem, date) {
 
-			labelsAdded[timelineItem.LabeledEventFragment.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
-			labelsRemoved[timelineItem.LabeledEventFragment.AddedLabel.Name] = zeroDate
+			labelsAdded[timelineItem.AddedLabel.Name] = timelineItem.LabeledEventFragment.CreatedAt
+			labelsRemoved[timelineItem.AddedLabel.Name] = zeroDate
 
 		} else if isUnlabeledEvent(timelineItem, date) {
 
-			labelsAdded[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = zeroDate
-			labelsRemoved[timelineItem.UnlabeledEventFragment.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
+			labelsAdded[timelineItem.RemovedLabel.Name] = zeroDate
+			labelsRemoved[timelineItem.RemovedLabel.Name] = timelineItem.UnlabeledEventFragment.CreatedAt
 
 		}
 	}
@@ -148,13 +148,13 @@ func createMapsFromEvents(pr *types.MergeQueuePullRequestFragment, date time.Tim
 
 func isLabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
 	return timelineItem.LabeledEventFragment != types.LabeledEventFragment{} &&
-		timelineItem.LabeledEventFragment.AddedLabel.Name != "" &&
+		timelineItem.AddedLabel.Name != "" &&
 		date.After(timelineItem.LabeledEventFragment.CreatedAt)
 }
 
 func isUnlabeledEvent(timelineItem types.TimelineItem, date time.Time) bool {
 	return timelineItem.UnlabeledEventFragment != types.UnlabeledEventFragment{} &&
-		timelineItem.UnlabeledEventFragment.RemovedLabel.Name != "" &&
+		timelineItem.RemovedLabel.Name != "" &&
 		date.After(timelineItem.UnlabeledEventFragment.CreatedAt)
 }
 
@@ -209,7 +209,7 @@ func firstMapEntryWithKeyMatchingPatternAndNonZeroDate(labelsToTimes map[string]
 
 func hasAllLabelsRequiredForMerge(labelsAdded map[string]time.Time, labelsRemoved map[string]time.Time) bool {
 	for _, requiredForMergeLabel := range constants.RequiredForMergeLabels() {
-		if labelsAdded[requiredForMergeLabel] == zeroDate || labelsRemoved[requiredForMergeLabel] != zeroDate {
+		if labelsAdded[requiredForMergeLabel].Equal(zeroDate) || !labelsRemoved[requiredForMergeLabel].Equal(zeroDate) {
 			return false
 		}
 	}

@@ -17,8 +17,8 @@ var testgridDashboards = []string{
 }
 
 type DiscoverLanesResult struct {
-	VersionFilter string                    `yaml:"version_filter"`
-	Dashboards    []DiscoverLanesDashboard   `yaml:"dashboards"`
+	VersionFilter string                   `yaml:"version_filter"`
+	Dashboards    []DiscoverLanesDashboard `yaml:"dashboards"`
 }
 
 type DiscoverLanesDashboard struct {
@@ -44,7 +44,11 @@ func fetchDashboardSummary(dashboard string) (map[string]testgridSummaryEntry, e
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch testgrid summary: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	if resp.StatusCode != 200 {
 		return nil, fmt.Errorf("testgrid returned status %d for %s", resp.StatusCode, apiURL)
@@ -99,7 +103,11 @@ func WriteDiscoverLanesResultYAML(outputPath string, result *DiscoverLanesResult
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %w", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

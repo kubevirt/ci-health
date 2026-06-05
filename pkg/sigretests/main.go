@@ -140,21 +140,25 @@ func filterForLastCommit(storageBaseURL string, org string, repo string, prNumbe
 	for _, job := range jobList {
 		finishedJSON, err := http.Get(finishedJSONURL(storageBaseURL, org, repo, prNumber, job.jobName, job.buildNumber))
 		if err != nil {
-			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
+			return nil, fmt.Errorf("failed to get %s finished.json : %s", job.jobName, err)
 		}
-		defer finishedJSON.Body.Close()
+		defer func() {
+			if err := finishedJSON.Body.Close(); err != nil {
+				log.WithError(err).Warn("failed closing response body")
+			}
+		}()
 		if finishedJSON.StatusCode != http.StatusOK {
 			continue
 		}
 
 		finishedJSONData, err := io.ReadAll(finishedJSON.Body)
 		if err != nil {
-			return nil, fmt.Errorf("Failed to read finished JSON for %s -- %s", job.jobName, err)
+			return nil, fmt.Errorf("failed to read finished JSON for %s -- %s", job.jobName, err)
 		}
 		var data map[string]interface{}
 		err = json.Unmarshal(finishedJSONData, &data)
 		if err != nil {
-			return nil, fmt.Errorf("Failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
+			return nil, fmt.Errorf("failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
 		}
 		if latestCommit != data["revision"] {
 			continue
@@ -190,7 +194,11 @@ func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job
 		if err != nil {
 			return nil, err
 		}
-		defer prowJobJSON.Body.Close()
+		defer func() {
+			if err := prowJobJSON.Body.Close(); err != nil {
+				log.WithError(err).Warn("failed closing response body")
+			}
+		}()
 		if prowJobJSON.StatusCode != 200 {
 			continue
 		}
@@ -224,15 +232,19 @@ func getJobsForLatestCommit(storageBaseURL string, org string, repo string, prNu
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	prHistoryPage, err := html.Parse(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("Error parsing history page: %s", err)
+		return nil, fmt.Errorf("error parsing history page: %s", err)
 	}
 	latestCommit := getLatestCommit(prHistoryPage)
 	if latestCommit == "" {
-		return nil, fmt.Errorf("Failed to get latest commit from %s", prHistory)
+		return nil, fmt.Errorf("failed to get latest commit from %s", prHistory)
 	}
 	jobsAllCommits := filterJobs(prHistoryPage)
 	prowjobs = nil
@@ -260,7 +272,7 @@ func HttpHeadWithRetry(url string) (resp *http.Response, err error) {
 
 func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response, err error)) (resp *http.Response, err error) {
 	httpRetryLog := log.WithField("url", url).WithField("verb", runtime.FuncForPC(reflect.ValueOf(httpVerb).Pointer()).Name())
-	retry.Do(
+	err = retry.Do(
 		func() error {
 			resp, err = httpVerb(url)
 			switch {
@@ -283,7 +295,7 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 }
 
 func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests) {
-	if job.failure == true {
+	if job.failure {
 		sigRetests.FailedJobNames = append(sigRetests.FailedJobNames, job.jobName)
 		sigRetests.FailedJobURLs = append(sigRetests.FailedJobURLs, job.buildURL)
 	} else {
@@ -295,7 +307,7 @@ func sortJobNamesOnResult(job job, sigRetests SigRetests) (jobCounts SigRetests)
 func GetJobsPerSIG(prNumber string, org string, repo string, supportedBranches []string, notBefore time.Time) (prSigRetests SigRetests, err error) {
 	prowJobs, err := getJobsForLatestCommit(defaultStorageBaseURL, org, repo, prNumber, notBefore)
 	if err != nil {
-		return SigRetests{}, fmt.Errorf("Error filtering failed jobs from the latest commit - %s", err)
+		return SigRetests{}, fmt.Errorf("error filtering failed jobs from the latest commit - %s", err)
 	}
 	return FilterJobsPerSigs(prowJobs, supportedBranches), nil
 }
@@ -362,7 +374,11 @@ func ListPRFailures(prNumber, prOrg, prRepo string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	prHistoryPage, err := html.Parse(resp.Body)
 	if err != nil {

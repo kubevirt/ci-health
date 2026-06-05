@@ -33,7 +33,7 @@ var _ = Describe("ClosestMonday", func() {
 		table.Entry("invalid date",
 			"not a valid date",
 			time.Time{},
-			fmt.Errorf("Not a valid date: %q", "not a valid date"),
+			fmt.Errorf("not a valid date: %q", "not a valid date"),
 		),
 		table.Entry("valid date, monday",
 			"2021-05-03",
