@@ -21,15 +21,15 @@ var httpClient = &http.Client{
 }
 
 type testGridTableResponse struct {
-	Timestamps []int64         `json:"timestamps"`
-	Tests      []testGridTest  `json:"tests"`
-	ColumnIDs  []string        `json:"column_ids"`
+	Timestamps []int64        `json:"timestamps"`
+	Tests      []testGridTest `json:"tests"`
+	ColumnIDs  []string       `json:"column_ids"`
 }
 
 type testGridTest struct {
-	Name     string             `json:"name"`
-	Statuses []testGridStatus   `json:"statuses"`
-	Messages []string           `json:"messages"`
+	Name     string           `json:"name"`
+	Statuses []testGridStatus `json:"statuses"`
+	Messages []string         `json:"messages"`
 }
 
 type testGridStatus struct {
@@ -38,9 +38,9 @@ type testGridStatus struct {
 }
 
 const (
-	tgStatusPass    = 1
-	tgStatusFail    = 12
-	tgStatusFlaky   = 3
+	tgStatusPass  = 1
+	tgStatusFail  = 12
+	tgStatusFlaky = 3
 )
 
 type LaneRateResult struct {

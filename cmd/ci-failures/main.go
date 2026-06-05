@@ -126,14 +126,14 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
-	testRateDays            int
-	laneRateDays            int
-	laneRateMaxSuccessRate  float64
-	flakeOverviewDays    int
-	flakeOverviewFilter  string
-	flakeOverviewConc    int
-	showLogTail  int
-	showLogGrep  string
+	testRateDays           int
+	laneRateDays           int
+	laneRateMaxSuccessRate float64
+	flakeOverviewDays      int
+	flakeOverviewFilter    string
+	flakeOverviewConc      int
+	showLogTail            int
+	showLogGrep            string
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",

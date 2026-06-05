@@ -19,10 +19,10 @@ const maxDays = 28
 var flakefinderBaseURL = "https://storage.googleapis.com/kubevirt-prow/reports/flakefinder/kubevirt/kubevirt"
 
 type FlakefinderReport struct {
-	StartOfReport string                            `json:"startOfReport"`
-	EndOfReport   string                            `json:"endOfReport"`
-	Headers       []string                          `json:"headers"`
-	Tests         []string                          `json:"tests"`
+	StartOfReport string                             `json:"startOfReport"`
+	EndOfReport   string                             `json:"endOfReport"`
+	Headers       []string                           `json:"headers"`
+	Tests         []string                           `json:"tests"`
 	Data          map[string]map[string]*TestDetails `json:"data"`
 }
 

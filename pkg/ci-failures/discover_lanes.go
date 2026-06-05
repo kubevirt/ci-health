@@ -17,8 +17,8 @@ var testgridDashboards = []string{
 }
 
 type DiscoverLanesResult struct {
-	VersionFilter string                    `yaml:"version_filter"`
-	Dashboards    []DiscoverLanesDashboard   `yaml:"dashboards"`
+	VersionFilter string                   `yaml:"version_filter"`
+	Dashboards    []DiscoverLanesDashboard `yaml:"dashboards"`
 }
 
 type DiscoverLanesDashboard struct {

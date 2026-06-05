@@ -120,9 +120,9 @@ func TestComputeTestRate(t *testing.T) {
 		},
 		Data: map[string]map[string]*TestDetails{
 			"[sig-compute] Live Migrations with a strategy set": {
-				"pull-kubevirt-e2e-k8s-1.35-sig-compute":   {Succeeded: 80, Failed: 10, Skipped: 5},
-				"pull-kubevirt-e2e-k8s-1.36-sig-compute":   {Succeeded: 70, Failed: 20, Skipped: 3},
-				"pull-kubevirt-e2e-kind-1.35-sig-compute":  {Succeeded: 50, Failed: 5, Skipped: 1},
+				"pull-kubevirt-e2e-k8s-1.35-sig-compute":  {Succeeded: 80, Failed: 10, Skipped: 5},
+				"pull-kubevirt-e2e-k8s-1.36-sig-compute":  {Succeeded: 70, Failed: 20, Skipped: 3},
+				"pull-kubevirt-e2e-kind-1.35-sig-compute": {Succeeded: 50, Failed: 5, Skipped: 1},
 			},
 		},
 	}

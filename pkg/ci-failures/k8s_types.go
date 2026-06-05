@@ -206,16 +206,16 @@ type ContainerLogFile struct {
 
 // K8sAnalysisResult is the top-level output for analyze-k8s.
 type K8sAnalysisResult struct {
-	ProwJobURL        string               `yaml:"prow_job_url"`
-	JobName           string               `yaml:"job_name"`
-	BuildID           int                  `yaml:"build_id"`
-	Started           time.Time            `yaml:"started"`
-	Finished          time.Time            `yaml:"finished"`
-	Snapshots         []K8sSnapshot        `yaml:"snapshots"`
-	Findings          []*K8sFinding        `yaml:"findings"`
-	Summary           K8sSummary           `yaml:"summary"`
-	EtcdProfile       *EtcdStorageProfile  `yaml:"etcd_profile,omitempty"`
-	ContainerLogFiles []ContainerLogFile   `yaml:"container_log_files,omitempty"`
+	ProwJobURL        string              `yaml:"prow_job_url"`
+	JobName           string              `yaml:"job_name"`
+	BuildID           int                 `yaml:"build_id"`
+	Started           time.Time           `yaml:"started"`
+	Finished          time.Time           `yaml:"finished"`
+	Snapshots         []K8sSnapshot       `yaml:"snapshots"`
+	Findings          []*K8sFinding       `yaml:"findings"`
+	Summary           K8sSummary          `yaml:"summary"`
+	EtcdProfile       *EtcdStorageProfile `yaml:"etcd_profile,omitempty"`
+	ContainerLogFiles []ContainerLogFile  `yaml:"container_log_files,omitempty"`
 }
 
 // EtcdStorageProfile is the top-level structure of etcd-storage-profile.json

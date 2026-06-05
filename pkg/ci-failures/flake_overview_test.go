@@ -37,8 +37,8 @@ func TestAggregateLaneFailures(t *testing.T) {
 			Tests: []string{"test-a", "test-b"},
 			Data: map[string]map[string]*TestDetails{
 				"test-a": {
-					"periodic-kubevirt-e2e-k8s-1.36-sig-compute":      {Failed: 3},
-					"pull-kubevirt-e2e-k8s-1.35-sig-compute":          {Failed: 1},
+					"periodic-kubevirt-e2e-k8s-1.36-sig-compute": {Failed: 3},
+					"pull-kubevirt-e2e-k8s-1.35-sig-compute":     {Failed: 1},
 				},
 				"test-b": {
 					"periodic-kubevirt-e2e-k8s-1.36-sig-compute":      {Failed: 2},

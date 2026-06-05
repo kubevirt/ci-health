@@ -471,12 +471,12 @@ func TestFetchEtcdProfileNotPresent(t *testing.T) {
 
 func TestParseContainerLogFileName(t *testing.T) {
 	tests := []struct {
-		name          string
-		fileName      string
-		expectOK      bool
-		expectNS      string
-		expectPod     string
-		expectCont    string
+		name       string
+		fileName   string
+		expectOK   bool
+		expectNS   string
+		expectPod  string
+		expectCont string
 	}{
 		{
 			name:       "virt-controller log",

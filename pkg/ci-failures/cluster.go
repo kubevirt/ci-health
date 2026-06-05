@@ -1,8 +1,9 @@
 package cifailures
 
 import (
-	"github.com/hyperjumptech/beda"
 	"sort"
+
+	"github.com/hyperjumptech/beda"
 )
 
 // ClusterErrors groups similar errors together.
