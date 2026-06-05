@@ -33,7 +33,7 @@ func (m Metric) IsValid() error {
 	case MergeQueueLengthMetric, TimeToMergeMetric, RetestsToMergeMetric, MergedPRsMetric, QuarantineMetric:
 		return nil
 	}
-	return errors.New("Invalid MetricType value")
+	return errors.New("invalid MetricType value")
 }
 
 func (m Metric) ResultsName() string {
@@ -60,7 +60,7 @@ func (a Action) IsValid() error {
 	case StatsAction, BatchAction:
 		return nil
 	}
-	return errors.New("Invalid Action value")
+	return errors.New("invalid Action value")
 }
 
 type Mode string
@@ -70,7 +70,7 @@ func (m Mode) IsValid() error {
 	case FetchMode, PlotMode:
 		return nil
 	}
-	return errors.New("Invalid BatchMode value")
+	return errors.New("invalid BatchMode value")
 }
 
 type Options struct {

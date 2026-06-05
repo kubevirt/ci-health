@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"image/color"
-	"io/ioutil"
+	"io"
 	"os"
 	"path"
 	"path/filepath"
@@ -46,10 +46,7 @@ func batchFetchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *c
 
 	outputOptions := &output.Options{}
 
-	for {
-		if now.Before(currentEndDate) {
-			break
-		}
+	for !now.Before(currentEndDate) {
 
 		// write results file
 		baseDataPath := batchDataPath(o.Path, o.Source, string(o.TargetMetric))
@@ -209,7 +206,7 @@ func gatherPlotData(basePath string, metric types.Metric, startDate string) ([]t
 				log.WithError(err).Warn("failed closing json file")
 			}
 		}()
-		byteValue, err := ioutil.ReadAll(jsonFile)
+		byteValue, err := io.ReadAll(jsonFile)
 		if err != nil {
 			return err
 		}

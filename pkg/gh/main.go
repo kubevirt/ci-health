@@ -3,8 +3,8 @@ package gh
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
 	"net/http"
+	"os"
 	"sort"
 	"strings"
 	"time"
@@ -67,7 +67,7 @@ type Client struct {
 }
 
 func NewClient(tokenPath string, source string) (*Client, error) {
-	token, err := ioutil.ReadFile(tokenPath)
+	token, err := os.ReadFile(tokenPath)
 	if err != nil {
 		return nil, err
 	}

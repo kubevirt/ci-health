@@ -3,7 +3,6 @@ package e2e
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"testing"
@@ -66,7 +65,7 @@ var _ = BeforeSuite(func() {
 
 var _ = Describe("ci-health stats", func() {
 	It("Retrieves data from github and writes badges", func() {
-		artifactsDir, err := ioutil.TempDir("", "e2e-ci-health")
+		artifactsDir, err := os.MkdirTemp("", "e2e-ci-health")
 		Expect(err).ToNot(HaveOccurred())
 
 		opt := &types.Options{
@@ -117,7 +116,7 @@ var _ = Describe("ci-health stats", func() {
 
 		By("Checking JSON file")
 		jsonFileName := filepath.Join(sourceArtifactsDir, constants.JSONResultsFileName)
-		jsonData, err := ioutil.ReadFile(jsonFileName)
+		jsonData, err := os.ReadFile(jsonFileName)
 		Expect(err).ToNot(HaveOccurred())
 
 		var jsonResults types.Results
@@ -128,7 +127,7 @@ var _ = Describe("ci-health stats", func() {
 
 		By("Checking metrics file")
 		metricsFileName := filepath.Join(artifactsDir, constants.MetricsFileName)
-		metricsDataBytes, err := ioutil.ReadFile(metricsFileName)
+		metricsDataBytes, err := os.ReadFile(metricsFileName)
 		Expect(err).ToNot(HaveOccurred())
 		metricsData := string(metricsDataBytes)
 

@@ -79,7 +79,7 @@ func (h *Handler) Run() (*types.Results, error) {
 		case types.QuarantineMetric:
 			processor = h.quarantineProcessor
 		default:
-			return nil, fmt.Errorf("Unknown metric: %q", targetMetric)
+			return nil, fmt.Errorf("unknown metric: %q", targetMetric)
 		}
 
 		results, err = processor(results)
@@ -379,7 +379,7 @@ func Std(xs []float64) float64 {
 	avg := Average(xs)
 	total := 0.0
 	for _, v := range xs {
-		total += math.Pow((v - avg), 2)
+		total += (v - avg) * (v - avg)
 	}
 	variance := total / float64(len(xs))
 	result := math.Sqrt(variance)

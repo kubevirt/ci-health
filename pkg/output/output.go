@@ -3,7 +3,6 @@ package output
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -72,7 +71,7 @@ func (b *Handler) WriteJSON(results *types.Results) error {
 	}
 	log.Infof("Results: %s", string(resultsJSON))
 	resultsPath := filepath.Join(basePath, constants.JSONResultsFileName)
-	err = ioutil.WriteFile(resultsPath, resultsJSON, 0644)
+	err = os.WriteFile(resultsPath, resultsJSON, 0644)
 
 	return err
 }
@@ -89,7 +88,7 @@ func (b *Handler) writeMetrics(results *types.Results) error {
 	log.Debugf("Metrics: %s", m)
 
 	metricsPath := filepath.Join(b.options.Path, constants.MetricsFileName)
-	err := ioutil.WriteFile(metricsPath, []byte(m), 0644)
+	err := os.WriteFile(metricsPath, []byte(m), 0644)
 
 	return err
 }

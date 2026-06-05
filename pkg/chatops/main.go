@@ -57,7 +57,7 @@ func RetestComments(pr *types.ChatopsPullRequestFragment) int {
 
 	lastPush := determineLastPush(pr)
 
-	for _, timelineItem := range pr.TimelineItems.Nodes {
+	for _, timelineItem := range pr.Nodes {
 		if strings.Contains(timelineItem.BodyText, phase2Intro) {
 			continue
 		}
@@ -72,9 +72,9 @@ func determineLastPush(pr *types.ChatopsPullRequestFragment) time.Time {
 	lastPush := zeroDate
 
 	var itemDate time.Time
-	for _, timelineItem := range pr.TimelineItems.Nodes {
+	for _, timelineItem := range pr.Nodes {
 		if isCommit(timelineItem) {
-			itemDate = timelineItem.PullRequestCommitFragment.Commit.CommittedDate
+			itemDate = timelineItem.Commit.CommittedDate
 		} else if isHeadRefForcePush(timelineItem) {
 			itemDate = timelineItem.HeadRefForcePushFragment.CreatedAt
 		} else if isBaseRefForcePush(timelineItem) {
@@ -103,5 +103,5 @@ func isBaseRefForcePush(timelineItem types.TimelineItem) bool {
 func isRetestCommentAfterLastPush(timelineItem types.TimelineItem, lastPush time.Time) bool {
 	return timelineItem.IssueCommentFragment != types.IssueCommentFragment{} &&
 		timelineItem.IssueCommentFragment.CreatedAt.After(lastPush) &&
-		(strings.HasPrefix(timelineItem.IssueCommentFragment.BodyText, "/retest"))
+		(strings.HasPrefix(timelineItem.BodyText, "/retest"))
 }

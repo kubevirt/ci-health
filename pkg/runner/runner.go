@@ -3,7 +3,6 @@ package runner
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"time"
 
@@ -26,7 +25,7 @@ func Run(o *types.Options) (*types.Results, error) {
 	}
 
 	if o.TokenPath == "" {
-		return nil, fmt.Errorf("You need to specify the GitHub token path with --gh-token")
+		return nil, fmt.Errorf("you need to specify the GitHub token path with --gh-token")
 	}
 
 	ghClient, err := gh.NewClient(o.TokenPath, o.Source)
@@ -43,7 +42,7 @@ func Run(o *types.Options) (*types.Results, error) {
 	case types.BatchAction:
 		return batchRun(o, mqHandler, coHandler)
 	default:
-		return nil, fmt.Errorf("Unknown action: %q", o.Action)
+		return nil, fmt.Errorf("unknown action: %q", o.Action)
 	}
 }
 
@@ -80,7 +79,7 @@ func statsRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 	}
 
 	if o.Path == "" {
-		dir, err := ioutil.TempDir("", "ci-health")
+		dir, err := os.MkdirTemp("", "ci-health")
 		if err != nil {
 			return nil, err
 		}
@@ -139,7 +138,7 @@ func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 	case types.PlotMode:
 		return batchPlotRun(o)
 	default:
-		return nil, fmt.Errorf("Unknown batch mode: %q", o.Mode)
+		return nil, fmt.Errorf("unknown batch mode: %q", o.Mode)
 	}
 }
 
