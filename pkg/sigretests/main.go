@@ -282,6 +282,9 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 			case resp.StatusCode == http.StatusOK:
 				httpRetryLog.Debugf("succeeded")
 				return nil
+			case resp.StatusCode == http.StatusNotFound:
+				httpRetryLog.Debugf("not found")
+				return nil
 			case resp.StatusCode == http.StatusGatewayTimeout:
 				httpRetryLog.Infof("failed with %d, will retry", resp.StatusCode)
 				return fmt.Errorf("failed with %d: %v", resp.StatusCode, err)
