@@ -6,6 +6,7 @@ package mtex
 
 import (
 	"fmt"
+	"maps"
 	"math"
 	"strconv"
 	"strings"
@@ -176,9 +177,7 @@ func (p *parser) init() {
 	for _, k := range tex2unicode.Symbols() {
 		p.macros[`\`+k] = builtinMacro("")
 	}
-	for k, v := range builtinMacros {
-		p.macros[k] = v
-	}
+	maps.Copy(p.macros, builtinMacros)
 }
 
 func handleSymbol(p *parser, node ast.Node, state tex.State, math bool) tex.Node {
@@ -555,7 +554,7 @@ const (
 	//scriptScriptStyle // FIXME
 )
 
-func rcparams(k string) interface{} {
+func rcparams(k string) any {
 	switch k {
 	case "mathtext.default":
 		return "it"

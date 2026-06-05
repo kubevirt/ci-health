@@ -35,6 +35,7 @@ import (
 	"image/jpeg"
 	"image/png"
 	"io"
+	"maps"
 	"math"
 	"os"
 	"path"
@@ -55,7 +56,7 @@ type fmtBuffer struct {
 	bytes.Buffer
 }
 
-func (b *fmtBuffer) printf(fmtStr string, args ...interface{}) {
+func (b *fmtBuffer) printf(fmtStr string, args ...any) {
 	b.Buffer.WriteString(fmt.Sprintf(fmtStr, args...))
 }
 
@@ -144,6 +145,7 @@ func fpdfNew(orientationStr, unitStr, sizeStr, fontDirStr string, size SizeType)
 	f.stdPageSizes["a5"] = SizeType{420.94, 595.28}
 	f.stdPageSizes["a6"] = SizeType{297.64, 420.94}
 	f.stdPageSizes["a7"] = SizeType{209.76, 297.64}
+	f.stdPageSizes["a8"] = SizeType{147.40, 209.76}
 	f.stdPageSizes["a2"] = SizeType{1190.55, 1683.78}
 	f.stdPageSizes["a1"] = SizeType{1683.78, 2383.94}
 	f.stdPageSizes["letter"] = SizeType{612, 792}
@@ -240,7 +242,7 @@ func NewCustom(init *InitType) (f *Fpdf) {
 // string will be replaced with "mm".
 //
 // sizeStr specifies the page size. Acceptable values are "A1", "A2", "A3", "A4", "A5",
-// "A6", "A7", "Letter", "Legal", or "Tabloid". An empty string will be replaced with "A4".
+// "A6", "A7", "A8", "Letter", "Legal", or "Tabloid". An empty string will be replaced with "A4".
 //
 // fontDirStr specifies the file system location in which font resources will
 // be found. An empty string is replaced with ".". This argument only needs to
@@ -275,7 +277,7 @@ func (f *Fpdf) ClearError() {
 //
 // See the documentation for printing in the standard fmt package for details
 // about fmtStr and args.
-func (f *Fpdf) SetErrorf(fmtStr string, args ...interface{}) {
+func (f *Fpdf) SetErrorf(fmtStr string, args ...any) {
 	if f.err == nil {
 		f.err = fmt.Errorf(fmtStr, args...)
 	}
@@ -418,10 +420,22 @@ func (f *Fpdf) PageCount() int {
 	return len(f.pages) - 1
 }
 
+// GetFontLocation returns the location in the file system of the font and font
+// definition files.
+func (f *Fpdf) GetFontLocation() string {
+	return f.fontpath
+}
+
 // SetFontLocation sets the location in the file system of the font and font
 // definition files.
 func (f *Fpdf) SetFontLocation(fontDirStr string) {
 	f.fontpath = fontDirStr
+}
+
+// GetFontLoader returns the loader used to read font files (.json and .z) from
+// an arbitrary source.
+func (f *Fpdf) GetFontLoader() FontLoader {
+	return f.fontLoader
 }
 
 // SetFontLoader sets a loader used to read font files (.json and .z) from an
@@ -516,6 +530,11 @@ func (f *Fpdf) SetAutoPageBreak(auto bool, margin float64) {
 	f.pageBreakTrigger = f.h - margin
 }
 
+// GetDisplayMode returns the current display mode. See SetDisplayMode() for details.
+func (f *Fpdf) GetDisplayMode() (zoomStr, layoutStr string) {
+	return f.zoomMode, f.layoutMode
+}
+
 // SetDisplayMode sets advisory display directives for the document viewer.
 // Pages can be displayed entirely on screen, occupy the full width of the
 // window, use real size, be scaled by a specific zooming factor or use viewer
@@ -566,12 +585,22 @@ func SetDefaultCompression(compress bool) {
 	gl.noCompress = !compress
 }
 
+// GetCompression returns whether page compression is enabled.
+func (f *Fpdf) GetCompression() bool {
+	return f.compress
+}
+
 // SetCompression activates or deactivates page compression with zlib. When
 // activated, the internal representation of each page is compressed, which
 // leads to a compression ratio of about 2 for the resulting document.
 // Compression is on by default.
 func (f *Fpdf) SetCompression(compress bool) {
 	f.compress = compress
+}
+
+// GetProducer returns the producer of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetProducer() string {
+	return f.producer
 }
 
 // SetProducer defines the producer of the document. isUTF8 indicates if the string
@@ -583,6 +612,11 @@ func (f *Fpdf) SetProducer(producerStr string, isUTF8 bool) {
 	f.producer = producerStr
 }
 
+// GetTitle returns the title of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetTitle() string {
+	return f.title
+}
+
 // SetTitle defines the title of the document. isUTF8 indicates if the string
 // is encoded in ISO-8859-1 (false) or UTF-8 (true).
 func (f *Fpdf) SetTitle(titleStr string, isUTF8 bool) {
@@ -590,6 +624,11 @@ func (f *Fpdf) SetTitle(titleStr string, isUTF8 bool) {
 		titleStr = utf8toutf16(titleStr)
 	}
 	f.title = titleStr
+}
+
+// GetSubject returns the subject of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetSubject() string {
+	return f.subject
 }
 
 // SetSubject defines the subject of the document. isUTF8 indicates if the
@@ -601,6 +640,11 @@ func (f *Fpdf) SetSubject(subjectStr string, isUTF8 bool) {
 	f.subject = subjectStr
 }
 
+// GetAuthor returns the author of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetAuthor() string {
+	return f.author
+}
+
 // SetAuthor defines the author of the document. isUTF8 indicates if the string
 // is encoded in ISO-8859-1 (false) or UTF-8 (true).
 func (f *Fpdf) SetAuthor(authorStr string, isUTF8 bool) {
@@ -610,9 +654,19 @@ func (f *Fpdf) SetAuthor(authorStr string, isUTF8 bool) {
 	f.author = authorStr
 }
 
+// GetLang returns the natural language of the document (e.g. "de-CH").
+func (f *Fpdf) GetLang() string {
+	return f.lang
+}
+
 // SetLang defines the natural language of the document (e.g. "de-CH").
 func (f *Fpdf) SetLang(lang string) {
 	f.lang = lang
+}
+
+// GetKeywords returns the keywords of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetKeywords() string {
+	return f.keywords
 }
 
 // SetKeywords defines the keywords of the document. keywordStr is a
@@ -625,6 +679,11 @@ func (f *Fpdf) SetKeywords(keywordsStr string, isUTF8 bool) {
 	f.keywords = keywordsStr
 }
 
+// GetCreator returns the creator of the document as ISO-8859-1 or UTF-16BE.
+func (f *Fpdf) GetCreator() string {
+	return f.creator
+}
+
 // SetCreator defines the creator of the document. isUTF8 indicates if the
 // string is encoded in ISO-8859-1 (false) or UTF-8 (true).
 func (f *Fpdf) SetCreator(creatorStr string, isUTF8 bool) {
@@ -634,9 +693,22 @@ func (f *Fpdf) SetCreator(creatorStr string, isUTF8 bool) {
 	f.creator = creatorStr
 }
 
+// GetXmpMetadata returns the XMP metadata that will be embedded with the document.
+func (f *Fpdf) GetXmpMetadata() []byte {
+	return []byte(string(f.xmp))
+}
+
 // SetXmpMetadata defines XMP metadata that will be embedded with the document.
 func (f *Fpdf) SetXmpMetadata(xmpStream []byte) {
 	f.xmp = xmpStream
+}
+
+// AddOutputIntent adds an output intent with ICC color profile
+func (f *Fpdf) AddOutputIntent(outputIntent OutputIntentType) {
+	f.outputIntents = append(f.outputIntents, outputIntent)
+	if f.pdfVersion < pdfVers1_4 {
+		f.pdfVersion = pdfVers1_4
+	}
 }
 
 // AliasNbPages defines an alias for the total number of pages. It will be
@@ -1034,6 +1106,18 @@ func (f *Fpdf) GetLineWidth() float64 {
 	return f.lineWidth
 }
 
+// GetLineCapStyle returns the current line cap style.
+func (f *Fpdf) GetLineCapStyle() string {
+	switch f.capStyle {
+	case 1:
+		return "round"
+	case 2:
+		return "square"
+	default:
+		return "butt"
+	}
+}
+
 // SetLineCapStyle defines the line cap style. styleStr should be "butt",
 // "round" or "square". A square style projects from the end of the line. The
 // method can be called before the first page is created. The value is
@@ -1051,6 +1135,18 @@ func (f *Fpdf) SetLineCapStyle(styleStr string) {
 	f.capStyle = capStyle
 	if f.page > 0 {
 		f.outf("%d J", f.capStyle)
+	}
+}
+
+// GetLineJoinStyle returns the current line join style.
+func (f *Fpdf) GetLineJoinStyle() string {
+	switch f.joinStyle {
+	case 1:
+		return "round"
+	case 2:
+		return "bevel"
+	default:
+		return "miter"
 	}
 }
 
@@ -2005,7 +2101,7 @@ func (f *Fpdf) addFont(familyStr, styleStr, fileStr string, isUTF8 bool) {
 
 func makeSubsetRange(end int) map[int]int {
 	answer := make(map[int]int)
-	for i := 0; i < end; i++ {
+	for i := range end {
 		answer[i] = 0
 	}
 	return answer
@@ -2341,6 +2437,25 @@ func (f *Fpdf) SetFont(familyStr, styleStr string, size float64) {
 	}
 }
 
+// GetFontFamily returns the family of the current font. See SetFont() for details.
+func (f *Fpdf) GetFontFamily() string {
+	return f.fontFamily
+}
+
+// GetFontStyle returns the style of the current font. See SetFont() for details.
+func (f *Fpdf) GetFontStyle() string {
+	styleStr := f.fontStyle
+
+	if f.underline {
+		styleStr += "U"
+	}
+	if f.strikeout {
+		styleStr += "S"
+	}
+
+	return styleStr
+}
+
 // SetFontStyle sets the style of the current font. See also SetFont()
 func (f *Fpdf) SetFontStyle(styleStr string) {
 	f.SetFont(f.fontFamily, styleStr, f.fontSizePt)
@@ -2464,6 +2579,11 @@ func (f *Fpdf) Text(x, y float64, txtStr string) {
 		s = sprintf("q %s %s Q", f.color.text.str, s)
 	}
 	f.out(s)
+}
+
+// GetWordSpacing returns the spacing between words of following text.
+func (f *Fpdf) GetWordSpacing() float64 {
+	return f.ws
 }
 
 // SetWordSpacing sets spacing between words of following text. See the
@@ -2670,7 +2790,7 @@ func (f *Fpdf) CellFormat(w, h float64, txtStr, borderStr string, ln int,
 			t := strings.Split(txtStr, " ")
 			shift := float64((wmax - strSize)) / float64(len(t)-1)
 			numt := len(t)
-			for i := 0; i < numt; i++ {
+			for i := range numt {
 				tx := t[i]
 				tx = "(" + f.escape(utf8toutf16(tx, false)) + ")"
 				s.printf("%s ", tx)
@@ -2750,7 +2870,7 @@ func (f *Fpdf) Cell(w, h float64, txtStr string) {
 // Cellf is a simpler printf-style version of CellFormat with no fill, border,
 // links or special alignment. See documentation for the fmt package for
 // details on fmtStr and args.
-func (f *Fpdf) Cellf(w, h float64, fmtStr string, args ...interface{}) {
+func (f *Fpdf) Cellf(w, h float64, fmtStr string, args ...any) {
 	f.CellFormat(w, h, sprintf(fmtStr, args...), "", 0, "L", false, 0, "")
 }
 
@@ -3141,7 +3261,7 @@ func (f *Fpdf) Write(h float64, txtStr string) {
 
 // Writef is like Write but uses printf-style formatting. See the documentation
 // for package fmt for more details on fmtStr and args.
-func (f *Fpdf) Writef(h float64, fmtStr string, args ...interface{}) {
+func (f *Fpdf) Writef(h float64, fmtStr string, args ...any) {
 	f.write(h, sprintf(fmtStr, args...), 0, "")
 }
 
@@ -3503,16 +3623,12 @@ func (f *Fpdf) GetImageInfo(imageStr string) (info *ImageInfoType) {
 
 // ImportObjects imports objects from gofpdi into current document
 func (f *Fpdf) ImportObjects(objs map[string][]byte) {
-	for k, v := range objs {
-		f.importedObjs[k] = v
-	}
+	maps.Copy(f.importedObjs, objs)
 }
 
 // ImportObjPos imports object hash positions from gofpdi
 func (f *Fpdf) ImportObjPos(objPos map[string]map[int]string) {
-	for k, v := range objPos {
-		f.importedObjPos[k] = v
-	}
+	maps.Copy(f.importedObjPos, objPos)
 }
 
 // putImportedTemplates writes the imported template objects to the PDF
@@ -3563,7 +3679,7 @@ func (f *Fpdf) putImportedTemplates() {
 	}
 
 	// Now, put objects
-	for i = 0; i < len(objsIDData); i++ {
+	for i = range objsIDData {
 		f.newobj()
 		f.out(string(objsIDData[i]))
 	}
@@ -3578,9 +3694,7 @@ func (f *Fpdf) UseImportedTemplate(tplName string, scaleX float64, scaleY float6
 // ImportTemplates imports gofpdi template names into importedTplObjs for
 // inclusion in the procset dictionary
 func (f *Fpdf) ImportTemplates(tpls map[string]string) {
-	for tplName, tplID := range tpls {
-		f.importedTplObjs[tplName] = tplID
-	}
+	maps.Copy(f.importedTplObjs, tpls)
 }
 
 // GetConversionRatio returns the conversion ratio based on the unit given when
@@ -3764,9 +3878,7 @@ func (f *Fpdf) beginpage(orientationStr string, size SizeType) {
 	f.page++
 	// add the default page boxes, if any exist, to the page
 	f.pageBoxes[f.page] = make(map[string]PageBox)
-	for box, pb := range f.defPageBoxes {
-		f.pageBoxes[f.page][box] = pb
-	}
+	maps.Copy(f.pageBoxes[f.page], f.defPageBoxes)
 	f.pages = append(f.pages, bytes.NewBufferString(""))
 	f.pageLinks = append(f.pageLinks, make([]linkType, 0))
 	f.pageAttachments = append(f.pageAttachments, []annotationAttach{})
@@ -3851,12 +3963,17 @@ func (f *Fpdf) textstring(s string) string {
 
 func blankCount(str string) (count int) {
 	l := len(str)
-	for j := 0; j < l; j++ {
+	for j := range l {
 		if byte(' ') == str[j] {
 			count++
 		}
 	}
 	return
+}
+
+// GetUnderlineThickness returns the current text underline thickness multiplier.
+func (f *Fpdf) GetUnderlineThickness() float64 {
+	return f.userUnderlineThickness
 }
 
 // SetUnderlineThickness accepts a multiplier for adjusting the text underline
@@ -4025,7 +4142,7 @@ func (f *Fpdf) RawWriteBuf(r io.Reader) {
 }
 
 // outf adds a formatted line to the document
-func (f *Fpdf) outf(fmtStr string, args ...interface{}) {
+func (f *Fpdf) outf(fmtStr string, args ...any) {
 	f.out(sprintf(fmtStr, args...))
 }
 
@@ -4053,6 +4170,11 @@ func SetDefaultCatalogSort(flag bool) {
 	gl.catalogSort = flag
 }
 
+// GetCatalogSort returns the document's internal catalog sort flag.
+func (f *Fpdf) GetCatalogSort() bool {
+	return f.catalogSort
+}
+
 // SetCatalogSort sets a flag that will be used, if true, to consistently order
 // the document's internal resource catalogs. This method is typically only
 // used for test purposes to facilitate PDF comparison.
@@ -4074,6 +4196,11 @@ func SetDefaultModificationDate(tm time.Time) {
 	gl.modDate = tm
 }
 
+// GetCreationDate returns the document's internal CreationDate value.
+func (f *Fpdf) GetCreationDate() time.Time {
+	return f.creationDate
+}
+
 // SetCreationDate fixes the document's internal CreationDate value. By
 // default, the time when the document is generated is used for this value.
 // This method is typically only used for testing purposes to facilitate PDF
@@ -4082,10 +4209,26 @@ func (f *Fpdf) SetCreationDate(tm time.Time) {
 	f.creationDate = tm
 }
 
+// GetModificationDate returns the document's internal ModDate value.
+func (f *Fpdf) GetModificationDate() time.Time {
+	return f.modDate
+}
+
 // SetModificationDate fixes the document's internal ModDate value.
 // See `SetCreationDate` for more details.
 func (f *Fpdf) SetModificationDate(tm time.Time) {
 	f.modDate = tm
+}
+
+// GetJavascript returns the Adobe JavaScript for the document.
+//
+// GetJavascript returns an empty string if no javascript was
+// previously defined.
+func (f *Fpdf) GetJavascript() string {
+	if f.javascript == nil {
+		return ""
+	}
+	return *f.javascript
 }
 
 // SetJavascript adds Adobe JavaScript to the document.
@@ -4107,7 +4250,7 @@ func (f *Fpdf) RegisterAlias(alias, replacement string) {
 }
 
 func (f *Fpdf) replaceAliases() {
-	for mode := 0; mode < 2; mode++ {
+	for mode := range 2 {
 		for alias, replacement := range f.aliasMap {
 			if mode == 1 {
 				alias = utf8toutf16(alias, false)
@@ -4477,7 +4620,7 @@ func (f *Fpdf) generateCIDFontMap(font *fontDefType, LastRune int) {
 					rangeID = prevCid
 					r := untypedKeyMap{
 						valueSet: make([]int, 0),
-						keySet:   make([]interface{}, 0),
+						keySet:   make([]any, 0),
 					}
 					cidArray[rangeID] = &r
 					cidArrayKeys = append(cidArrayKeys, rangeID)
@@ -4492,7 +4635,7 @@ func (f *Fpdf) generateCIDFontMap(font *fontDefType, LastRune int) {
 					rangeID = cid
 					r := untypedKeyMap{
 						valueSet: make([]int, 0),
-						keySet:   make([]interface{}, 0),
+						keySet:   make([]any, 0),
 					}
 					cidArray[rangeID] = &r
 					cidArrayKeys = append(cidArrayKeys, rangeID)
@@ -4506,7 +4649,7 @@ func (f *Fpdf) generateCIDFontMap(font *fontDefType, LastRune int) {
 			rangeID = cid
 			r := untypedKeyMap{
 				valueSet: make([]int, 0),
-				keySet:   make([]interface{}, 0),
+				keySet:   make([]any, 0),
 			}
 			cidArray[rangeID] = &r
 			cidArrayKeys = append(cidArrayKeys, rangeID)
@@ -4907,6 +5050,7 @@ func (f *Fpdf) putinfo() {
 func (f *Fpdf) putcatalog() {
 	f.out("/Type /Catalog")
 	f.out("/Pages 1 0 R")
+	f.putOutputIntents()
 	if f.lang != "" {
 		f.outf("/Lang (%s)", f.lang)
 	}
@@ -4942,6 +5086,10 @@ func (f *Fpdf) putcatalog() {
 	}
 	// Layers
 	f.layerPutCatalog()
+	// XMP metadata
+	if len(f.xmp) != 0 {
+		f.outf("/Metadata %d 0 R", f.nXMP)
+	}
 	// Name dictionary :
 	//	-> Javascript
 	//	-> Embedded files
@@ -4957,6 +5105,7 @@ func (f *Fpdf) putcatalog() {
 
 func (f *Fpdf) putheader() {
 	f.outf("%%PDF-%s", f.pdfVersion)
+	f.out("%µ¶")
 }
 
 func (f *Fpdf) puttrailer() {
@@ -4974,6 +5123,7 @@ func (f *Fpdf) putxmp() {
 		return
 	}
 	f.newobj()
+	f.nXMP = f.n
 	f.outf("<< /Type /Metadata /Subtype /XML /Length %d >>", len(f.xmp))
 	f.putstream(f.xmp)
 	f.out("endobj")
@@ -5032,6 +5182,43 @@ func (f *Fpdf) putbookmarks() {
 	}
 }
 
+func (f *Fpdf) putOutputIntents() {
+	if len(f.outputIntents) <= 0 {
+		return
+	}
+
+	f.out("/OutputIntents [")
+	for index, oi := range f.outputIntents {
+		infoSegment := ""
+		if oi.Info != "" {
+			infoSegment = fmt.Sprintf("/Info (%s) ", oi.Info)
+		}
+		f.outf(
+			`<< /Type /OutputIntent /S /%s /OutputConditionIdentifier (%s) %s/DestOutputProfile %d 0 R >>`,
+			oi.SubtypeIdent, oi.OutputConditionIdentifier, infoSegment, f.outputIntentStartN+index,
+		)
+	}
+	f.out("]")
+}
+
+func (f *Fpdf) putOutputIntentStreams() {
+	if len(f.outputIntents) <= 0 {
+		return
+	}
+
+	f.outputIntentStartN = f.n + 1
+	for _, oi := range f.outputIntents {
+		f.newobj()
+		mem := xmem.compress(oi.ICCProfile)
+		compressedICC := mem.bytes()
+		f.outf("<< /N 3 /Alternate /DeviceRGB /Length %d /Filter /FlateDecode >>", len(compressedICC))
+		f.putstream(compressedICC)
+		f.out("endobj")
+
+		mem.release()
+	}
+}
+
 func (f *Fpdf) enddoc() {
 	if f.err != nil {
 		return
@@ -5056,6 +5243,8 @@ func (f *Fpdf) enddoc() {
 	f.putinfo()
 	f.out(">>")
 	f.out("endobj")
+	// Output intent color profile streams
+	f.putOutputIntentStreams()
 	// 	Catalog
 	f.newobj()
 	f.out("<<")
