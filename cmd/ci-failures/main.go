@@ -299,6 +299,9 @@ func generateMarkdown(_ *cobra.Command, _ []string) error {
 	// Deserialize JobBuildErrors files
 	for _, fileName := range files {
 		file, err := os.Open(fileName)
+		if err != nil {
+			return fmt.Errorf("failed to open file %q: %v", fileName, err)
+		}
 		var jobBuildErrors *cifailures.JobBuildErrors
 		err = yaml.NewDecoder(file).Decode(&jobBuildErrors)
 		if err != nil {

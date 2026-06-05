@@ -116,6 +116,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.MergeQueueLengthName],
 		b.options.MergeQueueLengthLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeBadge(
 		constants.RetestsToMergeBadgeName,
@@ -123,6 +126,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.RetestsToMergeName],
 		b.options.RetestsToMergeLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeBadge(
 		constants.MergedPRsNoRetestBadgeName,
@@ -130,6 +136,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.MergedPRsNoRetest],
 		b.options.MergedPRsNoRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGComputeBadgeName,
@@ -137,6 +146,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGStorageBadgeName,
@@ -144,6 +156,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGNetworkBadgeName,
@@ -151,6 +166,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGOperatorBadgeName,
@@ -158,6 +176,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGCIBadgeName,
@@ -165,6 +186,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeSIGRetestBadge(
 		constants.SIGMonitoringBadgeName,
@@ -172,6 +196,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeQuarantineBadge(
 		constants.SIGMonitoringBadgeName,
@@ -179,6 +206,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeQuarantineBadge(
 		constants.SIGComputeBadgeName,
@@ -186,6 +216,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeQuarantineBadge(
 		constants.SIGNetworkBadgeName,
@@ -193,6 +226,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeQuarantineBadge(
 		constants.SIGStorageBadgeName,
@@ -200,6 +236,9 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
 	err = b.writeQuarantineBadge(
 		constants.QuarantineBadgeName,
@@ -207,13 +246,14 @@ func (b *Handler) writeBadges(results *types.Results) error {
 		results.Data[constants.QuarantineStats],
 		b.options.SIGRetestsLevels,
 	)
+	if err != nil {
+		return err
+	}
 
-	err = b.writeJobFailureBadges(
+	return b.writeJobFailureBadges(
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
-
-	return err
 }
 
 func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
@@ -320,13 +360,17 @@ func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, level
 				float64(job.FailureCount+job.SuccessCount),
 				(float64(job.FailureCount)/float64(job.FailureCount+job.SuccessCount))*100, "%")
 
-			err = badge.Render(job.JobName, badgeString, color, f)
+			if err := badge.Render(job.JobName, badgeString, color, f); err != nil {
+				return err
+			}
 		} else {
 			color := badge.ColorGreen
-			err = badge.Render("-", "-", color, f)
+			if err := badge.Render("-", "-", color, f); err != nil {
+				return err
+			}
 		}
 	}
-	return err
+	return nil
 }
 
 func (b *Handler) writeQuarantineBadge(name, filePath string, data types.RunningAverageDataItem, levels *Levels) error {
