@@ -87,11 +87,11 @@ var _ = Describe("main", func() {
 			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				switch {
 				case strings.HasSuffix(r.URL.Path, "/job-old/100/finished.json"):
-					fmt.Fprintf(w, `{"timestamp": %d, "revision": "%s", "result": "FAILURE"}`, oldTimestamp, testCommit)
+					fmt.Fprintf(w, `{"timestamp": %d, "revision": "%s", "result": "FAILURE"}`, oldTimestamp, testCommit) //nolint:errcheck
 				case strings.HasSuffix(r.URL.Path, "/job-recent/200/finished.json"):
-					fmt.Fprintf(w, `{"timestamp": %d, "revision": "%s", "result": "FAILURE"}`, recentTimestamp, testCommit)
+					fmt.Fprintf(w, `{"timestamp": %d, "revision": "%s", "result": "FAILURE"}`, recentTimestamp, testCommit) //nolint:errcheck
 				case strings.HasSuffix(r.URL.Path, "/job-no-timestamp/300/finished.json"):
-					fmt.Fprintf(w, `{"revision": "%s", "result": "SUCCESS"}`, testCommit)
+					fmt.Fprintf(w, `{"revision": "%s", "result": "SUCCESS"}`, testCommit) //nolint:errcheck
 				default:
 					http.NotFound(w, r)
 				}

@@ -268,7 +268,7 @@ func TestDownloadK8sArtifactCaching(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		callCount++
-		fmt.Fprint(w, podJSON)
+		fmt.Fprint(w, podJSON) //nolint:errcheck
 	}))
 	defer server.Close()
 
@@ -382,10 +382,10 @@ func TestFetchJobTimestamps(t *testing.T) {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/started.json", func(w http.ResponseWriter, r *http.Request) {
-		w.Write(startedJSON)
+		w.Write(startedJSON) //nolint:errcheck
 	})
 	mux.HandleFunc("/finished.json", func(w http.ResponseWriter, r *http.Request) {
-		w.Write(finishedJSON)
+		w.Write(finishedJSON) //nolint:errcheck
 	})
 
 	server := httptest.NewServer(mux)
@@ -430,7 +430,7 @@ func TestFetchEtcdProfile(t *testing.T) {
 			w.WriteHeader(http.StatusOK)
 			return
 		}
-		fmt.Fprint(w, profileJSON)
+		fmt.Fprint(w, profileJSON) //nolint:errcheck
 	})
 	mux.HandleFunc("/", notFound)
 
@@ -569,7 +569,7 @@ func TestListAndFilterContainerLogs(t *testing.T) {
 				{Name: "prefix/suite/0_kubevirt_virt-controller-abc123-virt-controller_previous.log", Size: "900"},
 			},
 		}
-		json.NewEncoder(w).Encode(resp)
+		json.NewEncoder(w).Encode(resp) //nolint:errcheck
 	})
 
 	server := httptest.NewServer(mux)
@@ -625,7 +625,7 @@ func TestListAndFilterContainerLogsPagination(t *testing.T) {
 				},
 			}
 		}
-		json.NewEncoder(w).Encode(resp)
+		json.NewEncoder(w).Encode(resp) //nolint:errcheck
 	})
 
 	server := httptest.NewServer(mux)
@@ -675,7 +675,7 @@ func TestDownloadContainerLogCaching(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		callCount++
-		fmt.Fprint(w, logContent)
+		fmt.Fprint(w, logContent) //nolint:errcheck
 	}))
 	defer server.Close()
 
@@ -718,10 +718,10 @@ func TestFetchContainerLogsEndToEnd(t *testing.T) {
 				{Name: "suite/0_kubevirt_virt-controller-abc-virt-controller.log", Size: "100"},
 			},
 		}
-		json.NewEncoder(w).Encode(resp)
+		json.NewEncoder(w).Encode(resp) //nolint:errcheck
 	})
 	mux.HandleFunc("/suite/0_kubevirt_virt-controller-abc-virt-controller.log", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprint(w, logContent)
+		fmt.Fprint(w, logContent) //nolint:errcheck
 	})
 	mux.HandleFunc("/", notFound)
 

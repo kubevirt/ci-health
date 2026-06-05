@@ -262,7 +262,11 @@ func writeCIFailureJobsURLFile(ciFailureJobURLs []string) error {
 	if err != nil {
 		return fmt.Errorf("failed creating ci failure jobs file: %v", err)
 	}
-	defer ciFailureJobsFile.Close()
+	defer func() {
+		if err := ciFailureJobsFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing ci failure jobs file")
+		}
+	}()
 	_, err = io.WriteString(ciFailureJobsFile, strings.Join(ciFailureJobURLs, "\n"))
 	if err != nil {
 		return fmt.Errorf("failed writing ci failure jobs file: %v", err)

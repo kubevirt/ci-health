@@ -142,7 +142,11 @@ func filterForLastCommit(storageBaseURL string, org string, repo string, prNumbe
 		if err != nil {
 			return nil, fmt.Errorf("Failed to get %s finished.json : %s", job.jobName, err)
 		}
-		defer finishedJSON.Body.Close()
+		defer func() {
+			if err := finishedJSON.Body.Close(); err != nil {
+				log.WithError(err).Warn("failed closing response body")
+			}
+		}()
 		if finishedJSON.StatusCode != http.StatusOK {
 			continue
 		}
@@ -190,7 +194,11 @@ func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job
 		if err != nil {
 			return nil, err
 		}
-		defer prowJobJSON.Body.Close()
+		defer func() {
+			if err := prowJobJSON.Body.Close(); err != nil {
+				log.WithError(err).Warn("failed closing response body")
+			}
+		}()
 		if prowJobJSON.StatusCode != 200 {
 			continue
 		}
@@ -224,7 +232,11 @@ func getJobsForLatestCommit(storageBaseURL string, org string, repo string, prNu
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	prHistoryPage, err := html.Parse(resp.Body)
 	if err != nil {
@@ -260,7 +272,7 @@ func HttpHeadWithRetry(url string) (resp *http.Response, err error) {
 
 func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response, err error)) (resp *http.Response, err error) {
 	httpRetryLog := log.WithField("url", url).WithField("verb", runtime.FuncForPC(reflect.ValueOf(httpVerb).Pointer()).Name())
-	retry.Do(
+	err = retry.Do(
 		func() error {
 			resp, err = httpVerb(url)
 			switch {
@@ -362,7 +374,11 @@ func ListPRFailures(prNumber, prOrg, prRepo string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	prHistoryPage, err := html.Parse(resp.Body)
 	if err != nil {

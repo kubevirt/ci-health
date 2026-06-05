@@ -108,7 +108,11 @@ func fetchTestGridTable(dashboard, tab string) (*testGridTableResponse, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to fetch testgrid table: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("testgrid returned status %d for %s", resp.StatusCode, apiURL)
@@ -264,7 +268,11 @@ func WriteLaneRateResultYAML(outputPath string, result *LaneRateResult) error {
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %w", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

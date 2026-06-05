@@ -204,7 +204,11 @@ func gatherPlotData(basePath string, metric types.Metric, startDate string) ([]t
 		if err != nil {
 			return err
 		}
-		defer jsonFile.Close()
+		defer func() {
+			if err := jsonFile.Close(); err != nil {
+				log.WithError(err).Warn("failed closing json file")
+			}
+		}()
 		byteValue, err := ioutil.ReadAll(jsonFile)
 		if err != nil {
 			return err

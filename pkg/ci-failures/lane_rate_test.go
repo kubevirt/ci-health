@@ -197,7 +197,7 @@ func TestAnalyzeLaneRate(t *testing.T) {
 	}
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		json.NewEncoder(w).Encode(mockResponse)
+		json.NewEncoder(w).Encode(mockResponse) //nolint:errcheck
 	}))
 	defer server.Close()
 

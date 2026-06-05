@@ -404,7 +404,11 @@ func WriteTestRateResultYAML(outputPath string, result *TestRateResult) error {
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %v", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

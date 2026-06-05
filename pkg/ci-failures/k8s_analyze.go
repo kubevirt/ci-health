@@ -543,7 +543,11 @@ func downloadContainerLog(gcsURL, cacheDir, fileName string) (string, int64, err
 	if err != nil {
 		return "", 0, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	if resp.StatusCode != http.StatusOK {
 		return "", 0, fmt.Errorf("failed to download log from GCS: status %d", resp.StatusCode)
@@ -553,7 +557,11 @@ func downloadContainerLog(gcsURL, cacheDir, fileName string) (string, int64, err
 	if err != nil {
 		return "", 0, err
 	}
-	defer out.Close()
+	defer func() {
+		if err := out.Close(); err != nil {
+			log.WithError(err).Warn("failed closing cached log file")
+		}
+	}()
 
 	size, err := io.Copy(out, resp.Body)
 	if err != nil {
@@ -584,7 +592,11 @@ func WriteK8sAnalysisResultYAML(outputPath string, result *K8sAnalysisResult) er
 	if err != nil {
 		return fmt.Errorf("failed to create output file %s: %v", outputPath, err)
 	}
-	defer outputFile.Close()
+	defer func() {
+		if err := outputFile.Close(); err != nil {
+			log.WithError(err).Warn("failed closing output file")
+		}
+	}()
 
 	encoder := yaml.NewEncoder(outputFile)
 	if err := encoder.Encode(result); err != nil {

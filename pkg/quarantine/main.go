@@ -41,7 +41,7 @@ func quarantineReportURL(org string, repo string) string {
 
 func httpGetWithRetry(url string) (resp *http.Response, err error) {
 	httpRetryLog := log.WithField("url", url)
-	retry.Do(
+	err = retry.Do(
 		func() error {
 			resp, err = http.Get(url)
 			switch {
@@ -75,7 +75,11 @@ func GetQuarantineStats() (stats QuarantineStats, err error) {
 		log.Errorf("Failed to download quarantine report")
 		return qStats, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
 
 	decoder := json.NewDecoder(resp.Body)
 	err = decoder.Decode(&quarantineReport)

@@ -226,7 +226,11 @@ func (b *Handler) writeBadge(name, filePath string, data types.RunningAverageDat
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.WithError(err).Warn("failed closing badge file")
+		}
+	}()
 
 	log.Debugf("Writing color %s", color)
 	badgeString := data.String()
@@ -279,7 +283,11 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.WithError(err).Warn("failed closing badge file")
+		}
+	}()
 
 	badgeString := fmt.Sprintf("%.0f / %.0f    |    %.2f%s", value, total, percentage, "%")
 
@@ -298,7 +306,11 @@ func (b *Handler) writeJobFailureBadges(data types.RunningAverageDataItem, level
 		if err != nil {
 			return err
 		}
-		defer f.Close()
+		defer func() {
+			if err := f.Close(); err != nil {
+				log.WithError(err).Warn("failed closing badge file")
+			}
+		}()
 
 		if i < len(failedJobLeaders) {
 			job := failedJobLeaders[i-1]
@@ -339,7 +351,11 @@ func (b *Handler) writeQuarantineBadge(name, filePath string, data types.Running
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.WithError(err).Warn("failed closing badge file")
+		}
+	}()
 
 	badgeString := fmt.Sprintf("%.0f", value)
 

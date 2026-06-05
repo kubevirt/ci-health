@@ -377,7 +377,7 @@ func TestFetchFlakefinderReports(t *testing.T) {
 			expected := fmt.Sprintf("/flakefinder-%s-168h.json", date)
 			if r.URL.Path == expected {
 				w.Header().Set("Content-Type", "application/json")
-				json.NewEncoder(w).Encode(report)
+				json.NewEncoder(w).Encode(report) //nolint:errcheck
 				return
 			}
 		}
@@ -418,7 +418,7 @@ func TestFetchFlakefinderReport(t *testing.T) {
 
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		w.Write(reportJSON)
+		w.Write(reportJSON) //nolint:errcheck
 	}))
 	defer server.Close()
 
