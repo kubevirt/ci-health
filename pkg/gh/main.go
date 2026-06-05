@@ -57,10 +57,6 @@ func (rt *retryRoundTripper) RoundTrip(req *http.Request) (resp *http.Response, 
 	return
 }
 
-var (
-	zeroDate = time.Time{}
-)
-
 type Client struct {
 	inner  *githubv4.Client
 	source string

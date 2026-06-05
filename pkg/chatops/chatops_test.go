@@ -12,10 +12,6 @@ import (
 	"github.com/kubevirt/ci-health/pkg/types"
 )
 
-const (
-	retestComment = "/retest"
-)
-
 func TestChatops(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "chatops Suite")
@@ -23,7 +19,6 @@ func TestChatops(t *testing.T) {
 
 var (
 	queryDate = time.Date(2021, time.Month(1), 22, 15, 11, 26, 0, time.UTC)
-	zeroDate  = time.Time{}
 )
 
 var _ = Describe("RetestComments", func() {

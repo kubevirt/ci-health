@@ -141,11 +141,3 @@ func batchRun(o *types.Options, mqHandler *mergequeue.Handler, coHandler *chatop
 		return nil, fmt.Errorf("unknown batch mode: %q", o.Mode)
 	}
 }
-
-func setLogLevel(logLevel string) {
-	if logLevel == "debug" {
-		log.SetLevel(log.DebugLevel)
-	} else {
-		log.SetLevel(log.InfoLevel)
-	}
-}
