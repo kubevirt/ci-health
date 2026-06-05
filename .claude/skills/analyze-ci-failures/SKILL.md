@@ -3,7 +3,7 @@ name: analyze-ci-failures
 description: >
     Analyze root causes for all the recent ci-failures.
     Use when user mentions to analyze recent ci failures
-allowed-tools: [Read, Write, Glob, Grep, Bash(go run:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
+allowed-tools: [Read, Write, Grep, Bash(go run:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
 ---
 
 ## Overview
@@ -26,6 +26,15 @@ $ go run ./cmd/ci-failures generate yaml
 This produces:
 - `output/tmp/errors-{sig}/*.yaml` — per-job error extractions with snippets, line links, and context
 - `output/tmp/build-logs/{buildID}.yaml` — full cached build logs with prow URL, GCS URL, timestamps, and complete log content
+
+At the end of execution, the command prints a YAML list of all generated error files to stdout:
+```
+generated_files:
+  - output/tmp/errors-sig-compute/pull-kubevirt-e2e-k8s-1.35-sig-compute.yaml
+  - output/tmp/errors-sig-network/pull-kubevirt-e2e-k8s-1.35-sig-network.yaml
+  ...
+```
+Parse this list to know exactly which files to read — no separate file discovery step (find/glob) is needed.
 
 ### Stale data
 Before you proceed, 
@@ -66,20 +75,26 @@ Each file contains structured data — most metadata can be read directly withou
 
 ### Full build log files (`output/tmp/build-logs/{buildID}.yaml`)
 
-Only needed when error snippets are insufficient for root cause analysis. Structure:
-- `prow_job_url`: link to the Prow job
-- `build_log_url`: GCS URL for the raw build log
-- `log_content`: the complete build log text
-- `started` / `finished`: timestamps
+Only needed when error snippets are insufficient for root cause analysis. Use the `show-log` command to read decoded build logs instead of reading the YAML files directly (they contain base64-encoded binary content):
 
-These files can be very large. When reading them, start searching from the end since failures appear at the bottom.
+```bash
+# Show last 30 lines of a build log
+$ go run ./cmd/ci-failures show-log <build-id> --tail 30
+
+# Search for error patterns (case-insensitive)
+$ go run ./cmd/ci-failures show-log <build-id> --grep "error" --tail 20
+```
+
+Flags:
+- `--tail N` — print only the last N lines (default: all)
+- `--grep pattern` — filter lines containing the pattern (case-insensitive); output includes line numbers
 
 ## Procedure
 
-1. **Discover error files**: Use Glob to find all `output/tmp/errors-*/*.yaml` files
+1. **Use generated file list**: Parse the `generated_files:` YAML list printed by the `generate yaml` command to get all error YAML file paths — no separate discovery step needed
 2. **Read each error YAML file**: Extract the job name, SIG (from directory), and all build errors with their snippets
 3. **Analyze error snippets**: For each build error, examine `error_text` and `context` fields to determine root cause. In most cases the snippets contain enough information
-4. **Deep-dive when needed**: If snippets are ambiguous, read the full build log from `output/tmp/build-logs/{build_id}.yaml`
+4. **Deep-dive when needed**: If snippets are ambiguous or empty, use `go run ./cmd/ci-failures show-log <build_id> --grep "error" --tail 20` to search the full build log
 5. **Classify** each failure as fixable or non-fixable
 6. **Group similar failures** across jobs — errors with the same root cause should be combined into a single group even if they appear in different SIGs or branches
 
