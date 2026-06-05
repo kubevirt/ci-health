@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-06-01 (34x / 100.00%)
+### 2026-06-05 (1x / 2.86%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-06-01 (34x / 97.14%)
 
 
 #### external (28x / 82.35%)
@@ -37,7 +58,7 @@
 
 <hr/>
 
-**12x**: _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
+**12x**: _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
 <details>
 <summary>all...</summary>
 
@@ -74,7 +95,7 @@
 
 <hr/>
 
-**7x**: _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
+**7x**: _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
 <details>
 <summary>all...</summary>
 
@@ -96,7 +117,7 @@
 
 <hr/>
 
-**3x**: _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+**3x**: _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
 <details>
 <summary>all...</summary>
 
@@ -115,7 +136,7 @@
 
 <hr/>
 
-**5x**: _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
+**5x**: _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
 <details>
 <summary>all...</summary>
 
@@ -128,6 +149,32 @@
 * _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:12:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2061353420056432640#1:build-log.txt%3A977)
 
 * _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (5x / 14.71%)
+
+<details>
+<summary> deployment timeout (5x / 14.71%) </summary>
+
+<hr/>
+
+**5x**: _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+
+* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:11:57: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network-1.8/2061353416696795136#1:build-log.txt%3A998)
+
+* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:11:22: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061353430110179328#1:build-log.txt%3A927)
+
+* _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
+
+* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:10:04: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2061353422568820736#1:build-log.txt%3A903)
 
 </details>
 
@@ -152,41 +199,15 @@
 <hr/>
 </details>
 
-#### internal (5x / 14.71%)
-
-<details>
-<summary> deployment timeout (5x / 14.71%) </summary>
-
-<hr/>
-
-**5x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-
-* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:11:57: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network-1.8/2061353416696795136#1:build-log.txt%3A998)
-
-* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:11:22: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061353430110179328#1:build-log.txt%3A927)
-
-* _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
-
-* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:10:04: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2061353422568820736#1:build-log.txt%3A903)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (28x / 82.35%)
+### external (29x / 82.86%)
 
 <details>
-<summary> download failure in context (13x / 38.24%) </summary>
+<summary> download failure in context (13x / 37.14%) </summary>
 
 <hr/>
 
@@ -210,7 +231,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**12x**: _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
+**12x**: _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
 <details>
 <summary>all...</summary>
 
@@ -363,11 +384,11 @@ make: *** [Makefile:188: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (10x / 29.41%) </summary>
+<summary> container image pull failure in context (10x / 28.57%) </summary>
 
 <hr/>
 
-**7x**: _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
+**7x**: _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
 <details>
 <summary>all...</summary>
 
@@ -459,7 +480,7 @@ make: *** [Makefile:176: cluster-down] Error 125
 
 <hr/>
 
-**3x**: _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+**3x**: _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
 <details>
 <summary>all...</summary>
 
@@ -504,11 +525,11 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 14.71%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 14.29%) </summary>
 
 <hr/>
 
-**5x**: _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
+**5x**: _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
 <details>
 <summary>all...</summary>
 
@@ -576,15 +597,40 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 </details>
-
-### internal (5x / 14.71%)
-
 <details>
-<summary> deployment timeout (5x / 14.71%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 2.86%) </summary>
 
 <hr/>
 
-**5x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+<details><summary>context</summary>
+<pre>00:13:30: [control-plane-check] kube-scheduler is healthy after 3.060930196s
+00:13:31: I0604 20:13:30.779805    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+00:13:31: I0604 20:13:31.277792    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+00:13:32: I0604 20:13:31.777434    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+00:13:32: [control-plane-check] kube-apiserver is healthy after 5.003768117s
+00:13:32: I0604 20:13:32.282847    1615 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### internal (5x / 14.29%)
+
+<details>
+<summary> deployment timeout (5x / 14.29%) </summary>
+
+<hr/>
+
+**5x**: _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
 <details>
 <summary>all...</summary>
 
@@ -653,10 +699,10 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### needs-investigation (1x / 2.94%)
+### needs-investigation (1x / 2.86%)
 
 <details>
-<summary> no matching pattern (1x / 2.94%) </summary>
+<summary> no matching pattern (1x / 2.86%) </summary>
 
 <hr/>
 
@@ -686,7 +732,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ## per branch [⬆](#top)
 
 
-### release-1.7 (1x / 2.94%)
+### release-1.7 (1x / 2.86%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -707,30 +753,13 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### main (5x / 14.71%)
+### main (6x / 17.14%)
 
 
-#### external (4x / 80.00%)
+#### external (5x / 83.33%)
 
 <details>
-<summary> container image pull failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-
-* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (2x / 40.00%) </summary>
+<summary> download failure in context (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -754,11 +783,43 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 </details>
+<details>
+<summary> container image pull failure in context (2x / 33.33%) </summary>
 
-#### internal (1x / 20.00%)
+<hr/>
+
+**2x**: _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+
+* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 16.67%)
 
 <details>
-<summary> deployment timeout (1x / 20.00%) </summary>
+<summary> deployment timeout (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -773,7 +834,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### release-1.8 (28x / 82.35%)
+### release-1.8 (28x / 80.00%)
 
 
 #### external (24x / 85.71%)
@@ -783,7 +844,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 
-**11x**: _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
+**11x**: _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
 <details>
 <summary>all...</summary>
 
@@ -818,17 +879,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 
-**1x**: _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
-
-</details>
-
-<hr/>
-
-**7x**: _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
+**7x**: _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
 <details>
 <summary>all...</summary>
 
@@ -849,13 +900,23 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 </details>
 
 <hr/>
+
+**1x**: _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
+
+</details>
+
+<hr/>
 </details>
 <details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 17.86%) </summary>
 
 <hr/>
 
-**5x**: _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
+**5x**: _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
 <details>
 <summary>all...</summary>
 
@@ -881,7 +942,7 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 
 <hr/>
 
-**4x**: _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:11:57: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network-1.8/2061353416696795136#1:build-log.txt%3A998)
+**4x**: _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
 <details>
 <summary>all...</summary>
 
@@ -903,7 +964,206 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-storage (7x / 20.59%)
+### sig-network (9x / 25.71%)
+
+
+#### external (7x / 77.78%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 33.33%) </summary>
+
+<hr/>
+
+**3x**: _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:12:17: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061353427622957056#1:build-log.txt%3A998)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:12:17: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061353427622957056#1:build-log.txt%3A998)
+
+* _2026-06-01 07:46:05 &#43;0000 UTC_: <code>08:09:47: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-network-1.8/2061353423407681536#1:build-log.txt%3A984)
+
+* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:12:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2061353420056432640#1:build-log.txt%3A977)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
+
+* _2026-06-01 07:51:22 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-sriov-1.8/2061353408887001088#1:build-log.txt%3A1671)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (2x / 22.22%)
+
+<details>
+<summary> deployment timeout (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
+
+* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:11:57: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network-1.8/2061353416696795136#1:build-log.txt%3A998)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (19x / 54.29%)
+
+
+#### external (16x / 84.21%)
+
+<details>
+<summary> download failure in context (8x / 42.11%) </summary>
+
+<hr/>
+
+**8x**: _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
+
+* _2026-06-01 10:08:23 &#43;0000 UTC_: <code>10:29:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2061384109464227840#1:build-log.txt%3A3943)
+
+* _2026-06-01 07:46:25 &#43;0000 UTC_: <code>08:13:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2061353425072820224#1:build-log.txt%3A3955)
+
+* _2026-06-01 07:46:10 &#43;0000 UTC_: <code>08:14:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial-1.8/2061353426742153216#1:build-log.txt%3A3975)
+
+* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
+
+* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:14:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061353429304872960#1:build-log.txt%3A3964)
+
+* _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:13:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061353408442404864#1:build-log.txt%3A3983)
+
+* _2026-06-01 07:45:58 &#43;0000 UTC_: <code>08:03:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061353408597594112#1:build-log.txt%3A4388)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (6x / 31.58%) </summary>
+
+<hr/>
+
+**3x**: _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
+
+* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
+
+* _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
+
+</details>
+
+<hr/>
+
+**3x**: _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 10:33:51 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061384114241540096#1:build-log.txt%3A205)
+
+* _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
+
+* _2026-06-01 10:25:52 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial-1.8/2061384111007731712#1:build-log.txt%3A581)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 10.53%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
+
+* _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (3x / 15.79%)
+
+<details>
+<summary> deployment timeout (3x / 15.79%) </summary>
+
+<hr/>
+
+**3x**: _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:11:22: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061353430110179328#1:build-log.txt%3A927)
+
+* _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
+
+* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:10:04: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2061353422568820736#1:build-log.txt%3A903)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (7x / 20.00%)
 
 
 #### external (6x / 85.71%)
@@ -973,188 +1233,4 @@ make: *** [Makefile:39: bazel-build-images] Error 125
 <hr/>
 </details>
 
-### sig-compute (19x / 55.88%)
-
-
-#### external (16x / 84.21%)
-
-<details>
-<summary> download failure in context (8x / 42.11%) </summary>
-
-<hr/>
-
-**8x**: _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 10:14:55 &#43;0000 UTC_: <code>10:35:12: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061390371253915648#1:build-log.txt%3A3979)
-
-* _2026-06-01 10:08:23 &#43;0000 UTC_: <code>10:29:53: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2061384109464227840#1:build-log.txt%3A3943)
-
-* _2026-06-01 07:46:25 &#43;0000 UTC_: <code>08:13:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2061353425072820224#1:build-log.txt%3A3955)
-
-* _2026-06-01 07:46:10 &#43;0000 UTC_: <code>08:14:59: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial-1.8/2061353426742153216#1:build-log.txt%3A3975)
-
-* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:14:29: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2061353421725765632#1:build-log.txt%3A3951)
-
-* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:14:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061353429304872960#1:build-log.txt%3A3964)
-
-* _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:13:28: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2061353408442404864#1:build-log.txt%3A3983)
-
-* _2026-06-01 07:45:58 &#43;0000 UTC_: <code>08:03:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061353408597594112#1:build-log.txt%3A4388)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (6x / 31.58%) </summary>
-
-<hr/>
-
-**3x**: _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:05:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-operator/2061439596926865408#1:build-log.txt%3A301)
-
-* _2026-06-01 14:05:30 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-compute/2061439596796841984#1:build-log.txt%3A239)
-
-* _2026-06-01 10:34:38 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-1.35-vgpu-1.8/2061391210236350464#1:build-log.txt%3A184)
-
-</details>
-
-<hr/>
-
-**3x**: _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 10:33:51 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061384114241540096#1:build-log.txt%3A205)
-
-* _2026-06-01 10:32:14 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-1.8/2061384113398484992#1:build-log.txt%3A202)
-
-* _2026-06-01 10:25:52 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-serial-1.8/2061384111007731712#1:build-log.txt%3A581)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 10.53%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 10:18:48 &#43;0000 UTC_: <code>10:35:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061384110051430400#1:build-log.txt%3A909)
-
-* _2026-06-01 07:45:59 &#43;0000 UTC_: <code>08:15:29: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations-1.8/2061353417565016064#1:build-log.txt%3A1188)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (3x / 15.79%)
-
-<details>
-<summary> deployment timeout (3x / 15.79%) </summary>
-
-<hr/>
-
-**3x**: _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:10:04: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2061353422568820736#1:build-log.txt%3A903)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 07:46:07 &#43;0000 UTC_: <code>08:11:22: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2061353430110179328#1:build-log.txt%3A927)
-
-* _2026-06-01 07:46:06 &#43;0000 UTC_: <code>08:05:36: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.8/2061353425936846848#1:build-log.txt%3A911)
-
-* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:10:04: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2061353422568820736#1:build-log.txt%3A903)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-network (8x / 23.53%)
-
-
-#### external (6x / 75.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 37.50%) </summary>
-
-<hr/>
-
-**3x**: _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:12:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2061353420056432640#1:build-log.txt%3A977)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:12:17: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061353427622957056#1:build-log.txt%3A998)
-
-* _2026-06-01 07:46:05 &#43;0000 UTC_: <code>08:09:47: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.34-sig-network-1.8/2061353423407681536#1:build-log.txt%3A984)
-
-* _2026-06-01 07:46:02 &#43;0000 UTC_: <code>08:12:03: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.33-sig-network-1.8/2061353420056432640#1:build-log.txt%3A977)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (2x / 25.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 10:27:12 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2061384111733346304#1:build-log.txt%3A599)
-
-* _2026-06-01 07:51:22 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-kind-sriov-1.8/2061353408887001088#1:build-log.txt%3A1671)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 13:55:33 &#43;0000 UTC_: <code>14:07:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network/2061439596553572352#1:build-log.txt%3A4208)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (2x / 25.00%)
-
-<details>
-<summary> deployment timeout (2x / 25.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 14:01:39 &#43;0000 UTC_: <code>14:09:35: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16932/pull-kubevirt-e2e-k8s-1.34-sig-network/2061439596561960960#1:build-log.txt%3A1002)
-
-* _2026-06-01 07:46:18 &#43;0000 UTC_: <code>08:11:57: error: timed out waiting for the condition on deployments/cluster-network-addons-operator</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17990/pull-kubevirt-e2e-k8s-1.35-ipv6-sig-network-1.8/2061353416696795136#1:build-log.txt%3A998)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-05 10:29:47
+Last updated: 2026-06-05 14:15:46
