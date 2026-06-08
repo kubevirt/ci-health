@@ -17,7 +17,69 @@
 ## per day [⬆](#top)
 
 
-### 2026-06-05 (1x / 50.00%)
+### 2026-06-08 (7x / 77.78%)
+
+
+#### external (7x / 100.00%)
+
+<details>
+<summary> download failure in context (5x / 71.43%) </summary>
+
+<hr/>
+
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (2x / 28.57%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-06-05 (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +100,7 @@
 <hr/>
 </details>
 
-### 2026-06-01 (1x / 50.00%)
+### 2026-06-01 (1x / 11.11%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -64,10 +126,136 @@
 ## per error category [⬆](#top)
 
 
-### external (1x / 50.00%)
+### external (8x / 88.89%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
+<summary> download failure in context (5x / 55.56%) </summary>
+
+<hr/>
+
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+<details><summary>context</summary>
+<pre>09:32:04: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+09:32:04: INFO: Elapsed time: 0.654s
+09:32:04: INFO: 0 processes.
+09:32:04: ERROR: Build failed. Not running target
+09:32:07: &#43; rm -f /tmp/kubevirt.deploy.FBCM
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details><summary>context</summary>
+<pre>09:34:43: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:34:43: INFO: Elapsed time: 1.616s
+09:34:43: INFO: 0 processes.
+09:34:43: ERROR: Build failed. Not running target
+09:34:45: &#43; rm -f /tmp/kubevirt.deploy.UQxq
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+<details><summary>context</summary>
+<pre>09:33:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:33:03: INFO: Elapsed time: 1.043s
+09:33:03: INFO: 0 processes.
+09:33:03: ERROR: Build failed. Not running target
+09:33:05: &#43; rm -f /tmp/kubevirt.deploy.EWc1
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+<details><summary>context</summary>
+<pre>09:35:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:35:03: INFO: Elapsed time: 0.973s
+09:35:03: INFO: 0 processes.
+09:35:03: ERROR: Build failed. Not running target
+09:35:05: &#43; rm -f /tmp/kubevirt.deploy.8nFp
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details><summary>context</summary>
+<pre>09:23:47: Repository rule oci_pull defined at:
+09:23:47:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_oci/oci/private/pull.bzl:342:27: in &lt;toplevel&gt;
+09:23:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime/BUILD.bazel:7:6: @fedora_realtime//:fedora_realtime depends on @fedora_realtime_single//:fedora_realtime_single in repository @fedora_realtime_single which failed to fetch. no such package &#39;@fedora_realtime_single//&#39;: java.io.IOException: Error downloading [https://quay.io/v2/auth?scope=repository:kubevirt/fedora-realtime-container-disk:pull&amp;service=quay.io] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime_single/www-authenticate.json: GET returned 502 Bad Gateway
+09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:
+09:23:47: INFO: Elapsed time: 2.194s
+09:23:47: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details><summary>context</summary>
+<pre>09:31:45: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:31:45: INFO: Elapsed time: 0.667s
+09:31:45: INFO: 0 processes.
+09:31:45: ERROR: Build failed. Not running target
+09:31:46: &#43; rm -f /tmp/kubevirt.deploy.1UAC
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details><summary>context</summary>
+<pre>09:24:33: *) If there is a configured URL Rewriter, check that it does not block the request.
+09:24:33:
+09:24:33: See for more: https://github.com/bazel-contrib/rules_oci/blob/main/docs/pull.md#authentication-using-credential-helpers
+09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed
+09:24:33: INFO: Elapsed time: 0.533s
+09:24:33: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -92,10 +280,10 @@
 <hr/>
 </details>
 
-### needs-investigation (1x / 50.00%)
+### needs-investigation (1x / 11.11%)
 
 <details>
-<summary> no matching pattern (1x / 50.00%) </summary>
+<summary> no matching pattern (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -125,13 +313,69 @@
 ## per branch [⬆](#top)
 
 
-### main (1x / 50.00%)
+### main (8x / 88.89%)
 
 
-#### external (1x / 100.00%)
+#### external (8x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
+<summary> download failure in context (5x / 62.50%) </summary>
+
+<hr/>
+
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (2x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -146,7 +390,7 @@
 <hr/>
 </details>
 
-### release-1.7 (1x / 50.00%)
+### release-1.7 (1x / 11.11%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -172,7 +416,106 @@
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 50.00%)
+### sig-storage (3x / 33.33%)
+
+
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-01 20:05:06 &#43;0000 UTC_: <code>22:09:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-2qbf8-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 90e398de-9d0a-43a6-831b-6bfceadaf099]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-06-01T22:08:53.733535Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18006/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2061539398683463680#1:build-log.txt%3A12941)
+<details>
+<summary>all...</summary>
+
+* _2026-06-01 20:05:06 &#43;0000 UTC_: <code>22:09:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-2qbf8-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 90e398de-9d0a-43a6-831b-6bfceadaf099]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-06-01T22:08:53.733535Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18006/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2061539398683463680#1:build-log.txt%3A12941)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (2x / 66.67%)
+
+<details>
+<summary> download failure in context (2x / 66.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (5x / 55.56%)
+
+
+#### external (5x / 100.00%)
+
+<details>
+<summary> download failure in context (3x / 60.00%) </summary>
+
+<hr/>
+
+**3x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -193,25 +536,4 @@
 <hr/>
 </details>
 
-### sig-storage (1x / 50.00%)
-
-
-#### needs-investigation (1x / 100.00%)
-
-<details>
-<summary> no matching pattern (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-01 20:05:06 &#43;0000 UTC_: <code>22:09:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-2qbf8-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 90e398de-9d0a-43a6-831b-6bfceadaf099]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-06-01T22:08:53.733535Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18006/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2061539398683463680#1:build-log.txt%3A12941)
-<details>
-<summary>all...</summary>
-
-* _2026-06-01 20:05:06 &#43;0000 UTC_: <code>22:09:02:   {&#34;[namespace kubevirt-test-default3 name testvmi-2qbf8-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx kind VirtualMachineInstance uid 90e398de-9d0a-43a6-831b-6bfceadaf099]&#34;:&#34;(MISSING)&#34;,&#34;component&#34;:&#34;portforward&#34;,&#34;level&#34;:&#34;error&#34;,&#34;msg&#34;:&#34;Failed to freeze VMI: server error. command Freeze failed: \&#34;LibvirtError(Code=1, Domain=10, Message=&#39;internal error: unable to execute QEMU agent command &#39;guest-fsfreeze-freeze&#39;: failed to open /mount_dir: Permission denied&#39;)\&#34;&#34;,&#34;pos&#34;:&#34;watcher.go:157&#34;,&#34;reason&#34;:&#34;warning event received&#34;,&#34;timestamp&#34;:&#34;2026-06-01T22:08:53.733535Z&#34;}</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18006/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2061539398683463680#1:build-log.txt%3A12941)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-08 16:33:15
+Last updated: 2026-06-08 18:57:17
