@@ -6,11 +6,11 @@
 |--------|--------|-------|-------|
 | **Total failures** | 2778 | 436 | |
 | **Active lanes** | 42 | 35 | |
-| **Daily failure rate** | ~99/day | ~62/day | Worsening (+) |
+| **Daily failure rate** | ~99/day | ~62/day | Improving (-) |
 | **Quarantine candidates** | 3 high, 2 medium | | |
 | **Infra-unstable lanes** | 12 (Pod failure rate <85%) | | |
 
-**Overall trend: Worsening.** The 7-day daily failure rate (~62/day) is higher than the 28-day average (~99/day) when normalized per-day. sig-compute and sig-storage dominate with persistent, long-standing flakes.
+**Overall trend: Improving.** The 7-day daily failure rate (~62/day) is lower than the prior 21-day rate (~112/day), indicating a positive trend. However, sig-compute and sig-storage continue to dominate with persistent, long-standing flakes.
 
 **Top 3 worst SIGs (28d):**
 1. **sig-compute** — 1696 failures (61.1%) — virtiofs, USB, PCI, VSOCK flakes
@@ -337,6 +337,8 @@ Pod-level setup failures indicate infrastructure instability rather than individ
 **Note:** arm64 failures are entirely Pod-level (68% 28d, 74% 7d success). No individual test failures — purely infrastructure.
 
 ---
+
+<a id="quarantine-status-changes"></a>
 
 ## Quarantine Status Changes (since 2026-06-02)
 

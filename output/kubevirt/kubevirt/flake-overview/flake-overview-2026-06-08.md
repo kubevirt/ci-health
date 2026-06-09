@@ -254,6 +254,8 @@ sig-operator failures are almost entirely Pod-level infrastructure failures, not
 
 **Total 7d failures: ~6 (1.4%)**
 
+### Periodic lanes
+
 | Lane | 7d Failures | Trend |
 |------|-------------|-------|
 | [periodic-k8s-1.34-sig-monitoring](https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.34-sig-monitoring) | 5 | **Improving** |
@@ -274,6 +276,8 @@ VM dirty rate metrics `[QUARANTINE]` showed zero failures in the 7d window, impr
 ## sig-compute-migrations
 
 **Total 7d failures: 17 (4.1%)**
+
+### Lanes
 
 | Lane | 7d Failures | Trend |
 |------|-------------|-------|
@@ -320,6 +324,8 @@ Bandwidth limitations and Backup checkpoints tests from the June 5 7d window sho
 arm64 failures remain entirely Pod-level (76.1% success). No individual test failures.
 
 ---
+
+<a id="quarantine-status-changes"></a>
 
 ## Quarantine Status Changes (since 2026-06-05)
 
