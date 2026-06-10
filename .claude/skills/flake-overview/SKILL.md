@@ -3,7 +3,7 @@ name: flake-overview
 description: >
     Unified flake analysis combining PR-based flakefinder data with periodic lane failure rates.
     Use when the user wants an overview of test flakiness across the project.
-allowed-tools: [Read, Bash(go run:*), Bash(grep:*), Bash(find:*), Bash(ls:*), Bash(test:*), Write]
+allowed-tools: [Read, Write, WebFetch, Bash(go run:*), Bash(grep:*), Bash(find:*), Bash(ls:*), Bash(test:*), Bash(gh search code:*), Bash(gh search issues:*), Bash(gh issue list:*), Bash(mkdir:*), Bash(curl:*)]
 ---
 
 ## Overview
@@ -123,16 +123,70 @@ When identifying quarantine candidates, rank by these criteria (not just success
 
 For each unique failing test, find its source file and line number so the report can link directly to the code. This helps readers who are not familiar with the test codebase.
 
-1. **Locate the kubevirt/kubevirt repo**: look for `kubevirt.io/kubevirt` (or `kubevirt/kubevirt`) relative to the ci-health repo's parent directory.
-2. **Extract the `It("...")` description** from each test name. The test name is a concatenation of Ginkgo `Describe`/`Context`/`It` blocks separated by spaces. The `It` text is the last meaningful segment — typically everything after the last known context boundary. For example:
+**Always search online** — do not look for or use a local kubevirt repository clone.
+
+1. **Extract the `It("...")` description** from each test name. The test name is a concatenation of Ginkgo `Describe`/`Context`/`It` blocks separated by spaces. The `It` text is the last meaningful segment — typically everything after the last known context boundary. For example:
    - Full name: `KubeVirt Tests Suite.[sig-compute]VSOCK Live migration should retain the CID for migration target`
    - Search string: `should retain the CID for migration target`
-3. **Grep for the description** in the `tests/` directory: `grep -rn "<description>" tests/ --include="*.go"`
-4. **Construct a GitHub permalink**: `https://github.com/kubevirt/kubevirt/blob/main/<path>#L<line>` (e.g., `https://github.com/kubevirt/kubevirt/blob/main/tests/vmi_vsock_test.go#L121`)
-
-If the kubevirt repo is not available locally, skip this step — the report will still be useful without links, just less navigable.
+2. **Search on GitHub** using the `gh` CLI to find the file and line number:
+   ```bash
+   gh search code --repo kubevirt/kubevirt --filename '*.go' '<description>'
+   ```
+   This returns matching files and line numbers. If results are ambiguous, narrow by adding `-- path:tests/` or use a more specific substring.
+3. **Construct a GitHub permalink**: `https://github.com/kubevirt/kubevirt/blob/main/<path>#L<line>` (e.g., `https://github.com/kubevirt/kubevirt/blob/main/tests/vmi_vsock_test.go#L121`)
 
 Skip `.Pod` and `BeforeSuite`/`AfterSuite` entries — these are infrastructure-level, not test code.
+
+## Step 4: Search for existing GitHub issues
+
+For each test that qualifies as a quarantine candidate (from the quarantine prioritization criteria) or is already quarantined with a success rate below 50% (quarantine debt), search for existing open issues in `kubevirt/kubevirt` that track the flake.
+
+1. **Extract a search-friendly snippet** from the test name — use the `It("...")` description (same as Step 3). Keep it short enough to avoid false negatives but specific enough to avoid false positives. For example:
+   - Test: `KubeVirt Tests Suite.[sig-compute]HostDevices with ephemeral disk with emulated PCI devices Should successfully passthrough 2 emulated PCI devices`
+   - Search snippet: `passthrough 2 emulated PCI devices`
+
+2. **Search open issues** using the `gh` CLI:
+   ```bash
+   gh search issues --repo kubevirt/kubevirt --state open '<search snippet>'
+   ```
+   If the search returns too many results, narrow with additional keywords (e.g., `flak` or `quarantine`). If it returns nothing, try a shorter or different substring from the test name.
+
+3. **Record the results** — for each test, note:
+   - Whether an open issue exists (issue number + title + URL)
+   - Whether the issue is labeled `kind/flake` or similar
+   - If no issue exists, flag the test as **"no tracking issue"** — this is important information for the report
+
+4. **Rate-limit fallback** — GitHub search API has rate limits. If `gh search issues` returns a 403, fall back to the GitHub web search URL via WebFetch:
+   ```
+   https://github.com/kubevirt/kubevirt/issues?q=is%3Aissue+is%3Aopen+<url-encoded+search+snippet>
+   ```
+   This uses a different rate-limit bucket and is usually available when the API is exhausted. Parse the fetched page for issue titles and URLs. If both approaches fail, note which tests could not be checked.
+
+## Step 5: Detect quarantine status changes
+
+Compare the current run's quarantine data against the **most recent prior report** to surface what changed since the last analysis.
+
+1. **Find the prior report**: list files in `output/kubevirt/kubevirt/flake-overview/` sorted by date descending. Take the most recent file whose date is **before** today's date. If no prior report exists (first run), skip this step entirely.
+
+2. **Read the prior report** and extract three sets:
+   - **Prior quarantined tests**: all test names that appeared with `[QUARANTINE]` in any per-lane table
+   - **Prior quarantine candidates**: all tests listed in the "Quarantine Candidate Summary" table (non-quarantined tests flagged for quarantine)
+   - **Prior quarantine debt**: all tests listed in the "Quarantine Debt" section
+
+3. **Build the current sets** from the current YAML data and analysis:
+   - **Current quarantined tests**: all test names containing `[QUARANTINE]` in the YAML `test_name` fields
+   - **Current quarantine candidates**: tests identified by the quarantine prioritization criteria in this run
+   - **Current quarantine debt**: quarantined tests with <50% success rate in this run
+
+4. **Compute the diff** across five categories:
+
+   - **Newly quarantined**: tests that have `[QUARANTINE]` in the current data but were listed as candidates or appeared without the tag in the prior report. This means the quarantine action was taken.
+   - **Removed from quarantine**: tests that had `[QUARANTINE]` in the prior report but no longer have the tag in the current data. Either the tag was removed (test fixed) or the test was deleted.
+   - **Stale quarantine candidates**: tests that were flagged as quarantine candidates in the prior report and are still not quarantined in the current data. Action was recommended but not taken.
+   - **New quarantine debt**: tests that are quarantined with <50% success rate now but were not in the prior report's debt section (either newly quarantined and immediately broken, or a previously-healthy quarantined test degraded below 50%).
+   - **Resolved quarantine debt**: tests that were in the prior report's debt section but are no longer (either fixed above 50%, unquarantined, or removed entirely).
+
+   For matching tests across reports, normalize test names by stripping markdown link syntax, trimming whitespace, and comparing the core test description (the `It("...")` text). Exact name matching is fragile because reports may abbreviate differently — match on the distinctive substring (e.g., "USB passthrough 1 device", "IO error pause VMI").
 
 ## Presenting results
 
@@ -148,7 +202,7 @@ Lead with a concise summary covering:
 
 - Report date and analysis windows (28d and 7d)
 - Total failures and number of lanes for each window
-- Overall trend (improving / stable / worsening) based on 7d-vs-28d proportional comparison
+- Overall trend (improving / stable / worsening) — compute by comparing the 7d daily rate against the **non-overlapping** prior-21d rate: `prior_21d_rate = (28d_total - 7d_total) / 21`. If 7d rate < prior 21d rate → improving; if roughly equal (±15%) → stable; if higher → worsening. Do **not** compare 7d against the raw 28d average (which includes the 7d data and biases toward "stable").
 - Top 3 worst SIGs by total failure count
 - Number of quarantine candidates identified (high / medium / low priority)
 - Number of infra-unstable lanes
@@ -166,8 +220,11 @@ Add a **navigation links** section immediately after the summary with markdown a
 - [sig-performance](#sig-performance)
 - [Platform-specific](#platform-specific)
 - [Infrastructure](#infrastructure)
+- [Quarantine Status Changes](#quarantine-status-changes)
 - [Quarantine Candidate Summary](#quarantine-candidate-summary)
 ```
+
+**Anchor stability**: The "Quarantine Status Changes" heading includes a date suffix (`(since YYYY-MM-DD)`), which changes the generated anchor. To keep the TOC link stable, add an explicit HTML anchor before the heading: `<a id="quarantine-status-changes"></a>`. Do the same for any heading whose text varies between reports.
 
 #### 2. Infrastructure section
 
@@ -182,8 +239,9 @@ Before the SIG sections, flag infra-correlated lanes:
 For each SIG, create a section with:
 
 - **SIG header** with total failures and failure share across all lanes in that SIG
+- **h3 lane groupings** — always group lanes under `### Periodic lanes` and/or `### Presubmit lanes` headings, even when there is only one lane in the group. This maintains consistent h2→h3→h4 heading hierarchy across all SIG sections.
 - **Lanes table**: list all lanes for this SIG with failures, share, builds, and 28d-vs-7d trend
-- **Failing tests table** for each lane, sorted by success rate (worst first). For each test include:
+- **Failing tests table** (h4 per lane) for each lane, sorted by success rate (worst first). For each test include:
   - Test name as a **markdown link to the source code** (GitHub permalink from Step 3). If no source link was resolved, use the plain test name.
   - Success rate (28d and 7d), total runs, and severity
   - **Trend**: arrow or label indicating direction (28d→7d)
@@ -191,17 +249,61 @@ For each SIG, create a section with:
   - **Pattern**: flaky (high flip rate), burst (clustered timestamps), consecutive (deterministic), or infra-correlated
   - `[QUARANTINE]` flag if present in the test name
 
-#### 4. Quarantine candidate summary (bottom of report)
+#### 4. Quarantine status changes (before the candidate summary)
+
+If a prior report exists (from Step 5), add a section tracking what changed:
+
+```markdown
+## Quarantine Status Changes (since YYYY-MM-DD)
+```
+
+Include only the subsections that have entries — omit empty categories. If no prior report exists, omit this entire section.
+
+**Newly quarantined** — tests that gained the `[QUARANTINE]` tag since the prior report:
+
+| Test | SIG | Prior Status |
+|------|-----|--------------|
+
+Where **Prior Status** is "quarantine candidate (priority)" or "not flagged".
+
+**Removed from quarantine** — tests that lost the `[QUARANTINE]` tag:
+
+| Test | SIG | Prior Rate | Current Rate | Notes |
+|------|-----|-----------|--------------|-------|
+
+Where **Notes** explains whether the test was fixed (now passing), deleted, or still failing without the tag.
+
+**Stale quarantine candidates** — tests flagged as candidates in the prior report that are still not quarantined:
+
+| Test | SIG | First Flagged | Current Rate | Issue |
+|------|-----|--------------|--------------|-------|
+
+Where **First Flagged** is the date of the prior report that first recommended quarantine, and **Issue** links to any tracking issue (from Step 4).
+
+**Quarantine debt resolved** — tests that were in the prior report's debt section but are no longer:
+
+| Test | SIG | Prior Rate | Resolution |
+|------|-----|-----------|------------|
+
+Where **Resolution** is "fixed (now X%)", "unquarantined", or "test removed".
+
+**New quarantine debt** — tests newly fallen below 50% success since the prior report:
+
+| Test | SIG | Prior Rate | Current Rate |
+|------|-----|-----------|--------------|
+
+#### 5. Quarantine candidate summary (bottom of report)
 
 After all SIG sections, provide a cross-SIG quarantine candidate table:
 
-| Test | SIG | Lanes | Worst Rate (28d) | 7d Trend | Pattern | Dispersion | Priority |
-|------|-----|-------|-------------------|----------|---------|------------|----------|
+| Test | SIG | Lanes | Worst Rate (28d) | 7d Trend | Pattern | Dispersion | Priority | Issue |
+|------|-----|-------|-------------------|----------|---------|------------|----------|-------|
 
 Where:
 - **Test** is a markdown link to the source code (GitHub permalink from Step 3)
 - **Priority** is high/medium/low/not-candidate per the quarantine prioritization criteria
 - **7d Trend** is improving/stable/worsening with the rate delta
+- **Issue** is a link to the existing open GitHub issue (from Step 4), or "none" if no tracking issue exists
 - Only include non-quarantined tests (exclude those already tagged `[QUARANTINE]`)
 
-Then list already-quarantined tests that remain severely broken (success rate <50%) as a "quarantine debt" reminder — these have been quarantined but never fixed. These should also link to source code.
+Then list already-quarantined tests that remain severely broken (success rate <50%) as a "quarantine debt" reminder — these have been quarantined but never fixed. These should also link to source code and include the **Issue** column.
