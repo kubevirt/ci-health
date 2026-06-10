@@ -394,31 +394,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ### internal (2x / 15.38%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
-<details><summary>context</summary>
-<pre>13:15:45: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-13:15:45: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-13:15:54: &#43; rm -f /tmp/kubevirt.deploy.r5Pz
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make bazel-build target failure (1x / 7.69%) </summary>
 
 <hr/>
@@ -433,6 +408,31 @@ make: *** [Makefile:174: cluster-sync] Error 125
 09:11:37: INFO: 1 process: 1 internal.
 09:11:37: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
 make: *** [Makefile:26: bazel-build-functests] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make cluster lifecycle target failure (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
+<details><summary>context</summary>
+<pre>13:15:45: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
+13:15:45: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+13:15:54: &#43; rm -f /tmp/kubevirt.deploy.r5Pz
+make: *** [Makefile:174: cluster-sync] Error 125
 &#43; ret=2
 &#43; make cluster-down
 ./kubevirtci/cluster-up/down.sh</pre>
@@ -835,4 +835,4 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-06-10 07:35:18
+Last updated: 2026-06-10 10:36:00
