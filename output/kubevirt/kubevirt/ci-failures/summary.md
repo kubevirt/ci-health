@@ -81,17 +81,17 @@
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 <details>
 <summary>all...</summary>
 
 * _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
 </details>
 
@@ -199,7 +199,7 @@
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 <details>
 <summary>all...</summary>
 
@@ -210,18 +210,6 @@
 09:32:04: INFO: 0 processes.
 09:32:04: ERROR: Build failed. Not running target
 09:32:07: &#43; rm -f /tmp/kubevirt.deploy.FBCM
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
-<details><summary>context</summary>
-<pre>09:34:43: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-09:34:43: INFO: Elapsed time: 1.616s
-09:34:43: INFO: 0 processes.
-09:34:43: ERROR: Build failed. Not running target
-09:34:45: &#43; rm -f /tmp/kubevirt.deploy.UQxq
 make: *** [Makefile:189: cluster-sync] Error 1
 &#43; ret=2</pre>
 </details>
@@ -246,6 +234,18 @@ make: *** [Makefile:189: cluster-sync] Error 1
 09:33:03: INFO: 0 processes.
 09:33:03: ERROR: Build failed. Not running target
 09:33:05: &#43; rm -f /tmp/kubevirt.deploy.EWc1
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details><summary>context</summary>
+<pre>09:34:43: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:34:43: INFO: Elapsed time: 1.616s
+09:34:43: INFO: 0 processes.
+09:34:43: ERROR: Build failed. Not running target
+09:34:45: &#43; rm -f /tmp/kubevirt.deploy.UQxq
 make: *** [Makefile:189: cluster-sync] Error 1
 &#43; ret=2</pre>
 </details>
@@ -394,31 +394,6 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 ### internal (2x / 15.38%)
 
 <details>
-<summary> make bazel-build target failure (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details><summary>context</summary>
-<pre>09:11:37: INFO: Elapsed time: 0.318s, Critical Path: 0.10s
-09:11:37: INFO: 1 process: 1 internal.
-09:11:37: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-make: *** [Makefile:26: bazel-build-functests] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make cluster lifecycle target failure (1x / 7.69%) </summary>
 
 <hr/>
@@ -433,6 +408,31 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 13:15:45: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
 13:15:54: &#43; rm -f /tmp/kubevirt.deploy.r5Pz
 make: *** [Makefile:174: cluster-sync] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make bazel-build target failure (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details><summary>context</summary>
+<pre>09:11:37: INFO: Elapsed time: 0.318s, Critical Path: 0.10s
+09:11:37: INFO: 1 process: 1 internal.
+09:11:37: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+make: *** [Makefile:26: bazel-build-functests] Error 125
 &#43; ret=2
 &#43; make cluster-down
 ./kubevirtci/cluster-up/down.sh</pre>
@@ -534,24 +534,6 @@ make: *** [Makefile:174: cluster-sync] Error 125
 ### release-1.8 (2x / 15.38%)
 
 
-#### needs-investigation (1x / 50.00%)
-
-<details>
-<summary> no matching pattern (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (1x / 50.00%)
 
 <details>
@@ -570,6 +552,24 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
+#### needs-investigation (1x / 50.00%)
+
+<details>
+<summary> no matching pattern (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
+
+</details>
+
+<hr/>
+</details>
+
 ### main (8x / 61.54%)
 
 
@@ -580,17 +580,17 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 <details>
 <summary>all...</summary>
 
 * _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
 </details>
 
@@ -835,4 +835,4 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-06-11 10:40:03
+Last updated: 2026-06-11 13:19:26
