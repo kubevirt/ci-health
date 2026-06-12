@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-06-11 (5x / 27.78%)
+### 2026-06-11 (5x / 29.41%)
 
 
 #### external (5x / 100.00%)
@@ -27,7 +27,7 @@
 
 <hr/>
 
-**5x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
+**5x**: _2026-06-11 07:23:13 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2064971560724205568#1:build-log.txt%3A611)
 <details>
 <summary>all...</summary>
 
@@ -46,26 +46,11 @@
 <hr/>
 </details>
 
-### 2026-06-09 (3x / 16.67%)
+### 2026-06-09 (3x / 17.65%)
 
 
 #### internal (2x / 66.67%)
 
-<details>
-<summary> make bazel-build target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
 
@@ -76,6 +61,21 @@
 <summary>all...</summary>
 
 * _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make bazel-build target failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
 
 </details>
 
@@ -100,7 +100,7 @@
 <hr/>
 </details>
 
-### 2026-06-08 (9x / 50.00%)
+### 2026-06-08 (9x / 52.94%)
 
 
 #### external (8x / 88.89%)
@@ -110,17 +110,17 @@
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 <details>
 <summary>all...</summary>
 
 * _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
 </details>
 
@@ -195,121 +195,19 @@
 <hr/>
 </details>
 
-### 2026-06-05 (1x / 5.56%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-<details>
-<summary>all...</summary>
-
-* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (15x / 83.33%)
+### external (14x / 82.35%)
 
 <details>
-<summary> download failure in context (5x / 27.78%) </summary>
+<summary> HTTP error in context (5x / 29.41%) </summary>
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
-<details><summary>context</summary>
-<pre>09:32:04: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-09:32:04: INFO: Elapsed time: 0.654s
-09:32:04: INFO: 0 processes.
-09:32:04: ERROR: Build failed. Not running target
-09:32:07: &#43; rm -f /tmp/kubevirt.deploy.FBCM
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
-<details><summary>context</summary>
-<pre>09:34:43: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-09:34:43: INFO: Elapsed time: 1.616s
-09:34:43: INFO: 0 processes.
-09:34:43: ERROR: Build failed. Not running target
-09:34:45: &#43; rm -f /tmp/kubevirt.deploy.UQxq
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-<details><summary>context</summary>
-<pre>09:35:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-09:35:03: INFO: Elapsed time: 0.973s
-09:35:03: INFO: 0 processes.
-09:35:03: ERROR: Build failed. Not running target
-09:35:05: &#43; rm -f /tmp/kubevirt.deploy.8nFp
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
-<details><summary>context</summary>
-<pre>09:33:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-09:33:03: INFO: Elapsed time: 1.043s
-09:33:03: INFO: 0 processes.
-09:33:03: ERROR: Build failed. Not running target
-09:33:05: &#43; rm -f /tmp/kubevirt.deploy.EWc1
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
-<details><summary>context</summary>
-<pre>09:23:47: Repository rule oci_pull defined at:
-09:23:47:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_oci/oci/private/pull.bzl:342:27: in &lt;toplevel&gt;
-09:23:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime/BUILD.bazel:7:6: @fedora_realtime//:fedora_realtime depends on @fedora_realtime_single//:fedora_realtime_single in repository @fedora_realtime_single which failed to fetch. no such package &#39;@fedora_realtime_single//&#39;: java.io.IOException: Error downloading [https://quay.io/v2/auth?scope=repository:kubevirt/fedora-realtime-container-disk:pull&amp;service=quay.io] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime_single/www-authenticate.json: GET returned 502 Bad Gateway
-09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:
-09:23:47: INFO: Elapsed time: 2.194s
-09:23:47: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> HTTP error in context (5x / 27.78%) </summary>
-
-<hr/>
-
-**5x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
+**5x**: _2026-06-11 07:23:13 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2064971560724205568#1:build-log.txt%3A611)
 <details>
 <summary>all...</summary>
 
@@ -378,7 +276,88 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 11.11%) </summary>
+<summary> download failure in context (5x / 29.41%) </summary>
+
+<hr/>
+
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+<details><summary>context</summary>
+<pre>09:32:04: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+09:32:04: INFO: Elapsed time: 0.654s
+09:32:04: INFO: 0 processes.
+09:32:04: ERROR: Build failed. Not running target
+09:32:07: &#43; rm -f /tmp/kubevirt.deploy.FBCM
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+<details><summary>context</summary>
+<pre>09:33:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:33:03: INFO: Elapsed time: 1.043s
+09:33:03: INFO: 0 processes.
+09:33:03: ERROR: Build failed. Not running target
+09:33:05: &#43; rm -f /tmp/kubevirt.deploy.EWc1
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+<details><summary>context</summary>
+<pre>09:35:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:35:03: INFO: Elapsed time: 0.973s
+09:35:03: INFO: 0 processes.
+09:35:03: ERROR: Build failed. Not running target
+09:35:05: &#43; rm -f /tmp/kubevirt.deploy.8nFp
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+<details><summary>context</summary>
+<pre>09:34:43: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:34:43: INFO: Elapsed time: 1.616s
+09:34:43: INFO: 0 processes.
+09:34:43: ERROR: Build failed. Not running target
+09:34:45: &#43; rm -f /tmp/kubevirt.deploy.UQxq
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-storage/2063914210416398336#1:build-log.txt%3A845)
+<details><summary>context</summary>
+<pre>09:23:47: Repository rule oci_pull defined at:
+09:23:47:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_oci/oci/private/pull.bzl:342:27: in &lt;toplevel&gt;
+09:23:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime/BUILD.bazel:7:6: @fedora_realtime//:fedora_realtime depends on @fedora_realtime_single//:fedora_realtime_single in repository @fedora_realtime_single which failed to fetch. no such package &#39;@fedora_realtime_single//&#39;: java.io.IOException: Error downloading [https://quay.io/v2/auth?scope=repository:kubevirt/fedora-realtime-container-disk:pull&amp;service=quay.io] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/fedora_realtime_single/www-authenticate.json: GET returned 502 Bad Gateway
+09:23:47: ERROR: Analysis of target &#39;//containerimages:fedora-realtime&#39; failed; build aborted:
+09:23:47: INFO: Elapsed time: 2.194s
+09:23:47: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 11.76%) </summary>
 
 <hr/>
 
@@ -423,7 +402,7 @@ make: *** [Makefile:26: bazel-build-functests] Error 125
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (2x / 11.11%) </summary>
+<summary> failed external fetch in context (2x / 11.76%) </summary>
 
 <hr/>
 
@@ -467,61 +446,11 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 5.56%) </summary>
 
-<hr/>
-
-**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-<details>
-<summary>all...</summary>
-
-* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-<details><summary>context</summary>
-<pre>00:13:30: [control-plane-check] kube-scheduler is healthy after 3.060930196s
-00:13:31: I0604 20:13:30.779805    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-00:13:31: I0604 20:13:31.277792    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
-00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-00:13:32: I0604 20:13:31.777434    1615 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-00:13:32: [control-plane-check] kube-apiserver is healthy after 5.003768117s
-00:13:32: I0604 20:13:32.282847    1615 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### internal (2x / 11.11%)
+### internal (2x / 11.76%)
 
 <details>
-<summary> make bazel-build target failure (1x / 5.56%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details><summary>context</summary>
-<pre>09:11:37: INFO: Elapsed time: 0.318s, Critical Path: 0.10s
-09:11:37: INFO: 1 process: 1 internal.
-09:11:37: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-make: *** [Makefile:26: bazel-build-functests] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 5.56%) </summary>
+<summary> make cluster lifecycle target failure (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -545,11 +474,36 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 </details>
+<details>
+<summary> make bazel-build target failure (1x / 5.88%) </summary>
 
-### needs-investigation (1x / 5.56%)
+<hr/>
+
+**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details><summary>context</summary>
+<pre>09:11:37: INFO: Elapsed time: 0.318s, Critical Path: 0.10s
+09:11:37: INFO: 1 process: 1 internal.
+09:11:37: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
+make: *** [Makefile:26: bazel-build-functests] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (1x / 5.88%)
 
 <details>
-<summary> no matching pattern (1x / 5.56%) </summary>
+<summary> no matching pattern (1x / 5.88%) </summary>
 
 <hr/>
 
@@ -579,27 +533,27 @@ make: *** [Makefile:174: cluster-sync] Error 125
 ## per branch [⬆](#top)
 
 
-### main (9x / 50.00%)
+### main (8x / 47.06%)
 
 
-#### external (9x / 100.00%)
+#### external (8x / 100.00%)
 
 <details>
-<summary> download failure in context (5x / 55.56%) </summary>
+<summary> download failure in context (5x / 62.50%) </summary>
 
 <hr/>
 
-**4x**: _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+**4x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 <details>
 <summary>all...</summary>
 
 * _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
 </details>
 
@@ -616,7 +570,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (2x / 22.22%) </summary>
+<summary> failed external fetch in context (2x / 25.00%) </summary>
 
 <hr/>
 
@@ -641,22 +595,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-<details>
-<summary>all...</summary>
-
-* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> HTTP error in context (1x / 11.11%) </summary>
+<summary> HTTP error in context (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -671,7 +610,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### release-1.8 (6x / 33.33%)
+### release-1.8 (6x / 35.29%)
 
 
 #### external (5x / 83.33%)
@@ -681,7 +620,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 
-**4x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
+**4x**: _2026-06-11 07:23:13 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2064971560724205568#1:build-log.txt%3A611)
 <details>
 <summary>all...</summary>
 
@@ -731,26 +670,11 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### release-1.7 (3x / 16.67%)
+### release-1.7 (3x / 17.65%)
 
 
 #### internal (2x / 66.67%)
 
-<details>
-<summary> make bazel-build target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
 
@@ -761,6 +685,21 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <summary>all...</summary>
 
 * _2026-06-09 12:55:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2064329652029100032#1:build-log.txt%3A1196)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make bazel-build target failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
 
 </details>
 
@@ -790,107 +729,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-compute (9x / 50.00%)
-
-
-#### external (8x / 88.89%)
-
-<details>
-<summary> download failure in context (3x / 33.33%) </summary>
-
-<hr/>
-
-**3x**: _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> HTTP error in context (2x / 22.22%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
-<details>
-<summary>all...</summary>
-
-* _2026-06-11 08:11:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16106/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2064983681084166144#1:build-log.txt%3A796)
-
-* _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> failed external fetch in context (2x / 22.22%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:33:34 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2064264500244123648#1:build-log.txt%3A4384)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:33:34 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2064264500244123648#1:build-log.txt%3A4384)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 11.11%)
-
-<details>
-<summary> no matching pattern (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
-<details>
-<summary>all...</summary>
-
-* _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-storage (6x / 33.33%)
+### sig-storage (6x / 35.29%)
 
 
 #### external (6x / 100.00%)
@@ -900,7 +739,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 
 <hr/>
 
-**3x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
+**3x**: _2026-06-11 07:23:13 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2064971560724205568#1:build-log.txt%3A611)
 <details>
 <summary>all...</summary>
 
@@ -955,13 +794,113 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-### sig-network (3x / 16.67%)
+### sig-compute (9x / 52.94%)
 
 
-#### internal (2x / 66.67%)
+#### external (8x / 88.89%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
+<summary> download failure in context (3x / 33.33%) </summary>
+
+<hr/>
+
+**3x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:41 &#43;0000 UTC_: <code>09:31:45: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-compute/2063914210517061632#1:build-log.txt%3A3995)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 09:21:39 &#43;0000 UTC_: <code>09:24:33: ERROR: Analysis of target &#39;//containerimages:fedora-with-test-tooling&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-kind-1.35-vgpu/2063914209959219200#1:build-log.txt%3A500)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> HTTP error in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
+<details>
+<summary>all...</summary>
+
+* _2026-06-11 08:11:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16106/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2064983681084166144#1:build-log.txt%3A796)
+
+* _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-09 08:33:34 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2064264500244123648#1:build-log.txt%3A4384)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:33:34 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2064264500244123648#1:build-log.txt%3A4384)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 11.11%)
+
+<details>
+<summary> no matching pattern (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
+<details>
+<summary>all...</summary>
+
+* _2026-06-08 13:09:41 &#43;0000 UTC_: <code>13:29:32: failed to create new CRI image service: validate service connection: validate CRI v1 image API for endpoint &#34;unix:///var/run/crio/crio.sock&#34;: rpc error: code = DeadlineExceeded desc = stream terminated by RST_STREAM with error code: CANCEL[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17962/pull-kubevirt-e2e-k8s-1.33-sig-compute-1.8/2063971600276918272#1:build-log.txt%3A674)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (2x / 11.76%)
+
+
+#### internal (2x / 100.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -976,7 +915,7 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 <details>
-<summary> make bazel-build target failure (1x / 33.33%) </summary>
+<summary> make bazel-build target failure (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -991,22 +930,4 @@ make: *** [Makefile:174: cluster-sync] Error 125
 <hr/>
 </details>
 
-#### external (1x / 33.33%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-<details>
-<summary>all...</summary>
-
-* _2026-06-05 00:01:46 &#43;0000 UTC_: <code>00:13:32: I0604 20:13:31.777281    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18028/pull-kubevirt-e2e-k8s-1.36-sig-network/2062686150438424576#1:build-log.txt%3A817)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-11 21:49:24
+Last updated: 2026-06-12 00:43:46
