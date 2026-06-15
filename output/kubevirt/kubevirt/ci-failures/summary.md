@@ -108,7 +108,7 @@
 
 <hr/>
 
-**3x**: _2026-06-12 09:49:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-sig-storage/2065370810171789312#1:build-log.txt%3A607)
+**3x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
 <details>
 <summary>all...</summary>
 
@@ -148,13 +148,13 @@
 
 <hr/>
 
-**23x**: _2026-06-11 07:44:47 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064976950388068352#1:build-log.txt%3A600)
+**23x**: _2026-06-11 07:44:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-windows2016/2064976949725368320#1:build-log.txt%3A614)
 <details>
 <summary>all...</summary>
 
-* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
-
 * _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-windows2016/2064991677390524416#1:build-log.txt%3A620)
+
+* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
 
 * _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064991677696708608#1:build-log.txt%3A604)
 
@@ -180,13 +180,13 @@
 
 * _2026-06-11 07:23:13 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.8/2064971560724205568#1:build-log.txt%3A611)
 
-* _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
-
 * _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
 
-* _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064965270971092992#1:build-log.txt%3A616)
+* _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.8/2064971560891977728#1:build-log.txt%3A606)
 
 * _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2064965270748794880#1:build-log.txt%3A695)
+
+* _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064965270971092992#1:build-log.txt%3A616)
 
 * _2026-06-11 06:58:13 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.36-sig-storage/2064965271050784768#1:build-log.txt%3A616)
 
@@ -292,9 +292,9 @@
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
 </details>
 
@@ -381,7 +381,7 @@
 
 <hr/>
 
-**26x**: _2026-06-11 07:44:47 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064976950388068352#1:build-log.txt%3A600)
+**26x**: _2026-06-11 07:44:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-windows2016/2064976949725368320#1:build-log.txt%3A614)
 <details>
 <summary>all...</summary>
 
@@ -433,11 +433,11 @@ make: *** [Makefile:174: cluster-up] Error 2
 </details>
 
 
-* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-windows2016/2064991677390524416#1:build-log.txt%3A620)
+* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
 <details><summary>context</summary>
-<pre>08:47:06: main.main()
-08:47:06: 	/home/prow/go/src/github.com/kubevirt/kubevirtci/cluster-provision/gocli/cmd/cli/main.go:8 &#43;0xf
-08:47:06: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+<pre>08:47:14: main.main()
+08:47:14: 	/home/prow/go/src/github.com/kubevirt/kubevirtci/cluster-provision/gocli/cmd/cli/main.go:8 &#43;0xf
+08:47:14: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
 make: *** [Makefile:174: cluster-up] Error 2
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
@@ -445,11 +445,11 @@ make: *** [Makefile:174: cluster-up] Error 2
 </details>
 
 
-* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
+* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-windows2016/2064991677390524416#1:build-log.txt%3A620)
 <details><summary>context</summary>
-<pre>08:47:14: main.main()
-08:47:14: 	/home/prow/go/src/github.com/kubevirt/kubevirtci/cluster-provision/gocli/cmd/cli/main.go:8 &#43;0xf
-08:47:14: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+<pre>08:47:06: main.main()
+08:47:06: 	/home/prow/go/src/github.com/kubevirt/kubevirtci/cluster-provision/gocli/cmd/cli/main.go:8 &#43;0xf
+08:47:06: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
 make: *** [Makefile:174: cluster-up] Error 2
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
@@ -754,18 +754,6 @@ make: *** [Makefile:189: cluster-sync] Error 1
 </details>
 
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-<details><summary>context</summary>
-<pre>09:35:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
-09:35:03: INFO: Elapsed time: 0.973s
-09:35:03: INFO: 0 processes.
-09:35:03: ERROR: Build failed. Not running target
-09:35:05: &#43; rm -f /tmp/kubevirt.deploy.8nFp
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 <details><summary>context</summary>
 <pre>09:33:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
@@ -773,6 +761,18 @@ make: *** [Makefile:189: cluster-sync] Error 1
 09:33:03: INFO: 0 processes.
 09:33:03: ERROR: Build failed. Not running target
 09:33:05: &#43; rm -f /tmp/kubevirt.deploy.EWc1
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+<details><summary>context</summary>
+<pre>09:35:03: ERROR: Analysis of target &#39;//:push-virt-template-apiserver&#39; failed; build aborted:
+09:35:03: INFO: Elapsed time: 0.973s
+09:35:03: INFO: 0 processes.
+09:35:03: ERROR: Build failed. Not running target
+09:35:05: &#43; rm -f /tmp/kubevirt.deploy.8nFp
 make: *** [Makefile:189: cluster-sync] Error 1
 &#43; ret=2</pre>
 </details>
@@ -1155,7 +1155,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**17x**: _2026-06-11 07:44:47 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064976950388068352#1:build-log.txt%3A600)
+**17x**: _2026-06-11 07:44:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-windows2016/2064976949725368320#1:build-log.txt%3A614)
 <details>
 <summary>all...</summary>
 
@@ -1167,9 +1167,9 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 * _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-windows2016/2064991677390524416#1:build-log.txt%3A620)
 
-* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064991677696708608#1:build-log.txt%3A604)
-
 * _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
+
+* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064991677696708608#1:build-log.txt%3A604)
 
 * _2026-06-11 08:11:20 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16106/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2064983681084166144#1:build-log.txt%3A796)
 
@@ -1179,9 +1179,9 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 * _2026-06-11 07:44:47 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064976950388068352#1:build-log.txt%3A600)
 
-* _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064965270971092992#1:build-log.txt%3A616)
-
 * _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2064965270748794880#1:build-log.txt%3A695)
+
+* _2026-06-11 06:58:14 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064965270971092992#1:build-log.txt%3A616)
 
 * _2026-06-11 06:58:13 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17651/pull-kubevirt-e2e-k8s-1.36-sig-storage/2064965271050784768#1:build-log.txt%3A616)
 
@@ -1220,9 +1220,9 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:34:43: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-storage/2063914210865188864#1:build-log.txt%3A4144)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
 </details>
 
@@ -1358,7 +1358,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**9x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
+**9x**: _2026-06-11 07:23:14 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.8/2064971560803897344#1:build-log.txt%3A606)
 <details>
 <summary>all...</summary>
 
@@ -1487,7 +1487,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**16x**: _2026-06-11 07:44:47 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064976950388068352#1:build-log.txt%3A600)
+**16x**: _2026-06-11 07:44:55 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064976950866219008#1:build-log.txt%3A598)
 <details>
 <summary>all...</summary>
 
@@ -1495,9 +1495,9 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 * _2026-06-12 09:49:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-sig-storage/2065370810171789312#1:build-log.txt%3A607)
 
-* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
-
 * _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064991677696708608#1:build-log.txt%3A604)
+
+* _2026-06-11 08:43:11 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17845/pull-kubevirt-e2e-k8s-1.34-sig-storage/2064991677570879488#1:build-log.txt%3A603)
 
 * _2026-06-11 07:44:55 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.35-sig-storage/2064976950866219008#1:build-log.txt%3A598)
 
@@ -1608,7 +1608,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**10x**: _2026-06-11 07:23:11 &#43;0000 UTC_: <code>make: *** [Makefile:173: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18056/pull-kubevirt-e2e-k8s-1.34-windows2016-1.8/2064971560589987840#1:build-log.txt%3A623)
+**10x**: _2026-06-11 07:44:48 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18094/pull-kubevirt-e2e-k8s-1.34-windows2016/2064976949725368320#1:build-log.txt%3A614)
 <details>
 <summary>all...</summary>
 
@@ -1690,15 +1690,15 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 
-**3x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
+**3x**: _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
 <details>
 <summary>all...</summary>
 
 * _2026-06-08 09:21:43 &#43;0000 UTC_: <code>09:32:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-operator/2063914211544666112#1:build-log.txt%3A4139)
 
-* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
-
 * _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:33:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.34-sig-operator/2063914210630307840#1:build-log.txt%3A4332)
+
+* _2026-06-08 09:21:42 &#43;0000 UTC_: <code>09:35:03: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17793/pull-kubevirt-e2e-k8s-1.35-sig-compute/2063914211016183808#1:build-log.txt%3A4309)
 
 </details>
 
@@ -1789,21 +1789,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 #### internal (2x / 100.00%)
 
 <details>
-<summary> make bazel-build target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-<details>
-<summary>all...</summary>
-
-* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
 
 <hr/>
@@ -1818,5 +1803,20 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> make bazel-build target failure (1x / 50.00%) </summary>
 
-Last updated: 2026-06-15 00:43:59
+<hr/>
+
+**1x**: _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+<details>
+<summary>all...</summary>
+
+* _2026-06-09 08:35:56 &#43;0000 UTC_: <code>make: *** [Makefile:26: bazel-build-functests] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17965/pull-kubevirt-e2e-k8s-1.34-sig-network-1.7/2064264517830840320#1:build-log.txt%3A4515)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-15 04:45:05
