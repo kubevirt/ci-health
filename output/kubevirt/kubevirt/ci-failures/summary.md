@@ -228,7 +228,7 @@
 
 <hr/>
 
-**5x**: _2026-06-12 09:02:28 &#43;0000 UTC_: <code>09:05:43: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-network/2065358924130816000#1:build-log.txt%3A405)
+**5x**: _2026-06-12 09:02:29 &#43;0000 UTC_: <code>09:05:24: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-storage/2065358924223090688#1:build-log.txt%3A398)
 <details>
 <summary>all...</summary>
 
@@ -285,7 +285,7 @@
 
 <hr/>
 
-**3x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
+**3x**: _2026-06-12 09:49:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-sig-storage/2065370810171789312#1:build-log.txt%3A607)
 <details>
 <summary>all...</summary>
 
@@ -327,7 +327,7 @@
 
 <hr/>
 
-**5x**: _2026-06-12 09:02:28 &#43;0000 UTC_: <code>09:05:43: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-network/2065358924130816000#1:build-log.txt%3A405)
+**5x**: _2026-06-12 09:02:29 &#43;0000 UTC_: <code>09:05:24: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-storage/2065358924223090688#1:build-log.txt%3A398)
 <details>
 <summary>all...</summary>
 
@@ -484,7 +484,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**3x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
+**3x**: _2026-06-12 09:49:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-sig-storage/2065370810171789312#1:build-log.txt%3A607)
 <details>
 <summary>all...</summary>
 
@@ -574,23 +574,23 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 3.85%) </summary>
+<summary> podman container removal timeout (1x / 3.85%) </summary>
 
 <hr/>
 
-**1x**: _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+**1x**: _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
 <details>
 <summary>all...</summary>
 
-* _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+* _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
 <details><summary>context</summary>
-<pre>13:00:48: rsync: [sender] failed to connect to 127.0.0.1 (127.0.0.1): Connection refused (111)
-13:00:48: rsync error: error in socket IO (code 10) at clientserver.c(139) [sender=3.4.1]
-13:01:16: &#43; rm -f /tmp/kubevirt.deploy.7kv4
-make: *** [Makefile:189: cluster-sync] Error 10
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
+<pre>Error: cannot remove container 8d2ad360e3c6cbb7df3ce927bc2970362c7b6d0e538300b87b8f89a7e3f07d2e as it could not be stopped: given PID did not die within timeout
+Error: cannot remove container 418d3eebf1f9cff01fa9e12d4bef1cfb14a8d7caaec3fa749d15525b64730a3a as it could not be stopped: given PID did not die within timeout
+Error: cannot remove container 64299780286f8bb3d71dcf5c99da1840a93124aef44d0040e27f8bbd20f625db as it could not be stopped: given PID did not die within timeout
+Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout
+/usr/local/bin/runner.sh: line 50: wait: pid 21 is not a child of this shell
+================================================================================
+Done cleaning up after podman in container.</pre>
 </details>
 
 
@@ -624,31 +624,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 3.85%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
-<details>
-<summary>all...</summary>
-
-* _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
-<details><summary>context</summary>
-<pre>Error: cannot remove container 8d2ad360e3c6cbb7df3ce927bc2970362c7b6d0e538300b87b8f89a7e3f07d2e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 418d3eebf1f9cff01fa9e12d4bef1cfb14a8d7caaec3fa749d15525b64730a3a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 64299780286f8bb3d71dcf5c99da1840a93124aef44d0040e27f8bbd20f625db as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 21 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (1x / 3.85%) </summary>
 
 <hr/>
@@ -666,6 +641,31 @@ Done cleaning up after podman in container.</pre>
 18:13:46: I0614 14:13:46.824985    1620 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
 18:13:47: [control-plane-check] kube-apiserver is healthy after 6.001879309s
 18:13:47: I0614 14:13:47.327592    1620 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 3.85%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+<details>
+<summary>all...</summary>
+
+* _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+<details><summary>context</summary>
+<pre>13:00:48: rsync: [sender] failed to connect to 127.0.0.1 (127.0.0.1): Connection refused (111)
+13:00:48: rsync error: error in socket IO (code 10) at clientserver.c(139) [sender=3.4.1]
+13:01:16: &#43; rm -f /tmp/kubevirt.deploy.7kv4
+make: *** [Makefile:189: cluster-sync] Error 10
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
 </details>
 
 
@@ -819,7 +819,7 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 
-**5x**: _2026-06-12 09:02:28 &#43;0000 UTC_: <code>09:05:43: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-network/2065358924130816000#1:build-log.txt%3A405)
+**5x**: _2026-06-12 09:02:29 &#43;0000 UTC_: <code>09:05:24: ERROR: /root/go/src/kubevirt.io/kubevirt/images/disks-images-provider/BUILD.bazel:50:10: OCI Image //images/disks-images-provider:disks-images-provider-image failed: Failed to fetch blobs because they do not exist remotely.: 3 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17422/pull-kubevirt-e2e-k8s-1.36-sig-storage/2065358924223090688#1:build-log.txt%3A398)
 <details>
 <summary>all...</summary>
 
@@ -876,7 +876,7 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 
-**3x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
+**3x**: _2026-06-12 09:49:35 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-sig-storage/2065370810171789312#1:build-log.txt%3A607)
 <details>
 <summary>all...</summary>
 
@@ -916,15 +916,15 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> download failure from external URL (1x / 4.76%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 4.76%) </summary>
 
 <hr/>
 
-**1x**: _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
+**1x**: _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
 <details>
 <summary>all...</summary>
 
-* _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
+* _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
 
 </details>
 
@@ -946,15 +946,15 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 4.76%) </summary>
+<summary> download failure from external URL (1x / 4.76%) </summary>
 
 <hr/>
 
-**1x**: _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+**1x**: _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
 <details>
 <summary>all...</summary>
 
-* _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+* _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
 
 </details>
 
@@ -1166,21 +1166,6 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 5.56%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-12 06:47:52 &#43;0000 UTC_: <code>06:49:59: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18035/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2065325019264716800#1:build-log.txt%3A652)
-<details>
-<summary>all...</summary>
-
-* _2026-06-12 06:47:52 &#43;0000 UTC_: <code>06:49:59: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18035/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2065325019264716800#1:build-log.txt%3A652)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 5.56%) </summary>
 
 <hr/>
@@ -1190,21 +1175,6 @@ make: *** [Makefile:173: cluster-up] Error 2
 <summary>all...</summary>
 
 * _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> HTTP error in context (1x / 5.56%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
-<details>
-<summary>all...</summary>
-
-* _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
 
 </details>
 
@@ -1226,6 +1196,21 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
+<summary> HTTP error in context (1x / 5.56%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
+<details>
+<summary>all...</summary>
+
+* _2026-06-12 09:54:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 2</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18052/pull-kubevirt-e2e-k8s-1.34-windows2016/2065371648579604480#1:build-log.txt%3A627)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> transient kube-apiserver body decode noise (1x / 5.56%) </summary>
 
 <hr/>
@@ -1235,6 +1220,21 @@ make: *** [Makefile:173: cluster-up] Error 2
 <summary>all...</summary>
 
 * _2026-06-14 17:57:20 &#43;0000 UTC_: <code>18:13:46: I0614 14:13:46.824946    1620 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18122/pull-kubevirt-e2e-k8s-1.35-sig-operator-1.8/2066180130513883136#1:build-log.txt%3A768)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 5.56%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-12 06:47:52 &#43;0000 UTC_: <code>06:49:59: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18035/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2065325019264716800#1:build-log.txt%3A652)
+<details>
+<summary>all...</summary>
+
+* _2026-06-12 06:47:52 &#43;0000 UTC_: <code>06:49:59: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18035/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2065325019264716800#1:build-log.txt%3A652)
 
 </details>
 
@@ -1368,21 +1368,6 @@ make: *** [Makefile:173: cluster-up] Error 2
 <hr/>
 </details>
 <details>
-<summary> download failure from external URL (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
-<details>
-<summary>all...</summary>
-
-* _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> bazel remote cache blob fetch failure (1x / 25.00%) </summary>
 
 <hr/>
@@ -1397,5 +1382,20 @@ make: *** [Makefile:173: cluster-up] Error 2
 
 <hr/>
 </details>
+<details>
+<summary> download failure from external URL (1x / 25.00%) </summary>
 
-Last updated: 2026-06-18 16:36:53
+<hr/>
+
+**1x**: _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
+<details>
+<summary>all...</summary>
+
+* _2026-06-14 06:31:19 &#43;0000 UTC_: <code>06:32:23: ERROR: Error computing the main repository mapping: no such package &#39;@aspect_bazel_lib//lib&#39;: java.io.IOException: Error downloading [https://github.com/aspect-build/bazel-lib/releases/download/v2.7.2/bazel-lib-v2.7.2.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/aspect_bazel_lib/temp3938845111312673746/bazel-lib-v2.7.2.tar.gz: GET returned 502 Bad Gateway or Proxy Error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17913/pull-kubevirt-e2e-k8s-1.35-sig-storage/2066045650159538176#1:build-log.txt%3A311)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-18 19:04:28
