@@ -27,23 +27,23 @@
 
 <hr/>
 
-**43x**: _2026-06-18 10:31:06 &#43;0000 UTC_: <code>10:35:00: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067555550236774400#1:build-log.txt%3A742)
+**43x**: _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:35:39: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067555550228385792#1:build-log.txt%3A728)
 <details>
 <summary>all...</summary>
 
-* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
-
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:35:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-storage/2067555550215802880#1:build-log.txt%3A813)
+
+* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
 
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:35:36: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067555549490188288#1:build-log.txt%3A822)
 
 * _2026-06-18 10:31:06 &#43;0000 UTC_: <code>10:35:00: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067555550236774400#1:build-log.txt%3A742)
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
 
 * _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:35:59: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067555549305638912#1:build-log.txt%3A756)
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
 
 * _2026-06-18 10:31:03 &#43;0000 UTC_: <code>10:36:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067555550232580096#1:build-log.txt%3A735)
 
@@ -75,9 +75,9 @@
 
 * _2026-06-18 09:49:01 &#43;0000 UTC_: <code>09:56:38: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067544975280705536#1:build-log.txt%3A828)
 
-* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
-
 * _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:55:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067544975377174528#1:build-log.txt%3A755)
+
+* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
 
 * _2026-06-18 09:34:30 &#43;0000 UTC_: <code>09:40:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067536885676249088#1:build-log.txt%3A815)
 
@@ -91,9 +91,9 @@
 
 * _2026-06-18 09:16:55 &#43;0000 UTC_: <code>09:20:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067536881641328640#1:build-log.txt%3A769)
 
-* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
-
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:20:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067536881456779264#1:build-log.txt%3A742)
+
+* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
 
 * _2026-06-18 09:16:49 &#43;0000 UTC_: <code>09:21:44: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067536880655667200#1:build-log.txt%3A740)
 
@@ -111,9 +111,9 @@
 
 * _2026-06-18 08:26:11 &#43;0000 UTC_: <code>08:30:58: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067524112086994944#1:build-log.txt%3A729)
 
-* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
-
 * _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:31:34: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067524113043296256#1:build-log.txt%3A727)
+
+* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
 
 * _2026-06-18 08:26:05 &#43;0000 UTC_: <code>08:31:25: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067524107909468160#1:build-log.txt%3A811)
 
@@ -151,7 +151,7 @@
 
 <hr/>
 
-**4x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
+**3x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 <details>
 <summary>all...</summary>
 
@@ -161,13 +161,11 @@
 
 * _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 
-* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 09:16:55 &#43;0000 UTC_: <code>09:20:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067536881062514688#1:build-log.txt%3A728)
+**2x**: _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 <details>
 <summary>all...</summary>
 
@@ -175,19 +173,21 @@
 
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 
-* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 08:27:18 &#43;0000 UTC_: <code>08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067524389368238080#1:build-log.txt%3A799)
+**5x**: _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 <details>
 <summary>all...</summary>
 
 * _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 
 * _2026-06-18 08:27:18 &#43;0000 UTC_: <code>08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067524389368238080#1:build-log.txt%3A799)
+
+* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
+
+* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
 
 * _2026-06-18 08:26:08 &#43;0000 UTC_: <code>08:32:27: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: Running nogo on //vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-network/2067524110417661952#1:build-log.txt%3A744)
 
@@ -283,21 +283,9 @@
 
 <hr/>
 
-**43x**: _2026-06-18 10:31:06 &#43;0000 UTC_: <code>10:35:00: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067555550236774400#1:build-log.txt%3A742)
+**43x**: _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:35:39: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067555550228385792#1:build-log.txt%3A728)
 <details>
 <summary>all...</summary>
-
-* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
-<details><summary>context</summary>
-<pre>10:34:11:       |   ^~~~~~~~
-10:34:11:       |   vsprintf
-10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-10:34:21: INFO: Elapsed time: 13.570s, Critical Path: 5.50s
-10:34:21: INFO: 2684 processes: 2653 remote cache hit, 31 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
 
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:35:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-storage/2067555550215802880#1:build-log.txt%3A813)
 <details><summary>context</summary>
@@ -307,6 +295,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 10:35:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
 10:35:08: INFO: Elapsed time: 37.365s, Critical Path: 16.13s
 10:35:08: INFO: 4862 processes: 4828 remote cache hit, 31 internal, 3 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
+<details><summary>context</summary>
+<pre>10:34:11:       |   ^~~~~~~~
+10:34:11:       |   vsprintf
+10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+10:34:21: INFO: Elapsed time: 13.570s, Critical Path: 5.50s
+10:34:21: INFO: 2684 processes: 2653 remote cache hit, 31 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -335,14 +335,14 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
 <details><summary>context</summary>
-<pre>10:36:02:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
-10:36:02:       |   ^~~~~~~~
-10:36:02:       |   vsprintf
-10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-10:36:15: INFO: Elapsed time: 16.543s, Critical Path: 5.61s
-10:36:15: INFO: 4735 processes: 4707 remote cache hit, 28 internal.
+<pre>10:36:48: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+10:36:48: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+10:37:07: INFO: Elapsed time: 62.231s, Critical Path: 16.40s
+10:37:07: INFO: 6821 processes: 6784 remote cache hit, 30 internal, 7 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -359,14 +359,14 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
 <details><summary>context</summary>
-<pre>10:36:48: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-10:36:48: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-10:37:07: INFO: Elapsed time: 62.231s, Critical Path: 16.40s
-10:37:07: INFO: 6821 processes: 6784 remote cache hit, 30 internal, 7 processwrapper-sandbox.
+<pre>10:36:02:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
+10:36:02:       |   ^~~~~~~~
+10:36:02:       |   vsprintf
+10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+10:36:15: INFO: Elapsed time: 16.543s, Critical Path: 5.61s
+10:36:15: INFO: 4735 processes: 4707 remote cache hit, 28 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -551,18 +551,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
-<details><summary>context</summary>
-<pre>09:53:46: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-09:53:46: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-09:53:46: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-09:53:48: INFO: Elapsed time: 24.404s, Critical Path: 6.11s
-09:53:48: INFO: 4779 processes: 4748 remote cache hit, 31 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 * _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:55:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067544975377174528#1:build-log.txt%3A755)
 <details><summary>context</summary>
 <pre>09:55:40: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -571,6 +559,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 09:55:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
 09:55:42: INFO: Elapsed time: 48.059s, Critical Path: 32.22s
 09:55:42: INFO: 7017 processes: 6982 remote cache hit, 31 internal, 4 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
+<details><summary>context</summary>
+<pre>09:53:46: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+09:53:46: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+09:53:46: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+09:53:48: INFO: Elapsed time: 24.404s, Critical Path: 6.11s
+09:53:48: INFO: 4779 processes: 4748 remote cache hit, 31 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -647,18 +647,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
-<details><summary>context</summary>
-<pre>09:22:11: INFO: From GoLink cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client_/libvirt-hook-client:
-09:22:11: /usr/bin/ld: /tmp/go-link-3209859693/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-09:22:11: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-09:22:17: INFO: Elapsed time: 18.588s, Critical Path: 10.87s
-09:22:17: INFO: 3032 processes: 3004 remote cache hit, 28 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:20:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067536881456779264#1:build-log.txt%3A742)
 <details><summary>context</summary>
 <pre>09:20:34:    74 |   asprintf (&amp;err-&gt;error, &#34;%s: &#34;
@@ -667,6 +655,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 09:20:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
 09:20:43: INFO: Elapsed time: 9.551s, Critical Path: 6.68s
 09:20:43: INFO: 2804 processes: 2773 remote cache hit, 31 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
+<details><summary>context</summary>
+<pre>09:22:11: INFO: From GoLink cmd/virt-launcher/libvirt-hook-client/libvirt-hook-client_/libvirt-hook-client:
+09:22:11: /usr/bin/ld: /tmp/go-link-3209859693/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+09:22:11: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+09:22:17: INFO: Elapsed time: 18.588s, Critical Path: 10.87s
+09:22:17: INFO: 3032 processes: 3004 remote cache hit, 28 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -767,18 +767,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
-<details><summary>context</summary>
-<pre>08:32:01: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:32:01: /usr/bin/ld: /tmp/go-link-1944123972/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-08:32:01: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-08:32:01: INFO: Elapsed time: 50.748s, Critical Path: 22.67s
-08:32:01: INFO: 3432 processes: 3402 remote cache hit, 29 internal, 1 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 * _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:31:34: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067524113043296256#1:build-log.txt%3A727)
 <details><summary>context</summary>
 <pre>08:31:32: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
@@ -787,6 +775,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 08:31:34: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
 08:31:34: INFO: Elapsed time: 56.764s, Critical Path: 8.90s
 08:31:34: INFO: 4090 processes: 4060 remote cache hit, 30 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
+<details><summary>context</summary>
+<pre>08:32:01: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:32:01: /usr/bin/ld: /tmp/go-link-1944123972/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+08:32:01: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+08:32:01: INFO: Elapsed time: 50.748s, Critical Path: 22.67s
+08:32:01: INFO: 3432 processes: 3402 remote cache hit, 29 internal, 1 processwrapper-sandbox.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -947,7 +947,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 
-**4x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
+**3x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 <details>
 <summary>all...</summary>
 
@@ -987,23 +987,11 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
-<details><summary>context</summary>
-<pre>08:32:51: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:32:51: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-08:32:51: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x
-08:33:02: INFO: Elapsed time: 32.686s, Critical Path: 5.25s
-08:33:02: INFO: 5439 processes: 5405 remote cache hit, 31 internal, 3 processwrapper-sandbox.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 09:16:55 &#43;0000 UTC_: <code>09:20:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067536881062514688#1:build-log.txt%3A728)
+**2x**: _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 <details>
 <summary>all...</summary>
 
@@ -1031,23 +1019,11 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
-* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
-<details><summary>context</summary>
-<pre>08:34:25: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
-08:34:25: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
-08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
-08:34:32: INFO: Elapsed time: 16.728s, Critical Path: 4.77s
-08:34:32: INFO: 4911 processes: 4881 remote cache hit, 30 internal.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 08:27:18 &#43;0000 UTC_: <code>08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067524389368238080#1:build-log.txt%3A799)
+**5x**: _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 <details>
 <summary>all...</summary>
 
@@ -1071,6 +1047,30 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
 08:33:30: INFO: Elapsed time: 12.908s, Critical Path: 5.37s
 08:33:30: INFO: 2370 processes: 2341 remote cache hit, 29 internal.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
+<details><summary>context</summary>
+<pre>08:32:51: cgo_lookup_cgo.cgo2.c:(.text&#43;0x85): warning: Using &#39;getpwuid_r&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:32:51: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+08:32:51: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x
+08:33:02: INFO: Elapsed time: 32.686s, Critical Path: 5.25s
+08:33:02: INFO: 5439 processes: 5405 remote cache hit, 31 internal, 3 processwrapper-sandbox.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
+</details>
+
+
+* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
+<details><summary>context</summary>
+<pre>08:34:25: /usr/bin/ld: /tmp/go-link-853841326/000004.o: in function `_cgo_77133bf98b3a_C2func_getaddrinfo&#39;:
+08:34:25: cgo_unix_cgo.cgo2.c:(.text&#43;0x81): warning: Using &#39;getaddrinfo&#39; in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x
+08:34:32: INFO: Elapsed time: 16.728s, Critical Path: 4.77s
+08:34:32: INFO: 4911 processes: 4881 remote cache hit, 30 internal.
 make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
@@ -1117,31 +1117,6 @@ make: *** [Makefile:189: cluster-sync] Error 10
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 1.47%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
-<details>
-<summary>all...</summary>
-
-* _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
-<details><summary>context</summary>
-<pre>08:43:22: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted:
-08:43:22: INFO: Elapsed time: 25.777s
-08:43:22: INFO: 0 processes.
-08:43:22: ERROR: Build failed. Not running target
-make: *** [Makefile:25: bazel-build] Error 1
-&#43; EXIT_VALUE=2
-&#43; set &#43;o xtrace</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 1.47%) </summary>
 
 <hr/>
@@ -1159,6 +1134,31 @@ Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5
 /usr/local/bin/runner.sh: line 50: wait: pid 21 is not a child of this shell
 ================================================================================
 Done cleaning up after podman in container.</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 1.47%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
+<details>
+<summary>all...</summary>
+
+* _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
+<details><summary>context</summary>
+<pre>08:43:22: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted:
+08:43:22: INFO: Elapsed time: 25.777s
+08:43:22: INFO: 0 processes.
+08:43:22: ERROR: Build failed. Not running target
+make: *** [Makefile:25: bazel-build] Error 1
+&#43; EXIT_VALUE=2
+&#43; set &#43;o xtrace</pre>
 </details>
 
 
@@ -1210,23 +1210,23 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**43x**: _2026-06-18 10:31:06 &#43;0000 UTC_: <code>10:35:00: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067555550236774400#1:build-log.txt%3A742)
+**43x**: _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:35:39: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067555550228385792#1:build-log.txt%3A728)
 <details>
 <summary>all...</summary>
 
-* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
-
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:35:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-storage/2067555550215802880#1:build-log.txt%3A813)
+
+* _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
 
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:35:36: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067555549490188288#1:build-log.txt%3A822)
 
 * _2026-06-18 10:31:06 &#43;0000 UTC_: <code>10:35:00: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067555550236774400#1:build-log.txt%3A742)
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
 
 * _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:35:59: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067555549305638912#1:build-log.txt%3A756)
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
 
 * _2026-06-18 10:31:03 &#43;0000 UTC_: <code>10:36:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067555550232580096#1:build-log.txt%3A735)
 
@@ -1258,9 +1258,9 @@ Done cleaning up after podman in container.</pre>
 
 * _2026-06-18 09:49:01 &#43;0000 UTC_: <code>09:56:38: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067544975280705536#1:build-log.txt%3A828)
 
-* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
-
 * _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:55:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067544975377174528#1:build-log.txt%3A755)
+
+* _2026-06-18 09:48:57 &#43;0000 UTC_: <code>09:53:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067544975154876416#1:build-log.txt%3A755)
 
 * _2026-06-18 09:34:30 &#43;0000 UTC_: <code>09:40:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067536885676249088#1:build-log.txt%3A815)
 
@@ -1274,9 +1274,9 @@ Done cleaning up after podman in container.</pre>
 
 * _2026-06-18 09:16:55 &#43;0000 UTC_: <code>09:20:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067536881641328640#1:build-log.txt%3A769)
 
-* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
-
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:20:42: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-network/2067536881456779264#1:build-log.txt%3A742)
+
+* _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:17: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2067536880865382400#1:build-log.txt%3A741)
 
 * _2026-06-18 09:16:49 &#43;0000 UTC_: <code>09:21:44: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067536880655667200#1:build-log.txt%3A740)
 
@@ -1294,9 +1294,9 @@ Done cleaning up after podman in container.</pre>
 
 * _2026-06-18 08:26:11 &#43;0000 UTC_: <code>08:30:58: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067524112086994944#1:build-log.txt%3A729)
 
-* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
-
 * _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:31:34: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067524113043296256#1:build-log.txt%3A727)
+
+* _2026-06-18 08:26:10 &#43;0000 UTC_: <code>08:32:01: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067524113760522240#1:build-log.txt%3A756)
 
 * _2026-06-18 08:26:05 &#43;0000 UTC_: <code>08:31:25: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067524107909468160#1:build-log.txt%3A811)
 
@@ -1334,7 +1334,7 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**4x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
+**3x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 <details>
 <summary>all...</summary>
 
@@ -1344,13 +1344,11 @@ Done cleaning up after podman in container.</pre>
 
 * _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 
-* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 09:16:55 &#43;0000 UTC_: <code>09:20:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067536881062514688#1:build-log.txt%3A728)
+**2x**: _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 <details>
 <summary>all...</summary>
 
@@ -1358,19 +1356,21 @@ Done cleaning up after podman in container.</pre>
 
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 
-* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
-
 </details>
 
 <hr/>
 
-**3x**: _2026-06-18 08:27:18 &#43;0000 UTC_: <code>08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067524389368238080#1:build-log.txt%3A799)
+**5x**: _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 <details>
 <summary>all...</summary>
 
 * _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 
 * _2026-06-18 08:27:18 &#43;0000 UTC_: <code>08:33:30: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-network/2067524389368238080#1:build-log.txt%3A799)
+
+* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
+
+* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
 
 * _2026-06-18 08:26:08 &#43;0000 UTC_: <code>08:32:27: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: Running nogo on //vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-network/2067524110417661952#1:build-log.txt%3A744)
 
@@ -1394,21 +1394,6 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 1.47%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
-<details>
-<summary>all...</summary>
-
-* _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 1.47%) </summary>
 
 <hr/>
@@ -1418,6 +1403,21 @@ Done cleaning up after podman in container.</pre>
 <summary>all...</summary>
 
 * _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 1.47%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
+<details>
+<summary>all...</summary>
+
+* _2026-06-18 08:42:15 &#43;0000 UTC_: <code>08:43:22: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17263/pull-kubevirt-e2e-k8s-1.34-sig-performance/2067528172320067584#1:build-log.txt%3A86)
 
 </details>
 
@@ -1532,29 +1532,45 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**26x**: _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:36:25: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067555549397913600#1:build-log.txt%3A891)
+**5x**: _2026-06-18 10:31:02 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067555549053980672#1:build-log.txt%3A836)
+<details>
+<summary>all...</summary>
+
+* _2026-06-18 10:31:02 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067555549053980672#1:build-log.txt%3A836)
+
+* _2026-06-18 09:49:12 &#43;0000 UTC_: <code>09:57:30: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067544975045824512#1:build-log.txt%3A832)
+
+* _2026-06-18 09:49:03 &#43;0000 UTC_: <code>09:59:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067544976639660032#1:build-log.txt%3A813)
+
+* _2026-06-18 09:16:47 &#43;0000 UTC_: <code>09:21:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067536881284812800#1:build-log.txt%3A781)
+
+* _2026-06-18 08:34:54 &#43;0000 UTC_: <code>08:38:26: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067526318710329344#1:build-log.txt%3A759)
+
+</details>
+
+<hr/>
+
+**25x**: _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:35:39: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067555550228385792#1:build-log.txt%3A728)
 <details>
 <summary>all...</summary>
 
 * _2026-06-18 10:31:07 &#43;0000 UTC_: <code>10:34:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067555554041008128#1:build-log.txt%3A767)
 
-* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
-
 * _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:36:15: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067555553206341632#1:build-log.txt%3A757)
 
-* _2026-06-18 10:31:04 &#43;0000 UTC_: <code>10:36:24: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067555550635233280#1:build-log.txt%3A799)
+* _2026-06-18 10:31:05 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067555550224191488#1:build-log.txt%3A795)
 
 * _2026-06-18 10:31:03 &#43;0000 UTC_: <code>10:36:48: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067555550232580096#1:build-log.txt%3A735)
 
 * _2026-06-18 10:31:01 &#43;0000 UTC_: <code>10:36:20: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067555554854703104#1:build-log.txt%3A759)
 
-* _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:36:25: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067555549397913600#1:build-log.txt%3A891)
-
 * _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:35:39: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067555550228385792#1:build-log.txt%3A728)
 
-* _2026-06-18 09:58:25 &#43;0000 UTC_: <code>10:03:20: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067544978329964544#1:build-log.txt%3A731)
+* _2026-06-18 10:30:59 &#43;0000 UTC_: <code>10:36:25: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2067555549397913600#1:build-log.txt%3A891)
 
 * _2026-06-18 09:58:25 &#43;0000 UTC_: <code>10:03:21: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067544979118493696#1:build-log.txt%3A744)
+
+* _2026-06-18 09:58:25 &#43;0000 UTC_: <code>10:03:20: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute/2067544978329964544#1:build-log.txt%3A731)
 
 * _2026-06-18 09:58:23 &#43;0000 UTC_: <code>10:02:10: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: GoCompilePkg vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-operator/2067544980003491840#1:build-log.txt%3A723)
 
@@ -1592,68 +1608,37 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**5x**: _2026-06-18 09:49:03 &#43;0000 UTC_: <code>09:59:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067544976639660032#1:build-log.txt%3A813)
-<details>
-<summary>all...</summary>
-
-* _2026-06-18 10:31:02 &#43;0000 UTC_: <code>10:37:07: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067555549053980672#1:build-log.txt%3A836)
-
-* _2026-06-18 09:49:12 &#43;0000 UTC_: <code>09:57:30: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067544975045824512#1:build-log.txt%3A832)
-
-* _2026-06-18 09:49:03 &#43;0000 UTC_: <code>09:59:37: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067544976639660032#1:build-log.txt%3A813)
-
-* _2026-06-18 09:16:47 &#43;0000 UTC_: <code>09:21:47: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-compute/2067536881284812800#1:build-log.txt%3A781)
-
-* _2026-06-18 08:34:54 &#43;0000 UTC_: <code>08:38:26: ERROR: /root/go/src/kubevirt.io/kubevirt/tests/BUILD.bazel:43:8 Validating nogo output for //tests:go_default_test failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-windows2016/2067526318710329344#1:build-log.txt%3A759)
-
-</details>
-
-<hr/>
-
 **2x**: _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 <details>
 <summary>all...</summary>
 
-* _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
+* _2026-06-18 10:31:04 &#43;0000 UTC_: <code>10:36:24: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067555550635233280#1:build-log.txt%3A799)
 
-* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
+* _2026-06-18 09:31:48 &#43;0000 UTC_: <code>09:36:08: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2067536884770279424#1:build-log.txt%3A729)
 
 </details>
 
 <hr/>
 
-**2x**: _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
+**1x**: _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 <details>
 <summary>all...</summary>
 
 * _2026-06-18 09:16:50 &#43;0000 UTC_: <code>09:22:16: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067536881393864704#1:build-log.txt%3A747)
 
-* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
-
 </details>
 
 <hr/>
 
-**1x**: _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
+**3x**: _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 <details>
 <summary>all...</summary>
 
 * _2026-06-18 08:27:25 &#43;0000 UTC_: <code>08:32:47: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11 Validating nogo output for //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-compute/2067524389980606464#1:build-log.txt%3A756)
 
-</details>
+* _2026-06-18 08:27:17 &#43;0000 UTC_: <code>08:33:02: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/rhobs/operator-observability-toolkit/pkg/testutil/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 2dc5dd3e503bba0ed460cbde692789b79995fe03f7317c69d725681276a57d05/31872 for bazel-out/k8-fastbuild/bin/vendor/github.com/grafana/regexp/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.34-sig-operator/2067524389678616576#1:build-log.txt%3A750)
 
-<hr/>
-</details>
-<details>
-<summary> podman container removal timeout (1x / 2.56%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
-<details>
-<summary>all...</summary>
-
-* _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
+* _2026-06-18 08:27:16 &#43;0000 UTC_: <code>08:34:32: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters/BUILD.bazel:3:11: Running nogo on //vendor/kubevirt.io/qe-tools/pkg/ginkgo-reporters:go_default_library failed: Failed to fetch blobs because they do not exist remotely.: Missing digest: 63ff9f82f95febd57d3163e00bcc3832398c70ff31c4b7d660cf00a83b111756/5978 for bazel-out/k8-fastbuild/bin/vendor/kubevirt.io/qe-tools/pkg/polarion-xml/go_default_library.x</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17910/pull-kubevirt-e2e-k8s-1.35-sig-operator/2067524390601363456#1:build-log.txt%3A746)
 
 </details>
 
@@ -1669,6 +1654,21 @@ Done cleaning up after podman in container.</pre>
 <summary>all...</summary>
 
 * _2026-06-16 12:46:25 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17983/pull-kubevirt-e2e-k8s-1.36-sig-compute-migrations/2066864704415862784#1:build-log.txt%3A1383)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> podman container removal timeout (1x / 2.56%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
+<details>
+<summary>all...</summary>
+
+* _2026-06-17 07:01:38 &#43;0000 UTC_: <code>Error: cannot remove container e672de5d181574bc76d99016452be15084c22ab8f3d5895e5e5f8d0a986dc6f7 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17976/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2067140165721133056#1:build-log.txt%3A1868)
 
 </details>
 
@@ -1781,4 +1781,4 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-Last updated: 2026-06-21 21:42:04
+Last updated: 2026-06-22 00:45:30
