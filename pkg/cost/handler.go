@@ -1,0 +1,110 @@
+package cost
+
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+	"path/filepath"
+	"strings"
+
+	log "github.com/sirupsen/logrus"
+)
+
+// HandlerOptions configures the cost report handler.
+type HandlerOptions struct {
+	ThanosURL    string
+	BearerToken  string
+	Namespace    string
+	NodeSelector string
+	DataDays     int
+	Source       string
+	Path         string
+	MonthlyCost  float64
+}
+
+// Handler orchestrates querying Prometheus and building the usage report.
+type Handler struct {
+	client  *PrometheusClient
+	options *HandlerOptions
+}
+
+// NewHandler creates a cost report handler.
+func NewHandler(opts *HandlerOptions) *Handler {
+	client := NewPrometheusClient(opts.ThanosURL, opts.BearerToken)
+	return &Handler{
+		client:  client,
+		options: opts,
+	}
+}
+
+// Run queries Prometheus, calculates usage, and writes the report.
+func (h *Handler) Run() (*UsageReport, error) {
+	log.Infof("querying cluster capacity for nodes matching %q", h.options.NodeSelector)
+	cluster, err := h.client.GetClusterCapacity(h.options.NodeSelector)
+	if err != nil {
+		return nil, fmt.Errorf("getting cluster capacity: %w", err)
+	}
+	log.Infof("cluster capacity: %d nodes, %.0f CPU cores, %.1f GiB memory",
+		cluster.NodeCount, cluster.CPUCores, cluster.MemoryBytes/(1024*1024*1024))
+
+	window := fmt.Sprintf("%dd", h.options.DataDays)
+	log.Infof("querying job metrics for namespace %q over %s window", h.options.Namespace, window)
+	rawJobs, err := h.client.GetJobMetrics(h.options.Namespace, window)
+	if err != nil {
+		return nil, fmt.Errorf("getting job metrics: %w", err)
+	}
+
+	if len(rawJobs) == 0 {
+		log.Warn("no job metrics found")
+	}
+
+	report := BuildReport(rawJobs, *cluster, h.options.DataDays, h.options.Source, MapJobToSIG)
+
+	if h.options.MonthlyCost > 0 {
+		ApplyCostRates(report, h.options.MonthlyCost)
+		log.Infof("applied monthly cost of $%.2f", h.options.MonthlyCost)
+	}
+
+	if err := h.writeOutput(report); err != nil {
+		return nil, fmt.Errorf("writing output: %w", err)
+	}
+
+	return report, nil
+}
+
+func (h *Handler) writeOutput(report *UsageReport) error {
+	outDir := filepath.Join(h.options.Path, strings.ReplaceAll(h.options.Source, "/", string(filepath.Separator)))
+	if err := os.MkdirAll(outDir, 0755); err != nil {
+		return fmt.Errorf("creating output directory: %w", err)
+	}
+
+	resultsPath := filepath.Join(outDir, "cost-results.json")
+	data, err := json.MarshalIndent(report, "", "  ")
+	if err != nil {
+		return fmt.Errorf("marshaling results: %w", err)
+	}
+	if err := os.WriteFile(resultsPath, data, 0644); err != nil {
+		return fmt.Errorf("writing results: %w", err)
+	}
+	log.Infof("wrote results to %s", resultsPath)
+
+	return nil
+}
+
+// MapJobToSIG maps a Prow job name to a SIG, matching the logic in pkg/sigretests.
+func MapJobToSIG(jobName string) string {
+	switch {
+	case strings.Contains(jobName, "sig-compute") || strings.Contains(jobName, "vgpu"):
+		return "compute"
+	case strings.Contains(jobName, "sig-network") || strings.Contains(jobName, "sriov"):
+		return "network"
+	case strings.Contains(jobName, "sig-storage"):
+		return "storage"
+	case strings.Contains(jobName, "sig-operator"):
+		return "operator"
+	case strings.Contains(jobName, "sig-monitoring"):
+		return "monitoring"
+	default:
+		return "other"
+	}
+}
