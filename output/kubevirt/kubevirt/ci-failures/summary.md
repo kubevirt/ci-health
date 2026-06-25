@@ -131,7 +131,7 @@
 
 <hr/>
 
-**2x**: _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
+**2x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
 <details>
 <summary>all...</summary>
 
@@ -326,7 +326,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 
-**2x**: _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
+**2x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
 <details>
 <summary>all...</summary>
 
@@ -374,4 +374,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-06-25 13:00:50
+Last updated: 2026-06-25 16:03:14
