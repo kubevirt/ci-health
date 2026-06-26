@@ -20,24 +20,6 @@
 ### 2026-06-25 (2x / 25.00%)
 
 
-#### pr-build (1x / 50.00%)
-
-<details>
-<summary> panic detected in test output (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (1x / 50.00%)
 
 <details>
@@ -56,6 +38,24 @@
 <hr/>
 </details>
 
+#### pr-build (1x / 50.00%)
+
+<details>
+<summary> panic detected in test output (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+
+</details>
+
+<hr/>
+</details>
+
 ### 2026-06-24 (4x / 50.00%)
 
 
@@ -66,7 +66,7 @@
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
+**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
 <details>
 <summary>all...</summary>
 
@@ -159,6 +159,43 @@
 ### external (7x / 87.50%)
 
 <details>
+<summary> bazel remote cache blob fetch failure (2x / 25.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+<details><summary>context</summary>
+<pre>15:08:07: INFO: Build option --define has changed, discarding analysis cache.
+15:08:08: INFO: Analyzed 7 targets (20 packages loaded, 14806 targets configured).
+15:08:08: INFO: Found 7 targets...
+15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+15:08:09: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: c90df6922f119c9a6419c01352467ff22dfac26652a3d0cbb125b4e70c849115/21088 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/formatter/go_default_library.x
+15:08:09: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4e17963ff53f78aaa1f723ff42cfb6c454cb1d9c70f229fa24826d57dd3c0410/181224 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/types/go_default_library.x
+15:08:09: INFO: Elapsed time: 1.710s, Critical Path: 0.65s</pre>
+</details>
+
+
+* _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
+<details><summary>context</summary>
+<pre>15:09:31: INFO: Build option --define has changed, discarding analysis cache.
+15:09:32: INFO: Analyzed 7 targets (20 packages loaded, 14806 targets configured).
+15:09:32: INFO: Found 7 targets...
+15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
+15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: c90df6922f119c9a6419c01352467ff22dfac26652a3d0cbb125b4e70c849115/21088 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/formatter/go_default_library.x
+15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4e17963ff53f78aaa1f723ff42cfb6c454cb1d9c70f229fa24826d57dd3c0410/181224 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/types/go_default_library.x
+15:09:33: INFO: Elapsed time: 2.684s, Critical Path: 0.55s</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> podman container removal timeout (2x / 25.00%) </summary>
 
 <hr/>
@@ -188,43 +225,6 @@
 &#43; exit 2
 &#43; EXIT_VALUE=2
 &#43; set &#43;o xtrace</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache blob fetch failure (2x / 25.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
-<details><summary>context</summary>
-<pre>15:08:07: INFO: Build option --define has changed, discarding analysis cache.
-15:08:08: INFO: Analyzed 7 targets (20 packages loaded, 14806 targets configured).
-15:08:08: INFO: Found 7 targets...
-15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-15:08:09: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: c90df6922f119c9a6419c01352467ff22dfac26652a3d0cbb125b4e70c849115/21088 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/formatter/go_default_library.x
-15:08:09: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4e17963ff53f78aaa1f723ff42cfb6c454cb1d9c70f229fa24826d57dd3c0410/181224 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/types/go_default_library.x
-15:08:09: INFO: Elapsed time: 1.710s, Critical Path: 0.65s</pre>
-</details>
-
-
-* _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
-<details><summary>context</summary>
-<pre>15:09:31: INFO: Build option --define has changed, discarding analysis cache.
-15:09:32: INFO: Analyzed 7 targets (20 packages loaded, 14806 targets configured).
-15:09:32: INFO: Found 7 targets...
-15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:
-15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: c90df6922f119c9a6419c01352467ff22dfac26652a3d0cbb125b4e70c849115/21088 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/formatter/go_default_library.x
-15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4e17963ff53f78aaa1f723ff42cfb6c454cb1d9c70f229fa24826d57dd3c0410/181224 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/types/go_default_library.x
-15:09:33: INFO: Elapsed time: 2.684s, Critical Path: 0.55s</pre>
 </details>
 
 
@@ -351,7 +351,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
+**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
 <details>
 <summary>all...</summary>
 
@@ -539,6 +539,42 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
+### sig-network (2x / 25.00%)
+
+
+#### external (2x / 100.00%)
+
+<details>
+<summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-storage (1x / 12.50%)
 
 
@@ -560,40 +596,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### sig-network (2x / 25.00%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-26 18:50:58
+Last updated: 2026-06-26 21:45:30
