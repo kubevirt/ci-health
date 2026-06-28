@@ -20,24 +20,6 @@
 ### 2026-06-25 (2x / 22.22%)
 
 
-#### pr-build (1x / 50.00%)
-
-<details>
-<summary> panic detected in test output (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (1x / 50.00%)
 
 <details>
@@ -56,6 +38,24 @@
 <hr/>
 </details>
 
+#### pr-build (1x / 50.00%)
+
+<details>
+<summary> panic detected in test output (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+
+</details>
+
+<hr/>
+</details>
+
 ### 2026-06-24 (4x / 44.44%)
 
 
@@ -66,7 +66,7 @@
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -184,7 +184,7 @@
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -254,31 +254,6 @@
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-21 22:38:31 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18202/pull-kubevirt-e2e-kind-1.35-vgpu/2068825787292717056#1:build-log.txt%3A517)
-<details>
-<summary>all...</summary>
-
-* _2026-06-21 22:38:31 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18202/pull-kubevirt-e2e-kind-1.35-vgpu/2068825787292717056#1:build-log.txt%3A517)
-<details><summary>context</summary>
-<pre>22:46:53: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-22:46:53: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-22:46:58: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1416787248/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260621%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260621T224655Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bb87a81e41fb2140fda6b6fe1f39c827129addef871d5ba06fb6376fca50a76b&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1782082915~hmac=7bd114a9b9115fd6386aa0672cdb3b2a0f43fbdd75fda521d5742b48c67b52ea&#34;: EOF)
-make: *** [Makefile:174: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> bazel remote cache IO failure (1x / 11.11%) </summary>
 
 <hr/>
@@ -321,6 +296,31 @@ make: *** [Makefile:174: cluster-up] Error 125
 21:56:35: INFO: From GoCompilePkg vendor/libguestfs.org/libnbd/go_default_library.a:
 21:56:35: In file included from closures.go:32,
 21:56:35:                  from /tmp/rules_go_work-961419814/cgo/kubevirt.io/kubevirt/vendor/libguestfs.org/libnbd/_cgo_export.c:4:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-21 22:38:31 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18202/pull-kubevirt-e2e-kind-1.35-vgpu/2068825787292717056#1:build-log.txt%3A517)
+<details>
+<summary>all...</summary>
+
+* _2026-06-21 22:38:31 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18202/pull-kubevirt-e2e-kind-1.35-vgpu/2068825787292717056#1:build-log.txt%3A517)
+<details><summary>context</summary>
+<pre>22:46:53: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+22:46:53: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+22:46:58: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1416787248/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260621%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260621T224655Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bb87a81e41fb2140fda6b6fe1f39c827129addef871d5ba06fb6376fca50a76b&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1782082915~hmac=7bd114a9b9115fd6386aa0672cdb3b2a0f43fbdd75fda521d5742b48c67b52ea&#34;: EOF)
+make: *** [Makefile:174: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -390,7 +390,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -614,6 +614,27 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
+### sig-storage (1x / 11.11%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> bazel remote cache blob fetch failure (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-network (2x / 22.22%)
 
 
@@ -650,25 +671,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### sig-storage (1x / 11.11%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> bazel remote cache blob fetch failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-06-28 10:17:51
+Last updated: 2026-06-28 12:40:23
