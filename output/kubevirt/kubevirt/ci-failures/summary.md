@@ -20,24 +20,6 @@
 ### 2026-06-25 (2x / 22.22%)
 
 
-#### external (1x / 50.00%)
-
-<details>
-<summary> podman container removal timeout (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-
-</details>
-
-<hr/>
-</details>
-
 #### pr-build (1x / 50.00%)
 
 <details>
@@ -50,6 +32,24 @@
 <summary>all...</summary>
 
 * _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> podman container removal timeout (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
 
 </details>
 
@@ -329,6 +329,24 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
+### needs-investigation (1x / 11.11%)
+
+<details>
+<summary> no error snippets (1x / 11.11%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
+<details>
+<summary>all...</summary>
+
+* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
+
+</details>
+
+<hr/>
+</details>
+
 ### pr-build (1x / 11.11%)
 
 <details>
@@ -351,24 +369,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816/artifacts/pods/0_kubevirt_virt-handler-dqq6m-virt-handler_previous.log</pre>
 </details>
 
-
-</details>
-
-<hr/>
-</details>
-
-### needs-investigation (1x / 11.11%)
-
-<details>
-<summary> no error snippets (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-<details>
-<summary>all...</summary>
-
-* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
 
 </details>
 
@@ -641,21 +641,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 #### external (2x / 100.00%)
 
 <details>
-<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
 
 <hr/>
@@ -670,5 +655,20 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
 
-Last updated: 2026-06-28 12:40:23
+<hr/>
+
+**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-28 15:45:57
