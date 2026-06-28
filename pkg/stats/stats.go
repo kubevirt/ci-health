@@ -1,6 +1,7 @@
 package stats
 
 import (
+	"cmp"
 	"fmt"
 	"math"
 	"slices"
@@ -318,11 +319,21 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 				sortedFailedJobs[i].FailureURLs = append(sortedFailedJobs[i].FailureURLs, failedJobURL)
 			}
 		}
+		// Sort by Prow job ID descending (newest first)
+		slices.SortFunc(sortedFailedJobs[i].FailureURLs, func(a, b string) int {
+			return cmp.Compare(prowJobID(b), prowJobID(a))
+		})
 	}
 	dataItem.FailedJobLeaderBoard = sortedFailedJobs
 	results.Data[constants.SIGRetests] = dataItem
 
 	return results, nil
+}
+
+func prowJobID(url string) int {
+	parts := strings.Split(url, "/")
+	id, _ := strconv.Atoi(parts[len(parts)-1])
+	return id
 }
 
 func (h *Handler) quarantineProcessor(results *types.Results) (*types.Results, error) {
