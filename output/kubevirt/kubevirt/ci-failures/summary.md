@@ -66,7 +66,7 @@
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -159,48 +159,11 @@
 ### external (6x / 75.00%)
 
 <details>
-<summary> podman container removal timeout (2x / 25.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-<details><summary>context</summary>
-<pre>07:06:26: Command Output: time=&#34;2026-06-25T07:06:19Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.35-control-plane in 10 seconds, resorting to SIGKILL&#34;
-07:06:26: time=&#34;2026-06-25T07:06:21Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.35-worker in 10 seconds, resorting to SIGKILL&#34;
-07:06:26: Error: cannot remove container bef9fdc1edf782f21c2ad7d5d7c703d5bd4e05e110d7c0928819fcb4babcb18d as it could not be stopped: given PID did not die within timeout
-07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout
-07:06:26:
-07:06:26: Stack Trace:
-07:06:26: sigs.k8s.io/kind/pkg/errors.WithStack</pre>
-</details>
-
-
-* _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
-<details><summary>context</summary>
-<pre>14:25:50: Command Output: time=&#34;2026-06-22T14:25:19Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.34-control-plane in 10 seconds, resorting to SIGKILL&#34;
-14:25:50: time=&#34;2026-06-22T14:25:21Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.34-worker in 10 seconds, resorting to SIGKILL&#34;
-14:25:50: Error: cannot remove container 2e214a939c9010e27b066e79dde0e3e0d9fcb283538430d19a44b7f30a67c317 as it could not be stopped: given PID did not die within timeout
-14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout
-&#43; exit 2
-&#43; EXIT_VALUE=2
-&#43; set &#43;o xtrace</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> bazel remote cache blob fetch failure (2x / 25.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -225,6 +188,43 @@
 15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: c90df6922f119c9a6419c01352467ff22dfac26652a3d0cbb125b4e70c849115/21088 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/formatter/go_default_library.x
 15:09:33: com.google.devtools.build.lib.remote.common.CacheNotFoundException: Missing digest: 4e17963ff53f78aaa1f723ff42cfb6c454cb1d9c70f229fa24826d57dd3c0410/181224 for bazel-out/k8-fastbuild/bin/vendor/github.com/onsi/ginkgo/v2/types/go_default_library.x
 15:09:33: INFO: Elapsed time: 2.684s, Critical Path: 0.55s</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> podman container removal timeout (2x / 25.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
+<details><summary>context</summary>
+<pre>07:06:26: Command Output: time=&#34;2026-06-25T07:06:19Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.35-control-plane in 10 seconds, resorting to SIGKILL&#34;
+07:06:26: time=&#34;2026-06-25T07:06:21Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.35-worker in 10 seconds, resorting to SIGKILL&#34;
+07:06:26: Error: cannot remove container bef9fdc1edf782f21c2ad7d5d7c703d5bd4e05e110d7c0928819fcb4babcb18d as it could not be stopped: given PID did not die within timeout
+07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout
+07:06:26:
+07:06:26: Stack Trace:
+07:06:26: sigs.k8s.io/kind/pkg/errors.WithStack</pre>
+</details>
+
+
+* _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
+<details><summary>context</summary>
+<pre>14:25:50: Command Output: time=&#34;2026-06-22T14:25:19Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.34-control-plane in 10 seconds, resorting to SIGKILL&#34;
+14:25:50: time=&#34;2026-06-22T14:25:21Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container kind-1.34-worker in 10 seconds, resorting to SIGKILL&#34;
+14:25:50: Error: cannot remove container 2e214a939c9010e27b066e79dde0e3e0d9fcb283538430d19a44b7f30a67c317 as it could not be stopped: given PID did not die within timeout
+14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout
+&#43; exit 2
+&#43; EXIT_VALUE=2
+&#43; set &#43;o xtrace</pre>
 </details>
 
 
@@ -344,7 +344,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 
-**2x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+**2x**: _2026-06-24 15:02:05 &#43;0000 UTC_: <code>15:09:33: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-storage/2069797359105085440#1:build-log.txt%3A1151)
 <details>
 <summary>all...</summary>
 
@@ -474,7 +474,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 
-**2x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
+**2x**: _2026-06-22 13:43:52 &#43;0000 UTC_: <code>14:25:50: Error: cannot remove container c87a5eaed63d75196f4c26360200079808f2a288908100e56da4e8c477b994fa as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18211/pull-kubevirt-e2e-k8s-1.34-sig-compute-arm64-1.7/2069038953901592576#1:build-log.txt%3A4436)
 <details>
 <summary>all...</summary>
 
@@ -538,42 +538,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### sig-network (2x / 25.00%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
-
-</details>
-
-<hr/>
-</details>
-
 ### sig-storage (1x / 12.50%)
 
 
@@ -595,4 +559,40 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-06-29 04:53:07
+### sig-network (2x / 25.00%)
+
+
+#### external (2x / 100.00%)
+
+<details>
+<summary> bazel remote cache IO failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:01:21 &#43;0000 UTC_: <code>15:06:56: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs/BUILD.bazel:3:11 Validating nogo output for //vendor/github.com/onsi/ginkgo/v2/ginkgo/automaxprocs:go_default_library failed: Exec failed due to IOException: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2069797358828261376#1:build-log.txt%3A1255)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache blob fetch failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:02:13 &#43;0000 UTC_: <code>15:08:09: ERROR: /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/v2/ginkgo/command/BUILD.bazel:3:11: GoCompilePkg vendor/github.com/onsi/ginkgo/v2/ginkgo/command/go_default_library.a failed: Failed to fetch blobs because they do not exist remotely.: 2 errors during bulk transfer:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-network/2069797358933118976#1:build-log.txt%3A1190)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-06-29 07:48:51
