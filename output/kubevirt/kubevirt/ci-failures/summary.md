@@ -17,26 +17,8 @@
 ## per day [⬆](#top)
 
 
-### 2026-06-25 (2x / 28.57%)
+### 2026-06-25 (2x / 33.33%)
 
-
-#### pr-build (1x / 50.00%)
-
-<details>
-<summary> panic detected in test output (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-
-</details>
-
-<hr/>
-</details>
 
 #### external (1x / 50.00%)
 
@@ -56,7 +38,25 @@
 <hr/>
 </details>
 
-### 2026-06-24 (4x / 57.14%)
+#### pr-build (1x / 50.00%)
+
+<details>
+<summary> panic detected in test output (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-06-24 (4x / 66.67%)
 
 
 #### external (4x / 100.00%)
@@ -109,36 +109,15 @@
 <hr/>
 </details>
 
-### 2026-06-23 (1x / 14.29%)
-
-
-#### needs-investigation (1x / 100.00%)
-
-<details>
-<summary> no error snippets (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-<details>
-<summary>all...</summary>
-
-* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (5x / 71.43%)
+### external (5x / 83.33%)
 
 <details>
-<summary> bazel remote cache blob fetch failure (2x / 28.57%) </summary>
+<summary> bazel remote cache blob fetch failure (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -175,32 +154,7 @@
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache connection timeout (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
-<details><summary>context</summary>
-<pre>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
-21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
-21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
-21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
-21:56:35: INFO: From GoCompilePkg vendor/libguestfs.org/libnbd/go_default_library.a:
-21:56:35: In file included from closures.go:32,
-21:56:35:                  from /tmp/rules_go_work-961419814/cgo/kubevirt.io/kubevirt/vendor/libguestfs.org/libnbd/_cgo_export.c:4:</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> podman container removal timeout (1x / 14.29%) </summary>
+<summary> podman container removal timeout (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -225,7 +179,7 @@
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache IO failure (1x / 14.29%) </summary>
+<summary> bazel remote cache IO failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -249,11 +203,36 @@
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache connection timeout (1x / 16.67%) </summary>
 
-### pr-build (1x / 14.29%)
+<hr/>
+
+**1x**: _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
+<details>
+<summary>all...</summary>
+
+* _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
+<details><summary>context</summary>
+<pre>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
+21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
+21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
+21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080
+21:56:35: INFO: From GoCompilePkg vendor/libguestfs.org/libnbd/go_default_library.a:
+21:56:35: In file included from closures.go:32,
+21:56:35:                  from /tmp/rules_go_work-961419814/cgo/kubevirt.io/kubevirt/vendor/libguestfs.org/libnbd/_cgo_export.c:4:</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### pr-build (1x / 16.67%)
 
 <details>
-<summary> panic detected in test output (1x / 14.29%) </summary>
+<summary> panic detected in test output (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -278,36 +257,18 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### needs-investigation (1x / 14.29%)
-
-<details>
-<summary> no error snippets (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-<details>
-<summary>all...</summary>
-
-* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (7x / 100.00%)
+### main (6x / 100.00%)
 
 
-#### external (5x / 71.43%)
+#### external (5x / 83.33%)
 
 <details>
-<summary> bazel remote cache blob fetch failure (2x / 28.57%) </summary>
+<summary> bazel remote cache blob fetch failure (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -324,7 +285,22 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache IO failure (1x / 14.29%) </summary>
+<summary> podman container removal timeout (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache IO failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -339,7 +315,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache connection timeout (1x / 14.29%) </summary>
+<summary> bazel remote cache connection timeout (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -353,26 +329,11 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 </details>
-<details>
-<summary> podman container removal timeout (1x / 14.29%) </summary>
 
-<hr/>
-
-**1x**: _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:41 &#43;0000 UTC_: <code>07:06:26: Error: cannot remove container 0e0afb9af71a75d9b026ee76ea2ecb8cce792a6dec62cf50a08fee527c34ab5c as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2070034428989542400#1:build-log.txt%3A739)
-
-</details>
-
-<hr/>
-</details>
-
-#### pr-build (1x / 14.29%)
+#### pr-build (1x / 16.67%)
 
 <details>
-<summary> panic detected in test output (1x / 14.29%) </summary>
+<summary> panic detected in test output (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -381,24 +342,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <summary>all...</summary>
 
 * _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 14.29%)
-
-<details>
-<summary> no error snippets (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
-<details>
-<summary>all...</summary>
-
-* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
 
 </details>
 
@@ -410,28 +353,13 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 ## per SIG [⬆](#top)
 
 
-### sig-compute (4x / 57.14%)
+### sig-compute (3x / 50.00%)
 
 
-#### external (2x / 50.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> bazel remote cache connection timeout (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
-<details>
-<summary>all...</summary>
-
-* _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> podman container removal timeout (1x / 25.00%) </summary>
+<summary> podman container removal timeout (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -445,29 +373,26 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 
 <hr/>
 </details>
-
-#### needs-investigation (1x / 25.00%)
-
 <details>
-<summary> no error snippets (1x / 25.00%) </summary>
+<summary> bazel remote cache connection timeout (1x / 33.33%) </summary>
 
 <hr/>
 
-**1x**: _2026-06-23 10:49:37 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
+**1x**: _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
 <details>
 <summary>all...</summary>
 
-* _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
+* _2026-06-24 15:04:26 &#43;0000 UTC_: <code>21:56:35: io.netty.channel.ConnectTimeoutException: connection timed out: bazel-cache.kubevirt-prow/172.30.114.100:8080</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18109/pull-kubevirt-e2e-k8s-1.34-sig-operator/2069797359335772160#1:build-log.txt%3A1069)
 
 </details>
 
 <hr/>
 </details>
 
-#### pr-build (1x / 25.00%)
+#### pr-build (1x / 33.33%)
 
 <details>
-<summary> panic detected in test output (1x / 25.00%) </summary>
+<summary> panic detected in test output (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -482,7 +407,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### sig-network (2x / 28.57%)
+### sig-network (2x / 33.33%)
 
 
 #### external (2x / 100.00%)
@@ -518,7 +443,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-### sig-storage (1x / 14.29%)
+### sig-storage (1x / 16.67%)
 
 
 #### external (1x / 100.00%)
@@ -539,4 +464,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-06-30 07:32:30
+Last updated: 2026-06-30 12:56:45
