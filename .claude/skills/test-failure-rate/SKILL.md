@@ -140,3 +140,10 @@ Where **Pattern** is one of:
 - **unknown** — not found in flakefinder
 
 And **Assessment** refines the raw severity by incorporating the pattern analysis.
+
+## Suggested follow-up skills
+
+After the failure rate summary, suggest follow-up analyses when appropriate:
+- **change-relevance**: for failures classified as "likely-pr-related" — confirms whether the PR actually changed files in the test's code area before blaming the PR
+- **lane-failure-rate**: for failures concentrated in specific lanes — shows whether those lanes are generally unhealthy or if the concentration is specific to this test
+- **analyze-build**: for infra-correlated failures or when the k8s analysis would help — deep-dives into cluster state (pods, nodes, events, etcd) to find infrastructure root causes

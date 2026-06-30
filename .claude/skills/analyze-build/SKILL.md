@@ -75,3 +75,10 @@ After data generation:
    - Example: `grep -i "testvmi-xxxxx" <cached_path>` to find all log lines related to a specific VMI
 6. Correlate all analyses: k8s findings (e.g. CrashLoopBackOff on a component pod) often explain build log errors (e.g. test timeouts); etcd findings (e.g. tmpfs exhaustion) can explain node-level or apiserver issues; container log errors (e.g. schema validation failures in virt-controller) reveal the actual rejection reason when VMIs are stuck in non-Running phases
 7. Deduce the root cause and possible mitigations from the combined data
+
+## Suggested follow-up skills
+
+After the root-cause summary, suggest follow-up analyses when appropriate:
+- **test-failure-rate**: for test failures that might be flaky — checks historical success rates across all lanes and k8s versions to confirm whether the failure is a known flake or likely PR-related
+- **change-relevance**: for PR builds where test failures look PR-related — confirms whether the PR actually changed files in the failing test's code area
+- **trigger-pr-jobs**: when the failure is determined to be a flake or transient infrastructure issue — retriggers the failed job instead of investigating further

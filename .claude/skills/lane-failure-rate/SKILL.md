@@ -214,6 +214,26 @@ After the search results, offer to create GitHub issues for any top-priority fai
 - Error message snippet
 - Testgrid link(s)
 
+## Opaque lanes (missing JUnit data)
+
+Some lanes — typically unit test lanes on non-Bazel architectures (e.g. s390x) — do not produce JUnit XML artifacts. When this happens, testgrid only has two entries:
+
+```
+{lane-name}.Overall
+{lane-name}.Pod
+```
+
+### Detecting opaque lanes
+
+After running `lane-rate`, check whether the `failed_tests` list contains only entries ending in `.Overall` or `.Pod` (or is empty despite the lane having a non-zero failure rate in testgrid). If so, the lane is opaque — all failures are collapsed into a single `.Pod` entry, and per-test analysis is meaningless.
+
+### What to do with opaque lanes
+
+1. **Flag the limitation**: tell the user that this lane lacks per-test JUnit data, so lane-rate analysis cannot distinguish individual test failures. The aggregate failure rate is still valid, but per-test breakdown is not.
+2. **Suggest manual build analysis**: use the `analyze-build` skill on individual failing builds to identify specific test failures from the raw build log.
+3. **Root cause**: KubeVirt unit tests use Ginkgo with a shared `KubeVirtTestSuiteSetup` function (`staging/src/kubevirt.io/client-go/testutils/setup.go`) that already supports JUnit XML via `v1reporter.NewV1JUnitReporter`, but the reporter is only activated under Bazel environment variables (`GO_TEST_WRAP`, `XML_OUTPUT_FILE`). Non-Bazel test paths (like `make go-test` used by s390x) skip JUnit output because these env vars are absent. The fix is to enable the Ginkgo JUnit reporter when the `ARTIFACTS` env var is set (which Prow provides).
+4. **Link to tracking issue**: https://github.com/kubevirt/kubevirt/issues/18225
+
 ## Combining with test-failure-rate
 
 The `lane-rate` command gives a lane-wide overview, while `test-failure-rate` gives a cross-lane view for specific tests. Use `lane-rate` to find which tests are problematic in a lane, then use `test-failure-rate` on a specific build to see if those tests also fail in other lanes.
