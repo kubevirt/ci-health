@@ -205,3 +205,9 @@ Where:
 - Only include non-quarantined tests (exclude those already tagged `[QUARANTINE]`)
 
 Then list already-quarantined tests that remain severely broken (success rate <50%) as a "quarantine debt" reminder — these have been quarantined but never fixed. These should also link to source code.
+
+## Suggested follow-up skills
+
+After the flake overview report, suggest follow-up analyses when appropriate:
+- **lane-failure-rate**: for lanes with high failure counts or suspected infrastructure instability — provides deeper per-lane analysis with flip-rate, burst detection, and cross-test correlation on a specific lane
+- **analyze-build**: for specific failing builds identified during the overview — deep-dives into cluster state (k8s-reporter artifacts, etcd profiling, container logs) to distinguish infrastructure issues from test-level flakiness

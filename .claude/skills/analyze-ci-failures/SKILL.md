@@ -135,3 +135,10 @@ When presenting results, prioritize by actionability:
 ## Goal for analysis
 
 The output is to be looked at as described above, then reasons and possible mitigations are to be deduced.
+
+## Suggested follow-up skills
+
+After the CI failure summary, suggest follow-up analyses when appropriate:
+- **analyze-build**: for individual builds that need deeper investigation — deep-dives into cluster state (k8s-reporter artifacts, etcd profiling, container logs) to find infrastructure root causes beyond what error snippets reveal
+- **test-failure-rate**: for specific test failures that may be flaky — checks historical success rates across all lanes and k8s versions using flakefinder data
+- **flake-overview**: when the analysis reveals widespread flakiness across many lanes — provides a comprehensive cross-lane view combining flakefinder and testgrid data with quarantine prioritization
