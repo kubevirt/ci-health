@@ -102,6 +102,63 @@ var _ = Describe("main", func() {
 			Expect(err).To(HaveOccurred())
 			Expect(err.Error()).To(ContainSubstring("status 403"))
 		})
+
+		It("retries on 502 Bad Gateway and succeeds", func() {
+			attempt := 0
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				attempt++
+				if attempt < 3 {
+					w.WriteHeader(http.StatusBadGateway)
+					return
+				}
+				w.WriteHeader(http.StatusOK)
+			}))
+			resp, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+			Expect(attempt).To(Equal(3))
+		})
+
+		It("retries on 503 Service Unavailable and succeeds", func() {
+			attempt := 0
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				attempt++
+				if attempt < 2 {
+					w.WriteHeader(http.StatusServiceUnavailable)
+					return
+				}
+				w.WriteHeader(http.StatusOK)
+			}))
+			resp, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+			Expect(attempt).To(Equal(2))
+		})
+
+		It("retries on 504 Gateway Timeout and succeeds", func() {
+			attempt := 0
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				attempt++
+				if attempt < 2 {
+					w.WriteHeader(http.StatusGatewayTimeout)
+					return
+				}
+				w.WriteHeader(http.StatusOK)
+			}))
+			resp, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+			Expect(attempt).To(Equal(2))
+		})
+
+		It("returns error after exhausting retries on persistent 502", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusBadGateway)
+			}))
+			_, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("transient HTTP 502"))
+		})
 	})
 
 	Context("filterForLastCommit time filtering", func() {
