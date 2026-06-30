@@ -446,24 +446,6 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-#### pr-build (1x / 25.00%)
-
-<details>
-<summary> panic detected in test output (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-<details>
-<summary>all...</summary>
-
-* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (1x / 25.00%)
 
 <details>
@@ -476,6 +458,24 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <summary>all...</summary>
 
 * _2026-06-23 10:49:37 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18133/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2069371909820125184)
+
+</details>
+
+<hr/>
+</details>
+
+#### pr-build (1x / 25.00%)
+
+<details>
+<summary> panic detected in test output (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
+<details>
+<summary>all...</summary>
+
+* _2026-06-25 06:41:50 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18244/pull-kubevirt-e2e-kind-1.34-sev/2070034457527586816#1:build-log.txt%3A5211)
 
 </details>
 
@@ -539,4 +539,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-06-30 04:41:32
+Last updated: 2026-06-30 07:32:30
