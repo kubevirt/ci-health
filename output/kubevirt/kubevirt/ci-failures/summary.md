@@ -281,4 +281,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-07-01 18:52:25
+Last updated: 2026-07-01 21:44:57
