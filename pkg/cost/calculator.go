@@ -48,7 +48,6 @@ func AggregatePRUsages(jobs []JobUsage) []PRUsage {
 		pr.CPUPercent += j.CPUPercent
 		pr.MemPercent += j.MemPercent
 		pr.RunCount++
-		pr.Duration += j.Duration
 	}
 
 	result := make([]PRUsage, 0, len(prMap))
@@ -136,7 +135,8 @@ func ApplyCostRates(report *UsageReport, monthlyCost float64) {
 }
 
 // BuildReport constructs a full UsageReport from raw job metrics and cluster capacity.
-func BuildReport(jobs []RawJobMetrics, cluster ClusterCapacity, dataDays int, source string, mapJobToSIG func(string) string) *UsageReport {
+// endTime is the report end timestamp; the start is computed as endTime minus dataDays.
+func BuildReport(jobs []RawJobMetrics, cluster ClusterCapacity, dataDays int, source string, endTime time.Time, mapJobToSIG func(string) string) *UsageReport {
 	windowSeconds := float64(dataDays) * 24 * 3600
 
 	jobUsages := make([]JobUsage, 0, len(jobs))
@@ -162,8 +162,8 @@ func BuildReport(jobs []RawJobMetrics, cluster ClusterCapacity, dataDays int, so
 	}
 
 	return &UsageReport{
-		StartDate:       time.Now().AddDate(0, 0, -dataDays),
-		EndDate:         time.Now(),
+		StartDate:       endTime.AddDate(0, 0, -dataDays),
+		EndDate:         endTime,
 		DataDays:        dataDays,
 		Source:          source,
 		Cluster:         cluster,

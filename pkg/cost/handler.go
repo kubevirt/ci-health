@@ -1,11 +1,9 @@
 package cost
 
 import (
-	"encoding/json"
 	"fmt"
-	"os"
-	"path/filepath"
 	"strings"
+	"time"
 
 	log "github.com/sirupsen/logrus"
 )
@@ -19,7 +17,8 @@ type HandlerOptions struct {
 	DataDays     int
 	Source       string
 	Path         string
-	MonthlyCost  float64
+	MonthlyCost        float64
+	InsecureSkipVerify bool
 }
 
 // Handler orchestrates querying Prometheus and building the usage report.
@@ -30,7 +29,7 @@ type Handler struct {
 
 // NewHandler creates a cost report handler.
 func NewHandler(opts *HandlerOptions) *Handler {
-	client := NewPrometheusClient(opts.ThanosURL, opts.BearerToken)
+	client := NewPrometheusClient(opts.ThanosURL, opts.BearerToken, opts.InsecureSkipVerify)
 	return &Handler{
 		client:  client,
 		options: opts,
@@ -58,37 +57,18 @@ func (h *Handler) Run() (*UsageReport, error) {
 		log.Warn("no job metrics found")
 	}
 
-	report := BuildReport(rawJobs, *cluster, h.options.DataDays, h.options.Source, MapJobToSIG)
+	report := BuildReport(rawJobs, *cluster, h.options.DataDays, h.options.Source, time.Now(), MapJobToSIG)
 
 	if h.options.MonthlyCost > 0 {
 		ApplyCostRates(report, h.options.MonthlyCost)
 		log.Infof("applied monthly cost of $%.2f", h.options.MonthlyCost)
 	}
 
-	if err := h.writeOutput(report); err != nil {
+	if err := GenerateReport(report, h.options.Path, h.options.Source); err != nil {
 		return nil, fmt.Errorf("writing output: %w", err)
 	}
 
 	return report, nil
-}
-
-func (h *Handler) writeOutput(report *UsageReport) error {
-	outDir := filepath.Join(h.options.Path, strings.ReplaceAll(h.options.Source, "/", string(filepath.Separator)))
-	if err := os.MkdirAll(outDir, 0755); err != nil {
-		return fmt.Errorf("creating output directory: %w", err)
-	}
-
-	resultsPath := filepath.Join(outDir, "cost-results.json")
-	data, err := json.MarshalIndent(report, "", "  ")
-	if err != nil {
-		return fmt.Errorf("marshaling results: %w", err)
-	}
-	if err := os.WriteFile(resultsPath, data, 0644); err != nil {
-		return fmt.Errorf("writing results: %w", err)
-	}
-	log.Infof("wrote results to %s", resultsPath)
-
-	return nil
 }
 
 // MapJobToSIG maps a Prow job name to a SIG, matching the logic in pkg/sigretests.

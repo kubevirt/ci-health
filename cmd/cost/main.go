@@ -69,6 +69,7 @@ func main() {
 	flags.StringVar(&opts.Source, "source", opts.Source, "GitHub org/repo to report on")
 	flags.StringVar(&opts.Path, "path", opts.Path, "Output directory for results")
 	flags.Float64Var(&opts.MonthlyCost, "monthly-cost", 0, "Optional total monthly infrastructure cost in USD for dollar conversion")
+	flags.BoolVar(&opts.InsecureSkipVerify, "insecure-skip-tls-verify", false, "Skip TLS certificate verification for Thanos/Prometheus connections")
 	flags.StringVar(&logLevel, "log-level", defaultLogLevel, "Log level (debug or info)")
 
 	if err := cmd.Execute(); err != nil {

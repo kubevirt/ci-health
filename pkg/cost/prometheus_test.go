@@ -1,16 +1,18 @@
-package cost
+package cost_test
 
 import (
 	. "github.com/onsi/ginkgo"
 	"github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
+
+	"github.com/kubevirt/ci-health/pkg/cost"
 )
 
-var _ = Describe("resultValue", func() {
+var _ = Describe("ResultValue", func() {
 	table.DescribeTable("should parse prometheus result values",
 		func(value interface{}, expected float64, shouldErr bool) {
-			r := prometheusResult{Value: [2]interface{}{1234567890.0, value}}
-			val, err := resultValue(r)
+			r := cost.PrometheusResult{Value: [2]interface{}{1234567890.0, value}}
+			val, err := cost.ResultValue(r)
 			if shouldErr {
 				Expect(err).To(HaveOccurred())
 			} else {

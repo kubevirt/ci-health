@@ -28,10 +28,10 @@ type prometheusResponse struct {
 
 type prometheusData struct {
 	ResultType string             `json:"resultType"`
-	Result     []prometheusResult `json:"result"`
+	Result     []PrometheusResult `json:"result"`
 }
 
-type prometheusResult struct {
+type PrometheusResult struct {
 	Metric map[string]string `json:"metric"`
 	Value  [2]interface{}    `json:"value"`
 }
@@ -39,14 +39,9 @@ type prometheusResult struct {
 // NewPrometheusClient creates a client for querying Prometheus/Thanos.
 // If bearerToken is non-empty, it is sent as an Authorization header.
 // TLS verification is skipped for in-cluster OpenShift Thanos endpoints.
-func NewPrometheusClient(baseURL, bearerToken string) *PrometheusClient {
+func NewPrometheusClient(baseURL, bearerToken string, insecureSkipVerify bool) *PrometheusClient {
 	transport := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-	}
-	if bearerToken != "" {
-		transport = &http.Transport{
-			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-		}
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: insecureSkipVerify},
 	}
 
 	client := &http.Client{
@@ -76,7 +71,7 @@ func (a *authRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) 
 }
 
 // Query executes an instant PromQL query and returns the results.
-func (c *PrometheusClient) Query(query string) ([]prometheusResult, error) {
+func (c *PrometheusClient) Query(query string) ([]PrometheusResult, error) {
 	u, err := url.Parse(c.baseURL + "/api/v1/query")
 	if err != nil {
 		return nil, fmt.Errorf("parsing URL: %w", err)
@@ -87,7 +82,7 @@ func (c *PrometheusClient) Query(query string) ([]prometheusResult, error) {
 
 	queryLog := log.WithField("query", query)
 
-	var results []prometheusResult
+	var results []PrometheusResult
 	err = retry.Do(
 		func() error {
 			resp, err := c.httpClient.Get(u.String())
@@ -133,8 +128,8 @@ func (c *PrometheusClient) Query(query string) ([]prometheusResult, error) {
 	return results, nil
 }
 
-// resultValue extracts the float64 value from a Prometheus instant query result.
-func resultValue(r prometheusResult) (float64, error) {
+// ResultValue extracts the float64 value from a Prometheus instant query result.
+func ResultValue(r PrometheusResult) (float64, error) {
 	valStr, ok := r.Value[1].(string)
 	if !ok {
 		return 0, fmt.Errorf("unexpected value type: %T", r.Value[1])
@@ -143,6 +138,7 @@ func resultValue(r prometheusResult) (float64, error) {
 }
 
 // GetClusterCapacity queries total allocatable CPU and memory from worker nodes.
+// nodeSelector is a PromQL regex pattern (e.g. "kubevirt-worker-.*").
 func (c *PrometheusClient) GetClusterCapacity(nodeSelector string) (*ClusterCapacity, error) {
 	cpuQuery := fmt.Sprintf(`sum(kube_node_status_allocatable{resource="cpu", node=~"%s"})`, nodeSelector)
 	memQuery := fmt.Sprintf(`sum(kube_node_status_allocatable{resource="memory", node=~"%s"})`, nodeSelector)
@@ -165,15 +161,15 @@ func (c *PrometheusClient) GetClusterCapacity(nodeSelector string) (*ClusterCapa
 		return nil, fmt.Errorf("no capacity data returned for nodes matching %q", nodeSelector)
 	}
 
-	cpuCores, err := resultValue(cpuResults[0])
+	cpuCores, err := ResultValue(cpuResults[0])
 	if err != nil {
 		return nil, fmt.Errorf("parsing CPU capacity: %w", err)
 	}
-	memBytes, err := resultValue(memResults[0])
+	memBytes, err := ResultValue(memResults[0])
 	if err != nil {
 		return nil, fmt.Errorf("parsing memory capacity: %w", err)
 	}
-	nodeCount, err := resultValue(countResults[0])
+	nodeCount, err := ResultValue(countResults[0])
 	if err != nil {
 		return nil, fmt.Errorf("parsing node count: %w", err)
 	}
@@ -193,9 +189,8 @@ type RawJobMetrics struct {
 	Repo       string
 	Org        string
 	BuildID    string
-	CPUSec     float64
-	MemBytes   float64
-	DurationSec float64
+	CPUSec   float64
+	MemBytes float64
 }
 
 // GetJobMetrics queries per-pod CPU and memory usage for completed Prow jobs
@@ -230,7 +225,7 @@ func (c *PrometheusClient) GetJobMetrics(namespace, window string) ([]RawJobMetr
 	cpuByPod := make(map[string]float64)
 	for _, r := range cpuResults {
 		pod := r.Metric["pod"]
-		val, err := resultValue(r)
+		val, err := ResultValue(r)
 		if err != nil {
 			log.Warnf("skipping CPU result for pod %s: %v", pod, err)
 			continue
@@ -241,7 +236,7 @@ func (c *PrometheusClient) GetJobMetrics(namespace, window string) ([]RawJobMetr
 	memByPod := make(map[string]float64)
 	for _, r := range memResults {
 		pod := r.Metric["pod"]
-		val, err := resultValue(r)
+		val, err := ResultValue(r)
 		if err != nil {
 			log.Warnf("skipping memory result for pod %s: %v", pod, err)
 			continue
