@@ -48,7 +48,7 @@ type SigRetests struct {
 
 var prowjobs []job
 
-const defaultStorageBaseURL = "https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow"
+const defaultStorageBaseURL = "https://storage.googleapis.com/kubevirt-prow"
 
 func prHistoryURL(org string, repo string, prNumber string) string {
 	return fmt.Sprintf("https://prow.ci.kubevirt.io/pr-history/?org=%s&repo=%s&pr=%s", org, repo, prNumber)
@@ -89,7 +89,7 @@ func filterJobs(node *html.Node) (jobs []job) {
 						e2eJob.jobName = buildLogURL[len(buildLogURL)-2]
 						e2eJob.buildNumber = buildLogURL[len(buildLogURL)-1]
 						prNumber := buildLogURL[len(buildLogURL)-3]
-						e2eJob.artifactsURL = fmt.Sprintf("https://gcsweb.ci.kubevirt.io/gcs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/%s/%s/%s/artifacts",
+						e2eJob.artifactsURL = fmt.Sprintf("https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/%s/%s/%s/artifacts",
 							prNumber, e2eJob.jobName, e2eJob.buildNumber)
 						prowjobs = append(prowjobs, e2eJob)
 						continue
@@ -285,7 +285,8 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 			case resp.StatusCode == http.StatusNotFound:
 				httpRetryLog.Debugf("not found")
 				return nil
-			case resp.StatusCode == http.StatusBadGateway,
+			case resp.StatusCode == http.StatusInternalServerError,
+				resp.StatusCode == http.StatusBadGateway,
 				resp.StatusCode == http.StatusServiceUnavailable,
 				resp.StatusCode == http.StatusGatewayTimeout:
 				httpRetryLog.Warnf("transient HTTP %d, will retry", resp.StatusCode)

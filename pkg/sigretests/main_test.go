@@ -120,10 +120,23 @@ var _ = Describe("main", func() {
 				Expect(resp.StatusCode).To(Equal(http.StatusOK))
 				Expect(attempt).To(Equal(failCount + 1))
 			},
+			Entry("500 Internal Server Error", http.StatusInternalServerError, 1),
 			Entry("502 Bad Gateway", http.StatusBadGateway, 2),
 			Entry("503 Service Unavailable", http.StatusServiceUnavailable, 1),
 			Entry("504 Gateway Timeout", http.StatusGatewayTimeout, 1),
 		)
+
+		It("does not retry on 501 Not Implemented", func() {
+			attempt := 0
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				attempt++
+				w.WriteHeader(http.StatusNotImplemented)
+			}))
+			_, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("status 501"))
+			Expect(attempt).To(Equal(1))
+		})
 
 		It("returns error after exhausting retries on persistent 502", func() {
 			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
