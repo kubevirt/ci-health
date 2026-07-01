@@ -14,6 +14,7 @@ import (
 	"golang.org/x/net/html"
 
 	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 )
 
@@ -101,6 +102,36 @@ var _ = Describe("main", func() {
 			_, err := DoHTTPWithRetry(server.URL, http.Get)
 			Expect(err).To(HaveOccurred())
 			Expect(err.Error()).To(ContainSubstring("status 403"))
+		})
+
+		DescribeTable("retries on transient 5xx and succeeds",
+			func(statusCode int, failCount int) {
+				attempt := 0
+				server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+					attempt++
+					if attempt <= failCount {
+						w.WriteHeader(statusCode)
+						return
+					}
+					w.WriteHeader(http.StatusOK)
+				}))
+				resp, err := DoHTTPWithRetry(server.URL, http.Get)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(resp.StatusCode).To(Equal(http.StatusOK))
+				Expect(attempt).To(Equal(failCount + 1))
+			},
+			Entry("502 Bad Gateway", http.StatusBadGateway, 2),
+			Entry("503 Service Unavailable", http.StatusServiceUnavailable, 1),
+			Entry("504 Gateway Timeout", http.StatusGatewayTimeout, 1),
+		)
+
+		It("returns error after exhausting retries on persistent 502", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusBadGateway)
+			}))
+			_, err := DoHTTPWithRetry(server.URL, http.Get)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("transient HTTP 502"))
 		})
 	})
 

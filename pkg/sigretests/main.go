@@ -65,7 +65,7 @@ func finishedJSONURL(baseURL string, org string, repo string, prNumber string, j
 func checkSIGCIFailure(job job) bool {
 	if job.failure {
 		junitURL := fmt.Sprintf("%s/junit.functest.xml", job.artifactsURL)
-		resp, err := http.Get(junitURL)
+		resp, err := HttpGetWithRetry(junitURL)
 		if err != nil {
 			return true
 		}
@@ -138,7 +138,7 @@ func getLatestCommit(node *html.Node) (latestCommit string) {
 
 func filterForLastCommit(storageBaseURL string, org string, repo string, prNumber string, latestCommit string, jobList []job, notBefore time.Time) (filteredJobList []job, err error) {
 	for _, job := range jobList {
-		finishedJSON, err := http.Get(finishedJSONURL(storageBaseURL, org, repo, prNumber, job.jobName, job.buildNumber))
+		finishedJSON, err := HttpGetWithRetry(finishedJSONURL(storageBaseURL, org, repo, prNumber, job.jobName, job.buildNumber))
 		if err != nil {
 			return nil, fmt.Errorf("failed to get %s finished.json : %s", job.jobName, err)
 		}
@@ -190,7 +190,7 @@ const (
 func filterOptionalJobs(org, repo, prNumber string, unfilteredJobs []job) ([]job, error) {
 	var filteredJobs []job
 	for _, j := range unfilteredJobs {
-		prowJobJSON, err := http.Get(fmt.Sprintf(prowJobJSONURL, org, repo, prNumber, j.jobName, j.buildNumber))
+		prowJobJSON, err := HttpGetWithRetry(fmt.Sprintf(prowJobJSONURL, org, repo, prNumber, j.jobName, j.buildNumber))
 		if err != nil {
 			return nil, err
 		}
@@ -285,14 +285,20 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 			case resp.StatusCode == http.StatusNotFound:
 				httpRetryLog.Debugf("not found")
 				return nil
-			case resp.StatusCode == http.StatusGatewayTimeout:
-				httpRetryLog.Infof("failed with %d, will retry", resp.StatusCode)
-				return fmt.Errorf("failed with %d: %v", resp.StatusCode, err)
+			case resp.StatusCode == http.StatusBadGateway,
+				resp.StatusCode == http.StatusServiceUnavailable,
+				resp.StatusCode == http.StatusGatewayTimeout:
+				httpRetryLog.Warnf("transient HTTP %d, will retry", resp.StatusCode)
+				return fmt.Errorf("transient HTTP %d", resp.StatusCode)
 			default:
 				httpRetryLog.Warnf("failed with status %d, aborting", resp.StatusCode)
 				return retry.Unrecoverable(fmt.Errorf("failed to http get %s (status %d): %v", url, resp.StatusCode, err))
 			}
 		},
+		retry.Attempts(5),
+		retry.Delay(2*time.Second),
+		retry.MaxDelay(30*time.Second),
+		retry.LastErrorOnly(true),
 	)
 	return
 }
