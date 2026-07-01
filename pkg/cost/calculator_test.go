@@ -2,6 +2,7 @@ package cost_test
 
 import (
 	"testing"
+	"time"
 
 	. "github.com/onsi/ginkgo"
 	"github.com/onsi/ginkgo/extensions/table"
@@ -252,7 +253,8 @@ var _ = Describe("BuildReport", func() {
 			{PR: "2", Job: "pull-kubevirt-e2e-sig-network", Repo: "kubevirt", Org: "kubevirt", BuildID: "102", CPUSec: 7200, MemBytes: 2 * 1024 * 1024 * 1024},
 		}
 
-		report := cost.BuildReport(jobs, cluster, 1, "kubevirt/kubevirt", cost.MapJobToSIG)
+		endTime := time.Date(2026, 6, 24, 12, 0, 0, 0, time.UTC)
+		report := cost.BuildReport(jobs, cluster, 1, "kubevirt/kubevirt", endTime, cost.MapJobToSIG)
 
 		Expect(report.PRCount).To(Equal(2))
 		Expect(report.RunCount).To(Equal(3))

@@ -1,0 +1,251 @@
+{{- /*
+
+    This file is part of the KubeVirt project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    Copyright The KubeVirt Authors.
+
+*/ -}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CI Resource Usage Report — {{ .Source }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fa;
+            margin: 2em;
+        }
+        h1, h2 {
+            color: #24292e;
+        }
+        .generated-at {
+            color: #586069;
+            font-size: 0.9em;
+        }
+        .summary-cards {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            margin: 1.5em 0;
+        }
+        .summary-card {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 1em 1.5em;
+            min-width: 160px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .summary-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #24292e;
+        }
+        .summary-card .label {
+            color: #586069;
+            font-size: 0.9em;
+            margin-top: 0.3em;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 1em 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+        th, td {
+            border: 1px solid #e1e4e8;
+            padding: 0.5em 1em;
+            text-align: left;
+        }
+        th {
+            background: #24292e;
+            color: #fff;
+            cursor: pointer;
+        }
+        th:hover {
+            background: #444d56;
+        }
+        tr:nth-child(even) {
+            background: #f6f8fa;
+        }
+        .pct-high {
+            color: #d73a49;
+            font-weight: bold;
+        }
+        .pct-medium {
+            color: #e36209;
+            font-weight: bold;
+        }
+        .pct-low {
+            color: #22863a;
+        }
+        details.section-details {
+            margin: 1.5em 0;
+        }
+        details.section-details > summary {
+            cursor: pointer;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #24292e;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 0.3em;
+        }
+        .cluster-info {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 1em 1.5em;
+            margin: 1em 0;
+            max-width: 600px;
+            color: #586069;
+            font-size: 0.95em;
+        }
+        .pr-link {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .pr-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function sortTable(table, col, type) {
+            var rows = Array.from(table.tBodies[0].rows);
+            var dir = table.getAttribute('data-sort-dir') === 'asc' ? 'desc' : 'asc';
+            table.setAttribute('data-sort-dir', dir);
+            rows.sort(function(a, b) {
+                var x = a.cells[col].getAttribute('data-value') || a.cells[col].textContent;
+                var y = b.cells[col].getAttribute('data-value') || b.cells[col].textContent;
+                if (type === 'num') { x = parseFloat(x) || 0; y = parseFloat(y) || 0; }
+                if (dir === 'asc') return x > y ? 1 : -1;
+                return x < y ? 1 : -1;
+            });
+            rows.forEach(function(row) { table.tBodies[0].appendChild(row); });
+        }
+    </script>
+</head>
+<body>
+    <h1>CI Resource Usage Report <span class="generated-at">— {{ .Source }} — Generated {{ .GeneratedAt.Format "2006-01-02 15:04 UTC" }}</span></h1>
+
+    <div class="cluster-info">
+        Cluster: <strong>{{ .Cluster.NodeCount }} worker nodes</strong>,
+        <strong>{{ .Cluster.CPUCores | printf "%.0f" }} CPU cores</strong>,
+        <strong>{{ gib .Cluster.MemoryBytes | printf "%.0f" }} GiB memory</strong>
+        — reporting window: last <strong>{{ .DataDays }} days</strong>
+        ({{ .StartDate.Format "2006-01-02" }} to {{ .EndDate.Format "2006-01-02" }})
+    </div>
+
+    <div class="summary-cards">
+        <div class="summary-card">
+            <div class="value">{{ .PRCount }}</div>
+            <div class="label">PRs with CI runs</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">{{ .RunCount }}</div>
+            <div class="label">Total job runs</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">{{ .TotalCPUPercent | printf "%.1f" }}%</div>
+            <div class="label">Total CPU usage</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">{{ .TotalMemPercent | printf "%.1f" }}%</div>
+            <div class="label">Total memory usage</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">{{ .AvgCPUPerPR | printf "%.2f" }}%</div>
+            <div class="label">Avg CPU per PR</div>
+        </div>
+    </div>
+
+    <details class="section-details" open>
+        <summary>Top Resource Consumers by PR</summary>
+        <table id="top-prs" onclick="sortTable(this, event.target.cellIndex, event.target.getAttribute('data-type'))">
+            <thead>
+                <tr>
+                    <th data-type="text">PR</th>
+                    <th data-type="text">Repo</th>
+                    <th data-type="num">CPU %</th>
+                    <th data-type="num">Memory %</th>
+                    <th data-type="num">Runs</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .TopPRs }}
+                <tr>
+                    <td><a class="pr-link" href="https://github.com/{{ $.Source }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
+                    <td>{{ .Repo }}</td>
+                    <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
+                    <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>
+                    <td data-value="{{ .RunCount }}">{{ .RunCount }}</td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+    </details>
+
+    <details class="section-details">
+        <summary>Usage by SIG</summary>
+        <table id="sig-usage">
+            <thead>
+                <tr>
+                    <th>SIG</th>
+                    <th>CPU %</th>
+                    <th>Memory %</th>
+                    <th>Runs</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .SIGUsages }}
+                <tr>
+                    <td><strong>{{ .Name }}</strong></td>
+                    <td>{{ pctClass .CPUPercent }}</td>
+                    <td>{{ pctClass .MemPercent }}</td>
+                    <td>{{ .RunCount }}</td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+    </details>
+
+    <details class="section-details">
+        <summary>All PRs</summary>
+        <table id="all-prs" onclick="sortTable(this, event.target.cellIndex, event.target.getAttribute('data-type'))">
+            <thead>
+                <tr>
+                    <th data-type="text">PR</th>
+                    <th data-type="text">Repo</th>
+                    <th data-type="num">CPU %</th>
+                    <th data-type="num">Memory %</th>
+                    <th data-type="num">Runs</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{- range .PRUsages }}
+                <tr>
+                    <td><a class="pr-link" href="https://github.com/{{ $.Source }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
+                    <td>{{ .Repo }}</td>
+                    <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
+                    <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>
+                    <td data-value="{{ .RunCount }}">{{ .RunCount }}</td>
+                </tr>
+                {{- end }}
+            </tbody>
+        </table>
+    </details>
+</body>
+</html>
