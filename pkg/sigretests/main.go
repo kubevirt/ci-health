@@ -31,6 +31,8 @@ type job struct {
 
 type SigRetests struct {
 	SigCIFailure         int
+	SigCIExternalFailure int
+	SigCIFailureURLs     []string
 	SigComputeFailure    int
 	SigNetworkFailure    int
 	SigStorageFailure    int
@@ -448,6 +450,7 @@ func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests Sig
 		switch {
 		case checkSIGCIFailure(job):
 			prSigRetests.SigCIFailure += 1
+			prSigRetests.SigCIFailureURLs = append(prSigRetests.SigCIFailureURLs, job.buildURL)
 		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
 			if job.failure {
 				prSigRetests.SigComputeFailure += 1

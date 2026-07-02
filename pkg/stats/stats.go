@@ -9,7 +9,10 @@ import (
 	"strings"
 	"time"
 
+	log "github.com/sirupsen/logrus"
+
 	"github.com/kubevirt/ci-health/pkg/chatops"
+	cifailures "github.com/kubevirt/ci-health/pkg/ci-failures"
 	"github.com/kubevirt/ci-health/pkg/constants"
 	"github.com/kubevirt/ci-health/pkg/mergequeue"
 	"github.com/kubevirt/ci-health/pkg/quarantine"
@@ -290,6 +293,7 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(jobsPerSIG.SigStorageFailure)
 		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(jobsPerSIG.SigOperatorFailure)
 		dataItem.SIGCIRetest = dataItem.SIGCIRetest + float64(jobsPerSIG.SigCIFailure)
+		dataItem.SIGCIExternalRetest = dataItem.SIGCIExternalRetest + float64(classifyExternalFailures(jobsPerSIG.SigCIFailureURLs))
 		dataItem.SIGMonitoringRetest = dataItem.SIGMonitoringRetest + float64(jobsPerSIG.SigMonitoringFailure)
 		dataItem.SIGComputeTotal = dataItem.SIGComputeTotal + float64(jobsPerSIG.SigComputeFailure) + float64(jobsPerSIG.SigComputeSuccess)
 		dataItem.SIGNetworkTotal = dataItem.SIGNetworkTotal + float64(jobsPerSIG.SigNetworkFailure) + float64(jobsPerSIG.SigNetworkSuccess)
@@ -403,6 +407,24 @@ func countFailedJobs(jobNames []string) map[string]int {
 		countFailedJobs[name]++
 	}
 	return countFailedJobs
+}
+
+// classifyExternalFailures calls AnalyzeBuild for each sig-ci failure URL and
+// returns the count of those classified as external. Failures that cannot be
+// analyzed are conservatively treated as non-external so they remain counted.
+func classifyExternalFailures(urls []string) int {
+	external := 0
+	for _, url := range urls {
+		result, err := cifailures.AnalyzeBuild(url)
+		if err != nil {
+			log.WithError(err).Warnf("failed to analyze build %s; treating as non-external", url)
+			continue
+		}
+		if len(result.BuildErrors) > 0 && result.BuildErrors[0].Category == string(cifailures.CategoryExternal) {
+			external++
+		}
+	}
+	return external
 }
 
 func round(value float64) float64 {

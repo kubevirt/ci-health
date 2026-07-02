@@ -254,6 +254,7 @@ type RunningAverageDataItem struct {
 	SIGNetworkRetest        float64
 	SIGOperatorRetest       float64
 	SIGCIRetest             float64
+	SIGCIExternalRetest     float64
 	SIGMonitoringRetest     float64
 	SIGComputeTotal         float64
 	SIGStorageTotal         float64
