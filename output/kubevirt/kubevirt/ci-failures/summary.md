@@ -205,4 +205,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1824
 <hr/>
 </details>
 
-Last updated: 2026-07-02 00:40:06
+Last updated: 2026-07-02 04:35:40
