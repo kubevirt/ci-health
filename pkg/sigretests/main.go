@@ -244,7 +244,8 @@ func getJobsForLatestCommit(storageBaseURL string, org string, repo string, prNu
 	}
 	latestCommit := getLatestCommit(prHistoryPage)
 	if latestCommit == "" {
-		return nil, fmt.Errorf("failed to get latest commit from %s", prHistory)
+		log.Warnf("no latest commit found at %s, skipping PR", prHistory)
+		return nil, nil
 	}
 	jobsAllCommits := filterJobs(prHistoryPage)
 	prowjobs = nil
@@ -396,7 +397,8 @@ func ListPRFailures(prNumber, prOrg, prRepo string) ([]string, error) {
 	}
 	latestCommit := getLatestCommit(prHistoryPage)
 	if latestCommit == "" {
-		return nil, fmt.Errorf("failed to get latest commit from %s", prHistory)
+		log.Warnf("no latest commit found at %s, skipping PR", prHistory)
+		return nil, nil
 	}
 
 	allJobs := parseAllJobs(prHistoryPage, prOrg, prRepo)
