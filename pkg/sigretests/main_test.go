@@ -24,7 +24,7 @@ func TestSIGRetests(t *testing.T) {
 }
 
 var _ = Describe("main", func() {
-	Context("parse html", func() {
+	Context("PR history page with commit link", func() {
 
 		var rootHtmlNode *html.Node
 		var prNumber string
@@ -65,6 +65,22 @@ var _ = Describe("main", func() {
 			Expect(err).To(Succeed())
 			_, err = filterOptionalJobs(org, repo, prNumber, jobsLatestCommit)
 			Expect(err).To(Succeed())
+		})
+	})
+
+	Context("PR history page without commit link", func() {
+
+		var rootHtmlNode *html.Node
+
+		BeforeEach(func() {
+			content, err := os.ReadFile("testdata/pr-history-no-commits.html")
+			Expect(err).To(Succeed())
+			rootHtmlNode, err = html.Parse(bytes.NewReader(content))
+			Expect(err).To(Succeed())
+		})
+
+		It("getLatestCommit returns empty string", func() {
+			Expect(getLatestCommit(rootHtmlNode)).To(BeEmpty())
 		})
 	})
 
