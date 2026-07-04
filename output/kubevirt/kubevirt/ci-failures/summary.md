@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-02 (1x / 5.00%)
+### 2026-07-02 (1x / 4.76%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-07-01 (19x / 95.00%)
+### 2026-07-01 (19x / 90.48%)
 
 
 #### external (19x / 100.00%)
@@ -48,17 +48,7 @@
 
 <hr/>
 
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-
-</details>
-
-<hr/>
-
-**18x**: _2026-07-01 08:51:37 &#43;0000 UTC_: <code>08:53:13: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18298/pull-kubevirt-e2e-k8s-1.34-sig-operator/2072238855586582528#1:build-log.txt%3A567)
+**18x**: _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
 <details>
 <summary>all...</summary>
 
@@ -101,6 +91,37 @@
 </details>
 
 <hr/>
+
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-06-29 (1x / 4.76%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
 </details>
 
 <a id="per-error-category"></a>
@@ -108,34 +129,14 @@
 ## per error category [⬆](#top)
 
 
-### external (19x / 95.00%)
+### external (20x / 95.24%)
 
 <details>
-<summary> download failure in context (19x / 95.00%) </summary>
+<summary> download failure in context (19x / 90.48%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details><summary>context</summary>
-<pre>13:39:54: ERROR: Analysis of target &#39;//:push-alpine-ext-kernel-boot-demo&#39; failed; build aborted:
-13:39:54: INFO: Elapsed time: 1.124s
-13:39:54: INFO: 0 processes.
-13:39:54: ERROR: Build failed. Not running target
-13:39:58: &#43; rm -f /tmp/kubevirt.deploy.azEg
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**18x**: _2026-07-01 08:51:37 &#43;0000 UTC_: <code>08:53:13: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18298/pull-kubevirt-e2e-k8s-1.34-sig-operator/2072238855586582528#1:build-log.txt%3A567)
+**18x**: _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
 <details>
 <summary>all...</summary>
 
@@ -358,12 +359,57 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
+
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details><summary>context</summary>
+<pre>13:39:54: ERROR: Analysis of target &#39;//:push-alpine-ext-kernel-boot-demo&#39; failed; build aborted:
+13:39:54: INFO: Elapsed time: 1.124s
+13:39:54: INFO: 0 processes.
+13:39:54: ERROR: Build failed. Not running target
+13:39:58: &#43; rm -f /tmp/kubevirt.deploy.azEg
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; EXIT_VALUE=2</pre>
 </details>
 
-### needs-investigation (1x / 5.00%)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 4.76%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+<details><summary>context</summary>
+<pre>15:54:20: I0629 11:54:20.760234    1615 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+15:54:21: I0629 11:54:21.109447    1615 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+15:54:21: I0629 11:54:21.610150    1615 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;
+15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+15:54:22: I0629 11:54:22.111196    1615 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+15:54:22: [control-plane-check] kube-apiserver is healthy after 6.502838664s
+15:54:22: I0629 11:54:22.617481    1615 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (1x / 4.76%)
 
 <details>
-<summary> no matching pattern (1x / 5.00%) </summary>
+<summary> no matching pattern (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -393,27 +439,17 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (20x / 100.00%)
+### main (21x / 100.00%)
 
 
-#### external (19x / 95.00%)
+#### external (20x / 95.24%)
 
 <details>
-<summary> download failure in context (19x / 95.00%) </summary>
+<summary> download failure in context (19x / 90.48%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-
-</details>
-
-<hr/>
-
-**18x**: _2026-07-01 08:51:37 &#43;0000 UTC_: <code>08:53:13: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18298/pull-kubevirt-e2e-k8s-1.34-sig-operator/2072238855586582528#1:build-log.txt%3A567)
+**18x**: _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
 <details>
 <summary>all...</summary>
 
@@ -456,12 +492,37 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 </details>
 
 <hr/>
+
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+
 </details>
 
-#### needs-investigation (1x / 5.00%)
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 4.76%) </summary>
+
+<hr/>
+
+**1x**: _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 4.76%)
 
 <details>
-<summary> no matching pattern (1x / 5.00%) </summary>
+<summary> no matching pattern (1x / 4.76%) </summary>
 
 <hr/>
 
@@ -481,7 +542,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per SIG [⬆](#top)
 
 
-### sig-compute (8x / 40.00%)
+### sig-compute (8x / 38.10%)
 
 
 #### external (7x / 87.50%)
@@ -491,7 +552,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**7x**: _2026-07-01 08:51:37 &#43;0000 UTC_: <code>08:53:13: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18298/pull-kubevirt-e2e-k8s-1.34-sig-operator/2072238855586582528#1:build-log.txt%3A567)
+**7x**: _2026-07-01 08:42:43 &#43;0000 UTC_: <code>08:44:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-compute/2072235893535543296#1:build-log.txt%3A577)
 <details>
 <summary>all...</summary>
 
@@ -532,17 +593,17 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-network (9x / 45.00%)
+### sig-network (10x / 47.62%)
 
 
-#### external (9x / 100.00%)
+#### external (10x / 100.00%)
 
 <details>
-<summary> download failure in context (9x / 100.00%) </summary>
+<summary> download failure in context (9x / 90.00%) </summary>
 
 <hr/>
 
-**9x**: _2026-07-01 15:43:17 &#43;0000 UTC_: <code>15:45:00: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18038/pull-kubevirt-e2e-k8s-1.34-sig-network/2072291187099701248#1:build-log.txt%3A588)
+**9x**: _2026-07-01 23:00:19 &#43;0000 UTC_: <code>23:02:17: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18038/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2072414264844357632#1:build-log.txt%3A557)
 <details>
 <summary>all...</summary>
 
@@ -568,8 +629,46 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 10.00%) </summary>
 
-### sig-performance (1x / 5.00%)
+<hr/>
+
+**1x**: _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+<details>
+<summary>all...</summary>
+
+* _2026-06-29 15:49:57 &#43;0000 UTC_: <code>15:54:22: I0629 11:54:22.111079    1615 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18269/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2071621787858243584#1:build-log.txt%3A817)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (2x / 9.52%)
+
+
+#### external (2x / 100.00%)
+
+<details>
+<summary> download failure in context (2x / 100.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
+
+* _2026-07-01 08:39:41 &#43;0000 UTC_: <code>08:41:54: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072235893455851520#1:build-log.txt%3A545)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-performance (1x / 4.76%)
 
 
 #### external (1x / 100.00%)
@@ -590,27 +689,4 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-storage (2x / 10.00%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> download failure in context (2x / 100.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-01 08:39:41 &#43;0000 UTC_: <code>08:41:54: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072235893455851520#1:build-log.txt%3A545)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
-
-* _2026-07-01 08:39:41 &#43;0000 UTC_: <code>08:41:54: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072235893455851520#1:build-log.txt%3A545)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-07-04 09:47:54
+Last updated: 2026-07-04 12:29:59
