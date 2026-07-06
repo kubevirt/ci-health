@@ -180,8 +180,18 @@ func (b *Handler) writeBadges(results *types.Results) error {
 	}
 
 	err = b.writeSIGRetestBadge(
-		constants.SIGCIBadgeName,
-		filepath.Join(basePath, constants.SIGCIRetestBadgeFileName),
+		constants.SIGCIInternalBadgeName,
+		filepath.Join(basePath, constants.SIGCIInternalRetestBadgeFileName),
+		results.Data[constants.SIGRetests],
+		b.options.SIGRetestsLevels,
+	)
+	if err != nil {
+		return err
+	}
+
+	err = b.writeSIGRetestBadge(
+		constants.SIGCIExternalBadgeName,
+		filepath.Join(basePath, constants.SIGCIExternalRetestBadgeFileName),
 		results.Data[constants.SIGRetests],
 		b.options.SIGRetestsLevels,
 	)
@@ -301,8 +311,11 @@ func (b *Handler) writeSIGRetestBadge(name, filePath string, data types.RunningA
 	case constants.SIGOperatorBadgeName:
 		value = data.SIGOperatorRetest
 		total = data.SIGOperatorTotal
-	case constants.SIGCIBadgeName:
-		value = data.SIGCIRetest
+	case constants.SIGCIInternalBadgeName:
+		value = data.SIGCIRetest - data.SIGCIExternalRetest
+		total = data.SIGCITotal
+	case constants.SIGCIExternalBadgeName:
+		value = data.SIGCIExternalRetest
 		total = data.SIGCITotal
 	case constants.SIGMonitoringBadgeName:
 		value = data.SIGMonitoringRetest
