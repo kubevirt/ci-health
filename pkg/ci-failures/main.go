@@ -104,6 +104,8 @@ type buildLog struct {
 	LogContent  string    `yaml:"log_content"`
 	Started     time.Time `yaml:"started"`
 	Finished    time.Time `yaml:"finished"`
+	Result      string    `yaml:"result"`
+	Passed      bool      `yaml:"passed"`
 }
 
 // DownloadBuildLogs downloads the log files for urls of failed jobs located in output/tmp/ci-failure-jobs.txt
@@ -205,6 +207,8 @@ func ExtractErrors(ciFailureJobURLs []string, outputDir string) ([]string, error
 				BuildID:  buildId,
 				Started:  log.Started,
 				Finished: log.Finished,
+				Result:   log.Result,
+				Passed:   log.Passed,
 			}
 			jobErrorsForJob.BuildErrors = append(jobErrorsForJob.BuildErrors, nextBuildError)
 
@@ -337,7 +341,7 @@ func storeBuildLogIfNotExists(url string) (string, error) {
 			return "", fmt.Errorf("failed to read build log content body: %v", err)
 		}
 
-		var finished prow.Started
+		var finished prow.Finished
 		err = json.Unmarshal(gcsFinishedFileContent, &finished)
 		if err != nil {
 			return "", fmt.Errorf("failed to decode finished: %v", err)
@@ -356,6 +360,8 @@ func storeBuildLogIfNotExists(url string) (string, error) {
 			LogContent:  string(gcsBuildLogFileContent),
 			Started:     started.Time(),
 			Finished:    finished.Time(),
+			Result:      finished.Result,
+			Passed:      finished.Passed,
 		}
 		err = encoder.Encode(&l)
 		if err != nil {
