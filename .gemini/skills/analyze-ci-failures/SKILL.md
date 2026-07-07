@@ -65,6 +65,11 @@ Each file contains structured data — most metadata can be read directly withou
     - `job_url`: direct link to the Prow job UI
     - `build_id`: the Prow build number (also usable to find the full build log)
     - `started` / `finished`: timestamps
+    - `result`: the Prow build result from `finished.json` — one of `SUCCESS`, `FAILURE`, `ABORTED`, `ERROR`
+    - `passed`: boolean from `finished.json`
+    - `category`: error category — one of `external`, `internal`, `pr-build`, `needs-investigation`, `prow-aborted`, `prow-error`
+    - `category_reason`: explanation of the categorization
+    - Builds with `category: prow-aborted` were killed by Prow (e.g., superseded by a newer commit) — exclude these from failure counts and cross-PR analysis. Builds with `category: prow-error` failed to schedule — also exclude.
     - `build_log_error_snippets`: list of extracted error matches, each with:
         - `error_text`: the matched error line
         - `context`: surrounding lines (typically 3 before and after) — this is the primary source for root cause analysis
