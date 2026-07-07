@@ -42,7 +42,9 @@ After running both commands:
      - `job_name`: the Prow job name
      - `job_url`: link to the Prow job UI
      - `build_id`: the build number
-     - `category`: error category (external, internal, pr-build, needs-investigation)
+     - `result`: the Prow build result from `finished.json` — one of `SUCCESS`, `FAILURE`, `ABORTED`, `ERROR`
+     - `passed`: boolean from `finished.json`
+     - `category`: error category (external, internal, pr-build, needs-investigation, prow-aborted, prow-error)
      - `category_reason`: explanation of the categorization
      - `error_snippets`: list of `{error_text, link}` — one-line error text and link to the log line
    - `k8s_analyses`: list of k8s analysis results per build, each with:
@@ -52,6 +54,13 @@ After running both commands:
 2. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from error snippets and k8s findings, then use `grep` on the cached virt-controller and virt-handler logs to find the actual rejection reason. Example: `grep -i "testvmi-xxxxx" <cached_path>`
 3. Correlate findings across all sources — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver failures; virt-controller log errors (schema validation, sync failures) reveal why VMIs are stuck in non-Running phases
 4. Group failures with the same root cause together
+
+### Handling aborted and error builds
+
+Jobs with `category: prow-aborted` were killed by Prow before completing (e.g., superseded by a newer commit). Jobs with `category: prow-error` failed to schedule. In both cases:
+- Report them separately as "aborted" or "scheduling error" — not as test failures
+- **Exclude them from cross-job failure correlation** below — they inflate failure counts without providing test-level signal
+- Suggest retriggering if the latest commit has no run for that job
 
 ## Cross-job failure correlation
 

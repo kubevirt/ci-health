@@ -54,6 +54,8 @@ func AnalyzeBuild(prowJobURL string) (*JobBuildErrors, error) {
 		BuildID:  buildId,
 		Started:  log.Started,
 		Finished: log.Finished,
+		Result:   log.Result,
+		Passed:   log.Passed,
 	}
 
 	lines := strings.Split(log.LogContent, "\n")

@@ -58,7 +58,11 @@ After data generation:
 1. Extract the session directory path from the tool's log output, then list all `*.yaml` files in that directory
 2. Read the build log analysis YAML (`{job-name}.yaml`). The structure is:
    - `job_name`: the Prow job name
-   - `build_errors`: list of build errors with `category`, `category_reason`, and `build_log_error_snippets`
+   - `build_errors`: list of build errors with `result`, `passed`, `category`, `category_reason`, and `build_log_error_snippets`
+   - `result`: the Prow build result from `finished.json` — one of `SUCCESS`, `FAILURE`, `ABORTED`, `ERROR`
+   - `passed`: boolean from `finished.json`
+   - If `category` is `prow-aborted`, the job was killed by Prow (e.g., superseded by a newer commit) — report this immediately and skip all further analysis (k8s, container logs, etc.)
+   - If `category` is `prow-error`, the job failed to schedule — report this and skip further analysis
 3. Read the k8s analysis YAML (`k8s-analysis-*.yaml`) if present. The structure is:
    - `snapshots`: list of cluster state capture points (process + failure count)
    - `findings`: list of detected issues, each with `detector`, `severity`, `kind`, `name`, `reason`, `message`, and `snapshot`

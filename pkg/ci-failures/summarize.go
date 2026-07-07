@@ -18,6 +18,8 @@ type SummaryJob struct {
 	JobName        string                `yaml:"job_name"`
 	JobURL         string                `yaml:"job_url"`
 	BuildID        int                   `yaml:"build_id"`
+	Result         string                `yaml:"result"`
+	Passed         bool                  `yaml:"passed"`
 	Category       string                `yaml:"category"`
 	CategoryReason string                `yaml:"category_reason"`
 	ErrorSnippets  []SummaryErrorSnippet `yaml:"error_snippets"`
@@ -110,6 +112,8 @@ func readJobFile(path string) (SummaryJob, error) {
 		be := jbe.BuildErrors[0]
 		job.JobURL = be.JobURL
 		job.BuildID = be.BuildID
+		job.Result = be.Result
+		job.Passed = be.Passed
 		job.Category = be.Category
 		job.CategoryReason = be.CategoryReason
 

@@ -46,6 +46,8 @@ type JobBuildError struct {
 	BuildID               int                     `yaml:"build_id"`
 	Started               time.Time               `yaml:"started"`
 	Finished              time.Time               `yaml:"finished"`
+	Result                string                  `yaml:"result"`
+	Passed                bool                    `yaml:"passed"`
 	Category              string                  `yaml:"category"`
 	CategoryReason        string                  `yaml:"category_reason"`
 	BuildLogErrorSnippets []*BuildLogErrorSnippet `yaml:"build_log_error_snippets"`

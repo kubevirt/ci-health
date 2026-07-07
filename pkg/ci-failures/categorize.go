@@ -21,6 +21,14 @@ const (
 	// CategoryNeedsInvestigation represents errors that don't match any known pattern.
 	// These require manual review to create a new pattern.
 	CategoryNeedsInvestigation ErrorCategory = "needs-investigation"
+
+	// CategoryProwAborted represents jobs that were aborted by Prow before completing.
+	// Typically caused by a newer commit push superseding the build.
+	CategoryProwAborted ErrorCategory = "prow-aborted"
+
+	// CategoryProwError represents jobs that could not be scheduled or started.
+	// These are Prow infrastructure errors, not test failures.
+	CategoryProwError ErrorCategory = "prow-error"
 )
 
 // CategorizationResult holds the category and the reason it was assigned.
@@ -148,6 +156,13 @@ func CategorizeJobBuildError(err *JobBuildError) ErrorCategory {
 }
 
 func categorizeJobBuildError(err *JobBuildError) CategorizationResult {
+	switch err.Result {
+	case "ABORTED":
+		return CategorizationResult{CategoryProwAborted, "job was aborted (finished.json result=ABORTED)"}
+	case "ERROR":
+		return CategorizationResult{CategoryProwError, "job scheduling error (finished.json result=ERROR)"}
+	}
+
 	if len(err.BuildLogErrorSnippets) == 0 {
 		return CategorizationResult{CategoryNeedsInvestigation, "no error snippets"}
 	}
