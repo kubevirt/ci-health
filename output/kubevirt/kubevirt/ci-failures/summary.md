@@ -92,21 +92,6 @@
 #### internal (2x / 66.67%)
 
 <details>
-<summary> kind cluster creation failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-<details>
-<summary>all...</summary>
-
-* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make bazel-build target failure (1x / 33.33%) </summary>
 
 <hr/>
@@ -116,6 +101,21 @@
 <summary>all...</summary>
 
 * _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
+<details>
+<summary>all...</summary>
+
+* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
 
 </details>
 
@@ -267,31 +267,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ### internal (2x / 25.00%)
 
 <details>
-<summary> kind cluster creation failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-<details>
-<summary>all...</summary>
-
-* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-<details><summary>context</summary>
-<pre>13:14:10:  ✓ Ensuring node image (kindest/node:v1.34.0) 🖼
-13:14:10:  • Preparing nodes 📦 📦   ...
-13:14:13:  ✗ Preparing nodes 📦 📦
-13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-13:14:13:
-13:14:13: Stack Trace:
-13:14:13: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> make bazel-build target failure (1x / 12.50%) </summary>
 
 <hr/>
@@ -309,6 +284,31 @@ make: *** [Makefile:28: bazel-build-functests] Error 10
 &#43; ret=2
 &#43; check_for_panics
 &#43; set &#43;x</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
+<details>
+<summary>all...</summary>
+
+* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
+<details><summary>context</summary>
+<pre>13:14:10:  ✓ Ensuring node image (kindest/node:v1.34.0) 🖼
+13:14:10:  • Preparing nodes 📦 📦   ...
+13:14:13:  ✗ Preparing nodes 📦 📦
+13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
+13:14:13:
+13:14:13: Stack Trace:
+13:14:13: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
 </details>
 
 
@@ -373,24 +373,6 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ### release-1.9 (2x / 25.00%)
 
 
-#### external (1x / 50.00%)
-
-<details>
-<summary> git clone failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (1x / 50.00%)
 
 <details>
@@ -409,26 +391,26 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.8 (2x / 25.00%)
-
-
 #### external (1x / 50.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
+<summary> git clone failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 <details>
 <summary>all...</summary>
 
-* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 
 </details>
 
 <hr/>
 </details>
+
+### release-1.8 (2x / 25.00%)
+
 
 #### internal (1x / 50.00%)
 
@@ -442,6 +424,24 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <summary>all...</summary>
 
 * _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
 
 </details>
 
@@ -624,6 +624,24 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ### sig-network (3x / 37.50%)
 
 
+#### internal (1x / 33.33%)
+
+<details>
+<summary> make bazel-build target failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+<details>
+<summary>all...</summary>
+
+* _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+
+</details>
+
+<hr/>
+</details>
+
 #### external (1x / 33.33%)
 
 <details>
@@ -660,22 +678,4 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
-
-<details>
-<summary> make bazel-build target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
-<details>
-<summary>all...</summary>
-
-* _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-07-08 18:37:46
+Last updated: 2026-07-08 21:34:32
