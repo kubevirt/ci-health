@@ -17,13 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-07 (1x / 3.57%)
+### 2026-07-07 (2x / 6.90%)
 
 
-#### external (1x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
+<summary> git clone failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -38,7 +53,7 @@
 <hr/>
 </details>
 
-### 2026-07-02 (3x / 10.71%)
+### 2026-07-02 (3x / 10.34%)
 
 
 #### internal (2x / 66.67%)
@@ -92,7 +107,7 @@
 <hr/>
 </details>
 
-### 2026-07-01 (24x / 85.71%)
+### 2026-07-01 (24x / 82.76%)
 
 
 #### external (23x / 95.83%)
@@ -102,7 +117,17 @@
 
 <hr/>
 
-**22x**: _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+
+</details>
+
+<hr/>
+
+**22x**: _2026-07-01 12:14:12 &#43;0000 UTC_: <code>12:15:55: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2072292084718505984#1:build-log.txt%3A620)
 <details>
 <summary>all...</summary>
 
@@ -153,16 +178,6 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-
-</details>
-
-<hr/>
 </details>
 
 #### internal (1x / 4.17%)
@@ -188,26 +203,26 @@
 ## per error category [⬆](#top)
 
 
-### internal (3x / 10.71%)
+### internal (3x / 10.34%)
 
 <details>
-<summary> make bazel-build target failure (1x / 3.57%) </summary>
+<summary> KubeVirt deployment timeout (1x / 3.45%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+**1x**: _2026-07-01 11:25:03 &#43;0000 UTC_: <code>12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18308/pull-kubevirt-e2e-kind-1.34-sev/2072280205950455808#1:build-log.txt%3A5129)
 <details>
 <summary>all...</summary>
 
-* _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
+* _2026-07-01 11:25:03 &#43;0000 UTC_: <code>12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18308/pull-kubevirt-e2e-kind-1.34-sev/2072280205950455808#1:build-log.txt%3A5129)
 <details><summary>context</summary>
-<pre>12:12:08: Waiting for rsyncd to be ready.............................failed
-12:12:08: rsync: [sender] failed to connect to 127.0.0.1 (127.0.0.1): Connection refused (111)
-12:12:08: rsync error: error in socket IO (code 10) at clientserver.c(139) [sender=3.4.1]
-make: *** [Makefile:28: bazel-build-functests] Error 10
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
+<pre>12:00:57: &#43; sleep 1m
+12:01:57: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+12:01:57: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt
+12:06:57: &#43; (( count&#43;&#43; ))
+12:06:57: &#43; (( count == 5 ))
+12:06:57: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
 </details>
 
 
@@ -216,7 +231,7 @@ make: *** [Makefile:28: bazel-build-functests] Error 10
 <hr/>
 </details>
 <details>
-<summary> kind cluster creation failure (1x / 3.57%) </summary>
+<summary> kind cluster creation failure (1x / 3.45%) </summary>
 
 <hr/>
 
@@ -241,23 +256,23 @@ make: *** [Makefile:28: bazel-build-functests] Error 10
 <hr/>
 </details>
 <details>
-<summary> KubeVirt deployment timeout (1x / 3.57%) </summary>
+<summary> make bazel-build target failure (1x / 3.45%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-01 11:25:03 &#43;0000 UTC_: <code>12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18308/pull-kubevirt-e2e-kind-1.34-sev/2072280205950455808#1:build-log.txt%3A5129)
+**1x**: _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
 <details>
 <summary>all...</summary>
 
-* _2026-07-01 11:25:03 &#43;0000 UTC_: <code>12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18308/pull-kubevirt-e2e-kind-1.34-sev/2072280205950455808#1:build-log.txt%3A5129)
+* _2026-07-02 11:38:26 &#43;0000 UTC_: <code>make: *** [Makefile:28: bazel-build-functests] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18318/pull-kubevirt-e2e-k8s-1.35-sig-network-1.8/2072645930082897920#1:build-log.txt%3A4921)
 <details><summary>context</summary>
-<pre>12:00:57: &#43; sleep 1m
-12:01:57: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-12:01:57: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt
-12:06:57: &#43; (( count&#43;&#43; ))
-12:06:57: &#43; (( count == 5 ))
-12:06:57: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+<pre>12:12:08: Waiting for rsyncd to be ready.............................failed
+12:12:08: rsync: [sender] failed to connect to 127.0.0.1 (127.0.0.1): Connection refused (111)
+12:12:08: rsync error: error in socket IO (code 10) at clientserver.c(139) [sender=3.4.1]
+make: *** [Makefile:28: bazel-build-functests] Error 10
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
 </details>
 
 
@@ -266,14 +281,34 @@ make: *** [Makefile:28: bazel-build-functests] Error 10
 <hr/>
 </details>
 
-### external (24x / 85.71%)
+### external (25x / 86.21%)
 
 <details>
-<summary> download failure in context (23x / 82.14%) </summary>
+<summary> download failure in context (23x / 79.31%) </summary>
 
 <hr/>
 
-**22x**: _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details><summary>context</summary>
+<pre>13:39:54: ERROR: Analysis of target &#39;//:push-alpine-ext-kernel-boot-demo&#39; failed; build aborted:
+13:39:54: INFO: Elapsed time: 1.124s
+13:39:54: INFO: 0 processes.
+13:39:54: ERROR: Build failed. Not running target
+13:39:58: &#43; rm -f /tmp/kubevirt.deploy.azEg
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+
+**22x**: _2026-07-01 12:14:12 &#43;0000 UTC_: <code>12:15:55: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2072292084718505984#1:build-log.txt%3A620)
 <details>
 <summary>all...</summary>
 
@@ -544,20 +579,25 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 <hr/>
+</details>
+<details>
+<summary> git clone failure in context (1x / 3.45%) </summary>
 
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 <details>
 <summary>all...</summary>
 
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 <details><summary>context</summary>
-<pre>13:39:54: ERROR: Analysis of target &#39;//:push-alpine-ext-kernel-boot-demo&#39; failed; build aborted:
-13:39:54: INFO: Elapsed time: 1.124s
-13:39:54: INFO: 0 processes.
-13:39:54: ERROR: Build failed. Not running target
-13:39:58: &#43; rm -f /tmp/kubevirt.deploy.azEg
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; EXIT_VALUE=2</pre>
+<pre>15:10:38: Cloning into &#39;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/com_github_masterzen_simplexml&#39;...
+15:10:38: fatal: unable to access &#39;https://github.com/masterzen/simplexml/&#39;: The requested URL returned error: 503
+15:10:38: fetch_repo: exit status 128
+15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:
+15:10:38: INFO: Elapsed time: 3.999s
+15:10:38: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
@@ -566,7 +606,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 3.57%) </summary>
+<summary> container image pull failure in context (1x / 3.45%) </summary>
 
 <hr/>
 
@@ -591,10 +631,10 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-### needs-investigation (1x / 3.57%)
+### needs-investigation (1x / 3.45%)
 
 <details>
-<summary> no matching pattern (1x / 3.57%) </summary>
+<summary> no matching pattern (1x / 3.45%) </summary>
 
 <hr/>
 
@@ -624,7 +664,28 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (26x / 92.86%)
+### release-1.9 (1x / 3.45%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> git clone failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+
+</details>
+
+<hr/>
+</details>
+
+### main (26x / 89.66%)
 
 
 #### external (24x / 92.31%)
@@ -634,7 +695,17 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**22x**: _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
+**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
+
+</details>
+
+<hr/>
+
+**22x**: _2026-07-01 12:14:12 &#43;0000 UTC_: <code>12:15:55: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2072292084718505984#1:build-log.txt%3A620)
 <details>
 <summary>all...</summary>
 
@@ -685,16 +756,6 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 </details>
 
 <hr/>
-
-**1x**: _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 13:22:49 &#43;0000 UTC_: <code>13:39:54: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17955/pull-kubevirt-e2e-k8s-1.34-sig-performance/2072309073948184576#1:build-log.txt%3A2181)
-
-</details>
-
-<hr/>
 </details>
 <details>
 <summary> container image pull failure in context (1x / 3.85%) </summary>
@@ -706,24 +767,6 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <summary>all...</summary>
 
 * _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 3.85%)
-
-<details>
-<summary> no matching pattern (1x / 3.85%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-02 07:28:38 &#43;0000 UTC_: <code>Error: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 root filesystem: deleting layer &#34;45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f /var/lib/containers/storage/overlay/tempdirs/temp-dir-210287877/1-45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.35-sig-compute/2072583064571088896#1:build-log.txt%3A640)
-<details>
-<summary>all...</summary>
-
-* _2026-07-02 07:28:38 &#43;0000 UTC_: <code>Error: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 root filesystem: deleting layer &#34;45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f /var/lib/containers/storage/overlay/tempdirs/temp-dir-210287877/1-45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.35-sig-compute/2072583064571088896#1:build-log.txt%3A640)
 
 </details>
 
@@ -748,7 +791,25 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.7 (1x / 3.57%)
+#### needs-investigation (1x / 3.85%)
+
+<details>
+<summary> no matching pattern (1x / 3.85%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-02 07:28:38 &#43;0000 UTC_: <code>Error: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 root filesystem: deleting layer &#34;45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f /var/lib/containers/storage/overlay/tempdirs/temp-dir-210287877/1-45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.35-sig-compute/2072583064571088896#1:build-log.txt%3A640)
+<details>
+<summary>all...</summary>
+
+* _2026-07-02 07:28:38 &#43;0000 UTC_: <code>Error: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: cleaning up container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 storage: unmounting container 9281d0bb90970ba371489628fe55e9bff93169e3e7349072bd4bf5b3ace70da1 root filesystem: deleting layer &#34;45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f /var/lib/containers/storage/overlay/tempdirs/temp-dir-210287877/1-45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.35-sig-compute/2072583064571088896#1:build-log.txt%3A640)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.7 (1x / 3.45%)
 
 
 #### internal (1x / 100.00%)
@@ -769,7 +830,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.8 (1x / 3.57%)
+### release-1.8 (1x / 3.45%)
 
 
 #### internal (1x / 100.00%)
@@ -795,7 +856,47 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per SIG [⬆](#top)
 
 
-### sig-compute (13x / 46.43%)
+### sig-storage (4x / 13.79%)
+
+
+#### external (4x / 100.00%)
+
+<details>
+<summary> download failure in context (3x / 75.00%) </summary>
+
+<hr/>
+
+**3x**: _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
+<details>
+<summary>all...</summary>
+
+* _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
+
+* _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
+
+* _2026-07-01 08:39:41 &#43;0000 UTC_: <code>08:41:54: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072235893455851520#1:build-log.txt%3A545)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> git clone failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (13x / 44.83%)
 
 
 #### external (10x / 76.92%)
@@ -805,7 +906,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**9x**: _2026-07-01 11:33:46 &#43;0000 UTC_: <code>11:36:21: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18240/pull-kubevirt-e2e-k8s-1.35-sig-operator/2072238776180019200#1:build-log.txt%3A665)
+**9x**: _2026-07-01 08:42:43 &#43;0000 UTC_: <code>08:44:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-compute/2072235893535543296#1:build-log.txt%3A577)
 <details>
 <summary>all...</summary>
 
@@ -850,21 +951,6 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 #### internal (2x / 15.38%)
 
 <details>
-<summary> kind cluster creation failure (1x / 7.69%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-<details>
-<summary>all...</summary>
-
-* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> KubeVirt deployment timeout (1x / 7.69%) </summary>
 
 <hr/>
@@ -874,6 +960,21 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <summary>all...</summary>
 
 * _2026-07-01 11:25:03 &#43;0000 UTC_: <code>12:06:57: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18308/pull-kubevirt-e2e-kind-1.34-sev/2072280205950455808#1:build-log.txt%3A5129)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> kind cluster creation failure (1x / 7.69%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
+<details>
+<summary>all...</summary>
+
+* _2026-07-02 13:04:52 &#43;0000 UTC_: <code>13:14:13: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18323/pull-kubevirt-e2e-kind-1.34-sev-1.7/2072667534082969600#1:build-log.txt%3A635)
 
 </details>
 
@@ -898,7 +999,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-network (11x / 39.29%)
+### sig-network (11x / 37.93%)
 
 
 #### external (10x / 90.91%)
@@ -908,7 +1009,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**10x**: _2026-07-01 23:00:19 &#43;0000 UTC_: <code>23:02:17: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18038/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2072414264844357632#1:build-log.txt%3A557)
+**10x**: _2026-07-01 12:14:12 &#43;0000 UTC_: <code>12:15:55: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2072292084718505984#1:build-log.txt%3A620)
 <details>
 <summary>all...</summary>
 
@@ -955,7 +1056,7 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-performance (1x / 3.57%)
+### sig-performance (1x / 3.45%)
 
 
 #### external (1x / 100.00%)
@@ -976,29 +1077,4 @@ time=&#34;2026-07-02T07:38:39Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-storage (3x / 10.71%)
-
-
-#### external (3x / 100.00%)
-
-<details>
-<summary> download failure in context (3x / 100.00%) </summary>
-
-<hr/>
-
-**3x**: _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
-<details>
-<summary>all...</summary>
-
-* _2026-07-01 16:16:17 &#43;0000 UTC_: <code>16:18:01: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18314/pull-kubevirt-e2e-k8s-1.36-sig-storage/2072353016559702016#1:build-log.txt%3A561)
-
-* _2026-07-01 12:18:33 &#43;0000 UTC_: <code>12:20:20: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18256/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072292085007912960#1:build-log.txt%3A573)
-
-* _2026-07-01 08:39:41 &#43;0000 UTC_: <code>08:41:54: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18288/pull-kubevirt-e2e-k8s-1.34-sig-storage/2072235893455851520#1:build-log.txt%3A545)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-07-08 00:33:17
+Last updated: 2026-07-08 04:11:50
