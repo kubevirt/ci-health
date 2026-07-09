@@ -109,6 +109,7 @@ func TopNPRs(prs []PRUsage, n int) []PRUsage {
 
 // ApplyCostRates applies optional dollar cost to all usage structs.
 // If monthlyCost > 0, each PR's dollar cost = its CPU% × monthlyCost / 100.
+// TopPRs is recomputed from PRUsages so the cost fields are always consistent.
 func ApplyCostRates(report *UsageReport, monthlyCost float64) {
 	if monthlyCost <= 0 {
 		return
@@ -126,11 +127,7 @@ func ApplyCostRates(report *UsageReport, monthlyCost float64) {
 		report.SIGUsages[i].TotalCost = &cost
 	}
 
-	for i := range report.TopPRs {
-		cost := report.TopPRs[i].CPUPercent * monthlyCost / 100
-		report.TopPRs[i].TotalCost = &cost
-	}
-
+	report.TopPRs = TopNPRs(report.PRUsages, 10)
 	report.TotalCost = &totalCost
 }
 

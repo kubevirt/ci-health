@@ -187,7 +187,7 @@
             <tbody>
                 {{- range .TopPRs }}
                 <tr>
-                    <td><a class="pr-link" href="https://github.com/{{ $.Source }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
+                    <td><a class="pr-link" href="https://github.com/{{ .Org }}/{{ .Repo }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
                     <td>{{ .Repo }}</td>
                     <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
                     <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>
@@ -237,7 +237,7 @@
             <tbody>
                 {{- range .PRUsages }}
                 <tr>
-                    <td><a class="pr-link" href="https://github.com/{{ $.Source }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
+                    <td><a class="pr-link" href="https://github.com/{{ .Org }}/{{ .Repo }}/pull/{{ .PR }}" target="_blank">#{{ .PR }}</a></td>
                     <td>{{ .Repo }}</td>
                     <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
                     <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>

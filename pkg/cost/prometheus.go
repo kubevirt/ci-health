@@ -40,6 +40,10 @@ type PrometheusResult struct {
 // If bearerToken is non-empty, it is sent as an Authorization header.
 // TLS verification is skipped for in-cluster OpenShift Thanos endpoints.
 func NewPrometheusClient(baseURL, bearerToken string, insecureSkipVerify bool) *PrometheusClient {
+	if insecureSkipVerify && bearerToken == "" {
+		log.Warn("TLS verification disabled with no bearer token — connections are unauthenticated and unverified")
+	}
+
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: insecureSkipVerify},
 	}
@@ -87,8 +91,8 @@ func (c *PrometheusClient) Query(query string) ([]PrometheusResult, error) {
 		func() error {
 			resp, err := c.httpClient.Get(u.String())
 			if err != nil {
-				queryLog.Warnf("request failed: %v", err)
-				return retry.Unrecoverable(err)
+				queryLog.Warnf("request failed (will retry): %v", err)
+				return err
 			}
 			defer resp.Body.Close()
 
@@ -183,12 +187,12 @@ func (c *PrometheusClient) GetClusterCapacity(nodeSelector string) (*ClusterCapa
 
 // RawJobMetrics holds the raw Prometheus data for a single job pod.
 type RawJobMetrics struct {
-	Pod        string
-	PR         string
-	Job        string
-	Repo       string
-	Org        string
-	BuildID    string
+	Pod      string
+	PR       string
+	Job      string
+	Repo     string
+	Org      string
+	BuildID  string
 	CPUSec   float64
 	MemBytes float64
 }

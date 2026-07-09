@@ -486,3 +486,22 @@ func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests Sig
 	}
 	return prSigRetests
 }
+
+// MapJobNameToSIG maps a Prow job name to a SIG based on naming conventions.
+// Returns an empty string if the job does not match any known SIG pattern.
+func MapJobNameToSIG(jobName string) string {
+	switch {
+	case strings.Contains(jobName, "sig-compute") || strings.Contains(jobName, "vgpu"):
+		return "compute"
+	case strings.Contains(jobName, "sig-network") || strings.Contains(jobName, "sriov"):
+		return "network"
+	case strings.Contains(jobName, "sig-storage"):
+		return "storage"
+	case strings.Contains(jobName, "sig-operator"):
+		return "operator"
+	case strings.Contains(jobName, "sig-monitoring"):
+		return "monitoring"
+	default:
+		return ""
+	}
+}

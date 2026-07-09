@@ -2,23 +2,25 @@ package cost
 
 import (
 	"fmt"
-	"strings"
 	"time"
 
 	log "github.com/sirupsen/logrus"
+
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 )
 
 // HandlerOptions configures the cost report handler.
 type HandlerOptions struct {
-	ThanosURL    string
-	BearerToken  string
-	Namespace    string
-	NodeSelector string
-	DataDays     int
-	Source       string
-	Path         string
+	ThanosURL          string
+	BearerToken        string
+	Namespace          string
+	NodeSelector       string
+	DataDays           int
+	Source             string
+	Path               string
 	MonthlyCost        float64
 	InsecureSkipVerify bool
+	EndTime            *time.Time
 }
 
 // Handler orchestrates querying Prometheus and building the usage report.
@@ -57,7 +59,11 @@ func (h *Handler) Run() (*UsageReport, error) {
 		log.Warn("no job metrics found")
 	}
 
-	report := BuildReport(rawJobs, *cluster, h.options.DataDays, h.options.Source, time.Now(), MapJobToSIG)
+	endTime := time.Now()
+	if h.options.EndTime != nil {
+		endTime = *h.options.EndTime
+	}
+	report := BuildReport(rawJobs, *cluster, h.options.DataDays, h.options.Source, endTime, mapJobToSIG)
 
 	if h.options.MonthlyCost > 0 {
 		ApplyCostRates(report, h.options.MonthlyCost)
@@ -71,20 +77,10 @@ func (h *Handler) Run() (*UsageReport, error) {
 	return report, nil
 }
 
-// MapJobToSIG maps a Prow job name to a SIG, matching the logic in pkg/sigretests.
-func MapJobToSIG(jobName string) string {
-	switch {
-	case strings.Contains(jobName, "sig-compute") || strings.Contains(jobName, "vgpu"):
-		return "compute"
-	case strings.Contains(jobName, "sig-network") || strings.Contains(jobName, "sriov"):
-		return "network"
-	case strings.Contains(jobName, "sig-storage"):
-		return "storage"
-	case strings.Contains(jobName, "sig-operator"):
-		return "operator"
-	case strings.Contains(jobName, "sig-monitoring"):
-		return "monitoring"
-	default:
-		return "other"
+// mapJobToSIG wraps sigretests.MapJobNameToSIG, defaulting to "other" for unmatched jobs.
+func mapJobToSIG(jobName string) string {
+	if sig := sigretests.MapJobNameToSIG(jobName); sig != "" {
+		return sig
 	}
+	return "other"
 }

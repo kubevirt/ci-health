@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"strings"
 
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -46,7 +47,7 @@ func main() {
 				if err != nil {
 					log.Fatalf("reading bearer token: %v", err)
 				}
-				opts.BearerToken = string(token)
+				opts.BearerToken = strings.TrimSpace(string(token))
 			}
 
 			handler := cost.NewHandler(opts)

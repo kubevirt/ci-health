@@ -1,6 +1,8 @@
 package cost_test
 
 import (
+	"os"
+	"path/filepath"
 	"testing"
 	"time"
 
@@ -9,6 +11,7 @@ import (
 	. "github.com/onsi/gomega"
 
 	"github.com/kubevirt/ci-health/pkg/cost"
+	"github.com/kubevirt/ci-health/pkg/sigretests"
 )
 
 func TestCost(t *testing.T) {
@@ -151,10 +154,10 @@ var _ = Describe("TopNPRs", func() {
 	})
 })
 
-var _ = Describe("MapJobToSIG", func() {
+var _ = Describe("MapJobNameToSIG", func() {
 	table.DescribeTable("should map job names to correct SIG",
 		func(jobName, expectedSIG string) {
-			Expect(cost.MapJobToSIG(jobName)).To(Equal(expectedSIG))
+			Expect(sigretests.MapJobNameToSIG(jobName)).To(Equal(expectedSIG))
 		},
 		table.Entry("sig-compute job", "pull-kubevirt-e2e-sig-compute-k8s-1.35", "compute"),
 		table.Entry("vgpu job maps to compute", "pull-kubevirt-e2e-vgpu", "compute"),
@@ -163,12 +166,19 @@ var _ = Describe("MapJobToSIG", func() {
 		table.Entry("sig-storage job", "pull-kubevirt-e2e-sig-storage", "storage"),
 		table.Entry("sig-operator job", "pull-kubevirt-e2e-sig-operator", "operator"),
 		table.Entry("sig-monitoring job", "pull-kubevirt-e2e-sig-monitoring", "monitoring"),
-		table.Entry("unmatched job", "pull-kubevirt-unit-test", "other"),
-		table.Entry("goveralls job", "pull-kubevirt-goveralls", "other"),
+		table.Entry("unmatched job", "pull-kubevirt-unit-test", ""),
+		table.Entry("goveralls job", "pull-kubevirt-goveralls", ""),
 	)
 })
 
 var _ = Describe("AggregateSIGUsages", func() {
+	mapJobToSIG := func(jobName string) string {
+		if sig := sigretests.MapJobNameToSIG(jobName); sig != "" {
+			return sig
+		}
+		return "other"
+	}
+
 	It("should group jobs by SIG", func() {
 		jobs := []cost.JobUsage{
 			{Job: "pull-kubevirt-e2e-sig-compute", CPUPercent: 2.0, MemPercent: 1.0},
@@ -177,7 +187,7 @@ var _ = Describe("AggregateSIGUsages", func() {
 			{Job: "pull-kubevirt-unit-test", CPUPercent: 0.5, MemPercent: 0.2},
 		}
 
-		sigs := cost.AggregateSIGUsages(jobs, cost.MapJobToSIG)
+		sigs := cost.AggregateSIGUsages(jobs, mapJobToSIG)
 		sigMap := map[string]cost.SIGUsage{}
 		for _, s := range sigs {
 			sigMap[s.Name] = s
@@ -196,7 +206,7 @@ var _ = Describe("AggregateSIGUsages", func() {
 			{Job: "pull-kubevirt-e2e-sig-compute", CPUPercent: 5.0},
 			{Job: "pull-kubevirt-e2e-sig-network", CPUPercent: 3.0},
 		}
-		sigs := cost.AggregateSIGUsages(jobs, cost.MapJobToSIG)
+		sigs := cost.AggregateSIGUsages(jobs, mapJobToSIG)
 		Expect(sigs[0].Name).To(Equal("compute"))
 		Expect(sigs[1].Name).To(Equal("network"))
 	})
@@ -226,6 +236,23 @@ var _ = Describe("ApplyCostRates", func() {
 		Expect(*report.SIGUsages[0].TotalCost).To(Equal(1500.0))
 	})
 
+	It("should recompute TopPRs with cost fields populated", func() {
+		report := &cost.UsageReport{
+			PRUsages: []cost.PRUsage{
+				{PR: "1", CPUPercent: 10.0},
+				{PR: "2", CPUPercent: 5.0},
+			},
+			TopPRs: []cost.PRUsage{},
+		}
+
+		cost.ApplyCostRates(report, 10000.0)
+
+		Expect(report.TopPRs).To(HaveLen(2))
+		Expect(report.TopPRs[0].PR).To(Equal("1"))
+		Expect(report.TopPRs[0].TotalCost).NotTo(BeNil())
+		Expect(*report.TopPRs[0].TotalCost).To(Equal(1000.0))
+	})
+
 	It("should not set cost fields when monthly cost is zero", func() {
 		report := &cost.UsageReport{
 			PRUsages: []cost.PRUsage{
@@ -253,8 +280,14 @@ var _ = Describe("BuildReport", func() {
 			{PR: "2", Job: "pull-kubevirt-e2e-sig-network", Repo: "kubevirt", Org: "kubevirt", BuildID: "102", CPUSec: 7200, MemBytes: 2 * 1024 * 1024 * 1024},
 		}
 
+		mapSIG := func(jobName string) string {
+			if sig := sigretests.MapJobNameToSIG(jobName); sig != "" {
+				return sig
+			}
+			return "other"
+		}
 		endTime := time.Date(2026, 6, 24, 12, 0, 0, 0, time.UTC)
-		report := cost.BuildReport(jobs, cluster, 1, "kubevirt/kubevirt", endTime, cost.MapJobToSIG)
+		report := cost.BuildReport(jobs, cluster, 1, "kubevirt/kubevirt", endTime, mapSIG)
 
 		Expect(report.PRCount).To(Equal(2))
 		Expect(report.RunCount).To(Equal(3))
@@ -267,5 +300,44 @@ var _ = Describe("BuildReport", func() {
 		Expect(report.JobTypeUsage).NotTo(BeEmpty())
 		Expect(report.TotalCPUPercent).To(BeNumerically(">", 0))
 		Expect(report.AvgCPUPerPR).To(BeNumerically(">", 0))
+	})
+})
+
+var _ = Describe("GenerateHTMLReport", func() {
+	It("should render an HTML report without error", func() {
+		report := &cost.UsageReport{
+			StartDate:       time.Date(2026, 6, 17, 0, 0, 0, 0, time.UTC),
+			EndDate:         time.Date(2026, 6, 24, 0, 0, 0, 0, time.UTC),
+			DataDays:        7,
+			Source:          "kubevirt/kubevirt",
+			Cluster:         cost.ClusterCapacity{CPUCores: 100, MemoryBytes: 100 * 1024 * 1024 * 1024, NodeCount: 4},
+			TotalCPUPercent: 42.5,
+			TotalMemPercent: 30.0,
+			AvgCPUPerPR:     2.5,
+			AvgMemPerPR:     1.5,
+			PRCount:         17,
+			RunCount:        85,
+			PRUsages: []cost.PRUsage{
+				{PR: "100", Repo: "kubevirt", Org: "kubevirt", CPUPercent: 5.0, MemPercent: 3.0, RunCount: 4},
+			},
+			SIGUsages: []cost.SIGUsage{
+				{Name: "compute", CPUPercent: 20.0, MemPercent: 15.0, RunCount: 40},
+			},
+			TopPRs: []cost.PRUsage{
+				{PR: "100", Repo: "kubevirt", Org: "kubevirt", CPUPercent: 5.0, MemPercent: 3.0, RunCount: 4},
+			},
+		}
+
+		tmpDir, err := os.MkdirTemp("", "cost-report-test-*")
+		Expect(err).NotTo(HaveOccurred())
+		defer os.RemoveAll(tmpDir)
+
+		err = cost.GenerateHTMLReport(report, tmpDir)
+		Expect(err).NotTo(HaveOccurred())
+
+		reportPath := filepath.Join(tmpDir, "cost-report.html")
+		info, err := os.Stat(reportPath)
+		Expect(err).NotTo(HaveOccurred())
+		Expect(info.Size()).To(BeNumerically(">", 0))
 	})
 })
