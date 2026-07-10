@@ -23,21 +23,6 @@
 #### external (3x / 75.00%)
 
 <details>
-<summary> git clone failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -62,6 +47,21 @@
 <summary>all...</summary>
 
 * _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> git clone failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 
 </details>
 
@@ -93,31 +93,6 @@
 
 ### external (3x / 75.00%)
 
-<details>
-<summary> git clone failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-<details><summary>context</summary>
-<pre>15:10:38: Cloning into &#39;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/com_github_masterzen_simplexml&#39;...
-15:10:38: fatal: unable to access &#39;https://github.com/masterzen/simplexml/&#39;: The requested URL returned error: 503
-15:10:38: fetch_repo: exit status 128
-15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:
-15:10:38: INFO: Elapsed time: 3.999s
-15:10:38: INFO: 0 processes.
-make: *** [Makefile:39: bazel-build-images] Error 1</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> download failure in context (1x / 25.00%) </summary>
 
@@ -161,6 +136,31 @@ make: *** [Makefile:174: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> git clone failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details><summary>context</summary>
+<pre>15:10:38: Cloning into &#39;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/com_github_masterzen_simplexml&#39;...
+15:10:38: fatal: unable to access &#39;https://github.com/masterzen/simplexml/&#39;: The requested URL returned error: 503
+15:10:38: fetch_repo: exit status 128
+15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:
+15:10:38: INFO: Elapsed time: 3.999s
+15:10:38: INFO: 0 processes.
+make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 </details>
 
 
@@ -366,4 +366,4 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-07-10 04:30:04
+Last updated: 2026-07-10 07:14:10
