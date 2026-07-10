@@ -249,21 +249,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 #### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-09 08:41:42 &#43;0000 UTC_: <code>08:43:35: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18394/pull-kubevirt-e2e-kind-1.34-sev/2075138204012384256#1:build-log.txt%3A547)
-<details>
-<summary>all...</summary>
-
-* _2026-07-09 08:41:42 &#43;0000 UTC_: <code>08:43:35: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18394/pull-kubevirt-e2e-kind-1.34-sev/2075138204012384256#1:build-log.txt%3A547)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -273,6 +258,21 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <summary>all...</summary>
 
 * _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-09 08:41:42 &#43;0000 UTC_: <code>08:43:35: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18394/pull-kubevirt-e2e-kind-1.34-sev/2075138204012384256#1:build-log.txt%3A547)
+<details>
+<summary>all...</summary>
+
+* _2026-07-09 08:41:42 &#43;0000 UTC_: <code>08:43:35: ERROR: Analysis of target &#39;//containerimages:alpine-ext-kernel-boot-demo-container&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18394/pull-kubevirt-e2e-kind-1.34-sev/2075138204012384256#1:build-log.txt%3A547)
 
 </details>
 
@@ -432,4 +432,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-07-10 16:06:24
+Last updated: 2026-07-10 18:35:23
