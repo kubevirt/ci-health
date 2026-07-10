@@ -54,6 +54,9 @@ func AggregatePRUsages(jobs []JobUsage) []PRUsage {
 	for _, pr := range prMap {
 		result = append(result, *pr)
 	}
+	sort.Slice(result, func(i, j int) bool {
+		return result[i].CPUPercent > result[j].CPUPercent
+	})
 	return result
 }
 
@@ -108,22 +111,25 @@ func TopNPRs(prs []PRUsage, n int) []PRUsage {
 }
 
 // ApplyCostRates applies optional dollar cost to all usage structs.
-// If monthlyCost > 0, each PR's dollar cost = its CPU% × monthlyCost / 100.
+// monthlyCost is pro-rated to the report's DataDays window:
+// windowCost = monthlyCost × dataDays / 30, then each PR's cost = CPU% × windowCost / 100.
 // TopPRs is recomputed from PRUsages so the cost fields are always consistent.
 func ApplyCostRates(report *UsageReport, monthlyCost float64) {
 	if monthlyCost <= 0 {
 		return
 	}
 
+	windowCost := monthlyCost * float64(report.DataDays) / 30.0
+
 	totalCost := 0.0
 	for i := range report.PRUsages {
-		cost := report.PRUsages[i].CPUPercent * monthlyCost / 100
+		cost := report.PRUsages[i].CPUPercent * windowCost / 100
 		report.PRUsages[i].TotalCost = &cost
 		totalCost += cost
 	}
 
 	for i := range report.SIGUsages {
-		cost := report.SIGUsages[i].CPUPercent * monthlyCost / 100
+		cost := report.SIGUsages[i].CPUPercent * windowCost / 100
 		report.SIGUsages[i].TotalCost = &cost
 	}
 

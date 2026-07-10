@@ -170,6 +170,12 @@
             <div class="value">{{ .AvgCPUPerPR | printf "%.2f" }}%</div>
             <div class="label">Avg CPU per PR</div>
         </div>
+        {{- if .TotalCost }}
+        <div class="summary-card">
+            <div class="value">${{ deref .TotalCost | printf "%.2f" }}</div>
+            <div class="label">Est. total cost ({{ .DataDays }}d)</div>
+        </div>
+        {{- end }}
     </div>
 
     <details class="section-details" open>
@@ -182,6 +188,7 @@
                     <th data-type="num">CPU %</th>
                     <th data-type="num">Memory %</th>
                     <th data-type="num">Runs</th>
+                    {{- if $.TotalCost }}<th data-type="num">Est. Cost</th>{{- end }}
                 </tr>
             </thead>
             <tbody>
@@ -192,6 +199,7 @@
                     <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
                     <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>
                     <td data-value="{{ .RunCount }}">{{ .RunCount }}</td>
+                    {{- if $.TotalCost }}<td data-value="{{ if .TotalCost }}{{ deref .TotalCost }}{{ else }}0{{ end }}">${{ if .TotalCost }}{{ deref .TotalCost | printf "%.2f" }}{{ else }}—{{ end }}</td>{{- end }}
                 </tr>
                 {{- end }}
             </tbody>
@@ -207,6 +215,7 @@
                     <th>CPU %</th>
                     <th>Memory %</th>
                     <th>Runs</th>
+                    {{- if $.TotalCost }}<th>Est. Cost</th>{{- end }}
                 </tr>
             </thead>
             <tbody>
@@ -216,6 +225,7 @@
                     <td>{{ pctClass .CPUPercent }}</td>
                     <td>{{ pctClass .MemPercent }}</td>
                     <td>{{ .RunCount }}</td>
+                    {{- if $.TotalCost }}<td>{{ if .TotalCost }}${{ deref .TotalCost | printf "%.2f" }}{{ else }}—{{ end }}</td>{{- end }}
                 </tr>
                 {{- end }}
             </tbody>
@@ -232,6 +242,7 @@
                     <th data-type="num">CPU %</th>
                     <th data-type="num">Memory %</th>
                     <th data-type="num">Runs</th>
+                    {{- if $.TotalCost }}<th data-type="num">Est. Cost</th>{{- end }}
                 </tr>
             </thead>
             <tbody>
@@ -242,6 +253,7 @@
                     <td data-value="{{ .CPUPercent }}">{{ pctClass .CPUPercent }}</td>
                     <td data-value="{{ .MemPercent }}">{{ pctClass .MemPercent }}</td>
                     <td data-value="{{ .RunCount }}">{{ .RunCount }}</td>
+                    {{- if $.TotalCost }}<td data-value="{{ if .TotalCost }}{{ deref .TotalCost }}{{ else }}0{{ end }}">${{ if .TotalCost }}{{ deref .TotalCost | printf "%.2f" }}{{ else }}—{{ end }}</td>{{- end }}
                 </tr>
                 {{- end }}
             </tbody>

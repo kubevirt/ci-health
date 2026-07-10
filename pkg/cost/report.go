@@ -38,6 +38,12 @@ func templateFuncs() template.FuncMap {
 			}
 			return template.HTML(fmt.Sprintf(`<span class="%s">%.2f%%</span>`, class, pct))
 		},
+		"deref": func(p *float64) float64 {
+			if p == nil {
+				return 0
+			}
+			return *p
+		},
 	}
 }
 

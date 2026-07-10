@@ -40,6 +40,10 @@ func NewHandler(opts *HandlerOptions) *Handler {
 
 // Run queries Prometheus, calculates usage, and writes the report.
 func (h *Handler) Run() (*UsageReport, error) {
+	if h.options.DataDays <= 0 {
+		return nil, fmt.Errorf("data-days must be positive, got %d", h.options.DataDays)
+	}
+
 	log.Infof("querying cluster capacity for nodes matching %q", h.options.NodeSelector)
 	cluster, err := h.client.GetClusterCapacity(h.options.NodeSelector)
 	if err != nil {

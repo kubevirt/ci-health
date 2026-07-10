@@ -213,8 +213,9 @@ var _ = Describe("AggregateSIGUsages", func() {
 })
 
 var _ = Describe("ApplyCostRates", func() {
-	It("should apply monthly cost to percentages", func() {
+	It("should apply monthly cost pro-rated to data window", func() {
 		report := &cost.UsageReport{
+			DataDays: 30,
 			PRUsages: []cost.PRUsage{
 				{PR: "1", CPUPercent: 10.0},
 				{PR: "2", CPUPercent: 5.0},
@@ -236,8 +237,25 @@ var _ = Describe("ApplyCostRates", func() {
 		Expect(*report.SIGUsages[0].TotalCost).To(Equal(1500.0))
 	})
 
+	It("should pro-rate cost for a 7-day window", func() {
+		report := &cost.UsageReport{
+			DataDays: 7,
+			PRUsages: []cost.PRUsage{
+				{PR: "1", CPUPercent: 10.0},
+			},
+			SIGUsages: []cost.SIGUsage{},
+			TopPRs:    []cost.PRUsage{},
+		}
+
+		cost.ApplyCostRates(report, 30000.0)
+
+		// 30000 × 7/30 = 7000 window cost; 10% of 7000 = 700
+		Expect(*report.PRUsages[0].TotalCost).To(Equal(700.0))
+	})
+
 	It("should recompute TopPRs with cost fields populated", func() {
 		report := &cost.UsageReport{
+			DataDays: 30,
 			PRUsages: []cost.PRUsage{
 				{PR: "1", CPUPercent: 10.0},
 				{PR: "2", CPUPercent: 5.0},
@@ -339,5 +357,50 @@ var _ = Describe("GenerateHTMLReport", func() {
 		info, err := os.Stat(reportPath)
 		Expect(err).NotTo(HaveOccurred())
 		Expect(info.Size()).To(BeNumerically(">", 0))
+	})
+
+	It("should render cost columns when TotalCost is set", func() {
+		prCost := 500.0
+		sigCost := 1500.0
+		totalCost := 1500.0
+		report := &cost.UsageReport{
+			StartDate:       time.Date(2026, 6, 17, 0, 0, 0, 0, time.UTC),
+			EndDate:         time.Date(2026, 6, 24, 0, 0, 0, 0, time.UTC),
+			DataDays:        7,
+			Source:          "kubevirt/kubevirt",
+			Cluster:         cost.ClusterCapacity{CPUCores: 100, MemoryBytes: 100 * 1024 * 1024 * 1024, NodeCount: 4},
+			TotalCPUPercent: 42.5,
+			TotalMemPercent: 30.0,
+			AvgCPUPerPR:     2.5,
+			AvgMemPerPR:     1.5,
+			PRCount:         1,
+			RunCount:        4,
+			TotalCost:       &totalCost,
+			PRUsages: []cost.PRUsage{
+				{PR: "100", Repo: "kubevirt", Org: "kubevirt", CPUPercent: 5.0, MemPercent: 3.0, RunCount: 4, TotalCost: &prCost},
+			},
+			SIGUsages: []cost.SIGUsage{
+				{Name: "compute", CPUPercent: 20.0, MemPercent: 15.0, RunCount: 40, TotalCost: &sigCost},
+			},
+			TopPRs: []cost.PRUsage{
+				{PR: "100", Repo: "kubevirt", Org: "kubevirt", CPUPercent: 5.0, MemPercent: 3.0, RunCount: 4, TotalCost: &prCost},
+			},
+		}
+
+		tmpDir, err := os.MkdirTemp("", "cost-report-cost-test-*")
+		Expect(err).NotTo(HaveOccurred())
+		defer os.RemoveAll(tmpDir)
+
+		err = cost.GenerateHTMLReport(report, tmpDir)
+		Expect(err).NotTo(HaveOccurred())
+
+		reportPath := filepath.Join(tmpDir, "cost-report.html")
+		data, err := os.ReadFile(reportPath)
+		Expect(err).NotTo(HaveOccurred())
+		html := string(data)
+
+		Expect(html).To(ContainSubstring("$1500.00"))
+		Expect(html).To(ContainSubstring("$500.00"))
+		Expect(html).To(ContainSubstring("Est. Cost"))
 	})
 })

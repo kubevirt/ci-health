@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/avast/retry-go"
@@ -57,7 +58,7 @@ func NewPrometheusClient(baseURL, bearerToken string, insecureSkipVerify bool) *
 	}
 
 	return &PrometheusClient{
-		baseURL:    baseURL,
+		baseURL:    strings.TrimRight(baseURL, "/"),
 		httpClient: client,
 	}
 }
@@ -94,14 +95,14 @@ func (c *PrometheusClient) Query(query string) ([]PrometheusResult, error) {
 				queryLog.Warnf("request failed (will retry): %v", err)
 				return err
 			}
-			defer resp.Body.Close()
+			defer func() { _ = resp.Body.Close() }()
 
 			body, err := io.ReadAll(resp.Body)
 			if err != nil {
 				return retry.Unrecoverable(fmt.Errorf("reading response: %w", err))
 			}
 
-			if resp.StatusCode == http.StatusServiceUnavailable || resp.StatusCode == http.StatusGatewayTimeout {
+			if resp.StatusCode == http.StatusBadGateway || resp.StatusCode == http.StatusServiceUnavailable || resp.StatusCode == http.StatusGatewayTimeout {
 				queryLog.Infof("got %d, will retry", resp.StatusCode)
 				return fmt.Errorf("prometheus returned %d", resp.StatusCode)
 			}
@@ -205,12 +206,12 @@ func (c *PrometheusClient) GetJobMetrics(namespace, window string) ([]RawJobMetr
 		namespace, window,
 	)
 	memQuery := fmt.Sprintf(
-		`avg_over_time(container_memory_working_set_bytes{namespace="%s", container!="POD", container!=""}[%s]) by (pod)`,
+		`max by (pod) (max_over_time(container_memory_working_set_bytes{namespace="%s", container!="POD", container!=""}[%s]))`,
 		namespace, window,
 	)
 	labelsQuery := fmt.Sprintf(
-		`kube_pod_labels{namespace="%s", label_prow_k8s_io_refs_pull!=""}`,
-		namespace,
+		`last_over_time(kube_pod_labels{namespace="%s", label_prow_k8s_io_refs_pull!=""}[%s])`,
+		namespace, window,
 	)
 
 	cpuResults, err := c.Query(cpuQuery)
@@ -263,13 +264,13 @@ func (c *PrometheusClient) GetJobMetrics(namespace, window string) ([]RawJobMetr
 		}
 
 		jobs = append(jobs, RawJobMetrics{
-			Pod:     pod,
-			PR:      labels["label_prow_k8s_io_refs_pull"],
-			Job:     labels["label_prow_k8s_io_job"],
-			Repo:    labels["label_prow_k8s_io_refs_repo"],
-			Org:     labels["label_prow_k8s_io_refs_org"],
-			BuildID: labels["label_prow_k8s_io_build_id"],
-			CPUSec:  cpu,
+			Pod:      pod,
+			PR:       labels["label_prow_k8s_io_refs_pull"],
+			Job:      labels["label_prow_k8s_io_job"],
+			Repo:     labels["label_prow_k8s_io_refs_repo"],
+			Org:      labels["label_prow_k8s_io_refs_org"],
+			BuildID:  labels["label_prow_k8s_io_build_id"],
+			CPUSec:   cpu,
 			MemBytes: mem,
 		})
 	}
