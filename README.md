@@ -128,6 +128,25 @@ The repository provides four CLI tools under `cmd/`:
 * `html-report`: generates per-SIG HTML failure reports.
 * `ci-failures`: diagnostic CLI for analyzing CI build failures, test flakiness, and Kubernetes cluster state.
 
+## Automation & Workflows
+
+The repository uses GitHub Actions and a Prow postsubmit to automate data collection and report generation.
+
+The central artifact is `output/kubevirt/kubevirt/results.json`: `badges-update.yaml` produces it every 3 hours, and its commit to `main` triggers both `ci-failures.yml` and the `ci-health-sig-report-publish` Prow postsubmit.
+
+### GitHub Actions
+
+| Workflow | Trigger | Purpose |
+|----------|---------|---------|
+| `badges-update.yaml` | Scheduled every 3 hours | Runs `stats` for last 7 days, commits updated badges and `results.json` |
+| `ci-failures.yml` | Push to `main` modifying `results.json` | Runs `ci-failures generate report`, commits updated markdown summary |
+| `historical-update.yaml` | Weekly (Monday 00:10 UTC) | Runs `batch` fetch+plot for trend metrics, commits updated plots |
+
+### Prow Postsubmit
+
+**`ci-health-sig-report-publish`** ([definition](https://github.com/kubevirt/project-infra/blob/main/github/ci/prow-deploy/files/jobs/kubevirt/ci-health/ci-health-postsubmits.yaml)):
+Triggers when `results.json` changes on `main`. Generates per-SIG HTML failure reports and uploads them to `gs://kubevirt-prow/reports/sig-failure-reports/`.
+
 ## Local execution
 
 ### Requirements
