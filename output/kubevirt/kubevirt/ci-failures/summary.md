@@ -282,24 +282,6 @@ make: *** [Makefile:174: cluster-up] Error 125
 ### release-1.9 (2x / 40.00%)
 
 
-#### external (1x / 50.00%)
-
-<details>
-<summary> git clone failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-
-</details>
-
-<hr/>
-</details>
-
 #### needs-investigation (1x / 50.00%)
 
 <details>
@@ -312,6 +294,24 @@ make: *** [Makefile:174: cluster-up] Error 125
 <summary>all...</summary>
 
 * _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> git clone failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 
 </details>
 
@@ -432,4 +432,4 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-07-11 09:39:04
+Last updated: 2026-07-11 12:18:53
