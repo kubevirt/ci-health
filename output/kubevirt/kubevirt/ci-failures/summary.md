@@ -44,6 +44,21 @@
 #### external (3x / 75.00%)
 
 <details>
+<summary> download failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -68,21 +83,6 @@
 <summary>all...</summary>
 
 * _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
 
 </details>
 
@@ -249,21 +249,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -278,27 +263,24 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 
 <hr/>
 </details>
-
-### release-1.9 (2x / 40.00%)
-
-
-#### external (1x / 50.00%)
-
 <details>
-<summary> git clone failure in context (1x / 50.00%) </summary>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+**1x**: _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
 <details>
 <summary>all...</summary>
 
-* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+* _2026-07-07 07:15:34 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18272/pull-kubevirt-e2e-kind-1.35-vgpu/2074391719960383488#1:build-log.txt%3A508)
 
 </details>
 
 <hr/>
 </details>
+
+### release-1.9 (2x / 40.00%)
+
 
 #### needs-investigation (1x / 50.00%)
 
@@ -312,6 +294,24 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <summary>all...</summary>
 
 * _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> git clone failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
+<details>
+<summary>all...</summary>
+
+* _2026-07-07 15:07:25 &#43;0000 UTC_: <code>15:10:38: ERROR: Analysis of target &#39;//images/winrmcli:winrmcli-image&#39; failed; build aborted:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18369/pull-kubevirt-e2e-k8s-1.35-sig-storage-1.9/2074407868987084800#1:build-log.txt%3A720)
 
 </details>
 
@@ -432,4 +432,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-07-12 07:00:37
+Last updated: 2026-07-12 09:39:25
