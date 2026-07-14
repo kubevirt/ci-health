@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-13 (2x / 33.33%)
+### 2026-07-13 (2x / 40.00%)
 
 
 #### external (2x / 100.00%)
@@ -53,7 +53,7 @@
 <hr/>
 </details>
 
-### 2026-07-09 (1x / 16.67%)
+### 2026-07-09 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -74,28 +74,13 @@
 <hr/>
 </details>
 
-### 2026-07-07 (3x / 50.00%)
+### 2026-07-07 (2x / 40.00%)
 
 
-#### external (2x / 66.67%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> git clone failure in context (1x / 33.33%) </summary>
+<summary> git clone failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -109,19 +94,16 @@
 
 <hr/>
 </details>
-
-#### needs-investigation (1x / 33.33%)
-
 <details>
-<summary> no matching pattern (1x / 33.33%) </summary>
+<summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
+**1x**: _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
 <details>
 <summary>all...</summary>
 
-* _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
+* _2026-07-07 14:16:30 &#43;0000 UTC_: <code>14:33:48: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18113/pull-kubevirt-e2e-kind-1.34-sev-1.8/2074497679852834816#1:build-log.txt%3A5277)
 
 </details>
 
@@ -133,10 +115,10 @@
 ## per error category [⬆](#top)
 
 
-### external (5x / 83.33%)
+### external (5x / 100.00%)
 
 <details>
-<summary> download failure in context (3x / 50.00%) </summary>
+<summary> download failure in context (3x / 60.00%) </summary>
 
 <hr/>
 
@@ -193,7 +175,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> git clone failure in context (1x / 16.67%) </summary>
+<summary> git clone failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -218,7 +200,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 16.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -243,46 +225,18 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### needs-investigation (1x / 16.67%)
-
-<details>
-<summary> no matching pattern (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-<details><summary>context</summary>
-<pre>10:58:21: time=&#34;2026-07-07T10:58:21Z&#34; level=info msg=&#34;Object network-resources-injector applied successfully&#34;
-10:58:21: time=&#34;2026-07-07T10:58:21Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf rollout status -n kube-system deploy/network-resources-injector --timeout=200s&#34;
-10:58:21: Waiting for deployment &#34;network-resources-injector&#34; rollout to finish: 0 of 2 updated replicas are available...
-11:01:41: error: timed out waiting for the condition
-11:01:41:
-11:01:41: ===== 44d3e19fddc933f5c3de66835fdefea380289f4c14b5f1802b4370c1c108c5f0 ====
-11:01:41: &#43; NUM_NODES=3</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.9 (3x / 50.00%)
+### release-1.9 (2x / 40.00%)
 
 
-#### external (2x / 66.67%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> git clone failure in context (1x / 33.33%) </summary>
+<summary> git clone failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -297,7 +251,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -312,25 +266,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no matching pattern (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-
-</details>
-
-<hr/>
-</details>
-
-### main (2x / 33.33%)
+### main (2x / 40.00%)
 
 
 #### external (2x / 100.00%)
@@ -361,7 +297,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### release-1.8 (1x / 16.67%)
+### release-1.8 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -387,7 +323,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-compute (4x / 66.67%)
+### sig-compute (4x / 80.00%)
 
 
 #### external (4x / 100.00%)
@@ -435,7 +371,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-storage (1x / 16.67%)
+### sig-storage (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -456,25 +392,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### sig-network (1x / 16.67%)
-
-
-#### needs-investigation (1x / 100.00%)
-
-<details>
-<summary> no matching pattern (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-<details>
-<summary>all...</summary>
-
-* _2026-07-07 10:48:09 &#43;0000 UTC_: <code>11:01:41: error: timed out waiting for the condition</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18373/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated-1.9/2074410231747579904#1:build-log.txt%3A1042)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-07-14 09:44:13
+Last updated: 2026-07-14 12:31:03
