@@ -17,28 +17,13 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-13 (2x / 66.67%)
+### 2026-07-13 (3x / 75.00%)
 
 
-#### external (2x / 100.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 50.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -52,8 +37,41 @@
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
-### 2026-07-09 (1x / 33.33%)
+<hr/>
+
+**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> KubeVirt deployment timeout (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-07-09 (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -79,10 +97,10 @@
 ## per error category [⬆](#top)
 
 
-### external (3x / 100.00%)
+### external (3x / 75.00%)
 
 <details>
-<summary> download failure in context (2x / 66.67%) </summary>
+<summary> download failure in context (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -127,7 +145,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -152,18 +170,64 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
+### internal (1x / 25.00%)
+
+<details>
+<summary> KubeVirt deployment timeout (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details><summary>context</summary>
+<pre>14:05:20: &#43; sleep 1m
+14:06:20: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:06:20: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt
+14:11:20: &#43; (( count&#43;&#43; ))
+14:11:20: &#43; (( count == 5 ))
+14:11:20: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.9 (1x / 33.33%)
+### release-1.9 (2x / 50.00%)
 
 
-#### external (1x / 100.00%)
+#### internal (1x / 50.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+<summary> KubeVirt deployment timeout (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -178,7 +242,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-### main (2x / 66.67%)
+### main (2x / 50.00%)
 
 
 #### external (2x / 100.00%)
@@ -214,13 +278,13 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 100.00%)
+### sig-compute (4x / 100.00%)
 
 
-#### external (3x / 100.00%)
+#### external (3x / 75.00%)
 
 <details>
-<summary> download failure in context (2x / 66.67%) </summary>
+<summary> download failure in context (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -245,7 +309,7 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -260,4 +324,22 @@ make: *** [Makefile:39: bazel-build-images] Error 1</pre>
 <hr/>
 </details>
 
-Last updated: 2026-07-14 18:30:52
+#### internal (1x / 25.00%)
+
+<details>
+<summary> KubeVirt deployment timeout (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-07-14 21:27:30
