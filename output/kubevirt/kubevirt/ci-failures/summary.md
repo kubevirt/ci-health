@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-15 (1x / 14.29%)
+### 2026-07-17 (1x / 12.50%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no error snippets (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-07-15 (1x / 12.50%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +59,7 @@
 <hr/>
 </details>
 
-### 2026-07-14 (3x / 42.86%)
+### 2026-07-14 (3x / 37.50%)
 
 
 #### internal (3x / 100.00%)
@@ -76,7 +97,7 @@
 <hr/>
 </details>
 
-### 2026-07-13 (3x / 42.86%)
+### 2026-07-13 (3x / 37.50%)
 
 
 #### external (2x / 66.67%)
@@ -135,10 +156,10 @@
 ## per error category [⬆](#top)
 
 
-### internal (4x / 57.14%)
+### internal (4x / 50.00%)
 
 <details>
-<summary> kind cluster creation failure (2x / 28.57%) </summary>
+<summary> kind cluster creation failure (2x / 25.00%) </summary>
 
 <hr/>
 
@@ -175,7 +196,7 @@
 <hr/>
 </details>
 <details>
-<summary> KubeVirt deployment timeout (1x / 14.29%) </summary>
+<summary> KubeVirt deployment timeout (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -200,7 +221,7 @@
 <hr/>
 </details>
 <details>
-<summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
+<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -225,14 +246,14 @@ make: *** [Makefile:174: cluster-up] Error 6
 <hr/>
 </details>
 
-### external (3x / 42.86%)
+### external (3x / 37.50%)
 
 <details>
-<summary> download failure in context (2x / 28.57%) </summary>
+<summary> download failure in context (2x / 25.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+**2x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
 <details>
 <summary>all...</summary>
 
@@ -265,7 +286,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 14.29%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 12.50%) </summary>
 
 <hr/>
 
@@ -290,12 +311,30 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
+### needs-investigation (1x / 12.50%)
+
+<details>
+<summary> no error snippets (1x / 12.50%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.9 (3x / 42.86%)
+### release-1.9 (3x / 37.50%)
 
 
 #### external (2x / 66.67%)
@@ -349,13 +388,13 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### main (4x / 57.14%)
+### main (5x / 62.50%)
 
 
-#### internal (3x / 75.00%)
+#### internal (3x / 60.00%)
 
 <details>
-<summary> kind cluster creation failure (2x / 50.00%) </summary>
+<summary> kind cluster creation failure (2x / 40.00%) </summary>
 
 <hr/>
 
@@ -372,7 +411,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
+<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -387,10 +426,28 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-#### external (1x / 25.00%)
+#### needs-investigation (1x / 20.00%)
 
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
+<summary> no error snippets (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 20.00%)
+
+<details>
+<summary> download failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -410,7 +467,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 14.29%)
+### sig-network (1x / 12.50%)
 
 
 #### external (1x / 100.00%)
@@ -431,13 +488,13 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### sig-compute (6x / 85.71%)
+### sig-compute (7x / 87.50%)
 
 
-#### internal (4x / 66.67%)
+#### internal (4x / 57.14%)
 
 <details>
-<summary> kind cluster creation failure (2x / 33.33%) </summary>
+<summary> kind cluster creation failure (2x / 28.57%) </summary>
 
 <hr/>
 
@@ -454,7 +511,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> KubeVirt deployment timeout (1x / 16.67%) </summary>
+<summary> KubeVirt deployment timeout (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -469,7 +526,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> make cluster lifecycle target failure (1x / 16.67%) </summary>
+<summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -484,25 +541,10 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-#### external (2x / 33.33%)
+#### external (2x / 28.57%)
 
 <details>
-<summary> download failure in context (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 16.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -516,5 +558,38 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 14.29%) </summary>
 
-Last updated: 2026-07-17 15:35:11
+<hr/>
+
+**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 14.29%)
+
+<details>
+<summary> no error snippets (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-07-17 18:31:02
