@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-17 (1x / 12.50%)
+### 2026-07-18 (1x / 11.11%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no error snippets (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+<details>
+<summary>all...</summary>
+
+* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-07-17 (1x / 11.11%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -38,7 +59,7 @@
 <hr/>
 </details>
 
-### 2026-07-15 (1x / 12.50%)
+### 2026-07-15 (1x / 11.11%)
 
 
 #### external (1x / 100.00%)
@@ -59,7 +80,7 @@
 <hr/>
 </details>
 
-### 2026-07-14 (3x / 37.50%)
+### 2026-07-14 (3x / 33.33%)
 
 
 #### internal (3x / 100.00%)
@@ -97,7 +118,7 @@
 <hr/>
 </details>
 
-### 2026-07-13 (3x / 37.50%)
+### 2026-07-13 (3x / 33.33%)
 
 
 #### external (2x / 66.67%)
@@ -156,10 +177,10 @@
 ## per error category [⬆](#top)
 
 
-### internal (4x / 50.00%)
+### internal (4x / 44.44%)
 
 <details>
-<summary> kind cluster creation failure (2x / 25.00%) </summary>
+<summary> kind cluster creation failure (2x / 22.22%) </summary>
 
 <hr/>
 
@@ -196,32 +217,7 @@
 <hr/>
 </details>
 <details>
-<summary> KubeVirt deployment timeout (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-<details><summary>context</summary>
-<pre>14:05:20: &#43; sleep 1m
-14:06:20: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:06:20: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt
-14:11:20: &#43; (( count&#43;&#43; ))
-14:11:20: &#43; (( count == 5 ))
-14:11:20: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
+<summary> make cluster lifecycle target failure (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -245,15 +241,40 @@ make: *** [Makefile:174: cluster-up] Error 6
 
 <hr/>
 </details>
-
-### external (3x / 37.50%)
-
 <details>
-<summary> download failure in context (2x / 25.00%) </summary>
+<summary> KubeVirt deployment timeout (1x / 11.11%) </summary>
 
 <hr/>
 
-**2x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details><summary>context</summary>
+<pre>14:05:20: &#43; sleep 1m
+14:06:20: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:06:20: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt
+14:11:20: &#43; (( count&#43;&#43; ))
+14:11:20: &#43; (( count == 5 ))
+14:11:20: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### external (3x / 33.33%)
+
+<details>
+<summary> download failure in context (2x / 22.22%) </summary>
+
+<hr/>
+
+**2x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
 <details>
 <summary>all...</summary>
 
@@ -286,7 +307,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 12.50%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 11.11%) </summary>
 
 <hr/>
 
@@ -311,10 +332,20 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### needs-investigation (1x / 12.50%)
+### needs-investigation (2x / 22.22%)
 
 <details>
-<summary> no error snippets (1x / 12.50%) </summary>
+<summary> no error snippets (2x / 22.22%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+<details>
+<summary>all...</summary>
+
+* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+
+</details>
 
 <hr/>
 
@@ -334,7 +365,91 @@ make: *** [Makefile:189: cluster-sync] Error 1
 ## per branch [⬆](#top)
 
 
-### release-1.9 (3x / 37.50%)
+### main (6x / 66.67%)
+
+
+#### internal (3x / 50.00%)
+
+<details>
+<summary> kind cluster creation failure (2x / 33.33%) </summary>
+
+<hr/>
+
+**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+<details>
+<summary>all...</summary>
+
+* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+
+* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make cluster lifecycle target failure (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
+<details>
+<summary>all...</summary>
+
+* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (2x / 33.33%)
+
+<details>
+<summary> no error snippets (2x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+<details>
+<summary>all...</summary>
+
+* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 16.67%)
+
+<details>
+<summary> download failure in context (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.9 (3x / 33.33%)
 
 
 #### external (2x / 66.67%)
@@ -388,107 +503,33 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-### main (5x / 62.50%)
-
-
-#### internal (3x / 60.00%)
-
-<details>
-<summary> kind cluster creation failure (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 20.00%)
-
-<details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 20.00%)
-
-<details>
-<summary> no error snippets (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-<details>
-<summary>all...</summary>
-
-* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 12.50%)
+### sig-storage (1x / 11.11%)
 
 
-#### external (1x / 100.00%)
+#### needs-investigation (1x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> no error snippets (1x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
 <details>
 <summary>all...</summary>
 
-* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
 
 </details>
 
 <hr/>
 </details>
 
-### sig-compute (7x / 87.50%)
+### sig-compute (7x / 77.78%)
 
 
 #### internal (4x / 57.14%)
@@ -544,21 +585,6 @@ make: *** [Makefile:189: cluster-sync] Error 1
 #### external (2x / 28.57%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 14.29%) </summary>
 
 <hr/>
@@ -568,6 +594,21 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <summary>all...</summary>
 
 * _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
 
 </details>
 
@@ -592,4 +633,25 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-07-18 12:25:00
+### sig-network (1x / 11.11%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> download failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+<details>
+<summary>all...</summary>
+
+* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-07-18 15:32:07
