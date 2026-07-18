@@ -103,21 +103,6 @@
 #### external (2x / 66.67%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
 <hr/>
@@ -127,6 +112,21 @@
 <summary>all...</summary>
 
 * _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
 
 </details>
 
@@ -253,7 +253,7 @@ make: *** [Makefile:174: cluster-up] Error 6
 
 <hr/>
 
-**2x**: _2026-07-13 10:57:10 &#43;0000 UTC_: <code>11:07:18: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18351/pull-kubevirt-e2e-k8s-1.35-sig-compute/2076613329182265344#1:build-log.txt%3A4201)
+**2x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
 <details>
 <summary>all...</summary>
 
@@ -334,60 +334,6 @@ make: *** [Makefile:189: cluster-sync] Error 1
 ## per branch [⬆](#top)
 
 
-### release-1.9 (3x / 37.50%)
-
-
-#### external (2x / 66.67%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
-<details>
-<summary>all...</summary>
-
-* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
-
-<details>
-<summary> KubeVirt deployment timeout (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-
-</details>
-
-<hr/>
-</details>
-
 ### main (5x / 62.50%)
 
 
@@ -462,18 +408,13 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-<a id="per-sig"></a>
-
-## per SIG [⬆](#top)
+### release-1.9 (3x / 37.50%)
 
 
-### sig-network (1x / 12.50%)
-
-
-#### external (1x / 100.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -487,6 +428,44 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> KubeVirt deployment timeout (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+
+</details>
+
+<hr/>
+</details>
+
+<a id="per-sig"></a>
+
+## per SIG [⬆](#top)
+
 
 ### sig-compute (7x / 87.50%)
 
@@ -592,4 +571,25 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-07-18 06:44:02
+### sig-network (1x / 12.50%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> download failure in context (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+<details>
+<summary>all...</summary>
+
+* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-07-18 09:42:31
