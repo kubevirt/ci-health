@@ -195,96 +195,6 @@
 ## per error category [⬆](#top)
 
 
-### internal (4x / 40.00%)
-
-<details>
-<summary> kind cluster creation failure (2x / 20.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-<details><summary>context</summary>
-<pre>13:42:30:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
-13:42:30:  • Preparing nodes 📦 📦   ...
-13:42:32:  ✗ Preparing nodes 📦 📦
-13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-13:42:32:
-13:42:32: Stack Trace:
-13:42:32: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-<details><summary>context</summary>
-<pre>11:17:01:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
-11:17:01:  • Preparing nodes 📦 📦   ...
-11:17:03:  ✗ Preparing nodes 📦 📦
-11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-11:17:03:
-11:17:03: Stack Trace:
-11:17:03: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details><summary>context</summary>
-<pre>12:02:30: Downloading cni-plugins-linux-amd64-v0.8.5.tgz
-12:02:30: &#43;&#43; curl -sSL -o /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/cni-plugins-linux-amd64-v0.8.5.tgz https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz
-12:02:45: curl: (6) Could not resolve host: github.com
-make: *** [Makefile:174: cluster-up] Error 6
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> KubeVirt deployment timeout (1x / 10.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-<details>
-<summary>all...</summary>
-
-* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
-<details><summary>context</summary>
-<pre>14:05:20: &#43; sleep 1m
-14:06:20: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:06:20: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt
-14:11:20: &#43; (( count&#43;&#43; ))
-14:11:20: &#43; (( count == 5 ))
-14:11:20: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
 ### external (4x / 40.00%)
 
 <details>
@@ -325,6 +235,31 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+<details><summary>context</summary>
+<pre>14:06:04: &#43; sleep 1m
+14:07:04: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:07:04: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt
+14:12:04: &#43; (( count&#43;&#43; ))
+14:12:04: &#43; (( count == 5 ))
+14:12:04: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> transient kube-apiserver body decode noise (1x / 10.00%) </summary>
 
 <hr/>
@@ -349,24 +284,89 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
+
+### internal (4x / 40.00%)
+
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 10.00%) </summary>
+<summary> kind cluster creation failure (2x / 20.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
 <details>
 <summary>all...</summary>
 
-* _2026-07-13 13:28:41 &#43;0000 UTC_: <code>14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18445/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076659968248909824#1:build-log.txt%3A5189)
+* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
 <details><summary>context</summary>
-<pre>14:06:04: &#43; sleep 1m
-14:07:04: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:07:04: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
-14:12:04: error: timed out waiting for the condition on kubevirts/kubevirt
-14:12:04: &#43; (( count&#43;&#43; ))
-14:12:04: &#43; (( count == 5 ))
-14:12:04: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+<pre>13:42:30:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
+13:42:30:  • Preparing nodes 📦 📦   ...
+13:42:32:  ✗ Preparing nodes 📦 📦
+13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
+13:42:32:
+13:42:32: Stack Trace:
+13:42:32: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
+</details>
+
+
+* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
+<details><summary>context</summary>
+<pre>11:17:01:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
+11:17:01:  • Preparing nodes 📦 📦   ...
+11:17:03:  ✗ Preparing nodes 📦 📦
+11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
+11:17:03:
+11:17:03: Stack Trace:
+11:17:03: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> KubeVirt deployment timeout (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details>
+<summary>all...</summary>
+
+* _2026-07-13 13:29:22 &#43;0000 UTC_: <code>14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18446/pull-kubevirt-e2e-kind-1.34-sev-1.9/2076660067666497536#1:build-log.txt%3A5137)
+<details><summary>context</summary>
+<pre>14:05:20: &#43; sleep 1m
+14:06:20: &#43; _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:06:20: &#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/.kubeconfig wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+14:11:20: error: timed out waiting for the condition on kubevirts/kubevirt
+14:11:20: &#43; (( count&#43;&#43; ))
+14:11:20: &#43; (( count == 5 ))
+14:11:20: &#43; echo &#39;KubeVirt not ready in time&#39;</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make cluster lifecycle target failure (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
+<details>
+<summary>all...</summary>
+
+* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
+<details><summary>context</summary>
+<pre>12:02:30: Downloading cni-plugins-linux-amd64-v0.8.5.tgz
+12:02:30: &#43;&#43; curl -sSL -o /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/cni-plugins-linux-amd64-v0.8.5.tgz https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz
+12:02:45: curl: (6) Could not resolve host: github.com
+make: *** [Makefile:174: cluster-up] Error 6
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -727,4 +727,4 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-07-19 12:24:32
+Last updated: 2026-07-19 15:31:27
