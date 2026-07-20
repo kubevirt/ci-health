@@ -26,7 +26,7 @@ const logsDir = "output/tmp/build-logs"
 var (
 	// Regex to find errors in log files
 	// make: *** [Makefile:174: cluster-sync] Error 125
-	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |\bmake: \*\*\*.*Error \d+|command not found|could not establish a connection to the node`)
+	rgExpression = regexp.MustCompile(`^E\d{4} \d\d:\d\d:\d\d\.\d+|(Error|ERROR|error)s?:|(FAIL|Failure \[)\b|timed out|panic\b|\[FAILED\]|fatal: |\bmake: \*\*\*.*Error \d+|command not found|could not establish a connection to the node|Podman daemon failed to start|dial tcp: lookup kind-.+-control-plane on .+: (connection refused|i/o timeout)|/var/lib/(shared-images|containers/storage).*(read-only file system|invalid cross-device link)`)
 )
 
 // ShowCIFailureJobs fetches URLs for the CI failure runs from the data of the latest run.

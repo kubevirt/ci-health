@@ -277,6 +277,37 @@ func TestCategorizeError(t *testing.T) {
 			expected:  CategoryInternal,
 		},
 
+		// === Internal: Podman daemon startup failure ===
+		{
+			name:      "Podman daemon failed to start",
+			errorText: `Podman daemon failed to start successfully`,
+			expected:  CategoryInternal,
+		},
+
+		// === Internal: KIND DNS resolution failure ===
+		{
+			name:      "KIND DNS connection refused",
+			errorText: `07:08:41: dial tcp: lookup kind-1.34-control-plane on 10.89.0.1:53: read udp 10.89.0.2:38164->10.89.0.1:53: read: connection refused`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "KIND DNS i/o timeout",
+			errorText: `07:09:12: dial tcp: lookup kind-1.34-control-plane on 10.89.0.1:53: read udp 10.89.0.2:51032->10.89.0.1:53: i/o timeout`,
+			expected:  CategoryInternal,
+		},
+
+		// === Internal: Podman storage filesystem error ===
+		{
+			name:      "Podman storage read-only filesystem",
+			errorText: `unlinkat /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f: read-only file system`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "Podman storage cross-device link",
+			errorText: `rename /var/lib/shared-images/overlay/45d857b8e4ea6d442ea23c8a411b09ed0d58cd82ff905895244fdcea6659261f /var/lib/containers/storage/overlay/45d857b8e4ea: invalid cross-device link`,
+			expected:  CategoryInternal,
+		},
+
 		// === Needs investigation ===
 		{
 			name:      "unknown error",
