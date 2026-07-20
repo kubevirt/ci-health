@@ -108,6 +108,8 @@ var rules = []categoryRule{
 	{CategoryInternal, "control plane startup failure", regexp.MustCompile(`error.*execution phase wait-control-plane: failed while waiting for the control plane to start`)},
 	// Kind cluster creation failure (log line pattern not found)
 	{CategoryInternal, "kind cluster creation failure", regexp.MustCompile(`ERROR: failed to create cluster: could not find a log line that matches`)},
+	// KubevirtCI VM never became reachable via SSH during cluster provisioning
+	{CategoryInternal, "VM SSH connection timeout during cluster provisioning", regexp.MustCompile(`could not establish a connection to the node after a generous timeout`)},
 
 	// Missing binary in CI container/environment
 	{CategoryInternal, "missing command in CI environment", regexp.MustCompile(`command not found`)},

@@ -265,6 +265,18 @@ func TestCategorizeError(t *testing.T) {
 			expected:  CategoryInternal,
 		},
 
+		// === Internal: VM SSH timeout ===
+		{
+			name:      "VM SSH connection timeout",
+			errorText: `"could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed"`,
+			expected:  CategoryInternal,
+		},
+		{
+			name:      "make cluster-up Error 1 with timestamp",
+			errorText: `08:30:15: make: *** [Makefile:174: cluster-up] Error 1`,
+			expected:  CategoryInternal,
+		},
+
 		// === Needs investigation ===
 		{
 			name:      "unknown error",
