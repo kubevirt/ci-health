@@ -61,7 +61,7 @@ func AnalyzeBuild(prowJobURL string) (*JobBuildErrors, error) {
 	lines := strings.Split(log.LogContent, "\n")
 	for i := len(lines) - 1; i >= 0; i-- {
 		line := lines[i]
-		if rgExpression.MatchString(line) {
+		if buildLogLineMatchesExpression.MatchString(line) {
 			start := max(0, i-3)
 			end := min(len(lines)-1, i+3)
 			snippet := &BuildLogErrorSnippet{
