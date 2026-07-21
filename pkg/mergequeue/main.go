@@ -61,24 +61,35 @@ func (mq *Handler) LengthAt(date time.Time) (int, []types.PR, error) {
 
 // TimesToMerge returns a map with the duration each merged PR number took to
 // land in the time frame between the given start and end dates.
+//
+// Timeline items are fetched per-PR via the repository query rather than
+// nested inside the search query. GitHub's GraphQL API silently truncates
+// nested connection data when many PRs are returned through search, which
+// caused all timeline items to be empty and the metric to report zero.
 func (mq *Handler) TimesToMerge(startDate, endDate time.Time) (map[types.PR]time.Duration, error) {
-	prs, err := mq.client.MergedPRsBetween(startDate, endDate)
+	barePRs, err := mq.client.MergedPRsBetween(startDate, endDate)
 	if err != nil {
 		return nil, err
 	}
 
 	result := map[types.PR]time.Duration{}
-	for _, prItem := range prs {
-		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", prItem.Number, prItem.MergedAt)
-		mqStart := DatePREntered(&prItem.MergeQueuePullRequestFragment, prItem.MergedAt)
+	for _, barePR := range barePRs {
+		prWithTimeline, err := mq.client.FetchPRTimelineItems(barePR.Number)
+		if err != nil {
+			log.WithError(err).Warnf("TimesToMerge: failed to fetch timeline for PR %d, skipping", barePR.Number)
+			continue
+		}
+
+		log.Debugf("TimesToMerge: calculating mq date entered for PR num %d merged at %s", barePR.Number, barePR.MergedAt)
+		mqStart := DatePREntered(prWithTimeline, barePR.MergedAt)
 		if mqStart.Equal(zeroDate) {
-			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", prItem.Number)
+			log.Debugf("TimesToMerge: Merge queue enter date not found for PR %d", barePR.Number)
 		} else {
 			pr := types.PR{
-				Number:   prItem.Number,
-				MergedAt: prItem.MergedAt.Format(constants.DateFormat),
+				Number:   barePR.Number,
+				MergedAt: barePR.MergedAt.Format(constants.DateFormat),
 			}
-			result[pr] = prItem.MergedAt.Sub(mqStart)
+			result[pr] = barePR.MergedAt.Sub(mqStart)
 		}
 	}
 

@@ -139,6 +139,35 @@ func (c *Client) mergeQueuePRQuery(query string) (types.MergeQueuePRList, error)
 	return mergedQuery.Search.Nodes, err
 }
 
+// FetchPRTimelineItems fetches the labeled/unlabeled timeline items for a
+// single PR via the repository query. This avoids the GitHub GraphQL
+// complexity budget that silently truncates nested timeline data when many
+// PRs are returned through the search API.
+func (c *Client) FetchPRTimelineItems(number int) (*types.MergeQueuePullRequestFragment, error) {
+	parts := strings.SplitN(c.source, "/", 2)
+	if len(parts) != 2 {
+		return nil, fmt.Errorf("invalid source %q, expected owner/repo", c.source)
+	}
+
+	variables := map[string]interface{}{
+		"owner":  githubv4.String(parts[0]),
+		"repo":   githubv4.String(parts[1]),
+		"number": githubv4.Int(number),
+	}
+
+	var query struct {
+		Repository struct {
+			PullRequest types.MergeQueuePullRequestFragment `graphql:"pullRequest(number: $number)"`
+		} `graphql:"repository(owner: $owner, name: $repo)"`
+	}
+
+	err := c.inner.Query(context.Background(), &query, variables)
+	if err != nil {
+		return nil, err
+	}
+	return &query.Repository.PullRequest, nil
+}
+
 // ChatopsMergedPRsBetween returns a slice of PRs that were merged in the time
 // frame defined by the start and end dates given as parameters with data
 // required by chatops tools.
