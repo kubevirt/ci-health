@@ -17,13 +17,13 @@
 ## per day [⬆](#top)
 
 
-### 2026-07-20 (4x / 30.77%)
+### 2026-07-20 (5x / 41.67%)
 
 
-#### external (3x / 75.00%)
+#### external (3x / 60.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
 
 <hr/>
 
@@ -40,7 +40,7 @@
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 25.00%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -55,16 +55,18 @@
 <hr/>
 </details>
 
-#### internal (1x / 25.00%)
+#### internal (2x / 40.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
+<summary> make cluster lifecycle target failure (2x / 40.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
+**2x**: _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
 <details>
 <summary>all...</summary>
+
+* _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
 
 * _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
 
@@ -73,7 +75,7 @@
 <hr/>
 </details>
 
-### 2026-07-19 (1x / 7.69%)
+### 2026-07-19 (1x / 8.33%)
 
 
 #### external (1x / 100.00%)
@@ -94,7 +96,7 @@
 <hr/>
 </details>
 
-### 2026-07-18 (2x / 15.38%)
+### 2026-07-18 (2x / 16.67%)
 
 
 #### external (1x / 50.00%)
@@ -133,7 +135,7 @@
 <hr/>
 </details>
 
-### 2026-07-17 (1x / 7.69%)
+### 2026-07-17 (1x / 8.33%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -154,7 +156,7 @@
 <hr/>
 </details>
 
-### 2026-07-16 (1x / 7.69%)
+### 2026-07-16 (1x / 8.33%)
 
 
 #### external (1x / 100.00%)
@@ -175,7 +177,7 @@
 <hr/>
 </details>
 
-### 2026-07-15 (1x / 7.69%)
+### 2026-07-15 (1x / 8.33%)
 
 
 #### external (1x / 100.00%)
@@ -196,38 +198,21 @@
 <hr/>
 </details>
 
-### 2026-07-14 (3x / 23.08%)
+### 2026-07-14 (1x / 8.33%)
 
 
-#### internal (3x / 100.00%)
+#### internal (1x / 100.00%)
 
 <details>
-<summary> kind cluster creation failure (2x / 66.67%) </summary>
+<summary> kind cluster creation failure (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+**1x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
 <details>
 <summary>all...</summary>
 
 * _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
 
 </details>
 
@@ -239,14 +224,14 @@
 ## per error category [⬆](#top)
 
 
-### external (7x / 53.85%)
+### external (7x / 58.33%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 23.08%) </summary>
+<summary> transient kube-apiserver body decode noise (3x / 25.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
+**3x**: _2026-07-19 13:53:33 &#43;0000 UTC_: <code>13:57:42: I0719 09:57:42.070577    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18374/pull-kubevirt-e2e-k8s-1.35-sig-storage/2078840537326030848#1:build-log.txt%3A694)
 <details>
 <summary>all...</summary>
 
@@ -291,44 +276,7 @@
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 15.38%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
-<details>
-<summary>all...</summary>
-
-* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
-<details><summary>context</summary>
-<pre>07:46:34: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-07:46:34: INFO: Elapsed time: 0.854s
-07:46:34: INFO: 0 processes.
-07:46:34: ERROR: Build failed. Not running target
-07:46:36: &#43; rm -f /tmp/kubevirt.deploy.rldn
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
-<details><summary>context</summary>
-<pre>03:14:41: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
-03:14:41: INFO: Elapsed time: 1.508s
-03:14:41: INFO: 0 processes.
-03:14:41: ERROR: Build failed. Not running target
-03:14:44: &#43; rm -f /tmp/kubevirt.deploy.JG0I
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 15.38%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 16.67%) </summary>
 
 <hr/>
 
@@ -364,17 +312,66 @@ make: *** [Makefile:189: cluster-sync] Error 1
 
 <hr/>
 </details>
-
-### internal (4x / 30.77%)
-
 <details>
-<summary> make cluster lifecycle target failure (2x / 15.38%) </summary>
+<summary> download failure in context (2x / 16.67%) </summary>
 
 <hr/>
 
-**2x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
+**2x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
 <details>
 <summary>all...</summary>
+
+* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+<details><summary>context</summary>
+<pre>07:46:34: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+07:46:34: INFO: Elapsed time: 0.854s
+07:46:34: INFO: 0 processes.
+07:46:34: ERROR: Build failed. Not running target
+07:46:36: &#43; rm -f /tmp/kubevirt.deploy.rldn
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+<details><summary>context</summary>
+<pre>03:14:41: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted:
+03:14:41: INFO: Elapsed time: 1.508s
+03:14:41: INFO: 0 processes.
+03:14:41: ERROR: Build failed. Not running target
+03:14:44: &#43; rm -f /tmp/kubevirt.deploy.JG0I
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+
+### internal (3x / 25.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (2x / 16.67%) </summary>
+
+<hr/>
+
+**2x**: _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
+<details>
+<summary>all...</summary>
+
+* _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
+<details><summary>context</summary>
+<pre>13:51:33: 2026/07/20 13:51:33 existing blob: sha256:05daf2a1d5cd22bf20bf774e8599d99ee37f8edccf2588aaa86f21aaec88c88d
+13:51:36: 2026/07/20 13:51:36 localhost:37295/kubevirt/kv-network-passt-binding-cni:devel: digest: sha256:0d6e045da432423816b2bc90af03985fc7c0432ef9ca321aa853181e18ba8a66 size: 701
+13:51:48: &#43; rm -f /tmp/kubevirt.deploy.tB7r
+make: *** [Makefile:174: cluster-sync] Error 125
+&#43; ret=2
+&#43; make cluster-down
+./kubevirtci/cluster-up/down.sh</pre>
+</details>
+
 
 * _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
 <details><summary>context</summary>
@@ -388,28 +385,16 @@ make: *** [Makefile:189: cluster-sync] Error 10
 </details>
 
 
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details><summary>context</summary>
-<pre>12:02:30: Downloading cni-plugins-linux-amd64-v0.8.5.tgz
-12:02:30: &#43;&#43; curl -sSL -o /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.34/cni-plugins-linux-amd64-v0.8.5.tgz https://github.com/containernetworking/plugins/releases/download/v0.8.5/cni-plugins-linux-amd64-v0.8.5.tgz
-12:02:45: curl: (6) Could not resolve host: github.com
-make: *** [Makefile:174: cluster-up] Error 6
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> kind cluster creation failure (2x / 15.38%) </summary>
+<summary> kind cluster creation failure (1x / 8.33%) </summary>
 
 <hr/>
 
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+**1x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
 <details>
 <summary>all...</summary>
 
@@ -425,27 +410,15 @@ make: *** [Makefile:174: cluster-up] Error 6
 </details>
 
 
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-<details><summary>context</summary>
-<pre>11:17:01:  ✓ Ensuring node image (kindest/node:v1.34.3) 🖼
-11:17:01:  • Preparing nodes 📦 📦   ...
-11:17:03:  ✗ Preparing nodes 📦 📦
-11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;
-11:17:03:
-11:17:03: Stack Trace:
-11:17:03: sigs.k8s.io/kind/pkg/errors.Errorf</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 
-### needs-investigation (2x / 15.38%)
+### needs-investigation (2x / 16.67%)
 
 <details>
-<summary> no error snippets (2x / 15.38%) </summary>
+<summary> no error snippets (2x / 16.67%) </summary>
 
 <hr/>
 
@@ -475,110 +448,28 @@ make: *** [Makefile:174: cluster-up] Error 6
 ## per branch [⬆](#top)
 
 
-### main (9x / 69.23%)
+### release-1.7 (1x / 8.33%)
 
 
-#### external (4x / 44.44%)
+#### internal (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (3x / 33.33%) </summary>
+<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
-<details>
-<summary>all...</summary>
-
-* _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
-
-* _2026-07-19 13:53:33 &#43;0000 UTC_: <code>13:57:42: I0719 09:57:42.070577    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18374/pull-kubevirt-e2e-k8s-1.35-sig-storage/2078840537326030848#1:build-log.txt%3A694)
-
-* _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+**1x**: _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
 <details>
 <summary>all...</summary>
 
-* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+* _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
 
 </details>
 
 <hr/>
 </details>
 
-#### internal (3x / 33.33%)
-
-<details>
-<summary> kind cluster creation failure (2x / 22.22%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (2x / 22.22%)
-
-<details>
-<summary> no error snippets (2x / 22.22%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
-<details>
-<summary>all...</summary>
-
-* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-<details>
-<summary>all...</summary>
-
-* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.9 (4x / 30.77%)
+### release-1.9 (4x / 33.33%)
 
 
 #### external (3x / 75.00%)
@@ -634,12 +525,239 @@ make: *** [Makefile:174: cluster-up] Error 6
 <hr/>
 </details>
 
+### main (7x / 58.33%)
+
+
+#### external (4x / 57.14%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (3x / 42.86%) </summary>
+
+<hr/>
+
+**3x**: _2026-07-19 13:53:33 &#43;0000 UTC_: <code>13:57:42: I0719 09:57:42.070577    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18374/pull-kubevirt-e2e-k8s-1.35-sig-storage/2078840537326030848#1:build-log.txt%3A694)
+<details>
+<summary>all...</summary>
+
+* _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
+
+* _2026-07-19 13:53:33 &#43;0000 UTC_: <code>13:57:42: I0719 09:57:42.070577    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18374/pull-kubevirt-e2e-k8s-1.35-sig-storage/2078840537326030848#1:build-log.txt%3A694)
+
+* _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+<details>
+<summary>all...</summary>
+
+* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (2x / 28.57%)
+
+<details>
+<summary> no error snippets (2x / 28.57%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-18 07:31:20 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+<details>
+<summary>all...</summary>
+
+* _2026-07-18 07:31:20 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18494/pull-kubevirt-e2e-k8s-1.34-sig-storage/2078381951114285056)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 14.29%)
+
+<details>
+<summary> kind cluster creation failure (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+<details>
+<summary>all...</summary>
+
+* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-storage (4x / 30.77%)
+### sig-compute (5x / 41.67%)
+
+
+#### external (2x / 40.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
+<details>
+<summary>all...</summary>
+
+* _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+<details>
+<summary>all...</summary>
+
+* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (2x / 40.00%)
+
+<details>
+<summary> kind cluster creation failure (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+<details>
+<summary>all...</summary>
+
+* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
+<details>
+<summary>all...</summary>
+
+* _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 20.00%)
+
+<details>
+<summary> no error snippets (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+<details>
+<summary>all...</summary>
+
+* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (3x / 25.00%)
+
+
+#### external (2x / 66.67%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
+<details>
+<summary>all...</summary>
+
+* _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+<details>
+<summary>all...</summary>
+
+* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 33.33%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
+<details>
+<summary>all...</summary>
+
+* _2026-07-20 13:32:28 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18520/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2079121446369497088#1:build-log.txt%3A3940)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (4x / 33.33%)
 
 
 #### external (3x / 75.00%)
@@ -695,131 +813,4 @@ make: *** [Makefile:174: cluster-up] Error 6
 <hr/>
 </details>
 
-### sig-network (2x / 15.38%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
-<details>
-<summary>all...</summary>
-
-* _2026-07-18 12:17:09 &#43;0000 UTC_: <code>12:21:01: I0718 08:21:01.640723    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18492/pull-kubevirt-e2e-k8s-1.34-sig-network/2078453882106679296#1:build-log.txt%3A691)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
-<details>
-<summary>all...</summary>
-
-* _2026-07-15 02:53:43 &#43;0000 UTC_: <code>03:14:41: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18406/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2077224550935826432#1:build-log.txt%3A4402)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-compute (7x / 53.85%)
-
-
-#### external (2x / 28.57%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
-<details>
-<summary>all...</summary>
-
-* _2026-07-20 19:53:48 &#43;0000 UTC_: <code>19:57:33: I0720 15:57:33.518428    1640 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2079250202144804864#1:build-log.txt%3A706)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
-<details>
-<summary>all...</summary>
-
-* _2026-07-16 07:36:08 &#43;0000 UTC_: <code>07:46:34: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18477/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2077658380150771712#1:build-log.txt%3A4236)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (4x / 57.14%)
-
-<details>
-<summary> kind cluster creation failure (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-<details>
-<summary>all...</summary>
-
-* _2026-07-14 13:34:56 &#43;0000 UTC_: <code>13:42:32: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18418/pull-kubevirt-e2e-kind-1.34-sev/2077023792403582976#1:build-log.txt%3A680)
-
-* _2026-07-14 11:09:50 &#43;0000 UTC_: <code>11:17:03: ERROR: failed to create cluster: could not find a log line that matches &#34;Reached target .*Multi-User System.*|detected cgroup v1&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17117/pull-kubevirt-e2e-kind-1.34-sev/2076987423987863552#1:build-log.txt%3A964)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-<details>
-<summary>all...</summary>
-
-* _2026-07-20 07:53:33 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 10</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18509/pull-kubevirt-e2e-k8s-1.34-sig-operator-1.9/2079112330968305664#1:build-log.txt%3A1029)
-
-* _2026-07-14 11:54:26 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 6</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18454/pull-kubevirt-e2e-kind-1.34-sev/2076998450771136512#1:build-log.txt%3A1242)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 14.29%)
-
-<details>
-<summary> no error snippets (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-17 00:02:39 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-<details>
-<summary>all...</summary>
-
-* _2026-07-17 00:02:39 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18455/pull-kubevirt-e2e-k8s-1.35-sig-operator/2077906655319691264)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-07-21 10:01:39
+Last updated: 2026-07-21 12:42:21
