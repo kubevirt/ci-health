@@ -1,0 +1,31 @@
+name: ci-health-tests
+
+on:
+  pull_request:
+    paths:
+      - 'cmd/**'
+      - 'e2e/**'
+      - 'pkg/**'
+      - 'go.*'
+      - '.github/**'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: docker.io/golang:1.26-alpine
+    steps:
+      - name: Checkout Git repository
+        id: checkout
+        uses: actions/checkout@v6
+
+      - name: Run tests
+        id: test
+        run: |
+          export GITHUB_TOKEN_PATH='/run/github-token'
+
+          echo -n '${{ secrets.GITHUB_TOKEN }}' >"${GITHUB_TOKEN_PATH}"
+
+          go test ./...

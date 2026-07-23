@@ -140,6 +140,7 @@ The central artifact is `output/kubevirt/kubevirt/results.json`: `badges-update.
 |----------|---------|---------|
 | `badges-update.yaml` | Scheduled every 3 hours | Runs `stats` for last 7 days, commits updated badges and `results.json` |
 | `ci-failures.yml` | Push to `main` modifying `results.json` | Runs `ci-failures generate report`, commits updated markdown summary |
+| `ci-health-tests.yml` | Pull request that modifies Go code | Runs `go test`, validates changes |
 | `historical-update.yaml` | Weekly (Monday 00:10 UTC) | Runs `batch` fetch+plot for trend metrics, commits updated plots |
 
 ### Prow Postsubmit
