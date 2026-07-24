@@ -126,14 +126,17 @@ Accepts a Prow job URL, e.g.:
 		RunE: analyzeK8s,
 	}
 
-	testRateDays           int
-	laneRateDays           int
-	laneRateMaxSuccessRate float64
-	flakeOverviewDays      int
-	flakeOverviewFilter    string
-	flakeOverviewConc      int
-	showLogTail            int
-	showLogGrep            string
+	testRateDays              int
+	laneRateDays              int
+	laneRateMaxSuccessRate    float64
+	flakeOverviewDays         int
+	flakeOverviewFilter       string
+	flakeOverviewConc         int
+	showLogTail               int
+	showLogGrep               string
+	logGrepStatsSince         string
+	logGrepStatsCaseSensitive bool
+	logGrepStatsConcurrency   int
 
 	testRateCmd = &cobra.Command{
 		Use:   "test-rate [prow-job-url]",
@@ -200,6 +203,21 @@ Use --tail to print only the last N lines (default: all).
 Use --grep to filter lines matching a pattern (case-insensitive).`,
 		Args: cobra.ExactArgs(1),
 		RunE: showLog,
+	}
+
+	logGrepStatsCmd = &cobra.Command{
+		Use:   "log-grep-stats [pattern]",
+		Short: "Show per-month statistics for a pattern in CI failure build logs.",
+		Long: `Scan git history of output/kubevirt/kubevirt/results.json to collect all
+CI failure build URLs since a given date, download their build logs, and search
+for a text pattern. Outputs per-month statistics with matching build URLs.
+
+Requires --since to specify how far back to search in git history.
+
+Example:
+  ci-failures log-grep-stats "could not establish a connection to the node after a generous timeout" --since 2025-01-01`,
+		Args: cobra.ExactArgs(1),
+		RunE: logGrepStats,
 	}
 
 	discoverLanesCmd = &cobra.Command{
@@ -576,6 +594,36 @@ func discoverLanes(_ *cobra.Command, args []string) error {
 	return nil
 }
 
+func logGrepStats(_ *cobra.Command, args []string) error {
+	pattern := args[0]
+
+	if logGrepStatsSince == "" {
+		return fmt.Errorf("--since is required (e.g. --since 2025-01-01)")
+	}
+
+	repoDir, err := os.Getwd()
+	if err != nil {
+		return fmt.Errorf("failed to get working directory: %w", err)
+	}
+
+	result, err := cifailures.AnalyzeLogGrepStats(repoDir, pattern, logGrepStatsSince, !logGrepStatsCaseSensitive, logGrepStatsConcurrency)
+	if err != nil {
+		return fmt.Errorf("failed to analyze log grep stats: %w", err)
+	}
+
+	if err = os.MkdirAll(tmpOutputPath, 0755); err != nil {
+		return fmt.Errorf("failed to create output directory: %w", err)
+	}
+
+	outputPath := filepath.Join(tmpOutputPath, "log-grep-stats.yaml")
+	if err = cifailures.WriteLogGrepStatsResultYAML(outputPath, result); err != nil {
+		return fmt.Errorf("failed to write YAML output: %w", err)
+	}
+
+	log.Infof("wrote log grep stats to %s (%d matched out of %d CI failure URLs, %d total URLs)", outputPath, result.TotalMatched, result.CIFailureURLs, result.TotalURLs)
+	return nil
+}
+
 func summarizeSession(_ *cobra.Command, _ []string) error {
 	if tmpOutputPath == "output/tmp" {
 		return fmt.Errorf("no session ID set; use --session-id or set CLAUDE_CODE_SESSION_ID")
@@ -644,6 +692,10 @@ func init() {
 	showLogCmd.Flags().IntVar(&showLogTail, "tail", 0, "Print only the last N lines (0 = all)")
 	showLogCmd.Flags().StringVar(&showLogGrep, "grep", "", "Filter lines containing this pattern (case-insensitive)")
 
+	logGrepStatsCmd.Flags().StringVar(&logGrepStatsSince, "since", "", "How far back in git history (YYYY-MM-DD, required)")
+	logGrepStatsCmd.Flags().BoolVar(&logGrepStatsCaseSensitive, "case-sensitive", false, "Perform case-sensitive matching (default: case-insensitive)")
+	logGrepStatsCmd.Flags().IntVar(&logGrepStatsConcurrency, "concurrency", 10, "Parallel junit checks and build log downloads")
+
 	rootCmd.AddCommand(generateCmd)
 	rootCmd.AddCommand(analyzeBuildCmd)
 	rootCmd.AddCommand(analyzePRCmd)
@@ -655,6 +707,7 @@ func init() {
 	rootCmd.AddCommand(summarizeSessionCmd)
 	rootCmd.AddCommand(discoverLanesCmd)
 	rootCmd.AddCommand(showLogCmd)
+	rootCmd.AddCommand(logGrepStatsCmd)
 	generateCmd.AddCommand(yamlCmd)
 	generateCmd.AddCommand(mdCmd)
 	generateCmd.AddCommand(reportCmd)
