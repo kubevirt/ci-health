@@ -27,7 +27,7 @@
 
 <hr/>
 
-**6x**: _2026-07-26 17:10:22 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.34-sig-compute/2081426767049920512#1:build-log.txt%3A2934)
+**6x**: _2026-07-26 10:45:42 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18474/pull-kubevirt-e2e-k8s-1.35-sig-network/2081329966217170944#1:build-log.txt%3A4396)
 <details>
 <summary>all...</summary>
 
@@ -70,7 +70,7 @@
 
 <hr/>
 
-**2x**: _2026-07-26 10:45:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18474/pull-kubevirt-e2e-k8s-1.34-windows2016/2081329964916936704#1:build-log.txt%3A2120)
+**2x**: _2026-07-26 17:10:20 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2081426766697598976#1:build-log.txt%3A1131)
 <details>
 <summary>all...</summary>
 
@@ -93,7 +93,7 @@
 
 <hr/>
 
-**22x**: _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
+**22x**: _2026-07-25 07:28:43 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080916717994774528#1:build-log.txt%3A384)
 <details>
 <summary>all...</summary>
 
@@ -111,11 +111,11 @@
 
 * _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
 
-* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
-
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080916716866506752#1:build-log.txt%3A367)
 
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-network/2080916717504040960#1:build-log.txt%3A432)
+
+* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
 
 * _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
 
@@ -125,19 +125,19 @@
 
 * _2026-07-25 02:20:42 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080840488079855616#1:build-log.txt%3A438)
 
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-compute/2080840488834830336#1:build-log.txt%3A402)
+
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080840487949832192#1:build-log.txt%3A425)
 
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
 
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
-
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-compute/2080840488834830336#1:build-log.txt%3A402)
-
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
+* _2026-07-25 02:20:40 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080840488197296128#1:build-log.txt%3A372)
 
 * _2026-07-25 02:20:40 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080840487815614464#1:build-log.txt%3A364)
-
-* _2026-07-25 02:20:40 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080840488197296128#1:build-log.txt%3A372)
 
 * _2026-07-25 02:20:39 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080840488973242368#1:build-log.txt%3A392)
 
@@ -150,7 +150,7 @@
 
 <hr/>
 
-**5x**: _2026-07-25 00:25:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080805657153376256#1:build-log.txt%3A2974)
+**5x**: _2026-07-25 00:35:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080805660005502976#1:build-log.txt%3A4006)
 <details>
 <summary>all...</summary>
 
@@ -176,7 +176,7 @@
 
 <hr/>
 
-**2x**: _2026-07-25 07:23:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18585/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080916614278025216#1:build-log.txt%3A789)
+**2x**: _2026-07-25 00:13:04 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.36-sig-network/2080805647405813760#1:build-log.txt%3A2212)
 <details>
 <summary>all...</summary>
 
@@ -199,7 +199,7 @@
 
 <hr/>
 
-**22x**: _2026-07-24 22:42:00 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080764929639452672#1:build-log.txt%3A386)
+**22x**: _2026-07-24 22:46:14 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080764931073904640#1:build-log.txt%3A373)
 <details>
 <summary>all...</summary>
 
@@ -256,7 +256,7 @@
 
 <hr/>
 
-**11x**: _2026-07-24 13:11:04 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080570620541669376#1:build-log.txt%3A3677)
+**11x**: _2026-07-24 14:15:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-k8s-1.34-sig-network/2080651063618179072#1:build-log.txt%3A4014)
 <details>
 <summary>all...</summary>
 
@@ -309,7 +309,7 @@
 
 <hr/>
 
-**4x**: _2026-07-24 07:51:32 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18542/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080561368284532736#1:build-log.txt%3A1855)
+**4x**: _2026-07-24 07:51:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18542/pull-kubevirt-e2e-k8s-1.35-sig-network/2080561358188843008#1:build-log.txt%3A841)
 <details>
 <summary>all...</summary>
 
@@ -329,32 +329,6 @@
 ### 2026-07-23 (13x / 12.38%)
 
 
-#### internal (5x / 38.46%)
-
-<details>
-<summary> make cluster lifecycle target failure (5x / 38.46%) </summary>
-
-<hr/>
-
-**5x**: _2026-07-23 16:11:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18568/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080233043007639552#1:build-log.txt%3A1943)
-<details>
-<summary>all...</summary>
-
-* _2026-07-23 21:52:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080410663418597376#1:build-log.txt%3A1825)
-
-* _2026-07-23 16:11:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18568/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080233043007639552#1:build-log.txt%3A1943)
-
-* _2026-07-23 11:52:45 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18414/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080250895450247168#1:build-log.txt%3A832)
-
-* _2026-07-23 10:43:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.34-sig-network/2080239905874644992#1:build-log.txt%3A834)
-
-* _2026-07-23 10:35:26 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080239905669124096#1:build-log.txt%3A836)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (8x / 61.54%)
 
 <details>
@@ -362,7 +336,7 @@
 
 <hr/>
 
-**8x**: _2026-07-23 12:38:04 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18491/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial/2080239156256051200#1:build-log.txt%3A2662)
+**8x**: _2026-07-23 11:51:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18410/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080253331493621760#1:build-log.txt%3A3558)
 <details>
 <summary>all...</summary>
 
@@ -387,6 +361,32 @@
 <hr/>
 </details>
 
+#### internal (5x / 38.46%)
+
+<details>
+<summary> make cluster lifecycle target failure (5x / 38.46%) </summary>
+
+<hr/>
+
+**5x**: _2026-07-23 10:43:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.34-sig-network/2080239905874644992#1:build-log.txt%3A834)
+<details>
+<summary>all...</summary>
+
+* _2026-07-23 21:52:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080410663418597376#1:build-log.txt%3A1825)
+
+* _2026-07-23 16:11:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18568/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080233043007639552#1:build-log.txt%3A1943)
+
+* _2026-07-23 11:52:45 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18414/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080250895450247168#1:build-log.txt%3A832)
+
+* _2026-07-23 10:43:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.34-sig-network/2080239905874644992#1:build-log.txt%3A834)
+
+* _2026-07-23 10:35:26 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080239905669124096#1:build-log.txt%3A836)
+
+</details>
+
+<hr/>
+</details>
+
 ### 2026-07-22 (16x / 15.24%)
 
 
@@ -397,7 +397,7 @@
 
 <hr/>
 
-**5x**: _2026-07-22 19:01:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17946/pull-kubevirt-e2e-k8s-1.34-sig-compute/2079925529477124096#1:build-log.txt%3A3703)
+**5x**: _2026-07-22 15:50:33 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18530/pull-kubevirt-e2e-k8s-1.34-sig-network/2079956261721346048#1:build-log.txt%3A3523)
 <details>
 <summary>all...</summary>
 
@@ -423,7 +423,7 @@
 
 <hr/>
 
-**10x**: _2026-07-22 16:07:50 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18530/pull-kubevirt-e2e-k8s-1.34-windows2016/2079961254075568128#1:build-log.txt%3A832)
+**10x**: _2026-07-22 10:36:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18436/pull-kubevirt-e2e-k8s-1.36-sig-network/2079877999724859392#1:build-log.txt%3A1911)
 <details>
 <summary>all...</summary>
 
@@ -482,7 +482,7 @@
 
 <hr/>
 
-**44x**: _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
+**44x**: _2026-07-25 07:28:43 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080916717994774528#1:build-log.txt%3A384)
 <details>
 <summary>all...</summary>
 
@@ -534,18 +534,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
-* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080916717386600448#1:build-log.txt%3A449)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-07:31:31: selecting podman as container runtime
-07:31:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-operator is being used by the following container(s): f06b1b99b3f1255b80ced29c51ea6e166bf77b75152da977e5e33fcb41ce09f1: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
 * _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080916717092999168#1:build-log.txt%3A449)
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
@@ -558,11 +546,11 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
-* _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
+* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080916717386600448#1:build-log.txt%3A449)
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
-07:34:29: selecting podman as container runtime
-07:34:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network is being used by the following container(s): 8fcc89e7a913ab998c9840f50c27517bd031a186aa83418f810165275db3e6eb: volume is being used
+07:31:31: selecting podman as container runtime
+07:31:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-operator is being used by the following container(s): f06b1b99b3f1255b80ced29c51ea6e166bf77b75152da977e5e33fcb41ce09f1: volume is being used
 make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -570,11 +558,11 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
-* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
+* _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
-07:32:43: selecting podman as container runtime
-07:32:43: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated is being used by the following container(s): 92c74fbfb884800f0c8e229285363ecf71174896824ff5464213f864342a1873: volume is being used
+07:34:29: selecting podman as container runtime
+07:34:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network is being used by the following container(s): 8fcc89e7a913ab998c9840f50c27517bd031a186aa83418f810165275db3e6eb: volume is being used
 make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -599,6 +587,18 @@ make: *** [Makefile:177: cluster-down] Error 1
 <pre>./kubevirtci/cluster-up/down.sh
 07:31:26: selecting podman as container runtime
 07:31:26: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.35-sig-network is being used by the following container(s): 5743f0398a9e8309738e4d1148b503a36ef0d0698bea2db96152d14df3d4543b: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+07:32:43: selecting podman as container runtime
+07:32:43: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated is being used by the following container(s): 92c74fbfb884800f0c8e229285363ecf71174896824ff5464213f864342a1873: volume is being used
 make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -666,30 +666,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-02:25:44: selecting podman as container runtime
-02:25:45: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-operator is being used by the following container(s): 02ec8c67a48a1aa51dc138bd32b606a0ecbd48e8c45902bd357d4b9f4808c377: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-02:26:08: selecting podman as container runtime
-02:26:08: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.35-sig-storage is being used by the following container(s): 8b2b6d8e57839c0b861549317ffa4717515cf2789ee541c91c7595ebf6878432: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080840487949832192#1:build-log.txt%3A425)
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
@@ -702,11 +678,35 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+02:25:44: selecting podman as container runtime
+02:25:45: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-operator is being used by the following container(s): 02ec8c67a48a1aa51dc138bd32b606a0ecbd48e8c45902bd357d4b9f4808c377: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
 02:25:56: selecting podman as container runtime
 02:25:56: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network is being used by the following container(s): e97058d0a972415d2f6c7c141192f43d70ddd861430f39bdca99c37ac6a81715: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+02:26:08: selecting podman as container runtime
+02:26:08: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.35-sig-storage is being used by the following container(s): 8b2b6d8e57839c0b861549317ffa4717515cf2789ee541c91c7595ebf6878432: volume is being used
 make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -1023,7 +1023,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**35x**: _2026-07-26 17:10:22 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.34-sig-compute/2081426767049920512#1:build-log.txt%3A2934)
+**35x**: _2026-07-25 00:35:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080805660005502976#1:build-log.txt%3A4006)
 <details>
 <summary>all...</summary>
 
@@ -1456,7 +1456,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**2x**: _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
+**2x**: _2026-07-26 17:10:20 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.35-sig-network/2081426767381270528#1:build-log.txt%3A2180)
 <details>
 <summary>all...</summary>
 
@@ -1489,24 +1489,6 @@ Cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-### needs-investigation (1x / 0.95%)
-
-<details>
-<summary> no error snippets (1x / 0.95%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
-<details>
-<summary>all...</summary>
-
-* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
-
-</details>
-
-<hr/>
-</details>
-
 ### internal (23x / 21.90%)
 
 <details>
@@ -1514,7 +1496,7 @@ Cleaning up after podman in container.</pre>
 
 <hr/>
 
-**23x**: _2026-07-23 16:11:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18568/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080233043007639552#1:build-log.txt%3A1943)
+**23x**: _2026-07-23 10:43:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.34-sig-network/2080239905874644992#1:build-log.txt%3A834)
 <details>
 <summary>all...</summary>
 
@@ -1799,6 +1781,24 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
+### needs-investigation (1x / 0.95%)
+
+<details>
+<summary> no error snippets (1x / 0.95%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
+<details>
+<summary>all...</summary>
+
+* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
@@ -1814,7 +1814,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**44x**: _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
+**44x**: _2026-07-25 07:28:43 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080916717994774528#1:build-log.txt%3A384)
 <details>
 <summary>all...</summary>
 
@@ -1826,17 +1826,17 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 * _2026-07-25 07:23:37 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080916717680201728#1:build-log.txt%3A438)
 
-* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080916717386600448#1:build-log.txt%3A449)
-
 * _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080916717092999168#1:build-log.txt%3A449)
 
-* _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
+* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080916717386600448#1:build-log.txt%3A449)
 
-* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
+* _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
 
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080916716866506752#1:build-log.txt%3A367)
 
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-network/2080916717504040960#1:build-log.txt%3A432)
+
+* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
 
 * _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
 
@@ -1848,13 +1848,13 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-compute/2080840488834830336#1:build-log.txt%3A402)
 
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
-
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
-
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080840487949832192#1:build-log.txt%3A425)
 
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-operator/2080840488360873984#1:build-log.txt%3A389)
+
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
 
 * _2026-07-25 02:20:40 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080840487815614464#1:build-log.txt%3A364)
 
@@ -1915,7 +1915,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**34x**: _2026-07-26 17:10:22 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.34-sig-compute/2081426767049920512#1:build-log.txt%3A2934)
+**34x**: _2026-07-25 00:35:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080805660005502976#1:build-log.txt%3A4006)
 <details>
 <summary>all...</summary>
 
@@ -1996,31 +1996,13 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**2x**: _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
+**2x**: _2026-07-26 17:10:20 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.35-sig-network/2081426767381270528#1:build-log.txt%3A2180)
 <details>
 <summary>all...</summary>
 
 * _2026-07-26 17:10:20 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.35-sig-network/2081426767381270528#1:build-log.txt%3A2180)
 
 * _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 0.98%)
-
-<details>
-<summary> no error snippets (1x / 0.98%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
-<details>
-<summary>all...</summary>
-
-* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
 
 </details>
 
@@ -2034,7 +2016,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**21x**: _2026-07-23 16:11:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18568/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080233043007639552#1:build-log.txt%3A1943)
+**21x**: _2026-07-23 10:43:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18296/pull-kubevirt-e2e-k8s-1.34-sig-network/2080239905874644992#1:build-log.txt%3A834)
 <details>
 <summary>all...</summary>
 
@@ -2079,6 +2061,24 @@ make: *** [Makefile:177: cluster-down] Error 1
 * _2026-07-22 11:24:21 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18550/pull-kubevirt-e2e-k8s-1.36-sig-compute/2079884525898305536#1:build-log.txt%3A2062)
 
 * _2026-07-22 10:36:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18436/pull-kubevirt-e2e-k8s-1.36-sig-network/2079877999724859392#1:build-log.txt%3A1911)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 0.98%)
+
+<details>
+<summary> no error snippets (1x / 0.98%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
+<details>
+<summary>all...</summary>
+
+* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
 
 </details>
 
@@ -2160,7 +2160,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**20x**: _2026-07-25 07:23:30 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-compute/2080916717239799808#1:build-log.txt%3A433)
+**20x**: _2026-07-25 07:28:43 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080916717994774528#1:build-log.txt%3A384)
 <details>
 <summary>all...</summary>
 
@@ -2213,7 +2213,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**14x**: _2026-07-26 17:10:22 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18469/pull-kubevirt-e2e-k8s-1.34-sig-compute/2081426767049920512#1:build-log.txt%3A2934)
+**14x**: _2026-07-25 00:35:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18533/pull-kubevirt-e2e-k8s-1.35-sig-operator/2080805660005502976#1:build-log.txt%3A4006)
 <details>
 <summary>all...</summary>
 
@@ -2244,24 +2244,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 * _2026-07-22 18:11:27 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18550/pull-kubevirt-e2e-k8s-1.35-sig-compute/2079887455724507136#1:build-log.txt%3A2629)
 
 * _2026-07-22 12:18:49 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18552/pull-kubevirt-e2e-kind-1.34-sev-1.9/2079903851376283648#1:build-log.txt%3A5353)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 2.33%)
-
-<details>
-<summary> no error snippets (1x / 2.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
-<details>
-<summary>all...</summary>
-
-* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
 
 </details>
 
@@ -2300,80 +2282,18 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-storage (16x / 15.24%)
-
-
-#### external (12x / 75.00%)
+#### needs-investigation (1x / 2.33%)
 
 <details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (8x / 50.00%) </summary>
+<summary> no error snippets (1x / 2.33%) </summary>
 
 <hr/>
 
-**8x**: _2026-07-25 07:23:37 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080916717680201728#1:build-log.txt%3A438)
+**1x**: _2026-07-22 13:32:04 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
 <details>
 <summary>all...</summary>
 
-* _2026-07-25 07:23:37 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080916717680201728#1:build-log.txt%3A438)
-
-* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080916717092999168#1:build-log.txt%3A449)
-
-* _2026-07-25 02:20:42 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080840488079855616#1:build-log.txt%3A438)
-
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
-
-* _2026-07-24 22:45:46 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080764930146963456#1:build-log.txt%3A406)
-
-* _2026-07-24 22:41:14 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080764929391988736#1:build-log.txt%3A394)
-
-* _2026-07-24 17:59:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080711464133332992#1:build-log.txt%3A375)
-
-* _2026-07-24 17:56:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080711463592267776#1:build-log.txt%3A441)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 25.00%) </summary>
-
-<hr/>
-
-**4x**: _2026-07-24 14:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080658114465501184#1:build-log.txt%3A2570)
-<details>
-<summary>all...</summary>
-
-* _2026-07-26 10:45:39 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18474/pull-kubevirt-e2e-k8s-1.34-sig-storage/2081329965713854464#1:build-log.txt%3A2866)
-
-* _2026-07-24 14:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080658114465501184#1:build-log.txt%3A2570)
-
-* _2026-07-24 14:16:53 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080651063739813888#1:build-log.txt%3A2651)
-
-* _2026-07-23 15:40:52 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.36-sig-storage/2080316875354411008#1:build-log.txt%3A3593)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (4x / 25.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (4x / 25.00%) </summary>
-
-<hr/>
-
-**4x**: _2026-07-22 19:07:27 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17946/pull-kubevirt-e2e-k8s-1.35-sig-storage/2079925529808474112#1:build-log.txt%3A835)
-<details>
-<summary>all...</summary>
-
-* _2026-07-24 13:09:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080570620432617472#1:build-log.txt%3A1966)
-
-* _2026-07-23 11:52:45 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18414/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080250895450247168#1:build-log.txt%3A832)
-
-* _2026-07-22 19:07:27 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17946/pull-kubevirt-e2e-k8s-1.35-sig-storage/2079925529808474112#1:build-log.txt%3A835)
-
-* _2026-07-22 15:51:21 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18530/pull-kubevirt-e2e-k8s-1.34-sig-storage/2079956261884923904#1:build-log.txt%3A1902)
+* _2026-07-22 13:32:04 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-kind-1.36-sev/2079922111794647040)
 
 </details>
 
@@ -2396,17 +2316,17 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 * _2026-07-25 07:23:35 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080916716325441536#1:build-log.txt%3A460)
 
+* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-network/2080916717504040960#1:build-log.txt%3A432)
+
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080916716623237120#1:build-log.txt%3A457)
 
 * _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080916716866506752#1:build-log.txt%3A367)
 
-* _2026-07-25 07:23:34 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-network/2080916717504040960#1:build-log.txt%3A432)
-
 * _2026-07-25 02:20:43 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-network/2080840488520257536#1:build-log.txt%3A444)
 
-* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
-
 * _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-network/2080840487949832192#1:build-log.txt%3A425)
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2080840487677202432#1:build-log.txt%3A429)
 
 * _2026-07-25 02:20:40 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2080840487815614464#1:build-log.txt%3A364)
 
@@ -2529,21 +2449,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 #### external (2x / 40.00%)
 
 <details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
-<details>
-<summary>all...</summary>
-
-* _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 20.00%) </summary>
 
 <hr/>
@@ -2553,6 +2458,21 @@ make: *** [Makefile:177: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-07-23 03:35:15 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18453/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080107377016705024#1:build-log.txt%3A5485)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
+<details>
+<summary>all...</summary>
+
+* _2026-07-24 16:07:20 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.36-sig-performance/2080685210604670976#1:build-log.txt%3A1193)
 
 </details>
 
@@ -2581,4 +2501,84 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-07-28 21:38:50
+### sig-storage (16x / 15.24%)
+
+
+#### external (12x / 75.00%)
+
+<details>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (8x / 50.00%) </summary>
+
+<hr/>
+
+**8x**: _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080916717092999168#1:build-log.txt%3A449)
+<details>
+<summary>all...</summary>
+
+* _2026-07-25 07:23:37 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080916717680201728#1:build-log.txt%3A438)
+
+* _2026-07-25 07:23:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080916717092999168#1:build-log.txt%3A449)
+
+* _2026-07-25 02:20:42 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080840488079855616#1:build-log.txt%3A438)
+
+* _2026-07-25 02:20:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080840488658669568#1:build-log.txt%3A388)
+
+* _2026-07-24 22:45:46 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080764930146963456#1:build-log.txt%3A406)
+
+* _2026-07-24 22:41:14 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080764929391988736#1:build-log.txt%3A394)
+
+* _2026-07-24 17:59:31 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080711464133332992#1:build-log.txt%3A375)
+
+* _2026-07-24 17:56:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18223/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080711463592267776#1:build-log.txt%3A441)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 25.00%) </summary>
+
+<hr/>
+
+**4x**: _2026-07-23 15:40:52 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.36-sig-storage/2080316875354411008#1:build-log.txt%3A3593)
+<details>
+<summary>all...</summary>
+
+* _2026-07-26 10:45:39 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18474/pull-kubevirt-e2e-k8s-1.34-sig-storage/2081329965713854464#1:build-log.txt%3A2866)
+
+* _2026-07-24 14:17:16 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18400/pull-kubevirt-e2e-k8s-1.35-sig-storage/2080658114465501184#1:build-log.txt%3A2570)
+
+* _2026-07-24 14:16:53 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18168/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080651063739813888#1:build-log.txt%3A2651)
+
+* _2026-07-23 15:40:52 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.36-sig-storage/2080316875354411008#1:build-log.txt%3A3593)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (4x / 25.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (4x / 25.00%) </summary>
+
+<hr/>
+
+**4x**: _2026-07-24 13:09:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080570620432617472#1:build-log.txt%3A1966)
+<details>
+<summary>all...</summary>
+
+* _2026-07-24 13:09:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18428/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080570620432617472#1:build-log.txt%3A1966)
+
+* _2026-07-23 11:52:45 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18414/pull-kubevirt-e2e-k8s-1.34-sig-storage/2080250895450247168#1:build-log.txt%3A832)
+
+* _2026-07-22 19:07:27 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17946/pull-kubevirt-e2e-k8s-1.35-sig-storage/2079925529808474112#1:build-log.txt%3A835)
+
+* _2026-07-22 15:51:21 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18530/pull-kubevirt-e2e-k8s-1.34-sig-storage/2079956261884923904#1:build-log.txt%3A1902)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-07-29 00:30:02
