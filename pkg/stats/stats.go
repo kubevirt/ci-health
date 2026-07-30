@@ -339,8 +339,13 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 			successOnlyCounts[name]++
 		}
 	}
-	for name, count := range successOnlyCounts {
-		sortedFailedJobs = append(sortedFailedJobs, types.FailedJob{JobName: name, SuccessCount: count})
+	successOnlyNames := make([]string, 0, len(successOnlyCounts))
+	for name := range successOnlyCounts {
+		successOnlyNames = append(successOnlyNames, name)
+	}
+	slices.Sort(successOnlyNames)
+	for _, name := range successOnlyNames {
+		sortedFailedJobs = append(sortedFailedJobs, types.FailedJob{JobName: name, SuccessCount: successOnlyCounts[name]})
 	}
 
 	dataItem.FailedJobLeaderBoard = sortedFailedJobs
