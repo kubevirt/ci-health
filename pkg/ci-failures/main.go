@@ -21,7 +21,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-const logsDir = "output/tmp/build-logs"
+var logsDir = "output/tmp/build-logs"
 
 var (
 	// Each regex matches a line occurring in the build log which we want to see
