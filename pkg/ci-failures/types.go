@@ -1,6 +1,7 @@
 package cifailures
 
 import (
+	"log"
 	"regexp"
 	"sort"
 	"time"
@@ -70,7 +71,11 @@ func (j *JobBuildErrors) K8SVersion() string {
 }
 
 func (j *JobBuildErrors) SIG() string {
-	return SIGForGroup(j.JobName)
+	sig, err := SIGForGroup(j.JobName)
+	if err != nil {
+		log.Printf("no sig: %v", err)
+	}
+	return sig
 }
 
 var branchRegex = regexp.MustCompile(`.*(-[01]\.[0-9]+)$`)
