@@ -328,6 +328,26 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 			return cmp.Compare(prowJobID(b), prowJobID(a))
 		})
 	}
+
+	failedJobSet := make(map[string]struct{}, len(sortedFailedJobs))
+	for _, job := range sortedFailedJobs {
+		failedJobSet[job.JobName] = struct{}{}
+	}
+	successOnlyCounts := make(map[string]int)
+	for _, name := range successJobNames {
+		if _, hasFailed := failedJobSet[name]; !hasFailed {
+			successOnlyCounts[name]++
+		}
+	}
+	successOnlyNames := make([]string, 0, len(successOnlyCounts))
+	for name := range successOnlyCounts {
+		successOnlyNames = append(successOnlyNames, name)
+	}
+	slices.Sort(successOnlyNames)
+	for _, name := range successOnlyNames {
+		sortedFailedJobs = append(sortedFailedJobs, types.FailedJob{JobName: name, SuccessCount: successOnlyCounts[name]})
+	}
+
 	dataItem.FailedJobLeaderBoard = sortedFailedJobs
 	results.Data[constants.SIGRetests] = dataItem
 
