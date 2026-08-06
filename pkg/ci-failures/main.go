@@ -142,25 +142,6 @@ func DownloadBuildLogs(ciFailureJobURLs []string) ([]string, error) {
 	return logFiles, nil
 }
 
-var groups = map[string]string{
-	"sig-compute":     "sig-compute|sig-operator|sev|vgpu|windows",
-	"sig-network":     "sig-network|sriov",
-	"sig-storage":     "sig-storage",
-	"sig-monitoring":  "sig-monitoring",
-	"sig-performance": "sig-performance",
-}
-
-func SIGForGroup(whatever string) string {
-	for sig, group := range groups {
-		groupMatcher := regexp.MustCompile(group)
-		if groupMatcher.MatchString(whatever) {
-			return sig
-		}
-	}
-	log.Fatalf("no sig found for %s", whatever)
-	return ""
-}
-
 // ExtractErrors fetches failures from the build logs of build urls given through the file.
 // It writes matching lines into one file per group, under the provided output directory.
 // It returns the file names of the files created.
