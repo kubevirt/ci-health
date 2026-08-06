@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-04 (1x / 33.33%)
+### 2026-08-04 (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,13 +38,13 @@
 <hr/>
 </details>
 
-### 2026-07-30 (2x / 66.67%)
+### 2026-07-30 (1x / 50.00%)
 
 
-#### internal (1x / 50.00%)
+#### internal (1x / 100.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -59,37 +59,19 @@
 <hr/>
 </details>
 
-#### external (1x / 50.00%)
+<a id="per-error-category"></a>
+
+## per error category [⬆](#top)
+
+
+### external (1x / 50.00%)
 
 <details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-<details>
-<summary>all...</summary>
-
-* _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-
-</details>
-
-<hr/>
-</details>
-
-<a id="per-error-category"></a>
-
-## per error category [⬆](#top)
-
-
-### external (2x / 66.67%)
-
-<details>
-<summary> container image pull failure in context (2x / 66.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
+**1x**: _2026-08-04 01:45:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18671/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial-1.9/2084455542964621312#1:build-log.txt%3A604)
 <details>
 <summary>all...</summary>
 
@@ -105,27 +87,15 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 
-* _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-<details><summary>context</summary>
-<pre>07:02:40: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:02:40: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:02:43: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2359435640/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260730%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260730T070243Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f175f684cac3ad3f4b7138ba6cd3fc46f17a809d59715f296ba1210765b89a14&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1785395863~hmac=d2e1138027895eb1a76396c4f3ce5e8605eb87adaa68b6e6ede1aeb2ec91e6e3&#34;: EOF)
-make: *** [Makefile:174: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 
-### internal (1x / 33.33%)
+### internal (1x / 50.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -155,7 +125,7 @@ make: *** [Makefile:162: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
-### release-1.9 (1x / 33.33%)
+### release-1.9 (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -176,7 +146,7 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.7 (1x / 33.33%)
+### release-1.7 (1x / 50.00%)
 
 
 #### internal (1x / 100.00%)
@@ -197,59 +167,18 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### main (1x / 33.33%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-<details>
-<summary>all...</summary>
-
-* _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 100.00%)
+### sig-compute (2x / 100.00%)
 
 
-#### external (2x / 66.67%)
-
-<details>
-<summary> container image pull failure in context (2x / 66.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-<details>
-<summary>all...</summary>
-
-* _2026-08-04 01:45:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18671/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial-1.9/2084455542964621312#1:build-log.txt%3A604)
-
-* _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
+#### internal (1x / 50.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -264,4 +193,22 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-06 06:58:06
+#### external (1x / 50.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-04 01:45:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18671/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial-1.9/2084455542964621312#1:build-log.txt%3A604)
+<details>
+<summary>all...</summary>
+
+* _2026-08-04 01:45:36 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18671/pull-kubevirt-e2e-k8s-1.36-sig-compute-serial-1.9/2084455542964621312#1:build-log.txt%3A604)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-08-06 10:00:19
