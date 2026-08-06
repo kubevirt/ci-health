@@ -243,21 +243,6 @@ make: *** [Makefile:162: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-07-30 05:30:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18613/pull-kubevirt-e2e-k8s-1.36-sig-network/2082700298786181120#1:build-log.txt%3A1858)
-<details>
-<summary>all...</summary>
-
-* _2026-07-30 05:30:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18613/pull-kubevirt-e2e-k8s-1.36-sig-network/2082700298786181120#1:build-log.txt%3A1858)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -267,6 +252,21 @@ make: *** [Makefile:162: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-07-30 06:56:30 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18592/pull-kubevirt-e2e-kind-1.35-vgpu/2082721834897248256#1:build-log.txt%3A444)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-07-30 05:30:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18613/pull-kubevirt-e2e-k8s-1.36-sig-network/2082700298786181120#1:build-log.txt%3A1858)
+<details>
+<summary>all...</summary>
+
+* _2026-07-30 05:30:51 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18613/pull-kubevirt-e2e-k8s-1.36-sig-network/2082700298786181120#1:build-log.txt%3A1858)
 
 </details>
 
@@ -340,4 +340,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-05 21:33:21
+Last updated: 2026-08-06 00:24:53
