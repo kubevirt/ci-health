@@ -104,5 +104,5 @@ The repository uses GitHub Actions and a Prow postsubmit in `kubevirt/project-in
 - **Action**:
     1. Loops over SIGs: compute, network, storage, operator, monitoring.
     2. Runs `go run ./cmd/html-report --sig <SIG> --results-path ./output/kubevirt/kubevirt/results.json` for each.
-    3. Uploads the generated HTML files to `gs://kubevirt-prow/reports/sig-failure-reports/` via `gsutil`.
+    3. Uploads the generated HTML files to `gs://kubevirt-prow/reports/sig-failure-reports/` via `gcloud storage`.
     4. The reports are then available at `https://storage.googleapis.com/kubevirt-prow/reports/sig-failure-reports/sig-<name>-failure-report.html`.
