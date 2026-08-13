@@ -17,13 +17,31 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-12 (1x / 25.00%)
+### 2026-08-12 (2x / 40.00%)
 
 
-#### external (1x / 100.00%)
+#### needs-investigation (1x / 50.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+<summary> no error snippets (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -38,7 +56,7 @@
 <hr/>
 </details>
 
-### 2026-08-11 (1x / 25.00%)
+### 2026-08-11 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -59,7 +77,7 @@
 <hr/>
 </details>
 
-### 2026-08-10 (1x / 25.00%)
+### 2026-08-10 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -80,7 +98,7 @@
 <hr/>
 </details>
 
-### 2026-08-09 (1x / 25.00%)
+### 2026-08-09 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -106,10 +124,28 @@
 ## per error category [⬆](#top)
 
 
-### external (4x / 100.00%)
+### needs-investigation (1x / 20.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 100.00%) </summary>
+<summary> no error snippets (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
+### external (4x / 80.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 80.00%) </summary>
 
 <hr/>
 
@@ -183,13 +219,31 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1879
 ## per branch [⬆](#top)
 
 
-### main (4x / 100.00%)
+### main (5x / 100.00%)
 
 
-#### external (4x / 100.00%)
+#### needs-investigation (1x / 20.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 100.00%) </summary>
+<summary> no error snippets (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (4x / 80.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 80.00%) </summary>
 
 <hr/>
 
@@ -223,13 +277,31 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1879
 ## per SIG [⬆](#top)
 
 
-### sig-compute (1x / 25.00%)
+### sig-compute (2x / 40.00%)
 
 
-#### external (1x / 100.00%)
+#### needs-investigation (1x / 50.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+<summary> no error snippets (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -244,7 +316,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1879
 <hr/>
 </details>
 
-### sig-network (3x / 75.00%)
+### sig-network (3x / 60.00%)
 
 
 #### external (3x / 100.00%)
@@ -269,4 +341,4 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1879
 <hr/>
 </details>
 
-Last updated: 2026-08-13 15:48:19
+Last updated: 2026-08-13 18:26:42
