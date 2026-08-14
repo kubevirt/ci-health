@@ -134,6 +134,24 @@
 ## per error category [⬆](#top)
 
 
+### needs-investigation (1x / 16.67%)
+
+<details>
+<summary> no error snippets (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
 ### external (5x / 83.33%)
 
 <details>
@@ -141,27 +159,7 @@
 
 <hr/>
 
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details><summary>context</summary>
-<pre>&#43; set &#43;x
-
-================================
-ERROR: Found panic in test output
-Files:
-https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler.log
-https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler_previous.log</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**4x**: _2026-08-09 12:42:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18752/pull-kubevirt-e2e-k8s-1.36-sig-network/2086432842375499776#1:build-log.txt%3A1841)
+**4x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
 <details>
 <summary>all...</summary>
 
@@ -216,20 +214,22 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 <hr/>
-</details>
 
-### needs-investigation (1x / 16.67%)
-
-<details>
-<summary> no error snippets (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
 <details>
 <summary>all...</summary>
 
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
+<details><summary>context</summary>
+<pre>&#43; set &#43;x
+
+================================
+ERROR: Found panic in test output
+Files:
+https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler.log
+https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler_previous.log</pre>
+</details>
+
 
 </details>
 
@@ -244,6 +244,24 @@ make: *** [Makefile:177: cluster-down] Error 1
 ### main (6x / 100.00%)
 
 
+#### needs-investigation (1x / 16.67%)
+
+<details>
+<summary> no error snippets (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+
+</details>
+
+<hr/>
+</details>
+
 #### external (5x / 83.33%)
 
 <details>
@@ -251,17 +269,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-
-</details>
-
-<hr/>
-
-**4x**: _2026-08-09 12:42:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18752/pull-kubevirt-e2e-k8s-1.36-sig-network/2086432842375499776#1:build-log.txt%3A1841)
+**4x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
 <details>
 <summary>all...</summary>
 
@@ -276,20 +284,12 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 <hr/>
-</details>
 
-#### needs-investigation (1x / 16.67%)
-
-<details>
-<summary> no error snippets (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
 <details>
 <summary>all...</summary>
 
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
 
 </details>
 
@@ -350,7 +350,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 
-**4x**: _2026-08-09 12:42:41 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18752/pull-kubevirt-e2e-k8s-1.36-sig-network/2086432842375499776#1:build-log.txt%3A1841)
+**4x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
 <details>
 <summary>all...</summary>
 
@@ -367,4 +367,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-14 18:23:28
+Last updated: 2026-08-14 21:14:34
