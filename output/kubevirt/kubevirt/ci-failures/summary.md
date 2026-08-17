@@ -41,24 +41,6 @@
 ### 2026-08-12 (3x / 50.00%)
 
 
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no error snippets (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (2x / 66.67%)
 
 <details>
@@ -81,6 +63,24 @@
 <summary>all...</summary>
 
 * _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no error snippets (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
 
 </details>
 
@@ -141,7 +141,7 @@
 
 <hr/>
 
-**3x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**3x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
@@ -264,7 +264,7 @@ make: *** [Makefile:174: cluster-up] Error 125
 
 <hr/>
 
-**3x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**3x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
@@ -391,7 +391,7 @@ make: *** [Makefile:174: cluster-up] Error 125
 
 <hr/>
 
-**3x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**3x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
@@ -406,4 +406,4 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-08-17 03:26:40
+Last updated: 2026-08-17 06:11:57
