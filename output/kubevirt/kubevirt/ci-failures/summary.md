@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-15 (1x / 20.00%)
+### 2026-08-15 (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-08-12 (3x / 60.00%)
+### 2026-08-12 (3x / 75.00%)
 
 
 #### needs-investigation (1x / 33.33%)
@@ -87,40 +87,19 @@
 <hr/>
 </details>
 
-### 2026-08-11 (1x / 20.00%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
-<details>
-<summary>all...</summary>
-
-* _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (4x / 80.00%)
+### external (3x / 75.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 60.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**1x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
@@ -129,18 +108,6 @@
 <pre>./kubevirtci/cluster-up/down.sh
 16:46:35: selecting podman as container runtime
 16:47:10: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated is being used by the following container(s): deeca495cdd3bb06d151d4ddc42a242d7b67c0f385beae0267b981de257c431d: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-* _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-10:03:29: selecting podman as container runtime
-10:04:06: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network is being used by the following container(s): 1b3b76e9551ad92365b6d9f13cd729ce578e50cc7f611864149ccf86f1a052ce: volume is being used
 make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -173,7 +140,7 @@ https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/1879
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
+<summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -198,10 +165,10 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-### needs-investigation (1x / 20.00%)
+### needs-investigation (1x / 25.00%)
 
 <details>
-<summary> no error snippets (1x / 20.00%) </summary>
+<summary> no error snippets (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -221,23 +188,21 @@ make: *** [Makefile:174: cluster-up] Error 125
 ## per branch [⬆](#top)
 
 
-### main (5x / 100.00%)
+### main (4x / 100.00%)
 
 
-#### external (4x / 80.00%)
+#### external (3x / 75.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 60.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**1x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
 * _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
-
-* _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
 
 </details>
 
@@ -254,7 +219,7 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
+<summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -269,10 +234,10 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-#### needs-investigation (1x / 20.00%)
+#### needs-investigation (1x / 25.00%)
 
 <details>
-<summary> no error snippets (1x / 20.00%) </summary>
+<summary> no error snippets (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -292,26 +257,11 @@ make: *** [Makefile:174: cluster-up] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-compute (3x / 60.00%)
+### sig-compute (3x / 75.00%)
 
 
 #### external (2x / 66.67%)
 
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> container image pull failure in context (1x / 33.33%) </summary>
 
@@ -322,6 +272,21 @@ make: *** [Makefile:174: cluster-up] Error 125
 <summary>all...</summary>
 
 * _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
+<details>
+<summary>all...</summary>
+
+* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
 
 </details>
 
@@ -346,27 +311,25 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-### sig-network (2x / 40.00%)
+### sig-network (1x / 25.00%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 100.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
+**1x**: _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 <details>
 <summary>all...</summary>
 
 * _2026-08-12 16:38:47 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18172/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2087556212068454400#1:build-log.txt%3A2630)
 
-* _2026-08-11 09:59:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18696/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network/2087116365491081216#1:build-log.txt%3A1809)
-
 </details>
 
 <hr/>
 </details>
 
-Last updated: 2026-08-18 09:22:17
+Last updated: 2026-08-18 12:13:49
