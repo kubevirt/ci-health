@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-17 (2x / 33.33%)
+### 2026-08-17 (2x / 50.00%)
 
 
 #### external (2x / 100.00%)
@@ -53,7 +53,7 @@
 <hr/>
 </details>
 
-### 2026-08-15 (1x / 16.67%)
+### 2026-08-15 (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -74,31 +74,13 @@
 <hr/>
 </details>
 
-### 2026-08-12 (3x / 50.00%)
+### 2026-08-12 (1x / 25.00%)
 
 
-#### needs-investigation (1x / 33.33%)
-
-<details>
-<summary> no error snippets (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (2x / 66.67%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 66.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -111,16 +93,6 @@
 </details>
 
 <hr/>
-
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-
-</details>
-
-<hr/>
 </details>
 
 <a id="per-error-category"></a>
@@ -128,10 +100,10 @@
 ## per error category [⬆](#top)
 
 
-### external (5x / 83.33%)
+### external (4x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -166,54 +138,9 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 <hr/>
-
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details><summary>context</summary>
-<pre>&#43; set &#43;x
-
-================================
-ERROR: Found panic in test output
-Files:
-https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler.log
-https://storage.googleapis.com/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928/artifacts/pods/0_kubevirt_virt-handler-bhk8x-virt-handler_previous.log</pre>
-</details>
-
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details><summary>context</summary>
-<pre>13:51:36: INFO: 1 process: 1 internal.
-13:51:36: ERROR: Build did NOT complete successfully
-13:51:36: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 16.67%) </summary>
+<summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -237,19 +164,26 @@ make: *** [Makefile:174: cluster-up] Error 125
 
 <hr/>
 </details>
-
-### needs-investigation (1x / 16.67%)
-
 <details>
-<summary> no error snippets (1x / 16.67%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
 <details>
 <summary>all...</summary>
 
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
+* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
+<details><summary>context</summary>
+<pre>13:51:36: INFO: 1 process: 1 internal.
+13:51:36: ERROR: Build did NOT complete successfully
+13:51:36: ERROR: Build failed. Not running target
+make: *** [Makefile:39: bazel-build-images] Error 1
+&#43; rc=2
+&#43; return 2
+&#43; ret=2</pre>
+</details>
+
 
 </details>
 
@@ -261,13 +195,13 @@ make: *** [Makefile:174: cluster-up] Error 125
 ## per branch [⬆](#top)
 
 
-### main (6x / 100.00%)
+### main (4x / 100.00%)
 
 
-#### external (5x / 83.33%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -282,19 +216,50 @@ make: *** [Makefile:174: cluster-up] Error 125
 </details>
 
 <hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 25.00%) </summary>
 
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
+<hr/>
+
+**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
 <details>
 <summary>all...</summary>
 
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
+* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
 
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 16.67%) </summary>
+<summary> container image pull failure in context (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
+<details>
+<summary>all...</summary>
+
+* _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
+
+</details>
+
+<hr/>
+</details>
+
+<a id="per-sig"></a>
+
+## per SIG [⬆](#top)
+
+
+### sig-compute (3x / 75.00%)
+
+
+#### external (3x / 100.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -309,51 +274,7 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 16.67%)
-
-<details>
-<summary> no error snippets (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-
-</details>
-
-<hr/>
-</details>
-
-<a id="per-sig"></a>
-
-## per SIG [⬆](#top)
-
-
-### sig-compute (5x / 83.33%)
-
-
-#### external (4x / 80.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -366,34 +287,9 @@ make: *** [Makefile:174: cluster-up] Error 125
 </details>
 
 <hr/>
-
-**1x**: _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:12:13 &#43;0000 UTC_: <code>ERROR: Found panic in test output</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18796/pull-kubevirt-e2e-kind-1.36-sev/2087436754020732928#1:build-log.txt%3A3065)
-
-</details>
-
-<hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
-<details>
-<summary>all...</summary>
-
-* _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 20.00%) </summary>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -408,25 +304,7 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-#### needs-investigation (1x / 20.00%)
-
-<details>
-<summary> no error snippets (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-12 07:49:43 &#43;0000 UTC_:  _(no match in error message grep)_ [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-<details>
-<summary>all...</summary>
-
-* _2026-08-12 07:49:43 &#43;0000 UTC_: [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18544/pull-kubevirt-e2e-kind-1.36-sev/2087446242324910080)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-network (1x / 16.67%)
+### sig-network (1x / 25.00%)
 
 
 #### external (1x / 100.00%)
@@ -447,4 +325,4 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-08-19 06:13:04
+Last updated: 2026-08-19 09:56:21
