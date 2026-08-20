@@ -154,31 +154,6 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
-<details>
-<summary>all...</summary>
-
-* _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
-<details><summary>context</summary>
-<pre>07:29:28: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:29:28: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:29:35: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3412874203/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260815%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260815T072930Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=cf5dca3a00a64fb6b9cd358b868f25f8171e0f68d23744f3cee01d80fc56f813&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1786779870~hmac=3f582bb27ae661e4a8f2305613f481d277d263a11d6a9726b311f17835e3cdd4&#34;: EOF)
-make: *** [Makefile:174: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 20.00%) </summary>
 
 <hr/>
@@ -196,6 +171,31 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 &#43; rc=2
 &#43; return 2
 &#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
+<details>
+<summary>all...</summary>
+
+* _2026-08-15 07:22:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18819/pull-kubevirt-e2e-kind-1.35-vgpu/2088526644472975360#1:build-log.txt%3A444)
+<details><summary>context</summary>
+<pre>07:29:28: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:29:28: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:29:35: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3412874203/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260815%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260815T072930Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=cf5dca3a00a64fb6b9cd358b868f25f8171e0f68d23744f3cee01d80fc56f813&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1786779870~hmac=3f582bb27ae661e4a8f2305613f481d277d263a11d6a9726b311f17835e3cdd4&#34;: EOF)
+make: *** [Makefile:174: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -324,4 +324,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-20 18:13:31
+Last updated: 2026-08-20 21:15:36
