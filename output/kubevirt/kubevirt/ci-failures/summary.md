@@ -294,21 +294,6 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 20.00%) </summary>
 
 <hr/>
@@ -323,5 +308,20 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 20.00%) </summary>
 
-Last updated: 2026-08-20 09:15:22
+<hr/>
+
+**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
+<details>
+<summary>all...</summary>
+
+* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-08-20 12:14:35
