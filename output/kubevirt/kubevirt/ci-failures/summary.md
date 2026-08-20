@@ -82,31 +82,6 @@
 ### external (3x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
-<details><summary>context</summary>
-<pre>07:01:32: INFO: Running command line: bazel-bin/push-alpine-with-test-tooling-container-disk.exe --registry localhost:5000/kubevirt --repository alpine-with-test-tooling-container-disk --tag devel
-07:01:40: Error during deploy: deploying images: Patch &#34;http://localhost:5000/v2/kubevirt/alpine-with-test-tooling-container-disk/blobs/uploads/6507ebe3-6186-468b-ad56-502f613a66a0?_state=rN4_2nF7YRUhTWXPps-dXAkz5dp7PtpMsz3WZeWK0Pd7Ik5hbWUiOiJrdWJldmlydC9hbHBpbmUtd2l0aC10ZXN0LXRvb2xpbmctY29udGFpbmVyLWRpc2siLCJVVUlEIjoiNjUwN2ViZTMtNjE4Ni00NjhiLWFkNTYtNTAyZjYxM2E2NmEwIiwiT2Zmc2V0IjowLCJTdGFydGVkQXQiOiIyMDI2LTA4LTE3VDA3OjAxOjM5LjQ3OTUwMjg5NVoifQ%3D%3D&#34;: readfrom tcp 127.0.0.1:59096-&gt;127.0.0.1:5000: unexpected EOF
-07:01:41: &#43; rm -f /tmp/kubevirt.deploy.cw8p
-make: *** [Makefile:189: cluster-sync] Error 1
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
@@ -149,6 +124,31 @@ make: *** [Makefile:174: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
+<details>
+<summary>all...</summary>
+
+* _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
+<details><summary>context</summary>
+<pre>07:01:32: INFO: Running command line: bazel-bin/push-alpine-with-test-tooling-container-disk.exe --registry localhost:5000/kubevirt --repository alpine-with-test-tooling-container-disk --tag devel
+07:01:40: Error during deploy: deploying images: Patch &#34;http://localhost:5000/v2/kubevirt/alpine-with-test-tooling-container-disk/blobs/uploads/6507ebe3-6186-468b-ad56-502f613a66a0?_state=rN4_2nF7YRUhTWXPps-dXAkz5dp7PtpMsz3WZeWK0Pd7Ik5hbWUiOiJrdWJldmlydC9hbHBpbmUtd2l0aC10ZXN0LXRvb2xpbmctY29udGFpbmVyLWRpc2siLCJVVUlEIjoiNjUwN2ViZTMtNjE4Ni00NjhiLWFkNTYtNTAyZjYxM2E2NmEwIiwiT2Zmc2V0IjowLCJTdGFydGVkQXQiOiIyMDI2LTA4LTE3VDA3OjAxOjM5LjQ3OTUwMjg5NVoifQ%3D%3D&#34;: readfrom tcp 127.0.0.1:59096-&gt;127.0.0.1:5000: unexpected EOF
+07:01:41: &#43; rm -f /tmp/kubevirt.deploy.cw8p
+make: *** [Makefile:189: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
 </details>
 
 
@@ -269,4 +269,4 @@ make: *** [Makefile:174: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-08-19 21:41:02
+Last updated: 2026-08-20 00:10:29
