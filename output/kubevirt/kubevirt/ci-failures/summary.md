@@ -169,31 +169,6 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 16.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-<details>
-<summary>all...</summary>
-
-* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-22:23:18: selecting podman as container runtime
-22:24:50: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-smoke is being used by the following container(s): 354982670f6d0a9f270fc4f37145de895fb0f52f3ad6eab81ac16d659c303fc5: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 16.67%) </summary>
 
 <hr/>
@@ -236,6 +211,31 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 &#43; rc=2
 &#43; return 2
 &#43; ret=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+<details>
+<summary>all...</summary>
+
+* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+22:23:18: selecting podman as container runtime
+22:24:50: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-smoke is being used by the following container(s): 354982670f6d0a9f270fc4f37145de895fb0f52f3ad6eab81ac16d659c303fc5: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -400,4 +400,4 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-21 12:14:24
+Last updated: 2026-08-21 15:27:51
