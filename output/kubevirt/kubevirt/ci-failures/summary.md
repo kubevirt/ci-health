@@ -46,21 +46,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
-<details>
-<summary>all...</summary>
-
-* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
@@ -70,6 +55,21 @@
 <summary>all...</summary>
 
 * _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
+<details>
+<summary>all...</summary>
+
+* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
 
 </details>
 
@@ -120,21 +120,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -144,6 +129,21 @@
 <summary>all...</summary>
 
 * _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
+<details>
+<summary>all...</summary>
+
+* _2026-08-17 06:54:40 &#43;0000 UTC_: <code>make: *** [Makefile:189: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18735/pull-kubevirt-e2e-kind-1.36-sev/2089244337438199808#1:build-log.txt%3A1685)
 
 </details>
 
@@ -326,6 +326,52 @@ make: *** [Makefile:177: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
+### release-1.9 (3x / 33.33%)
+
+
+#### external (3x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 66.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+<details>
+<summary>all...</summary>
+
+* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+
+</details>
+
+<hr/>
+
+**1x**: _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
+<details>
+<summary>all...</summary>
+
+* _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
+<details>
+<summary>all...</summary>
+
+* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
+
+</details>
+
+<hr/>
+</details>
+
 ### main (6x / 66.67%)
 
 
@@ -377,52 +423,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.9 (3x / 33.33%)
-
-
-#### external (3x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 66.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-<details>
-<summary>all...</summary>
-
-* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-
-</details>
-
-<hr/>
-
-**1x**: _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
-<details>
-<summary>all...</summary>
-
-* _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
-<details>
-<summary>all...</summary>
-
-* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
 
 </details>
 
@@ -530,4 +530,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-23 06:15:44
+Last updated: 2026-08-23 09:16:59
