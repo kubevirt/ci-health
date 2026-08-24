@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-22 (2x / 25.00%)
+### 2026-08-22 (2x / 28.57%)
 
 
 #### external (2x / 100.00%)
@@ -27,7 +27,7 @@
 
 <hr/>
 
-**2x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
+**2x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
 <details>
 <summary>all...</summary>
 
@@ -40,7 +40,7 @@
 <hr/>
 </details>
 
-### 2026-08-20 (2x / 25.00%)
+### 2026-08-20 (2x / 28.57%)
 
 
 #### external (2x / 100.00%)
@@ -76,7 +76,7 @@
 <hr/>
 </details>
 
-### 2026-08-19 (3x / 37.50%)
+### 2026-08-19 (3x / 42.86%)
 
 
 #### external (3x / 100.00%)
@@ -114,40 +114,19 @@
 <hr/>
 </details>
 
-### 2026-08-17 (1x / 12.50%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> download failure in context (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (8x / 100.00%)
+### external (7x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 62.50%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 71.43%) </summary>
 
 <hr/>
 
-**4x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
+**4x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
 <details>
 <summary>all...</summary>
 
@@ -224,52 +203,7 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
-<details>
-<summary>all...</summary>
-
-* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:58:34: selecting podman as container runtime
-12:59:33: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9 is being used by the following container(s): 540588388cc8e579de757d7f71ffe8dcfb7702efdadca03d9d1dfc863b4e7384: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details><summary>context</summary>
-<pre>13:51:36: INFO: 1 process: 1 internal.
-13:51:36: ERROR: Build did NOT complete successfully
-13:51:36: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 12.50%) </summary>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -293,19 +227,44 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> download failure in context (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
+<details>
+<summary>all...</summary>
+
+* _2026-08-20 12:15:23 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9/2090412226979565568#1:build-log.txt%3A4245)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:58:34: selecting podman as container runtime
+12:59:33: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute-1.9 is being used by the following container(s): 540588388cc8e579de757d7f71ffe8dcfb7702efdadca03d9d1dfc863b4e7384: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (5x / 62.50%)
+### main (4x / 57.14%)
 
 
-#### external (5x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 60.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 75.00%) </summary>
 
 <hr/>
 
@@ -324,22 +283,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 20.00%) </summary>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -354,7 +298,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.9 (3x / 37.50%)
+### release-1.9 (3x / 42.86%)
 
 
 #### external (3x / 100.00%)
@@ -405,17 +349,17 @@ make: *** [Makefile:177: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-compute (6x / 75.00%)
+### sig-compute (5x / 71.43%)
 
 
-#### external (6x / 100.00%)
+#### external (5x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 66.67%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 80.00%) </summary>
 
 <hr/>
 
-**4x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
+**4x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
 <details>
 <summary>all...</summary>
 
@@ -432,7 +376,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (2x / 33.33%) </summary>
+<summary> download failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -445,19 +389,9 @@ make: *** [Makefile:177: cluster-down] Error 1
 </details>
 
 <hr/>
-
-**1x**: _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-<details>
-<summary>all...</summary>
-
-* _2026-08-17 13:46:57 &#43;0000 UTC_: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18826/pull-kubevirt-e2e-kind-1.36-sig-compute-arm64/2089348140795695104#1:build-log.txt%3A248)
-
 </details>
 
-<hr/>
-</details>
-
-### sig-monitoring (1x / 12.50%)
+### sig-monitoring (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -478,7 +412,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-network (1x / 12.50%)
+### sig-network (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -499,4 +433,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-24 12:14:13
+Last updated: 2026-08-24 16:49:15
