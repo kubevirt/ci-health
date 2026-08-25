@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-22 (2x / 22.22%)
+### 2026-08-24 (1x / 10.00%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
+<details>
+<summary>all...</summary>
+
+* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-08-22 (2x / 20.00%)
 
 
 #### external (2x / 100.00%)
@@ -40,7 +61,7 @@
 <hr/>
 </details>
 
-### 2026-08-21 (2x / 22.22%)
+### 2026-08-21 (2x / 20.00%)
 
 
 #### external (2x / 100.00%)
@@ -50,7 +71,7 @@
 
 <hr/>
 
-**2x**: _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
+**2x**: _2026-08-21 10:58:19 &#43;0000 UTC_: <code>Error: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-3187576071/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-compute/2090755192768172032#1:build-log.txt%3A574)
 <details>
 <summary>all...</summary>
 
@@ -63,26 +84,11 @@
 <hr/>
 </details>
 
-### 2026-08-20 (2x / 22.22%)
+### 2026-08-20 (2x / 20.00%)
 
 
 #### external (2x / 100.00%)
 
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
-<details>
-<summary>all...</summary>
-
-* _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> download failure in context (1x / 50.00%) </summary>
 
@@ -98,8 +104,23 @@
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
-### 2026-08-19 (3x / 33.33%)
+<hr/>
+
+**1x**: _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
+<details>
+<summary>all...</summary>
+
+* _2026-08-20 12:15:35 &#43;0000 UTC_: <code>13:10:26: [sig-monitoring]VM Monitoring VM guest panic metrics should increment kubevirt_vmi_guest_os_panic_total when a guest OS panics [sig-monitoring, requires-amd64]</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.9/2090412217697570816#1:build-log.txt%3A5363)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-08-19 (3x / 30.00%)
 
 
 #### external (3x / 100.00%)
@@ -142,16 +163,28 @@
 ## per error category [⬆](#top)
 
 
-### external (9x / 100.00%)
+### external (10x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (5x / 55.56%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (6x / 60.00%) </summary>
 
 <hr/>
 
-**4x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+**5x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
 <details>
 <summary>all...</summary>
+
+* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+19:15:28: selecting podman as container runtime
+19:16:06: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network is being used by the following container(s): edbc20eab0ffa24b2ea7039833cb3d89d336f25ca216ea57fa57b8767cd0f141: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
 
 * _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 <details><summary>context</summary>
@@ -226,11 +259,11 @@ make: *** [Makefile:189: cluster-sync] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (2x / 22.22%) </summary>
+<summary> container image pull failure in context (2x / 20.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
+**2x**: _2026-08-21 10:58:19 &#43;0000 UTC_: <code>Error: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-3187576071/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-compute/2090755192768172032#1:build-log.txt%3A574)
 <details>
 <summary>all...</summary>
 
@@ -263,32 +296,7 @@ time=&#34;2026-08-21T11:07:55Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 11.11%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-<details>
-<summary>all...</summary>
-
-* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-22:23:18: selecting podman as container runtime
-22:24:50: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-smoke is being used by the following container(s): 354982670f6d0a9f270fc4f37145de895fb0f52f3ad6eab81ac16d659c303fc5: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 11.11%) </summary>
+<summary> download failure in context (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -312,25 +320,52 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 10.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+<details>
+<summary>all...</summary>
+
+* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+22:23:18: selecting podman as container runtime
+22:24:50: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network-smoke is being used by the following container(s): 354982670f6d0a9f270fc4f37145de895fb0f52f3ad6eab81ac16d659c303fc5: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (6x / 66.67%)
+### main (7x / 70.00%)
 
 
-#### external (6x / 100.00%)
+#### external (7x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (4x / 57.14%) </summary>
 
 <hr/>
 
-**3x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
+**4x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 <details>
 <summary>all...</summary>
+
+* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
 
 * _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 
@@ -343,11 +378,11 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (2x / 33.33%) </summary>
+<summary> container image pull failure in context (2x / 28.57%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
+**2x**: _2026-08-21 10:58:19 &#43;0000 UTC_: <code>Error: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: cleaning up container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d storage: unmounting container 7bc625cac2c29d646eb33f1e8330c74ffef2e7aa37956dc1742fd95319690e2d root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-3187576071/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-compute/2090755192768172032#1:build-log.txt%3A574)
 <details>
 <summary>all...</summary>
 
@@ -360,7 +395,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 16.67%) </summary>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -375,7 +410,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.9 (3x / 33.33%)
+### release-1.9 (3x / 30.00%)
 
 
 #### external (3x / 100.00%)
@@ -426,7 +461,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-compute (6x / 66.67%)
+### sig-compute (6x / 60.00%)
 
 
 #### external (6x / 100.00%)
@@ -483,43 +518,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-network (2x / 22.22%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
-<details>
-<summary>all...</summary>
-
-* _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-<details>
-<summary>all...</summary>
-
-* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-monitoring (1x / 11.11%)
+### sig-monitoring (1x / 10.00%)
 
 
 #### external (1x / 100.00%)
@@ -540,4 +539,55 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-08-25 09:22:47
+### sig-network (3x / 30.00%)
+
+
+#### external (3x / 100.00%)
+
+<details>
+<summary> bazel remote cache blob fetch failure (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+<details>
+<summary>all...</summary>
+
+* _2026-08-19 22:03:19 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18813/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090197767480676352#1:build-log.txt%3A2960)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
+<details>
+<summary>all...</summary>
+
+* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
+<details>
+<summary>all...</summary>
+
+* _2026-08-21 10:58:08 &#43;0000 UTC_: <code>Error: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: cleaning up container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf storage: unmounting container 476e56fc8470a7b9c269f00139d7226e46c9863c47232962003477b576df00cf root filesystem: deleting layer &#34;2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d /var/lib/containers/storage/overlay/tempdirs/temp-dir-257315363/1-2b9957fe920065e3e3a8c4e71fc9bbbc8292f09c2b17af5e9eca77ee2f2cf92d: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18716/pull-kubevirt-e2e-k8s-1.36-sig-network-smoke/2090755191111421952#1:build-log.txt%3A577)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-08-25 16:17:25
