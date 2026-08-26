@@ -30,22 +30,24 @@ type job struct {
 }
 
 type SigRetests struct {
-	SigCIFailure         int
-	SigCIExternalFailure int
-	SigCIFailureURLs     []string
-	SigComputeFailure    int
-	SigNetworkFailure    int
-	SigStorageFailure    int
-	SigOperatorFailure   int
-	SigMonitoringFailure int
-	SigComputeSuccess    int
-	SigNetworkSuccess    int
-	SigStorageSuccess    int
-	SigOperatorSuccess   int
-	SigMonitoringSuccess int
-	FailedJobNames       []string
-	FailedJobURLs        []string
-	SuccessJobNames      []string
+	SigCIFailure          int
+	SigCIExternalFailure  int
+	SigCIFailureURLs      []string
+	SigComputeFailure     int
+	SigNetworkFailure     int
+	SigStorageFailure     int
+	SigOperatorFailure    int
+	SigMonitoringFailure  int
+	SigPerformanceFailure int
+	SigComputeSuccess     int
+	SigNetworkSuccess     int
+	SigStorageSuccess     int
+	SigOperatorSuccess    int
+	SigMonitoringSuccess  int
+	SigPerformanceSuccess int
+	FailedJobNames        []string
+	FailedJobURLs         []string
+	SuccessJobNames       []string
 }
 
 var prowjobs []job
@@ -447,42 +449,71 @@ func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests Sig
 			continue
 		}
 
-		switch {
-		case checkSIGCIFailure(job):
+		if checkSIGCIFailure(job) {
 			prSigRetests.SigCIFailure += 1
 			prSigRetests.SigCIFailureURLs = append(prSigRetests.SigCIFailureURLs, job.buildURL)
-		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
-			if job.failure {
-				prSigRetests.SigComputeFailure += 1
-			} else {
-				prSigRetests.SigComputeSuccess += 1
-			}
-		case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
-			if job.failure {
-				prSigRetests.SigNetworkFailure += 1
-			} else {
-				prSigRetests.SigNetworkSuccess += 1
-			}
-		case strings.Contains(job.jobName, "sig-storage"):
-			if job.failure {
-				prSigRetests.SigStorageFailure += 1
-			} else {
-				prSigRetests.SigStorageSuccess += 1
-			}
-		case strings.Contains(job.jobName, "sig-operator"):
-			if job.failure {
-				prSigRetests.SigOperatorFailure += 1
-			} else {
-				prSigRetests.SigOperatorSuccess += 1
-			}
-		case strings.Contains(job.jobName, "sig-monitoring"):
-			if job.failure {
-				prSigRetests.SigMonitoringFailure += 1
-			} else {
-				prSigRetests.SigMonitoringSuccess += 1
+		} else {
+			switch MapJobNameToSIG(job.jobName) {
+			case "compute":
+				if job.failure {
+					prSigRetests.SigComputeFailure += 1
+				} else {
+					prSigRetests.SigComputeSuccess += 1
+				}
+			case "network":
+				if job.failure {
+					prSigRetests.SigNetworkFailure += 1
+				} else {
+					prSigRetests.SigNetworkSuccess += 1
+				}
+			case "storage":
+				if job.failure {
+					prSigRetests.SigStorageFailure += 1
+				} else {
+					prSigRetests.SigStorageSuccess += 1
+				}
+			case "operator":
+				if job.failure {
+					prSigRetests.SigOperatorFailure += 1
+				} else {
+					prSigRetests.SigOperatorSuccess += 1
+				}
+			case "monitoring":
+				if job.failure {
+					prSigRetests.SigMonitoringFailure += 1
+				} else {
+					prSigRetests.SigMonitoringSuccess += 1
+				}
+			case "performance":
+				if job.failure {
+					prSigRetests.SigPerformanceFailure += 1
+				} else {
+					prSigRetests.SigPerformanceSuccess += 1
+				}
 			}
 		}
 		prSigRetests = sortJobNamesOnResult(job, prSigRetests)
 	}
 	return prSigRetests
+}
+
+// MapJobNameToSIG maps a Prow job name to a SIG based on naming conventions.
+// Returns an empty string if the job does not match any known SIG pattern.
+func MapJobNameToSIG(jobName string) string {
+	switch {
+	case strings.Contains(jobName, "sig-compute") || strings.Contains(jobName, "vgpu"):
+		return "compute"
+	case strings.Contains(jobName, "sig-network") || strings.Contains(jobName, "sriov"):
+		return "network"
+	case strings.Contains(jobName, "sig-storage"):
+		return "storage"
+	case strings.Contains(jobName, "sig-operator"):
+		return "operator"
+	case strings.Contains(jobName, "sig-monitoring"):
+		return "monitoring"
+	case strings.Contains(jobName, "sig-performance") || strings.Contains(jobName, "performance"):
+		return "performance"
+	default:
+		return ""
+	}
 }
