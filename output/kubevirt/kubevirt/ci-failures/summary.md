@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-25 (1x / 25.00%)
+### 2026-08-25 (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-08-24 (1x / 25.00%)
+### 2026-08-24 (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -59,23 +59,21 @@
 <hr/>
 </details>
 
-### 2026-08-22 (2x / 50.00%)
+### 2026-08-22 (1x / 33.33%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 100.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+**1x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 <details>
 <summary>all...</summary>
 
 * _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
-
-* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
 
 </details>
 
@@ -87,14 +85,14 @@
 ## per error category [⬆](#top)
 
 
-### external (4x / 100.00%)
+### external (3x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 75.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 66.67%) </summary>
 
 <hr/>
 
-**3x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+**2x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
 <details>
 <summary>all...</summary>
 
@@ -122,24 +120,12 @@ make: *** [Makefile:174: cluster-up] Error 1
 </details>
 
 
-* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-<details><summary>context</summary>
-<pre>03:39:16: &#43; echo &#39;FATAL: Could not find available GPUs on host&#39;
-03:39:16: FATAL: Could not find available GPUs on host
-03:39:16: &#43; return 1
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 25.00%) </summary>
+<summary> container image pull failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -169,7 +155,7 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (3x / 75.00%)
+### main (3x / 100.00%)
 
 
 #### external (3x / 100.00%)
@@ -179,7 +165,7 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 
-**2x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
+**2x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
 <details>
 <summary>all...</summary>
 
@@ -207,33 +193,12 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### release-1.9 (1x / 25.00%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-<details>
-<summary>all...</summary>
-
-* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-network (2x / 50.00%)
+### sig-network (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -269,27 +234,25 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-### sig-compute (2x / 50.00%)
+### sig-compute (1x / 33.33%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 100.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
+**1x**: _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 <details>
 <summary>all...</summary>
 
 * _2026-08-22 07:24:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18884/pull-kubevirt-e2e-kind-1.35-vgpu/2091063713351077888#1:build-log.txt%3A1271)
 
-* _2026-08-22 03:29:33 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18869/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2091004683941318656#1:build-log.txt%3A1376)
-
 </details>
 
 <hr/>
 </details>
 
-Last updated: 2026-08-29 03:09:26
+Last updated: 2026-08-29 06:13:43
