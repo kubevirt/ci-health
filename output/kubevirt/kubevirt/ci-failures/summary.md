@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-25 (1x / 50.00%)
+### 2026-08-25 (1x / 100.00%)
 
 
 #### external (1x / 100.00%)
@@ -38,61 +38,15 @@
 <hr/>
 </details>
 
-### 2026-08-24 (1x / 50.00%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-<details>
-<summary>all...</summary>
-
-* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (2x / 100.00%)
+### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-<details>
-<summary>all...</summary>
-
-* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-19:15:28: selecting podman as container runtime
-19:16:06: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-network is being used by the following container(s): edbc20eab0ffa24b2ea7039833cb3d89d336f25ca216ea57fa57b8767cd0f141: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
+<summary> container image pull failure in context (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -122,28 +76,13 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (2x / 100.00%)
+### main (1x / 100.00%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-<details>
-<summary>all...</summary>
-
-* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
+<summary> container image pull failure in context (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -163,28 +102,13 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per SIG [⬆](#top)
 
 
-### sig-network (2x / 100.00%)
+### sig-network (1x / 100.00%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-<details>
-<summary>all...</summary>
-
-* _2026-08-24 19:05:28 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18867/pull-kubevirt-e2e-k8s-1.36-sig-network/2091964976599142400#1:build-log.txt%3A1875)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
+<summary> container image pull failure in context (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -199,4 +123,4 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-Last updated: 2026-08-31 18:13:33
+Last updated: 2026-08-31 21:11:18
