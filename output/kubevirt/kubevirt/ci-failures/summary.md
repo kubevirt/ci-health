@@ -17,21 +17,23 @@
 ## per day [⬆](#top)
 
 
-### 2026-08-25 (1x / 100.00%)
+### 2026-08-31 (2x / 100.00%)
 
 
-#### external (1x / 100.00%)
+#### internal (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
+<summary> make cluster lifecycle target failure (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+**2x**: _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 <details>
 <summary>all...</summary>
 
-* _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+* _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
+
+* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
 
 </details>
 
@@ -43,26 +45,38 @@
 ## per error category [⬆](#top)
 
 
-### external (1x / 100.00%)
+### internal (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
+<summary> make cluster lifecycle target failure (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+**2x**: _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 <details>
 <summary>all...</summary>
 
-* _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+* _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 <details><summary>context</summary>
-<pre>time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete layer \&#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9\&#34;, deleting it&#34;
-time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete layer \&#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9\&#34;, deleting it&#34;
-time=&#34;2026-08-25T07:54:47Z&#34; level=error msg=&#34;cleaning up storage: removing container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer \&#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9\&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-3351095486/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link&#34;
-Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link
-time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete layer \&#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9\&#34;, deleting it&#34;
-/usr/local/bin/runner.sh: line 50: wait: pid 1220 is not a child of this shell
-================================================================================</pre>
+<pre>./kubevirtci/cluster-up/down.sh
+07:59:51: selecting podman as container runtime
+08:00:58: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7 is being used by the following container(s): 44af09be771b50a17a5a5812cc1d3cfdc134139d1598ac1020d06476bd8f5c69, cf133e6fe06ee3e441f1532c21b517dfbcdb493092d9c83edd80c8376d11a9ea: volume is being used
+make: *** [Makefile:162: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+08:08:30: selecting podman as container runtime
+08:09:13: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7 is being used by the following container(s): 431727bab8076d35537eb9e7ea5f1a374c8d6776d2fc58016b9690a6cad47901, 9e4d4ff6924e1c3e6edc1a5af6794c1531c70ee08ecc50e6071519d5c8588c54: volume is being used
+make: *** [Makefile:162: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -76,21 +90,23 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per branch [⬆](#top)
 
 
-### main (1x / 100.00%)
+### release-1.7 (2x / 100.00%)
 
 
-#### external (1x / 100.00%)
+#### internal (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
+<summary> make cluster lifecycle target failure (2x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+**2x**: _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 <details>
 <summary>all...</summary>
 
-* _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+* _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
+
+* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
 
 </details>
 
@@ -102,25 +118,46 @@ time=&#34;2026-08-25T07:54:47Z&#34; level=warning msg=&#34;Found incomplete laye
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 100.00%)
+### sig-compute (1x / 50.00%)
 
 
-#### external (1x / 100.00%)
+#### internal (1x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 100.00%) </summary>
+<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+**1x**: _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 <details>
 <summary>all...</summary>
 
-* _2026-08-25 07:47:09 &#43;0000 UTC_: <code>Error: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: cleaning up container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 storage: unmounting container c135e19365487620125c87f756daf5536ff0568e6f7270a8b45284bb10e02888 root filesystem: deleting layer &#34;90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9 /var/lib/containers/storage/overlay/tempdirs/temp-dir-2941215159/1-90d6594afb8eb63c35856e7e7add60b78121cc657258e336db61104ef1a6a3b9: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18875/pull-kubevirt-e2e-k8s-1.36-sig-network-sriov-emulated/2092154790824906752#1:build-log.txt%3A589)
+* _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 
 </details>
 
 <hr/>
 </details>
 
-Last updated: 2026-09-01 06:33:28
+### sig-storage (1x / 50.00%)
+
+
+#### internal (1x / 100.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
+<details>
+<summary>all...</summary>
+
+* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-09-01 09:10:59
