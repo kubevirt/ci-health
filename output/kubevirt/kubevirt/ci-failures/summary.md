@@ -41,24 +41,6 @@
 ### 2026-08-31 (3x / 75.00%)
 
 
-#### external (1x / 33.33%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
-<details>
-<summary>all...</summary>
-
-* _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
-
-</details>
-
-<hr/>
-</details>
-
 #### internal (2x / 66.67%)
 
 <details>
@@ -73,6 +55,24 @@
 * _2026-08-31 07:37:26 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-compute-migrations-1.7/2094328530190995456#1:build-log.txt%3A1350)
 
 * _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 33.33%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
+<details>
+<summary>all...</summary>
+
+* _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
 
 </details>
 
@@ -317,4 +317,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-01 22:09:34
+Last updated: 2026-09-02 00:15:07
