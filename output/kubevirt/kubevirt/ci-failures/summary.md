@@ -137,7 +137,7 @@
 
 <hr/>
 
-**3x**: _2026-09-01 13:58:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18986/pull-kubevirt-e2e-k8s-1.36-sig-network/2094785540393013248#1:build-log.txt%3A1946)
+**3x**: _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
 <details>
 <summary>all...</summary>
 
@@ -444,24 +444,6 @@ make: *** [Makefile:162: cluster-down] Error 1
 ### sig-storage (2x / 25.00%)
 
 
-#### internal (1x / 50.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
-<details>
-<summary>all...</summary>
-
-* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (1x / 50.00%)
 
 <details>
@@ -474,6 +456,24 @@ make: *** [Makefile:162: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 50.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
+<details>
+<summary>all...</summary>
+
+* _2026-08-31 07:37:21 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18969/pull-kubevirt-e2e-k8s-1.34-sig-storage-1.7/2094328540248936448#1:build-log.txt%3A1186)
 
 </details>
 
@@ -501,4 +501,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-05 00:11:37
+Last updated: 2026-09-05 03:11:38
