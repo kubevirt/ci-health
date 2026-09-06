@@ -137,7 +137,7 @@
 
 <hr/>
 
-**3x**: _2026-08-31 08:52:40 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18981/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2094347452374061056#1:build-log.txt%3A1201)
+**3x**: _2026-09-01 13:58:55 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18986/pull-kubevirt-e2e-k8s-1.36-sig-network/2094785540393013248#1:build-log.txt%3A1946)
 <details>
 <summary>all...</summary>
 
@@ -501,4 +501,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-06 12:12:25
+Last updated: 2026-09-06 15:10:50
