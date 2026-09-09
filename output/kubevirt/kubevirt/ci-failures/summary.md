@@ -162,31 +162,6 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
-<details>
-<summary>all...</summary>
-
-* _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-13:32:07: selecting podman as container runtime
-13:32:07: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-network is being used by the following container(s): f89928fbdb838b5f445e460ba98a102dc4fb977b30d208bdb7fefccec9afe80f: volume is being used
-make: *** [Makefile:180: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 14.29%) </summary>
 
 <hr/>
@@ -204,6 +179,31 @@ make: *** [Makefile:177: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
+<details>
+<summary>all...</summary>
+
+* _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+13:32:07: selecting podman as container runtime
+13:32:07: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-network is being used by the following container(s): f89928fbdb838b5f445e460ba98a102dc4fb977b30d208bdb7fefccec9afe80f: volume is being used
+make: *** [Makefile:180: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -471,4 +471,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-09 06:31:43
+Last updated: 2026-09-09 09:08:46
