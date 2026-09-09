@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-09-07 (4x / 66.67%)
+### 2026-09-07 (4x / 80.00%)
 
 
 #### external (3x / 75.00%)
@@ -73,7 +73,7 @@
 <hr/>
 </details>
 
-### 2026-09-03 (1x / 16.67%)
+### 2026-09-03 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -94,36 +94,15 @@
 <hr/>
 </details>
 
-### 2026-09-02 (1x / 16.67%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-<details>
-<summary>all...</summary>
-
-* _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (4x / 66.67%)
+### external (4x / 80.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
 
 <hr/>
 
@@ -160,7 +139,7 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 16.67%) </summary>
+<summary> container image pull failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -185,7 +164,7 @@ make: *** [Makefile:177: cluster-up] Error 125
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 16.67%) </summary>
+<summary> failed external fetch in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -210,14 +189,14 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 
-### internal (2x / 33.33%)
+### internal (1x / 20.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (2x / 33.33%) </summary>
+<summary> make cluster lifecycle target failure (1x / 20.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
+**1x**: _2026-09-07 12:22:06 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18889/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2096932826673844224#1:build-log.txt%3A4015)
 <details>
 <summary>all...</summary>
 
@@ -226,18 +205,6 @@ make: *** [Makefile:180: cluster-down] Error 1
 <pre>./kubevirtci/cluster-up/down.sh
 12:45:36: selecting podman as container runtime
 12:46:14: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7 is being used by the following container(s): eaec627e2dc367068811abba11ce563e65ad0ef7104d0a553a4aeca33760b667, 970ef41c06bae9bb159f873cb853d49834ae7442b110c0d1b13e83fa02bcf3c6: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-* _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-13:41:37: selecting podman as container runtime
-13:42:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.32-sig-network-1.7 is being used by the following container(s): fc719e78de3f0c043111a18d8de56acf5d4d040ce8a6a4b40fb2f1ee6f04be39, 4ee5f20d2512b1e6c106739188b013b70e7d221e1d15804782fb873384389f45: volume is being used
 make: *** [Makefile:162: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -255,7 +222,28 @@ make: *** [Makefile:162: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
-### main (4x / 66.67%)
+### release-1.7 (1x / 20.00%)
+
+
+#### internal (1x / 100.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-07 12:22:06 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18889/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2096932826673844224#1:build-log.txt%3A4015)
+<details>
+<summary>all...</summary>
+
+* _2026-09-07 12:22:06 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18889/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2096932826673844224#1:build-log.txt%3A4015)
+
+</details>
+
+<hr/>
+</details>
+
+### main (4x / 80.00%)
 
 
 #### external (4x / 100.00%)
@@ -308,35 +296,12 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.7 (2x / 33.33%)
-
-
-#### internal (2x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (2x / 100.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-<details>
-<summary>all...</summary>
-
-* _2026-09-07 12:22:06 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18889/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2096932826673844224#1:build-log.txt%3A4015)
-
-* _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-storage (1x / 16.67%)
+### sig-storage (1x / 20.00%)
 
 
 #### internal (1x / 100.00%)
@@ -357,7 +322,45 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-compute (1x / 16.67%)
+### sig-network (3x / 60.00%)
+
+
+#### external (3x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 66.67%) </summary>
+
+<hr/>
+
+**2x**: _2026-09-07 11:42:09 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18858/pull-kubevirt-e2e-k8s-1.37-sig-network/2096925515792257024#1:build-log.txt%3A1862)
+<details>
+<summary>all...</summary>
+
+* _2026-09-07 11:42:09 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18858/pull-kubevirt-e2e-k8s-1.37-sig-network/2096925515792257024#1:build-log.txt%3A1862)
+
+* _2026-09-07 07:21:22 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19032/pull-kubevirt-e2e-k8s-1.37-sig-network/2096861215329357824#1:build-log.txt%3A1856)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> failed external fetch in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
+<details>
+<summary>all...</summary>
+
+* _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -378,60 +381,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-network (4x / 66.67%)
-
-
-#### external (3x / 75.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-09-07 11:42:09 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18858/pull-kubevirt-e2e-k8s-1.37-sig-network/2096925515792257024#1:build-log.txt%3A1862)
-<details>
-<summary>all...</summary>
-
-* _2026-09-07 11:42:09 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18858/pull-kubevirt-e2e-k8s-1.37-sig-network/2096925515792257024#1:build-log.txt%3A1862)
-
-* _2026-09-07 07:21:22 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19032/pull-kubevirt-e2e-k8s-1.37-sig-network/2096861215329357824#1:build-log.txt%3A1856)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> failed external fetch in context (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
-<details>
-<summary>all...</summary>
-
-* _2026-09-03 13:30:13 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18778/pull-kubevirt-e2e-k8s-1.37-sig-network/2095501807982743552#1:build-log.txt%3A388)
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 25.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-<details>
-<summary>all...</summary>
-
-* _2026-09-02 13:18:19 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18657/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2095139114453045248#1:build-log.txt%3A1201)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-09-09 12:13:55
+Last updated: 2026-09-09 15:53:03
