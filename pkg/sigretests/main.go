@@ -1,10 +1,13 @@
 package sigretests
 
 import (
+	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"reflect"
 	"runtime"
 	"strconv"
@@ -17,6 +20,10 @@ import (
 
 	"github.com/avast/retry-go"
 )
+
+var httpClient = &http.Client{
+	Timeout: 90 * time.Second,
+}
 
 const org = "kubevirt"
 const repo = "kubevirt"
@@ -266,11 +273,44 @@ func getJobsForLatestCommit(storageBaseURL string, org string, repo string, prNu
 }
 
 func HttpGetWithRetry(url string) (resp *http.Response, err error) {
-	return DoHTTPWithRetry(url, http.Get)
+	return DoHTTPWithRetry(url, httpClient.Get)
 }
 
 func HttpHeadWithRetry(url string) (resp *http.Response, err error) {
-	return DoHTTPWithRetry(url, http.Head)
+	return DoHTTPWithRetry(url, httpClient.Head)
+}
+
+// isRetriableNetworkError determines if a network error should trigger a retry.
+// Returns true for timeouts, temporary DNS failures, and connection issues.
+func isRetriableNetworkError(err error) bool {
+	if err == nil {
+		return false
+	}
+
+	errStr := err.Error()
+
+	if os.IsTimeout(err) || errors.Is(err, context.DeadlineExceeded) {
+		return true
+	}
+
+	retriablePatterns := []string{
+		"dial tcp",
+		"i/o timeout",
+		"connection refused",
+		"connection reset",
+		"Temporary failure in name resolution",
+		"no such host",
+		"network is unreachable",
+		"TLS handshake timeout",
+	}
+
+	for _, pattern := range retriablePatterns {
+		if strings.Contains(errStr, pattern) {
+			return true
+		}
+	}
+
+	return false
 }
 
 func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response, err error)) (resp *http.Response, err error) {
@@ -280,7 +320,11 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 			resp, err = httpVerb(url)
 			switch {
 			case err != nil:
-				httpRetryLog.Warnf("failed with error %v, aborting", err)
+				if isRetriableNetworkError(err) {
+					httpRetryLog.Warnf("transient network error, will retry: %v", err)
+					return err
+				}
+				httpRetryLog.Warnf("failed with non-retriable error %v, aborting", err)
 				return retry.Unrecoverable(err)
 			case resp.StatusCode == http.StatusOK:
 				httpRetryLog.Debugf("succeeded")

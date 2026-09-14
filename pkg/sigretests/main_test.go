@@ -2,9 +2,12 @@ package sigretests
 
 import (
 	"bytes"
+	"context"
 	"fmt"
+	"net"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"os"
 	"strconv"
 	"strings"
@@ -17,6 +20,15 @@ import (
 	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 )
+
+// timeoutError is a test helper that satisfies the net.Error interface with Timeout() == true.
+type timeoutError struct {
+	msg string
+}
+
+func (e *timeoutError) Error() string   { return e.msg }
+func (e *timeoutError) Timeout() bool   { return true }
+func (e *timeoutError) Temporary() bool { return true }
 
 func TestSIGRetests(t *testing.T) {
 	RegisterFailHandler(Fail)
@@ -161,6 +173,108 @@ var _ = Describe("main", func() {
 			_, err := DoHTTPWithRetry(server.URL, http.Get)
 			Expect(err).To(HaveOccurred())
 			Expect(err.Error()).To(ContainSubstring("transient HTTP 502"))
+		})
+	})
+
+	Context("DoHTTPWithRetry network error handling", func() {
+		var server *httptest.Server
+
+		AfterEach(func() {
+			if server != nil {
+				server.Close()
+			}
+		})
+
+		It("retries on timeout errors", func() {
+			attempt := 0
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				attempt++
+				if attempt == 1 {
+					time.Sleep(2 * time.Second)
+				}
+				w.WriteHeader(http.StatusOK)
+			}))
+
+			shortTimeoutClient := &http.Client{Timeout: 100 * time.Millisecond}
+
+			resp, err := DoHTTPWithRetry(server.URL, shortTimeoutClient.Get)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+			Expect(attempt).To(BeNumerically(">=", 2))
+		})
+
+		It("retries on connection refused", func() {
+			listener, err := net.Listen("tcp", "127.0.0.1:0")
+			Expect(err).ToNot(HaveOccurred())
+			addr := listener.Addr().String()
+			listener.Close()
+
+			attempt := 0
+			getFunc := func(url string) (*http.Response, error) {
+				attempt++
+				if attempt <= 2 {
+					return httpClient.Get("http://" + addr)
+				}
+				server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+					w.WriteHeader(http.StatusOK)
+				}))
+				return httpClient.Get(server.URL)
+			}
+
+			resp, err := DoHTTPWithRetry("http://"+addr, getFunc)
+			Expect(err).ToNot(HaveOccurred())
+			Expect(resp.StatusCode).To(Equal(http.StatusOK))
+			Expect(attempt).To(Equal(3))
+		})
+	})
+
+	Describe("isRetriableNetworkError", func() {
+		It("returns true for context.DeadlineExceeded wrapped in url.Error", func() {
+			err := &url.Error{
+				Op:  "Get",
+				URL: "https://prow.ci.kubevirt.io/pr-history",
+				Err: context.DeadlineExceeded,
+			}
+			Expect(isRetriableNetworkError(err)).To(BeTrue())
+		})
+
+		It("returns true for a dial TCP connection refused error", func() {
+			err := &net.OpError{
+				Op:  "dial",
+				Net: "tcp",
+				Addr: &net.TCPAddr{
+					IP:   net.ParseIP("127.0.0.1"),
+					Port: 8080,
+				},
+				Err: fmt.Errorf("connection refused"),
+			}
+			Expect(isRetriableNetworkError(err)).To(BeTrue())
+		})
+
+		It("returns true for a DNS lookup error", func() {
+			err := &net.DNSError{
+				Err:        "no such host",
+				Name:       "prow.ci.kubevirt.io",
+				IsNotFound: true,
+			}
+			Expect(isRetriableNetworkError(err)).To(BeTrue())
+		})
+
+		It("returns true for an i/o timeout wrapped in net.OpError", func() {
+			err := &net.OpError{
+				Op:  "read",
+				Net: "tcp",
+				Err: &timeoutError{msg: "i/o timeout"},
+			}
+			Expect(isRetriableNetworkError(err)).To(BeTrue())
+		})
+
+		It("returns false for nil error", func() {
+			Expect(isRetriableNetworkError(nil)).To(BeFalse())
+		})
+
+		It("returns false for non-network errors", func() {
+			Expect(isRetriableNetworkError(fmt.Errorf("invalid JSON in response"))).To(BeFalse())
 		})
 	})
 
