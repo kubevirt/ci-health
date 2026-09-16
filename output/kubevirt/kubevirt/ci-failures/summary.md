@@ -23,21 +23,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-<details>
-<summary>all...</summary>
-
-* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 50.00%) </summary>
 
 <hr/>
@@ -47,6 +32,21 @@
 <summary>all...</summary>
 
 * _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
+<details>
+<summary>all...</summary>
+
+* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
 
 </details>
 
@@ -100,6 +100,31 @@
 ### external (3x / 75.00%)
 
 <details>
+<summary> podman container removal timeout (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
+<details>
+<summary>all...</summary>
+
+* _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
+<details><summary>context</summary>
+<pre>ab442c0f419f7b9eed6a132f40f3c7ae8ffdfe8b032f096352a14062b314af70
+8231b50111059f2c9588ee42058ad906a3528dbe61f80a3d69ea7c1720508460
+Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout
+Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout
+/usr/local/bin/runner.sh: line 50: wait: pid 1020 is not a child of this shell
+================================================================================
+Done cleaning up after podman in container.</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -149,31 +174,6 @@ make: *** [Makefile:159: cluster-up] Error 125
 
 <hr/>
 </details>
-<details>
-<summary> podman container removal timeout (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
-<details>
-<summary>all...</summary>
-
-* _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
-<details><summary>context</summary>
-<pre>ab442c0f419f7b9eed6a132f40f3c7ae8ffdfe8b032f096352a14062b314af70
-8231b50111059f2c9588ee42058ad906a3528dbe61f80a3d69ea7c1720508460
-Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1020 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
 
 ### internal (1x / 25.00%)
 
@@ -214,21 +214,6 @@ make: *** [Makefile:177: cluster-up] Error 1
 #### external (2x / 66.67%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-<details>
-<summary>all...</summary>
-
-* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 33.33%) </summary>
 
 <hr/>
@@ -238,6 +223,21 @@ make: *** [Makefile:177: cluster-up] Error 1
 <summary>all...</summary>
 
 * _2026-09-14 11:12:09 &#43;0000 UTC_: <code>Error: cannot remove container 8dda5b7c95ec4de1ce22ee25296269c9781d5bd8e5f18b79922c436d148852b6 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19041/pull-kubevirt-e2e-k8s-1.35-sig-storage/2099456004369420288#1:build-log.txt%3A3068)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
+<details>
+<summary>all...</summary>
+
+* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
 
 </details>
 
@@ -288,42 +288,6 @@ make: *** [Makefile:177: cluster-up] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-network (2x / 50.00%)
-
-
-#### external (2x / 100.00%)
-
-<details>
-<summary> download failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-<details>
-<summary>all...</summary>
-
-* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-09 06:36:04 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19062/pull-kubevirt-e2e-kind-sriov-1.7/2097574590971645952#1:build-log.txt%3A1691)
-<details>
-<summary>all...</summary>
-
-* _2026-09-09 06:36:04 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19062/pull-kubevirt-e2e-kind-sriov-1.7/2097574590971645952#1:build-log.txt%3A1691)
-
-</details>
-
-<hr/>
-</details>
-
 ### sig-storage (1x / 25.00%)
 
 
@@ -366,4 +330,40 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-16 03:07:51
+### sig-network (2x / 50.00%)
+
+
+#### external (2x / 100.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-09 06:36:04 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19062/pull-kubevirt-e2e-kind-sriov-1.7/2097574590971645952#1:build-log.txt%3A1691)
+<details>
+<summary>all...</summary>
+
+* _2026-09-09 06:36:04 &#43;0000 UTC_: <code>make: *** [Makefile:159: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19062/pull-kubevirt-e2e-kind-sriov-1.7/2097574590971645952#1:build-log.txt%3A1691)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
+<details>
+<summary>all...</summary>
+
+* _2026-09-14 14:19:35 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19052/pull-kubevirt-e2e-k8s-1.37-sig-network/2099500599073574912#1:build-log.txt%3A4018)
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-09-16 06:16:34
