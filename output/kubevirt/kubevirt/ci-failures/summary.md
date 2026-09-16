@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-09-16 (1x / 25.00%)
+### 2026-09-16 (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -38,7 +38,7 @@
 <hr/>
 </details>
 
-### 2026-09-14 (2x / 50.00%)
+### 2026-09-14 (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -74,36 +74,40 @@
 <hr/>
 </details>
 
-### 2026-09-09 (1x / 25.00%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-<details>
-<summary>all...</summary>
-
-* _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (3x / 75.00%)
+### external (3x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 25.00%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
+<details>
+<summary>all...</summary>
+
+* _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
+<details><summary>context</summary>
+<pre>08:37:15: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+08:37:17: [control-plane-check] kube-controller-manager is healthy after 1.585120019s
+08:37:19: [control-plane-check] kube-scheduler is healthy after 3.577089938s
+08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+08:37:21: [control-plane-check] kube-apiserver is healthy after 5.502248038s
+08:37:21: I0916 04:37:21.347717    1602 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
+08:37:21: I0916 04:37:21.349907    1602 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -128,7 +132,7 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 25.00%) </summary>
+<summary> podman container removal timeout (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -152,66 +156,13 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
-<details>
-<summary>all...</summary>
-
-* _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
-<details><summary>context</summary>
-<pre>08:37:15: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-08:37:17: [control-plane-check] kube-controller-manager is healthy after 1.585120019s
-08:37:19: [control-plane-check] kube-scheduler is healthy after 3.577089938s
-08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-08:37:21: [control-plane-check] kube-apiserver is healthy after 5.502248038s
-08:37:21: I0916 04:37:21.347717    1602 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-08:37:21: I0916 04:37:21.349907    1602 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-
-### internal (1x / 25.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-<details>
-<summary>all...</summary>
-
-* _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-<details><summary>context</summary>
-<pre>15:25:09: 	sigs.k8s.io/kind/pkg/errors/concurrent.go:30
-15:25:09: runtime.goexit
-15:25:09: 	runtime/asm_amd64.s:1771
-make: *** [Makefile:177: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
 
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### release-1.8 (1x / 25.00%)
+### release-1.8 (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -232,13 +183,13 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-### main (3x / 75.00%)
+### main (2x / 66.67%)
 
 
-#### external (2x / 66.67%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 33.33%) </summary>
+<summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -253,7 +204,7 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 33.33%) </summary>
+<summary> podman container removal timeout (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -268,30 +219,12 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-#### internal (1x / 33.33%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-<details>
-<summary>all...</summary>
-
-* _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-monitoring (1x / 25.00%)
+### sig-monitoring (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -312,7 +245,7 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-### sig-network (1x / 25.00%)
+### sig-network (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -333,7 +266,7 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-### sig-storage (1x / 25.00%)
+### sig-storage (1x / 33.33%)
 
 
 #### external (1x / 100.00%)
@@ -354,25 +287,4 @@ make: *** [Makefile:177: cluster-up] Error 1
 <hr/>
 </details>
 
-### sig-compute (1x / 25.00%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-<details>
-<summary>all...</summary>
-
-* _2026-09-09 15:19:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18939/pull-kubevirt-e2e-kind-1.36-sev/2097706364049559552#1:build-log.txt%3A670)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-09-16 15:15:47
+Last updated: 2026-09-16 19:40:54
