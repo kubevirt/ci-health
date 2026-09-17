@@ -20,24 +20,6 @@
 ### 2026-09-17 (2x / 40.00%)
 
 
-#### external (1x / 50.00%)
-
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
-<details>
-<summary>all...</summary>
-
-* _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
-
-</details>
-
-<hr/>
-</details>
-
 #### internal (1x / 50.00%)
 
 <details>
@@ -50,6 +32,24 @@
 <summary>all...</summary>
 
 * _2026-09-17 03:05:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19150/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2100420610688552960#1:build-log.txt%3A2408)
+
+</details>
+
+<hr/>
+</details>
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
+<details>
+<summary>all...</summary>
+
+* _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
 
 </details>
 
@@ -373,29 +373,26 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-monitoring (1x / 20.00%)
+### sig-network (2x / 40.00%)
 
 
-#### external (1x / 100.00%)
+#### internal (1x / 50.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
+**1x**: _2026-09-17 03:05:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19150/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2100420610688552960#1:build-log.txt%3A2408)
 <details>
 <summary>all...</summary>
 
-* _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
+* _2026-09-17 03:05:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19150/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2100420610688552960#1:build-log.txt%3A2408)
 
 </details>
 
 <hr/>
 </details>
-
-### sig-network (2x / 40.00%)
-
 
 #### external (1x / 50.00%)
 
@@ -415,18 +412,21 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-#### internal (1x / 50.00%)
+### sig-monitoring (1x / 20.00%)
+
+
+#### external (1x / 100.00%)
 
 <details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-09-17 03:05:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19150/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2100420610688552960#1:build-log.txt%3A2408)
+**1x**: _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
 <details>
 <summary>all...</summary>
 
-* _2026-09-17 03:05:06 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19150/pull-kubevirt-e2e-k8s-1.36-ipv6-sig-network-1.9/2100420610688552960#1:build-log.txt%3A2408)
+* _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
 
 </details>
 
@@ -454,4 +454,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-17 18:28:53
+Last updated: 2026-09-17 21:14:23
