@@ -386,21 +386,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
-<details>
-<summary>all...</summary>
-
-* _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (1x / 50.00%) </summary>
 
 <hr/>
@@ -410,6 +395,21 @@ make: *** [Makefile:177: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-09-16 08:01:57 &#43;0000 UTC_: <code>08:37:20: I0916 04:37:20.839064    1602 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19139/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2100132912123875328#1:build-log.txt%3A770)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
+<details>
+<summary>all...</summary>
+
+* _2026-09-17 07:29:29 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19162/pull-kubevirt-e2e-k8s-1.33-sig-operator-1.8/2100487140398862336#1:build-log.txt%3A666)
 
 </details>
 
@@ -561,4 +561,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-19 06:14:57
+Last updated: 2026-09-19 09:13:29
