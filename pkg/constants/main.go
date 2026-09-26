@@ -56,6 +56,7 @@ const (
 	QuarantineBadgeFileName           = "quarantine-total.svg"
 	QuarantineMonitoringBadgeFileName = "quarantine-monitoring.svg"
 	JSONResultsFileName               = "results.json"
+	PRRetestReportFileName            = "pr-retest-report.html"
 	PlotFileName                      = "plot.png"
 	MetricsFileName                   = "metrics"
 

@@ -20,6 +20,10 @@ import (
 	"github.com/kubevirt/ci-health/pkg/types"
 )
 
+// analyzeBuildFn is the AnalyzeBuild implementation used to classify sig-ci
+// failures. Tests replace it to avoid network calls.
+var analyzeBuildFn = cifailures.AnalyzeBuild
+
 type statsProcessor func(*types.Results) (*types.Results, error)
 
 type HandlerOptions struct {
@@ -283,8 +287,19 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		return results, err
 	}
 
+	prFailures := make(map[int][]types.PRJobFailure, len(mergedPRs))
+	allRetests := map[int]int{}
+	if h.co != nil {
+		if counts, err := h.co.AllRetestsBetween(startTime, currentTime); err != nil {
+			log.WithError(err).Warn("failed to count all /retest comments; PR retest report will omit merged PRs")
+		} else {
+			allRetests = counts
+		}
+	}
+	e2e := newE2EClassifier(results.DataDays)
 	for _, mergedPR := range mergedPRs {
-		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), "kubevirt", "kubevirt", h.supportedBranches, startTime)
+		org, repo := h.sourceOrgRepo()
+		jobsPerSIG, err := sigretests.GetJobsPerSIG(strconv.Itoa(mergedPR.Number), org, repo, h.supportedBranches, startTime)
 		if err != nil {
 			return results, err
 		}
@@ -292,8 +307,9 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		dataItem.SIGNetworkRetest = dataItem.SIGNetworkRetest + float64(jobsPerSIG.SigNetworkFailure)
 		dataItem.SIGStorageRetest = dataItem.SIGStorageRetest + float64(jobsPerSIG.SigStorageFailure)
 		dataItem.SIGOperatorRetest = dataItem.SIGOperatorRetest + float64(jobsPerSIG.SigOperatorFailure)
+		ciCauses := classifyCIFailures(jobsPerSIG.SigCIFailureURLs)
 		dataItem.SIGCIRetest = dataItem.SIGCIRetest + float64(jobsPerSIG.SigCIFailure)
-		dataItem.SIGCIExternalRetest = dataItem.SIGCIExternalRetest + float64(classifyExternalFailures(jobsPerSIG.SigCIFailureURLs))
+		dataItem.SIGCIExternalRetest = dataItem.SIGCIExternalRetest + float64(countExternalCauses(ciCauses))
 		dataItem.SIGMonitoringRetest = dataItem.SIGMonitoringRetest + float64(jobsPerSIG.SigMonitoringFailure)
 		dataItem.SIGComputeTotal = dataItem.SIGComputeTotal + float64(jobsPerSIG.SigComputeFailure) + float64(jobsPerSIG.SigComputeSuccess)
 		dataItem.SIGNetworkTotal = dataItem.SIGNetworkTotal + float64(jobsPerSIG.SigNetworkFailure) + float64(jobsPerSIG.SigNetworkSuccess)
@@ -308,6 +324,9 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 		failedJobNames = slices.Concat(failedJobNames, jobsPerSIG.FailedJobNames)
 		successJobNames = slices.Concat(successJobNames, jobsPerSIG.SuccessJobNames)
 		failedJobURLs = slices.Concat(failedJobURLs, jobsPerSIG.FailedJobURLs)
+		if allRetests[mergedPR.Number] > 0 {
+			prFailures[mergedPR.Number] = h.collectPRJobFailures(mergedPR.Number, startTime, e2e)
+		}
 	}
 	dataItem.SIGCITotal = dataItem.SIGComputeTotal + dataItem.SIGStorageTotal + dataItem.SIGNetworkTotal + dataItem.SIGOperatorTotal + dataItem.SIGCIRetest + dataItem.SIGMonitoringTotal
 	sortedFailedJobs := types.SortByMostFailed(countFailedJobs(failedJobNames))
@@ -350,8 +369,67 @@ func (h *Handler) sigRetestsProcessor(results *types.Results) (*types.Results, e
 
 	dataItem.FailedJobLeaderBoard = sortedFailedJobs
 	results.Data[constants.SIGRetests] = dataItem
+	results.MergedPRCount = len(mergedPRs)
+	results.PRRetestReport = BuildPRRetestReport(mergedPRs, allRetests, prFailures)
+
+	openSummaries, openCount, openErr := h.collectOpenPRRetestReport(startTime, e2e)
+	if openErr != nil {
+		log.WithError(openErr).Warn("failed to collect open PR retest report")
+	} else {
+		results.OpenPRRetestReport = openSummaries
+		results.OpenPRCount = openCount
+	}
 
 	return results, nil
+}
+
+func (h *Handler) sourceOrgRepo() (string, string) {
+	org, repo, ok := strings.Cut(h.source, "/")
+	if !ok || org == "" || repo == "" {
+		return "kubevirt", "kubevirt"
+	}
+	return org, repo
+}
+
+// collectOpenPRRetestReport lists currently open PRs updated in the stats window
+// and classifies required e2e failures for those with a /retest.
+// Failures here are not added to SIG badge counters.
+func (h *Handler) collectOpenPRRetestReport(startTime time.Time, e2e *e2eClassifier) ([]types.PRRetestSummary, int, error) {
+	if h.co == nil {
+		return nil, 0, nil
+	}
+	openRetests, considered, err := h.co.OpenPRRetests(startTime, h.endDate)
+	if err != nil {
+		return nil, 0, err
+	}
+	prs := make([]types.PR, 0, len(openRetests))
+	counts := make(map[int]int, len(openRetests))
+	failures := make(map[int][]types.PRJobFailure)
+	for pr, count := range openRetests {
+		counts[pr.Number] = count
+		if count == 0 {
+			continue
+		}
+		prs = append(prs, pr)
+		failures[pr.Number] = h.collectPRJobFailures(pr.Number, startTime, e2e)
+	}
+	return BuildPRRetestReport(prs, counts, failures), considered, nil
+}
+
+func (h *Handler) collectPRJobFailures(prNumber int, notBefore time.Time, e2e *e2eClassifier) []types.PRJobFailure {
+	org, repo := h.sourceOrgRepo()
+	details, err := sigretests.ListRequiredE2EFailures(org, repo, strconv.Itoa(prNumber), h.supportedBranches, notBefore)
+	if err != nil {
+		log.WithError(err).Warnf("PR %d: failed to list required e2e failures", prNumber)
+		return nil
+	}
+	var ciURLs []string
+	for _, d := range details {
+		if d.SIG == "ci" {
+			ciURLs = append(ciURLs, d.URL)
+		}
+	}
+	return jobFailuresForPR(prNumber, details, classifyCIFailures(ciURLs), e2e)
 }
 
 func prowJobID(url string) int {
@@ -429,22 +507,142 @@ func countFailedJobs(jobNames []string) map[string]int {
 	return countFailedJobs
 }
 
-// classifyExternalFailures calls AnalyzeBuild for each sig-ci failure URL and
-// returns the count of those classified as external. Failures that cannot be
-// analyzed are conservatively treated as non-external so they remain counted.
-func classifyExternalFailures(urls []string) int {
-	external := 0
+type ciFailureCause struct {
+	cause  string
+	reason string
+}
+
+func classifyCIFailures(urls []string) map[string]ciFailureCause {
+	classified := make(map[string]ciFailureCause, len(urls))
 	for _, url := range urls {
-		result, err := cifailures.AnalyzeBuild(url)
+		result, err := analyzeBuildFn(url)
 		if err != nil {
-			log.WithError(err).Warnf("failed to analyze build %s; treating as non-external", url)
-			continue
+			log.WithError(err).Warnf("failed to analyze build %s; treating as ci", url)
 		}
-		if len(result.BuildErrors) > 0 && result.BuildErrors[0].Category == string(cifailures.CategoryExternal) {
+		cause, reason := CauseFromCIAnalysis(result, err)
+		classified[url] = ciFailureCause{cause: cause, reason: reason}
+	}
+	return classified
+}
+
+func countExternalCauses(classified map[string]ciFailureCause) int {
+	external := 0
+	for _, c := range classified {
+		if c.cause == types.FailureCauseExternal {
 			external++
 		}
 	}
 	return external
+}
+
+// CauseFromCIAnalysis maps an AnalyzeBuild result onto a retest cause.
+// Registry / GitHub / cache failures stay external. kubeadm livez noise and
+// cluster-down teardown that AnalyzeBuild tagged external are treated as ci
+// so a later snippet does not hide the real cluster-up/sync failure.
+// Compile/pr-build is left unlabeled. Analysis errors are ci.
+func CauseFromCIAnalysis(result *cifailures.JobBuildErrors, err error) (cause, reason string) {
+	if err != nil {
+		return types.FailureCauseCI, "failed to analyze build; treating as ci"
+	}
+	if result == nil || len(result.BuildErrors) == 0 {
+		return types.FailureCauseCI, "no build errors; treating as ci"
+	}
+	be := result.BuildErrors[0]
+	reason = be.CategoryReason
+	if reason == "" {
+		reason = be.Category
+	}
+	switch be.Category {
+	case string(cifailures.CategoryExternal):
+		if externalNoiseIsCI(reason) {
+			return types.FailureCauseCI, reason
+		}
+		return types.FailureCauseExternal, reason
+	case string(cifailures.CategoryPRBuild):
+		return "", reason
+	default:
+		return types.FailureCauseCI, reason
+	}
+}
+
+func externalNoiseIsCI(reason string) bool {
+	r := strings.ToLower(reason)
+	if strings.Contains(r, "kube-apiserver body decode") {
+		return true
+	}
+	if strings.Contains(r, "podman container removal timeout") {
+		return true
+	}
+	return false
+}
+
+func jobFailuresForPR(prNumber int, details []sigretests.FailedJobDetail, ciCauses map[string]ciFailureCause, clf *e2eClassifier) []types.PRJobFailure {
+	if len(details) == 0 {
+		return nil
+	}
+	failures := make([]types.PRJobFailure, 0, len(details))
+	for _, d := range details {
+		failure := types.PRJobFailure{
+			JobName: d.JobName,
+			URL:     d.URL,
+			SIG:     d.SIG,
+		}
+		if d.SIG == "ci" {
+			if c, ok := ciCauses[d.URL]; ok {
+				failure.Cause = c.cause
+				failure.Reason = c.reason
+			} else {
+				failure.Cause = types.FailureCauseCI
+				failure.Reason = "unclassified sig-ci failure"
+			}
+		} else {
+			failure.Reason = "e2e test failure"
+			if clf != nil {
+				failure.Cause, failure.Reason = clf.classify(d.URL)
+				cause := failure.Cause
+				if cause == "" {
+					cause = "other"
+				}
+				log.Infof("PR %d %s: %s (%s)", prNumber, d.JobName, cause, failure.Reason)
+			}
+		}
+		failures = append(failures, failure)
+	}
+	slices.SortFunc(failures, func(a, b types.PRJobFailure) int {
+		if n := cmp.Compare(a.JobName, b.JobName); n != 0 {
+			return n
+		}
+		return cmp.Compare(a.URL, b.URL)
+	})
+	return failures
+}
+
+// BuildPRRetestReport joins PRs, window-scoped /retest counts, and per-job causes.
+// PRs with a zero /retest count are omitted.
+func BuildPRRetestReport(prs []types.PR, retestCounts map[int]int, failuresByPR map[int][]types.PRJobFailure) []types.PRRetestSummary {
+	if retestCounts == nil {
+		retestCounts = map[int]int{}
+	}
+	report := make([]types.PRRetestSummary, 0, len(prs))
+	for _, pr := range prs {
+		count := retestCounts[pr.Number]
+		if count <= 0 {
+			continue
+		}
+		report = append(report, types.PRRetestSummary{
+			Number:      pr.Number,
+			MergedAt:    pr.MergedAt,
+			RetestCount: count,
+			Failures:    failuresByPR[pr.Number],
+		})
+	}
+	slices.SortFunc(report, func(a, b types.PRRetestSummary) int {
+		if n := cmp.Compare(b.RetestCount, a.RetestCount); n != 0 {
+			return n
+		}
+		return cmp.Compare(b.Number, a.Number)
+	})
+	return report
 }
 
 func round(value float64) float64 {

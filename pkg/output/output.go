@@ -11,6 +11,7 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/kubevirt/ci-health/pkg/constants"
+	"github.com/kubevirt/ci-health/pkg/htmlreport"
 	"github.com/kubevirt/ci-health/pkg/metrics"
 	"github.com/kubevirt/ci-health/pkg/types"
 )
@@ -54,6 +55,10 @@ func (b *Handler) Write(results *types.Results) error {
 		return err
 	}
 
+	if err := b.writePRRetestReport(results); err != nil {
+		log.WithError(err).Warn("failed to write PR retest report; continuing")
+	}
+
 	err = b.writeMetrics(results)
 
 	return err
@@ -74,6 +79,14 @@ func (b *Handler) WriteJSON(results *types.Results) error {
 	err = os.WriteFile(resultsPath, resultsJSON, 0644)
 
 	return err
+}
+
+func (b *Handler) writePRRetestReport(results *types.Results) error {
+	basePath, err := b.initializeSourcePath()
+	if err != nil {
+		return err
+	}
+	return htmlreport.WritePRRetestReport(results, basePath)
 }
 
 func (b *Handler) writeMetrics(results *types.Results) error {

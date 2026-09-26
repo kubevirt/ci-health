@@ -1,0 +1,224 @@
+{{- /*
+
+    This file is part of the KubeVirt project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    Copyright The KubeVirt Authors.
+
+*/ -}}
+{{define "jobList"}}
+{{- range . }}
+{{- $cause := causeDisplay .Cause }}
+<div class="failure-card">
+    {{- if .URL }}<a class="cause-pill cause-{{ $cause }}" href="{{ .URL }}" target="_blank" title="{{ .JobName }}">{{ $cause }}</a>{{- else }}<span class="cause-pill cause-{{ $cause }}">{{ $cause }}</span>{{- end }}
+    {{- if .URL }}<a href="{{ .URL }}" target="_blank"><strong>{{ .JobName }}</strong></a>{{- else }}<strong>{{ .JobName }}</strong>{{- end }}
+    {{- if .Reason }}<div class="reason">{{ .Reason }}</div>{{- end }}
+</div>
+{{- end }}
+{{- end }}
+{{define "unexplainedPRs"}}
+{{- if .UnexplainedPRs }}
+<p class="muted">
+  {{ len .UnexplainedPRs }} PR{{ if ne (len .UnexplainedPRs) 1 }}s{{ end }} had a /retest but no failed required e2e job to classify:
+  {{- range $i, $pr := .UnexplainedPRs }}{{ if $i }},{{ end }}
+  <a href="{{ prURL $.Source $pr.Number }}" target="_blank">#{{ $pr.Number }}</a>{{- end }}.
+</p>
+{{- end }}
+{{- end }}
+{{define "retestedSection"}}
+        {{- if .RetestedPRs }}
+        {{- range .RetestedPRs }}
+        <div class="pr-block">
+            <h3 class="pr-title">
+                <a href="{{ prURL $.Source .Number }}" target="_blank">#{{ .Number }}</a>
+                — {{ .RetestCount }} /retest{{ if ne .RetestCount 1 }}s{{ end }}
+            </h3>
+            {{ template "jobList" .Failures }}
+        </div>
+        {{- end }}
+        {{- else if not .UnexplainedPRs }}
+        <p class="muted">No PRs in this group needed retests.</p>
+        {{- end }}
+        {{ template "unexplainedPRs" . }}
+{{- end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PR retest report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fa;
+            margin: 2em;
+        }
+        h1 {
+            color: #333;
+        }
+        h2.pr-group-title {
+            color: #24292e;
+            margin: 0 0 0.6em 0;
+            padding-bottom: 0.3em;
+            border-bottom: 3px solid #24292e;
+        }
+        .generated-at {
+            color: #586069;
+            font-size: 0.9em;
+        }
+        .report-intro {
+            color: #586069;
+            max-width: 900px;
+            line-height: 1.5;
+            margin: 0.8em 0 1.5em 0;
+        }
+        section.pr-group {
+            margin: 2em 0 2.5em 0;
+        }
+        .overall-summary {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 1.5em 2em;
+            margin: 1em 0;
+            max-width: 900px;
+        }
+        .overall-headline {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6em;
+            margin-bottom: 0.5em;
+        }
+        .overall-rate {
+            font-size: 2.2em;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .overall-label {
+            font-size: 1.1em;
+            color: #586069;
+        }
+        .overall-detail {
+            color: #586069;
+            font-size: 0.95em;
+            margin-top: 0.4em;
+            line-height: 1.5;
+        }
+        .cause-summary {
+            display: flex;
+            gap: 1em;
+            margin-top: 1em;
+            flex-wrap: wrap;
+        }
+        .cause-pill {
+            display: inline-block;
+            border-radius: 12px;
+            padding: 0.15em 0.6em;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .cause-flake { background: #22863a; }
+        .cause-ci { background: #e36209; }
+        .cause-external { background: #6f42c1; }
+        .cause-other { background: #6a737d; }
+        a.cause-pill {
+            text-decoration: none;
+            color: #fff;
+        }
+        a.cause-pill:hover {
+            filter: brightness(1.15);
+        }
+        .pr-block {
+            margin: 0.8em 0;
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 0.8em 1em;
+        }
+        .pr-title {
+            margin: 0 0 0.5em 0;
+            font-size: 1.05em;
+            font-weight: bold;
+            color: #24292e;
+        }
+        .pr-title a {
+            color: #0366d6;
+        }
+        .failure-card .cause-pill {
+            margin-right: 0.5em;
+        }
+        .failure-card {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            margin: 0.6em 0;
+            padding: 0.8em 1em;
+        }
+        .reason {
+            color: #586069;
+            font-size: 0.95em;
+            margin-top: 0.3em;
+        }
+        .muted {
+            color: #586069;
+        }
+    </style>
+</head>
+<body>
+    <h1>PR retest report <span class="generated-at">— Generated at {{ .GeneratedAt.Format "2006-01-02 15:04 UTC" }}</span></h1>
+    <p class="report-intro">
+        {{ .Source }} over the last {{ .DataDays }} days, ending {{ .EndDate }}.
+        Each PR that got a <strong>/retest</strong> in this window is listed with the required e2e jobs that failed
+        and whether that was <strong>flake</strong>, <strong>CI</strong> (internal), <strong>external</strong>, or <strong>other</strong>.
+        <strong>other</strong> is a named e2e failure that is not historically flaky and not a suite collapse.
+        A later pass does not change the label. Job names link to the Prow run.
+    </p>
+
+    <section class="pr-group" id="open-prs">
+        <h2 class="pr-group-title">{{ .Open.Title }}</h2>
+        <div class="overall-summary">
+            <div class="overall-headline">
+                <span class="overall-rate">{{ .Open.HeadlineLead }}</span>
+                <span class="overall-label">{{ .Open.HeadlineLabel }}</span>
+            </div>
+            <div class="overall-detail">{{ .Open.Detail }}</div>
+            <div class="cause-summary">
+                <span class="cause-pill cause-flake">flake {{ .Open.CauseFlake }}</span>
+                <span class="cause-pill cause-ci">ci {{ .Open.CauseCI }}</span>
+                <span class="cause-pill cause-external">external {{ .Open.CauseExternal }}</span>
+                <span class="cause-pill cause-other">other {{ .Open.CauseOther }}</span>
+            </div>
+        </div>
+        {{ template "retestedSection" .Open }}
+    </section>
+
+    <section class="pr-group" id="merged-prs">
+        <h2 class="pr-group-title">{{ .Merged.Title }}</h2>
+        <div class="overall-summary">
+            <div class="overall-headline">
+                <span class="overall-rate">{{ .Merged.HeadlineLead }}</span>
+                <span class="overall-label">{{ .Merged.HeadlineLabel }}</span>
+            </div>
+            <div class="overall-detail">{{ .Merged.Detail }}</div>
+            <div class="cause-summary">
+                <span class="cause-pill cause-flake">flake {{ .Merged.CauseFlake }}</span>
+                <span class="cause-pill cause-ci">ci {{ .Merged.CauseCI }}</span>
+                <span class="cause-pill cause-external">external {{ .Merged.CauseExternal }}</span>
+                <span class="cause-pill cause-other">other {{ .Merged.CauseOther }}</span>
+            </div>
+        </div>
+        {{ template "retestedSection" .Merged }}
+    </section>
+</body>
+</html>
