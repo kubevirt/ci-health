@@ -65,21 +65,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
-<details>
-<summary>all...</summary>
-
-* _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
@@ -89,6 +74,21 @@
 <summary>all...</summary>
 
 * _2026-09-24 08:55:19 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19214/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2103045438079766528#1:build-log.txt%3A1865)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
+<details>
+<summary>all...</summary>
+
+* _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
 
 </details>
 
@@ -140,31 +140,6 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
-<details>
-<summary>all...</summary>
-
-* _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
-<details><summary>context</summary>
-<pre>07:39:41: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-07:39:43: [control-plane-check] kube-controller-manager is healthy after 2.357893091s
-07:39:44: [control-plane-check] kube-scheduler is healthy after 3.627448341s
-07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-07:39:46: [control-plane-check] kube-apiserver is healthy after 5.503634325s
-07:39:46: I0928 03:39:46.362671    1613 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-07:39:46: I0928 03:39:46.365956    1613 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -182,6 +157,31 @@ make: *** [Makefile:177: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
+<details>
+<summary>all...</summary>
+
+* _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
+<details><summary>context</summary>
+<pre>07:39:41: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+07:39:43: [control-plane-check] kube-controller-manager is healthy after 2.357893091s
+07:39:44: [control-plane-check] kube-scheduler is healthy after 3.627448341s
+07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+07:39:46: [control-plane-check] kube-apiserver is healthy after 5.503634325s
+07:39:46: I0928 03:39:46.362671    1613 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
+07:39:46: I0928 03:39:46.365956    1613 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
 </details>
 
 
@@ -324,4 +324,4 @@ make: *** [Makefile:177: cluster-up] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-09-28 21:08:40
+Last updated: 2026-09-29 00:13:48
