@@ -124,43 +124,6 @@
 ### external (5x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (2x / 40.00%) </summary>
-
-<hr/>
-
-**2x**: _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
-<details>
-<summary>all...</summary>
-
-* _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
-<details><summary>context</summary>
-<pre>06:47:27: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-06:47:27: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-06:47:33: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1374624727/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260930%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260930T064729Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bece4d68dfe552cd5c1522b88171d63dfede14193b999ace37b04b86befc4490&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1790751749~hmac=c79e58b95b20823cf63d13f7ca0f01b31728757402ba1ad25e2412552646d16d&#34;: EOF)
-make: *** [Makefile:177: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-* _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
-<details><summary>context</summary>
-<pre>06:25:34: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-06:25:34: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-06:25:38: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1519539013/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260924%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260924T062537Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2f35355f57c757563f50779ec88c0ed96d02ad9028d2be72e47e0d8aada528dc&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1790232037~hmac=df0af00d89f54e51b4a3357eb77394f301d234403168562cec1be3addd950e42&#34;: EOF)
-make: *** [Makefile:177: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
 
 <hr/>
@@ -190,6 +153,43 @@ make: *** [Makefile:180: cluster-down] Error 1
 &#43; true
 &#43; exit 2
 &#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+<details>
+<summary>all...</summary>
+
+* _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+<details><summary>context</summary>
+<pre>06:47:27: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+06:47:27: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+06:47:33: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1374624727/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/7b/7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260930%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260930T064729Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bece4d68dfe552cd5c1522b88171d63dfede14193b999ace37b04b86befc4490&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1790751749~hmac=c79e58b95b20823cf63d13f7ca0f01b31728757402ba1ad25e2412552646d16d&#34;: EOF)
+make: *** [Makefile:177: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+* _2026-09-24 06:12:02 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17922/pull-kubevirt-e2e-kind-1.37-vgpu/2103004361624915968#1:build-log.txt%3A509)
+<details><summary>context</summary>
+<pre>06:25:34: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+06:25:34: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+06:25:38: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1519539013/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20260924%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260924T062537Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2f35355f57c757563f50779ec88c0ed96d02ad9028d2be72e47e0d8aada528dc&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1790232037~hmac=df0af00d89f54e51b4a3357eb77394f301d234403168562cec1be3addd950e42&#34;: EOF)
+make: *** [Makefile:177: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -361,4 +361,4 @@ make: *** [Makefile:180: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-09-30 21:11:32
+Last updated: 2026-10-01 00:14:04
