@@ -20,24 +20,6 @@
 ### 2026-09-30 (2x / 50.00%)
 
 
-#### internal (1x / 50.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-30 18:11:18 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19276/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2105359692388634624#1:build-log.txt%3A4019)
-<details>
-<summary>all...</summary>
-
-* _2026-09-30 18:11:18 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19276/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2105359692388634624#1:build-log.txt%3A4019)
-
-</details>
-
-<hr/>
-</details>
-
 #### external (1x / 50.00%)
 
 <details>
@@ -50,6 +32,24 @@
 <summary>all...</summary>
 
 * _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 50.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-30 18:11:18 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19276/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2105359692388634624#1:build-log.txt%3A4019)
+<details>
+<summary>all...</summary>
+
+* _2026-09-30 18:11:18 &#43;0000 UTC_: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19276/pull-kubevirt-e2e-k8s-1.32-sig-network-1.7/2105359692388634624#1:build-log.txt%3A4019)
 
 </details>
 
@@ -106,31 +106,6 @@
 ### external (3x / 75.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-27 06:50:39 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19163/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2104101244820787200#1:build-log.txt%3A1856)
-<details>
-<summary>all...</summary>
-
-* _2026-09-27 06:50:39 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19163/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2104101244820787200#1:build-log.txt%3A1856)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-06:55:45: selecting podman as container runtime
-06:56:25: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): b13460666ba7f6b0bc2166dc3770d28f92ee63645cb66f490be56ec0d6ee5751: volume is being used
-make: *** [Makefile:180: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 25.00%) </summary>
 
 <hr/>
@@ -173,6 +148,31 @@ make: *** [Makefile:177: cluster-up] Error 125
 07:39:46: [control-plane-check] kube-apiserver is healthy after 5.503634325s
 07:39:46: I0928 03:39:46.362671    1613 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
 07:39:46: I0928 03:39:46.365956    1613 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-27 06:50:39 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19163/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2104101244820787200#1:build-log.txt%3A1856)
+<details>
+<summary>all...</summary>
+
+* _2026-09-27 06:50:39 &#43;0000 UTC_: <code>make: *** [Makefile:180: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19163/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2104101244820787200#1:build-log.txt%3A1856)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+06:55:45: selecting podman as container runtime
+06:56:25: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): b13460666ba7f6b0bc2166dc3770d28f92ee63645cb66f490be56ec0d6ee5751: volume is being used
+make: *** [Makefile:180: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -235,32 +235,26 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.8 (1x / 25.00%)
-
-
-#### external (1x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
-<details>
-<summary>all...</summary>
-
-* _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
-
-</details>
-
-<hr/>
-</details>
-
 ### main (2x / 50.00%)
 
 
 #### external (2x / 100.00%)
 
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+<details>
+<summary>all...</summary>
+
+* _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
@@ -276,16 +270,22 @@ make: *** [Makefile:162: cluster-down] Error 1
 
 <hr/>
 </details>
+
+### release-1.8 (1x / 25.00%)
+
+
+#### external (1x / 100.00%)
+
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
+<summary> transient kube-apiserver body decode noise (1x / 100.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+**1x**: _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
 <details>
 <summary>all...</summary>
 
-* _2026-09-30 06:40:56 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19205/pull-kubevirt-e2e-kind-1.37-vgpu/2105185961917812736#1:build-log.txt%3A447)
+* _2026-09-28 07:04:26 &#43;0000 UTC_: <code>07:39:45: I0928 03:39:45.854640    1613 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19237/pull-kubevirt-e2e-k8s-1.34-sig-monitoring-1.8/2104467039153295360#1:build-log.txt%3A774)
 
 </details>
 
@@ -378,4 +378,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-10-02 21:10:51
+Last updated: 2026-10-03 00:13:08
