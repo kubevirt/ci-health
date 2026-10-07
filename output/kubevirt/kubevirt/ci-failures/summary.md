@@ -177,21 +177,6 @@ make: *** [Makefile:162: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
-<details>
-<summary>all...</summary>
-
-* _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -201,6 +186,21 @@ make: *** [Makefile:162: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-05 06:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17974/pull-kubevirt-e2e-kind-1.37-vgpu/2107000242497916928#1:build-log.txt%3A467)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
+<details>
+<summary>all...</summary>
+
+* _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
 
 </details>
 
@@ -239,21 +239,6 @@ make: *** [Makefile:162: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
-<details>
-<summary>all...</summary>
-
-* _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -263,6 +248,21 @@ make: *** [Makefile:162: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-05 06:50:11 &#43;0000 UTC_: <code>make: *** [Makefile:177: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17974/pull-kubevirt-e2e-kind-1.37-vgpu/2107000242497916928#1:build-log.txt%3A467)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
+<details>
+<summary>all...</summary>
+
+* _2026-10-06 09:03:34 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19325/pull-kubevirt-e2e-k8s-1.35-sig-operator/2107388856490790912#1:build-log.txt%3A1102)
 
 </details>
 
@@ -290,4 +290,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-10-07 09:16:34
+Last updated: 2026-10-07 12:13:44
