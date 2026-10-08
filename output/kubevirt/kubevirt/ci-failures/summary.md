@@ -307,6 +307,45 @@ make: *** [Makefile:179: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
+### sig-network (2x / 40.00%)
+
+
+#### external (1x / 50.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-07 19:29:15 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19217/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2107894287529152512#1:build-log.txt%3A1855)
+<details>
+<summary>all...</summary>
+
+* _2026-10-07 19:29:15 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19217/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2107894287529152512#1:build-log.txt%3A1855)
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (1x / 50.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-07 10:56:37 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19348/pull-kubevirt-e2e-k8s-1.37-sig-network/2107740042326708224#1:build-log.txt%3A997)
+<details>
+<summary>all...</summary>
+
+* _2026-10-07 10:56:37 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19348/pull-kubevirt-e2e-k8s-1.37-sig-network/2107740042326708224#1:build-log.txt%3A997)
+
+</details>
+
+<hr/>
+</details>
+
 ### sig-compute (3x / 60.00%)
 
 
@@ -353,43 +392,4 @@ make: *** [Makefile:179: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-network (2x / 40.00%)
-
-
-#### internal (1x / 50.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-07 10:56:37 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19348/pull-kubevirt-e2e-k8s-1.37-sig-network/2107740042326708224#1:build-log.txt%3A997)
-<details>
-<summary>all...</summary>
-
-* _2026-10-07 10:56:37 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19348/pull-kubevirt-e2e-k8s-1.37-sig-network/2107740042326708224#1:build-log.txt%3A997)
-
-</details>
-
-<hr/>
-</details>
-
-#### external (1x / 50.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-07 19:29:15 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19217/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2107894287529152512#1:build-log.txt%3A1855)
-<details>
-<summary>all...</summary>
-
-* _2026-10-07 19:29:15 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19217/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2107894287529152512#1:build-log.txt%3A1855)
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-10-08 12:14:22
+Last updated: 2026-10-08 18:18:49
