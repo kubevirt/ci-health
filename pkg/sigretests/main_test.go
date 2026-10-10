@@ -336,4 +336,81 @@ var _ = Describe("main", func() {
 			Expect(filtered[0].jobName).To(Equal("job-no-timestamp"))
 		})
 	})
+
+	Context("FilterJobsPerSigs FailedJobDetails", func() {
+		var server *httptest.Server
+
+		AfterEach(func() {
+			if server != nil {
+				server.Close()
+			}
+		})
+
+		It("records compute when junit is present and ci when it is missing", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				if strings.Contains(r.URL.Path, "compute") {
+					w.WriteHeader(http.StatusOK)
+					_, _ = w.Write([]byte(`<testsuite></testsuite>`))
+					return
+				}
+				w.WriteHeader(http.StatusNotFound)
+			}))
+			jobs := []job{
+				{
+					jobName:      "pull-kubevirt-e2e-k8s-1.37-sig-compute",
+					buildURL:     "https://prow.example/compute",
+					failure:      true,
+					artifactsURL: server.URL + "/compute/artifacts",
+				},
+				{
+					jobName:      "pull-kubevirt-e2e-k8s-1.37-sig-storage",
+					buildURL:     "https://prow.example/storage",
+					failure:      true,
+					artifactsURL: server.URL + "/storage/artifacts",
+				},
+				{
+					jobName: "pull-kubevirt-e2e-k8s-1.37-sig-network",
+					failure: false,
+				},
+			}
+
+			got := FilterJobsPerSigs(jobs, []string{"main"})
+			Expect(got.FailedJobDetails).To(HaveLen(2))
+			Expect(got.FailedJobDetails[0]).To(Equal(FailedJobDetail{
+				JobName: "pull-kubevirt-e2e-k8s-1.37-sig-compute",
+				URL:     "https://prow.example/compute",
+				SIG:     "compute",
+			}))
+			Expect(got.FailedJobDetails[1]).To(Equal(FailedJobDetail{
+				JobName: "pull-kubevirt-e2e-k8s-1.37-sig-storage",
+				URL:     "https://prow.example/storage",
+				SIG:     "ci",
+			}))
+			Expect(got.SigComputeFailure).To(Equal(1))
+			Expect(got.SigCIFailure).To(Equal(1))
+			Expect(got.SigNetworkSuccess).To(Equal(1))
+		})
+
+		It("labels sig-performance failures without counting them on other SIG badges", func() {
+			server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				w.WriteHeader(http.StatusOK)
+				_, _ = w.Write([]byte(`<testsuite></testsuite>`))
+			}))
+			jobs := []job{{
+				jobName:      "pull-kubevirt-e2e-k8s-1.36-sig-performance",
+				buildURL:     "https://prow.example/perf",
+				failure:      true,
+				artifactsURL: server.URL + "/perf/artifacts",
+			}}
+
+			got := FilterJobsPerSigs(jobs, []string{"main"})
+			Expect(got.FailedJobDetails).To(Equal([]FailedJobDetail{{
+				JobName: "pull-kubevirt-e2e-k8s-1.36-sig-performance",
+				URL:     "https://prow.example/perf",
+				SIG:     "performance",
+			}}))
+			Expect(got.SigComputeFailure).To(Equal(0))
+			Expect(got.SigCIFailure).To(Equal(0))
+		})
+	})
 })

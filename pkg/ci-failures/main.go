@@ -23,6 +23,8 @@ import (
 
 var logsDir = "output/tmp/build-logs"
 
+var gcsHTTPClient = &http.Client{Timeout: 90 * time.Second}
+
 var (
 	// Each regex matches a line occurring in the build log which we want to see
 	buildLogLineMatchesOneOfExpressions = []string{
@@ -376,7 +378,7 @@ func closeAndLogErr(closer io.Closer) {
 }
 
 func retrieveFileContentFromGCS(url string) ([]byte, error) {
-	resp, err := http.Get(url)
+	resp, err := gcsHTTPClient.Get(url)
 	if err != nil {
 		return nil, fmt.Errorf("failed to download content from %s: %v", url, err)
 	}
