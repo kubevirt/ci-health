@@ -2,7 +2,7 @@
 name: test-failure-rate
 description: Analyze test failures from a Prow build against historical 7-to-28 day flakefinder reports.
 argument-hint: <prow-job-url>
-allowed-tools: Read, Glob, Bash(go run *)
+allowed-tools: Read, Glob, Bash(ci-failures *)
 ---
 
 ## Overview
@@ -11,24 +11,22 @@ This skill looks up the historical success rate for each test that failed in a P
 
 ## Data generation
 
-Run the `test-rate` subcommand from the `kubevirt.io/ci-health` repository with the Prow job URL.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+Run the `test-rate` subcommand with the Prow job URL.
 
 ```bash
-$ go run ./cmd/ci-failures test-rate $ARGUMENTS
+$ ci-failures test-rate $ARGUMENTS
 ```
 
 To cover a longer period (up to 28 days):
 
 ```bash
-$ go run ./cmd/ci-failures test-rate --days 14 <prow-job-url>
+$ ci-failures test-rate --days 14 <prow-job-url>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures test-rate $ARGUMENTS
+$ ci-failures test-rate $ARGUMENTS
 ```
 
 This produces `output/tmp/sessions/<session-id>/test-rate-{job-name}.yaml`.

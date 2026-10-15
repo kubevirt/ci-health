@@ -5,7 +5,7 @@ description: >
     Uses flip-rate analysis, burst detection, and cross-test correlation in addition
     to success rates. Use when the user provides a testgrid URL and wants to see
     which tests are failing in that lane.
-allowed-tools: [Read, Glob, Bash(go run:*), Bash(gh:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(gh:*)]
 ---
 
 ## Overview
@@ -17,13 +17,13 @@ This skill analyzes a testgrid lane and calculates failure rates for every test 
 When the user asks to analyze lanes for a Kubernetes version (e.g. "kubevirt 1.36 lanes") without providing specific testgrid URLs, use the `discover-lanes` subcommand to find all matching lanes across both periodic and presubmit dashboards.
 
 ```bash
-$ go run ./cmd/ci-failures discover-lanes <version>
+$ ci-failures discover-lanes <version>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures discover-lanes 1.36
+$ ci-failures discover-lanes 1.36
 ```
 
 This queries the testgrid summary API for both `kubevirt-periodics` and `kubevirt-presubmits` dashboards and produces `output/tmp/discover-lanes-{version}.yaml`.
@@ -69,28 +69,26 @@ Presubmits often include specialized lanes beyond the standard SIG lanes — for
 
 Run the `lane-rate` subcommand from the `kubevirt.io/ci-health` repository with a testgrid URL.
 
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
-
 ```bash
-$ go run ./cmd/ci-failures lane-rate <testgrid-url>
+$ ci-failures lane-rate <testgrid-url>
 ```
 
 To control the analysis window (default 14 days):
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 21 <testgrid-url>
+$ ci-failures lane-rate --days 21 <testgrid-url>
 ```
 
 To filter out one-off failures and only keep tests at or below a success rate threshold (useful for noisy presubmit lanes):
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --max-success-rate 95 <testgrid-url>
+$ ci-failures lane-rate --max-success-rate 95 <testgrid-url>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
+$ ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
 ```
 
 This produces `output/tmp/lane-rate-{tab-name}.yaml`.

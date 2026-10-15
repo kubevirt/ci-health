@@ -2,7 +2,7 @@
 name: change-relevance
 description: Determine whether a PR's code changes are related to tests that failed in a Prow build.
 argument-hint: <prow-job-url>
-allowed-tools: Read, Glob, Bash(go run *)
+allowed-tools: Read, Glob, Bash(ci-failures *)
 ---
 
 ## Overview
@@ -14,13 +14,13 @@ This skill checks whether a PR's changed files overlap with the code areas that 
 Run the `change-relevance` subcommand with a Prow job URL for a **PR build**:
 
 ```bash
-$ go run ./cmd/ci-failures change-relevance $ARGUMENTS
+$ ci-failures change-relevance $ARGUMENTS
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures change-relevance $ARGUMENTS
+$ ci-failures change-relevance $ARGUMENTS
 ```
 
 This produces `output/tmp/change-relevance-{job-name}.yaml`.
