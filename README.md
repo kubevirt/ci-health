@@ -30,7 +30,7 @@ data from the previous 7 days since the execution time.
 ![avg-merge-queue-length](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merge-queue-length.svg)
 ![avg-time-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/time-to-merge.svg)
 ![avg-retests-to-merge](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/retests-to-merge.svg)
-![merged-prs-with-no-retest](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merged-prs-no-retest.svg)
+[![merged-prs-with-no-retest](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/merged-prs-no-retest.svg)](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/pr-retest-report.html)
 
 [Latest execution data](https://kubevirt.io/ci-health/output/kubevirt/kubevirt/results.json)
 
@@ -125,7 +125,7 @@ The repository provides four CLI tools under `cmd/`:
 
 * `stats`: gathers latest data and generates badges data and files.
 * `batch`: gathers data for a range of dates and generates plots from them.
-* `html-report`: generates per-SIG HTML failure reports.
+* `html-report`: generates per-SIG HTML failure reports, or a PR-centric retest report (`--kind pr-retests`).
 * `ci-failures`: diagnostic CLI for analyzing CI build failures, test flakiness, and Kubernetes cluster state.
 
 ## Automation & Workflows
@@ -215,6 +215,13 @@ $ go run ./cmd/html-report --sig compute --results-path ./output/kubevirt/kubevi
 ```
 
 This should create a HTML report called sig-compute-failure-report.html under /tmp/.
+
+To generate the PR retest report (flake vs internal CI vs external vs other) from `results.json`:
+```
+$ go run ./cmd/html-report --kind pr-retests --results-path ./output/kubevirt/kubevirt/results.json --path ./output/kubevirt/kubevirt
+```
+
+`stats` also writes this report next to `results.json` as `pr-retest-report.html`.
 
 ### ci-failures command
 
