@@ -3,7 +3,7 @@ name: analyze-build
 description: >
     Analyze the root cause inside a failed prowjob.
     Use when user mentions to analyze a prowjob failure or adds a prowjob url
-allowed-tools: [Read, Glob, Bash(go run:*), Bash(grep:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(grep:*)]
 ---
 
 ## Overview
@@ -18,14 +18,12 @@ It combines four analyses:
 
 ## Analysis data generation
 
-As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+As a base for analyzing the failure, the `ci-failures` binary is to be used.
 
 Example how to generate the data files for a specific prowjob, given is the url to the prowjob build:
 
 ```bash
-$ go run ./cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
+$ ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
 ```
 
 This produces up to two output files in a session directory:

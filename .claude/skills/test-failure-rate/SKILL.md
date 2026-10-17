@@ -4,7 +4,7 @@ description: >
     Analyze test failures from a Prow build against historical flakefinder data.
     Classifies failures as flaky, PR-related, or infrastructure-related using
     success rates, failure dispersion across lanes, and cross-test correlation.
-allowed-tools: [Read, Glob, Bash(go run:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*)]
 ---
 
 ## Overview
@@ -15,22 +15,20 @@ This skill looks up the historical success rate for each test that failed in a P
 
 Run the `test-rate` subcommand from the `kubevirt.io/ci-health` repository with the Prow job URL.
 
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
-
 ```bash
-$ go run ./cmd/ci-failures test-rate <prow-job-url>
+$ ci-failures test-rate <prow-job-url>
 ```
 
 To cover a longer period (up to 28 days):
 
 ```bash
-$ go run ./cmd/ci-failures test-rate --days 14 <prow-job-url>
+$ ci-failures test-rate --days 14 <prow-job-url>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
+$ ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
 ```
 
 This produces `output/tmp/sessions/<session-id>/test-rate-{job-name}.yaml`.
