@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-10-20 (2x / 18.18%)
+### 2026-10-20 (2x / 20.00%)
 
 
 #### external (2x / 100.00%)
@@ -53,7 +53,7 @@
 <hr/>
 </details>
 
-### 2026-10-18 (1x / 9.09%)
+### 2026-10-18 (1x / 10.00%)
 
 
 #### external (1x / 100.00%)
@@ -74,7 +74,7 @@
 <hr/>
 </details>
 
-### 2026-10-16 (4x / 36.36%)
+### 2026-10-16 (4x / 40.00%)
 
 
 #### external (4x / 100.00%)
@@ -109,13 +109,13 @@
 <hr/>
 </details>
 
-### 2026-10-15 (4x / 36.36%)
+### 2026-10-15 (3x / 30.00%)
 
 
-#### external (4x / 100.00%)
+#### external (3x / 100.00%)
 
 <details>
-<summary> download failure in context (3x / 75.00%) </summary>
+<summary> download failure in context (3x / 100.00%) </summary>
 
 <hr/>
 
@@ -141,31 +141,16 @@
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-<details>
-<summary>all...</summary>
-
-* _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-
-</details>
-
-<hr/>
-</details>
 
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (11x / 100.00%)
+### external (10x / 100.00%)
 
 <details>
-<summary> download failure in context (7x / 63.64%) </summary>
+<summary> download failure in context (7x / 70.00%) </summary>
 
 <hr/>
 
@@ -270,11 +255,11 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 <hr/>
 </details>
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 27.27%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 20.00%) </summary>
 
 <hr/>
 
-**3x**: _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
+**2x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
 <details>
 <summary>all...</summary>
 
@@ -302,24 +287,12 @@ make: *** [Makefile:182: cluster-down] Error 1
 </details>
 
 
-* _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-<details><summary>context</summary>
-<pre>00:15:48: INFO: Running command line: bazel-bin/push-virt-template-controller.exe --registry localhost:5000/kubevirt --repository virt-template-controller --tag v0.3.0
-00:15:55: Error during deploy: deploying images: layer sha256:7750c1a1cd8e356f717610d15552bd8a4af1801b72b5855c9e8494cc07636e77 not found in any of the original registries
-00:15:57: &#43; rm -f /tmp/kubevirt.deploy.p4GY
-make: *** [Makefile:194: cluster-sync] Error 1
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 9.09%) </summary>
+<summary> failed external fetch in context (1x / 10.00%) </summary>
 
 <hr/>
 
@@ -349,7 +322,7 @@ make: *** [Makefile:176: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
-### release-1.8 (1x / 9.09%)
+### release-1.8 (1x / 10.00%)
 
 
 #### external (1x / 100.00%)
@@ -370,7 +343,30 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.9 (6x / 54.55%)
+### main (2x / 20.00%)
+
+
+#### external (2x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 100.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+<details>
+<summary>all...</summary>
+
+* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+
+* _2026-10-18 16:31:33 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19463/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2111850969808506880#1:build-log.txt%3A1911)
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.9 (6x / 60.00%)
 
 
 #### external (6x / 100.00%)
@@ -409,7 +405,7 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.7 (1x / 9.09%)
+### release-1.7 (1x / 10.00%)
 
 
 #### external (1x / 100.00%)
@@ -430,37 +426,12 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 
-### main (3x / 27.27%)
-
-
-#### external (3x / 100.00%)
-
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (3x / 100.00%) </summary>
-
-<hr/>
-
-**3x**: _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-<details>
-<summary>all...</summary>
-
-* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-
-* _2026-10-18 16:31:33 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19463/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2111850969808506880#1:build-log.txt%3A1911)
-
-* _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-network (2x / 18.18%)
+### sig-network (2x / 20.00%)
 
 
 #### external (2x / 100.00%)
@@ -483,13 +454,13 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-compute (6x / 54.55%)
+### sig-compute (5x / 50.00%)
 
 
-#### external (6x / 100.00%)
+#### external (5x / 100.00%)
 
 <details>
-<summary> download failure in context (4x / 66.67%) </summary>
+<summary> download failure in context (4x / 80.00%) </summary>
 
 <hr/>
 
@@ -518,7 +489,7 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> failed external fetch in context (1x / 16.67%) </summary>
+<summary> failed external fetch in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -532,23 +503,8 @@ make: *** [Makefile:176: cluster-down] Error 1
 
 <hr/>
 </details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 16.67%) </summary>
 
-<hr/>
-
-**1x**: _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-<details>
-<summary>all...</summary>
-
-* _2026-10-15 00:02:06 &#43;0000 UTC_: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19454/pull-kubevirt-e2e-kind-1.37-sig-compute-arm64/2110521441312051200#1:build-log.txt%3A2485)
-
-</details>
-
-<hr/>
-</details>
-
-### sig-storage (3x / 27.27%)
+### sig-storage (3x / 30.00%)
 
 
 #### external (3x / 100.00%)
@@ -573,4 +529,4 @@ make: *** [Makefile:176: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-10-22 00:19:36
+Last updated: 2026-10-22 03:11:01
