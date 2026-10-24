@@ -3,7 +3,7 @@ name: change-relevance
 description: >
     Determine whether a PR's code changes are related to tests that failed in a Prow build.
     Use when user wants to know if test failures are caused by their PR changes.
-allowed-tools: [Read, Glob, Bash(go run:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*)]
 ---
 
 ## Overview
@@ -15,13 +15,14 @@ This skill checks whether a PR's changed files overlap with the code areas that 
 Run the `change-relevance` subcommand with a Prow job URL for a **PR build**:
 
 ```bash
-$ go run ./cmd/ci-failures change-relevance <prow-job-url>
+$ ci-failures change-relevance <prow-job-url>
 ```
+
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures change-relevance https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17760/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2053843644594524160
+$ ci-failures change-relevance https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17760/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2053843644594524160
 ```
 
 This produces `output/tmp/change-relevance-{job-name}.yaml`.

@@ -3,7 +3,7 @@ name: analyze-ci-failures
 description: >
     Analyze root causes for all the recent ci-failures.
     Use when user mentions to analyze recent ci failures
-allowed-tools: [Read, Write, Grep, Bash(go run:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
+allowed-tools: [Read, Write, Grep, Bash(ci-failures:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
 ---
 
 ## Overview
@@ -12,15 +12,13 @@ This skill helps the user to find the root cause and mitigations for all ci fail
 
 ## Analysis data generation
 
-As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used. As a base for the data the file
+As a base for analyzing the failure, the `ci-failures` binary is to be used. As a base for the data the file
 `output/kubevirt/kubevirt/results.json` is used.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
 
 Example how to generate the data files for the prowjobs failing ci:
 
 ```bash
-$ go run ./cmd/ci-failures generate yaml
+$ ci-failures generate yaml
 ```
 
 This produces:
@@ -84,10 +82,10 @@ Only needed when error snippets are insufficient for root cause analysis. Use th
 
 ```bash
 # Show last 30 lines of a build log
-$ go run ./cmd/ci-failures show-log <build-id> --tail 30
+$ ci-failures show-log <build-id> --tail 30
 
 # Search for error patterns (case-insensitive)
-$ go run ./cmd/ci-failures show-log <build-id> --grep "error" --tail 20
+$ ci-failures show-log <build-id> --grep "error" --tail 20
 ```
 
 Flags:
@@ -99,7 +97,7 @@ Flags:
 1. **Use generated file list**: Parse the `generated_files:` YAML list printed by the `generate yaml` command to get all error YAML file paths — no separate discovery step needed
 2. **Read each error YAML file**: Extract the job name, SIG (from directory), and all build errors with their snippets
 3. **Analyze error snippets**: For each build error, examine `error_text` and `context` fields to determine root cause. In most cases the snippets contain enough information
-4. **Deep-dive when needed**: If snippets are ambiguous or empty, use `go run ./cmd/ci-failures show-log <build_id> --grep "error" --tail 20` to search the full build log
+4. **Deep-dive when needed**: If snippets are ambiguous or empty, use `ci-failures show-log <build_id> --grep "error" --tail 20` to search the full build log
 5. **Classify** each failure as fixable or non-fixable
 6. **Group similar failures** across jobs — errors with the same root cause should be combined into a single group even if they appear in different SIGs or branches
 
