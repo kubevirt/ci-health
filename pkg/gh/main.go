@@ -123,6 +123,53 @@ func (c *Client) MergedPRsBetween(startDate, endDate time.Time) (types.MergeQueu
 	return mergedQueryResult, nil
 }
 
+const maxOpenPRSearchResults = 500
+
+// OpenPRNumbers returns currently open PR numbers, optionally limited to those
+// updated at or after updatedSince. Results are capped so a large backlog of
+// stale PRs cannot explode follow-up GraphQL and Prow queries.
+func (c *Client) OpenPRNumbers(updatedSince time.Time) ([]int, error) {
+	queryString := fmt.Sprintf("repo:%s type:pr is:open", c.source)
+	if !updatedSince.IsZero() {
+		queryString += fmt.Sprintf(" updated:>=%s", updatedSince.Format(constants.DateFormat))
+	}
+	log.Debugf("open PRs query: %q", queryString)
+
+	var numbers []int
+	var cursor *githubv4.String
+	for {
+		variables := map[string]interface{}{
+			"querystring": githubv4.String(queryString),
+			"cursor":      cursor,
+		}
+		var searchQuery struct {
+			Search struct {
+				PageInfo struct {
+					HasNextPage bool
+					EndCursor   githubv4.String
+				}
+				Nodes types.BarePRList
+			} `graphql:"search(query: $querystring, type: ISSUE, first: 100, after: $cursor)"`
+		}
+		if err := c.inner.Query(context.Background(), &searchQuery, variables); err != nil {
+			return nil, err
+		}
+		for _, node := range searchQuery.Search.Nodes {
+			numbers = append(numbers, node.Number)
+			if len(numbers) >= maxOpenPRSearchResults {
+				log.Warnf("open PR search hit cap of %d results; later PRs are omitted", maxOpenPRSearchResults)
+				return numbers, nil
+			}
+		}
+		if !searchQuery.Search.PageInfo.HasNextPage {
+			break
+		}
+		cursor = githubv4.NewString(searchQuery.Search.PageInfo.EndCursor)
+	}
+	log.Debugf("open PRs query result length: %d", len(numbers))
+	return numbers, nil
+}
+
 func (c *Client) mergeQueuePRQuery(query string) (types.MergeQueuePRList, error) {
 
 	variables := map[string]interface{}{
@@ -158,6 +205,33 @@ func (c *Client) FetchPRTimelineItems(number int) (*types.MergeQueuePullRequestF
 	var query struct {
 		Repository struct {
 			PullRequest types.MergeQueuePullRequestFragment `graphql:"pullRequest(number: $number)"`
+		} `graphql:"repository(owner: $owner, name: $repo)"`
+	}
+
+	err := c.inner.Query(context.Background(), &query, variables)
+	if err != nil {
+		return nil, err
+	}
+	return &query.Repository.PullRequest, nil
+}
+
+// FetchChatopsPR fetches commit, force-push, and comment timeline items for a
+// single PR. Per-PR queries avoid the search API truncating nested timelines.
+func (c *Client) FetchChatopsPR(number int) (*types.ChatopsPullRequestFragment, error) {
+	parts := strings.SplitN(c.source, "/", 2)
+	if len(parts) != 2 {
+		return nil, fmt.Errorf("invalid source %q, expected owner/repo", c.source)
+	}
+
+	variables := map[string]interface{}{
+		"owner":  githubv4.String(parts[0]),
+		"repo":   githubv4.String(parts[1]),
+		"number": githubv4.Int(number),
+	}
+
+	var query struct {
+		Repository struct {
+			PullRequest types.ChatopsPullRequestFragment `graphql:"pullRequest(number: $number)"`
 		} `graphql:"repository(owner: $owner, name: $repo)"`
 	}
 

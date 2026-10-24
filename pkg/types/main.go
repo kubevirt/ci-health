@@ -165,7 +165,7 @@ type ChatopsPullRequestFragment struct {
 	Number        int
 	CreatedAt     time.Time
 	MergedAt      time.Time
-	TimelineItems `graphql:"timelineItems(first:100, itemTypes:[PULL_REQUEST_COMMIT, BASE_REF_FORCE_PUSHED_EVENT, HEAD_REF_FORCE_PUSHED_EVENT, ISSUE_COMMENT])"`
+	TimelineItems `graphql:"timelineItems(last:100, itemTypes:[PULL_REQUEST_COMMIT, BASE_REF_FORCE_PUSHED_EVENT, HEAD_REF_FORCE_PUSHED_EVENT, ISSUE_COMMENT])"`
 }
 
 type MergeQueuePullRequestFragment struct {
@@ -210,6 +210,33 @@ type PlotData struct {
 type PR struct {
 	Number   int
 	MergedAt string
+}
+
+const (
+	// FailureCauseFlake is a required e2e job whose named failures are all
+	// historically flaky (flakefinder likely-flaky).
+	FailureCauseFlake = "flake"
+	// FailureCauseCI is a pre-test / suite-collapse infra failure (internal).
+	FailureCauseCI = "ci"
+	// FailureCauseExternal is a registry / GitHub / cache failure.
+	FailureCauseExternal = "external"
+)
+
+// PRJobFailure is a single failed required e2e job, with a cause of retest.
+type PRJobFailure struct {
+	JobName string
+	URL     string
+	SIG     string
+	Cause   string
+	Reason  string `json:",omitempty"`
+}
+
+// PRRetestSummary joins retest count with the failed jobs that caused them.
+type PRRetestSummary struct {
+	Number      int
+	MergedAt    string
+	RetestCount int
+	Failures    []PRJobFailure `json:",omitempty"`
 }
 
 type DataPoint struct {
@@ -283,8 +310,12 @@ func (d *RunningAverageDataItem) SimpleBadgeString() string {
 // the data was obtained and the number of days back from the execution time included in the
 // data.
 type Results struct {
-	EndDate  string
-	DataDays int
-	Source   string
-	Data     map[string]RunningAverageDataItem
+	EndDate            string
+	DataDays           int
+	Source             string
+	Data               map[string]RunningAverageDataItem
+	PRRetestReport     []PRRetestSummary `json:",omitempty"`
+	OpenPRRetestReport []PRRetestSummary `json:",omitempty"`
+	OpenPRCount        int               `json:",omitempty"`
+	MergedPRCount      int               `json:",omitempty"`
 }
