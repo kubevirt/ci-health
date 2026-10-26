@@ -44,21 +44,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-<details>
-<summary>all...</summary>
-
-* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> failed external fetch in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -73,6 +58,21 @@
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+<details>
+<summary>all...</summary>
+
+* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-error-category"></a>
 
@@ -81,31 +81,6 @@
 
 ### external (3x / 100.00%)
 
-<details>
-<summary> failed external fetch in context (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-20 21:36:46 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19549/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2112531931240337408#1:build-log.txt%3A739)
-<details>
-<summary>all...</summary>
-
-* _2026-10-20 21:36:46 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19549/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2112531931240337408#1:build-log.txt%3A739)
-<details><summary>context</summary>
-<pre>21:39:19: Copying config sha256:0deff6e13f1297a10fb7ea97236e837d0beffab1129f981a389413cf64e353a3
-21:39:19: Writing manifest to image destination
-21:39:20: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8 is being used by the following container(s): 0e50e662097ddd86e0f1945866b0cfddac47b56e083efe79a7e7dacec6001d66: volume is being used
-make: *** [Makefile:176: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
 <details>
 <summary> container image pull failure in context (1x / 33.33%) </summary>
 
@@ -156,6 +131,31 @@ make: *** [Makefile:182: cluster-down] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> failed external fetch in context (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-20 21:36:46 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19549/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2112531931240337408#1:build-log.txt%3A739)
+<details>
+<summary>all...</summary>
+
+* _2026-10-20 21:36:46 &#43;0000 UTC_: <code>make: *** [Makefile:176: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19549/pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8/2112531931240337408#1:build-log.txt%3A739)
+<details><summary>context</summary>
+<pre>21:39:19: Copying config sha256:0deff6e13f1297a10fb7ea97236e837d0beffab1129f981a389413cf64e353a3
+21:39:19: Writing manifest to image destination
+21:39:20: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-compute-1.8 is being used by the following container(s): 0e50e662097ddd86e0f1945866b0cfddac47b56e083efe79a7e7dacec6001d66: volume is being used
+make: *** [Makefile:176: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-branch"></a>
 
@@ -168,21 +168,6 @@ make: *** [Makefile:182: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
-<details>
-<summary>all...</summary>
-
-* _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
@@ -192,6 +177,21 @@ make: *** [Makefile:182: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
+<details>
+<summary>all...</summary>
+
+* _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
 
 </details>
 
@@ -230,21 +230,6 @@ make: *** [Makefile:182: cluster-down] Error 1
 #### external (2x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-<details>
-<summary>all...</summary>
-
-* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> container image pull failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -254,6 +239,21 @@ make: *** [Makefile:182: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+<details>
+<summary>all...</summary>
+
+* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
 
 </details>
 
@@ -281,4 +281,4 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-10-26 09:23:08
+Last updated: 2026-10-26 13:17:23
