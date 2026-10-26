@@ -82,31 +82,6 @@
 ### external (3x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-<details>
-<summary>all...</summary>
-
-* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-05:07:53: selecting podman as container runtime
-05:08:24: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): f67664f72d6ff7ee5b198102b73ebab765d682ac3c4c9f7f7b5b0278cc3347d1: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> failed external fetch in context (1x / 33.33%) </summary>
 
 <hr/>
@@ -156,6 +131,31 @@ time=&#34;2026-10-21T13:06:01Z&#34; level=warning msg=&#34;Found incomplete laye
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+<details>
+<summary>all...</summary>
+
+* _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+05:07:53: selecting podman as container runtime
+05:08:24: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): f67664f72d6ff7ee5b198102b73ebab765d682ac3c4c9f7f7b5b0278cc3347d1: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-branch"></a>
 
@@ -168,21 +168,6 @@ time=&#34;2026-10-21T13:06:01Z&#34; level=warning msg=&#34;Found incomplete laye
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
-<details>
-<summary>all...</summary>
-
-* _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
@@ -192,6 +177,21 @@ time=&#34;2026-10-21T13:06:01Z&#34; level=warning msg=&#34;Found incomplete laye
 <summary>all...</summary>
 
 * _2026-10-20 05:02:35 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/18618/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112408971561144320#1:build-log.txt%3A1911)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
+<details>
+<summary>all...</summary>
+
+* _2026-10-21 12:56:21 &#43;0000 UTC_: <code>Error: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: cleaning up container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e storage: unmounting container 5fd55014d234219b6b5c86e212763b12e253f6c8052319ab7175ef955350873e root filesystem: deleting layer &#34;fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a&#34;: failed to add to stage directory: rename /var/lib/shared-images/overlay/fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a /var/lib/containers/storage/overlay/tempdirs/temp-dir-3166173718/1-fa8bf1d9b9284b1fee0a4d112c6650760bc1213c54ea2536108ad05f64f3950a: invalid cross-device link</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19064/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2112890491417661440#1:build-log.txt%3A591)
 
 </details>
 
@@ -281,4 +281,4 @@ time=&#34;2026-10-21T13:06:01Z&#34; level=warning msg=&#34;Found incomplete laye
 <hr/>
 </details>
 
-Last updated: 2026-10-26 18:21:43
+Last updated: 2026-10-26 21:19:33
