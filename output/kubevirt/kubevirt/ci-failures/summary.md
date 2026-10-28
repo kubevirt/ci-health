@@ -17,7 +17,28 @@
 ## per day [⬆](#top)
 
 
-### 2026-10-26 (1x / 100.00%)
+### 2026-10-28 (1x / 50.00%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details>
+<summary>all...</summary>
+
+* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-10-26 (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -43,10 +64,10 @@
 ## per error category [⬆](#top)
 
 
-### external (1x / 100.00%)
+### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -70,19 +91,44 @@ make: *** [Makefile:182: cluster-down] Error 1
 
 <hr/>
 </details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details>
+<summary>all...</summary>
+
+* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+16:14:40: selecting podman as container runtime
+16:14:40: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-storage is being used by the following container(s): ab5ac3b271a5edd5373cc1acd2a27a8884d4400a81f5eed93a634e9d5f377457: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (1x / 100.00%)
+### main (2x / 100.00%)
 
 
-#### external (1x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 100.00%) </summary>
+<summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -91,6 +137,21 @@ make: *** [Makefile:182: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-26 17:44:21 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19360/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2114742369638158336#1:build-log.txt%3A3317)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details>
+<summary>all...</summary>
+
+* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
 
 </details>
 
@@ -102,7 +163,28 @@ make: *** [Makefile:182: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 100.00%)
+### sig-storage (1x / 50.00%)
+
+
+#### external (1x / 100.00%)
+
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details>
+<summary>all...</summary>
+
+* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (1x / 50.00%)
 
 
 #### external (1x / 100.00%)
@@ -123,4 +205,4 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-10-28 18:16:19
+Last updated: 2026-10-28 21:15:24
