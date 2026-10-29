@@ -4,57 +4,65 @@ description: >
     Analyze test failures from a Prow build against historical flakefinder data.
     Classifies failures as flaky, PR-related, or infrastructure-related using
     success rates, failure dispersion across lanes, and cross-test correlation.
-allowed-tools: [Read, Glob, Bash(ci-failures:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*)]
 ---
 
 ## Overview
 
 This skill looks up the historical success rate for each test that failed in a Prow build, using kubevirt flakefinder 7-day (168h) reports. Use `--days` to extend the analysis window up to 28 days by fetching and merging multiple weekly reports.
 
+## Prerequisites
+
+Read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup) before running commands. Use the installed `ci-failures` binary from a deliberately selected, writable `ci-health` repository working directory, with a fresh session per analysis as described there. `<output-dir>` below means `output/tmp` or `output/tmp/sessions/<session-id>` according to that setup.
+
 ## Data generation
 
-Run the `test-rate` subcommand from the `kubevirt.io/ci-health` repository with the Prow job URL.
+Run the `test-rate` subcommand from the working directory selected in Prerequisites with the Prow job URL.
 
 ```bash
-$ ci-failures test-rate <prow-job-url>
+ci-failures test-rate <prow-job-url>
 ```
 
 To cover a longer period (up to 28 days):
 
 ```bash
-$ ci-failures test-rate --days 14 <prow-job-url>
+ci-failures test-rate --days 14 <prow-job-url>
 ```
 
 Example:
 
 ```bash
-$ ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
+ci-failures test-rate --days 21 https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17690/pull-kubevirt-e2e-k8s-1.35-sig-compute-migrations/2053739485539078144
 ```
 
-This produces `output/tmp/sessions/<session-id>/test-rate-{job-name}.yaml`.
+This produces `<output-dir>/test-rate-<job-name>.yaml`.
 
-The tool logs the written file path. Extract the session directory from the `"wrote test rate analysis to ..."` log line.
+Read the exact file path from the `"wrote test rate analysis to ..."` log line, not a broad glob over older outputs. Runs for the same job name overwrite that file within a session, even for different builds or windows; read and retain results before rerunning.
+
+Failed test names are extracted from Ginkgo `[FAIL]` lines in build-log error snippets, not from a complete JUnit inventory. If the command reports `no failed tests found in build log`, no test-rate YAML is written; do not read a stale file or infer the build passed. Setup failures, unsupported log formats, and missing snippets may yield no names. Use build analysis for these cases.
+
+`--days` is clamped to 28 (values below 1 default to 7) and selects whole 168h reports, not an exact rolling-day slice. Prefer 7, 14, 21, or 28 days. Inspect the logged fetched reports and `report_period_start`/`report_period_end` for actual coverage, gaps, or overlap before comparing windows; `report_days` records the requested/clamped value, not measured coverage.
 
 ## Analysis
 
 After data generation:
 
-1. Extract the session directory path from the tool's log output, then find the `test-rate-*.yaml` file in that directory
+1. Read the exact `<output-dir>/test-rate-<job-name>.yaml` path logged by this invocation
 2. Read the YAML. The structure is:
    - `prow_job_url`: the analyzed build URL
    - `job_name`: the Prow job name
-   - `report_days`: number of days covered
+   - `report_days`: requested/clamped days; whole weekly reports determine actual coverage
    - `report_period_start`: start date of the merged flakefinder window
    - `report_period_end`: end date of the merged flakefinder window
    - `failed_tests`: list of failed tests, each with:
      - `test_name`: original test name from the build log
-     - `matched_name`: the matching test name in the flakefinder report (empty if no match)
+     - `matched_name`: the matching test name in the flakefinder report (optional; omitted if no match)
      - `total_succeeded`: total successes across all jobs in the covered period
      - `total_failed`: total failures across all jobs
      - `total_skipped`: total skips
      - `success_rate`: percentage (0-100)
      - `severity`: classification of the failure
-     - `k8s_versions`: per-Kubernetes-version breakdown, sorted by success rate ascending (worst first), each with:
+     - `k8s_versions`: optional per-Kubernetes-version breakdown, omitted when unavailable, sorted by success rate ascending (worst first), each with:
        - `version`: Kubernetes version (e.g., "1.35", "1.36", or "unknown")
        - `succeeded`, `failed`, `skipped`: counts aggregated across all lanes for this version
        - `success_rate`: percentage (0-100)
@@ -89,6 +97,8 @@ When failures are concentrated, upgrade the severity toward "likely-pr-related" 
 
 **Periodic lanes** (prefixed `periodic-`) run against `main` and reflect the true baseline flakiness of a test. **Presubmit lanes** (prefixed `pull-`) run against PR code and may fail due to faulty changes.
 
+Only draw periodic/presubmit comparisons when those lanes are present in the fetched weekly reports. Absence is not a passing result; use `ci-failures lane-rate` for the relevant TestGrid lane when weekly report coverage is missing.
+
 - Base the flakiness assessment primarily on **periodic lane** success rates
 - If a test fails frequently in periodic lanes, it is a known flake regardless of presubmit results
 - If a test passes consistently in periodic lanes but fails in the presubmit lane under analysis, the failure is likely PR-related
@@ -105,6 +115,8 @@ When multiple unrelated tests all fail in the **same lane(s)** during the analys
 ### Windowed trend analysis
 
 Use `--days` to compare different time windows and detect trends:
+
+Compare actual report bounds and fetched weekly coverage first. Requested windows can round up to whole weeks and may overlap; do not label them exact, independent rolling windows.
 
 - **7 days vs 21 days**: if the 7-day rate is much worse than the 21-day rate, the flakiness is recent (possible regression). If similar, it's a long-standing flake.
 - **Recommend quarantine** when a test shows sustained flakiness (consistent across windows) with dispersed failures

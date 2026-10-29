@@ -3,7 +3,7 @@ name: change-relevance
 description: >
     Determine whether a PR's code changes are related to tests that failed in a Prow build.
     Use when user wants to know if test failures are caused by their PR changes.
-allowed-tools: [Read, Glob, Bash(ci-failures:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*)]
 ---
 
 ## Overview
@@ -12,28 +12,34 @@ This skill checks whether a PR's changed files overlap with the code areas that 
 
 ## Data generation
 
+First read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup).
+Use the installed binary from a writable ci-health checkout root. The shared
+setup defines session isolation and `<output-dir>`.
+
 Run the `change-relevance` subcommand with a Prow job URL for a **PR build**:
 
 ```bash
-$ ci-failures change-relevance <prow-job-url>
+ci-failures change-relevance <prow-job-url>
 ```
-
 
 Example:
 
 ```bash
-$ ci-failures change-relevance https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17760/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2053843644594524160
+ci-failures change-relevance https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/17760/pull-kubevirt-e2e-kind-1.35-sig-compute-arm64/2053843644594524160
 ```
 
-This produces `output/tmp/change-relevance-{job-name}.yaml`.
+This produces `<output-dir>/change-relevance-{job-name}.yaml`.
 
 Only PR builds (URLs containing `pr-logs/pull/`) are supported. Periodic builds will return an error.
+The build log must contain recognizable failed tests; otherwise the command
+returns an error. PR file lookup uses the GitHub REST API directly, with optional
+`GITHUB_TOKEN` authentication; it does not use `gh` login credentials.
 
 ## Analysis
 
 After data generation:
 
-1. Use Glob to find the `output/tmp/change-relevance-*.yaml` file
+1. Read the exact output path logged by this command
 2. Read the YAML. The structure is:
    - `prow_job_url`: the analyzed build URL
    - `job_name`: the Prow job name
@@ -41,9 +47,9 @@ After data generation:
    - `changed_files`: list of files changed in the PR
    - `failed_tests`: list of failed tests, each with:
      - `test_name`: original test name from the build log
-     - `sig`: the SIG label extracted from the test name (or inferred from job name)
-     - `code_areas`: source directory prefixes mapped to that SIG
-     - `overlap_files`: PR files that overlap with the test's code areas (empty if none)
+      - `sig` (optional): the SIG label extracted from the test name (or inferred from job name)
+      - `code_areas` (optional): source directory prefixes mapped to that SIG
+      - `overlap_files` (optional): PR files that overlap with the test's code areas (omitted if none)
      - `relevance`: classification of the relationship
      - `reason`: human-readable explanation
    - `summary`: aggregate counts of each relevance level

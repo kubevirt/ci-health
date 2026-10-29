@@ -3,7 +3,7 @@ name: analyze-pr-builds
 description: >
     Analyze all failed builds for a GitHub pull request.
     Use when user provides a GitHub PR URL and wants to understand why builds are failing.
-allowed-tools: [Read, Bash(ci-failures:*), Bash(grep:*)]
+allowed-tools: [Read, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*), Bash(grep:*)]
 ---
 
 ## Overview
@@ -14,12 +14,17 @@ It works for any repo served by prow.ci.kubevirt.io (currently the `kubevirt` Gi
 
 ## Data Generation
 
+First read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup).
+Use the installed binary from a writable ci-health checkout root. Choose a fresh
+session ID for this analysis and pass it to both commands below. The example ID
+is illustrative; do not reuse an existing session containing another analysis.
+
 Two commands to run sequentially:
 
 ### Step 1: Fetch and analyze all failed builds
 
 ```bash
-$ ci-failures analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
+ci-failures --session-id pr-17287-review-1 analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
 ```
 
 This downloads build logs, k8s-reporter artifacts, and container logs for every currently-failing job in the PR. Output files go to the session directory.
@@ -27,10 +32,14 @@ This downloads build logs, k8s-reporter artifacts, and container logs for every 
 ### Step 2: Get a condensed summary
 
 ```bash
-$ ci-failures summarize-session
+ci-failures --session-id pr-17287-review-1 summarize-session
 ```
 
-This reads all session YAML files and emits a **single condensed YAML** to stdout containing just the key fields needed for analysis. This replaces the need to read individual files.
+This reads all session YAML files and emits a **single condensed YAML** to stdout
+containing key fields for initial analysis. Read the individual analysis files
+when snippet context, timestamps, snapshots, or the full etcd profile are needed;
+these details are not included in the condensed summary. If no failed builds
+were found, report that outcome rather than reading old session files.
 
 ## Analysis
 
@@ -46,10 +55,10 @@ After running both commands:
      - `category`: error category (external, internal, pr-build, needs-investigation, prow-aborted, prow-error)
      - `category_reason`: explanation of the categorization
      - `error_snippets`: list of `{error_text, link}` — one-line error text and link to the log line
-   - `k8s_analyses`: list of k8s analysis results per build, each with:
+    - `k8s_analyses` (optional): list of k8s analysis results per build, each with:
      - `build_id`, `job_name`, `total_findings`
-     - `findings`: list of `{detector, severity, kind, namespace, name, reason, message}`
-     - `container_log_files`: list of `{pod_name, container_name, namespace, cached_path, size_bytes}` for grep cross-referencing
+      - `findings` (optional): list of `{detector, severity, kind, namespace, name, reason, message}`
+      - `container_log_files` (optional): list of `{pod_name, container_name, namespace, cached_path, size_bytes}` for grep cross-referencing
 2. **Cross-reference failing VMI/VM names against container logs**: extract VMI/VM names from error snippets and k8s findings, then use `grep` on the cached virt-controller and virt-handler logs to find the actual rejection reason. Example: `grep -i "testvmi-xxxxx" <cached_path>`
 3. Correlate findings across all sources — e.g. CrashLoopBackOff on a component pod often explains test timeouts; etcd tmpfs exhaustion can explain apiserver failures; virt-controller log errors (schema validation, sync failures) reveal why VMIs are stuck in non-Running phases
 4. Group failures with the same root cause together
