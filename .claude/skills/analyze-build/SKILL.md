@@ -3,7 +3,7 @@ name: analyze-build
 description: >
     Analyze the root cause inside a failed prowjob.
     Use when user mentions to analyze a prowjob failure or adds a prowjob url
-allowed-tools: [Read, Glob, Bash(go run:*), Bash(grep:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*), Bash(grep:*)]
 ---
 
 ## Overview
@@ -18,21 +18,21 @@ It combines four analyses:
 
 ## Analysis data generation
 
-As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+First read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup).
+Use the installed `ci-failures` binary from a writable ci-health checkout root.
+The shared setup defines session isolation and `<output-dir>`.
 
 Example how to generate the data files for a specific prowjob, given is the url to the prowjob build:
 
 ```bash
-$ go run ./cmd/ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
+ci-failures analyze-build https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/16885/pull-kubevirt-e2e-k8s-1.34-windows2016/2034979182789791744
 ```
 
-This produces up to two output files in a session directory:
-- `output/tmp/sessions/<session-id>/{job-name}.yaml` — build log error analysis
-- `output/tmp/sessions/<session-id>/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist), includes etcd profiler findings and full etcd profile data when available
+This produces up to two output files:
+- `<output-dir>/{job-name}.yaml` — build log error analysis
+- `<output-dir>/k8s-analysis-{build-id}.yaml` — kubernetes cluster state analysis (if k8s-reporter artifacts exist), includes etcd profiler findings and full etcd profile data when available
 
-The tool logs each written file path. Extract the session directory from the first `"wrote analysis to ..."` or `"wrote k8s analysis to ..."` log line (e.g. `output/tmp/sessions/abc123/`).
+Read the exact paths from the `"wrote analysis to ..."` and `"wrote k8s analysis to ..."` log lines. A session directory is used only when a session ID is configured.
 
 ## Analysis
 
@@ -55,7 +55,7 @@ Consider suggesting the `test-failure-rate` skill on this build URL as a quick p
 
 After data generation:
 
-1. Extract the session directory path from the tool's log output, then list all `*.yaml` files in that directory
+1. Read only the analysis files named in this command's log output, not unrelated YAML files from previous runs
 2. Read the build log analysis YAML (`{job-name}.yaml`). The structure is:
    - `job_name`: the Prow job name
    - `build_errors`: list of build errors with `result`, `passed`, `category`, `category_reason`, and `build_log_error_snippets`

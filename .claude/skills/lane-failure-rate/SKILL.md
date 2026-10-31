@@ -5,28 +5,32 @@ description: >
     Uses flip-rate analysis, burst detection, and cross-test correlation in addition
     to success rates. Use when the user provides a testgrid URL and wants to see
     which tests are failing in that lane.
-allowed-tools: [Read, Glob, Bash(go run:*), Bash(gh:*)]
+allowed-tools: [Read, Glob, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*), Bash(gh:*)]
 ---
 
 ## Overview
 
 This skill analyzes a testgrid lane and calculates failure rates for every test that has at least one failure in the requested time window. Unlike test-failure-rate (which starts from a single build's failed tests and looks them up in flakefinder), this skill operates at the lane level — it fetches all test results directly from testgrid and computes rates from raw pass/fail data.
 
+## Prerequisites
+
+Read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup) before running commands. Use the installed `ci-failures` binary from a deliberately selected, writable `ci-health` repository working directory, with a fresh session per analysis as described there. `<output-dir>` below means `output/tmp` or `output/tmp/sessions/<session-id>` according to that setup.
+
 ## Lane discovery
 
 When the user asks to analyze lanes for a Kubernetes version (e.g. "kubevirt 1.36 lanes") without providing specific testgrid URLs, use the `discover-lanes` subcommand to find all matching lanes across both periodic and presubmit dashboards.
 
 ```bash
-$ go run ./cmd/ci-failures discover-lanes <version>
+ci-failures discover-lanes <version>
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures discover-lanes 1.36
+ci-failures discover-lanes 1.36
 ```
 
-This queries the testgrid summary API for both `kubevirt-periodics` and `kubevirt-presubmits` dashboards and produces `output/tmp/discover-lanes-{version}.yaml`.
+This queries the testgrid summary API for both `kubevirt-periodics` and `kubevirt-presubmits` dashboards and produces `<output-dir>/discover-lanes-<version>.yaml`. Read the exact path logged by this invocation, not an older discovery file.
 
 ### Discovery output YAML structure
 
@@ -67,33 +71,33 @@ Presubmits often include specialized lanes beyond the standard SIG lanes — for
 
 ## Data generation
 
-Run the `lane-rate` subcommand from the `kubevirt.io/ci-health` repository with a testgrid URL.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+Run the `lane-rate` subcommand from the working directory selected in Prerequisites with a testgrid URL.
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate <testgrid-url>
+ci-failures lane-rate "<testgrid-url>"
 ```
 
 To control the analysis window (default 14 days):
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 21 <testgrid-url>
+ci-failures lane-rate --days 21 "<testgrid-url>"
 ```
 
 To filter out one-off failures and only keep tests at or below a success rate threshold (useful for noisy presubmit lanes):
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --max-success-rate 95 <testgrid-url>
+ci-failures lane-rate --max-success-rate 95 "<testgrid-url>"
 ```
 
 Example:
 
 ```bash
-$ go run ./cmd/ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
+ci-failures lane-rate --days 14 "https://testgrid.k8s.io/kubevirt-periodics#periodic-kubevirt-e2e-k8s-1.36-sig-storage"
 ```
 
-This produces `output/tmp/lane-rate-{tab-name}.yaml`.
+This produces `<output-dir>/lane-rate-<sanitized-tab-name>.yaml`; use the exact path logged by the command. Repeating a lane within the same session overwrites its file, so read and retain results before changing the window or threshold.
+
+The requested window is limited by TestGrid's retained table data. Increasing `--days` does not recover expired builds. `report_days` and the period bounds describe the requested window, not proof of complete coverage; check available TestGrid timestamps and report any shorter coverage.
 
 When analyzing presubmit lanes (which typically have many one-off test failures from individual PRs), use `--max-success-rate 95` to focus on tests with meaningful failure patterns.
 
@@ -101,12 +105,12 @@ When analyzing presubmit lanes (which typically have many one-off test failures 
 
 After data generation:
 
-1. Use Glob to find the `output/tmp/lane-rate-*.yaml` file
+1. Read the exact `<output-dir>/lane-rate-<sanitized-tab-name>.yaml` path logged by this invocation; do not glob across old sessions
 2. Read the YAML. The structure is:
    - `testgrid_url`: the original testgrid URL analyzed
    - `dashboard`: the testgrid dashboard name (e.g., "kubevirt-periodics")
    - `tab`: the testgrid tab/lane name (e.g., "periodic-kubevirt-e2e-k8s-1.36-sig-storage")
-   - `report_days`: number of days covered
+   - `report_days`: requested number of days (actual coverage depends on TestGrid retention)
    - `report_period_start`: start of the analysis window (ISO 8601)
    - `report_period_end`: end of the analysis window (ISO 8601)
    - `total_builds`: number of builds in the analysis window
@@ -121,7 +125,7 @@ After data generation:
      - `recent_failures`: up to 10 most recent failures, each with:
        - `build_id`: the build/column identifier
        - `timestamp`: ISO 8601 timestamp of the build
-       - `message`: failure message from testgrid (may be empty)
+       - `message`: failure message from testgrid (omitted when empty)
 
 ## Severity classification
 
@@ -132,15 +136,15 @@ After data generation:
 
 ## Deeper flakiness analysis
 
-The severity classification above is based on aggregate success rate. Use the `recent_failures` data to perform richer pattern analysis that better distinguishes genuine flakes from deterministic breakage and infrastructure events.
+The severity classification above is based on aggregate success rate. `recent_failures` contains up to 10 failures only, not the full run history or any passes. It supports sampled burst and cross-test correlation checks, but cannot establish flip rates, consecutive runs, or recovery. For those claims, inspect full ordered TestGrid results, including passes and skipped/not-run entries, within the available retention period. Otherwise report the pattern as unknown.
 
 ### Flip-rate analysis
 
-Examine the `recent_failures` list to detect state transitions (pass→fail→pass patterns):
+Examine the full ordered TestGrid results, not the failure-only `recent_failures` list, to detect state transitions (pass→fail→pass patterns):
 
 - **High flip rate** (failures interleaved with passes, spread across the window): the test is nondeterministic — a genuine flake
 - **Low flip rate** (failures clustered consecutively): the test was broken for a period then fixed, or is still broken — not a flake but a regression
-- **Key heuristic**: 3 or more consecutive failures should be treated as deterministic breakage, not flakiness (per Google testing research). When all `recent_failures` timestamps are consecutive builds, the test has a real bug regardless of what the aggregate success rate says
+- **Key heuristic**: 3 or more consecutive failures in the full ordered results warrant investigating deterministic breakage, but do not prove it. Adjacent entries in `recent_failures` need not be consecutive builds
 
 A test with 75% success rate could be either: flaky (alternating pass/fail across 40 runs) or broken-then-fixed (failed 10 runs in a row then passed 30). The flip rate distinguishes the two — same success rate, completely different diagnosis.
 
@@ -149,8 +153,8 @@ A test with 75% success rate could be either: flaky (alternating pass/fail acros
 Examine the timestamps in `recent_failures`:
 
 - **Clustered failures** (many failures in a short time window, e.g. several within the same day): likely an infrastructure event, a temporary regression, or a bad merge that was later reverted
-- **Spread failures** (failures distributed evenly across the analysis window): genuine flaky behavior — the test fails randomly regardless of external factors
-- **Single burst then clean**: a transient event — the test is healthy now despite the lower success rate
+- **Spread failures** (sampled failures distributed across time): possible flaky behavior; the capped sample alone does not establish randomness or the full-window distribution
+- **Single burst then clean**: only claim recovery after verifying later passing runs in the full ordered results; absence of later failures in the sample is insufficient
 
 ### Cross-test infrastructure flake detection
 
@@ -159,7 +163,7 @@ Compare `recent_failures` timestamps across different tests in the results:
 - When multiple unrelated tests share the same failure timestamps (same `build_id`s), they failed together in the same build — this is an infrastructure flake signal, not individual test problems
 - Group tests that share failure timestamps and flag them as **infra-correlated**
 - Common infra patterns: node instability, storage backend issues, registry pull failures, network flakes — these cause unrelated tests to fail simultaneously
-- If a small number of builds account for most failures across many tests, the lane experienced infra instability during those builds
+- Use full results to establish whether a small number of builds account for most failures; shared sampled build IDs suggest a common cause but do not prove infrastructure is responsible
 
 ## Presenting results
 
@@ -168,7 +172,7 @@ Compare `recent_failures` timestamps across different tests in the results:
 3. Group remaining tests by severity, starting with the worst (likely-flaky)
 4. For each test, report:
    - Test name, success rate, total runs, and severity
-   - **Failure pattern**: flaky (high flip rate, spread), burst (clustered), consecutive (deterministic), or infra-correlated
+   - **Failure pattern**: flaky (verified high flip rate), burst (sampled clustering), consecutive (verified ordered failures), infra-correlated, or unknown when evidence is insufficient
    - Most recent failure messages for tests with low success rates
 5. Note the total builds count to contextualize rates — a test that failed 1/2 is different from 1/42
 6. Tests tagged `[QUARANTINE]` are already known flakes; note this when presenting
@@ -184,8 +188,9 @@ After per-test details, provide a summary:
 Where **Pattern** is one of:
 - **flaky** — high flip rate, failures spread across time (genuine flake)
 - **burst** — failures clustered in a short time window (transient event)
-- **consecutive** — 3+ failures in a row (deterministic breakage)
+- **consecutive** — 3+ failures in a row verified from full ordered results (possible deterministic breakage)
 - **infra-correlated** — fails alongside other unrelated tests in same builds
+- **unknown** — capped failure samples do not establish the pattern
 
 ## Issue tracking
 

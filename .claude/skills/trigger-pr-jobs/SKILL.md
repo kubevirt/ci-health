@@ -13,6 +13,14 @@ This skill identifies required status checks that are either missing (no result)
 
 It works for any repo in the `kubevirt` GitHub org that uses Prow.
 
+## Prerequisites
+
+This operational skill uses the GitHub CLI, not a `ci-failures` subcommand.
+No Go installation is required. Use an authenticated `gh` account with access
+to required-check configuration and permission to comment on the target PR.
+See [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup)
+for diagnostic CLI setup when invoking the follow-up analysis skills.
+
 ## Steps
 
 ### 1. Extract PR details
