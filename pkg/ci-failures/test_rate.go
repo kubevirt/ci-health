@@ -119,6 +119,29 @@ func AnalyzeTestRate(prowJobURL string, days int) (*TestRateResult, error) {
 	}, nil
 }
 
+// LoadFlakefinderIndex fetches and merges weekly flakefinder reports covering days.
+func LoadFlakefinderIndex(days int) (*FlakefinderReport, error) {
+	if days < 1 {
+		days = 7
+	}
+	if days > maxDays {
+		days = maxDays
+	}
+	reports, err := fetchFlakefinderReports(days)
+	if err != nil {
+		return nil, err
+	}
+	return mergeReports(reports), nil
+}
+
+// LookupTestRate returns the merged flakefinder rate for testName.
+func LookupTestRate(testName string, report *FlakefinderReport) TestRateEntry {
+	if report == nil || len(report.Tests) == 0 {
+		return TestRateEntry{TestName: testName, Severity: "unknown"}
+	}
+	return computeTestRate(testName, report)
+}
+
 var ginkgoFailLineRegex = regexp.MustCompile(`\[FAIL\]\s+(.+)$`)
 
 func extractFailedTestNames(jobBuildErrors *JobBuildErrors) []string {
