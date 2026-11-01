@@ -27,7 +27,7 @@
 
 <hr/>
 
-**2x**: _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
+**2x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
 <details>
 <summary>all...</summary>
 
@@ -82,21 +82,6 @@
 #### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-<details>
-<summary>all...</summary>
-
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> download failure in context (1x / 50.00%) </summary>
 
 <hr/>
@@ -111,6 +96,21 @@
 
 <hr/>
 </details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
+<details>
+<summary>all...</summary>
+
+* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
+
+</details>
+
+<hr/>
+</details>
 
 <a id="per-error-category"></a>
 
@@ -119,6 +119,43 @@
 
 ### external (6x / 100.00%)
 
+<details>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 33.33%) </summary>
+
+<hr/>
+
+**2x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details>
+<summary>all...</summary>
+
+* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+16:14:40: selecting podman as container runtime
+16:14:40: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-storage is being used by the following container(s): ab5ac3b271a5edd5373cc1acd2a27a8884d4400a81f5eed93a634e9d5f377457: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+* _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+15:40:38: selecting podman as container runtime
+15:41:00: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 072ddc794764862cead4ae6b6c5479ed96468412c055fb6419931fe946ae6cc7: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+<hr/>
+</details>
 <details>
 <summary> container image pull failure in context (2x / 33.33%) </summary>
 
@@ -149,43 +186,6 @@ make: *** [Makefile:179: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 33.33%) </summary>
-
-<hr/>
-
-**2x**: _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
-<details>
-<summary>all...</summary>
-
-* _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-16:14:40: selecting podman as container runtime
-16:14:40: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-storage is being used by the following container(s): ab5ac3b271a5edd5373cc1acd2a27a8884d4400a81f5eed93a634e9d5f377457: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-* _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-15:40:38: selecting podman as container runtime
-15:41:00: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 072ddc794764862cead4ae6b6c5479ed96468412c055fb6419931fe946ae6cc7: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -259,28 +259,13 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**2x**: _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
+**2x**: _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
 <details>
 <summary>all...</summary>
 
 * _2026-10-28 16:02:01 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19492/pull-kubevirt-e2e-k8s-1.36-sig-storage/2115473968377892864#1:build-log.txt%3A1185)
 
 * _2026-10-28 15:34:15 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.36-sig-operator/2115466961587539968#1:build-log.txt%3A1350)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-<details>
-<summary>all...</summary>
-
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
 
 </details>
 
@@ -311,6 +296,21 @@ Done cleaning up after podman in container.</pre>
 <summary>all...</summary>
 
 * _2026-10-28 15:32:58 &#43;0000 UTC_: <code>Error: cannot remove container b487b02b7bd863b67c35b5b6ac7145b787206836b350ba5ccfc14c766051509a as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19294/pull-kubevirt-e2e-k8s-1.37-sig-storage/2115466429074509824#1:build-log.txt%3A2237)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> container image pull failure in context (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
+<details>
+<summary>all...</summary>
+
+* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
 
 </details>
 
@@ -438,4 +438,4 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-Last updated: 2026-11-01 09:09:46
+Last updated: 2026-11-01 12:10:01
