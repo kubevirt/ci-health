@@ -17,7 +17,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-10-28 (3x / 50.00%)
+### 2026-10-28 (3x / 60.00%)
 
 
 #### external (3x / 100.00%)
@@ -55,7 +55,7 @@
 <hr/>
 </details>
 
-### 2026-10-27 (1x / 16.67%)
+### 2026-10-27 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -76,13 +76,13 @@
 <hr/>
 </details>
 
-### 2026-10-26 (2x / 33.33%)
+### 2026-10-26 (1x / 20.00%)
 
 
-#### external (2x / 100.00%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> download failure in context (1x / 50.00%) </summary>
+<summary> download failure in context (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -96,31 +96,16 @@
 
 <hr/>
 </details>
-<details>
-<summary> container image pull failure in context (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-<details>
-<summary>all...</summary>
-
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-
-</details>
-
-<hr/>
-</details>
 
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (6x / 100.00%)
+### external (5x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
 
 <hr/>
 
@@ -157,11 +142,11 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (2x / 33.33%) </summary>
+<summary> container image pull failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
+**1x**: _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
 <details>
 <summary>all...</summary>
 
@@ -177,24 +162,12 @@ make: *** [Makefile:174: cluster-up] Error 125
 </details>
 
 
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-<details><summary>context</summary>
-<pre>07:07:14: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:07:14: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:07:16: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2871619320/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261026%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261026T070716Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b31d3d7e3c6bd5b4b899d81bb5c88ac8d43a95198c028530946491f75e924f77&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1792999336~hmac=92b3edd9f6efd0d46292fabef37128e78b880ee7f865a24f5390df899399911e&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
 </details>
 
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 16.67%) </summary>
+<summary> download failure in context (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -219,7 +192,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 16.67%) </summary>
+<summary> podman container removal timeout (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -249,13 +222,13 @@ Done cleaning up after podman in container.</pre>
 ## per branch [⬆](#top)
 
 
-### main (5x / 83.33%)
+### main (4x / 80.00%)
 
 
-#### external (5x / 100.00%)
+#### external (4x / 100.00%)
 
 <details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 40.00%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -272,22 +245,7 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 <details>
-<summary> container image pull failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-<details>
-<summary>all...</summary>
-
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> download failure in context (1x / 20.00%) </summary>
+<summary> download failure in context (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -302,7 +260,7 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 <details>
-<summary> podman container removal timeout (1x / 20.00%) </summary>
+<summary> podman container removal timeout (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -317,7 +275,7 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-### release-1.9 (1x / 16.67%)
+### release-1.9 (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -343,7 +301,7 @@ Done cleaning up after podman in container.</pre>
 ## per SIG [⬆](#top)
 
 
-### sig-storage (2x / 33.33%)
+### sig-storage (2x / 40.00%)
 
 
 #### external (2x / 100.00%)
@@ -379,30 +337,13 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-### sig-compute (3x / 50.00%)
+### sig-compute (2x / 40.00%)
 
 
-#### external (3x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure in context (2x / 66.67%) </summary>
-
-<hr/>
-
-**2x**: _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
-<details>
-<summary>all...</summary>
-
-* _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
-
-* _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 33.33%) </summary>
+<summary> transient kube-apiserver body decode noise (from secondary snippet) (1x / 50.00%) </summary>
 
 <hr/>
 
@@ -416,8 +357,23 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 </details>
+<details>
+<summary> container image pull failure in context (1x / 50.00%) </summary>
 
-### sig-network (1x / 16.67%)
+<hr/>
+
+**1x**: _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
+<details>
+<summary>all...</summary>
+
+* _2026-10-27 06:08:03 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19639/pull-kubevirt-e2e-kind-1.35-vgpu-1.9/2114962157354356736#1:build-log.txt%3A531)
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (1x / 20.00%)
 
 
 #### external (1x / 100.00%)
@@ -438,4 +394,4 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 
-Last updated: 2026-11-02 06:17:33
+Last updated: 2026-11-02 09:07:44
