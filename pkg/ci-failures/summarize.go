@@ -12,6 +12,11 @@ import (
 type SummaryErrorSnippet struct {
 	ErrorText string `yaml:"error_text"`
 	Link      string `yaml:"link"`
+	Role      string `yaml:"role,omitempty"`
+	Context   string `yaml:"context,omitempty"`
+	StartLine int    `yaml:"start_line,omitempty"`
+	ErrorLine int    `yaml:"error_line,omitempty"`
+	EndLine   int    `yaml:"end_line,omitempty"`
 }
 
 type SummaryJob struct {
@@ -122,6 +127,11 @@ func readJobFile(path string) (SummaryJob, error) {
 			job.ErrorSnippets = append(job.ErrorSnippets, SummaryErrorSnippet{
 				ErrorText: s.ErrorText,
 				Link:      s.LinkToLogLine,
+				Role:      s.Role,
+				Context:   s.Context,
+				StartLine: s.StartLine,
+				ErrorLine: s.ErrorLine,
+				EndLine:   s.EndLine,
 			})
 		}
 	}
