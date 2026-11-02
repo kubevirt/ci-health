@@ -272,21 +272,6 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> download failure in context (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-10-26 17:44:21 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19360/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2114742369638158336#1:build-log.txt%3A3317)
-<details>
-<summary>all...</summary>
-
-* _2026-10-26 17:44:21 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19360/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2114742369638158336#1:build-log.txt%3A3317)
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> podman container removal timeout (1x / 20.00%) </summary>
 
 <hr/>
@@ -311,6 +296,21 @@ make: *** [Makefile:182: cluster-down] Error 1
 <summary>all...</summary>
 
 * _2026-10-26 07:00:55 &#43;0000 UTC_: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19624/pull-kubevirt-e2e-kind-1.37-vgpu/2114613076098551808#1:build-log.txt%3A439)
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> download failure in context (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-10-26 17:44:21 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19360/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2114742369638158336#1:build-log.txt%3A3317)
+<details>
+<summary>all...</summary>
+
+* _2026-10-26 17:44:21 &#43;0000 UTC_: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19360/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2114742369638158336#1:build-log.txt%3A3317)
 
 </details>
 
@@ -438,4 +438,4 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-01 21:09:02
+Last updated: 2026-11-02 00:11:39
