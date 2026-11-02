@@ -1,6 +1,9 @@
 package cifailures
 
-import "regexp"
+import (
+	"regexp"
+	"strings"
+)
 
 // ErrorCategory represents the classification of a CI build failure.
 type ErrorCategory string
@@ -49,17 +52,14 @@ var rules = []categoryRule{
 	// --- External: service/infra failures outside CI team's control ---
 
 	{CategoryExternal, "download failure from external URL", regexp.MustCompile(`Error downloading \[https?://`)},
-	{CategoryExternal, "bazel repository fetch failure", regexp.MustCompile(`ERROR: An error occurred during the fetch of repository`)},
+	{CategoryExternal, "bazel repository fetch failure", regexp.MustCompile(`An error occurred during the fetch of repository`)},
 	{CategoryExternal, "bazel WORKSPACE fetch rule failure", regexp.MustCompile(`fetching (http_file|http_archive|go_repository|rpm|regctl_repositories|oci_pull|oci_alias|jq_platform_repo|zstd_binary_repo) rule //external:`)},
 	{CategoryExternal, "build target depends on failed external fetch", regexp.MustCompile(`which failed to fetch\. no such package`)},
 	{CategoryExternal, "container image pull failure", regexp.MustCompile(`unable to copy from source docker://`)},
 	{CategoryExternal, "container registry HTTP error", regexp.MustCompile(`(pinging container registry|Requesting bearer token|initializing source docker://).*received unexpected HTTP status:`)},
 	{CategoryExternal, "DNS resolution failure", regexp.MustCompile(`dial tcp: lookup .+: (Temporary failure in name resolution|no such host)`)},
 	{CategoryExternal, "git clone failure to GitHub", regexp.MustCompile(`fatal: unable to access 'https://github\.com/`)},
-	{CategoryExternal, "podman container removal timeout", regexp.MustCompile(`cannot remove container .+ as it could not be stopped`)},
 	{CategoryExternal, "podman storage file timeout", regexp.MustCompile(`timed out waiting for file /var/lib/containers/storage/`)},
-	{CategoryExternal, "kind cluster deletion failure", regexp.MustCompile(`failed to delete cluster .+: failed to delete nodes`)},
-	{CategoryExternal, "transient kube-apiserver body decode noise", regexp.MustCompile(`Body was not decodable \(unable to check for Status\)`)},
 	{CategoryExternal, "API rate limiter timeout", regexp.MustCompile(`client rate limiter Wait returned an error: context deadline exceeded`)},
 	{CategoryExternal, "skopeo/podman retry with HTTP error", regexp.MustCompile(`Failed, retrying in \d+s .* Error:`)},
 	{CategoryExternal, "RPM download failure from mirror", regexp.MustCompile(`Error downloading \[http://mirror\.`)},
@@ -76,7 +76,8 @@ var rules = []categoryRule{
 
 	// --- PR Build: code/build failures caused by the PR itself ---
 
-	{CategoryPRBuild, "bazel build failure", regexp.MustCompile(`ERROR: Build failed\. Not running target`)},
+	{CategoryPRBuild, "bazel compilation or linking failure", regexp.MustCompile(`\b(GoCompilePkg|GoLink|GoVet|nogo|CppCompile|CppLink)\b.*failed:`)},
+	{CategoryPRBuild, "bazel build failure", regexp.MustCompile(`ERROR: Build (failed\. Not running target|did NOT complete successfully)`)},
 	{CategoryPRBuild, "bazel analysis failure", regexp.MustCompile(`ERROR: Analysis of target '.+' failed; build aborted`)},
 	// Test panic detected in output
 	{CategoryPRBuild, "panic detected in test output", regexp.MustCompile(`ERROR: Found panic in test output`)},
@@ -98,6 +99,9 @@ var rules = []categoryRule{
 
 	// --- Internal: CI configuration errors fixable by sig-ci ---
 
+	{CategoryInternal, "configured node not found during provisioning", regexp.MustCompile(`Error from server \(NotFound\): nodes "[^"]+" not found`)},
+	{CategoryInternal, "podman container removal timeout", regexp.MustCompile(`cannot remove container .+ as it could not be stopped`)},
+	{CategoryInternal, "kind cluster deletion failure", regexp.MustCompile(`failed to delete cluster .+: failed to delete nodes`)},
 	{CategoryInternal, "taint not found during cluster setup", regexp.MustCompile(`error: taint "node-role\.kubernetes\.io/(control-plane|master):NoSchedule" not found`)},
 	{CategoryInternal, "make cluster lifecycle target failure", regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: cluster-(up|sync|down)\] Error`)},
 	{CategoryInternal, "make bazel-build target failure", regexp.MustCompile(`make: \*\*\* \[Makefile:\d+: bazel-build-(images|functests)\] Error`)},
@@ -119,6 +123,8 @@ var rules = []categoryRule{
 
 	// Missing binary in CI container/environment
 	{CategoryInternal, "missing command in CI environment", regexp.MustCompile(`command not found`)},
+
+	{CategoryNeedsInvestigation, "image layer unavailable in original registries", regexp.MustCompile(`layer sha256:[a-f0-9]+ not found in any of the original registries`)},
 }
 
 type contextExternalPattern struct {
@@ -153,10 +159,9 @@ func categorizeError(errorText string) CategorizationResult {
 	return CategorizationResult{CategoryNeedsInvestigation, "no matching pattern"}
 }
 
-// CategorizeJobBuildError classifies a JobBuildError by examining all its error snippets.
-// It uses the first snippet's error_text for primary classification, then checks
-// the context of all snippets to detect external failures that aren't apparent
-// from the error_text alone. It sets err.CategoryReason with the explanation.
+// CategorizeJobBuildError classifies the selected build failure.
+// It uses the selected first snippet and refines wrapper errors from their own
+// context only. Secondary diagnostics and cleanup cannot override the failure.
 func CategorizeJobBuildError(err *JobBuildError) ErrorCategory {
 	result := categorizeJobBuildError(err)
 	err.CategoryReason = result.Reason
@@ -175,25 +180,38 @@ func categorizeJobBuildError(err *JobBuildError) CategorizationResult {
 		return CategorizationResult{CategoryNeedsInvestigation, "no error snippets"}
 	}
 
-	primary := categorizeError(err.BuildLogErrorSnippets[0].ErrorText)
+	snippet := err.BuildLogErrorSnippets[0]
+	if snippet.Role == "diagnostic" || snippet.Role == "cleanup" {
+		return CategorizationResult{CategoryNeedsInvestigation, "no initiating failure identified"}
+	}
+	primary := categorizeError(snippet.ErrorText)
 
 	// If already external, no need to refine
 	if primary.Category == CategoryExternal {
 		return primary
 	}
 
-	// For non-external categories, check if any snippet's context reveals
-	// an external root cause (e.g. a make error caused by a download failure)
-	for _, snippet := range err.BuildLogErrorSnippets {
-		// Check context
-		for _, pat := range contextExternalPatterns {
-			if pat.pattern.MatchString(snippet.Context) {
-				return CategorizationResult{CategoryExternal, pat.reason}
+	// Refine propagation wrappers only; a nearby warning must not overwrite a
+	// specific provisioning, deployment, or test failure.
+	if failureWrapper.MatchString(snippet.ErrorText) {
+		context := strings.Split(snippet.Context, "\n")
+		end := len(context)
+		for i, line := range context {
+			if strings.TrimSpace(line) == snippet.ErrorText {
+				end = i
+				break
 			}
 		}
-		// Also check error_text of non-primary snippets
-		if r := categorizeError(snippet.ErrorText); r.Category == CategoryExternal {
-			return CategorizationResult{CategoryExternal, r.Reason + " (from secondary snippet)"}
+		for i := end - 1; i >= 0; i-- {
+			line := context[i]
+			if operationProgress.MatchString(line) || cleanupStart.MatchString(line) {
+				break
+			}
+			for _, pat := range contextExternalPatterns {
+				if !diagnosticError.MatchString(line) && pat.pattern.MatchString(line) {
+					return CategorizationResult{CategoryExternal, pat.reason}
+				}
+			}
 		}
 	}
 

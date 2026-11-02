@@ -34,6 +34,7 @@ type JobFailureData struct {
 }
 
 type BuildLogErrorSnippet struct {
+	Role          string `yaml:"role,omitempty"`
 	ErrorText     string `yaml:"error_text"`
 	LinkToLogLine string `yaml:"link_to_log_line"`
 	StartLine     int    `yaml:"start_line"`

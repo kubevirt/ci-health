@@ -33,6 +33,9 @@ var (
 		`command not found`,
 		`could not establish a connection to the node`,
 		`Podman daemon failed to start`,
+		`Error from server \(NotFound\): nodes "[^"]+" not found`,
+		`Error during deploy:`,
+		`Error in download:`,
 		`dial tcp: lookup kind-.+-control-plane on .+: (connection refused|i/o timeout)`,
 		`/var/lib/(shared-images|containers/storage).*(read-only file system|invalid cross-device link)`,
 	}
@@ -177,8 +180,6 @@ func ExtractErrors(ciFailureJobURLs []string, outputDir string) ([]string, error
 				return nil, fmt.Errorf("failed to read build log: %v", err)
 			}
 
-			lines := strings.Split(log.LogContent, "\n")
-
 			jobName, err := jobNameFromURL(ciFailureJobURL)
 			if err != nil {
 				return nil, err
@@ -205,27 +206,7 @@ func ExtractErrors(ciFailureJobURLs []string, outputDir string) ([]string, error
 			}
 			jobErrorsForJob.BuildErrors = append(jobErrorsForJob.BuildErrors, nextBuildError)
 
-			for i := len(lines) - 1; i >= 0; i-- {
-				line := lines[i]
-				if buildLogLineMatchesExpression.MatchString(line) {
-					start := max(0, i-3)
-					end := min(len(lines)-1, i+3)
-					// to align with what prow build log shows related to line numbers, all values are translated to 1 based
-					buildErrorLogSnippet := &BuildLogErrorSnippet{
-						StartLine:     start + 1,
-						EndLine:       end + 1,
-						ErrorLine:     i + 1,
-						ErrorText:     strings.TrimSpace(lines[i]),
-						LinkToLogLine: fmt.Sprintf("%s#1:build-log.txt%%3A%d", ciFailureJobURL, i+1),
-					}
-					for j := start; j <= end; j++ {
-						// trimming space since we want to avoid double quoted strings for readability
-						buildErrorLogSnippet.Context += strings.TrimSpace(lines[j]) + "\n"
-					}
-					buildErrorLogSnippet.Context = strings.TrimSuffix(buildErrorLogSnippet.Context, "\n")
-					nextBuildError.BuildLogErrorSnippets = append(nextBuildError.BuildLogErrorSnippets, buildErrorLogSnippet)
-				}
-			}
+			nextBuildError.BuildLogErrorSnippets = extractErrorSnippets(log.LogContent, ciFailureJobURL)
 
 			nextBuildError.Category = string(CategorizeJobBuildError(nextBuildError))
 		}

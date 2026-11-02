@@ -117,7 +117,7 @@ func TestCategorizeError(t *testing.T) {
 		{
 			name:      "podman container removal timeout",
 			errorText: `15:45:00: Error: cannot remove container fdb28089f2bfccabdf0a36a9d248f6e2fead25b90ed175dc5805f3821801cb67 as it could not be stopped: given PID did not die within timeout`,
-			expected:  CategoryExternal,
+			expected:  CategoryInternal,
 		},
 		{
 			name:      "podman storage file timeout",
@@ -127,12 +127,12 @@ func TestCategorizeError(t *testing.T) {
 		{
 			name:      "kind cluster deletion failure",
 			errorText: `15:45:00: ERROR: failed to delete cluster "vgpu": failed to delete nodes: command "podman rm -f -v vgpu-control-plane" failed with error: exit status 125`,
-			expected:  CategoryExternal,
+			expected:  CategoryInternal,
 		},
 		{
 			name:      "kube-apiserver body decode noise",
 			errorText: `00:43:10: I0318 00:43:08.163777     241 request.go:1500] "Body was not decodable (unable to check for Status)"`,
-			expected:  CategoryExternal,
+			expected:  CategoryNeedsInvestigation,
 		},
 		{
 			name:      "API rate limiter timeout",
@@ -379,7 +379,7 @@ func TestCategorizeJobBuildError(t *testing.T) {
 		}
 	})
 
-	t.Run("context-based reclassification: analysis failed with download error in another snippet", func(t *testing.T) {
+	t.Run("unrelated secondary fetch cannot override primary failure", func(t *testing.T) {
 		err := &JobBuildError{
 			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
 				{
@@ -392,8 +392,8 @@ func TestCategorizeJobBuildError(t *testing.T) {
 				},
 			},
 		}
-		if got := CategorizeJobBuildError(err); got != CategoryExternal {
-			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryExternal)
+		if got := CategorizeJobBuildError(err); got != CategoryPRBuild {
+			t.Errorf("CategorizeJobBuildError() = %q, want %q", got, CategoryPRBuild)
 		}
 	})
 
@@ -465,7 +465,7 @@ func TestCategorizeJobBuildError(t *testing.T) {
 		}
 	})
 
-	t.Run("CategoryReason is populated for secondary snippet", func(t *testing.T) {
+	t.Run("CategoryReason describes primary rather than secondary snippet", func(t *testing.T) {
 		err := &JobBuildError{
 			BuildLogErrorSnippets: []*BuildLogErrorSnippet{
 				{ErrorText: `ERROR: Analysis of target '//cmd/virt-operator:virt-operator-image' failed; build aborted: Analysis failed`},
@@ -473,8 +473,72 @@ func TestCategorizeJobBuildError(t *testing.T) {
 			},
 		}
 		CategorizeJobBuildError(err)
-		if err.CategoryReason != "bazel repository fetch failure (from secondary snippet)" {
-			t.Errorf("CategoryReason = %q, want %q", err.CategoryReason, "bazel repository fetch failure (from secondary snippet)")
+		if err.CategoryReason != "bazel analysis failure" {
+			t.Errorf("CategoryReason = %q, want %q", err.CategoryReason, "bazel analysis failure")
 		}
 	})
+}
+
+func TestCategorizeSelectedFailure(t *testing.T) {
+	for _, tt := range []struct {
+		name     string
+		job      JobBuildError
+		category ErrorCategory
+	}{
+		{
+			name: "aborted result takes precedence",
+			job: JobBuildError{Result: "ABORTED", BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `Error: unable to copy from source docker://quay.io/image`, Role: "primary"},
+			}},
+			category: CategoryProwAborted,
+		},
+		{
+			name: "scheduling error takes precedence",
+			job:  JobBuildError{Result: "ERROR"}, category: CategoryProwError,
+		},
+		{
+			name: "specific internal failure cannot be promoted by nearby download",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `Error from server (NotFound): nodes "node01" not found`, Role: "primary", Context: "Error downloading [https://example.com/recovered]\nError from server (NotFound): nodes \"node01\" not found"},
+			}}, category: CategoryInternal,
+		},
+		{
+			name: "body decode warning cannot override PR failure",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `ERROR: Build failed. Not running target`, Role: "primary"},
+				{ErrorText: `Body was not decodable (unable to check for Status)`, Role: "diagnostic"},
+			}}, category: CategoryPRBuild,
+		},
+		{
+			name: "recovered retry beside wrapper cannot override PR failure",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `ERROR: Build failed. Not running target`, Role: "primary", Context: "WARNING: Error downloading [https://example.com/retried]\nERROR: Build failed. Not running target"},
+			}}, category: CategoryPRBuild,
+		},
+		{
+			name: "download during subsequent cleanup cannot override wrapper",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `make: *** [Makefile:174: cluster-up] Error 1`, Role: "primary", Context: "make: *** [Makefile:174: cluster-up] Error 1\n+ ret=2\nError downloading [https://example.com/debug-tool]"},
+			}}, category: CategoryInternal,
+		},
+		{
+			name: "download before success boundary cannot override wrapper",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `make: *** [Makefile:174: cluster-up] Error 1`, Role: "primary", Context: "Error downloading [https://example.com/retried]\nINFO: Build completed successfully\nmake: *** [Makefile:174: cluster-up] Error 1"},
+			}}, category: CategoryInternal,
+		},
+		{
+			name: "missing layer ownership remains unproven",
+			job: JobBuildError{BuildLogErrorSnippets: []*BuildLogErrorSnippet{
+				{ErrorText: `Error during deploy: deploying images: layer sha256:d689b4d17b73 not found in any of the original registries`, Role: "primary"},
+				{ErrorText: `Error: cannot remove container abc as it could not be stopped`, Role: "cleanup"},
+			}}, category: CategoryNeedsInvestigation,
+		},
+	} {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := categorizeJobBuildError(&tt.job); got.Category != tt.category {
+				t.Fatalf("categorizeJobBuildError() = %+v, want %s", got, tt.category)
+			}
+		})
+	}
 }
