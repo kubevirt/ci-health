@@ -2,7 +2,10 @@ package gh
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"io"
+	"net"
 	"net/http"
 	"os"
 	"sort"
@@ -18,43 +21,67 @@ import (
 	"github.com/kubevirt/ci-health/pkg/types"
 )
 
-// retryRoundTripper wraps an http.RoundTripper and retries on transient 5xx errors.
-type retryRoundTripper struct {
+var errTransientHTTP = errors.New("transient GitHub HTTP error")
+
+// githubTransport exposes transient statuses to the full-query retry loop.
+type githubTransport struct {
 	inner http.RoundTripper
 }
 
-func (rt *retryRoundTripper) RoundTrip(req *http.Request) (resp *http.Response, err error) {
-	retryErr := retry.Do(
-		func() error {
-			// Reset the request body for retries (POST bodies are consumed after the first attempt).
-			if req.GetBody != nil {
-				body, bodyErr := req.GetBody()
-				if bodyErr != nil {
-					return retry.Unrecoverable(bodyErr)
-				}
-				req.Body = body
-			}
-			resp, err = rt.inner.RoundTrip(req)
-			if err != nil {
-				return retry.Unrecoverable(err)
-			}
-			switch resp.StatusCode {
-			case http.StatusBadGateway, http.StatusServiceUnavailable, http.StatusGatewayTimeout:
-				log.Warnf("GitHub API returned %d, will retry", resp.StatusCode)
-				return fmt.Errorf("transient HTTP %d from GitHub API", resp.StatusCode)
-			default:
-				return nil
-			}
-		},
-		retry.Attempts(5),
-		retry.Delay(2*time.Second),
-		retry.MaxDelay(30*time.Second),
-		retry.LastErrorOnly(true),
-	)
-	if retryErr != nil && err == nil {
-		err = retryErr
+func (rt *githubTransport) RoundTrip(req *http.Request) (*http.Response, error) {
+	resp, err := rt.inner.RoundTrip(req)
+	if err != nil {
+		return resp, err
 	}
-	return
+	switch resp.StatusCode {
+	case http.StatusBadGateway, http.StatusServiceUnavailable, http.StatusGatewayTimeout:
+		if err := resp.Body.Close(); err != nil {
+			log.Warnf("Closing transient GitHub HTTP response: %v", err)
+		}
+		return nil, fmt.Errorf("%w: %s", errTransientHTTP, resp.Status)
+	default:
+		return resp, nil
+	}
+}
+
+// queryWithRetry retries the entire read-only operation, including response decoding.
+func queryWithRetry[T any](ctx context.Context, client *githubv4.Client, result *T, variables map[string]interface{}, options ...retry.Option) error {
+	settings := []retry.Option{
+		retry.Attempts(5),
+		retry.Delay(2 * time.Second),
+		retry.MaxDelay(30 * time.Second),
+		retry.LastErrorOnly(true),
+		retry.Context(ctx),
+		retry.RetryIf(func(err error) bool {
+			if errors.Is(err, context.Canceled) || errors.Is(err, context.DeadlineExceeded) {
+				return false
+			}
+			if errors.Is(err, errTransientHTTP) || errors.Is(err, io.EOF) || errors.Is(err, io.ErrUnexpectedEOF) {
+				return true
+			}
+			for cause := err; cause != nil; cause = errors.Unwrap(cause) {
+				if networkError, ok := cause.(net.Error); ok && networkError.Timeout() {
+					return true
+				}
+			}
+			return false
+		}),
+		retry.OnRetry(func(attempt uint, err error) {
+			log.Warnf("GitHub GraphQL query attempt %d failed: %v", attempt+1, err)
+		}),
+	}
+	return retry.Do(func() error {
+		if err := ctx.Err(); err != nil {
+			return err
+		}
+		// Decoding can partially populate the destination before returning an error.
+		var fresh T
+		if err := client.Query(ctx, &fresh, variables); err != nil {
+			return err
+		}
+		*result = fresh
+		return nil
+	}, append(settings, options...)...)
 }
 
 type Client struct {
@@ -71,7 +98,7 @@ func NewClient(tokenPath string, source string) (*Client, error) {
 		&oauth2.Token{AccessToken: strings.TrimSpace(string(token))},
 	)
 	httpClient := oauth2.NewClient(context.Background(), src)
-	httpClient.Transport = &retryRoundTripper{inner: httpClient.Transport}
+	httpClient.Transport = &githubTransport{inner: httpClient.Transport}
 
 	inner := githubv4.NewClient(httpClient)
 
@@ -135,7 +162,7 @@ func (c *Client) mergeQueuePRQuery(query string) (types.MergeQueuePRList, error)
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 
-	err := c.inner.Query(context.Background(), &mergedQuery, variables)
+	err := queryWithRetry(context.Background(), c.inner, &mergedQuery, variables)
 	return mergedQuery.Search.Nodes, err
 }
 
@@ -161,7 +188,7 @@ func (c *Client) FetchPRTimelineItems(number int) (*types.MergeQueuePullRequestF
 		} `graphql:"repository(owner: $owner, name: $repo)"`
 	}
 
-	err := c.inner.Query(context.Background(), &query, variables)
+	err := queryWithRetry(context.Background(), c.inner, &query, variables)
 	if err != nil {
 		return nil, err
 	}
@@ -201,7 +228,7 @@ func (c *Client) chatopsPRQuery(query string) (types.ChatopsPRList, error) {
 		} `graphql:"search(query: $querystring, type: ISSUE, first:100)"`
 	}
 
-	err := c.inner.Query(context.Background(), &mergedQuery, variables)
+	err := queryWithRetry(context.Background(), c.inner, &mergedQuery, variables)
 	return mergedQuery.Search.Nodes, err
 }
 
@@ -216,7 +243,7 @@ func (c *Client) GetSupportedBranches(ctx context.Context) ([]string, error) {
 		} `graphql:"repository(owner: \"kubevirt\", name: \"kubevirt\")"`
 	}
 
-	err := c.inner.Query(ctx, &query, nil)
+	err := queryWithRetry(ctx, c.inner, &query, nil)
 	if err != nil {
 		return nil, err
 	}
