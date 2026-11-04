@@ -1,5 +1,22 @@
 {{- /* gotype: github.com/kubevirt/ci-health/cmd/ci-failures.TemplateData */ -}}
 
+{{ define "secondary-evidence" }}
+{{ if gt (len .BuildLogErrorSnippets) 1 }}
+<details>
+<summary>secondary evidence</summary>
+{{ range slice .BuildLogErrorSnippets 1 }}
+
+* {{ if .Role }}<strong>{{ .Role }}</strong>: {{ end }}<code>{{ .ErrorText }}</code> [build-log]({{ .LinkToLogLine }})
+{{ if .Context }}
+<details><summary>context</summary>
+<pre>{{ .Context }}</pre>
+</details>
+{{ end }}
+{{ end }}
+</details>
+{{ end }}
+{{ end }}
+
 {{ define "failures" }}
 <a id="{{ .Anchor }}"></a>
 
@@ -21,6 +38,7 @@
 <summary>all...</summary>
 {{ range $jobErrorInCluster := $cluster.Errors }}
 * _{{ $jobErrorInCluster.Started }}_: {{ if $jobErrorInCluster.BuildLogErrorSnippets }}<code>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).ErrorText }}</code> [build-log]({{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).LinkToLogLine }}){{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
+{{ template "secondary-evidence" $jobErrorInCluster }}
 {{ end }}
 </details>
 {{ end }}
@@ -53,6 +71,7 @@
 <pre>{{ (index $jobErrorInCluster.BuildLogErrorSnippets 0).Context }}</pre>
 </details>
 {{ end }}{{ else }}[build-log]({{ $jobErrorInCluster.JobURL }}){{ end }}
+{{ template "secondary-evidence" $jobErrorInCluster }}
 {{ end }}
 </details>
 {{ end }}

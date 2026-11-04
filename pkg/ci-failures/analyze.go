@@ -58,26 +58,7 @@ func AnalyzeBuild(prowJobURL string) (*JobBuildErrors, error) {
 		Passed:   log.Passed,
 	}
 
-	lines := strings.Split(log.LogContent, "\n")
-	for i := len(lines) - 1; i >= 0; i-- {
-		line := lines[i]
-		if buildLogLineMatchesExpression.MatchString(line) {
-			start := max(0, i-3)
-			end := min(len(lines)-1, i+3)
-			snippet := &BuildLogErrorSnippet{
-				StartLine:     start + 1,
-				EndLine:       end + 1,
-				ErrorLine:     i + 1,
-				ErrorText:     strings.TrimSpace(lines[i]),
-				LinkToLogLine: fmt.Sprintf("%s#1:build-log.txt%%3A%d", prowJobURL, i+1),
-			}
-			for j := start; j <= end; j++ {
-				snippet.Context += strings.TrimSpace(lines[j]) + "\n"
-			}
-			snippet.Context = strings.TrimSuffix(snippet.Context, "\n")
-			buildError.BuildLogErrorSnippets = append(buildError.BuildLogErrorSnippets, snippet)
-		}
-	}
+	buildError.BuildLogErrorSnippets = extractErrorSnippets(log.LogContent, prowJobURL)
 
 	buildError.Category = string(CategorizeJobBuildError(buildError))
 
