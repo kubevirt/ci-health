@@ -3,7 +3,7 @@ name: analyze-ci-failures
 description: >
     Analyze root causes for all the recent ci-failures.
     Use when user mentions to analyze recent ci failures
-allowed-tools: [Read, Write, Grep, Bash(go run:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
+allowed-tools: [Read, Write, Grep, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*), Bash(stat:*), Bash(ls:*), Bash(git fetch:*), Bash(git diff:*)]
 ---
 
 ## Overview
@@ -12,23 +12,23 @@ This skill helps the user to find the root cause and mitigations for all ci fail
 
 ## Analysis data generation
 
-As a base for analyzing the failure, the go tool `cmd/ci-failures` from the `kubevirt.io/ci-health` repository is to be used. As a base for the data the file
-`output/kubevirt/kubevirt/results.json` is used.
-
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+First read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup).
+Use the installed `ci-failures` binary from a writable ci-health checkout root.
+The input is `output/kubevirt/kubevirt/results.json`. The shared setup defines
+session isolation and `<output-dir>`.
 
 Example how to generate the data files for the prowjobs failing ci:
 
 ```bash
-$ go run ./cmd/ci-failures generate yaml
+ci-failures generate yaml
 ```
 
 This produces:
-- `output/tmp/errors-{sig}/*.yaml` — per-job error extractions with snippets, line links, and context
+- `<output-dir>/errors-{sig}/*.yaml` — per-job error extractions with snippets, line links, and context
 - `output/tmp/build-logs/{buildID}.yaml` — full cached build logs with prow URL, GCS URL, timestamps, and complete log content
 
-At the end of execution, the command prints a YAML list of all generated error files to stdout:
-```
+At the end of execution, the command prints a YAML list of all generated error files to stdout. For example, without a session:
+```yaml
 generated_files:
   - output/tmp/errors-sig-compute/pull-kubevirt-e2e-k8s-1.35-sig-compute.yaml
   - output/tmp/errors-sig-network/pull-kubevirt-e2e-k8s-1.35-sig-network.yaml
@@ -36,25 +36,22 @@ generated_files:
 ```
 Parse this list to know exactly which files to read — no separate file discovery step (find/glob) is needed.
 
-### Stale data
-Before you proceed, 
-1) check whether there's updates on `output/kubevirt/kubevirt/results.json` available on the main branch - in that case first update the current branch with latest changes by rebasing on main.
-2) compare `output/tmp` file time stamps with `output/kubevirt/kubevirt/results.json` - if the files in `output/tmp` are older than the latter, they are stale and need to get deleted.
+### Fresh data
 
-To compare timestamps, use `ls -lt` to list both files together — the newer file appears first:
-```bash
-$ ls -lt output/kubevirt/kubevirt/results.json output/tmp/errors-*/*.yaml
-```
-If `results.json` appears above (newer than) the error YAML files, the generated data is stale.
+Before generation, check whether upstream `main` has a newer
+`output/kubevirt/kubevirt/results.json`. Use a clean checkout or worktree with
+the desired data revision; do not rebase or overwrite unrelated user changes.
+Record the input revision/date so the report's coverage is clear.
 
-To delete stale data, remove the entire `output/tmp` directory:
-```bash
-$ rm -rf output/tmp/*
-```
+Regenerate YAML after updating the input. The command overwrites generated
+error files; use only the current `generated_files` list, since older job files
+may remain. A fresh session ID isolates the new analysis. Cached build logs are
+keyed by build ID and remain reusable when `results.json` changes. Do not delete
+`output/tmp/*`: that would remove other sessions and shared caches.
 
 ## Data Available in the YAML Files
 
-### Error YAML files (`output/tmp/errors-{sig}/*.yaml`)
+### Error YAML files (`<output-dir>/errors-{sig}/*.yaml`)
 
 Each file contains structured data — most metadata can be read directly without parsing URLs:
 
@@ -84,10 +81,10 @@ Only needed when error snippets are insufficient for root cause analysis. Use th
 
 ```bash
 # Show last 30 lines of a build log
-$ go run ./cmd/ci-failures show-log <build-id> --tail 30
+ci-failures show-log <build-id> --tail 30
 
 # Search for error patterns (case-insensitive)
-$ go run ./cmd/ci-failures show-log <build-id> --grep "error" --tail 20
+ci-failures show-log <build-id> --grep "error" --tail 20
 ```
 
 Flags:
@@ -99,7 +96,7 @@ Flags:
 1. **Use generated file list**: Parse the `generated_files:` YAML list printed by the `generate yaml` command to get all error YAML file paths — no separate discovery step needed
 2. **Read each error YAML file**: Extract the job name, SIG (from directory), and all build errors with their snippets
 3. **Analyze error snippets**: For each build error, examine `error_text` and `context` fields to determine root cause. In most cases the snippets contain enough information
-4. **Deep-dive when needed**: If snippets are ambiguous or empty, use `go run ./cmd/ci-failures show-log <build_id> --grep "error" --tail 20` to search the full build log
+4. **Deep-dive when needed**: If snippets are ambiguous or empty, use `ci-failures show-log <build_id> --grep "error" --tail 20` to search the full build log
 5. **Classify** each failure as fixable or non-fixable
 6. **Group similar failures** across jobs — errors with the same root cause should be combined into a single group even if they appear in different SIGs or branches
 

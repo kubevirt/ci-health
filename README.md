@@ -220,6 +220,11 @@ This should create a HTML report called sig-compute-failure-report.html under /t
 
 A diagnostic CLI for analyzing CI failures in KubeVirt's Prow-based CI system. It downloads build logs and artifacts from GCS, categorizes errors, computes test flakiness rates, and analyzes Kubernetes cluster state from k8s-reporter dumps.
 
+For installation, executable `PATH`, runtime prerequisites, and session handling,
+see [CLI installation and setup](docs/skills-overview.md#cli-installation-and-setup).
+The skills use the installed `ci-failures` binary; the examples below use
+`go run ./cmd/ci-failures` for execution directly from a source checkout.
+
 All output is written as YAML to `output/tmp/` by default. Use `--session-id` (or set `CLAUDE_CODE_SESSION_ID`) to isolate output into `output/tmp/sessions/<id>/`.
 
 Currently supports the `kubevirt` GitHub organization only.

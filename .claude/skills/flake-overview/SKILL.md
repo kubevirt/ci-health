@@ -3,7 +3,7 @@ name: flake-overview
 description: >
     Unified flake analysis combining PR-based flakefinder data with periodic lane failure rates.
     Use when the user wants an overview of test flakiness across the project.
-allowed-tools: [Read, Write, WebFetch, Bash(go run:*), Bash(grep:*), Bash(find:*), Bash(ls:*), Bash(test:*), Bash(gh search code:*), Bash(gh search issues:*), Bash(gh issue list:*), Bash(mkdir:*), Bash(curl:*)]
+allowed-tools: [Read, Write, WebFetch, Bash(ci-failures:*), Bash(go install:*), Bash(go env:*), Bash(command -v:*), Bash(grep:*), Bash(find:*), Bash(ls:*), Bash(test:*), Bash(gh search code:*), Bash(gh search issues:*), Bash(gh issue list:*), Bash(mkdir:*), Bash(curl:*)]
 ---
 
 ## Overview
@@ -15,29 +15,33 @@ This skill runs a single command that combines two complementary views of test f
 
 Together they answer: "which tests are flaky, is it a PR-interaction problem or a baseline issue, and is it getting better or worse?"
 
-## Step 1: Locate the ci-health repository and run flake-overview twice
+## Prerequisites
 
-The `cmd/ci-failures` tool lives in the `kubevirt.io/ci-health` repository. If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+Read [CLI installation and setup](../../../docs/skills-overview.md#cli-installation-and-setup) before running commands. Use the installed `ci-failures` binary from a deliberately selected, writable `ci-health` repository working directory, with a fresh session per analysis as described there. `<output-dir>` below means `output/tmp` or `output/tmp/sessions/<session-id>` according to that setup.
+
+## Step 1: Run flake-overview twice
 
 Run the command twice — once for a 28-day window and once for a 7-day window — to enable trend detection:
 
 ```bash
-go run ./cmd/ci-failures flake-overview --days 28
+ci-failures flake-overview --days 28
 ```
 
 Read the output YAML, then run:
 
 ```bash
-go run ./cmd/ci-failures flake-overview --days 7
+ci-failures flake-overview --days 7
 ```
 
-Read that output YAML too. Both runs produce a file at `output/tmp/flake-overview.yaml` (or `output/tmp/sessions/{session-id}/flake-overview.yaml` when a session ID is set). The second run overwrites the first, so read the first output before running the second.
+Read that output YAML too. Both runs produce `<output-dir>/flake-overview.yaml`; use the exact path logged by the command, not a broad glob over older outputs. Within the same analysis session, the second run overwrites the first, so read and retain the first run's data before running the second.
 
 The command:
 1. Fetches flakefinder 24h reports from GCS for the requested window
 2. Aggregates per-lane failure counts (filtering out `.*-root$` lanes by default)
 3. For each lane, fetches testgrid data and computes per-test success rates (6 lanes in parallel)
 4. Combines everything into a single YAML
+
+The overview retains only tests with success rates below 95%, omitting `likely-pr-related` entries. Check command logs for lane-rate fetch warnings: a failed fetch can leave a lane with zero `total_builds` and no `failed_tests`, which does not mean it is healthy. TestGrid retention can shorten the available history even when `--days 28` is requested; report coverage limitations before comparing rates.
 
 ## Step 2: Read and cross-reference both outputs
 
@@ -61,16 +65,10 @@ lanes:
     total_builds: 56
     failed_tests:
       - test_name: "full test description"
-        succeeded: 0
         failed: 55
-        skipped: 1
         total_runs: 55
         success_rate: 0.0
         severity: likely-flaky
-        recent_failures:
-          - build_id: "2054504557802688512"
-            timestamp: "2026-05-13T10:11:03Z"
-            message: "error message excerpt..."
 ```
 
 Key fields:
@@ -78,21 +76,27 @@ Key fields:
 - `lanes[*].failures` — flakefinder failure count for this lane
 - `lanes[*].share_percent` — percentage of total failures
 - `lanes[*].total_builds` — number of testgrid builds analyzed
-- `lanes[*].failed_tests` — per-test failure data from testgrid
+- `lanes[*].failed_tests` — per-test failure data from testgrid, filtered to success rates below 95%; omitted when empty
 - `failed_tests[*].success_rate` — percentage (0-100)
-- `failed_tests[*].severity` — likely-pr-related (>=95%), inconclusive (>=80%), likely-flaky (<80%)
+- `failed_tests[*].severity` — inconclusive (>=80% and <95%) or likely-flaky (<80%); likely-pr-related (>=95%) entries are filtered out
 
 ## Deeper flakiness analysis
 
 The severity classification and success rates are a starting point. Apply these techniques to the data for more accurate diagnosis.
 
-### Flip-rate analysis from recent_failures
+### Follow-up evidence and flip-rate analysis
 
-Examine the `recent_failures` list for each test to detect state transition patterns:
+The overview does not emit `succeeded`, `skipped`, or `recent_failures`. For timestamps, build IDs, and failure messages, run a lane-rate follow-up for each relevant lane and window:
+
+```bash
+ci-failures lane-rate --days 28 "<testgrid-url>"
+```
+
+Read the exact logged `<output-dir>/lane-rate-<sanitized-tab-name>.yaml` path. Its `recent_failures` contains at most 10 failures per test and no passing results. Use it for sampled timestamp/build correlation, not to establish flip rates, consecutive runs, or recovery. Those patterns require the full ordered TestGrid results, including passes and skipped/not-run entries, within the available retention period. Without that evidence, report the pattern as unknown.
 
 - **High flip rate** (failures interleaved with passes, spread across the time window): genuine flake — the test is nondeterministic
 - **Low flip rate** (failures clustered consecutively): the test was broken for a period then fixed, or is still broken — this is a regression, not a flake
-- **Key heuristic**: 3 or more consecutive failures should be treated as deterministic breakage, not flakiness. A test at 60% success rate with alternating pass/fail is very different from one that failed for a solid week then passed for a solid week — same rate, completely different diagnosis.
+- **Key heuristic**: 3 or more consecutive failures in the full ordered results warrant investigating deterministic breakage, but do not prove it. A test at 60% success rate with alternating pass/fail is very different from one that failed for a solid week then passed for a solid week — same rate, completely different diagnosis.
 
 ### Cross-lane dispersion
 
@@ -100,15 +104,15 @@ Collect all failing test names across all lanes and categorize by how many lanes
 
 - **Dispersed** (fails in 3+ lanes): genuine cross-environment flake — strong quarantine candidate regardless of success rate
 - **Concentrated** (1–2 lanes only): lane-specific issue — check whether those lanes share a k8s version, provider, or SIG. The test itself may be fine; the environment is the problem.
-- **Universal** (fails in every or nearly every lane): likely a regression on main, not a flake — check if it was recently introduced by looking at whether recent_failures timestamps cluster near the present
+- **Universal** (fails in every or nearly every lane): possible regression on main — check recent lane-rate failure timestamps and ordered TestGrid results before concluding it was recently introduced
 
 ### Infra-correlated failure detection
 
-Within each lane, compare `build_id`s across different failing tests:
+Within each lane, compare `build_id`s across different failing tests using the lane-rate follow-up:
 
-- When multiple unrelated tests share the same `build_id`s in their `recent_failures`, they failed together in the same builds — this is an infrastructure flake at the lane level, not individual test problems
-- If a small number of builds account for most failures across many tests in a lane, the lane experienced infra instability during those builds
-- Flag these as **infra-correlated** — these tests should NOT be quarantined; the lane's infrastructure should be investigated instead
+- When multiple unrelated tests share the same `build_id`s in their sampled `recent_failures`, they failed together in those builds — this suggests a shared cause, not necessarily infrastructure
+- Establish whether a small number of builds account for most failures using full results, not just the capped failure sample
+- Flag suspected cases as **infra-correlated** and investigate build evidence before blaming individual tests or recommending quarantine
 
 ## Quarantine prioritization
 
@@ -128,12 +132,12 @@ For each unique failing test, find its source file and line number so the report
 1. **Extract the `It("...")` description** from each test name. The test name is a concatenation of Ginkgo `Describe`/`Context`/`It` blocks separated by spaces. The `It` text is the last meaningful segment — typically everything after the last known context boundary. For example:
    - Full name: `KubeVirt Tests Suite.[sig-compute]VSOCK Live migration should retain the CID for migration target`
    - Search string: `should retain the CID for migration target`
-2. **Search on GitHub** using the `gh` CLI to find the file and line number:
+2. **Search on GitHub** using the `gh` CLI to find the file:
    ```bash
-   gh search code --repo kubevirt/kubevirt --filename '*.go' '<description>'
+   gh search code --repo kubevirt/kubevirt --extension go '<description>'
    ```
-   This returns matching files and line numbers. If results are ambiguous, narrow by adding `-- path:tests/` or use a more specific substring.
-3. **Construct a GitHub permalink**: `https://github.com/kubevirt/kubevirt/blob/main/<path>#L<line>` (e.g., `https://github.com/kubevirt/kubevirt/blob/main/tests/vmi_vsock_test.go#L121`)
+   This returns matching files and snippets, not reliable line numbers. If results are ambiguous, include `path:tests/` in the search query or use a more specific substring. Open the matching file online to verify the line number.
+3. **Construct a source link**: `https://github.com/kubevirt/kubevirt/blob/main/<path>#L<line>`. This is a moving branch link; for a stable permalink, use the verified commit SHA instead of `main`.
 
 Skip `.Pod` and `BeforeSuite`/`AfterSuite` entries — these are infrastructure-level, not test code.
 
@@ -181,10 +185,10 @@ Compare the current run's quarantine data against the **most recent prior report
 4. **Compute the diff** across five categories:
 
    - **Newly quarantined**: tests that have `[QUARANTINE]` in the current data but were listed as candidates or appeared without the tag in the prior report. This means the quarantine action was taken.
-   - **Removed from quarantine**: tests that had `[QUARANTINE]` in the prior report but no longer have the tag in the current data. Either the tag was removed (test fixed) or the test was deleted.
+   - **Removed from quarantine**: tests observed without `[QUARANTINE]` now that had the tag in the prior report. Verify the current source before claiming removal; absence from the filtered overview alone is not evidence of a fix, tag removal, or deletion.
    - **Stale quarantine candidates**: tests that were flagged as quarantine candidates in the prior report and are still not quarantined in the current data. Action was recommended but not taken.
    - **New quarantine debt**: tests that are quarantined with <50% success rate now but were not in the prior report's debt section (either newly quarantined and immediately broken, or a previously-healthy quarantined test degraded below 50%).
-   - **Resolved quarantine debt**: tests that were in the prior report's debt section but are no longer (either fixed above 50%, unquarantined, or removed entirely).
+   - **Resolved quarantine debt**: tests previously in the debt section whose recovery above 50%, unquarantine, or deletion has been verified using current source and lane results. Missing overview entries may instead reflect filtering, missing data, or retention limits; mark these as unverified, not resolved.
 
    For matching tests across reports, normalize test names by stripping markdown link syntax, trimming whitespace, and comparing the core test description (the `It("...")` text). Exact name matching is fragile because reports may abbreviate differently — match on the distinctive substring (e.g., "USB passthrough 1 device", "IO error pause VMI").
 
@@ -246,7 +250,7 @@ For each SIG, create a section with:
   - Success rate (28d and 7d), total runs, and severity
   - **Trend**: arrow or label indicating direction (28d→7d)
   - **Dispersion**: how many lanes this test fails in (dispersed / concentrated / universal)
-  - **Pattern**: flaky (high flip rate), burst (clustered timestamps), consecutive (deterministic), or infra-correlated
+  - **Pattern**: flaky (high flip rate), burst (clustered timestamps), consecutive (possible deterministic breakage), infra-correlated, or unknown; cite lane-rate follow-up evidence and require full ordered TestGrid results for flip/consecutive claims
   - `[QUARANTINE]` flag if present in the test name
 
 #### 4. Quarantine status changes (before the candidate summary)

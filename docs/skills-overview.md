@@ -1,13 +1,109 @@
 # CI Health Skills Overview
 
-Skills in `.claude/skills/` provide CI failure analysis, flake detection, and PR triage for the KubeVirt project. They are invoked by Claude Code as slash commands.
+Skills in `.claude/skills/` provide CI failure analysis, flake detection, and PR triage for the KubeVirt project. Load them through your agent's skill mechanism (for example, Claude Code slash commands or Kilo's skill tool).
+
+## CLI Installation and Setup
+
+The diagnostic skills use the installed `ci-failures` Go CLI, not `go run`
+on every invocation. Install Go 1.26 or newer; this checkout declares Go
+1.26.0 and selects toolchain go1.26.4. Go may download the selected toolchain
+automatically when toolchain switching is enabled.
+
+Install from a local ci-health checkout. If you do not already have one,
+clone the repository into your chosen workspace:
+
+```bash
+git clone https://github.com/kubevirt/ci-health.git
+```
+
+Run the following from the checkout's root. For reproducibility, select a
+verified commit before installing; otherwise use an up-to-date `main` checkout.
+
+```bash
+go install ./cmd/ci-failures
+```
+
+Do not use `go install github.com/kubevirt/ci-health/cmd/ci-failures@latest`
+or `@main` for this repository. Versioned module installation is currently
+blocked by historical output filenames containing `:` that Go rejects when
+building a module archive. Installing from a Git checkout avoids that archive
+validation; it also provides the input data needed by the batch-analysis skill.
+
+Go installs executables into `GOBIN`, or the `bin` directory under `GOPATH`
+when `GOBIN` is unset (normally `$HOME/go/bin`). Inspect the effective values:
+
+```bash
+go env GOBIN GOPATH
+```
+
+Put that executable directory on `PATH`. For the default location:
+
+```bash
+export PATH="$HOME/go/bin:$PATH"
+command -v ci-failures
+ci-failures --help
+```
+
+If a documented subcommand or flag is missing, reinstall using one of the
+commands above and check its help before proceeding.
+
+### Working Directory and Dependencies
+
+Run the skill commands from a writable ci-health checkout root so relative
+inputs, generated reports, and caches have a consistent location. An installed
+binary does not require Go at runtime. URL-based analyses can also run from
+another writable working directory, but `generate yaml` specifically requires
+`output/kubevirt/kubevirt/results.json` from the ci-health checkout.
+
+Analysis downloads use public GCS, Prow, and TestGrid endpoints; they do not
+require `gcloud`, `gsutil`, or Kubernetes cluster credentials. GitHub REST
+requests can use `GITHUB_TOKEN` for authentication and higher rate limits.
+The code/issue searches in the flake skills and the `trigger-pr-jobs` skill
+additionally require the GitHub CLI (`gh`) with an authenticated account.
+Retriggering also requires permission to comment on the target PR.
+
+### Sessions and Output
+
+Use a fresh session ID for each independent analysis and the same ID for all
+commands belonging to it. The CLI does not create an ID automatically:
+
+```bash
+ci-failures --session-id pr-17287-review-1 analyze-pr https://github.com/kubevirt/kubevirt/pull/17287
+ci-failures --session-id pr-17287-review-1 summarize-session
+```
+
+Session IDs must not contain `..`, `/`, or `\`. The explicit `--session-id`
+flag takes precedence over the `CLAUDE_CODE_SESSION_ID` environment variable.
+`summarize-session` requires one of these to be set and reads all analysis
+files already present in that session; do not reuse a session for another PR.
+
+In the skill instructions, `<output-dir>` means `output/tmp` without a session,
+or `output/tmp/sessions/<session-id>` when a session is configured. Read the
+exact output paths printed by each command rather than guessing filenames or
+reading files left by a previous run. Shared build-log caches remain under
+`output/tmp/build-logs/` even when sessions are enabled. Do not delete the
+entire `output/tmp` tree to refresh one analysis; it contains other sessions
+and shared caches.
+
+`flake-overview` writes the same filename on repeated runs within a session.
+Read the first analysis window before running the second, or use separate
+session IDs for the two windows.
+
+### Skill Discovery
+
+Keep the definitions in this checkout's `.claude/skills/` canonical. Configure
+your agent to load this directory directly; existing shared-directory symlinks
+are aliases, not separate copies. For Kilo, add the absolute path to this
+directory to `skills.paths` in `kilo.json` and verify with `kilo debug skill`
+in a fresh process. When using a worktree, register its skill directory to
+test the edited definitions rather than the original checkout's versions.
 
 ## Skills by Scope
 
-| Scope | Skills | Input |
-|-------|--------|-------|
-| **Single build** | `analyze-build`, `test-failure-rate`, `change-relevance` | Prow job URL |
-| **Single PR** | `analyze-pr-builds`, `trigger-pr-jobs` | GitHub PR URL |
+| Scope             | Skills                                                       | Input                 |
+| ----------------- | ------------------------------------------------------------ | --------------------- |
+| **Single build**  | `analyze-build`, `test-failure-rate`, `change-relevance`     | Prow job URL          |
+| **Single PR**     | `analyze-pr-builds`, `trigger-pr-jobs`                       | GitHub PR URL         |
 | **All recent CI** | `analyze-ci-failures`, `lane-failure-rate`, `flake-overview` | No URL / testgrid URL |
 
 ## Skill Descriptions

@@ -1,7 +1,7 @@
 ---
 name: flake-overview
 description: Provide a unified flake analysis combining GCS-based flakefinder reports with testgrid success rates.
-allowed-tools: Read, Write, Bash(go run *), Bash(find *), Bash(ls *), Bash(test *), Grep
+allowed-tools: Read, Write, Bash(ci-failures *), Bash(find *), Bash(ls *), Bash(test *), Grep
 ---
 
 ## Overview
@@ -13,20 +13,18 @@ This skill runs a single command that combines two complementary views of test f
 
 Together they answer: "which tests are flaky, is it a PR-interaction problem or a baseline issue, and is it getting better or worse?"
 
-## Step 1: Locate the ci-health repository and run flake-overview twice
-
-The `cmd/ci-failures` tool lives in the `kubevirt.io/ci-health` repository. If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
+## Step 1: Run flake-overview twice
 
 Run the command twice — once for a 28-day window and once for a 7-day window — to enable trend detection:
 
 ```bash
-go run ./cmd/ci-failures flake-overview --days 28
+ci-failures flake-overview --days 28
 ```
 
 Read the output YAML, then run:
 
 ```bash
-go run ./cmd/ci-failures flake-overview --days 7
+ci-failures flake-overview --days 7
 ```
 
 Read that output YAML too. Both runs produce a file at `output/tmp/flake-overview.yaml` (or `output/tmp/sessions/{session-id}/flake-overview.yaml` when a session ID is set). The second run overwrites the first, so read the first output before running the second.

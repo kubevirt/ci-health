@@ -2,7 +2,7 @@
 name: analyze-pr-builds
 description: Analyze all failed builds for a GitHub pull request and identify root causes.
 argument-hint: <pr-url>
-allowed-tools: Read, Bash(go run *), Grep
+allowed-tools: Read, Bash(ci-failures *), Grep
 ---
 
 ## Overview
@@ -13,14 +13,12 @@ It works for any repo served by prow.ci.kubevirt.io (currently the `kubevirt` Gi
 
 ## Data Generation
 
-If not already inside the `ci-health` repository, `cd` into it first (e.g. `cd kubevirt.io/ci-health` from the `github.com` directory).
-
 Two commands to run sequentially:
 
 ### Step 1: Fetch and analyze all failed builds
 
 ```bash
-$ go run ./cmd/ci-failures analyze-pr $ARGUMENTS
+$ ci-failures analyze-pr $ARGUMENTS
 ```
 
 This downloads build logs, k8s-reporter artifacts, and container logs for every currently-failing job in the PR. Output files go to the session directory.
@@ -28,7 +26,7 @@ This downloads build logs, k8s-reporter artifacts, and container logs for every 
 ### Step 2: Get a condensed summary
 
 ```bash
-$ go run ./cmd/ci-failures summarize-session
+$ ci-failures summarize-session
 ```
 
 This reads all session YAML files and emits a **single condensed YAML** to stdout containing just the key fields needed for analysis. This replaces the need to read individual files.
