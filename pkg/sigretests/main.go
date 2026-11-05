@@ -295,6 +295,10 @@ func DoHTTPWithRetry(url string, httpVerb func(url string) (resp *http.Response,
 				resp.StatusCode == http.StatusServiceUnavailable,
 				resp.StatusCode == http.StatusGatewayTimeout:
 				httpRetryLog.Warnf("transient HTTP %d, will retry", resp.StatusCode)
+				_, _ = io.Copy(io.Discard, resp.Body)
+				if closeErr := resp.Body.Close(); closeErr != nil {
+					httpRetryLog.WithError(closeErr).Warn("failed closing response body")
+				}
 				return fmt.Errorf("transient HTTP %d", resp.StatusCode)
 			default:
 				httpRetryLog.Warnf("failed with status %d, aborting", resp.StatusCode)
