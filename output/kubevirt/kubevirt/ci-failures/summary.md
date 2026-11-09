@@ -990,7 +990,7 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 <hr/>
 
-**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
+**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
 <details>
 <summary>all...</summary>
 
@@ -1260,7 +1260,7 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
+**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
 <details>
 <summary>all...</summary>
 
@@ -2549,153 +2549,6 @@ make: *** [Makefile:182: cluster-down] Error 1
 ### main (5x / 50.00%)
 
 
-#### internal (2x / 40.00%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
-
-<details><summary>context</summary>
-<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
-09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
-09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
-09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
-
-<details><summary>context</summary>
-<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
-09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
-09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
-09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
-
-<details><summary>context</summary>
-<pre>09:06:56: deployment.apps/cdi-operator created
-09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
-
-<details><summary>context</summary>
-<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> configured node not found during provisioning (1x / 20.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
 #### external (3x / 60.00%)
 
 <details>
@@ -3477,6 +3330,153 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
+#### internal (2x / 40.00%)
+
+<details>
+<summary> taint not found during cluster setup (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
+<details>
+<summary>all...</summary>
+
+* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
+
+<details><summary>context</summary>
+<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
+09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
+09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
+09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
+</details>
+
+
+
+* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
+
+<details><summary>context</summary>
+<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
+09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
+09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
+09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
+09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
+09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
+09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
+
+<details><summary>context</summary>
+<pre>09:06:56: deployment.apps/cdi-operator created
+09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
+09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
+09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
+
+<details><summary>context</summary>
+<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
+09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
+09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> configured node not found during provisioning (1x / 20.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+<details>
+<summary>all...</summary>
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
 ### release-1.8 (1x / 10.00%)
 
 
@@ -3511,7 +3511,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 
 <hr/>
 
-**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
+**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
 <details>
 <summary>all...</summary>
 
@@ -4009,57 +4009,6 @@ Done cleaning up after podman in container.</pre>
 <hr/>
 </details>
 <details>
-<summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
-
-<details><summary>context</summary>
-<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
-12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
-12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
-12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:27:34: selecting podman as container runtime
-12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> configured node not found during provisioning (1x / 14.29%) </summary>
 
 <hr/>
@@ -4110,6 +4059,57 @@ make: *** [Makefile:179: cluster-up] Error 1
 12:18:30: selecting podman as container runtime
 12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
 make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> make cluster lifecycle target failure (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
+<details>
+<summary>all...</summary>
+
+* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
+
+<details><summary>context</summary>
+<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
+12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
+12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
+12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
+12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:27:34: selecting podman as container runtime
+12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
+make: *** [Makefile:162: cluster-down] Error 1
 &#43; true
 &#43; exit 2
 &#43; EXIT_VALUE=2</pre>
@@ -5016,4 +5016,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-09 15:11:30
+Last updated: 2026-11-09 21:12:09
