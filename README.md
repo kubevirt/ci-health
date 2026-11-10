@@ -5,6 +5,14 @@
 This repo contains code to calculate metrics about the performance of CI systems
 based on Prow.
 
+## Documentation
+
+* [Metric definitions](#definitions) and [current status](#status)
+* [Code layout](#code-layout) and [development checks](#development)
+* [Commands](#commands) and [local execution](#local-execution)
+* [Automation and workflows](#automation--workflows)
+* [CI analysis skills and CLI setup](docs/skills-overview.md)
+
 ## Definitions
 
 * Merge queue: list of Pull Requests that are ready to be merged at any given
@@ -119,6 +127,53 @@ These plots will be updated every week.
 
   Data available [here](./output/kubevirt/kubevirt/batch/quarantined-tests/data).
 
+## Code layout
+
+The CLI entry points live in [cmd/](cmd/); see [Commands](#commands) for their
+roles and [Local execution](#local-execution) for usage. Shared logic lives in
+[pkg/](pkg/):
+
+* [chatops/](pkg/chatops/) analyzes `/test` and `/retest` comments;
+  [mergequeue/](pkg/mergequeue/) determines merge-queue membership.
+* [stats/](pkg/stats/) calculates statistics, while [metrics/](pkg/metrics/)
+  exposes metrics in Prometheus format.
+* [gh/](pkg/gh/) provides the GitHub API client; [runner/](pkg/runner/)
+  coordinates the stats and batch operations.
+* [sigretests/](pkg/sigretests/) attributes failures and retests to SIGs;
+  [quarantine/](pkg/quarantine/) collects quarantined-test statistics.
+* [ci-failures/](pkg/ci-failures/) implements build-log analysis, error
+  categorization and clustering, test and lane failure rates, and Kubernetes
+  artifact analysis.
+* [htmlreport/](pkg/htmlreport/) parses JUnit reports and renders per-SIG HTML
+  reports using an embedded template.
+* [output/](pkg/output/) writes JSON results, SVG badges, and Prometheus metrics;
+  [plot/](pkg/plot/) generates historical PNG plots.
+* [prow/](pkg/prow/) defines Prow job metadata; [types/](pkg/types/) contains
+  shared options, metrics, PR, and result types.
+* [constants/](pkg/constants/) defines shared names and defaults;
+  [timeutils/](pkg/timeutils/) provides date helpers.
+
+## Development
+
+Use the Go version and toolchain specified in [go.mod](go.mod). From the
+repository root, run the unit tests, static checks, and build:
+
+```bash
+go test ./cmd/... ./pkg/...
+go vet ./...
+go build ./...
+golangci-lint run ./...
+```
+
+The lint configuration is [.golangci.yml](.golangci.yml). Tests alongside the
+packages use Go's testing package and Ginkgo/Gomega; follow the conventions in
+the package being changed.
+
+The [end-to-end suite](e2e/tests_suite_test.go) queries live GitHub data and
+requires `GITHUB_TOKEN_PATH` to point to an OAuth token file. With that
+prerequisite configured, `go test ./...` also runs the end-to-end suite, as in
+the [test workflow](.github/workflows/ci-health-tests.yaml).
+
 ## Commands
 
 The repository provides four CLI tools under `cmd/`:
@@ -136,12 +191,12 @@ The central artifact is `output/kubevirt/kubevirt/results.json`: `badges-update.
 
 ### GitHub Actions
 
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| `badges-update.yaml` | Scheduled every 3 hours | Runs `stats` for last 7 days, commits updated badges and `results.json` |
-| `ci-failures.yml` | Push to `main` modifying `results.json` | Runs `ci-failures generate report`, commits updated markdown summary |
-| `ci-health-tests.yml` | Pull request that modifies Go code | Runs `go test`, validates changes |
-| `historical-update.yaml` | Weekly (Monday 00:10 UTC) | Runs `batch` fetch+plot for trend metrics, commits updated plots |
+| Workflow                                                               | Trigger                                                    | Purpose                                                              |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- |
+| [badges-update.yaml](.github/workflows/badges-update.yaml)             | Every 3 hours or manual dispatch                           | Runs `stats`, commits updated badges and `results.json`              |
+| [ci-failures.yml](.github/workflows/ci-failures.yml)                   | Push to `main` modifying `results.json`                    | Runs `ci-failures generate report`, commits updated Markdown summary |
+| [ci-health-tests.yaml](.github/workflows/ci-health-tests.yaml)         | PR modifying `cmd/`, `pkg/`, `e2e/`, `go.*`, or `.github/` | Runs `go test ./...`, including the end-to-end suite                 |
+| [historical-update.yaml](.github/workflows/historical-update.yaml)     | Weekly (Monday 00:10 UTC) or manual dispatch               | Runs `batch` fetch+plot for trend metrics, commits updated plots     |
 
 ### Prow Postsubmit
 
