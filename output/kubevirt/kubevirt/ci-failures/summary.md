@@ -990,7 +990,7 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 <hr/>
 
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
+**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
 <details>
 <summary>all...</summary>
 
@@ -1260,7 +1260,7 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
+**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
 <details>
 <summary>all...</summary>
 
@@ -1389,7 +1389,7 @@ make: *** [Makefile:162: cluster-down] Error 1
 
 <hr/>
 
-**2x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
+**2x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
 <details>
 <summary>all...</summary>
 
@@ -3511,7 +3511,7 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 <hr/>
 
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
+**3x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
 <details>
 <summary>all...</summary>
 
@@ -3784,7 +3784,7 @@ Done cleaning up after podman in container.</pre>
 
 <hr/>
 
-**2x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
+**2x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
 <details>
 <summary>all...</summary>
 
@@ -5016,4 +5016,4 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-10 00:13:27
+Last updated: 2026-11-10 03:11:43
