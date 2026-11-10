@@ -10,6 +10,7 @@ import (
 	"os"
 	"reflect"
 	"runtime"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -36,6 +37,14 @@ type job struct {
 	artifactsURL string
 }
 
+// FailedJobDetail is one failed job on a PR, with the SIG it was attributed to.
+// SIG is "ci" when the job died before producing junit, otherwise the product SIG.
+type FailedJobDetail struct {
+	JobName string
+	URL     string
+	SIG     string
+}
+
 type SigRetests struct {
 	SigCIFailure         int
 	SigCIExternalFailure int
@@ -52,6 +61,7 @@ type SigRetests struct {
 	SigMonitoringSuccess int
 	FailedJobNames       []string
 	FailedJobURLs        []string
+	FailedJobDetails     []FailedJobDetail
 	SuccessJobNames      []string
 }
 
@@ -146,49 +156,63 @@ func getLatestCommit(node *html.Node) (latestCommit string) {
 }
 
 func filterForLastCommit(storageBaseURL string, org string, repo string, prNumber string, latestCommit string, jobList []job, notBefore time.Time) (filteredJobList []job, err error) {
-	for _, job := range jobList {
-		finishedJSON, err := HttpGetWithRetry(finishedJSONURL(storageBaseURL, org, repo, prNumber, job.jobName, job.buildNumber))
-		if err != nil {
-			return nil, fmt.Errorf("failed to get %s finished.json : %s", job.jobName, err)
+	annotated, err := annotateJobs(storageBaseURL, org, repo, prNumber, jobList, notBefore)
+	if err != nil {
+		return nil, err
+	}
+	for _, a := range annotated {
+		if a.revision == latestCommit {
+			filteredJobList = append(filteredJobList, a.job)
 		}
-		defer func() {
+	}
+	return filteredJobList, nil
+}
+
+type annotatedJob struct {
+	job
+	revision  string
+	timestamp time.Time
+}
+
+func annotateJobs(storageBaseURL string, org string, repo string, prNumber string, jobList []job, notBefore time.Time) ([]annotatedJob, error) {
+	var annotated []annotatedJob
+	for _, j := range jobList {
+		finishedJSON, err := HttpGetWithRetry(finishedJSONURL(storageBaseURL, org, repo, prNumber, j.jobName, j.buildNumber))
+		if err != nil {
+			return nil, fmt.Errorf("failed to get %s finished.json : %s", j.jobName, err)
+		}
+		if finishedJSON.StatusCode != http.StatusOK {
 			if err := finishedJSON.Body.Close(); err != nil {
 				log.WithError(err).Warn("failed closing response body")
 			}
-		}()
-		if finishedJSON.StatusCode != http.StatusOK {
 			continue
 		}
 
 		finishedJSONData, err := io.ReadAll(finishedJSON.Body)
+		if closeErr := finishedJSON.Body.Close(); closeErr != nil {
+			log.WithError(closeErr).Warn("failed closing response body")
+		}
 		if err != nil {
-			return nil, fmt.Errorf("failed to read finished JSON for %s -- %s", job.jobName, err)
+			return nil, fmt.Errorf("failed to read finished JSON for %s -- %s", j.jobName, err)
 		}
 		var data map[string]interface{}
-		err = json.Unmarshal(finishedJSONData, &data)
-		if err != nil {
-			return nil, fmt.Errorf("failed to unmarshall finished JSON for %s -- %s", job.jobName, err)
+		if err := json.Unmarshal(finishedJSONData, &data); err != nil {
+			return nil, fmt.Errorf("failed to unmarshall finished JSON for %s -- %s", j.jobName, err)
 		}
-		if latestCommit != data["revision"] {
+		revision, _ := data["revision"].(string)
+		if revision == "" {
 			continue
 		}
-		if !notBefore.IsZero() {
-			ts, ok := data["timestamp"].(float64)
-			if !ok {
-				log.Warnf("Job %s build %s has no valid timestamp field in finished.json", job.jobName, job.buildNumber)
-			} else {
-				jobTime := time.Unix(int64(ts), 0)
-				if jobTime.IsZero() {
-					log.Warnf("Job %s build %s has zero timestamp in finished.json", job.jobName, job.buildNumber)
-				} else if jobTime.Before(notBefore) {
-					log.Debugf("Skipping job %s build %s: finished at %s, before cutoff %s", job.jobName, job.buildNumber, jobTime, notBefore)
-					continue
-				}
+		a := annotatedJob{job: j, revision: revision}
+		if ts, ok := data["timestamp"].(float64); ok {
+			a.timestamp = time.Unix(int64(ts), 0)
+			if !notBefore.IsZero() && !a.timestamp.IsZero() && a.timestamp.Before(notBefore) {
+				continue
 			}
 		}
-		filteredJobList = append(filteredJobList, job)
+		annotated = append(annotated, a)
 	}
-	return filteredJobList, nil
+	return annotated, nil
 }
 
 const (
@@ -369,6 +393,68 @@ func GetJobsPerSIG(prNumber string, org string, repo string, supportedBranches [
 	return FilterJobsPerSigs(prowJobs, supportedBranches), nil
 }
 
+// ListRequiredE2EFailures returns required e2e jobs that failed at least once
+// in the window. Each job name appears once, linked to its latest failed run.
+// A later pass does not drop the job. SIG badge counters are not updated here.
+func ListRequiredE2EFailures(org, repo, prNumber string, supportedBranches []string, notBefore time.Time) ([]FailedJobDetail, error) {
+	prHistory := prHistoryURL(org, repo, prNumber)
+	resp, err := HttpGetWithRetry(prHistory)
+	if err != nil {
+		return nil, err
+	}
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			log.WithError(err).Warn("failed closing response body")
+		}
+	}()
+
+	prHistoryPage, err := html.Parse(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error parsing history page: %s", err)
+	}
+	jobsAllCommits := filterJobs(prHistoryPage)
+	prowjobs = nil
+
+	annotated, err := annotateJobs(defaultStorageBaseURL, org, repo, prNumber, jobsAllCommits, notBefore)
+	if err != nil {
+		return nil, err
+	}
+	required, err := filterOptionalJobs(org, repo, prNumber, latestFailurePerJob(annotated))
+	if err != nil {
+		return nil, err
+	}
+	return FilterJobsPerSigs(required, supportedBranches).FailedJobDetails, nil
+}
+
+func latestFailurePerJob(jobs []annotatedJob) []job {
+	type run struct {
+		job
+		num int
+	}
+	byName := map[string][]run{}
+	for _, j := range jobs {
+		n, _ := strconv.Atoi(j.buildNumber)
+		byName[j.jobName] = append(byName[j.jobName], run{job: j.job, num: n})
+	}
+	var failed []job
+	for _, runs := range byName {
+		sort.Slice(runs, func(i, j int) bool { return runs[i].num < runs[j].num })
+		var lastFail job
+		sawFail := false
+		for _, r := range runs {
+			if r.failure {
+				lastFail = r.job
+				sawFail = true
+			}
+		}
+		if sawFail {
+			failed = append(failed, lastFail)
+		}
+	}
+	sort.Slice(failed, func(i, j int) bool { return failed[i].jobName < failed[j].jobName })
+	return failed
+}
+
 func getJobTargetBranch(jobName string) string {
 	parts := strings.Split(jobName, "-")
 	lastPart := parts[len(parts)-1]
@@ -491,40 +577,61 @@ func FilterJobsPerSigs(jobs []job, supportedBranches []string) (prSigRetests Sig
 			continue
 		}
 
+		failureSIG := ""
 		switch {
 		case checkSIGCIFailure(job):
 			prSigRetests.SigCIFailure += 1
 			prSigRetests.SigCIFailureURLs = append(prSigRetests.SigCIFailureURLs, job.buildURL)
+			failureSIG = "ci"
 		case strings.Contains(job.jobName, "sig-compute") || strings.Contains(job.jobName, "vgpu"):
 			if job.failure {
 				prSigRetests.SigComputeFailure += 1
+				failureSIG = "compute"
 			} else {
 				prSigRetests.SigComputeSuccess += 1
 			}
 		case strings.Contains(job.jobName, "sig-network") || strings.Contains(job.jobName, "sriov"):
 			if job.failure {
 				prSigRetests.SigNetworkFailure += 1
+				failureSIG = "network"
 			} else {
 				prSigRetests.SigNetworkSuccess += 1
 			}
 		case strings.Contains(job.jobName, "sig-storage"):
 			if job.failure {
 				prSigRetests.SigStorageFailure += 1
+				failureSIG = "storage"
 			} else {
 				prSigRetests.SigStorageSuccess += 1
 			}
 		case strings.Contains(job.jobName, "sig-operator"):
 			if job.failure {
 				prSigRetests.SigOperatorFailure += 1
+				failureSIG = "operator"
 			} else {
 				prSigRetests.SigOperatorSuccess += 1
 			}
 		case strings.Contains(job.jobName, "sig-monitoring"):
 			if job.failure {
 				prSigRetests.SigMonitoringFailure += 1
+				failureSIG = "monitoring"
 			} else {
 				prSigRetests.SigMonitoringSuccess += 1
 			}
+		case strings.Contains(job.jobName, "sig-performance"):
+			if job.failure {
+				failureSIG = "performance"
+			}
+		}
+		if job.failure {
+			if failureSIG == "" {
+				failureSIG = "unknown"
+			}
+			prSigRetests.FailedJobDetails = append(prSigRetests.FailedJobDetails, FailedJobDetail{
+				JobName: job.jobName,
+				URL:     job.buildURL,
+				SIG:     failureSIG,
+			})
 		}
 		prSigRetests = sortJobNamesOnResult(job, prSigRetests)
 	}

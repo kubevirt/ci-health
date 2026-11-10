@@ -125,6 +125,26 @@ var _ = Describe("ci-health stats", func() {
 
 		checkResults(&jsonResults)
 
+		By("Checking PR retest report")
+		reportPath := filepath.Join(sourceArtifactsDir, constants.PRRetestReportFileName)
+		_, err = os.Stat(reportPath)
+		Expect(err).ToNot(HaveOccurred())
+		reportBody, err := os.ReadFile(reportPath)
+		Expect(err).ToNot(HaveOccurred())
+		Expect(string(reportBody)).To(ContainSubstring("PR retest report"))
+		Expect(string(reportBody)).To(ContainSubstring("Open PRs"))
+		Expect(string(reportBody)).To(ContainSubstring("Merged PRs"))
+		for _, summary := range append(append([]types.PRRetestSummary{}, jsonResults.PRRetestReport...), jsonResults.OpenPRRetestReport...) {
+			for _, failure := range summary.Failures {
+				Expect(failure.Cause).To(BeElementOf(
+					"",
+					types.FailureCauseFlake,
+					types.FailureCauseCI,
+					types.FailureCauseExternal,
+				))
+			}
+		}
+
 		By("Checking metrics file")
 		metricsFileName := filepath.Join(artifactsDir, constants.MetricsFileName)
 		metricsDataBytes, err := os.ReadFile(metricsFileName)
