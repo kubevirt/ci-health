@@ -19,7 +19,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-11-10 (1x / 9.09%)
+### 2026-11-10 (1x / 14.29%)
 
 
 #### external (1x / 100.00%)
@@ -62,7 +62,7 @@ make: *** [Makefile:179: cluster-up] Error 125
 <hr/>
 </details>
 
-### 2026-11-06 (1x / 9.09%)
+### 2026-11-06 (1x / 14.29%)
 
 
 #### internal (1x / 100.00%)
@@ -133,7 +133,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-05 (4x / 36.36%)
+### 2026-11-05 (4x / 57.14%)
 
 
 #### external (3x / 75.00%)
@@ -999,7 +999,7 @@ make: *** [Makefile:179: cluster-up] Error 1
 <hr/>
 </details>
 
-### 2026-11-04 (1x / 9.09%)
+### 2026-11-04 (1x / 14.29%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -1023,283 +1023,15 @@ make: *** [Makefile:179: cluster-up] Error 1
 <hr/>
 </details>
 
-### 2026-11-03 (4x / 36.36%)
-
-
-#### internal (4x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (3x / 75.00%) </summary>
-
-<hr/>
-
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4057)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:30:29: selecting podman as container runtime
-12:32:15: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-network-1.7 is being used by the following container(s): 437e990e2003afcfa461cefe139c5de3abcd06e6208ef33c9e77cb53b350a614, d7746eb1230afd44770adaf9ee2a421590a3d28144b9974b1f14b2ea60f6311e: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:59:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1217)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1223)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:36:37: selecting podman as container runtime
-12:36:52: Error response from daemon: cannot remove container 09207706028f593ad43cb2e4bf5ea652f5970c6efdf3a476d3f2ee015494902d as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
-
-<details><summary>context</summary>
-<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
-12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
-12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
-12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:27:34: selecting podman as container runtime
-12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1234)
-
-<details><summary>context</summary>
-<pre>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found
-12:24:20: &#43;&#43;&#43; grep -i worker
-12:24:20: &#43;&#43;&#43; _get_nodes
-12:24:20: &#43;&#43;&#43; awk &#39;{print $1}&#39;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1541)
-
-<details><summary>context</summary>
-<pre>12:29:21: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-12:29:21: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-12:29:49: &#43; rm -f /tmp/kubevirt.deploy.oDzW
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1550)
-
-<details><summary>context</summary>
-<pre>12:29:50: using podman due to KIND_EXPERIMENTAL_PROVIDER
-12:29:50: enabling experimental podman provider
-12:29:50: Deleting cluster &#34;vgpu&#34; ...
-12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1553)
-
-<details><summary>context</summary>
-<pre>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1555)
-
-<details><summary>context</summary>
-<pre>12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1556)
-
-<details><summary>context</summary>
-<pre>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1568)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1569)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1570)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1571)
-
-<details><summary>context</summary>
-<pre>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### external (4x / 36.36%)
+### external (4x / 57.14%)
 
 <details>
-<summary> download failure from external URL (2x / 18.18%) </summary>
+<summary> download failure from external URL (2x / 28.57%) </summary>
 
 <hr/>
 
@@ -1864,7 +1596,54 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel repository fetch failure (1x / 9.09%) </summary>
+<summary> container image pull failure (1x / 14.29%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+<details>
+<summary>all...</summary>
+
+* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+<details><summary>context</summary>
+<pre>07:19:21: Getting image source signatures
+07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
+
+<details><summary>context</summary>
+<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> bazel repository fetch failure (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -2106,24 +1885,27 @@ make: *** [Makefile:182: cluster-down] Error 1
 
 <hr/>
 </details>
+
+### internal (2x / 28.57%)
+
 <details>
-<summary> container image pull failure (1x / 9.09%) </summary>
+<summary> configured node not found during provisioning (1x / 14.29%) </summary>
 
 <hr/>
 
-**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
 <details>
 <summary>all...</summary>
 
-* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
 <details><summary>context</summary>
-<pre>07:19:21: Getting image source signatures
-07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
+<pre>12:18:05: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
+12:18:05: daemonset.apps/kube-flannel-ds created
+12:18:05: time=&#34;2026-11-06T12:18:05Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
+12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found
+12:18:06:
+12:18:06: ===== ab78c164736eed2ff9ecce5b6ad7cabf7c1d40a64b98015a3518bbac94e4b1d7 ====
+12:18:06: &#43; NUM_NODES=2</pre>
 </details>
 
 
@@ -2132,145 +1914,41 @@ make: *** [Makefile:179: cluster-up] Error 125
 <summary>secondary evidence</summary>
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
 
 <details><summary>context</summary>
-<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
-</details>
 
-
-
-</details>
-
-<hr/>
-</details>
-
-### internal (6x / 54.55%)
-
-<details>
-<summary> make cluster lifecycle target failure (3x / 27.27%) </summary>
-
-<hr/>
-
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-<details><summary>context</summary>
-<pre>12:30:01: 2026/11/03 12:30:01 existing blob: sha256:05daf2a1d5cd22bf20bf774e8599d99ee37f8edccf2588aaa86f21aaec88c88d
-12:30:02: 2026/11/03 12:30:02 localhost:36275/kubevirt/kv-network-passt-binding-cni:devel: digest: sha256:0d6e045da432423816b2bc90af03985fc7c0432ef9ca321aa853181e18ba8a66 size: 701
-12:30:17: &#43; rm -f /tmp/kubevirt.deploy.jwbQ
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4057)
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
 
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
-12:30:29: selecting podman as container runtime
-12:32:15: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-network-1.7 is being used by the following container(s): 437e990e2003afcfa461cefe139c5de3abcd06e6208ef33c9e77cb53b350a614, d7746eb1230afd44770adaf9ee2a421590a3d28144b9974b1f14b2ea60f6311e: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:59:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1217)
-<details><summary>context</summary>
-<pre>12:35:36: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-12:35:36: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-12:36:36: &#43; rm -f /tmp/kubevirt.deploy.1MC8
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1223)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:36:37: selecting podman as container runtime
-12:36:52: Error response from daemon: cannot remove container 09207706028f593ad43cb2e4bf5ea652f5970c6efdf3a476d3f2ee015494902d as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-<details><summary>context</summary>
-<pre>12:27:25: 2026/11/03 12:27:25 existing blob: sha256:cc7f351ef2b73318cc7d1d133ee9c9dc6913543797cd8f8b294edade3700892e
-12:27:25: 2026/11/03 12:27:25 localhost:46415/kubevirt/kv-network-passt-binding-cni:devel: digest: sha256:0d6e045da432423816b2bc90af03985fc7c0432ef9ca321aa853181e18ba8a66 size: 701
-12:27:34: &#43; rm -f /tmp/kubevirt.deploy.hT3Q
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
-
-<details><summary>context</summary>
-<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
-12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
-12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
-12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:27:34: selecting podman as container runtime
-12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
 &#43; true
 &#43; exit 2
 &#43; EXIT_VALUE=2</pre>
@@ -2286,11 +1964,11 @@ make: *** [Makefile:162: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> taint not found during cluster setup (2x / 18.18%) </summary>
+<summary> taint not found during cluster setup (1x / 14.29%) </summary>
 
 <hr/>
 
-**2x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
+**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
 <details>
 <summary>all...</summary>
 
@@ -2370,250 +2048,15 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 
 
-* _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-<details><summary>context</summary>
-<pre>12:24:20: &#43;&#43; for node in ${master_nodes[@]}
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/master:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/master:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1234)
-
-<details><summary>context</summary>
-<pre>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found
-12:24:20: &#43;&#43;&#43; grep -i worker
-12:24:20: &#43;&#43;&#43; _get_nodes
-12:24:20: &#43;&#43;&#43; awk &#39;{print $1}&#39;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1541)
-
-<details><summary>context</summary>
-<pre>12:29:21: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-12:29:21: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-12:29:49: &#43; rm -f /tmp/kubevirt.deploy.oDzW
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1550)
-
-<details><summary>context</summary>
-<pre>12:29:50: using podman due to KIND_EXPERIMENTAL_PROVIDER
-12:29:50: enabling experimental podman provider
-12:29:50: Deleting cluster &#34;vgpu&#34; ...
-12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1553)
-
-<details><summary>context</summary>
-<pre>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1555)
-
-<details><summary>context</summary>
-<pre>12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1556)
-
-<details><summary>context</summary>
-<pre>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1568)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1569)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1570)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1571)
-
-<details><summary>context</summary>
-<pre>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> configured node not found during provisioning (1x / 9.09%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details><summary>context</summary>
-<pre>12:18:05: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
-12:18:05: daemonset.apps/kube-flannel-ds created
-12:18:05: time=&#34;2026-11-06T12:18:05Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
-12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found
-12:18:06:
-12:18:06: ===== ab78c164736eed2ff9ecce5b6ad7cabf7c1d40a64b98015a3518bbac94e4b1d7 ====
-12:18:06: &#43; NUM_NODES=2</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
 </details>
 
 <hr/>
 </details>
 
-### needs-investigation (1x / 9.09%)
+### needs-investigation (1x / 14.29%)
 
 <details>
-<summary> no error snippets (1x / 9.09%) </summary>
+<summary> no error snippets (1x / 14.29%) </summary>
 
 <hr/>
 
@@ -2636,7 +2079,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
-### main (6x / 54.55%)
+### main (6x / 85.71%)
 
 
 #### external (4x / 66.67%)
@@ -3460,6 +2903,71 @@ make: *** [Makefile:179: cluster-up] Error 125
 #### internal (2x / 33.33%)
 
 <details>
+<summary> configured node not found during provisioning (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+<details>
+<summary>all...</summary>
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
 <summary> taint not found during cluster setup (1x / 16.67%) </summary>
 
 <hr/>
@@ -3538,73 +3046,8 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 <hr/>
 </details>
-<details>
-<summary> configured node not found during provisioning (1x / 16.67%) </summary>
 
-<hr/>
-
-**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.8 (1x / 9.09%)
+### release-1.8 (1x / 14.29%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -3628,286 +3071,18 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### release-1.7 (4x / 36.36%)
-
-
-#### internal (4x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (3x / 75.00%) </summary>
-
-<hr/>
-
-**3x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4057)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:30:29: selecting podman as container runtime
-12:32:15: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-network-1.7 is being used by the following container(s): 437e990e2003afcfa461cefe139c5de3abcd06e6208ef33c9e77cb53b350a614, d7746eb1230afd44770adaf9ee2a421590a3d28144b9974b1f14b2ea60f6311e: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:59:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1217)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1223)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:36:37: selecting podman as container runtime
-12:36:52: Error response from daemon: cannot remove container 09207706028f593ad43cb2e4bf5ea652f5970c6efdf3a476d3f2ee015494902d as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
-
-<details><summary>context</summary>
-<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
-12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
-12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
-12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:27:34: selecting podman as container runtime
-12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1234)
-
-<details><summary>context</summary>
-<pre>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found
-12:24:20: &#43;&#43;&#43; grep -i worker
-12:24:20: &#43;&#43;&#43; _get_nodes
-12:24:20: &#43;&#43;&#43; awk &#39;{print $1}&#39;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1541)
-
-<details><summary>context</summary>
-<pre>12:29:21: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-12:29:21: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-12:29:49: &#43; rm -f /tmp/kubevirt.deploy.oDzW
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1550)
-
-<details><summary>context</summary>
-<pre>12:29:50: using podman due to KIND_EXPERIMENTAL_PROVIDER
-12:29:50: enabling experimental podman provider
-12:29:50: Deleting cluster &#34;vgpu&#34; ...
-12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1553)
-
-<details><summary>context</summary>
-<pre>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1555)
-
-<details><summary>context</summary>
-<pre>12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1556)
-
-<details><summary>context</summary>
-<pre>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1568)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1569)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1570)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1571)
-
-<details><summary>context</summary>
-<pre>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-sig"></a>
 
 ## per SIG [⬆](#top)
 
 
-### sig-compute (8x / 72.73%)
+### sig-compute (6x / 85.71%)
 
 
-#### external (4x / 50.00%)
+#### external (4x / 66.67%)
 
 <details>
-<summary> download failure from external URL (2x / 25.00%) </summary>
+<summary> download failure from external URL (2x / 33.33%) </summary>
 
 <hr/>
 
@@ -4452,7 +3627,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> bazel repository fetch failure (1x / 12.50%) </summary>
+<summary> bazel repository fetch failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -4685,7 +3860,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure (1x / 12.50%) </summary>
+<summary> container image pull failure (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -4722,14 +3897,79 @@ make: *** [Makefile:179: cluster-up] Error 125
 <hr/>
 </details>
 
-#### internal (4x / 50.00%)
+#### internal (2x / 33.33%)
 
 <details>
-<summary> taint not found during cluster setup (2x / 25.00%) </summary>
+<summary> configured node not found during provisioning (1x / 16.67%) </summary>
 
 <hr/>
 
-**2x**: _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
+**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+<details>
+<summary>all...</summary>
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> taint not found during cluster setup (1x / 16.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
 <details>
 <summary>all...</summary>
 
@@ -4799,278 +4039,12 @@ make: *** [Makefile:179: cluster-up] Error 1
 
 
 
-* _2026-11-03 11:58:13 &#43;0000 UTC_: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1231)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1234)
-
-<details><summary>context</summary>
-<pre>12:24:20: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-12:24:20: &#43;&#43; _kubectl taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.33-vgpu/.kubeconfig taint nodes vgpu-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-12:24:20: error: taint &#34;node-role.kubernetes.io/control-plane:NoSchedule&#34; not found
-12:24:20: &#43;&#43;&#43; grep -i worker
-12:24:20: &#43;&#43;&#43; _get_nodes
-12:24:20: &#43;&#43;&#43; awk &#39;{print $1}&#39;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1541)
-
-<details><summary>context</summary>
-<pre>12:29:21: INFO: 2 processes: 1 internal, 1 processwrapper-sandbox.
-12:29:21: INFO: Running command line: bazel-bin/example-guest-agent-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/example-guest-agent/example-guest-agent
-12:29:49: &#43; rm -f /tmp/kubevirt.deploy.oDzW
-make: *** [Makefile:174: cluster-sync] Error 125
-&#43; ret=2
-&#43; make cluster-down
-./kubevirtci/cluster-up/down.sh</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1550)
-
-<details><summary>context</summary>
-<pre>12:29:50: using podman due to KIND_EXPERIMENTAL_PROVIDER
-12:29:50: enabling experimental podman provider
-12:29:50: Deleting cluster &#34;vgpu&#34; ...
-12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1553)
-
-<details><summary>context</summary>
-<pre>12:30:05: ERROR: failed to delete cluster &#34;vgpu&#34;: failed to delete nodes: command &#34;podman rm -f -v vgpu-control-plane&#34; failed with error: exit status 125
-12:30:05:
-12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1555)
-
-<details><summary>context</summary>
-<pre>12:30:05: Command Output: time=&#34;2026-11-03T12:30:00Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1556)
-
-<details><summary>context</summary>
-<pre>12:30:05: Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-12:30:16: time=&#34;2026-11-03T12:30:16Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-12:30:21: Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 125
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1568)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container vgpu-registry in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1569)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal SIGTERM failed to stop container kind_ardinghelli in 10 seconds, resorting to SIGKILL&#34;
-time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1570)
-
-<details><summary>context</summary>
-<pre>time=&#34;2026-11-03T12:30:37Z&#34; level=warning msg=&#34;StopSignal (37) failed to stop container vgpu-control-plane in 10 seconds, resorting to SIGKILL&#34;
-Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-kind-1.33-vgpu-1.7/2117586987538976768#1:build-log.txt%3A1571)
-
-<details><summary>context</summary>
-<pre>Error: cannot remove container 4f7211fdcc8ed1b910923a3924940fcc458d25a6fed2b02e52d1e2cbd23ee13a as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container a36ad1c88a4eea2b70150f21f545f73a12677acfe04c73d9438c57cd48a9187e as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 93db881196418c335d7dddf3e68a49081e5edabb7e2fbb1b5951a47e2bb44d32 as it could not be stopped: given PID did not die within timeout
-Error: cannot remove container 72eafda1844867523f5b03b3475882bf0503b5e2a40a687ee167e0079b746163 as it could not be stopped: given PID did not die within timeout
-/usr/local/bin/runner.sh: line 50: wait: pid 1201 is not a child of this shell
-================================================================================
-Done cleaning up after podman in container.</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> make cluster lifecycle target failure (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 11:58:41 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3943)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A798)
-
-<details><summary>context</summary>
-<pre>12:15:21: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-12:15:25: [control-plane-check] kube-scheduler is healthy after 3.842462827s
-12:15:26: [control-plane-check] kube-controller-manager is healthy after 5.068241346s
-12:15:30: I1103 07:15:30.373979    1605 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:15:30: [control-plane-check] kube-apiserver is healthy after 9.002895106s
-12:15:30: I1103 07:15:30.875756    1605 kubeconfig.go:657] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-12:15:30: I1103 07:15:30.878733    1605 kubeconfig.go:730] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.34-windows2016-1.7/2117586987438313472#1:build-log.txt%3A3949)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:27:34: selecting podman as container runtime
-12:27:49: Error response from daemon: cannot remove container 4d2bdd9539b64bcf49fcea3d1d98ac72c4d24a6d0e4c0180ba3525a5a560ec7c as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> configured node not found during provisioning (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
 </details>
 
 <hr/>
 </details>
 
-### sig-monitoring (1x / 9.09%)
+### sig-monitoring (1x / 14.29%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -5094,90 +4068,4 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-network (1x / 9.09%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 12:09:09 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4051)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.33-sig-network-1.7/2117587001577312256#1:build-log.txt%3A4057)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:30:29: selecting podman as container runtime
-12:32:15: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-network-1.7 is being used by the following container(s): 437e990e2003afcfa461cefe139c5de3abcd06e6208ef33c9e77cb53b350a614, d7746eb1230afd44770adaf9ee2a421590a3d28144b9974b1f14b2ea60f6311e: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-### sig-storage (1x / 9.09%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-03 11:59:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1217)
-<details>
-<summary>all...</summary>
-
-* _2026-11-03 11:59:44 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1217)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19679/pull-kubevirt-e2e-k8s-1.32-sig-storage-1.7/2117586999056535552#1:build-log.txt%3A1223)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:36:37: selecting podman as container runtime
-12:36:52: Error response from daemon: cannot remove container 09207706028f593ad43cb2e4bf5ea652f5970c6efdf3a476d3f2ee015494902d as it could not be stopped: given PID did not die within timeout
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-11-10 12:14:53
+Last updated: 2026-11-10 15:11:24
