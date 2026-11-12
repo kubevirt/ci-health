@@ -1,0 +1,111 @@
+# Rendered by TestCostPromQL with expressions captured from the production client.
+# Samples are one minute apart; evaluate at 10m with either a 5m or 10m window.
+evaluation_interval: 1m
+tests:
+  - name: cost selectors, aggregations and labels
+    interval: 1m
+    input_series:
+      - series: 'kube_node_status_allocatable{node="worker-a",resource="cpu",unit="core"}'
+        values: '4x10'
+      - series: 'kube_node_status_allocatable{node="worker-b",resource="cpu",unit="core"}'
+        values: '8x10'
+      - series: 'kube_node_status_allocatable{node="worker-a",resource="memory",unit="byte"}'
+        values: '1000x10'
+      - series: 'kube_node_status_allocatable{node="worker-b",resource="memory",unit="byte"}'
+        values: '2000x10'
+      # Resource and anchored node-regex decoys must not contribute.
+      - series: 'kube_node_status_allocatable{node="worker-a",resource="pods"}'
+        values: '9999x10'
+      - series: 'kube_node_status_allocatable{node="not-worker-a",resource="cpu"}'
+        values: '9999x10'
+      - series: 'kube_node_status_allocatable{node="not-worker-a",resource="memory"}'
+        values: '9999x10'
+
+      # Two containers in pod-a must be summed for CPU, but maximized for memory.
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-a",container="test",instance="node-1"}'
+        values: '100+60x10'
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-a",container="sidecar",instance="node-1"}'
+        values: '100+30x10'
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-b",container="test",instance="node-2"}'
+        values: '100+15x10'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-a",container="test",instance="node-1"}'
+        values: '1000 1000 200 200 200 200 200 200 200 200 200'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-a",container="sidecar",instance="node-1"}'
+        values: '300x10'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-b",container="test",instance="node-2"}'
+        values: '500x10'
+
+      # All container exclusions and the namespace selector affect both queries.
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-a",container="POD"}'
+        values: '0+9999x10'
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-a",container=""}'
+        values: '0+9999x10'
+      - series: 'container_cpu_usage_seconds_total{namespace="{{.Namespace}}",pod="pod-a"}'
+        values: '0+9999x10'
+      - series: 'container_cpu_usage_seconds_total{namespace="other-jobs",pod="pod-a",container="test"}'
+        values: '0+9999x10'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-a",container="POD"}'
+        values: '9999x10'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-a",container=""}'
+        values: '9999x10'
+      - series: 'container_memory_working_set_bytes{namespace="{{.Namespace}}",pod="pod-a"}'
+        values: '9999x10'
+      - series: 'container_memory_working_set_bytes{namespace="other-jobs",pod="pod-a",container="test"}'
+        values: '9999x10'
+
+      # A varying value distinguishes last_over_time from max_over_time.
+      - series: 'kube_pod_labels{namespace="{{.Namespace}}",pod="pod-a",label_prow_k8s_io_refs_pull="184",label_prow_k8s_io_job="pull-test",label_prow_k8s_io_refs_repo="kubevirt",label_prow_k8s_io_refs_org="kubevirt",label_prow_k8s_io_build_id="123"}'
+        values: '9 8 7 6 5 4 3 2 1 0 1'
+      - series: 'kube_pod_labels{namespace="{{.Namespace}}",pod="pod-b",label_prow_k8s_io_refs_pull="185",label_prow_k8s_io_job="pull-unit",label_prow_k8s_io_refs_repo="ci-health",label_prow_k8s_io_refs_org="kubevirt",label_prow_k8s_io_build_id="456"}'
+        values: '1x10'
+      # Completed pods can disappear from scrapes but remain inside the window.
+      - series: 'kube_pod_labels{namespace="{{.Namespace}}",pod="finished",label_prow_k8s_io_refs_pull="183"}'
+        values: '1 1 1 _ _ _ _ _ _ _ _'
+      - series: 'kube_pod_labels{namespace="other-jobs",pod="pod-a",label_prow_k8s_io_refs_pull="184"}'
+        values: '1x10'
+      - series: 'kube_pod_labels{namespace="{{.Namespace}}",pod="periodic",label_prow_k8s_io_refs_pull=""}'
+        values: '1x10'
+      - series: 'kube_pod_labels{namespace="{{.Namespace}}",pod="unlabelled"}'
+        values: '1x10'
+
+    promql_expr_test:
+      - expr: {{printf "%q" (index .Queries 0)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: '{}'
+            value: {{.CPUCapacity}}
+      - expr: {{printf "%q" (index .Queries 1)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: '{}'
+            value: {{.MemoryCapacity}}
+      - expr: {{printf "%q" (index .Queries 2)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: '{}'
+            value: {{.NodeCount}}
+      - expr: {{printf "%q" (index .Queries 3)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: '{pod="pod-a"}'
+            value: {{.CPUA}}
+          - labels: '{pod="pod-b"}'
+            value: {{.CPUB}}
+      - expr: {{printf "%q" (index .Queries 4)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: '{pod="pod-a"}'
+            value: {{.MemoryA}}
+          - labels: '{pod="pod-b"}'
+            value: 500
+      - expr: {{printf "%q" (index .Queries 5)}}
+        eval_time: 10m
+        exp_samples:
+          - labels: 'kube_pod_labels{namespace="{{.Namespace}}",pod="pod-a",label_prow_k8s_io_refs_pull="184",label_prow_k8s_io_job="pull-test",label_prow_k8s_io_refs_repo="kubevirt",label_prow_k8s_io_refs_org="kubevirt",label_prow_k8s_io_build_id="123"}'
+            value: 1
+          - labels: 'kube_pod_labels{namespace="{{.Namespace}}",pod="pod-b",label_prow_k8s_io_refs_pull="185",label_prow_k8s_io_job="pull-unit",label_prow_k8s_io_refs_repo="ci-health",label_prow_k8s_io_refs_org="kubevirt",label_prow_k8s_io_build_id="456"}'
+            value: 1
+{{if .HistoricalLabels}}
+          - labels: 'kube_pod_labels{namespace="{{.Namespace}}",pod="finished",label_prow_k8s_io_refs_pull="183"}'
+            value: 1
+{{end}}
