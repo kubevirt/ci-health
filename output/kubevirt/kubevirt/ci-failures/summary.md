@@ -19,7 +19,7 @@
 ## per day [⬆](#top)
 
 
-### 2026-11-11 (1x / 12.50%)
+### 2026-11-11 (1x / 16.67%)
 
 
 #### internal (1x / 100.00%)
@@ -90,7 +90,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-10 (3x / 37.50%)
+### 2026-11-10 (3x / 50.00%)
 
 
 #### needs-investigation (1x / 33.33%)
@@ -661,7 +661,7 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-06 (1x / 12.50%)
+### 2026-11-06 (1x / 16.67%)
 
 
 #### internal (1x / 100.00%)
@@ -732,13 +732,13 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-05 (3x / 37.50%)
+### 2026-11-05 (1x / 16.67%)
 
 
-#### external (2x / 66.67%)
+#### external (1x / 100.00%)
 
 <details>
-<summary> download failure from external URL (2x / 66.67%) </summary>
+<summary> download failure from external URL (1x / 100.00%) </summary>
 
 <hr/>
 
@@ -1011,358 +1011,6 @@ make: *** [Makefile:182: cluster-down] Error 1
 </details>
 
 <hr/>
-
-**1x**: _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A221)
-
-<details><summary>context</summary>
-<pre>08:59:46:   &lt;builtin&gt;: in &lt;toplevel&gt;
-08:59:46: Repository rule http_archive defined at:
-08:59:46:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-08:59:46:    Traceback (most recent call last):
-08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A226)
-
-<details><summary>context</summary>
-<pre>08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(
-08:59:46: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A229)
-
-<details><summary>context</summary>
-<pre>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A230)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A231)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A246)
-
-<details><summary>context</summary>
-<pre>09:00:04:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:00:04: Repository rule http_archive defined at:
-09:00:04:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-09:00:04:    Traceback (most recent call last):
-09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A251)
-
-<details><summary>context</summary>
-<pre>09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(
-09:00:04: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A254)
-
-<details><summary>context</summary>
-<pre>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A255)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A256)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A271)
-
-<details><summary>context</summary>
-<pre>09:01:23:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:01:23: Repository rule http_archive defined at:
-09:01:23:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:
-09:01:23:    Traceback (most recent call last):
-09:01:23: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:01:23: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A277)
-
-<details><summary>context</summary>
-<pre>09:01:23: 		download_info = ctx.download_and_extract(
-09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A278)
-
-<details><summary>context</summary>
-<pre>09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A279)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A282)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A283)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A284)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A295)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-09:02:10: selecting podman as container runtime
-09:02:11: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 8461bb1b9368374a39c102452c3ac4240460428f7aab3a0411def0f08de4de90: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
-
-<details>
-<summary> taint not found during cluster setup (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
-
-<details><summary>context</summary>
-<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
-09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
-09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
-09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
-
-<details><summary>context</summary>
-<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
-09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
-09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
-09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
-
-<details><summary>context</summary>
-<pre>09:06:56: deployment.apps/cdi-operator created
-09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
-
-<details><summary>context</summary>
-<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
 </details>
 
 <a id="per-error-category"></a>
@@ -1370,284 +1018,44 @@ make: *** [Makefile:179: cluster-up] Error 1
 ## per error category [⬆](#top)
 
 
-### internal (4x / 50.00%)
+### external (2x / 33.33%)
 
 <details>
-<summary> configured node not found during provisioning (2x / 25.00%) </summary>
+<summary> container image pull failure (1x / 16.67%) </summary>
 
 <hr/>
 
-**2x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 <details>
 <summary>all...</summary>
 
-* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
+* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 <details><summary>context</summary>
-<pre>18:39:11: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
-18:39:11: daemonset.apps/kube-flannel-ds created
-18:39:11: time=&#34;2026-11-11T18:39:11Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
-18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found
-18:39:11:
-18:39:11: ===== d8f5f171b7b397292aded2e19587182f749f342550350e9f2a379b56657fde64 ====
-18:39:11: &#43; NUM_NODES=2</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
-
-<details><summary>context</summary>
-<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
-18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
-18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
-18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
-
-<details><summary>context</summary>
-<pre>18:39:12: 
-18:39:12: &#43; wait 75
-18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-18:39:23: selecting podman as container runtime
-18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details><summary>context</summary>
-<pre>12:18:05: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
-12:18:05: daemonset.apps/kube-flannel-ds created
-12:18:05: time=&#34;2026-11-06T12:18:05Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
-12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found
-12:18:06:
-12:18:06: ===== ab78c164736eed2ff9ecce5b6ad7cabf7c1d40a64b98015a3518bbac94e4b1d7 ====
-12:18:06: &#43; NUM_NODES=2</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details><summary>context</summary>
-<pre>09:06:39: &#43;&#43; for node in ${master_nodes[@]}
-09:06:39: &#43;&#43; _kubectl taint nodes kind-1.37-control-plane node-role.kubernetes.io/master:NoSchedule-
-09:06:39: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig taint nodes kind-1.37-control-plane node-role.kubernetes.io/master:NoSchedule-
-09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found
-09:06:39: &#43;&#43; _kubectl taint nodes kind-1.37-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-09:06:39: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig taint nodes kind-1.37-control-plane node-role.kubernetes.io/control-plane:NoSchedule-
-09:06:39: node/kind-1.37-control-plane untainted</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
-
-<details><summary>context</summary>
-<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
-09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
-09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
-09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
-
-<details><summary>context</summary>
-<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
-09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
-09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
-09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
-
-<details><summary>context</summary>
-<pre>09:06:56: deployment.apps/cdi-operator created
-09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
+<pre>07:19:21: Getting image source signatures
+07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers</pre>
 </details>
 
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
-
-<details><summary>context</summary>
-<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 12.50%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details><summary>context</summary>
-<pre>11:06:19: .sdl: SDL_OpenAudioDevice for recording failed
-11:06:19: &lt;sdl: Reason: ALSA: Couldn&#39;t open audio device: Host is down
-11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs</pre>
-</details>
-
-
-
 <details>
 <summary>secondary evidence</summary>
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
 
 <details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
+<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -1659,11 +1067,8 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 </details>
-
-### external (3x / 37.50%)
-
 <details>
-<summary> download failure from external URL (2x / 25.00%) </summary>
+<summary> download failure from external URL (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -1946,20 +1351,28 @@ make: *** [Makefile:182: cluster-down] Error 1
 </details>
 
 <hr/>
+</details>
 
-**1x**: _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
+### internal (3x / 50.00%)
+
+<details>
+<summary> configured node not found during provisioning (2x / 33.33%) </summary>
+
+<hr/>
+
+**2x**: _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
 <details>
 <summary>all...</summary>
 
-* _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
+* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
 <details><summary>context</summary>
-<pre>09:01:23: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:01:23: 		download_info = ctx.download_and_extract(
-09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</pre>
+<pre>18:39:11: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
+18:39:11: daemonset.apps/kube-flannel-ds created
+18:39:11: time=&#34;2026-11-11T18:39:11Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
+18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found
+18:39:11:
+18:39:11: ===== d8f5f171b7b397292aded2e19587182f749f342550350e9f2a379b56657fde64 ====
+18:39:11: &#43; NUM_NODES=2</pre>
 </details>
 
 
@@ -1968,250 +1381,102 @@ make: *** [Makefile:182: cluster-down] Error 1
 <summary>secondary evidence</summary>
 
 
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A221)
+* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
 
 <details><summary>context</summary>
-<pre>08:59:46:   &lt;builtin&gt;: in &lt;toplevel&gt;
-08:59:46: Repository rule http_archive defined at:
-08:59:46:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-08:59:46:    Traceback (most recent call last):
-08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(</pre>
+<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
+18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
+18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
+18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
 </details>
 
 
 
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A226)
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
 
 <details><summary>context</summary>
-<pre>08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(
-08:59:46: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully</pre>
+<pre>18:39:12: 
+18:39:12: &#43; wait 75
+18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
 
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A229)
-
-<details><summary>context</summary>
-<pre>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A230)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A231)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A246)
-
-<details><summary>context</summary>
-<pre>09:00:04:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:00:04: Repository rule http_archive defined at:
-09:00:04:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-09:00:04:    Traceback (most recent call last):
-09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A251)
-
-<details><summary>context</summary>
-<pre>09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(
-09:00:04: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A254)
-
-<details><summary>context</summary>
-<pre>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A255)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A256)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A271)
-
-<details><summary>context</summary>
-<pre>09:01:23:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:01:23: Repository rule http_archive defined at:
-09:01:23:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:
-09:01:23:    Traceback (most recent call last):
-09:01:23: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:01:23: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A277)
-
-<details><summary>context</summary>
-<pre>09:01:23: 		download_info = ctx.download_and_extract(
-09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A278)
-
-<details><summary>context</summary>
-<pre>09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A279)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A282)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A283)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A284)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A295)
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
 
 <details><summary>context</summary>
 <pre>./kubevirtci/cluster-up/down.sh
-09:02:10: selecting podman as container runtime
-09:02:11: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 8461bb1b9368374a39c102452c3ac4240460428f7aab3a0411def0f08de4de90: volume is being used
+18:39:23: selecting podman as container runtime
+18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+<details><summary>context</summary>
+<pre>12:18:05: Warning: would violate PodSecurity &#34;restricted:latest&#34;: host namespaces (hostNetwork=true), allowPrivilegeEscalation != false (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.capabilities.drop=[&#34;ALL&#34;]; container &#34;kube-flannel&#34; must not include &#34;NET_ADMIN&#34;, &#34;NET_RAW&#34; in securityContext.capabilities.add), restricted volume types (volumes &#34;run&#34;, &#34;cni-plugin&#34;, &#34;cni&#34;, &#34;xtables-lock&#34; use restricted volume type &#34;hostPath&#34;), runAsNonRoot != true (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.runAsNonRoot=true), seccompProfile (pod or containers &#34;install-cni-plugin&#34;, &#34;install-cni&#34;, &#34;kube-flannel&#34; must set securityContext.seccompProfile.type to &#34;RuntimeDefault&#34; or &#34;Localhost&#34;)
+12:18:05: daemonset.apps/kube-flannel-ds created
+12:18:05: time=&#34;2026-11-06T12:18:05Z&#34; level=info msg=&#34;[node 1]: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-&#34;
+12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found
+12:18:06:
+12:18:06: ===== ab78c164736eed2ff9ecce5b6ad7cabf7c1d40a64b98015a3518bbac94e4b1d7 ====
+12:18:06: &#43; NUM_NODES=2</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
 make: *** [Makefile:182: cluster-down] Error 1
 &#43; true
 &#43; exit 2
@@ -2228,23 +1493,23 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 <details>
-<summary> container image pull failure (1x / 12.50%) </summary>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 16.67%) </summary>
 
 <hr/>
 
-**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
 <details>
 <summary>all...</summary>
 
-* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
+* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
 <details><summary>context</summary>
-<pre>07:19:21: Getting image source signatures
-07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
+<pre>11:06:19: .sdl: SDL_OpenAudioDevice for recording failed
+11:06:19: &lt;sdl: Reason: ALSA: Couldn&#39;t open audio device: Host is down
+11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs</pre>
 </details>
 
 
@@ -2253,16 +1518,30 @@ make: *** [Makefile:179: cluster-up] Error 125
 <summary>secondary evidence</summary>
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
+* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
 
 <details><summary>context</summary>
-<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
+<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+11:06:31: selecting podman as container runtime
+11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -2275,10 +1554,10 @@ make: *** [Makefile:179: cluster-up] Error 125
 <hr/>
 </details>
 
-### needs-investigation (1x / 12.50%)
+### needs-investigation (1x / 16.67%)
 
 <details>
-<summary> no matching pattern (1x / 12.50%) </summary>
+<summary> no matching pattern (1x / 16.67%) </summary>
 
 <hr/>
 
@@ -2764,51 +2043,37 @@ make: *** [Makefile:182: cluster-down] Error 1
 ## per branch [⬆](#top)
 
 
-### release-1.9 (1x / 12.50%)
+### main (5x / 83.33%)
 
 
-#### internal (1x / 100.00%)
+#### external (2x / 40.00%)
 
 <details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
+<summary> container image pull failure (1x / 20.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 <details>
 <summary>all...</summary>
 
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 
 
 <details>
 <summary>secondary evidence</summary>
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
 
 <details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
+<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -2820,14 +2085,8 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 </details>
-
-### main (7x / 87.50%)
-
-
-#### external (3x / 42.86%)
-
 <details>
-<summary> download failure from external URL (2x / 28.57%) </summary>
+<summary> download failure from external URL (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -3100,518 +2359,12 @@ make: *** [Makefile:182: cluster-down] Error 1
 </details>
 
 <hr/>
+</details>
 
-**1x**: _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-
+#### needs-investigation (1x / 20.00%)
 
 <details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A221)
-
-<details><summary>context</summary>
-<pre>08:59:46:   &lt;builtin&gt;: in &lt;toplevel&gt;
-08:59:46: Repository rule http_archive defined at:
-08:59:46:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-08:59:46:    Traceback (most recent call last):
-08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A226)
-
-<details><summary>context</summary>
-<pre>08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(
-08:59:46: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A229)
-
-<details><summary>context</summary>
-<pre>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A230)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A231)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A246)
-
-<details><summary>context</summary>
-<pre>09:00:04:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:00:04: Repository rule http_archive defined at:
-09:00:04:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-09:00:04:    Traceback (most recent call last):
-09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A251)
-
-<details><summary>context</summary>
-<pre>09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(
-09:00:04: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A254)
-
-<details><summary>context</summary>
-<pre>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A255)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A256)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A271)
-
-<details><summary>context</summary>
-<pre>09:01:23:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:01:23: Repository rule http_archive defined at:
-09:01:23:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:
-09:01:23:    Traceback (most recent call last):
-09:01:23: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:01:23: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A277)
-
-<details><summary>context</summary>
-<pre>09:01:23: 		download_info = ctx.download_and_extract(
-09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A278)
-
-<details><summary>context</summary>
-<pre>09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A279)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A282)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A283)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A284)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A295)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-09:02:10: selecting podman as container runtime
-09:02:11: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 8461bb1b9368374a39c102452c3ac4240460428f7aab3a0411def0f08de4de90: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
-
-<details><summary>context</summary>
-<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (3x / 42.86%)
-
-<details>
-<summary> configured node not found during provisioning (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
-
-<details><summary>context</summary>
-<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
-18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
-18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
-18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
-
-<details><summary>context</summary>
-<pre>18:39:12: 
-18:39:12: &#43; wait 75
-18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-18:39:23: selecting podman as container runtime
-18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
-
-<details><summary>context</summary>
-<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
-09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
-09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
-09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
-
-<details><summary>context</summary>
-<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
-09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
-09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
-09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
-
-<details><summary>context</summary>
-<pre>09:06:56: deployment.apps/cdi-operator created
-09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
-
-<details><summary>context</summary>
-<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 14.29%)
-
-<details>
-<summary> no matching pattern (1x / 14.29%) </summary>
+<summary> no matching pattern (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -4067,6 +2820,183 @@ make: *** [Makefile:39: bazel-build-images] Error 1
 05:23:04: selecting podman as container runtime
 05:23:04: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-compute-migrations is being used by the following container(s): 8a38657ebb16833a47b5c9880229ca2194c1f94c88f19be0140efea5ea305935: volume is being used
 make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+#### internal (2x / 40.00%)
+
+<details>
+<summary> configured node not found during provisioning (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
+<details>
+<summary>all...</summary>
+
+* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
+
+<details><summary>context</summary>
+<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
+18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
+18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
+18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
+
+<details><summary>context</summary>
+<pre>18:39:12: 
+18:39:12: &#43; wait 75
+18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+18:39:23: selecting podman as container runtime
+18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### release-1.9 (1x / 16.67%)
+
+
+#### internal (1x / 100.00%)
+
+<details>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+<details>
+<summary>all...</summary>
+
+* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+
+<details><summary>context</summary>
+<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+11:06:31: selecting podman as container runtime
+11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
 &#43; EXIT_VALUE=2</pre>
@@ -4087,51 +3017,37 @@ make: *** [Makefile:182: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-network (1x / 12.50%)
+### sig-compute (5x / 83.33%)
 
 
-#### internal (1x / 100.00%)
+#### external (2x / 40.00%)
 
 <details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
+<summary> container image pull failure (1x / 20.00%) </summary>
 
 <hr/>
 
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 <details>
 <summary>all...</summary>
 
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
 
 
 <details>
 <summary>secondary evidence</summary>
 
 
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
 
 <details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
+<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -4143,14 +3059,8 @@ make: *** [Makefile:177: cluster-down] Error 1
 
 <hr/>
 </details>
-
-### sig-compute (7x / 87.50%)
-
-
-#### external (3x / 42.86%)
-
 <details>
-<summary> download failure from external URL (2x / 28.57%) </summary>
+<summary> download failure from external URL (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -4423,518 +3333,12 @@ make: *** [Makefile:182: cluster-down] Error 1
 </details>
 
 <hr/>
+</details>
 
-**1x**: _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:58:16 &#43;0000 UTC_: <code>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A276)
-
+#### needs-investigation (1x / 20.00%)
 
 <details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A221)
-
-<details><summary>context</summary>
-<pre>08:59:46:   &lt;builtin&gt;: in &lt;toplevel&gt;
-08:59:46: Repository rule http_archive defined at:
-08:59:46:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-08:59:46: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-08:59:46:    Traceback (most recent call last):
-08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A226)
-
-<details><summary>context</summary>
-<pre>08:59:46: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-08:59:46: 		download_info = ctx.download_and_extract(
-08:59:46: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A229)
-
-<details><summary>context</summary>
-<pre>08:59:46: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp18112639366700063061/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>08:59:46: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A230)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: Elapsed time: 38.429s, Critical Path: 0.60s
-08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A231)
-
-<details><summary>context</summary>
-<pre>08:59:46: INFO: 1 process: 1 internal.
-08:59:46: ERROR: Build did NOT complete successfully
-08:59:46: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A246)
-
-<details><summary>context</summary>
-<pre>09:00:04:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:00:04: Repository rule http_archive defined at:
-09:00:04:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:00:04: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_java~&#39;:
-09:00:04:    Traceback (most recent call last):
-09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A251)
-
-<details><summary>context</summary>
-<pre>09:00:04: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:00:04: 		download_info = ctx.download_and_extract(
-09:00:04: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A254)
-
-<details><summary>context</summary>
-<pre>09:00:04: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_java/releases/download/7.6.5/rules_java-7.6.5.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/temp2637779128729034844/rules_java-7.6.5.tar.gz: GET returned 504 Gateway Time-out
-09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:00:04: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A255)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: Elapsed time: 13.746s, Critical Path: 0.53s
-09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A256)
-
-<details><summary>context</summary>
-<pre>09:00:04: INFO: 1 process: 1 internal.
-09:00:04: ERROR: Build did NOT complete successfully
-09:00:04: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; for i in $(seq 1 $tries)
-&#43; make bazel-build-images</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A271)
-
-<details><summary>context</summary>
-<pre>09:01:23:   &lt;builtin&gt;: in &lt;toplevel&gt;
-09:01:23: Repository rule http_archive defined at:
-09:01:23:   /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:387:31: in &lt;toplevel&gt;
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl:136:45: An error occurred during the fetch of repository &#39;rules_python~&#39;:
-09:01:23:    Traceback (most recent call last):
-09:01:23: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/tools/build_defs/repo/http.bzl&#34;, line 136, column 45, in _http_archive_impl
-09:01:23: 		download_info = ctx.download_and_extract(</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A277)
-
-<details><summary>context</summary>
-<pre>09:01:23: 		download_info = ctx.download_and_extract(
-09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A278)
-
-<details><summary>context</summary>
-<pre>09:01:23: Error in download_and_extract: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A279)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_java~/toolchains/BUILD:274:27: @@rules_java~//toolchains:toolchain_java10_definition depends on @@bazel_tools//tools/jdk:toolchain_type in repository @@bazel_tools which failed to fetch. no such package &#39;@@rules_python~//python&#39;: java.io.IOException: Error downloading [https://github.com/bazelbuild/rules_python/releases/download/0.22.1/rules_python-0.22.1.tar.gz] to /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_python~/temp11516252301565034293/rules_python-0.22.1.tar.gz: GET returned 504 Gateway Time-out
-09:01:23: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/bazel_tools/src/tools/launcher/BUILD:10:14: Analysis failed
-09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A282)
-
-<details><summary>context</summary>
-<pre>09:01:23: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
-09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:01:23: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A283)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: Elapsed time: 67.819s, Critical Path: 0.61s
-09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:39: bazel-build-images] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A284)
-
-<details><summary>context</summary>
-<pre>09:01:23: INFO: 1 process: 1 internal.
-09:01:23: ERROR: Build did NOT complete successfully
-09:01:23: ERROR: Build failed. Not running target
-make: *** [Makefile:39: bazel-build-images] Error 1
-&#43; rc=2
-&#43; return 2
-&#43; ret=2</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-k8s-1.36-sig-operator/2118266411066331136#1:build-log.txt%3A295)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-09:02:10: selecting podman as container runtime
-09:02:11: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-operator is being used by the following container(s): 8461bb1b9368374a39c102452c3ac4240460428f7aab3a0411def0f08de4de90: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> container image pull failure (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 07:13:03 &#43;0000 UTC_: <code>07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A438)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19851/pull-kubevirt-e2e-kind-1.37-vgpu/2120051947737190400#1:build-log.txt%3A439)
-
-<details><summary>context</summary>
-<pre>07:19:21: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:21: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:23: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage3716451316/1&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261110%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261110T071922Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c0c6b896d18275f5c9ff41e55f03064194679f9a150e8ed1a721fd36e43a09a5&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794296062~hmac=b134d8b14d10b4bbbda102537a129dffcb5791b3145847acb8a09aa3d776dd7b&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (3x / 42.86%)
-
-<details>
-<summary> configured node not found during provisioning (2x / 28.57%) </summary>
-
-<hr/>
-
-**2x**: _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-<details>
-<summary>all...</summary>
-
-* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
-
-<details><summary>context</summary>
-<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
-18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
-18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
-18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
-
-<details><summary>context</summary>
-<pre>18:39:12: 
-18:39:12: &#43; wait 75
-18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-18:39:23: selecting podman as container runtime
-18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
-
-<details><summary>context</summary>
-<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
-12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
-12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
-12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
-
-<details><summary>context</summary>
-<pre>12:18:17: 
-12:18:17: &#43; wait 69
-12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-12:18:30: selecting podman as container runtime
-12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
-make: *** [Makefile:182: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
-<summary> taint not found during cluster setup (1x / 14.29%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-<details>
-<summary>all...</summary>
-
-* _2026-11-05 08:57:54 &#43;0000 UTC_: <code>09:06:39: error: taint &#34;node-role.kubernetes.io/master:NoSchedule&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1209)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A827)
-
-<details><summary>context</summary>
-<pre>09:06:14: I1105 09:06:12.355808     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;403 Forbidden&#34; milliseconds=0
-09:06:14: I1105 09:06:12.356102     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-09:06:14: I1105 09:06:12.855440     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;500 Internal Server Error&#34; milliseconds=0
-09:06:14: I1105 09:06:12.855745     276 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-09:06:14: I1105 09:06:12.855795     276 wait.go:283] kube-apiserver check failed at https://10.89.0.2:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-09:06:14: I1105 09:06:13.356423     276 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://10.89.0.2:6443/livez?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=1
-09:06:14: [control-plane-check] kube-apiserver is healthy after 1.502411537s</pre>
-</details>
-
-
-
-* <strong>diagnostic</strong>: <code>09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1081)
-
-<details><summary>context</summary>
-<pre>09:06:24: I1105 09:06:16.963598     282 envvar.go:195] &#34;Feature gate default state&#34; feature=&#34;UnlockWhileProcessingFIFO&#34; enabled=true
-09:06:24: I1105 09:06:16.963944     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:16.971994     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=7
-09:06:24: I1105 09:06:16.972362     282 token.go:249] [discovery] Retrying due to error: could not find a JWS signature in the cluster-info ConfigMap for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.964117     282 token.go:229] [discovery] Waiting for the cluster-info ConfigMap to receive a JWS signature for token ID &#34;abcdef&#34;
-09:06:24: I1105 09:06:21.968475     282 round_trippers.go:632] &#34;Response&#34; verb=&#34;GET&#34; url=&#34;https://kind-1.37-control-plane:6443/api/v1/namespaces/kube-public/configmaps/cluster-info?timeout=10s&#34; status=&#34;200 OK&#34; milliseconds=4
-09:06:24: I1105 09:06:21.968916     282 token.go:113] [discovery] Cluster info signature and contents are valid and no TLS pinning was specified, will use API Server &#34;kind-1.37-control-plane:6443&#34;</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1349)
-
-<details><summary>context</summary>
-<pre>09:06:56: deployment.apps/cdi-operator created
-09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19585/pull-kubevirt-e2e-kind-1.37-sev/2118266411544481792#1:build-log.txt%3A1350)
-
-<details><summary>context</summary>
-<pre>09:06:56: &#43;&#43; _kubectl create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:06:56: &#43;&#43; /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubectl --kubeconfig=/home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/_ci-configs/kind-1.37/.kubeconfig create -f https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml
-09:07:09: error: unable to read URL &#34;https://github.com/kubevirt/containerized-data-importer/releases/download/v1.63.0/cdi-cr.yaml&#34;, server reported 504 Gateway Timeout, status code=504
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### needs-investigation (1x / 14.29%)
-
-<details>
-<summary> no matching pattern (1x / 14.29%) </summary>
+<summary> no matching pattern (1x / 20.00%) </summary>
 
 <hr/>
 
@@ -5405,4 +3809,181 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-12 09:11:13
+#### internal (2x / 40.00%)
+
+<details>
+<summary> configured node not found during provisioning (2x / 40.00%) </summary>
+
+<hr/>
+
+**2x**: _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
+<details>
+<summary>all...</summary>
+
+* _2026-11-11 18:32:22 &#43;0000 UTC_: <code>18:39:11: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A885)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A821)
+
+<details><summary>context</summary>
+<pre>18:39:07: [control-plane-check] kube-controller-manager is healthy after 5.728524ms
+18:39:07: [control-plane-check] kube-scheduler is healthy after 5.74229ms
+18:39:07: I1111 13:39:07.808597    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+18:39:08: I1111 13:39:08.307873    1915 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+18:39:08: I1111 13:39:08.307933    1915 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+18:39:08: [control-plane-check] kube-apiserver is healthy after 1.502758867s
+18:39:08: I1111 13:39:08.807449    1915 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1194)
+
+<details><summary>context</summary>
+<pre>18:39:12: 
+18:39:12: &#43; wait 75
+18:39:23: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19610/pull-kubevirt-e2e-k8s-1.36-sig-compute/2120584309881442304#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+18:39:23: selecting podman as container runtime
+18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+* _2026-11-06 12:02:09 &#43;0000 UTC_: <code>12:18:05: Error from server (NotFound): nodes &#34;node01&#34; not found</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A868)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A805)
+
+<details><summary>context</summary>
+<pre>12:18:01: [control-plane-check] kube-controller-manager is healthy after 5.239285ms
+12:18:01: [control-plane-check] kube-scheduler is healthy after 7.898644ms
+12:18:02: I1106 07:18:02.008369    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+12:18:02: I1106 07:18:02.507609    1888 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+12:18:02: I1106 07:18:02.507711    1888 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+12:18:02: [control-plane-check] kube-apiserver is healthy after 1.503624779s
+12:18:02: I1106 07:18:03.008716    1888 uploadconfig.go:109] [upload-config] Uploading the kubeadm ClusterConfiguration to a ConfigMap</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1150)
+
+<details><summary>context</summary>
+<pre>12:18:17: 
+12:18:17: &#43; wait 69
+12:18:29: error executing kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-: failed to execute command: kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/control-plane:NoSchedule-
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19813/pull-kubevirt-e2e-k8s-1.36-windows2016/2118675165452701696#1:build-log.txt%3A1178)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+12:18:30: selecting podman as container runtime
+12:18:30: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-windows2016 is being used by the following container(s): afe66bfd0ea325b2aedd124aef268e5e6cb650d1d5ccd698ca0210fa9d12b1b3: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### sig-network (1x / 16.67%)
+
+
+#### internal (1x / 100.00%)
+
+<details>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+<details>
+<summary>all...</summary>
+
+* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+
+<details><summary>context</summary>
+<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+11:06:31: selecting podman as container runtime
+11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+Last updated: 2026-11-12 12:13:59
