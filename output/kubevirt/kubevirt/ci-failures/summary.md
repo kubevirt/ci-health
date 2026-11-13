@@ -669,67 +669,6 @@ make: *** [Makefile:177: cluster-down] Error 1
 ### internal (2x / 50.00%)
 
 <details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 25.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details><summary>context</summary>
-<pre>11:06:19: .sdl: SDL_OpenAudioDevice for recording failed
-11:06:19: &lt;sdl: Reason: ALSA: Couldn&#39;t open audio device: Host is down
-11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
-
-<details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-<details>
 <summary> configured node not found during provisioning (1x / 25.00%) </summary>
 
 <hr/>
@@ -790,6 +729,67 @@ make: *** [Makefile:179: cluster-up] Error 1
 18:39:23: selecting podman as container runtime
 18:39:23: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.36-sig-compute is being used by the following container(s): fb15418c2e14cb45163c8d0b8a0c6872a738dc087c7b3cb0154f8b394c7585d2: volume is being used
 make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+<details>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 25.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+<details>
+<summary>all...</summary>
+
+* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
+<details><summary>context</summary>
+<pre>11:06:19: .sdl: SDL_OpenAudioDevice for recording failed
+11:06:19: &lt;sdl: Reason: ALSA: Couldn&#39;t open audio device: Host is down
+11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
+
+<details><summary>context</summary>
+<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
+11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
+make: *** [Makefile:174: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+11:06:31: selecting podman as container runtime
+11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
+make: *** [Makefile:177: cluster-down] Error 1
 &#43; true
 &#43; exit 2
 &#43; EXIT_VALUE=2</pre>
@@ -2633,4 +2633,4 @@ make: *** [Makefile:177: cluster-down] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-13 15:09:30
+Last updated: 2026-11-13 18:14:38
