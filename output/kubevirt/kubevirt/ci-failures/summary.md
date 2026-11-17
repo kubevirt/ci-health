@@ -19,13 +19,45 @@
 ## per day [⬆](#top)
 
 
-### 2026-11-17 (1x / 25.00%)
+### 2026-11-17 (2x / 50.00%)
 
 
-#### external (1x / 100.00%)
+#### external (2x / 100.00%)
 
 <details>
-<summary> container image pull failure (1x / 100.00%) </summary>
+<summary> container image pull failure (2x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
+
+<details><summary>context</summary>
+<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -190,76 +222,19 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-10 (1x / 25.00%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
-
-<details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-error-category"></a>
 
 ## per error category [⬆](#top)
 
 
-### internal (3x / 75.00%)
+### internal (2x / 50.00%)
 
 <details>
-<summary> VM SSH connection timeout during cluster provisioning (2x / 50.00%) </summary>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 25.00%) </summary>
 
 <hr/>
 
-**2x**: _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
+**1x**: _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
 <details>
 <summary>all...</summary>
 
@@ -290,54 +265,6 @@ make: *** [Makefile:179: cluster-up] Error 1
 &#43;&#43; collect_debug_logs
 &#43;&#43; local containers
 &#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details><summary>context</summary>
-<pre>11:06:19: .sdl: SDL_OpenAudioDevice for recording failed
-11:06:19: &lt;sdl: Reason: ALSA: Couldn&#39;t open audio device: Host is down
-11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
-
-<details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -425,10 +352,52 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### external (1x / 25.00%)
+### external (2x / 50.00%)
 
 <details>
-<summary> container image pull failure (1x / 25.00%) </summary>
+<summary> container image pull failure (2x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details><summary>context</summary>
+<pre>07:19:37: Getting image source signatures
+07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
+
+<details><summary>context</summary>
+<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -494,13 +463,13 @@ make: *** [Makefile:194: cluster-sync] Error 125
 ## per branch [⬆](#top)
 
 
-### main (3x / 75.00%)
+### main (4x / 100.00%)
 
 
-#### internal (2x / 66.67%)
+#### internal (2x / 50.00%)
 
 <details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 33.33%) </summary>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -537,7 +506,7 @@ make: *** [Makefile:179: cluster-up] Error 1
 <hr/>
 </details>
 <details>
-<summary> configured node not found during provisioning (1x / 33.33%) </summary>
+<summary> configured node not found during provisioning (1x / 25.00%) </summary>
 
 <hr/>
 
@@ -602,10 +571,42 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-#### external (1x / 33.33%)
+#### external (2x / 50.00%)
 
 <details>
-<summary> container image pull failure (1x / 33.33%) </summary>
+<summary> container image pull failure (2x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
+
+<details><summary>context</summary>
+<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -644,63 +645,6 @@ make: *** [Makefile:194: cluster-sync] Error 125
 &#43; ret=2
 &#43; check_for_panics
 &#43; set &#43;x</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-### release-1.9 (1x / 25.00%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
-
-<details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -718,13 +662,45 @@ make: *** [Makefile:177: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-compute (2x / 50.00%)
+### sig-compute (3x / 75.00%)
 
 
-#### external (1x / 50.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> container image pull failure (1x / 50.00%) </summary>
+<summary> container image pull failure (2x / 66.67%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
+
+<details><summary>context</summary>
+<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -775,10 +751,10 @@ make: *** [Makefile:194: cluster-sync] Error 125
 <hr/>
 </details>
 
-#### internal (1x / 50.00%)
+#### internal (1x / 33.33%)
 
 <details>
-<summary> configured node not found during provisioning (1x / 50.00%) </summary>
+<summary> configured node not found during provisioning (1x / 33.33%) </summary>
 
 <hr/>
 
@@ -886,61 +862,4 @@ make: *** [Makefile:179: cluster-up] Error 1
 <hr/>
 </details>
 
-### sig-network (1x / 25.00%)
-
-
-#### internal (1x / 100.00%)
-
-<details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 100.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-<details>
-<summary>all...</summary>
-
-* _2026-11-10 10:02:30 &#43;0000 UTC_: <code>11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1072)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:174: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1074)
-
-<details><summary>context</summary>
-<pre>11:06:19: 6audio: Could not create a backend for voice `ac97.mc&#39;
-11:06:30: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-11:06:31: /home/prow/go/src/github.com/kubevirt/kubevirt/kubevirtci/cluster-up/up.sh: line 48: pop_var_context: head of shell_variables not a function context
-make: *** [Makefile:174: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:177: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19857/pull-kubevirt-e2e-k8s-1.34-sig-network-1.9/2120093328576876544#1:build-log.txt%3A1100)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-11:06:31: selecting podman as container runtime
-11:06:31: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.34-sig-network-1.9 is being used by the following container(s): c127fab2def9926feeb32a7d5cb5b9252514f248d8bf91af09c29158931b8fc7: volume is being used
-make: *** [Makefile:177: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-11-17 09:10:08
+Last updated: 2026-11-17 12:09:58
