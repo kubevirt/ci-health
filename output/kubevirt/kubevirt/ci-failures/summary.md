@@ -320,6 +320,46 @@ make: *** [Makefile:179: cluster-up] Error 1
 ### main (3x / 100.00%)
 
 
+#### internal (1x / 33.33%)
+
+<details>
+<summary> VM SSH connection timeout during cluster provisioning (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
+<details>
+<summary>all...</summary>
+
+* _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A794)
+
+<details><summary>context</summary>
+<pre>15:18:49: 
+15:18:49: &#43; wait 72
+15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
+make: *** [Makefile:179: cluster-up] Error 1
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
 #### external (2x / 66.67%)
 
 <details>
@@ -394,46 +434,6 @@ make: *** [Makefile:194: cluster-sync] Error 125
 &#43; ret=2
 &#43; check_for_panics
 &#43; set &#43;x</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-#### internal (1x / 33.33%)
-
-<details>
-<summary> VM SSH connection timeout during cluster provisioning (1x / 33.33%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
-<details>
-<summary>all...</summary>
-
-* _2026-11-13 15:08:32 &#43;0000 UTC_: <code>15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A793)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19097/pull-kubevirt-e2e-k8s-1.37-sig-monitoring/2121258758930698240#1:build-log.txt%3A794)
-
-<details><summary>context</summary>
-<pre>15:18:49: 
-15:18:49: &#43; wait 72
-15:19:01: could not establish a connection to the node after a generous timeout: ssh.sh echo VM is up failed
-make: *** [Makefile:179: cluster-up] Error 1
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
 </details>
 
 
@@ -583,4 +583,4 @@ make: *** [Makefile:179: cluster-up] Error 1
 <hr/>
 </details>
 
-Last updated: 2026-11-19 03:12:52
+Last updated: 2026-11-19 06:07:27
