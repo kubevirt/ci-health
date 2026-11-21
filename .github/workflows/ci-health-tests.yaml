@@ -7,6 +7,7 @@ on:
       - 'e2e/**'
       - 'pkg/**'
       - 'go.*'
+      - 'hack/install-promtool.sh'
       - '.github/**'
 
 permissions:
@@ -20,6 +21,11 @@ jobs:
       - name: Checkout Git repository
         id: checkout
         uses: actions/checkout@v6
+
+      - name: Install PromQL test tool
+        run: |
+          apk add --no-cache curl
+          sh hack/install-promtool.sh /usr/local/bin
 
       - name: Run tests
         id: test

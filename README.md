@@ -156,14 +156,34 @@ roles and [Local execution](#local-execution) for usage. Shared logic lives in
 ## Development
 
 Use the Go version and toolchain specified in [go.mod](go.mod). From the
-repository root, run the unit tests, static checks, and build:
+repository root, install the PromQL test tool, then run the unit tests, static
+checks, and build:
 
 ```bash
+sh hack/install-promtool.sh "$HOME/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 go test ./cmd/... ./pkg/...
 go vet ./...
 go build ./...
 golangci-lint run ./...
 ```
+
+The cost query tests require **promtool 3.5.0** (from Prometheus), installed by
+the script above with pinned archive checksums. The installer requires `curl`,
+`tar`, and `sha256sum` (or `shasum` on macOS), and supports Linux and macOS on
+amd64 and arm64. CI installs the same version before running the tests. Once
+installed, `go test ./pkg/cost -run TestCostPromQL -v` needs no network access,
+cluster, or credentials; a missing tool fails the tests instead of skipping
+validation.
+
+These tests capture all six actual HTTP query strings from `GetClusterCapacity`
+and `GetJobMetrics`, then use Prometheus's parser and engine through
+[`promtool test rules`](https://prometheus.io/docs/prometheus/latest/configuration/unit_testing_rules/).
+The [synthetic fixture](pkg/cost/testdata/promql.yaml.tmpl) contains series and
+expected values and labels, with expressions injected from those requests to
+prevent drift. It covers node and namespace filtering, container exclusions,
+pod aggregation, Prow labels, and different time windows. A malformed-query
+control verifies that the same validation reports a PromQL parse error.
 
 The lint configuration is [.golangci.yml](.golangci.yml). Tests alongside the
 packages use Go's testing package and Ginkgo/Gomega; follow the conventions in
