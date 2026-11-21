@@ -19,7 +19,232 @@
 ## per day [⬆](#top)
 
 
-### 2026-11-17 (2x / 100.00%)
+### 2026-11-21 (1x / 33.33%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no matching pattern (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+<details>
+<summary>all...</summary>
+
+* _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A632)
+
+<details><summary>context</summary>
+<pre>03:29:17: [control-plane-check] kube-scheduler is healthy after 10.206452ms
+03:29:17: [control-plane-check] kube-controller-manager is healthy after 12.069006ms
+03:29:17: I1121 03:29:17.559246    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+03:29:18: I1121 03:29:18.058228    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+03:29:18: [control-plane-check] kube-apiserver is healthy after 1.502576755s
+03:29:18: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1543)
+
+<details><summary>context</summary>
+<pre>03:39:22:     layer transfers: 0 from disk, 14 from container registry, 0 from remote cache
+03:39:22: INFO: Invocation ID: eb79cc26-99a6-4945-aeae-b12f2226c7ff
+03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1545)
+
+<details><summary>context</summary>
+<pre>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/pull.bzl&#34;, line 48, column 28, in _pull_impl
+03:39:25: 		_download_with_tool(</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1551)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		_download_with_tool(
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1552)
+
+<details><summary>context</summary>
+<pre>03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1553)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1554)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1555)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1556)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1557)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1560)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1561)
+
+<details><summary>context</summary>
+<pre>03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1563)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1572)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+03:39:26: selecting podman as container runtime
+03:39:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-storage is being used by the following container(s): 4db2389c3fdcc1a55455a1885b7cd013063cca177a8b8947fd884f25a3975020: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-11-17 (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -113,10 +338,10 @@ make: *** [Makefile:194: cluster-sync] Error 125
 ## per error category [⬆](#top)
 
 
-### external (2x / 100.00%)
+### external (2x / 66.67%)
 
 <details>
-<summary> container image pull failure (2x / 100.00%) </summary>
+<summary> container image pull failure (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -219,18 +444,250 @@ make: *** [Makefile:194: cluster-sync] Error 125
 <hr/>
 </details>
 
+### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+<details>
+<summary>all...</summary>
+
+* _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+<details><summary>context</summary>
+<pre>03:39:22: localhost:39399/kubevirt/virt-template-apiserver:v0.3.0
+03:39:22:     layer transfers: 0 from disk, 14 from container registry, 0 from remote cache
+03:39:22: INFO: Invocation ID: eb79cc26-99a6-4945-aeae-b12f2226c7ff
+03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A632)
+
+<details><summary>context</summary>
+<pre>03:29:17: [control-plane-check] kube-scheduler is healthy after 10.206452ms
+03:29:17: [control-plane-check] kube-controller-manager is healthy after 12.069006ms
+03:29:17: I1121 03:29:17.559246    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+03:29:18: I1121 03:29:18.058228    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+03:29:18: [control-plane-check] kube-apiserver is healthy after 1.502576755s
+03:29:18: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1543)
+
+<details><summary>context</summary>
+<pre>03:39:22:     layer transfers: 0 from disk, 14 from container registry, 0 from remote cache
+03:39:22: INFO: Invocation ID: eb79cc26-99a6-4945-aeae-b12f2226c7ff
+03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1545)
+
+<details><summary>context</summary>
+<pre>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/pull.bzl&#34;, line 48, column 28, in _pull_impl
+03:39:25: 		_download_with_tool(</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1551)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		_download_with_tool(
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1552)
+
+<details><summary>context</summary>
+<pre>03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1553)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1554)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1555)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1556)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1557)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1560)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1561)
+
+<details><summary>context</summary>
+<pre>03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1563)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1572)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+03:39:26: selecting podman as container runtime
+03:39:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-storage is being used by the following container(s): 4db2389c3fdcc1a55455a1885b7cd013063cca177a8b8947fd884f25a3975020: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (2x / 100.00%)
+### main (3x / 100.00%)
 
 
-#### external (2x / 100.00%)
+#### external (2x / 66.67%)
 
 <details>
-<summary> container image pull failure (2x / 100.00%) </summary>
+<summary> container image pull failure (2x / 66.67%) </summary>
 
 <hr/>
 
@@ -301,6 +758,228 @@ make: *** [Makefile:194: cluster-sync] Error 125
 &#43; ret=2
 &#43; check_for_panics
 &#43; set &#43;x</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+#### needs-investigation (1x / 33.33%)
+
+<details>
+<summary> no matching pattern (1x / 33.33%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+<details>
+<summary>all...</summary>
+
+* _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A632)
+
+<details><summary>context</summary>
+<pre>03:29:17: [control-plane-check] kube-scheduler is healthy after 10.206452ms
+03:29:17: [control-plane-check] kube-controller-manager is healthy after 12.069006ms
+03:29:17: I1121 03:29:17.559246    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+03:29:18: I1121 03:29:18.058228    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+03:29:18: [control-plane-check] kube-apiserver is healthy after 1.502576755s
+03:29:18: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1543)
+
+<details><summary>context</summary>
+<pre>03:39:22:     layer transfers: 0 from disk, 14 from container registry, 0 from remote cache
+03:39:22: INFO: Invocation ID: eb79cc26-99a6-4945-aeae-b12f2226c7ff
+03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1545)
+
+<details><summary>context</summary>
+<pre>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/pull.bzl&#34;, line 48, column 28, in _pull_impl
+03:39:25: 		_download_with_tool(</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1551)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		_download_with_tool(
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1552)
+
+<details><summary>context</summary>
+<pre>03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1553)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1554)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1555)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1556)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1557)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1560)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1561)
+
+<details><summary>context</summary>
+<pre>03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1563)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1572)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+03:39:26: selecting podman as container runtime
+03:39:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-storage is being used by the following container(s): 4db2389c3fdcc1a55455a1885b7cd013063cca177a8b8947fd884f25a3975020: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
 </details>
 
 
@@ -318,7 +997,232 @@ make: *** [Makefile:194: cluster-sync] Error 125
 ## per SIG [⬆](#top)
 
 
-### sig-compute (2x / 100.00%)
+### sig-storage (1x / 33.33%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no matching pattern (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+<details>
+<summary>all...</summary>
+
+* _2026-11-21 03:28:48 &#43;0000 UTC_: <code>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1542)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A632)
+
+<details><summary>context</summary>
+<pre>03:29:17: [control-plane-check] kube-scheduler is healthy after 10.206452ms
+03:29:17: [control-plane-check] kube-controller-manager is healthy after 12.069006ms
+03:29:17: I1121 03:29:17.559246    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+03:29:18: I1121 03:29:18.058174    2039 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+03:29:18: I1121 03:29:18.058228    2039 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+03:29:18: [control-plane-check] kube-apiserver is healthy after 1.502576755s
+03:29:18: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1543)
+
+<details><summary>context</summary>
+<pre>03:39:22:     layer transfers: 0 from disk, 14 from container registry, 0 from remote cache
+03:39:22: INFO: Invocation ID: eb79cc26-99a6-4945-aeae-b12f2226c7ff
+03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1545)
+
+<details><summary>context</summary>
+<pre>03:39:24: Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:24: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: INFO: Repo &#43;virt_template_ext&#43;virt_template_controller defined by rule pull in @@rules_img&#43;//img/private/repository_rules:pull.bzl
+03:39:25: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl:441:13: An error occurred during the fetch of repository &#39;&#43;virt_template_ext&#43;virt_template_controller&#39;:
+03:39:25:    Traceback (most recent call last):
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/pull.bzl&#34;, line 48, column 28, in _pull_impl
+03:39:25: 		_download_with_tool(</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1551)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		_download_with_tool(
+03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1552)
+
+<details><summary>context</summary>
+<pre>03:39:25: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/rules_img&#43;/img/private/repository_rules/download.bzl&#34;, line 441, column 13, in download_with_tool
+03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1553)
+
+<details><summary>context</summary>
+<pre>03:39:25: 		fail(&#34;img tool failed with exit code {} and message {}&#34;.format(result.return_code, result.stderr))
+03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1554)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error in fail: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1555)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1556)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1557)
+
+<details><summary>context</summary>
+<pre>03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: /root/go/src/kubevirt.io/kubevirt/images/virt-template/BUILD.bazel:13:15: //images/virt-template:virt-template-controller-image depends on @@&#43;virt_template_ext&#43;virt_template_controller//:virt_template_controller in repository @@&#43;virt_template_ext&#43;virt_template_controller which failed to fetch. no such package &#39;@@&#43;virt_template_ext&#43;virt_template_controller//&#39;: img tool failed with exit code 1 and message Failed to download from quay.io: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: Error: Failed to download blob from all registries: downloading image: getting config digest: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/0a/0a17165576a1d92d85e4dfe3054c628730a4b0140735d4b990d405ef28ce5794?X-Amz-Algorithm=REDACTED&amp;X-Amz-Credential=REDACTED&amp;X-Amz-Date=REDACTED&amp;X-Amz-Expires=REDACTED&amp;X-Amz-Signature=REDACTED&amp;X-Amz-SignedHeaders=REDACTED&amp;akamai_signature=REDACTED&amp;namespace=REDACTED&amp;region=REDACTED&amp;repo_name=REDACTED&#34;: remote error: tls: internal error
+03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1560)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Analysis of target &#39;//:push-virt-template-controller&#39; failed; build aborted: Analysis failed
+03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>03:39:25: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1561)
+
+<details><summary>context</summary>
+<pre>03:39:25: INFO: Elapsed time: 2.254s, Critical Path: 0.16s
+03:39:25: INFO: 1 process: 1 internal.
+03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1563)
+
+<details><summary>context</summary>
+<pre>03:39:25: ERROR: Build did NOT complete successfully
+03:39:25: ERROR: Build failed. Not running target
+03:39:26: &#43; rm -f /tmp/kubevirt.deploy.Yb3J
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19616/pull-kubevirt-e2e-k8s-1.37-sig-storage/2123981778073948160#1:build-log.txt%3A1572)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+03:39:26: selecting podman as container runtime
+03:39:57: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-sig-storage is being used by the following container(s): 4db2389c3fdcc1a55455a1885b7cd013063cca177a8b8947fd884f25a3975020: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### sig-compute (2x / 66.67%)
 
 
 #### external (2x / 100.00%)
@@ -407,4 +1311,4 @@ make: *** [Makefile:194: cluster-sync] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-11-21 15:08:54
+Last updated: 2026-11-21 18:09:33
