@@ -19,7 +19,148 @@
 ## per day [⬆](#top)
 
 
-### 2026-11-21 (1x / 33.33%)
+### 2026-11-23 (1x / 25.00%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no matching pattern (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+<details>
+<summary>all...</summary>
+
+* _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A635)
+
+<details><summary>context</summary>
+<pre>10:24:20: [control-plane-check] kube-scheduler is healthy after 4.814576ms
+10:24:20: [control-plane-check] kube-controller-manager is healthy after 8.72848ms
+10:24:20: I1123 10:24:20.244157    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+10:24:21: I1123 10:24:20.740464    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+10:24:21: [control-plane-check] kube-apiserver is healthy after 1.502020037s
+10:24:21: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1209)
+
+<details><summary>context</summary>
+<pre>10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;org_golang_x_mod defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bmatcuk_doublestar_v4 defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bazelbuild_buildtools defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:
+10:27:47:    Traceback (most recent call last):
+10:27:47: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl&#34;, line 297, column 13, in _go_repository_impl
+10:27:47: 		fail(&#34;%s: %s&#34; % (ctx.name, result.stderr))</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1217)
+
+<details><summary>context</summary>
+<pre>10:27:47: exit status 1
+10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1219)
+
+<details><summary>context</summary>
+<pre>10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1223)
+
+<details><summary>context</summary>
+<pre>10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1225)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1234)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+10:27:52: selecting podman as container runtime
+10:28:35: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): 73f69f92b0ee12ba15fe06ff081855efc21f25241a9104c96303a06d01ed229d: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### 2026-11-21 (1x / 25.00%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -244,7 +385,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### 2026-11-17 (2x / 66.67%)
+### 2026-11-17 (2x / 50.00%)
 
 
 #### external (2x / 100.00%)
@@ -338,10 +479,256 @@ make: *** [Makefile:194: cluster-sync] Error 125
 ## per error category [⬆](#top)
 
 
-### needs-investigation (1x / 33.33%)
+### external (2x / 50.00%)
 
 <details>
-<summary> no matching pattern (1x / 33.33%) </summary>
+<summary> container image pull failure (2x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
+<details><summary>context</summary>
+<pre>07:19:37: Getting image source signatures
+07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
+
+<details><summary>context</summary>
+<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
+07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
+07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
+make: *** [Makefile:179: cluster-up] Error 125
+&#43;&#43; collect_debug_logs
+&#43;&#43; local containers
+&#43;&#43;&#43; determine_cri_bin</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+
+**1x**: _2026-11-17 00:02:38 &#43;0000 UTC_: <code>00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A951)
+<details>
+<summary>all...</summary>
+
+* _2026-11-17 00:02:38 &#43;0000 UTC_: <code>00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A951)
+<details><summary>context</summary>
+<pre>00:18:19: Copying blob sha256:f32e658155c5b1add211a8a321dcc673c4f17fa3e86b2428ca8dc4ebf37a1fb9
+00:18:19: Copying blob sha256:12d1784f2fa801320b2dc270f5056eefd21725f80c85d4e2a4a17ee3ef2b2e3e
+00:18:20: Copying blob sha256:a81cc226408ac493733771cc7935adb8774b5f5fa6ca02a471c7e62dbadff8f2
+00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)
+00:18:43: &#43; rm -f /tmp/kubevirt.deploy.PIw7
+make: *** [Makefile:194: cluster-sync] Error 125
+&#43; ret=2</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>00:17:16: I1116 19:17:15.813983    1908 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A614)
+
+<details><summary>context</summary>
+<pre>00:17:15: [control-plane-check] kube-controller-manager is healthy after 3.477922ms
+00:17:15: [control-plane-check] kube-scheduler is healthy after 4.532682ms
+00:17:15: I1116 19:17:15.314190    1908 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+00:17:16: I1116 19:17:15.813983    1908 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+00:17:16: I1116 19:17:15.814046    1908 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+00:17:16: [control-plane-check] kube-apiserver is healthy after 1.502841152s
+00:17:16: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A953)
+
+<details><summary>context</summary>
+<pre>00:18:20: Copying blob sha256:a81cc226408ac493733771cc7935adb8774b5f5fa6ca02a471c7e62dbadff8f2
+00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)
+00:18:43: &#43; rm -f /tmp/kubevirt.deploy.PIw7
+make: *** [Makefile:194: cluster-sync] Error 125
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### needs-investigation (2x / 50.00%)
+
+<details>
+<summary> no matching pattern (2x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+<details>
+<summary>all...</summary>
+
+* _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+<details><summary>context</summary>
+<pre>10:27:47: 		fail(&#34;%s: %s&#34; % (ctx.name, result.stderr))
+10:27:47: Error in fail: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:47: exit status 1
+10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1</pre>
+</details>
+
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A635)
+
+<details><summary>context</summary>
+<pre>10:24:20: [control-plane-check] kube-scheduler is healthy after 4.814576ms
+10:24:20: [control-plane-check] kube-controller-manager is healthy after 8.72848ms
+10:24:20: I1123 10:24:20.244157    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+10:24:21: I1123 10:24:20.740464    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+10:24:21: [control-plane-check] kube-apiserver is healthy after 1.502020037s
+10:24:21: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1209)
+
+<details><summary>context</summary>
+<pre>10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;org_golang_x_mod defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bmatcuk_doublestar_v4 defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bazelbuild_buildtools defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:
+10:27:47:    Traceback (most recent call last):
+10:27:47: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl&#34;, line 297, column 13, in _go_repository_impl
+10:27:47: 		fail(&#34;%s: %s&#34; % (ctx.name, result.stderr))</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1217)
+
+<details><summary>context</summary>
+<pre>10:27:47: exit status 1
+10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1219)
+
+<details><summary>context</summary>
+<pre>10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1223)
+
+<details><summary>context</summary>
+<pre>10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1225)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1234)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+10:27:52: selecting podman as container runtime
+10:28:35: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): 73f69f92b0ee12ba15fe06ff081855efc21f25241a9104c96303a06d01ed229d: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -570,124 +957,18 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### external (2x / 66.67%)
-
-<details>
-<summary> container image pull failure (2x / 66.67%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
-<details>
-<summary>all...</summary>
-
-* _2026-11-17 07:12:58 &#43;0000 UTC_: <code>07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A456)
-<details><summary>context</summary>
-<pre>07:19:37: Getting image source signatures
-07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:179: cluster-up] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19932/pull-kubevirt-e2e-kind-1.37-vgpu/2122588605732884480#1:build-log.txt%3A457)
-
-<details><summary>context</summary>
-<pre>07:19:37: Copying blob sha256:7be39e07f3a362cb350d0d0b5a554e29829fce73909cb105a3eafeaa5677068a
-07:19:37: Copying blob sha256:5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8
-07:19:39: Error: unable to copy from source docker://quay.io/phoracek/lspci@sha256:0f3cacf7098202ef284308c64e3fc0ba441871a846022bb87d65ff130c79adb1: writing blob: storing blob to file &#34;/var/tmp/container_images_storage2707048589/2&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/5c/5c1b9e8d7bf7b758fa84807a6bce45e4af333e1ddd566b5972550b6fcfbed9b8?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T071939Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e8cf4826f6d12c45abde65ca089e80040721b710854a7e9d3935017927358cc8&amp;region=us-east-1&amp;namespace=phoracek&amp;repo_name=lspci&amp;akamai_signature=exp=1794900879~hmac=96c9e138c0d821d123b2ec5af3093d15468523626067d8ff236643746e84ed98&#34;: EOF)
-make: *** [Makefile:179: cluster-up] Error 125
-&#43;&#43; collect_debug_logs
-&#43;&#43; local containers
-&#43;&#43;&#43; determine_cri_bin</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-
-**1x**: _2026-11-17 00:02:38 &#43;0000 UTC_: <code>00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A951)
-<details>
-<summary>all...</summary>
-
-* _2026-11-17 00:02:38 &#43;0000 UTC_: <code>00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A951)
-<details><summary>context</summary>
-<pre>00:18:19: Copying blob sha256:f32e658155c5b1add211a8a321dcc673c4f17fa3e86b2428ca8dc4ebf37a1fb9
-00:18:19: Copying blob sha256:12d1784f2fa801320b2dc270f5056eefd21725f80c85d4e2a4a17ee3ef2b2e3e
-00:18:20: Copying blob sha256:a81cc226408ac493733771cc7935adb8774b5f5fa6ca02a471c7e62dbadff8f2
-00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)
-00:18:43: &#43; rm -f /tmp/kubevirt.deploy.PIw7
-make: *** [Makefile:194: cluster-sync] Error 125
-&#43; ret=2</pre>
-</details>
-
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>00:17:16: I1116 19:17:15.813983    1908 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A614)
-
-<details><summary>context</summary>
-<pre>00:17:15: [control-plane-check] kube-controller-manager is healthy after 3.477922ms
-00:17:15: [control-plane-check] kube-scheduler is healthy after 4.532682ms
-00:17:15: I1116 19:17:15.314190    1908 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
-00:17:16: I1116 19:17:15.813983    1908 request.go:1500] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-00:17:16: I1116 19:17:15.814046    1908 wait.go:283] kube-apiserver check failed at https://192.168.66.101:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
-00:17:16: [control-plane-check] kube-apiserver is healthy after 1.502841152s
-00:17:16: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
-</details>
-
-
-
-* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19931/pull-kubevirt-e2e-k8s-1.36-sig-compute/2122480343905734656#1:build-log.txt%3A953)
-
-<details><summary>context</summary>
-<pre>00:18:20: Copying blob sha256:a81cc226408ac493733771cc7935adb8774b5f5fa6ca02a471c7e62dbadff8f2
-00:18:43: Error: unable to copy from source docker://quay.io/kubevirt/builder:2610291047-177548615f: copying system image from manifest list: writing blob: storing blob to file &#34;/var/tmp/container_images_storage1473617964/14&#34;: happened during read: unexpected EOF (while reconnecting: Get &#34;https://cdn01.quay.io/quayio-production-s3/sha256/92/9250c70b3a36f0e8c52cce7cdfd8ca593cb87ac83647e43ff4455345c7b077d6?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATAAF2YHTGR23ZTE6%2F20261117%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20261117T001820Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e6e8470c7d72bae4e2ee61190df3a3a1a13879e84e916329f5d572869ba0d850&amp;region=us-east-1&amp;namespace=kubevirt&amp;repo_name=builder&amp;akamai_signature=exp=1794875600~hmac=03a4000e343af8fd33d156c3a2fe1c9d34ab9ff4bfb4fe3a69d07e1367240492&#34;: EOF)
-00:18:43: &#43; rm -f /tmp/kubevirt.deploy.PIw7
-make: *** [Makefile:194: cluster-sync] Error 125
-&#43; ret=2
-&#43; check_for_panics
-&#43; set &#43;x</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
 <a id="per-branch"></a>
 
 ## per branch [⬆](#top)
 
 
-### main (3x / 100.00%)
+### main (4x / 100.00%)
 
 
-#### external (2x / 66.67%)
+#### external (2x / 50.00%)
 
 <details>
-<summary> container image pull failure (2x / 66.67%) </summary>
+<summary> container image pull failure (2x / 50.00%) </summary>
 
 <hr/>
 
@@ -770,10 +1051,140 @@ make: *** [Makefile:194: cluster-sync] Error 125
 <hr/>
 </details>
 
-#### needs-investigation (1x / 33.33%)
+#### needs-investigation (2x / 50.00%)
 
 <details>
-<summary> no matching pattern (1x / 33.33%) </summary>
+<summary> no matching pattern (2x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+<details>
+<summary>all...</summary>
+
+* _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A635)
+
+<details><summary>context</summary>
+<pre>10:24:20: [control-plane-check] kube-scheduler is healthy after 4.814576ms
+10:24:20: [control-plane-check] kube-controller-manager is healthy after 8.72848ms
+10:24:20: I1123 10:24:20.244157    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+10:24:21: I1123 10:24:20.740464    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+10:24:21: [control-plane-check] kube-apiserver is healthy after 1.502020037s
+10:24:21: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1209)
+
+<details><summary>context</summary>
+<pre>10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;org_golang_x_mod defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bmatcuk_doublestar_v4 defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bazelbuild_buildtools defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:
+10:27:47:    Traceback (most recent call last):
+10:27:47: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl&#34;, line 297, column 13, in _go_repository_impl
+10:27:47: 		fail(&#34;%s: %s&#34; % (ctx.name, result.stderr))</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1217)
+
+<details><summary>context</summary>
+<pre>10:27:47: exit status 1
+10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1219)
+
+<details><summary>context</summary>
+<pre>10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1223)
+
+<details><summary>context</summary>
+<pre>10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1225)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1234)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+10:27:52: selecting podman as container runtime
+10:28:35: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): 73f69f92b0ee12ba15fe06ff081855efc21f25241a9104c96303a06d01ed229d: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
 
 <hr/>
 
@@ -997,7 +1408,148 @@ make: *** [Makefile:182: cluster-down] Error 1
 ## per SIG [⬆](#top)
 
 
-### sig-storage (1x / 33.33%)
+### sig-network (1x / 25.00%)
+
+
+#### needs-investigation (1x / 100.00%)
+
+<details>
+<summary> no matching pattern (1x / 100.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+<details>
+<summary>all...</summary>
+
+* _2026-11-23 10:23:49 &#43;0000 UTC_: <code>10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1215)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A635)
+
+<details><summary>context</summary>
+<pre>10:24:20: [control-plane-check] kube-scheduler is healthy after 4.814576ms
+10:24:20: [control-plane-check] kube-controller-manager is healthy after 8.72848ms
+10:24:20: I1123 10:24:20.244157    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: forbidden: User &#34;kubernetes-admin&#34; cannot get path &#34;/livez&#34;: rbac: RBAC: clusterrole.rbac.authorization.k8s.io &#34;cluster-admin&#34; not found
+10:24:21: I1123 10:24:20.740427    2085 request.go:1502] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+10:24:21: I1123 10:24:20.740464    2085 wait.go:283] kube-apiserver check failed at https://[fd00::101]:6443/livez: an error on the server (&#34;[&#43;]ping ok\n[&#43;]log ok\n[&#43;]loopback-serving-certificate ok\n[&#43;]etcd ok\n[&#43;]poststarthook/start-apiserver-admission-initializer ok\n[&#43;]poststarthook/generic-apiserver-start-informers ok\n[&#43;]poststarthook/priority-and-fairness-config-consumer ok\n[&#43;]poststarthook/priority-and-fairness-filter ok\n[&#43;]poststarthook/storage-object-count-tracker-hook ok\n[&#43;]poststarthook/start-apiextensions-informers ok\n[&#43;]poststarthook/start-apiextensions-controllers ok\n[&#43;]poststarthook/crd-informer-synced ok\n[&#43;]poststarthook/start-system-namespaces-controller ok\n[&#43;]poststarthook/peer-endpoint-reconciler-controller ok\n[&#43;]poststarthook/start-cluster-authentication-info-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-controller ok\n[&#43;]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok\n[&#43;]poststarthook/storage-readiness ok\n[&#43;]poststarthook/start-legacy-token-tracking-controller ok\n[&#43;]poststarthook/start-service-ip-repair-controllers ok\n[-]poststarthook/rbac/bootstrap-roles failed: reason withheld\n[&#43;]poststarthook/scheduling/bootstrap-system-priority-classes ok\n[&#43;]poststarthook/priority-and-fairness-config-producer ok\n[&#43;]poststarthook/bootstrap-controller ok\n[&#43;]poststarthook/start-kubernetes-service-cidr-controller ok\n[&#43;]poststarthook/aggregator-reload-proxy-client-cert ok\n[&#43;]poststarthook/start-kube-aggregator-informers ok\n[&#43;]poststarthook/apiservice-status-local-available-controller ok\n[&#43;]poststarthook/apiservice-status-remote-available-controller ok\n[&#43;]poststarthook/apiservice-registration-controller ok\n[&#43;]poststarthook/apiservice-discovery-controller ok\n[&#43;]poststarthook/kube-apiserver-autoregistration ok\n[&#43;]autoregister-completion ok\n[&#43;]poststarthook/apiservice-openapi-controller ok\n[&#43;]poststarthook/apiservice-openapiv3-controller ok\nlivez check failed&#34;) has prevented the request from succeeding
+10:24:21: [control-plane-check] kube-apiserver is healthy after 1.502020037s
+10:24:21: [upload-config] Storing the configuration used in ConfigMap &#34;kubeadm-config&#34; in the &#34;kube-system&#34; Namespace</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1209)
+
+<details><summary>context</summary>
+<pre>10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;org_golang_x_mod defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bmatcuk_doublestar_v4 defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: INFO: Repo gazelle&#43;&#43;go_deps&#43;com_github_bazelbuild_buildtools defined by rule go_repository in @@gazelle&#43;//internal:go_repository.bzl
+10:27:47: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl:297:13: An error occurred during the fetch of repository &#39;gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs&#39;:
+10:27:47:    Traceback (most recent call last):
+10:27:47: 	File &#34;/tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/internal/go_repository.bzl&#34;, line 297, column 13, in _go_repository_impl
+10:27:47: 		fail(&#34;%s: %s&#34; % (ctx.name, result.stderr))</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1217)
+
+<details><summary>context</summary>
+<pre>10:27:47: exit status 1
+10:27:48: ERROR: no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1219)
+
+<details><summary>context</summary>
+<pre>10:27:48: exit status 1
+10:27:49: ERROR: /tmp/cache/bazel/6f347497f91c9a385dcd9294645b76e0/external/gazelle&#43;/repo/BUILD.bazel:3:11: @@gazelle&#43;//repo:repo depends on @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//:vcs in repository @@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs which failed to fetch. no such package &#39;@@gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs//&#39;: gazelle&#43;&#43;go_deps&#43;org_golang_x_tools_go_vcs: fetch_repo: golang.org/x/tools/go/vcs@v0.1.0-deprecated: Get &#34;https://proxy.golang.org/golang.org/x/tools/go/vcs/@v/v0.1.0-deprecated.info&#34;: net/http: TLS handshake timeout
+10:27:49: exit status 1
+10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build did NOT complete successfully</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1222)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Analysis of target &#39;//:gazelle&#39; failed; build aborted: Analysis failed
+10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>10:27:49: ERROR: Build failed. Not running target</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1223)
+
+<details><summary>context</summary>
+<pre>10:27:49: INFO: Elapsed time: 75.163s, Critical Path: 0.61s
+10:27:49: INFO: 1 process: 1 internal.
+10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2</pre>
+</details>
+
+
+
+* <strong>secondary</strong>: <code>make: *** [Makefile:194: cluster-sync] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1225)
+
+<details><summary>context</summary>
+<pre>10:27:49: ERROR: Build did NOT complete successfully
+10:27:49: ERROR: Build failed. Not running target
+10:27:51: &#43; rm -f /tmp/kubevirt.deploy.9ro5
+make: *** [Makefile:194: cluster-sync] Error 1
+&#43; ret=2
+&#43; check_for_panics
+&#43; set &#43;x</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:182: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/19802/pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network/2124807956347228160#1:build-log.txt%3A1234)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+10:27:52: selecting podman as container runtime
+10:28:35: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.37-ipv6-sig-network is being used by the following container(s): 73f69f92b0ee12ba15fe06ff081855efc21f25241a9104c96303a06d01ed229d: volume is being used
+make: *** [Makefile:182: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
+### sig-storage (1x / 25.00%)
 
 
 #### needs-investigation (1x / 100.00%)
@@ -1222,7 +1774,7 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-### sig-compute (2x / 66.67%)
+### sig-compute (2x / 50.00%)
 
 
 #### external (2x / 100.00%)
@@ -1311,4 +1863,4 @@ make: *** [Makefile:194: cluster-sync] Error 125
 <hr/>
 </details>
 
-Last updated: 2026-11-23 18:08:26
+Last updated: 2026-11-24 00:12:19
