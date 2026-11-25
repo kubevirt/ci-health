@@ -1666,6 +1666,60 @@ make: *** [Makefile:182: cluster-down] Error 1
 ### sig-storage (2x / 50.00%)
 
 
+#### internal (1x / 50.00%)
+
+<details>
+<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
+
+<hr/>
+
+**1x**: _2026-11-23 10:05:27 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1193)
+<details>
+<summary>all...</summary>
+
+* _2026-11-23 10:05:27 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1193)
+
+
+<details>
+<summary>secondary evidence</summary>
+
+
+* <strong>diagnostic</strong>: <code>10:19:51: I1123 05:19:51.532976    1591 request.go:1664] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A763)
+
+<details><summary>context</summary>
+<pre>10:19:48: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
+10:19:50: [control-plane-check] kube-scheduler is healthy after 2.118400411s
+10:19:50: [control-plane-check] kube-controller-manager is healthy after 2.603560978s
+10:19:51: I1123 05:19:51.532976    1591 request.go:1664] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
+10:19:52: [control-plane-check] kube-apiserver is healthy after 4.003281102s
+10:19:52: I1123 05:19:52.038341    1591 kubeconfig.go:665] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
+10:19:52: I1123 05:19:52.041457    1591 kubeconfig.go:738] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
+</details>
+
+
+
+* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1199)
+
+<details><summary>context</summary>
+<pre>./kubevirtci/cluster-up/down.sh
+10:25:11: selecting podman as container runtime
+10:25:45: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7 is being used by the following container(s): 78694673e778d74e782e667f11be6db389a0f55e5c27c234fc87aebe8e9f674a, 05ff6ad545874ae0691c6a1bfba03f1a54dcd66dd4ef9c64d883795eafa6648b: volume is being used
+make: *** [Makefile:162: cluster-down] Error 1
+&#43; true
+&#43; exit 2
+&#43; EXIT_VALUE=2</pre>
+</details>
+
+
+</details>
+
+
+
+</details>
+
+<hr/>
+</details>
+
 #### needs-investigation (1x / 50.00%)
 
 <details>
@@ -1888,58 +1942,4 @@ make: *** [Makefile:182: cluster-down] Error 1
 <hr/>
 </details>
 
-#### internal (1x / 50.00%)
-
-<details>
-<summary> make cluster lifecycle target failure (1x / 50.00%) </summary>
-
-<hr/>
-
-**1x**: _2026-11-23 10:05:27 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1193)
-<details>
-<summary>all...</summary>
-
-* _2026-11-23 10:05:27 &#43;0000 UTC_: <code>make: *** [Makefile:174: cluster-sync] Error 125</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1193)
-
-
-<details>
-<summary>secondary evidence</summary>
-
-
-* <strong>diagnostic</strong>: <code>10:19:51: I1123 05:19:51.532976    1591 request.go:1664] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A763)
-
-<details><summary>context</summary>
-<pre>10:19:48: [control-plane-check] Checking kube-scheduler at https://127.0.0.1:10259/livez
-10:19:50: [control-plane-check] kube-scheduler is healthy after 2.118400411s
-10:19:50: [control-plane-check] kube-controller-manager is healthy after 2.603560978s
-10:19:51: I1123 05:19:51.532976    1591 request.go:1664] &#34;Body was not decodable (unable to check for Status)&#34; err=&#34;couldn&#39;t get version/kind; json parse error: json: cannot unmarshal array into Go value of type struct { APIVersion string \&#34;json:\\\&#34;apiVersion,omitempty\\\&#34;\&#34;; Kind string \&#34;json:\\\&#34;kind,omitempty\\\&#34;\&#34; }&#34;
-10:19:52: [control-plane-check] kube-apiserver is healthy after 4.003281102s
-10:19:52: I1123 05:19:52.038341    1591 kubeconfig.go:665] ensuring that the ClusterRoleBinding for the kubeadm:cluster-admins Group exists
-10:19:52: I1123 05:19:52.041457    1591 kubeconfig.go:738] creating the ClusterRoleBinding for the kubeadm:cluster-admins Group by using super-admin.conf</pre>
-</details>
-
-
-
-* <strong>cleanup</strong>: <code>make: *** [Makefile:162: cluster-down] Error 1</code> [build-log](https://prow.ci.kubevirt.io/view/gs/kubevirt-prow/pr-logs/pull/kubevirt_kubevirt/20015/pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7/2124803835099615232#1:build-log.txt%3A1199)
-
-<details><summary>context</summary>
-<pre>./kubevirtci/cluster-up/down.sh
-10:25:11: selecting podman as container runtime
-10:25:45: Error response from daemon: volume pull-kubevirt-e2e-k8s-1.33-sig-storage-1.7 is being used by the following container(s): 78694673e778d74e782e667f11be6db389a0f55e5c27c234fc87aebe8e9f674a, 05ff6ad545874ae0691c6a1bfba03f1a54dcd66dd4ef9c64d883795eafa6648b: volume is being used
-make: *** [Makefile:162: cluster-down] Error 1
-&#43; true
-&#43; exit 2
-&#43; EXIT_VALUE=2</pre>
-</details>
-
-
-</details>
-
-
-
-</details>
-
-<hr/>
-</details>
-
-Last updated: 2026-11-25 00:12:51
+Last updated: 2026-11-25 03:08:37
